@@ -284,11 +284,58 @@ _Nota._ Adaptado de "Agricultura inteligente: un puente entre la justicia hídri
 
 ##### 1.2.2.1. Lean UX Problem Statements
 
+**Problem Statement 1 (Horticultores Urbanos):**
+
+AquaSave ha sido diseñado para ayudar a horticultores urbanos a gestionar el riego de sus huertos domésticos de manera eficiente, mediante un sistema IoT que monitorea las condiciones del suelo en tiempo real e integra datos climáticos para automatizar el suministro de agua.
+
+Hemos observado que las personas que mantienen huertos en sus hogares realizan el riego de forma manual y sin información objetiva sobre el estado real de la humedad del suelo. Esto genera un uso excesivo o insuficiente del agua, provocando el deterioro de las plantas, desperdicio del recurso hídrico y frustración por la falta de control sobre el proceso. Según Arauco Livia (2025), apenas el 20% de la superficie agrícola nacional cuenta con riego tecnificado, y en el ámbito doméstico esta cifra es prácticamente inexistente.
+
+**¿Cómo podemos ofrecer a los horticultores urbanos una herramienta accesible e intuitiva que les permita monitorear y automatizar el riego de sus cultivos, optimizando el consumo de agua y mejorando la salud de sus plantas sin requerir conocimientos técnicos especializados?**
+
+**Problem Statement 2 (Micro-Agricultores Periurbanos):**
+
+AquaSave fue creado con el objetivo de brindar a los micro-agricultores periurbanos una solución IoT de bajo costo que les permita tecnificar el riego de sus parcelas, accediendo a datos en tiempo real sobre humedad, temperatura y pronóstico climático para tomar decisiones informadas sobre el suministro de agua.
+
+Hemos identificado que los pequeños productores agrícolas en zonas periurbanas carecen de herramientas tecnológicas asequibles para gestionar el riego de manera eficiente. Según la Encuesta Nacional Agropecuaria del INEI (2022), solo el 7% de los pequeños y medianos productores utiliza sistemas de riego tecnificado (Arauco Livia, 2025), y apenas el 5.7% recibe asistencia técnica (INEI, 2017). Esta brecha tecnológica provoca pérdidas significativas por desperdicio de agua, menor productividad de los cultivos y un impacto negativo en los ingresos de las familias que dependen de la agricultura.
+
+**¿Cómo podemos facilitar a los micro-agricultores periurbanos el acceso a tecnología de riego inteligente que sea económica, fácil de instalar y que les permita optimizar el uso del agua, incrementar la productividad de sus cultivos y reducir sus costos operativos?**
+
+
 ##### 1.2.2.2. Lean UX Assumptions
+
+1. Creo que mis clientes necesitan una forma accesible y confiable de monitorear las condiciones de humedad y temperatura de sus cultivos en tiempo real, y automatizar el riego según las necesidades reales de sus plantas y el pronóstico del clima.  
+2. Estas necesidades se pueden resolver con un sistema IoT compuesto por un dispositivo basado en ESP32 con sensores de humedad, temperatura y caudal, una API en la nube que integre datos climáticos externos, y una aplicación web y móvil que permita visualizar métricas, recibir alertas y controlar el riego de forma remota.  
+3. Mis clientes iniciales son (o serán) horticultores urbanos en Lima metropolitana que mantienen huertos domésticos en terrazas, patios o jardines, y micro-agricultores periurbanos con parcelas de menos de 5 hectáreas que buscan tecnificar su riego con soluciones de bajo costo.  
+4. El valor \#1 que un cliente quiere de mi servicio es tener el control total sobre el riego de sus cultivos desde su celular, sabiendo que sus plantas reciben la cantidad exacta de agua que necesitan sin desperdiciar el recurso.  
+5. El cliente también puede obtener estos beneficios adicionales: ahorro mensual en el consumo de agua, historial detallado de consumo hídrico, prevención de pérdidas de cultivos por riego excesivo o insuficiente, y tranquilidad de saber que el sistema detiene el riego automáticamente cuando se aproxima la lluvia.  
+6. Voy a adquirir la mayoría de mis clientes a través de campañas en redes sociales dirigidas a comunidades de jardinería y agricultura urbana, participación en ferias agrícolas y de innovación tecnológica, alianzas con tiendas de jardinería y viveros, y convenios con municipalidades que promuevan huertos urbanos.  
+7. Haré dinero a través de la venta del dispositivo IoT (kit ESP32 con sensores y actuador) y un modelo de suscripción mensual con plan básico gratuito (monitoreo en tiempo real) y plan premium (historial completo de consumo, integración con pronóstico climático, alertas inteligentes, reportes de ahorro y control remoto avanzado).  
+8. Mi competencia principal en el mercado será aplicaciones de jardinería como Planta o Gardenia que ofrecen recordatorios de riego pero sin datos reales del suelo, temporizadores de riego básicos que funcionan con horarios fijos sin adaptarse a las condiciones del ambiente, y soluciones IoT de agricultura industrial como Gardena Smart o sistemas profesionales de riego de precisión que resultan costosos e inaccesibles para pequeños usuarios.  
+9. Los venceremos debido a que ofrecemos una solución integral que combina hardware IoT de bajo costo con software inteligente, específicamente diseñada para huertos urbanos y parcelas pequeñas. A diferencia de las apps de jardinería, nuestro sistema usa datos reales del suelo; a diferencia de los temporizadores, se adapta al clima; y a diferencia de las soluciones industriales, es accesible económicamente.  
+10. Mi mayor riesgo de producto es que los usuarios no perciban el valor suficiente como para pagar la suscripción mensual después de adquirir el dispositivo, o que la instalación del hardware les resulte complicada y abandonen el uso del sistema.  
+11. Resolveremos esto a través de un proceso de instalación guiado paso a paso dentro de la app, tutoriales en video, un período de prueba gratuita del plan premium al adquirir el dispositivo, y métricas visibles de ahorro de agua que demuestren el retorno de inversión desde las primeras semanas de uso.  
+12. **¿Quién es el usuario?** Los usuarios son horticultores urbanos que cultivan en espacios domésticos y buscan optimizar el riego de sus plantas, y micro-agricultores periurbanos con parcelas pequeñas que necesitan tecnificar el riego con soluciones económicas y accesibles.  
+13. **¿Dónde encaja nuestro producto en su trabajo o vida?** AquaSave encaja en la rutina diaria del horticultor urbano al eliminar la incertidumbre de cuándo y cuánto regar, y en la operación del micro-agricultor periurbano al automatizar una tarea que consume tiempo y recursos, permitiéndole enfocarse en otras labores productivas.  
+14. **¿Qué problemas tiene nuestro producto que resolver?** El riego manual sin datos objetivos del suelo, el desperdicio de agua por riego excesivo o en momentos inadecuados, la falta de herramientas accesibles de monitoreo agrícola para pequeños usuarios, y la desconexión entre las condiciones climáticas y las decisiones de riego.  
+15. **¿Cuándo y cómo es nuestro producto usado?** El dispositivo IoT opera de forma continua midiendo las condiciones del suelo. La app se usa diariamente para consultar el estado de los cultivos, revisar alertas y el pronóstico climático. El control manual del riego se activa cuando el usuario lo considera necesario. Los reportes de ahorro se consultan semanal o mensualmente.  
+16. **¿Qué características son importantes?** Monitoreo en tiempo real de humedad y temperatura del suelo, automatización del riego basada en umbrales configurables, integración con API de pronóstico climático para pausar el riego ante lluvias, control remoto manual desde la app, historial de consumo hídrico con métricas de ahorro, alertas push cuando la humedad del suelo es crítica, y un diseño responsivo adaptado a dispositivos móviles y web.  
+17. **¿Cómo debe verse nuestro producto y cómo comportarse?** Debe verse limpio, moderno y orientado a la naturaleza, con colores verdes y terrosos que transmitan sustentabilidad. Debe comportarse de forma rápida, confiable y simple, mostrando la información más relevante de un vistazo sin requerir conocimientos técnicos. Las acciones críticas como activar el riego o configurar alertas deben estar a máximo dos toques de distancia.  
+    
+
 
 ##### 1.2.2.3. Lean UX Hypothesis Statements
 
+**Hypothesis Statement 1 (Horticultores Urbanos):**
+
+Creemos que el monitoreo en tiempo real de la humedad del suelo combinado con la automatización del riego basada en datos climáticos ayudará a los horticultores urbanos a reducir el desperdicio de agua y mejorar la salud de sus cultivos domésticos. Sabremos que estamos bien cuando los usuarios reporten en sus comentarios que se sienten más seguros y en control del riego de sus plantas, cuando al menos el 60% de los usuarios activos consulten la app al menos tres veces por semana y utilicen la función de riego automático, y cuando se observe una reducción promedio del 30% en el consumo de agua reportado por los usuarios durante los primeros dos meses de uso.
+
+**Hypothesis Statement 2 (Micro-Agricultores Periurbanos):**
+
+Creemos que un sistema IoT de riego inteligente de bajo costo con alertas de humedad crítica, integración climática y reportes de consumo hídrico permitirá a los micro-agricultores periurbanos optimizar el uso del agua e incrementar la productividad de sus parcelas. Sabremos que esto es cierto cuando los micro-agricultores reporten que las alertas les han permitido prevenir pérdidas de cultivos por falta o exceso de riego, cuando al menos el 50% de ellos utilicen los reportes de consumo hídrico para tomar decisiones de riego semanalmente, y cuando se evidencie un ahorro de agua de al menos el 25% en comparación con su método de riego anterior durante la primera temporada de uso.
+
+
 ##### 1.2.2.4. Lean UX Canvas
+
 
 ### 1.3. Segmentos objetivo
 
