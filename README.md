@@ -242,6 +242,43 @@ Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que 
 
 #### 1.2.1. Antecedentes y problemática
 
+**What – ¿Cuál es el problema?**
+
+En el Perú, el sector agrícola consume el 85.9% del agua disponible en el país según el Diagnóstico Nacional del Agua de la ANA (Arauco Livia, 2025); sin embargo, la eficiencia del agua de riego es apenas del 35%, lo que significa que existe un alto desperdicio del recurso hídrico (Vinelli, 2021). Esta ineficiencia afecta de manera desproporcionada a los pequeños productores: según la Encuesta Nacional Agropecuaria del INEI (2022), solo el 7% de los pequeños y medianos productores utiliza sistemas de riego tecnificado, mientras que entre los grandes productores la cifra asciende al 53% (Arauco Livia, 2025). Para los horticultores urbanos y micro-agricultores periurbanos, la situación es aún más precaria, ya que el riego se realiza de forma completamente manual, sin acceso a datos sobre las condiciones reales del suelo ni del clima, generando un uso excesivo o insuficiente del agua que afecta tanto la salud de los cultivos como la economía familiar.
+
+**When – ¿Cuándo sucede el problema?**
+
+El problema se manifiesta de forma continua a lo largo de todo el año, pero se intensifica durante las temporadas de verano y los períodos de sequía, cuando la demanda hídrica de los cultivos aumenta significativamente y la disponibilidad del recurso disminuye. Zapana Churata (2018) evidenció que el déficit hídrico para cultivos como la alfalfa se presenta durante seis meses al año, particularmente de enero a febrero y de septiembre a diciembre, períodos en los que la evapotranspiración es mayor. Además, el problema ocurre diariamente cada vez que un horticultor o agricultor riega sus plantas sin conocer el nivel real de humedad del suelo, desperdiciando agua en momentos donde el riego no era necesario o, por el contrario, dejando de regar cuando el suelo ya estaba en condiciones críticas.
+
+**Where – ¿Dónde ocurre el problema?**
+
+La problemática se presenta en todo el territorio peruano, con una paradoja hídrica particularmente grave: la vertiente del Pacífico, donde habita el 66% de la población, concentra apenas el 2.2% de los recursos hídricos nacionales (Arauco Livia, 2025). A nivel nacional, apenas el 20% de la superficie agrícola cuenta con riego tecnificado, y Vinelli (2021) señala que "solo el 12 % de los cultivos se riegan bajo sistemas de riego, mientras que el resto usa el riego por gravedad" (párr. 4). En las zonas urbanas de Lima, donde crece la tendencia de huertos domésticos en terrazas, patios y jardines, el riego se realiza de manera artesanal sin ningún tipo de tecnificación. Asimismo, en las áreas periurbanas de ciudades como Lima, Arequipa y Cusco, los micro-agricultores enfrentan limitaciones de infraestructura hídrica que dificultan la adopción de prácticas de riego eficientes.
+
+**Who – ¿Quiénes están involucrados?**
+
+Los principales afectados son los horticultores urbanos, personas que mantienen huertos domésticos en sus viviendas y que carecen de herramientas para gestionar el riego de forma eficiente. También se ven impactados los micro-agricultores periurbanos, pequeños productores con parcelas de menos de 5 hectáreas que dependen del riego para su sustento. Según el INEI (2017), en el Perú existían más de 2 millones 244 mil pequeñas y medianas unidades agropecuarias, de las cuales el 70.4% son conducidas por hombres y el 29.6% por mujeres, con un 53.5% de productores entre 40 y 64 años de edad. De este grupo, solo el 11.4% recibió algún tipo de capacitación y apenas el 5.7% recibió asistencia técnica, lo que refleja una importante brecha en el acceso al conocimiento tecnológico.
+
+**Why – ¿Por qué ocurre esta situación?**
+
+Las causas son múltiples. En primer lugar, la falta de infraestructura de riego tecnificado: Vinelli (2021) señala que de los 55,237 kilómetros de canales de riego evaluados en el Perú, solo el 15% están revestidos, lo que provoca pérdidas enormes por filtración y evaporación. En segundo lugar, según Ybánez (2023) se pierde hasta el 45% del agua que se canaliza para el trabajo en tierras de cultivo debido al mal estado de los canales de riego. En tercer lugar, la baja capacitación tecnológica de los productores, ya que según el INEI (2017) solo el 5.7% recibió asistencia técnica. Además, el costo de las soluciones existentes de agricultura inteligente resulta inaccesible para pequeños productores y horticultores domésticos. Finalmente, la ausencia de herramientas digitales que integren datos del suelo con información climática en tiempo real para la toma de decisiones de riego.
+
+**How – ¿En qué condiciones usarán el producto?**
+
+Los horticultores urbanos y micro-agricultores periurbanos que utilicen AquaSave lo harán desde entornos diversos. El dispositivo IoT basado en ESP32 estará instalado directamente en el huerto o parcela, conectado a sensores de humedad, temperatura y caudal, operando de forma autónoma y continua. Los usuarios accederán a la aplicación web o móvil desde sus smartphones o computadoras para monitorear en tiempo real las condiciones de sus cultivos, revisar el historial de consumo hídrico, recibir alertas cuando la humedad del suelo sea crítica y controlar manualmente el riego cuando lo consideren necesario. La interfaz deberá ser intuitiva y accesible, considerando que según el INEI (2017), el 52.9% de los pequeños productores tienen solo educación primaria.
+
+**How Much – ¿Cuánto cuesta no resolverlo?**
+
+Los costos de no resolver este problema son significativos tanto a nivel económico como ambiental. Según Ybánez (2023), el sector agrario registra pérdidas diarias de hasta S/ 50 millones por problemas asociados a la gestión hídrica. A nivel global, la FAO advierte que para el 2050 habrá un 25% de déficit de agua, lo que afectaría directamente la producción de alimentos. Actualmente, a nivel nacional solo el 20% de la superficie agrícola cuenta con riego tecnificado (Arauco Livia, 2025), lo que implica que la gran mayoría de productores sigue desperdiciando recursos. En contraste, la implementación de sistemas de riego inteligente basados en IoT ha demostrado reducir el consumo de agua entre un 30% y un 50% en comparación con métodos tradicionales, sin afectar el rendimiento de los cultivos. Para un horticultor urbano, esto representa un ahorro directo en la factura de agua y una mejora sustancial en la salud de sus plantas; para un micro-agricultor periurbano, significa mayor productividad con menor inversión en recursos hídricos.
+
+*Tabla 1\.* Brecha de acceso a riego tecnificado en Perú según tipo de productor (2022)
+<div align="center">
+
+  <img src="image/tabla .png" alt="Diagrama" width="600">
+
+</div>
+
+_Nota._ Adaptado de "Agricultura inteligente: un puente entre la justicia hídrica y la sostenibilidad empresarial en el Perú", por Arauco Livia, 2025, Infobae, basado en datos de la Encuesta Nacional Agropecuaria del INEI (2022).
+
 
 #### 1.2.2. Lean UX Process
 
