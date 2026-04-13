@@ -216,12 +216,32 @@
 ### 1.1. Startup Profile
 
 #### 1.1.1. Descripción de la Startup
+EcoDrop es una startup tecnológica enfocada en el desarrollo de soluciones IoT para la gestión inteligente del riego en huertos urbanos y parcelas agrícolas de pequeña escala. Esta iniciativa nace como respuesta a la crítica ineficiencia en el uso del agua dentro del sector agrícola peruano, donde la falta de tecnificación genera un desperdicio significativo del recurso hídrico.
+
+Según Ybánez (2023), el sector agrario en Perú emplea aproximadamente el 80% de los recursos hídricos disponibles, pero presenta solo una eficiencia promedio nacional del 35% (párr. 5). Asimismo, Vinelli (2021) señala que "la eficiencia del agua de riego es apenas del 35 %, es decir, existe un alto desperdicio de agua, debido, entre varias razones, a su deficiente aplicación a los predios y el mal estado de conservación de las redes de conducción y distribución" (párr. 4). Esta realidad evidencia la urgente necesidad de implementar herramientas tecnológicas accesibles que permitan optimizar el consumo de agua y brindar a los pequeños productores y horticultores urbanos un control preciso sobre el riego de sus cultivos.
+
+Fundada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, EcoDrop busca democratizar el acceso a tecnologías de agricultura inteligente, conectando dispositivos IoT con plataformas digitales que faciliten el monitoreo en tiempo real y la toma de decisiones basada en datos para el cuidado eficiente de los cultivos.
+
+**Producto principal**
+
+Su producto principal es AquaSave, un sistema de riego inteligente compuesto por un dispositivo IoT basado en ESP32 con sensores de humedad del suelo, temperatura y caudal, un RESTful API de desarrollo interno que gestiona la lógica de negocio y cruza los datos locales con el pronóstico climático mediante servicios externos, un API que comunica el dispositivo con la nube, una aplicación web y una aplicación móvil desarrollada en Flutter que permiten al usuario monitorear el estado de sus cultivos, visualizar métricas de ahorro hídrico y controlar el sistema de riego en tiempo real desde cualquier lugar. Además, incluye un Landing Page que presenta el modelo de negocio y permite a los visitantes conocer las características de la solución y acceder a las aplicaciones.
+
+De esta manera, AquaSave no solo automatiza el riego activando o deteniendo el suministro de agua según las condiciones reales del suelo y el clima, sino que también empodera a los usuarios con información clara y oportuna para gestionar sus recursos hídricos de forma eficiente y sostenible.
+
+**Visión**
+
+Ser la plataforma líder en Perú en soluciones IoT accesibles para la gestión inteligente del riego, reduciendo el desperdicio de agua en huertos urbanos y parcelas agrícolas de pequeña escala mediante tecnología al alcance de todos.
+
+**Misión**
+
+Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que permitan a horticultores urbanos y micro-agricultores periurbanos optimizar el uso del agua en sus cultivos, promoviendo prácticas de riego eficientes a través de la integración de dispositivos IoT, datos climáticos y plataformas móviles de monitoreo en tiempo real.
 
 #### 1.1.2. Perfiles de integrantes del equipo
 
 ### 1.2. Solution Profile
 
 #### 1.2.1. Antecedentes y problemática
+
 
 #### 1.2.2. Lean UX Process
 
