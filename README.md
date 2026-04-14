@@ -458,6 +458,14 @@ La estructura de las entrevistas se ajusta estratégicamente a cada segmento de 
 
 #### 2.3.1. User Personas
 
+<p align="center">
+  <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
+</p>
+
 #### 2.3.2. User Task Matrix
 
 #### 2.3.3. User Journey Mapping
