@@ -391,6 +391,108 @@ Solo el 7% de pequeños productores usa riego tecnificado frente al 53% de grand
 
 #### 2.1.1. Análisis competitivo
 
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-family: Arial, sans-serif; font-size: 14px;">
+  <thead>
+    <tr>
+      <td colspan="6" style="padding: 12px; border: 1px solid #333; background-color: #404040; color: white; text-align: center; font-weight: bold; font-size: 1.2em;">Competitive Analysis Landscape</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="padding: 10px; border: 1px solid #ddd; background-color: #f7f7f7; font-weight: bold; vertical-align: top;">¿Porqué llevar a cabo este análisis?</td>
+      <td colspan="4" style="padding: 10px; border: 1px solid #ddd; background-color: #f7f7f7; vertical-align: top;">Identificar brechas tecnológicas y comerciales frente a soluciones residenciales y agrícolas, con el fin de posicionar a AquaSave como una plataforma integral, eficiente y basada en datos reales de consumo para una gestión hídrica sostenible.</td>
+    </tr>
+    <tr style="background-color: #eeeeee; font-weight: bold; text-align: center;">
+      <td colspan="2" style="padding: 10px; border: 1px solid #ddd;"></td>
+      <td style="padding: 10px; border: 1px solid #ddd;">AquaSave</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Rachio</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Orbit B-hyve</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">OpenSprinkler</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2" style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top; text-align: center;">Perfil</td>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Overview</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Sistema IoT (ESP32) con monitoreo de caudal y app multiplataforma en Flutter.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">El líder en software de riego inteligente para el hogar, basado en la nube.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Hardware de riego tradicional adaptado a IoT con gran presencia en retail.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Solución Open Source basada en microcontroladores para control local y total.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Ventaja competitiva. ¿Qué valor ofrece a los clientes?</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Datos de caudal y humedad real en tiempo real vs. solo pronóstico.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Inteligencia de software y algoritmos climáticos extremadamente pulidos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Bajo costo inicial y facilidad de instalación para el usuario no técnico.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Sin dependencia de la nube (privacidad) y personalización total del código.</td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top; text-align: center;">Perfil de Marketing</td>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Mercado Objetivo</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Agricultores medianos y usuarios residenciales eco-conscientes en Latam.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Dueños de casas inteligentes de gama alta que buscan estética y facilidad.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Clientes "DIY" (hágalo usted mismo) que compran en ferreterías o Amazon.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Desarrolladores, ingenieros y entusiastas de la domótica y el código abierto.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Estrategias de Marketing</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Enfoque en ahorro de costos y retorno de inversión por eficiencia hídrica.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Posicionamiento como el centro del jardín inteligente (Integración con Alexa/Google).</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Distribución masiva en grandes superficies y precios de entrada agresivos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Transparencia tecnológica y apoyo de una comunidad global activa.</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top; text-align: center;">Perfil de Producto</td>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Productos & Servicios</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Hardware ESP32 + Sensores + API REST + App Móvil/Web + Landing.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Controladores de zonas, sensores inalámbricos y suscripciones de datos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Temporizadores de grifo, controladores de pared y sensores de flujo básicos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Kits de hardware DIY, placas ensambladas y firmware de código abierto.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Precios & Costos</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Costo optimizado de hardware + potencial modelo SaaS para gestión de datos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Premium (USD $180 - $250).</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Económico/Medio (USD $60 - $130).</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Accesible para makers (USD $50 - $150).</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Canales de distribución (Web y/o Móvil)</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Web y Móvil</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Web y Móvil</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Web y móvil</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; text-align: center;">Web y Móvil</td>
+    </tr>
+    <tr>
+      <td rowspan="4" style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top; text-align: center;">Análisis SWOT</td>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Fortalezas</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Control total del stack (Flutter/ESP32); medición de caudal real.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Marca reconocida; ecosistema de integraciones muy robusto.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Infraestructura de hardware masiva y red de distribución física.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Flexibilidad de hardware y software; independencia de servidores externos.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Debilidades</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Marca nueva en fase de desarrollo; requiere soporte inicial.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Precio elevado; dependencia total de la conexión a internet.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Interfaz de usuario (UI/UX) menos intuitiva que la competencia.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Curva de aprendizaje técnica alta para el usuario promedio.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Oportunidades</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Mercado creciente en regiones con crisis hídrica (Perú/Chile/México).</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Expansión a gestión de agua en interiores (sensores de fugas).</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Dominar el mercado masivo de bajo costo con suscripciones de software.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Convertirse en el estándar para investigación agrícola educativa.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Amenazas</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Gigantes tecnológicos lanzando hubs de riego económicos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Nuevas normativas de agua que exijan hardware certificado.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Startups más rápidas con mejores capacidades de análisis de datos.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Descontinuación de soporte por parte de la comunidad voluntaria.</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
 ### 2.2. Entrevistas
