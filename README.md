@@ -599,7 +599,8 @@ La estructura de las entrevistas se ajusta estratégicamente a cada segmento de 
 
 Las entrevistas están en un video en el siguiente URL: 
 
-Segmento 1: Horticultores Urbanos  
+**Segmento 1: Horticultores Urbanos:** 
+
 Nombre: Gabriel Borja  
 Edad: 32  
 Ocupación: Diseñador gráfico  
@@ -613,7 +614,6 @@ Gabriel es un diseñador gráfico de 32 años que trabaja desde casa y utiliza e
 
 
 
-Segmento 1: Horticultores Urbanos  
 Nombre: Lukas Coronado  
 Edad: 28  
 Ocupación: Especialista en marketing digital  
@@ -627,7 +627,6 @@ Lukas es un profesional de marketing digital de 28 años que mantiene un huerto 
 
 
 
-Segmento 1: Horticultores Urbanos  
 Nombre: Carla Cárdenas  
 Edad: 45  
 Ocupación: Profesora  
@@ -641,7 +640,8 @@ Carla es una profesora de 45 años que mantiene un huerto en su jardín como act
 
 
 
-Segmento 2: Micro-Agricultores Periurbanos  
+**Segmento 2: Micro-Agricultores Periurbanos:** 
+
 Nombre: Raul Bellido  
 Edad: 42  
 Ocupación: Agricultor y propietario  
@@ -655,7 +655,6 @@ Raul es un agricultor de 42 años que gestiona una parcela de aproximadamente 3 
 
 
 
-Segmento 2: Micro-Agricultores Periurbanos  
 Nombre: Santiago Suarez  
 Edad: 30  
 Ocupación: Encargado de cultivo  
@@ -669,7 +668,6 @@ Santiago es un agricultor de 30 años que trabaja en una parcela de aproximadame
 
 
 
-Segmento 2: Micro-Agricultores Periurbanos  
 Nombre: Werner Lang  
 Edad: 48  
 Ocupación: Agricultor  
@@ -685,20 +683,87 @@ Werner es un agricultor de 48 años que trabaja en una parcela de aproximadament
 
 #### 2.2.3. Análisis de entrevistas
 
+En base en las entrevistas recopiladas para cada segmento, se llevó a cabo un análisis, el cual destaca los principales hallazgos y las conclusiones derivadas.
+
+**Segmento objetivo #1: Horticultores Urbanos**
+
+**Hallazgos:**
+
+| Característica | Hallazgos | Porcentaje |
+| :---- | :---- | :---- |
+| Gestión del Riego | El riego se realiza principalmente por intuición o rutinas fijas sin datos objetivos. | 100% |
+| Uso de Tecnología | Uso limitado de herramientas digitales; solo recordatorios básicos o ninguno. | 100% |
+| Problema Principal | Incertidumbre sobre la cantidad correcta de agua (exceso o falta). | 100% |
+| Consecuencias | Deterioro o pérdida de plantas y posible desperdicio de agua. | 100% |
+| Frecuencia de Cuidado | Dedicación constante pero no siempre suficiente o precisa. | 100% |
+| Interés en Automatización | Alta disposición a automatizar el riego para mayor control. | 100% |
+| Interés en Datos en Tiempo Real | Gran interés en conocer la humedad real del suelo. | 100% |
+| Barrera de Entrada | Temor o dificultad inicial en la instalación de tecnología. | 66% |
+| Valor Percibido | Buscan control, tranquilidad y mejor salud de sus plantas. | 100% |
+| Frecuencia de Uso Esperada | Revisarían la app constantemente o varias veces por semana. | 100% |
+
+| Insights | Respaldo |
+| :---- | :---- |
+| El riego se basa en la intuición, no en datos. Esto genera errores constantes. | 100% menciona regar por intuición o rutina. |
+| Existe una necesidad clara de certeza y control sobre el estado del suelo. | Todos expresan inseguridad sobre si riegan bien. |
+| La tecnología es aceptada, pero debe ser simple y guiada. | 66% menciona necesidad de guía para instalación. |
+| El valor principal es reducir errores y mejorar el cuidado de las plantas. | Todos mencionan pérdidas o problemas por riego. |
+
+**Conclusiones:**
+
+Los horticultores urbanos gestionan el riego de sus plantas de manera empírica, basándose en la observación y la rutina, lo que genera incertidumbre y errores frecuentes. Aunque dedican tiempo al cuidado de sus cultivos, la falta de información objetiva limita su efectividad, provocando problemas como el deterioro de plantas y el desperdicio de agua.
+
+Este segmento muestra una alta apertura hacia soluciones tecnológicas, siempre que estas sean simples, intuitivas y no requieran conocimientos técnicos avanzados. El principal valor que buscan es el control y la tranquilidad de saber que están regando correctamente. Por ello, una solución como AquaSave debe enfocarse en ofrecer monitoreo en tiempo real, alertas claras y automatización del riego, junto con una experiencia de instalación guiada y accesible que reduzca la fricción inicial.
+
+
+**Segmento objetivo #2: Micro-Agricultores Periurbanos**
+
+**Hallazgos:**
+
+| Característica | Hallazgos | Porcentaje |
+| :---- | :---- | :---- |
+| Método de Riego | Uso predominante de métodos tradicionales (gravedad, manguera). | 100% |
+| Toma de Decisiones | Basada en experiencia, observación del suelo y clima. | 100% |
+| Problema Principal | Dificultad para optimizar el uso del agua (exceso o escasez). | 100% |
+| Tiempo de Trabajo | El riego consume gran parte de la jornada diaria. | 100% |
+| Necesidad de Presencia | Requiere estar físicamente en la parcela para supervisar. | 100% |
+| Uso de Tecnología | Uso limitado o básico de tecnología (smartphone con conectividad irregular). | 100% |
+| Registro de Información | Registros manuales o inexistentes sobre riego y consumo. | 100% |
+| Interés en Monitoreo Remoto | Alto interés en controlar el riego sin estar en campo. | 100% |
+| Valor de Alertas | Necesidad de alertas simples y claras para decisiones rápidas. | 100% |
+| Preferencia de Solución | Debe ser económica, simple y fácil de usar. | 100% |
+
+| Insights | Respaldo |
+| :---- | :---- |
+| La experiencia reemplaza a los datos, pero no es suficiente para optimizar el riego. | 100% decide en base a experiencia. |
+| El riego es una actividad costosa en tiempo y esfuerzo. | Todos mencionan que consume varias horas diarias. |
+| La falta de monitoreo remoto limita la eficiencia operativa. | 100% necesita estar presente en la parcela. |
+| La simplicidad es clave para la adopción tecnológica. | Todos enfatizan facilidad de uso y claridad. |
+
+**Conclusiones:**
+
+Los micro-agricultores periurbanos dependen completamente de métodos tradicionales y de su experiencia para gestionar el riego, lo que genera ineficiencias en el uso del agua y un alto consumo de tiempo. La necesidad de supervisión constante limita su productividad y dificulta la toma de decisiones informadas.
+
+Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barreras relacionadas con el acceso, la simplicidad y la conectividad. Para que una solución como AquaSave sea viable, debe centrarse en ofrecer una experiencia extremadamente simple, con datos claros y accionables, alertas directas y una instalación sencilla. El valor principal radica en permitir el monitoreo remoto, reducir el esfuerzo operativo y mejorar la eficiencia del uso del agua sin requerir conocimientos técnicos avanzados.
+
 ### 2.3. Needfinding
 
 #### 2.3.1. User Personas
 
+**Segmento objetivo #1: Horticultores Urbanos**
+
 <p align="center">
   <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
 </p>
+
+
+**Segmento 2: Micro-Agricultores Periurbanos:** 
 
 <p align="center">
   <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
 </p>
 
 #### 2.3.2. User Task Matrix
-
 
 | TASK MATRIX |   | Lucía Ramírez |   | Carlos Mendoza |   |
 | ----- | ----- | :---- | :---- | :---- | :---- |
