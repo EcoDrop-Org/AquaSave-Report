@@ -597,6 +597,92 @@ La estructura de las entrevistas se ajusta estratégicamente a cada segmento de 
 
 #### 2.2.2. Registro de entrevistas
 
+Las entrevistas están en un video en el siguiente URL: 
+
+Segmento 1: Horticultores Urbanos  
+Nombre: Gabriel Borja  
+Edad: 32  
+Ocupación: Diseñador gráfico  
+Distrito: Santiago de Surco, Lima  
+Timing:  
+<p align="center">
+  <img src="image/entrevista1.png" alt="Entrevista1" width="1000">
+</p>
+
+Gabriel es un diseñador gráfico de 32 años que trabaja desde casa y utiliza el cuidado de su huerto como una actividad de relajo dentro de su rutina diaria. En su experiencia, dedica tiempo constante al mantenimiento de sus plantas, realizando tareas como riego, poda y control de plagas. Sin embargo, menciona que actualmente gestiona el riego de manera intuitiva, lo que le genera incertidumbre sobre si está aplicando la cantidad correcta de agua. Además, ha tenido problemas como el deterioro de sus plantas y un posible desperdicio de agua. Utiliza herramientas simples como alarmas en el celular, pero no ha encontrado una solución digital que realmente se adapte a sus necesidades. Muestra un alto interés en una solución que le permita monitorear la humedad del suelo en tiempo real y automatizar el riego, destacando la importancia de recibir alertas y contar con un historial para entender mejor el comportamiento de sus cultivos. También valora que el sistema sea fácil de instalar mediante guías claras.
+
+
+
+Segmento 1: Horticultores Urbanos  
+Nombre: Lukas Coronado  
+Edad: 28  
+Ocupación: Especialista en marketing digital  
+Distrito: Miraflores, Lima  
+Timing:  
+<p align="center">
+  <img src="image/entrevista2.png" alt="Entrevista2" width="1000">
+</p>
+
+Lukas es un profesional de marketing digital de 28 años que mantiene un huerto pequeño en el balcón de su departamento como hobby para desconectarse del trabajo. Su rutina de cuidado es sencilla pero constante, centrada en el riego y mantenimiento básico. Actualmente, gestiona el riego por rutina o intuición, sin contar con datos precisos, lo que le ha generado problemas como el crecimiento deficiente de sus plantas y desperdicio de agua. Aunque utiliza recordatorios en el celular, considera que las aplicaciones existentes no son suficientemente útiles ni personalizadas. Expresa interés en una solución que le brinde información real sobre el estado de sus plantas y que facilite la automatización del riego, especialmente en situaciones donde no se encuentra en casa. Valora la simplicidad, la facilidad de uso y la claridad de las alertas como factores clave para adoptar una nueva herramienta.
+
+
+
+Segmento 1: Horticultores Urbanos  
+Nombre: Carla Cárdenas  
+Edad: 45  
+Ocupación: Profesora  
+Distrito: Arequipa  
+Timing:  
+<p align="center">
+  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+</p>
+
+Carla es una profesora de 45 años que mantiene un huerto en su jardín como actividad complementaria en su tiempo libre. Cuenta con experiencia en el cuidado de plantas y realiza tareas diarias como riego, abonado y control de plagas. Sin embargo, su gestión del riego se basa completamente en la experiencia, lo que en ocasiones genera errores debido a cambios climáticos o falta de información precisa. Ha enfrentado pérdidas de plantas tanto por exceso como por falta de agua. No utiliza herramientas tecnológicas para el cuidado de su huerto, lo que evidencia una oportunidad para soluciones intuitivas y accesibles. Muestra interés en una plataforma que le permita visualizar datos claros y recibir alertas que mejoren la toma de decisiones. También considera importante contar con apoyo en la instalación del sistema, lo que sugiere la necesidad de procesos guiados y simples.
+
+
+
+Segmento 2: Micro-Agricultores Periurbanos  
+Nombre: Raul Bellido  
+Edad: 42  
+Ocupación: Agricultor y propietario  
+Distrito: Lurín, Lima  
+Timing:  
+<p align="center">
+  <img src="image/entrevista4.png" alt="Entrevista4" width="1000">
+</p>
+
+Raul es un agricultor de 42 años que gestiona una parcela de aproximadamente 3 hectáreas en Lurín, donde asume múltiples responsabilidades, incluyendo el riego y la supervisión del cultivo. Su jornada diaria está fuertemente influenciada por las labores de riego, las cuales consumen una gran cantidad de tiempo. Actualmente utiliza métodos tradicionales como riego por gravedad y toma decisiones basadas en la experiencia y observación directa del cultivo. Identifica como principales problemas la dificultad para optimizar el uso del agua y la necesidad de estar físicamente presente en la parcela para supervisar el riego. Aunque lleva algunos registros manuales, no cuenta con información precisa sobre el consumo hídrico. Muestra un alto interés en soluciones tecnológicas que le permitan monitorear el estado del suelo en tiempo real, recibir alertas y mejorar la eficiencia del riego, siempre que estas sean fáciles de usar e interpretar.
+
+
+
+Segmento 2: Micro-Agricultores Periurbanos  
+Nombre: Santiago Suarez  
+Edad: 30  
+Ocupación: Encargado de cultivo  
+Distrito: Cusco  
+Timing:  
+<p align="center">
+  <img src="image/entrevista5.png" alt="Entrevista5" width="1000">
+</p>
+
+Santiago es un agricultor de 30 años que trabaja en una parcela de aproximadamente 2 hectáreas en Cusco, donde se encarga tanto del cultivo como del riego. Su trabajo es completamente manual y demanda gran parte de su tiempo diario. Gestiona el riego utilizando métodos tradicionales y toma decisiones basadas en su experiencia y observación del suelo. Ha enfrentado problemas relacionados con la pérdida o escasez de agua, lo que impacta directamente en la productividad de sus cultivos. No lleva registros detallados, lo que limita su capacidad de análisis y mejora continua. Muestra interés en una solución tecnológica que le permita acceder a información sin necesidad de estar físicamente en el campo, destacando la importancia de la simplicidad, la claridad de los datos y las alertas como elementos clave para su adopción.
+
+
+
+Segmento 2: Micro-Agricultores Periurbanos  
+Nombre: Werner Lang  
+Edad: 48  
+Ocupación: Agricultor  
+Distrito: Arequipa  
+Timing:  
+
+<p align="center">
+  <img src="image/entrevista6.png" alt="Entrevista6" width="1000">
+</p>
+
+Werner es un agricultor de 48 años que trabaja en una parcela de aproximadamente 4 hectáreas en Arequipa, donde se encarga de todas las actividades relacionadas con el cultivo. Su rutina es intensiva y está centrada en el trabajo manual, incluyendo el riego por gravedad. Su toma de decisiones se basa principalmente en la experiencia, lo que en ocasiones genera problemas debido a la falta de información precisa sobre las condiciones del suelo. Identifica como principal desafío la gestión eficiente del agua, ya que puede haber tanto escasez como exceso. No cuenta con registros formales ni herramientas tecnológicas que apoyen su trabajo. A pesar de ello, muestra apertura hacia una solución que sea simple, clara y fácil de usar, valorando especialmente la posibilidad de recibir alertas que le permitan tomar decisiones rápidas y mejorar la gestión del riego.
+
+
 #### 2.2.3. Análisis de entrevistas
 
 ### 2.3. Needfinding
