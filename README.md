@@ -796,6 +796,8 @@ Es un espacio de trabajo colaborativo en el que un grupo de personas (como desar
 
 Para asegurar comodidad, eficiencia y una colaboración en tiempo real, optamos por usar Discord como espacio virtual para nuestra primera reunión. En este entorno, nos encontramos con la finalidad de unificar la comprensión del negocio, detectar dudas relevantes, identificar problemas frecuentes y promover un clima de confianza y comunicación abierta centrado en el cuidado de plantas en el hogar.
 
+<a href="https://ibb.co/k2s8MSV8"><img src="https://i.ibb.co/Jjw7CsW7/Gemini-Generated-Image-t4050vt4050vt405.png" alt="Gemini-Generated-Image-t4050vt4050vt405" border="0"></a>
+
 ***2. Energizing the audience***
 
 Para captar la atención y mejorar el ambiente, comenzamos la sesión con una breve rutina de estiramientos dirigida para desarrolladores, seguida de un reto lógico rápido sobre optimización de recursos. El propósito fue elevar los niveles de dopamina, aliviar la tensión de las horas frente al monitor y fomentar la conexión entre los miembros del equipo antes de abordar la complejidad de los dominios, los comandos y los eventos de nuestro sistema IoT.
@@ -807,6 +809,10 @@ Posteriormente, expusimos nuestra visión: crear una solución integral de riego
 Detallamos también el modelo de negocio, el cual se apoya en la venta del hardware especializado y un modelo SaaS (Software as a Service) que ofrece analítica avanzada de ahorro hídrico y reportes de sostenibilidad para usuarios pro. Finalmente, revisamos el roadmap del proyecto, definiendo los hitos clave para el API REST y la aplicacion móvil.
 
 ***4. Generating Domain Events***
+
+Solicitamos a los participantes que anoten en post-its amarillos los “eventos” que tienen lugar en el proceso. Un evento es un hecho significativo para el negocio que ya ocurrió.
+
+[![Aqua-Save-Big-Picture-Event-Storming.jpg](https://i.postimg.cc/y6JjGxJ9/Aqua-Save-Big-Picture-Event-Storming.jpg)](https://postimg.cc/XXb9GVk7)
 
 ***5. Sorting Domain Events***
 
