@@ -696,7 +696,44 @@ La estructura de las entrevistas se ajusta estratégicamente a cada segmento de 
 
 ### 3.3. Product Backlog
 
----
+# 3.3. Product Backlog — AquaSave (EcoDrop)
+
+| Orden | User Story ID | Título | Descripción | Story Points |
+|:-----:|:-------------:|--------|-------------|:------------:|
+| 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, Quiero crear una cuenta indicando mi tipo de perfil, Para acceder a las funcionalidades de monitoreo y control de riego de AquaSave. | 3 |
+| 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, Quiero iniciar sesión con mis credenciales, Para acceder a mi dashboard y datos de mis cultivos. | 2 |
+| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, Quiero registrarme o iniciar sesión con mi cuenta de Google, Para acceder a AquaSave sin crear credenciales nuevas. | 3 |
+| 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, Quiero restablecer mi contraseña mediante mi correo, Para recuperar el acceso a mi cuenta sin perder mis datos. | 2 |
+| 5 | US05 | Cerrar sesión | Como usuario autenticado, Quiero cerrar sesión desde la app, Para proteger mi cuenta cuando uso un dispositivo compartido. | 1 |
+| 6 | US06 | Configurar perfil de horticultor urbano | Como horticultor urbano, Quiero configurar mi perfil indicando tipo de espacio y cultivos, Para que AquaSave personalice los umbrales de humedad según mi huerto. | 3 |
+| 7 | US07 | Configurar perfil de micro-agricultor periurbano | Como micro-agricultor periurbano, Quiero configurar mi perfil indicando el tamaño de mi parcela y tipo de cultivos, Para recibir parámetros de riego adecuados a mi situación productiva. | 3 |
+| 8 | US08 | Editar información del perfil | Como usuario registrado, Quiero actualizar mis datos de perfil en cualquier momento, Para mantener la información de mis cultivos siempre actualizada. | 2 |
+| 9 | US32 | Vincular dispositivo IoT ESP32 desde la app | Como usuario nuevo, Quiero conectar mi dispositivo ESP32 mediante un proceso guiado, Para comenzar a recibir datos de mis cultivos sin conocimientos técnicos. | 5 |
+| 10 | US33 | Configurar umbrales del sensor desde la app | Como usuario, Quiero ajustar los umbrales de humedad y temperatura desde la app, Para personalizar cuándo el sistema considera que el suelo está seco, óptimo o saturado. | 3 |
+| 11 | US34 | Gestionar múltiples dispositivos IoT | Como micro-agricultor con varias zonas de cultivo, Quiero registrar y gestionar más de un dispositivo ESP32, Para monitorear diferentes sectores de mi parcela desde una sola cuenta. | 5 |
+| 12 | US09 | Ver humedad del suelo en tiempo real | Como usuario, Quiero visualizar el nivel de humedad del suelo medido por el sensor ESP32, Para saber si mis cultivos necesitan agua antes de regar. | 5 |
+| 13 | US10 | Ver temperatura del suelo y ambiente | Como usuario, Quiero visualizar la temperatura del suelo y del ambiente registrada por los sensores, Para tomar decisiones de riego según las condiciones térmicas actuales. | 3 |
+| 14 | US11 | Ver caudal de agua durante el riego | Como usuario, Quiero visualizar el caudal de agua que fluye durante un ciclo de riego, Para conocer el consumo real y detectar posibles fugas o bloqueos. | 3 |
+| 15 | US12 | Ver estado de conexión del dispositivo IoT | Como usuario, Quiero saber en todo momento si mi dispositivo ESP32 está conectado, Para confiar en que los datos mostrados son actuales y confiables. | 2 |
+| 16 | US13 | Activar el riego manualmente desde la app | Como usuario, Quiero activar el riego de mis cultivos desde mi celular, Para suministrar agua de forma inmediata sin estar físicamente en el huerto o parcela. | 5 |
+| 17 | US14 | Detener el riego manualmente desde la app | Como usuario, Quiero detener el riego en curso desde mi celular, Para evitar el desperdicio de agua cuando el suelo ya alcanzó el nivel óptimo. | 3 |
+| 18 | US15 | Configurar umbrales de humedad para riego automático | Como usuario, Quiero definir los niveles mínimo y máximo de humedad del suelo, Para que el sistema active o detenga el riego automáticamente sin intervención manual. | 5 |
+| 19 | US16 | Programar horarios de riego | Como usuario, Quiero programar horarios fijos de riego por día y hora, Para automatizar el suministro de agua en momentos convenientes. | 3 |
+| 20 | US17 | Consultar pronóstico del clima desde la app | Como usuario, Quiero ver el pronóstico climático de los próximos días en la app, Para anticipar lluvias y evitar regar innecesariamente. | 5 |
+| 21 | US18 | Pausar el riego automático ante lluvia prevista | Como usuario, Quiero que el sistema pause el riego automático cuando se pronostique lluvia, Para no desperdiciar agua cuando la naturaleza va a regar por mí. | 5 |
+| 22 | US19 | Configurar umbral de lluvia para pausa automática | Como usuario, Quiero definir desde qué probabilidad de lluvia el sistema debe pausar el riego, Para ajustar la sensibilidad climática según mis preferencias y tipo de cultivo. | 3 |
+| 23 | US20 | Recibir alerta de humedad crítica baja | Como usuario, Quiero recibir una notificación push cuando la humedad del suelo esté demasiado baja, Para actuar a tiempo y evitar que mis cultivos se sequen. | 3 |
+| 24 | US21 | Recibir alerta de humedad excesiva | Como usuario, Quiero recibir una notificación cuando la humedad del suelo esté demasiado alta, Para detener el riego y evitar el encharcamiento o pudrición de raíces. | 3 |
+| 25 | US22 | Recibir alerta de temperatura extrema | Como usuario, Quiero recibir una notificación cuando la temperatura sea extrema, Para tomar medidas de protección sobre mis cultivos. | 3 |
+| 26 | US23 | Recibir alerta de riego innecesario | Como usuario, Quiero recibir una alerta cuando el sistema detecte riego con el suelo ya húmedo, Para identificar y corregir configuraciones que generen desperdicio. | 3 |
+| 27 | US28 | Ver resumen del estado de cultivos en el dashboard | Como usuario, Quiero ver en una sola pantalla el estado actual de mis cultivos, Para tener una visión rápida sin necesidad de navegar entre secciones. | 5 |
+| 28 | US29 | Acceder rápidamente al control de riego desde el dashboard | Como usuario, Quiero tener un botón de control del riego visible en el dashboard, Para activar o detener el suministro de agua con el menor número de pasos posible. | 3 |
+| 29 | US30 | Ver notificaciones recientes en el dashboard | Como usuario, Quiero ver las últimas alertas directamente en el dashboard, Para estar informado del estado de mis cultivos sin revisar cada sección por separado. | 2 |
+| 30 | US31 | Ver métricas de ahorro resumidas en el dashboard | Como usuario, Quiero ver un indicador del agua ahorrada esta semana en el dashboard, Para verificar el valor del sistema de forma inmediata. | 3 |
+| 31 | US24 | Ver historial de riegos realizados | Como usuario, Quiero consultar el historial de todos los ciclos de riego ejecutados, Para revisar cuándo se regó, por cuánto tiempo y cuánta agua se consumió. | 3 |
+| 32 | US25 | Ver consumo de agua diario, semanal y mensual | Como usuario, Quiero ver gráficas de consumo hídrico agrupadas por día, semana y mes, Para entender mis patrones de uso del agua y detectar oportunidades de ahorro. | 5 |
+| 33 | US26 | Ver métricas de ahorro hídrico | Como usuario, Quiero ver cuánta agua he ahorrado gracias a AquaSave comparado con el riego manual, Para verificar el impacto real del sistema en mi consumo. | 5 |
+
 
 ## Capítulo IV: Solution Software Design
 
