@@ -782,6 +782,16 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 
 #### 2.3.3. User Journey Mapping
 
+***Segmento objetivo #1: Horticultores Urbanos***
+<p align="center">
+  <img src="image/User_Journey_Mapping_S1.png" alt="UJM1" width="1000">
+</p>
+
+***Segmento 2: Micro-Agricultores Periurbanos:***
+<p align="center">
+  <img src="image/User_Journey_Mapping_S2.png" alt="UJSM2" width="1000">
+</p>
+
 #### 2.3.4. Empathy Mapping
 
 ### 2.4. Big Picture EventStorming
