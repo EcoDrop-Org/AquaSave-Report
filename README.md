@@ -290,6 +290,26 @@ Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que 
 
 #### 1.1.2. Perfiles de integrantes del equipo
 
+<p align="center">
+  <img src="image/1P.png" alt="Segmento2" width="1000">
+</p>
+<p align="center">
+  <img src="image/2P.png" alt="Segmento2" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/3P.png" alt="Segmento2" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/4P.png" alt="Segmento2" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/5P.png" alt="Segmento2" width="1000">
+</p>
+
+
 ### 1.2. Solution Profile
 
 #### 1.2.1. Antecedentes y problemática
