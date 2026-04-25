@@ -117,17 +117,69 @@
         </ul>
         <a href="#42-tactical-level-domain-driven-design">4.2. Tactical-Level Domain-Driven Design</a><br>
         <ul>
-            <a href="#42x-bounded-context">4.2.X. Bounded Context</a><br>
+            <a href="#421-bounded-context-device-management">4.2.1. Bounded Context: Device Management</a><br>
             <ul>
-                <a href="#42x1-domain-layer">4.2.X.1. Domain Layer</a><br>
-                <a href="#42x2-interface-layer">4.2.X.2. Interface Layer</a><br>
-                <a href="#42x3-application-layer">4.2.X.3. Application Layer</a><br>
-                <a href="#42x4-infrastructure-layer">4.2.X.4. Infrastructure Layer</a><br>
-                <a href="#42x5-bounded-context-software-architecture-component-level-diagrams">4.2.X.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#42x6-bounded-context-software-architecture-code-level-diagrams">4.2.X.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+                <a href="#4211-domain-layer">4.2.1.1. Domain Layer</a><br>
+                <a href="#4212-interface-layer">4.2.1.2. Interface Layer</a><br>
+                <a href="#4213-application-layer">4.2.1.3. Application Layer</a><br>
+                <a href="#4214-infrastructure-layer">4.2.1.4. Infrastructure Layer</a><br>
+                <a href="#4215-bounded-context-software-architecture-component-level-diagrams">4.2.1.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+                <a href="#4216-bounded-context-software-architecture-code-level-diagrams">4.2.1.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
                 <ul>
-                    <a href="#42x61-bounded-context-domain-layer-class-diagrams">4.2.X.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42x62-bounded-context-database-design-diagram">4.2.X.6.2. Bounded Context Database Design Diagram</a><br>
+                    <a href="#42161-bounded-context-domain-layer-class-diagrams">4.2.1.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+                    <a href="#42162-bounded-context-database-design-diagram">4.2.1.6.2. Bounded Context Database Design Diagram</a><br>
+                </ul>
+            </ul>
+<a href="#422-bounded-context-irrigation-intelligence">4.2.2. Bounded Context: Irrigation Intelligence</a><br>
+            <ul>
+                <a href="#4221-domain-layer">4.2.2.1. Domain Layer</a><br>
+                <a href="#4222-interface-layer">4.2.2.2. Interface Layer</a><br>
+                <a href="#4223-application-layer">4.2.2.3. Application Layer</a><br>
+                <a href="#4224-infrastructure-layer">4.2.2.4. Infrastructure Layer</a><br>
+                <a href="#4225-bounded-context-software-architecture-component-level-diagrams">4.2.2.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+                <a href="#4226-bounded-context-software-architecture-code-level-diagrams">4.2.2.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+                <ul>
+                    <a href="#42261-bounded-context-domain-layer-class-diagrams">4.2.2.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+                    <a href="#42262-bounded-context-database-design-diagram">4.2.2.6.2. Bounded Context Database Design Diagram</a><br>
+                </ul>
+            </ul>
+<a href="#423-bounded-context-identity-access-management">4.2.3. Bounded Context: Identity Access Management</a><br>
+            <ul>
+                <a href="#4231-domain-layer">4.2.3.1. Domain Layer</a><br>
+                <a href="#4232-interface-layer">4.2.3.2. Interface Layer</a><br>
+                <a href="#4233-application-layer">4.2.3.3. Application Layer</a><br>
+                <a href="#4234-infrastructure-layer">4.2.3.4. Infrastructure Layer</a><br>
+                <a href="#4235-bounded-context-software-architecture-component-level-diagrams">4.2.3.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+                <a href="#4236-bounded-context-software-architecture-code-level-diagrams">4.2.3.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+                <ul>
+                    <a href="#42361-bounded-context-domain-layer-class-diagrams">4.2.3.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+                    <a href="#42362-bounded-context-database-design-diagram">4.2.3.6.2. Bounded Context Database Design Diagram</a><br>
+                </ul>
+            </ul>
+<a href="#424-bounded-context-monetization">4.2.4. Bounded Context: Monetization</a><br>
+            <ul>
+                <a href="#4241-domain-layer">4.2.4.1. Domain Layer</a><br>
+                <a href="#4242-interface-layer">4.2.4.2. Interface Layer</a><br>
+                <a href="#4243-application-layer">4.2.4.3. Application Layer</a><br>
+                <a href="#4244-infrastructure-layer">4.2.4.4. Infrastructure Layer</a><br>
+                <a href="#4245-bounded-context-software-architecture-component-level-diagrams">4.2.4.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+                <a href="#4246-bounded-context-software-architecture-code-level-diagrams">4.2.4.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+                <ul>
+                    <a href="#42461-bounded-context-domain-layer-class-diagrams">4.2.4.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+                    <a href="#42462-bounded-context-database-design-diagram">4.2.4.6.2. Bounded Context Database Design Diagram</a><br>
+                </ul>
+            </ul>
+<a href="#425-bounded-context-analytics">4.2.5. Bounded Context: Analytics</a><br>
+            <ul>
+                <a href="#4251-domain-layer">4.2.5.1. Domain Layer</a><br>
+                <a href="#4252-interface-layer">4.2.5.2. Interface Layer</a><br>
+                <a href="#4253-application-layer">4.2.5.3. Application Layer</a><br>
+                <a href="#4254-infrastructure-layer">4.2.5.4. Infrastructure Layer</a><br>
+                <a href="#4255-bounded-context-software-architecture-component-level-diagrams">4.2.5.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+                <a href="#4256-bounded-context-software-architecture-code-level-diagrams">4.2.5.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+                <ul>
+                    <a href="#42561-bounded-context-domain-layer-class-diagrams">4.2.5.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+                    <a href="#42562-bounded-context-database-design-diagram">4.2.5.6.2. Bounded Context Database Design Diagram</a><br>
                 </ul>
             </ul>
         </ul>
@@ -1252,25 +1304,510 @@ El diagrama de despliegue muestra la distribución física y tecnológica de los
   <img src="image/DiagramaDeploymentAquaSave.png" alt="DeploymentDiagram" width="1000">
 </p>
 
-### 4.2. Tactical-Level Domain-Driven Design
+## 4.2. Tactical-Level Domain-Driven Design
 
-#### 4.2.X. Bounded Context
+### 4.2.1. Bounded Context: Device Management
 
-##### 4.2.X.1. Domain Layer
+#### 4.2.1.1. Domain Layer
 
-##### 4.2.X.2. Interface Layer
+Esta capa encapsula las reglas de negocio para la gestión del dispositivo IoT ESP32, sus sensores y conectividad.
 
-##### 4.2.X.3. Application Layer
+**Entities:**
 
-##### 4.2.X.4. Infrastructure Layer
+- `Device`: Entidad principal que representa el dispositivo ESP32 con propiedades como DeviceId, AccountId, DeviceName, FirmwareVersion, IsActive, CreatedAt y UpdatedAt. Define comportamientos para conectar, desconectar y actualizar firmware.
+- `SensorReading`: Entidad que registra cada lectura de los sensores con propiedades como ReadingId, DeviceId, SoilMoisture, Temperature, AirHumidity, WaterFlow, Timestamp y IsValid.
+- `WaterValve`: Entidad que representa la electroválvula con propiedades como ValveId, DeviceId, IsOpen, LastToggledAt y ToggleCount.
 
-##### 4.2.X.5. Bounded Context Software Architecture Component Level Diagrams
+**Value Objects:**
 
-##### 4.2.X.6. Bounded Context Software Architecture Code Level Diagrams
+- `SoilMoistureLevel`: Valida y clasifica el porcentaje de humedad del suelo (Seco / Óptimo / Húmedo) según umbrales configurados.
+- `WifiCredentials`: Encapsula SSID y contraseña de forma segura para la conexión del dispositivo.
+- `FirmwareVersion`: Objeto de valor con formato semántico (major.minor.patch) y lógica de comparación de versiones.
+- `DeviceConnectionStatus`: Enumera los estados posibles del dispositivo (Online, Offline, Connecting, Error).
 
-###### 4.2.X.6.1. Bounded Context Domain Layer Class Diagrams
+**Aggregates:**
 
-###### 4.2.X.6.2. Bounded Context Database Design Diagram
+- `DeviceAggregate`: Mantiene consistencia entre el dispositivo, sus lecturas activas y el estado de la válvula, asegurando que no se realicen lecturas si el dispositivo está desconectado.
+
+**Domain Services:**
+
+- `IDeviceConnectionService`: Define el contrato para gestionar la conexión y reconexión automática del dispositivo a la red WiFi.
+- `ISensorCalibrationService`: Interface para calibrar sensores y validar lecturas fuera de rango.
+- `IFirmwareUpdateService`: Define el contrato para gestionar el ciclo de actualización de firmware del ESP32.
+
+**Repositories (Interfaces):**
+
+- `IDeviceRepository`: Define métodos para persistencia de dispositivos (FindByDeviceId, FindByAccountId, Save, UpdateStatus, etc.).
+- `ISensorReadingRepository`: Interface para almacenamiento y consulta de lecturas históricas de sensores.
+
+---
+
+#### 4.2.1.2. Interface Layer
+
+Expone funcionalidades del dispositivo a través de APIs REST y endpoints MQTT.
+
+**Controllers:**
+
+- `DeviceController`: Maneja endpoints `/api/devices` para operaciones de vinculación, configuración y estado del dispositivo.
+- `SensorController`: Gestiona endpoints `/api/devices/{id}/sensors` para consulta de lecturas en tiempo real e historial.
+- `ValveController`: Maneja endpoints `/api/devices/{id}/valve` para control manual de apertura y cierre del riego.
+
+---
+
+#### 4.2.1.3. Application Layer
+
+Coordina los flujos de negocio relacionados con la gestión del dispositivo IoT.
+
+**Command Services:**
+
+- `PairDeviceCommandService`: Procesa la vinculación de un nuevo dispositivo ESP32 a una cuenta de usuario.
+- `UpdateFirmwareCommandService`: Gestiona el proceso de actualización de firmware con validación de versión y rollback ante fallos.
+- `ToggleValveCommandService`: Procesa órdenes de apertura y cierre de la electroválvula con confirmación de ejecución.
+- `CalibrateDeviceCommandService`: Coordina la calibración de sensores y almacena los factores de corrección.
+- `TriggerFactoryResetCommandService`: Gestiona el reseteo de fábrica del dispositivo con limpieza de datos locales.
+
+**Query Services:**
+
+- `DeviceStatusQueryService`: Resuelve consultas sobre el estado actual de conexión, batería y sensores del dispositivo.
+- `SensorReadingQueryService`: Maneja consultas de lecturas en tiempo real e historial por rango de fechas.
+
+**Event Handlers:**
+
+- `DevicePairedEventHandler`: Procesa el evento de vinculación exitosa, inicializando configuraciones por defecto.
+- `WiFiConnectionLostEventHandler`: Maneja la pérdida de conexión, activando la política de reconexión automática.
+- `IrregularFlowDetectedEventHandler`: Procesa detecciones de flujo irregular, disparando alertas de posible fuga.
+
+---
+
+#### 4.2.1.4. Infrastructure Layer
+
+Implementa persistencia y servicios externos para la gestión del dispositivo.
+
+**Persistence/Repositories:**
+
+- `PostgresDeviceRepository`: Implementación de persistencia usando PostgreSQL con índices optimizados para búsquedas por AccountId y DeviceId.
+- `TimeSeriesReadingRepository`: Gestiona lecturas de sensores en base de datos de series temporales (InfluxDB) para consultas eficientes por rango de tiempo.
+
+**External Services:**
+
+- `MqttBrokerService`: Integración con broker MQTT para comunicación bidireccional en tiempo real con el dispositivo ESP32.
+- `OTAFirmwareService`: Servicio de actualización Over-The-Air que gestiona la descarga y aplicación de firmware en el dispositivo.
+- `DeviceHealthMonitorService`: Monitorea métricas de hardware del dispositivo (voltaje, temperatura del chip, calidad de señal WiFi).
+
+---
+
+#### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por desarrollar.*
+
+#### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.1.6.2. Bounded Context Database Design Diagram
+
+*Por desarrollar.*
+
+---
+
+### 4.2.2. Bounded Context: Irrigation Intelligence
+
+#### 4.2.2.1. Domain Layer
+
+Esta capa encapsula las reglas de negocio para la automatización y toma de decisiones del riego basadas en datos del suelo y clima.
+
+**Entities:**
+
+- `IrrigationSchedule`: Entidad principal con propiedades como ScheduleId, DeviceId, CropType, StartTime, Duration, FrequencyDays, IsActive y CreatedAt. Define comportamientos para activar, pausar y modificar programaciones.
+- `IrrigationEvent`: Entidad que registra cada ciclo de riego ejecutado con propiedades como EventId, DeviceId, StartedAt, EndedAt, LitersConsumed, TriggerType (Manual/Automático/Programado) y WasSkipped.
+- `WeatherForecast`: Entidad que almacena pronósticos climáticos con propiedades como ForecastId, DeviceId, RainProbability, Temperature, RetrievedAt y ValidUntil.
+- `MoistureThreshold`: Entidad que define los umbrales de humedad configurados por el usuario con MinMoisture, MaxMoisture, OptimalMoisture y CropType.
+
+**Value Objects:**
+
+- `RainProbability`: Valida y clasifica la probabilidad de lluvia (Baja / Media / Alta) con el umbral de pausa configurable.
+- `IrrigationDuration`: Encapsula la duración en segundos con validaciones de mínimo y máximo según el tipo de cultivo.
+- `CropType`: Enumera los tipos de cultivo disponibles (Hortalizas, Aromáticas, Ornamentales, Frutales, Cereales) con sus parámetros hídricos asociados.
+
+**Aggregates:**
+
+- `IrrigationAggregate`: Mantiene consistencia entre la programación, los eventos de riego y las condiciones actuales del suelo, garantizando que no se inicie un riego si la humedad ya está en rango óptimo.
+
+**Domain Services:**
+
+- `IIrrigationDecisionService`: Define el contrato para evaluar si se debe iniciar, continuar o pausar el riego según humedad y pronóstico.
+- `IWeatherIntegrationService`: Interface para obtener y procesar pronósticos climáticos desde APIs externas.
+- `IWaterSavingsCalculationService`: Define el cálculo de ahorro hídrico comparando consumo real vs. consumo estimado sin automatización.
+
+**Repositories (Interfaces):**
+
+- `IIrrigationScheduleRepository`: Define métodos para gestión de programaciones (FindByDeviceId, Save, Deactivate, etc.).
+- `IIrrigationEventRepository`: Interface para almacenamiento y consulta del historial de riegos.
+- `IWeatherForecastRepository`: Interface para persistencia y consulta de pronósticos climáticos.
+
+---
+
+#### 4.2.2.2. Interface Layer
+
+**Controllers:**
+
+- `IrrigationScheduleController`: Maneja endpoints `/api/irrigation/schedules` para crear, modificar y eliminar programaciones de riego.
+- `IrrigationEventController`: Gestiona endpoints `/api/irrigation/events` para consultar el historial de ciclos ejecutados.
+- `WeatherController`: Maneja endpoints `/api/weather/forecast` para consultar el pronóstico climático actual del dispositivo.
+
+---
+
+#### 4.2.2.3. Application Layer
+
+**Command Services:**
+
+- `GenerateIrrigationScheduleCommandService`: Crea programaciones de riego personalizadas según el tipo de cultivo y preferencias del usuario.
+- `ApplyWeatherOverrideCommandService`: Procesa la pausa del riego automático cuando la probabilidad de lluvia supera el umbral configurado.
+- `UpdateIrrigationPlanCommandService`: Gestiona modificaciones a programaciones existentes con recalculo de próximas ejecuciones.
+- `LogIrrigationActivityCommandService`: Registra cada ciclo de riego con métricas de consumo y tipo de disparador.
+
+**Query Services:**
+
+- `IrrigationForecastQueryService`: Resuelve consultas sobre la próxima programación de riego y condiciones actuales del suelo.
+- `WaterSavingsQueryService`: Calcula y retorna métricas de ahorro hídrico acumulado por período.
+
+**Event Handlers:**
+
+- `MoistureThresholdReachedEventHandler`: Procesa el evento de humedad crítica, activando el riego automático.
+- `HighRainProbabilityEventHandler`: Maneja pronósticos de lluvia alta, pausando el riego programado y notificando al usuario.
+- `IrrigationDurationTimeoutEventHandler`: Gestiona el fin automático del riego cuando se alcanza la duración máxima configurada.
+
+---
+
+#### 4.2.2.4. Infrastructure Layer
+
+**Persistence/Repositories:**
+
+- `PostgresIrrigationScheduleRepository`: Persistencia de programaciones con índices para búsqueda por DeviceId y próxima ejecución.
+- `PostgresIrrigationEventRepository`: Almacenamiento de eventos de riego con particionamiento por fecha para consultas históricas eficientes.
+
+**External Services:**
+
+- `OpenWeatherMapService`: Integración con OpenWeatherMap API para obtener pronósticos de temperatura y precipitación por coordenadas GPS.
+- `IrrigationSchedulerService`: Servicio de scheduling que evalúa y dispara programaciones de riego en los horarios configurados.
+
+---
+
+#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por desarrollar.*
+
+#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.2.6.2. Bounded Context Database Design Diagram
+
+*Por desarrollar.*
+
+---
+
+### 4.2.3. Bounded Context: Identity Access Management
+
+#### 4.2.3.1. Domain Layer
+
+Esta capa encapsula las reglas de negocio para la autenticación, registro y gestión de perfiles de usuarios de AquaSave.
+
+**Entities:**
+
+- `User`: Entidad principal con propiedades como UserId, Email, PasswordHash, ProfileType (HorticulturUrbano / MicroAgricultor), IsActive, CreatedAt y LastLoginAt.
+- `UserProfile`: Entidad que extiende el perfil con propiedades como ProfileId, UserId, FullName, SpaceType, CropTypes, ParcelSizeHa y LocationCity.
+- `AppSession`: Entidad que representa sesiones activas con SessionId, UserId, DeviceInfo, CreatedAt y ExpiresAt.
+
+**Value Objects:**
+
+- `Email`: Valida formato y unicidad del correo electrónico.
+- `PasswordHash`: Encapsula el hash seguro de contraseña con el algoritmo bcrypt.
+- `ProfileType`: Enumera los tipos de perfil (HorticulturUrbano, MicroAgricultorPeriurbano) con sus configuraciones por defecto.
+- `SpaceType`: Enumera los tipos de espacio de cultivo (Terraza, Balcón, Jardín, Parcela).
+
+**Aggregates:**
+
+- `UserAggregate`: Mantiene consistencia entre el usuario, su perfil y sus sesiones activas.
+
+**Domain Services:**
+
+- `IAuthenticationService`: Define el contrato para autenticación con credenciales propias y OAuth (Google).
+- `IProfileValidationService`: Interface para validar que los datos del perfil sean consistentes con el tipo de usuario.
+
+**Repositories (Interfaces):**
+
+- `IUserRepository`: Define métodos para gestión de usuarios (FindByEmail, FindByUserId, Save, UpdateLastLogin, etc.).
+- `ISessionRepository`: Interface para gestión del ciclo de vida de sesiones.
+
+---
+
+#### 4.2.3.2. Interface Layer
+
+**Controllers:**
+
+- `AuthController`: Maneja endpoints `/api/auth` para registro, login, social login con Google y recuperación de contraseña.
+- `ProfileController`: Gestiona endpoints `/api/profiles` para configuración y actualización de perfiles de horticultor y micro-agricultor.
+- `SessionController`: Maneja endpoints `/api/sessions` para gestión de sesiones activas y cierre de sesión.
+
+---
+
+#### 4.2.3.3. Application Layer
+
+**Command Services:**
+
+- `CreateUserAccountCommandService`: Procesa el registro de nuevos usuarios con validación de unicidad de correo y configuración de perfil inicial.
+- `AuthenticateUserCommandService`: Gestiona el proceso de autenticación con credenciales propias y OAuth, generando tokens JWT.
+- `UpdateUserProfileCommandService`: Procesa actualizaciones de perfil validando consistencia con el tipo de usuario.
+- `ResetPasswordCommandService`: Gestiona el flujo de recuperación de contraseña con tokens de un solo uso.
+
+**Query Services:**
+
+- `UserProfileQueryService`: Resuelve consultas sobre datos del perfil, configuraciones y tipo de usuario.
+
+**Event Handlers:**
+
+- `UserAccountCreatedEventHandler`: Procesa el registro exitoso, enviando email de bienvenida e iniciando el tutorial de onboarding.
+- `AppSessionStartedEventHandler`: Registra el inicio de sesión y actualiza métricas de actividad del usuario.
+
+---
+
+#### 4.2.3.4. Infrastructure Layer
+
+**Persistence/Repositories:**
+
+- `PostgresUserRepository`: Implementación de persistencia con índices únicos sobre Email y UserId.
+- `RedisSessionRepository`: Gestiona sesiones activas en Redis con TTL automático para expiración de tokens.
+
+**External Services:**
+
+- `GoogleOAuthService`: Integración con Google OAuth 2.0 para autenticación social.
+- `JwtTokenService`: Generación y validación de tokens JWT con refresh token rotation.
+- `EmailNotificationService`: Envío de correos transaccionales (bienvenida, recuperación de contraseña) vía SendGrid.
+
+---
+
+#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por desarrollar.*
+
+#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.3.6.2. Bounded Context Database Design Diagram
+
+*Por desarrollar.*
+
+---
+
+### 4.2.4. Bounded Context: Monetization
+
+#### 4.2.4.1. Domain Layer
+
+Esta capa encapsula las reglas de negocio para la gestión de suscripciones, pagos y planes de AquaSave.
+
+**Entities:**
+
+- `Subscription`: Entidad principal con propiedades como SubscriptionId, UserId, PlanType (Free / Premium), Status, StartDate, EndDate, RenewalDate y AutoRenew.
+- `PaymentMethod`: Entidad que representa métodos de pago registrados con PaymentMethodId, UserId, Type, LastFourDigits, ExpiryDate y IsDefault.
+- `PaymentTransaction`: Entidad que registra cada transacción con TransactionId, SubscriptionId, Amount, Currency, Status, ProcessedAt y StripePaymentIntentId.
+
+**Value Objects:**
+
+- `PlanType`: Enumera los planes disponibles (Free, Premium) con sus funcionalidades y límites de dispositivos asociados.
+- `SubscriptionStatus`: Enumera los estados posibles (Active, Cancelled, Expired, GracePeriod, PastDue).
+- `Money`: Objeto de valor que encapsula Amount y Currency con validaciones de precisión decimal.
+
+**Aggregates:**
+
+- `SubscriptionAggregate`: Mantiene consistencia entre la suscripción, los métodos de pago y el historial de transacciones, aplicando las políticas de periodo de gracia y recuperación de pago.
+
+**Domain Services:**
+
+- `ISubscriptionPolicyService`: Define las reglas de negocio para cambios de plan, periodos de gracia y restricciones de funcionalidades.
+- `IBillingService`: Interface para la lógica de facturación recurrente y manejo de fallos de pago.
+
+**Repositories (Interfaces):**
+
+- `ISubscriptionRepository`: Define métodos para gestión de suscripciones (FindByUserId, Save, UpdateStatus, etc.).
+- `IPaymentTransactionRepository`: Interface para historial de transacciones y auditoría de pagos.
+
+---
+
+#### 4.2.4.2. Interface Layer
+
+**Controllers:**
+
+- `SubscriptionController`: Maneja endpoints `/api/subscriptions` para activación, consulta y cancelación de planes.
+- `PaymentController`: Gestiona endpoints `/api/payments` para registro de métodos de pago, procesamiento y historial.
+- `PlanController`: Maneja endpoints `/api/plans` para comparativa de planes y upgrade desde el plan gratuito.
+
+---
+
+#### 4.2.4.3. Application Layer
+
+**Command Services:**
+
+- `ActivateFreeTierCommandService`: Procesa la activación automática del plan gratuito al registrar una cuenta nueva.
+- `InitializePremiumCheckoutCommandService`: Inicia el flujo de pago con Stripe para la suscripción premium.
+- `ProcessRecurringBillingCommandService`: Gestiona el cobro automático mensual con manejo de reintentos.
+- `CancelSubscriptionCommandService`: Procesa la cancelación con aplicación de la política de periodo de gracia.
+- `ExecuteRefundCommandService`: Gestiona devoluciones procesando el reembolso vía Stripe.
+
+**Query Services:**
+
+- `SubscriptionStatusQueryService`: Resuelve consultas sobre el plan activo, fecha de renovación y funcionalidades disponibles.
+- `PaymentHistoryQueryService`: Retorna el historial de transacciones con filtros por período.
+
+**Event Handlers:**
+
+- `SubscriptionConfirmedEventHandler`: Habilita las funcionalidades premium en la cuenta del usuario.
+- `RecurringBillingFailedEventHandler`: Activa el periodo de gracia y notifica al usuario sobre el fallo de pago.
+- `SubscriptionCancelledEventHandler`: Restringe funcionalidades premium al finalizar el período pagado.
+
+---
+
+#### 4.2.4.4. Infrastructure Layer
+
+**Persistence/Repositories:**
+
+- `PostgresSubscriptionRepository`: Persistencia de suscripciones con índices por UserId y estado para consultas de renovaciones próximas.
+- `PostgresPaymentTransactionRepository`: Almacenamiento de transacciones con auditoría completa e inmutabilidad de registros.
+
+**External Services:**
+
+- `StripePaymentService`: Integración con Stripe API para procesamiento de pagos, gestión de métodos de pago y webhooks de eventos de facturación.
+- `BillingSchedulerService`: Servicio de scheduling para ejecutar cobros recurrentes y verificar suscripciones próximas a vencer.
+
+---
+
+#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por desarrollar.*
+
+#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.4.6.2. Bounded Context Database Design Diagram
+
+*Por desarrollar.*
+
+---
+
+### 4.2.5. Bounded Context: Analytics
+
+#### 4.2.5.1. Domain Layer
+
+Esta capa encapsula las reglas de negocio para el cálculo de métricas de ahorro hídrico y generación de reportes de sostenibilidad.
+
+**Entities:**
+
+- `WaterSavingsMetric`: Entidad principal con propiedades como MetricId, DeviceId, UserId, Period (Daily/Weekly/Monthly), LitersConsumed, LitersSaved, SavingsPercentage y CalculatedAt.
+- `CropHealthReport`: Entidad que representa reportes semanales del estado de los cultivos con ReportId, DeviceId, WeekStart, AverageMoisture, AverageTemperature, IrrigationCount y HealthScore.
+- `SustainabilitySummary`: Entidad que consolida métricas mensuales de sostenibilidad con TotalLitersSaved, CO2Equivalent, EconomicSavingsSOL y ComparedToPreviousMonth.
+
+**Value Objects:**
+
+- `SavingsPeriod`: Enumera los períodos de análisis (Daily, Weekly, Monthly, Seasonal) con sus rangos de fechas.
+- `HealthScore`: Encapsula la puntuación de salud del cultivo (0-100) con clasificación (Crítico / Regular / Bueno / Excelente).
+- `WaterVolume`: Objeto de valor que encapsula litros con conversiones a m³ y validaciones de rango.
+
+**Aggregates:**
+
+- `AnalyticsAggregate`: Mantiene consistencia entre las métricas de ahorro, los reportes de cultivo y los resúmenes de sostenibilidad por dispositivo y período.
+
+**Domain Services:**
+
+- `IWaterSavingsCalculationService`: Define el algoritmo para calcular el ahorro comparando consumo real vs. consumo estimado sin automatización.
+- `ICropHealthScoringService`: Interface para evaluar la salud del cultivo basándose en datos históricos de humedad y temperatura.
+
+**Repositories (Interfaces):**
+
+- `IWaterSavingsMetricRepository`: Define métodos para persistencia y consulta de métricas (FindByDeviceIdAndPeriod, Save, etc.).
+- `ICropHealthReportRepository`: Interface para gestión de reportes semanales de salud de cultivos.
+
+---
+
+#### 4.2.5.2. Interface Layer
+
+**Controllers:**
+
+- `WaterSavingsController`: Maneja endpoints `/api/analytics/savings` para consultar métricas de ahorro hídrico por período.
+- `CropReportController`: Gestiona endpoints `/api/analytics/crop-reports` para reportes semanales del estado de los cultivos.
+- `SustainabilityController`: Maneja endpoints `/api/analytics/sustainability` para resúmenes mensuales de sostenibilidad.
+
+---
+
+#### 4.2.5.3. Application Layer
+
+**Command Services:**
+
+- `CalculateWaterSavingsCommandService`: Procesa el cálculo periódico de ahorro hídrico agregando datos de consumo del contexto de Irrigation Intelligence.
+- `GenerateWeeklyCropReportCommandService`: Genera automáticamente reportes semanales de salud del cultivo al finalizar cada semana.
+- `DeliverMonthlySustainabilitySummaryCommandService`: Consolida métricas mensuales y las envía al usuario como resumen de sostenibilidad.
+
+**Query Services:**
+
+- `WaterSavingsDashboardQueryService`: Resuelve consultas del dashboard de ahorro con agregaciones por día, semana y mes.
+- `HistoricalDataExportQueryService`: Prepara exportaciones de datos históricos en formato CSV con filtros configurables.
+
+**Event Handlers:**
+
+- `WaterSavingsMetricCalculatedEventHandler`: Procesa el cálculo completado, actualizando el dashboard del usuario en tiempo real.
+- `DailySavingsTargetAchievedEventHandler`: Notifica al usuario cuando alcanza el objetivo diario de ahorro configurado.
+
+---
+
+#### 4.2.5.4. Infrastructure Layer
+
+**Persistence/Repositories:**
+
+- `PostgresWaterSavingsRepository`: Persistencia de métricas con particionamiento por mes para consultas históricas eficientes.
+- `PostgresCropHealthReportRepository`: Almacenamiento de reportes semanales con índices por DeviceId y semana de inicio.
+
+**External Services:**
+
+- `AnalyticsSchedulerService`: Servicio de scheduling que dispara el cálculo de métricas diarias, semanales y mensuales automáticamente.
+- `DataExportService`: Genera archivos CSV con datos históricos de consumo y ahorro para descarga del usuario.
+
+---
+
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por desarrollar.*
+
+#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por desarrollar.*
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+*Por desarrollar.*
+
+
+
 
 ---
 
