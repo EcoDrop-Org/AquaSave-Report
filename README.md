@@ -1273,7 +1273,19 @@ Cada uno cuenta con responsabilidades y límites claramente definidos, lo que co
 
 ##### 4.1.1.2. Domain Message Flows Modeling
 
+Los Domain Message Flows representan las interacciones entre distintos bounded contexts, evidenciando la forma en que se comunican entre sí. A continuación, se describen los flujos de mensajes correspondientes a tres escenarios principales de nuestra aplicación:
+
+[![Strategic-Domain-Driven-Design.jpg](https://i.postimg.cc/28hQZbmJ/Strategic-Domain-Driven-Design.jpg)](https://postimg.cc/1fRVxz8c)
+
+[![Strategic-Domain-Driven-Design-(1).jpg](https://i.postimg.cc/xTDHnfHy/Strategic-Domain-Driven-Design-(1).jpg)](https://postimg.cc/SjdjGpgJ)
+
+[![Strategic-Domain-Driven-Design-(2).jpg](https://i.postimg.cc/wMKtq2tp/Strategic-Domain-Driven-Design-(2).jpg)](https://postimg.cc/bDTYLQHC)
+
+Estos flujos de mensaje son pilares fundamentales de la arquitectura del sistema, ya que revelan cómo los distintos Bounded Context se coordinan de forma coherente, asíncrona y bien definida. Al mapear cada evento, comando e intercambio de mensajes entre contextos, no solo visualizamos el flujo de información entre componentes, sino que también identificamos puntos críticos de acoplamiento, posibles cuellos de botella en la comunicación y oportunidades para optimizar la escalabilidad y la resiliencia. Además, garantizan que la arquitectura esté alineada con los casos de uso del negocio, asegurando que cada interacción tenga propósito, trazabilidad y cumplimiento de contratos de dominio fundamentales para construir un sistema robusto, mantenible y adaptativo a largo plazo.
+
 ##### 4.1.1.3. Bounded Context Canvases
+
+Los Bounded Context Canvases son herramientas visuales que permiten documentar las características esenciales de cada contexto delimitado, capturando su propósito estratégico, modelo de dominio, lenguaje ubicuo, políticas y relaciones con otros contextos. A continuación, se presentan los canvases de los bounded context identificados, los cuales han servido para definir con claridad sus responsabilidades y límites.
 
 #### 4.1.2. Context Mapping
 Con el Context Mapping se presentan las relaciones entre los bounded contexts identificados de AquaSave.
