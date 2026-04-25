@@ -1287,15 +1287,15 @@ Estos flujos de mensaje son pilares fundamentales de la arquitectura del sistema
 
 Los Bounded Context Canvases son herramientas visuales que permiten documentar las características esenciales de cada contexto delimitado, capturando su propósito estratégico, modelo de dominio, lenguaje ubicuo, políticas y relaciones con otros contextos. A continuación, se presentan los canvases de los bounded context identificados, los cuales han servido para definir con claridad sus responsabilidades y límites.
 
-[![image.png](https://i.postimg.cc/QChSCnqh/image.png)](https://postimg.cc/VrZXHgTV)
+<a href="https://ibb.co/9mDPm279"><img src="https://i.ibb.co/1YgcYKkf/canvas1.png" alt="canvas1" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
-[![image.png](https://i.postimg.cc/ncdTV2jN/image.png)](https://postimg.cc/1fqDJpKK)
+<a href="https://ibb.co/CKGWqskN"><img src="https://i.ibb.co/GQSFX3KB/canvas2.png" alt="canvas2" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
-[![image.png](https://i.postimg.cc/YSFx3wnp/image.png)](https://postimg.cc/gwYRz1b5)
+<a href="https://ibb.co/tMLJZDpm"><img src="https://i.ibb.co/N6Ty1K2V/canvas3.png" alt="canvas3" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
-[![image.png](https://i.postimg.cc/2ykFrLzz/image.png)](https://postimg.cc/KkWg5zkV)
+<a href="https://ibb.co/bjZD1HW3"><img src="https://i.ibb.co/8nptMzKB/canvas4.png" alt="canvas4" border="0"></a>
 
-[![image.png](https://i.postimg.cc/2y7cxf55/image.png)](https://postimg.cc/K34DZwBX)
+<a href="https://ibb.co/cK8Mjcfj"><img src="https://i.ibb.co/qLgXvMqv/canvas5.png" alt="canvas5" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
 #### 4.1.2. Context Mapping
 Con el Context Mapping se presentan las relaciones entre los bounded contexts identificados de AquaSave.
