@@ -1604,15 +1604,17 @@ Esta capa encapsula las reglas de negocio para la autenticación, registro y ges
 
 #### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-*Por desarrollar.*
-
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-*Por desarrollar.*
+<p align="center">
+  <img src="image/ACCESS.png" alt="Segmento2" width="1000">
+</p>
 
 ##### 4.2.3.6.2. Bounded Context Database Design Diagram
 
-*Por desarrollar.*
+<p align="center">
+  <img src="image/b3.png" alt="Segmento2" width="1000">
+</p>
 
 ---
 
