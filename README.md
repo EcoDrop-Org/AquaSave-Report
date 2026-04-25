@@ -1417,8 +1417,11 @@ Implementa persistencia y servicios externos para la gestión del dispositivo.
 ---
 
 #### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+<p align="center">
+  <img src="image/dc1.png" alt="Segmento2" width="1000">
+</p>
 
-*Por desarrollar.*
+
 
 #### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1521,7 +1524,10 @@ Esta capa encapsula las reglas de negocio para la automatización y toma de deci
 
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-*Por desarrollar.*
+<p align="center">
+  <img src="image/dc2.png" alt="Segmento2" width="1000">
+</p>
+
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1620,8 +1626,9 @@ Esta capa encapsula las reglas de negocio para la autenticación, registro y ges
 
 #### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-*Por desarrollar.*
-
+<p align="center">
+  <img src="image/dc3.png" alt="Segmento2" width="1000">
+</p>
 #### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
@@ -1721,7 +1728,9 @@ Esta capa encapsula las reglas de negocio para la gestión de suscripciones, pag
 
 #### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-*Por desarrollar.*
+<p align="center">
+  <img src="image/dc4.png" alt="Segmento2" width="1000">
+</p>
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1819,7 +1828,9 @@ Esta capa encapsula las reglas de negocio para el cálculo de métricas de ahorr
 
 #### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-*Por desarrollar.*
+<p align="center">
+  <img src="image/dc5.png" alt="Segmento2" width="1000">
+</p>
 
 #### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
 
