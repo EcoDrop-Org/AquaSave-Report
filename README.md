@@ -38,6 +38,18 @@
 
 # Project Report Collaboration Insights
 
+<p align="center">
+  <img src="image/insight1AV1.png" alt="insight" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/insight2AV1.png" alt="insight" width="1000">
+</p>
+
+<p align="center">
+  <img src="image/insight3AV1.png" alt="insight" width="1000">
+</p>
+
 # Contenido
 
 # Tabla de contenidos
