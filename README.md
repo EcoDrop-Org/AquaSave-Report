@@ -36,6 +36,10 @@
 
 # Registro de Versiones del Informe
 
+| Versión | Fecha      | Autor                                                                                                                                                         | Descripción de modificación |
+|---------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en EcoDrop / Aquasave. |
+
 # Project Report Collaboration Insights
 
 # Contenido
