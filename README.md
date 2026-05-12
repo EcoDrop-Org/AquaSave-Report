@@ -2067,6 +2067,18 @@ Historial:
 
 #### 5.4.2. Applications Wireflow Diagrams
 
+<p align="center">
+  <img src="image/userflow.png" width="70%">
+</p>
+<p align="center">
+  <img src="image/userflow (1).png" width="70%">
+</p>
+<p align="center">
+  <img src="image/userflow (2).png" width="70%">
+</p>
+
+
+
 #### 5.4.2. Applications Mock-ups
 
 
