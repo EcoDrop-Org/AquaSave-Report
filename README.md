@@ -2389,6 +2389,16 @@ Este User Goal representa el proceso mediante el cual el usuario registra o admi
 
 ### 5.5. Applications Prototyping
 
+En esta sección se presenta el prototipo interactivo de la aplicación web AquaSave, desarrollado en Figma a partir de los mockups y user flows definidos previamente. Este prototipo permite simular la navegación principal del usuario dentro de la plataforma, incluyendo el inicio de sesión, el registro de un nuevo dispositivo IoT, la configuración del ESP32, el registro de plantas o huertos y la visualización del dashboard principal.
+
+El objetivo del prototipo es validar la experiencia de usuario antes de la implementación final, asegurando que las funcionalidades principales de AquaSave sean comprensibles, accesibles y coherentes con las necesidades de los horticultores urbanos y pequeños agricultores. Además, permite evidenciar cómo el usuario interactúa con el sistema para monitorear las condiciones del huerto y tomar decisiones relacionadas con el riego inteligente.
+
+Application Prototype: [AquaSave Web Application Prototype](https://www.figma.com/proto/a6zhtNKsD231UViUfGgsS2/AquaSave-PROTOTYPE?node-id=23-259&t=xjJblsa3kr9j7v4p-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A259)
+
+<p align="center">
+  <img src="image/aquasave-application-prototype.png" alt="AquaSave Application Prototype" width="1000">
+</p>
+
 ### 5.6. IoT Device Design
 
 ---
