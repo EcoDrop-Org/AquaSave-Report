@@ -39,7 +39,7 @@
 | Versión | Fecha      | Autor                                                                                                                                                         | Descripción de modificación |
 |---------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
 | AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en AquaSave. |
-| TB1     | 13/06/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la segunda entrega del informe de nuestro proyecto, hemos realizado la landing page y el frontend de nuestra aplicación AquaSave |
+| TB1     | 13/05/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la segunda entrega del informe de nuestro proyecto, hemos realizado la landing page y el frontend de nuestra aplicación AquaSave |
 
 # Project Report Collaboration Insights
 
@@ -244,17 +244,17 @@
         </ul>
         <a href="#62-landing-page-services--applications-implementation">6.2. Landing Page, Services & Applications Implementation</a><br>
         <ul>
-            <a href="#62x-sprint-n">6.2.X. Sprint n</a><br>
+            <a href="#621-sprint-n">6.2.1. Sprint n</a><br>
             <ul>
-                <a href="#62x1-sprint-planning-n">6.2.X.1. Sprint Planning n</a><br>
-                <a href="#62x2-aspect-leaders-and-collaborators">6.2.X.2. Aspect Leaders and Collaborators</a><br>
-                <a href="#62x3-sprint-backlog-n">6.2.X.3. Sprint Backlog n</a><br>
-                <a href="#62x4-development-evidence-for-sprint-review">6.2.X.4. Development Evidence for Sprint Review</a><br>
-                <a href="#62x5-testing-suite-evidence-for-sprint-review">6.2.X.5. Testing Suite Evidence for Sprint Review</a><br>
-                <a href="#62x6-execution-evidence-for-sprint-review">6.2.X.6. Execution Evidence for Sprint Review</a><br>
-                <a href="#62x7-services-documentation-evidence-for-sprint-review">6.2.X.7. Services Documentation Evidence for Sprint Review</a><br>
-                <a href="#62x8-software-deployment-evidence-for-sprint-review">6.2.X.8. Software Deployment Evidence for Sprint Review</a><br>
-                <a href="#62x9-team-collaboration-insights-during-sprint">6.2.X.9. Team Collaboration Insights during Sprint</a><br>
+                <a href="#6211-sprint-planning-n">6.2.1.1. Sprint Planning n</a><br>
+                <a href="#6212-aspect-leaders-and-collaborators">6.2.1.2. Aspect Leaders and Collaborators</a><br>
+                <a href="#6213-sprint-backlog-n">6.2.1.3. Sprint Backlog n</a><br>
+                <a href="#6214-development-evidence-for-sprint-review">6.2.1.4. Development Evidence for Sprint Review</a><br>
+                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.1.5. Testing Suite Evidence for Sprint Review</a><br>
+                <a href="#6216-execution-evidence-for-sprint-review">6.2.1.6. Execution Evidence for Sprint Review</a><br>
+                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.1.7. Services Documentation Evidence for Sprint Review</a><br>
+                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.1.8. Software Deployment Evidence for Sprint Review</a><br>
+                <a href="#6219-team-collaboration-insights-during-sprint">6.2.1.9. Team Collaboration Insights during Sprint</a><br>
             </ul>
         </ul>
         <a href="#63-validation-interviews">6.3. Validation Interviews</a><br>
@@ -1070,6 +1070,7 @@ Usuario: Micro-Agricultor Periurbano
   <img src="image/Impact Map — Carlos Mendoza.png" alt="Diagrama" width="600">
 
 </div>
+
 ### 3.3. Product Backlog
 
 | Orden | User Story ID | Título | Descripción | Story Points |
@@ -2299,7 +2300,7 @@ Historial:
 
 
 
-#### 5.4.2. Applications Mock-ups
+#### 5.4.3. Applications Mock-ups
 
 
 Inicio De Sesión:
@@ -2350,11 +2351,94 @@ Historial:
 [Link para ver los wireframes y Mock-Up de la Aplicacion web](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1&t=l9dE5WV4efNC0iQp-1 ) 
 
 
-#### 5.4.3. Applications User Flow Diagrams
+#### 5.4.4. Applications User Flow Diagrams
+
+Esta sección presenta los diagramas de flujo de usuario de la aplicación AquaSave. Estos diagramas ilustran las rutas principales que siguen los usuarios dentro de la plataforma, permitiendo comprender de forma clara la navegación, las interacciones y las decisiones que se realizan durante el uso de la aplicación.
+
+Los User Flow Diagrams fueron elaborados a partir de los wireflows previamente definidos en la sección 5.4.2, tomando como base los tres User Goals principales: registrarse o iniciar sesión en AquaSave, agregar un nuevo dispositivo IoT y registrar una planta o huerto. De esta manera, se mantiene la coherencia entre los flujos de navegación diseñados y las funcionalidades principales del producto.
+
+**Web Application UserFlow**
+
+**User Flow: Registrarse o iniciar sesión en AquaSave**
+
+User Goal: Como usuario, quiero registrarme o iniciar sesión en AquaSave para acceder al monitoreo y gestión de mi huerto inteligente.
+
+Este User Goal representa el primer punto de interacción del usuario con la aplicación web de AquaSave. El usuario puede iniciar sesión con una cuenta existente o registrarse en caso aún no cuente con acceso a la plataforma. Una vez que el sistema valida la información ingresada, el usuario es redirigido al dashboard principal, donde puede visualizar el estado general de su huerto, el dispositivo activo, la humedad promedio, las condiciones climáticas y las acciones rápidas de riego.
+
+<img src="image/userflow-login.png" alt="userflow-login" width="1000">
+
+
+**User Flow: Agregar un nuevo dispositivo IoT**
+
+User Goal: Como usuario, quiero agregar un nuevo dispositivo IoT a AquaSave para conectar mi ESP32 y monitorear automáticamente las condiciones de mi huerto.
+
+Este User Goal representa el proceso de vinculación de un dispositivo IoT dentro de AquaSave. El usuario ingresa al módulo de Dispositivos y selecciona la opción para agregar un nuevo dispositivo. A partir de ello, la aplicación guía al usuario por una secuencia de pasos que incluye la conexión del ESP32, la selección de una red WiFi, la verificación de conexión, la configuración básica del dispositivo y la definición de umbrales de humedad. Este flujo permite que el dispositivo quede correctamente registrado y preparado para recopilar datos del huerto en tiempo real.
+
+<img src="image/userflow-agregar-dispositivo.png" alt="userflow-agregar-dispositivo" width="1000">
+
+
+**User Flow: Registrar una planta o huerto**
+
+User Goal: Como usuario, quiero registrar una planta o huerto en AquaSave para monitorear sus condiciones específicas y gestionar su riego de manera más precisa.
+
+Este User Goal representa el proceso mediante el cual el usuario registra o administra una planta asociada a un dispositivo previamente vinculado. Desde el módulo de Dispositivos, el usuario puede acceder al huerto registrado, agregar una nueva planta, editar sus datos o visualizar el detalle de una planta existente. En este flujo se consideran datos como el nombre de la planta, el dispositivo asignado, la posición en el sensor, los umbrales de humedad, el estado actual, la temperatura y el historial de riegos. De esta manera, AquaSave permite realizar un seguimiento individual de cada planta o cultivo dentro del huerto.
+
+<img src="image/userflow-registrar-planta-huerto.png" alt="userflow-registrar-planta-huerto" width="1000">
+
+[Link para ver los userflows](https://miro.com/app/board/uXjVJHRMhjA=/?share_link_id=284169649022 ) 
 
 ### 5.5. Applications Prototyping
 
+En esta sección se presenta el prototipo interactivo de la aplicación web AquaSave, desarrollado en Figma a partir de los mockups y user flows definidos previamente. Este prototipo permite simular la navegación principal del usuario dentro de la plataforma, incluyendo el inicio de sesión, el registro de un nuevo dispositivo IoT, la configuración del ESP32, el registro de plantas o huertos y la visualización del dashboard principal.
+
+El objetivo del prototipo es validar la experiencia de usuario antes de la implementación final, asegurando que las funcionalidades principales de AquaSave sean comprensibles, accesibles y coherentes con las necesidades de los horticultores urbanos y pequeños agricultores. Además, permite evidenciar cómo el usuario interactúa con el sistema para monitorear las condiciones del huerto y tomar decisiones relacionadas con el riego inteligente.
+
+Application Prototype: [AquaSave Web Application Prototype](https://www.figma.com/proto/a6zhtNKsD231UViUfGgsS2/AquaSave-PROTOTYPE?node-id=23-259&t=xjJblsa3kr9j7v4p-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A259)
+
+<p align="center">
+  <img src="image/aquasave-application-prototype.png" alt="AquaSave Application Prototype" width="1000">
+</p>
+
 ### 5.6. IoT Device Design
+
+El siguiente diagrama presenta el diseño inicial del dispositivo IoT de AquaSave, representando la configuración física y las conexiones principales entre los componentes de hardware seleccionados para el prototipo. Este diseño tiene como objetivo validar la lógica básica del sistema de riego inteligente, considerando la lectura de humedad del suelo, la medición de temperatura y la activación automática de una bomba de agua cuando las condiciones del huerto lo requieran.
+
+<p align="center">
+  <img src="image/aquasave-iot-device-design.png" alt="AquaSave IoT Device Design" width="900">
+</p>
+
+El esquema fue desarrollado en **Tinkercad**, una plataforma web para diseño y simulación de circuitos electrónicos. Debido a las limitaciones de disponibilidad de componentes en las plataformas de simulación, el prototipo fue representado utilizando una placa **Arduino Uno**. Sin embargo, la solución final de AquaSave está planificada para implementarse con un **ESP32**, debido a que este microcontrolador permite conectividad WiFi y comunicación con la aplicación web del sistema.
+
+IoT Device Prototype: [AquaSave Tinkercad Circuit](https://www.tinkercad.com/things/3XQamOBJ8YY/editel?returnTo=%2Fdashboard&sharecode=DP_R27OOtFf5y2I7M1sIj3FEfroBPGAw97ZUuxzHu48)
+
+**Componentes del Diseño:**
+
+| Componente | Descripción | Especificaciones Técnicas |
+|-----------|-------------|----------------------------|
+| Arduino Uno | Microcontrolador utilizado para simular la lógica principal del prototipo. En la versión final será reemplazado por un ESP32. | Entradas analógicas, salidas digitales/PWM, alimentación de 5V |
+| Sensor de humedad de suelo | Sensor encargado de medir el nivel de humedad presente en el sustrato del huerto. | Salida analógica, rango de lectura aproximado de 0 a 1023 |
+| Sensor de temperatura TMP36 | Sensor utilizado para medir la temperatura ambiental del entorno del cultivo. | Salida analógica, medición de temperatura en grados Celsius |
+| Motor de corriente continua | Actuador que representa el funcionamiento de la bomba de agua para el sistema de riego. | Activación mediante señal PWM desde el microcontrolador |
+| Transistor NPN | Componente utilizado para controlar el encendido del motor sin conectar directamente la carga al microcontrolador. | Permite conmutar el motor mediante una señal de control |
+| Resistencia | Elemento de protección utilizado para limitar la corriente y proteger los componentes del circuito. | Valor referencial según la conexión del transistor y actuador |
+| Protoboard | Placa de pruebas utilizada para organizar las conexiones del circuito sin soldadura. | Permite conexiones temporales durante la etapa de prototipado |
+| Cables de conexión | Conductores utilizados para enlazar sensores, actuadores y placa de control. | Conexiones macho-macho para protoboard y placa Arduino |
+
+Es importante destacar que durante la fase de diseño y validación técnica se identificaron las siguientes consideraciones:
+
+1. **Uso de Arduino Uno como representación inicial:** El circuito fue diseñado en Tinkercad utilizando Arduino Uno, ya que esta plataforma permite simular fácilmente sensores analógicos, actuadores y conexiones básicas. No obstante, este componente cumple un rol referencial dentro del prototipo, debido a que la arquitectura final de AquaSave contempla el uso de un ESP32 por su capacidad de conexión WiFi.
+
+2. **Sensor de humedad como entrada principal del sistema:** El sensor de humedad de suelo es uno de los elementos más importantes del diseño, ya que permite identificar si el cultivo requiere riego. Cuando la lectura indica un nivel bajo de humedad, el sistema interpreta que el suelo necesita agua y puede activar el actuador encargado del riego.
+
+3. **Sensor de temperatura como variable de apoyo:** El sensor TMP36 permite incorporar una segunda variable ambiental para la toma de decisiones. Si la temperatura supera un valor determinado, el sistema también puede activar el riego, ya que una temperatura elevada puede incrementar la evaporación del agua y afectar el estado del cultivo.
+
+4. **Motor de corriente continua como simulación de bomba de agua:** En el prototipo, el motor representa el comportamiento de una bomba de agua. Esta decisión permite validar la lógica de activación del riego sin utilizar una bomba real durante la simulación. En una implementación física posterior, este motor sería reemplazado por una bomba de agua de bajo voltaje, controlada mediante un módulo de potencia o relé.
+
+5. **Control del actuador mediante transistor:** El transistor NPN permite controlar el motor desde la señal del microcontrolador sin exigir que la placa entregue directamente toda la corriente necesaria para el actuador. Esta separación es importante para proteger el circuito y acercar el diseño a una implementación más realista.
+
+6. **Relación con la aplicación AquaSave:** El diseño del dispositivo se vincula con las funcionalidades de la aplicación web, ya que los datos de humedad, temperatura y estado del riego serán utilizados para mostrar información en el dashboard. En la versión final, el ESP32 enviará estos datos a la plataforma para que el usuario pueda monitorear el estado del huerto y tomar decisiones desde la interfaz.
+
+El diseño representa una primera versión de prototipado enfocada en validar la lógica de funcionamiento del sistema de riego inteligente. La simulación permite comprobar que el dispositivo puede leer variables del entorno y activar un actuador cuando las condiciones del cultivo lo requieren. Para futuras iteraciones, se plantea reemplazar el Arduino Uno por un ESP32, incorporar una bomba de agua real, mejorar el circuito de control del actuador y conectar el dispositivo con la API de AquaSave para el envío de datos hacia la aplicación web.
 
 ---
 
@@ -2362,13 +2446,350 @@ Historial:
 
 ### 6.1. Software Configuration Management
 
+En esta sección se especifican los productos de software, herramientas y plataformas que el equipo de EcoDrop utiliza para colaborar durante todo el ciclo de vida del desarrollo de la solución AquaSave. Se detallan los nombres de los productos, el propósito de uso en el proyecto y la ruta de acceso o descarga de cada herramienta.
+
 #### 6.1.1. Software Development Environment Configuration
+### Project Management & Scrum Tracking
+
+**Monday.com**
+- **Propósito:** Gestión de sprints, product backlog, user stories y tracking de tareas del equipo
+- **Acceso:** https://monday.com
+- **URL del Proyecto:** https://matthewtr29s-team.monday.com/boards/18413046917
+- **Configuración del Board:**
+  - Board principal: "AquaSave - Product Development"
+  - Grupos de Sprints: Sprint 1 (Foundation & Authentication), Sprint 2 (Monitoring & Automation), Sprint 3 (Intelligence & Analytics)
+  - Columnas: Nombre, Responsable, Estado, Vencimiento, Prioridad, Notas, Archivos, Cronograma
+  - Labels: Por Epic (EP01-EP08)
+  - Responsables: Todo el equipo actualiza sus user stories y tareas
+
+<p align="center">
+  <img src="image/monday-board.png" width="70%">
+</p>
+
+### Requirements Management & Documentation
+
+**Markdown con Visual Studio Code**
+- **Propósito:** Documentación técnica versionada en repositorio de GitHub
+- **Editor:** Visual Studio Code
+- **Descarga:** https://code.visualstudio.com
+- **Ubicación de Documentación:** Directorio `/docs` en cada repositorio y repositorio principal `AquaSave-Report`
+- **Extensiones utilizadas:**
+  - Markdown All in One (edición y preview de archivos .md)
+  - Markdown Preview Enhanced (visualización mejorada)
+  - markdownlint (validación de sintaxis)
+- **Responsables:** Todos los developers documentan sus componentes
+
+### Product UX/UI Design
+
+**Figma**
+- **Propósito:** Diseño de interfaces de usuario, prototipado interactivo y design system
+- **Acceso:** https://figma.com
+- **Proyecto Principal:** https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1&t=ZtUqPezLYQwqnFq4-1
+- **Archivos del Proyecto:**
+  - AquaSave - Mobile & Web App Design (wireframes y mockups de la aplicación multiplataforma)
+  - AquaSave - Landing Page (diseño web estático)
+- **Configuración de Acceso:** Workspace compartido para todo el equipo de diseño y desarrollo
+
+<p align="center">
+  <img src="image/figma-UXUI.png" width="70%">
+</p>
+
+### Software Development - IDEs y Editores de Código
+
+**Visual Studio Code**
+- **Propósito:** Editor principal para desarrollo de Frontend (Flutter), Backend (Node.js) y documentación
+- **Versión Requerida:** 1.85 o superior
+- **Descarga:** https://code.visualstudio.com
+- **Extensiones Principales:**
+  - Dart (oficial de Flutter)
+  - Flutter (oficial)
+  - REST Client (prueba de API endpoints)
+  - ES7+ Code Snippets (JavaScript/Node.js)
+  - Markdown All in One (documentación)
+  - GitFlow (visualización de Git)
+  - Thunder Client (alternativa para pruebas de API)
+
+**Arduino IDE**
+- **Propósito:** Desarrollo de firmware para dispositivo IoT (ESP32)
+- **Versión Requerida:** 2.0 o superior
+- **Descarga:** https://www.arduino.cc/en/software
+- **Configuración Recomendada:**
+  - Placa: ESP32 Dev Module
+  - Puerto: COM (Windows) o /dev/ttyUSB (Linux/Mac)
+  - Velocidad de conexión: 115200 baud
+- **Bibliotecas Esenciales:**
+  - ESP32 by Espressif Systems (núcleo)
+  - WiFi (conectividad)
+  - DHT (sensor de temperatura/humedad)
+  - Sensor de humedad capacitivo (custom)
+
+**Wokwi Simulator**
+- **Propósito:** Simulación y prueba de código IoT sin hardware físico
+- **Acceso:** https://wokwi.com
+- **Uso:** Testing de lógica del ESP32, prototipos de sensores, validación de comunicación WiFi
+- **Configuración:** Simulador online con ESP32, sensores virtuales y WiFi mock
+
 
 #### 6.1.2. Source Code Management
+Organizamos todo nuestro código en repositorios dentro de GitHub bajo la organización EcoDrop.
+
+**Organización:** https://github.com/EcoDrop-Org
+
+### Repositorios del Proyecto
+
+**1. AquaSave-Frontend**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Frontend
+- **Stack Tecnológico:** Dart + Flutter (Multiplataforma: Web, Android, iOS)
+- **Propósito:** Aplicación móvil y web responsive para monitoreo y control de riego
+- **Estructura de Branches:**
+  - `main`: código estable en producción (mobile y web)
+  - `develop`: integración de features
+  - `feature/*`: desarrollo de nuevas funcionalidades
+
+**2. AquaSave-Backend**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Backend
+- **Stack Tecnológico:** Node.js + TypeScript/JavaScript
+- **Propósito:** API REST para gestión de datos, usuarios, dispositivos y sensores
+- **Estructura de Branches:**
+  - `main`: código en producción
+  - `develop`: integración de features
+  - `feature/*`: nuevas funcionalidades en desarrollo
+
+**3. AquaSave-Device**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Device
+- **Stack Tecnológico:** C++ (Arduino)
+- **Propósito:** Firmware del dispositivo IoT (ESP32) para captura de sensores y control de válvulas
+- **Estructura de Branches:**
+  - `main`: versión estable del firmware
+  - `develop`: nuevas características
+  - `feature/*`: desarrollo de nuevas funcionalidades
+
+**4. AquaSave-Report**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Report
+- **Stack Tecnológico:** Markdown + GitHub
+- **Propósito:** Documentación técnica completa del proyecto, especificaciones y reportes
+- **Branch Principal:** main (documentación versionada)
+
+### Metodología de Ramas: GitFlow
+
+Implementamos el modelo GitFlow para un flujo de integración controlado y bien estructurado:
+
+**Ramas Principales:**
+- `main`: Rama de producción. Contiene versiones estables y listas para release
+- `develop`: Rama de desarrollo. Integración y validación de features antes de producción
+
+**Ramas Auxiliares:**
+- `feature/<nombre>`: Ramas para implementar funcionalidades específicas (ej: `feature/user-authentication`, `feature/sensor-monitoring`)
+- `bugfix/<nombre>`: Correcciones de bugs en desarrollo (ej: `bugfix/wifi-connection-issue`)
+- `hotfix/<nombre>`: Correcciones críticas en producción que se fusionan directo a `main` y `develop`
+- `release/<versión>`: Preparación de nuevas versiones (ej: `release/v1.0.0`)
+
+Todas las ramas se fusionan a través de Pull Requests con revisión de al menos 2 integrantes del equipo antes de hacer merge.
+
+### Convenciones para los Commits
+
+Adoptamos la convención **Conventional Commits** para mantener un historial de cambios claro e identificable:
+
+```
+<type>(<scope>): <description>
+```
+
+**Ejemplo:**
+```
+feat(authentication): implement user login with JWT tokens
+fix(device-pairing): resolve QR code scanning issue on iOS
+docs(api): update endpoint documentation for sensor data
+```
+
+**Descripción de los Campos:**
+
+- `type`: Campo obligatorio que define el tipo de cambio:
+  - `feat`: Nueva funcionalidad
+  - `fix`: Corrección de errores
+  - `style`: Cambios en formato (indentación, comillas, etc.)
+  - `refactor`: Mejoras de código sin cambiar funcionalidad
+  - `docs`: Cambios en documentación
+  - `test`: Adición o modificación de tests
+  - `chore`: Cambios en configuración o dependencias
+  - `perf`: Mejoras de rendimiento
+
+- `scope`: Campo opcional que indica el módulo afectado:
+  - Para Frontend: `auth`, `dashboard`, `device-management`, `irrigation-control`
+  - Para Backend: `users`, `devices`, `sensors`, `irrigation`
+  - Para Device: `wifi`, `sensors`, `valve-control`, `communication`
+
+- `description`: Breve descripción del cambio en inglés, iniciando con verbo en infinitivo
 
 #### 6.1.3. Source Code Style Guide & Conventions
+### Dart + Flutter
+
+- Usar `camelCase` para variables, funciones y parámetros
+- Usar `PascalCase` para clases, enums e interfaces
+- Usar `UPPERCASE` con guiones bajos para constantes
+- Preferir `final` y `const` sobre `var`
+- Nombres descriptivos y evitar abreviaciones
+- Comentarios en inglés para código público
+- Máximo 80 caracteres por línea en documentación
+
+**Ejemplo:**
+```dart
+const int maxHumidityThreshold = 75;
+final userController = TextEditingController();
+class SensorMonitoringScreen extends StatefulWidget { }
+```
+
+### Node.js / TypeScript / JavaScript
+
+- Usar `camelCase` para variables, funciones y propiedades
+- Usar `PascalCase` para clases y constructores
+- Usar `UPPERCASE` con guiones bajos para constantes globales
+- Evitar `var`; usar `const` y `let` según corresponda
+- Usar async/await en lugar de callbacks
+- Validación de entrada en todas las endpoints
+
+**Ejemplo:**
+```javascript
+const maxRetries = 3;
+async function getUserDevices(userId) { }
+class SensorDataProcessor { }
+```
+
+### C++ (Arduino / ESP32)
+
+- Usar `camelCase` para variables y funciones
+- Usar `PascalCase` para clases
+- Usar `UPPERCASE` con guiones bajos para constantes (#define)
+- Comentarios descriptivos para lógica compleja
+- Verificar disponibilidad de memoria (ESP32 limitado)
+
+**Ejemplo:**
+```cpp
+#define WIFI_SSID "AquaSave_IoT"
+const int sensorPin = 34;
+void initializeWiFiConnection() { }
+class SensorReader { }
+```
 
 #### 6.1.4. Software Deployment Configuration
+La solución AquaSave está distribuida en múltiples plataformas de hosting según la naturaleza de cada componente:
+
+- **Backend API (Node.js):** Desplegado en Render (PaaS)
+- **Base de Datos:** MySQL en Render (managed database)
+- **Frontend Web:** Firebase Hosting (CDN global)
+- **Mobile Android:** Google Play Store + Firebase App Distribution (testing)
+- **Mobile iOS:** App Store + TestFlight (testing)
+- **IoT Firmware:** Descargado directamente al ESP32 vía Arduino IDE
+
+### Backend API - Despliegue en Render
+
+**Especificaciones del Servicio:**
+- **Plataforma:** Render (https://render.com)
+- **Tipo de Servicio:** Web Service (Node.js)
+- **Runtime:** Node.js 18 LTS
+- **Región:** North America (us-east)
+- **Memoria:** 0.5 GB (plan starter)
+- **Base de Datos:** MySQL 8.0 (managed database en Render)
+
+**Configuración de Variables de Entorno:**
+```
+DATABASE_URL=mysql://user:password@host:port/aquasave
+JWT_SECRET=<secret_key>
+NODE_ENV=production
+CORS_ORIGIN=https://aquasave-web.web.app
+PORT=10000
+```
+
+**Puertos:**
+- Puerto 10000: API REST de la aplicación
+- Puerto 3306: MySQL (solo accesible internamente desde el backend)
+
+**Proceso de Despliegue Automatizado:**
+El despliegue está completamente automatizado mediante GitHub Actions. Cuando se hace push a la rama `main` del repositorio AquaSave-Backend:
+
+1. **Trigger:** GitHub Actions detecta el push a `main`
+2. **Build:** Se ejecuta `npm install` y se validan las dependencias
+3. **Test:** Se ejecutan tests (cuando estén implementados)
+4. **Deploy:** Render automáticamente detecta cambios y redeploya la aplicación
+5. **Live:** La nueva versión queda disponible en el endpoint de Render
+
+El servicio se reinicia automáticamente en caso de fallos. No se requiere intervención manual.
+
+### Base de Datos - MySQL en Render
+
+**Especificaciones:**
+- **Motor:** MySQL 8.0
+- **Almacenamiento:** 1 GB (plan starter)
+- **Backups:** Automáticos diarios
+- **Host:** Proporcionado por Render (conexión segura)
+- **Puerto:** 3306 (solo desde aplicaciones en Render)
+
+**Configuración de Seguridad:**
+- Acceso restringido solo desde la aplicación backend
+- Credenciales almacenadas en variables de entorno
+- Conexiones SSL/TLS habilitadas
+
+### Frontend Web - Despliegue en Firebase Hosting
+
+**Especificaciones:**
+- **Plataforma:** Firebase Hosting (Google Cloud)
+- **Proyecto:** aquasave-web
+- **URL de Producción:** https://aquasave-web.web.app
+- **CDN:** Global, con edge locations en múltiples regiones
+
+**Proceso de Despliegue Automatizado:**
+
+Cuando se hace push a la rama `main` del repositorio AquaSave-Frontend:
+
+1. **Trigger:** GitHub Actions detecta cambios en `main`
+2. **Build:** Se ejecuta `flutter build web --release` generando archivos optimizados
+3. **Deploy:** Los archivos estáticos se suben automáticamente a Firebase Hosting
+4. **Live:** La nueva versión queda disponible instantáneamente (sin downtime)
+
+El proceso completo toma 3-5 minutos desde commit hasta producción.
+
+**Configuración SPA:**
+Firebase está configurado como Single Page Application (SPA), con rewrites a `index.html` para que Flutter maneje todo el routing del lado del cliente.
+
+### Mobile - Distribución de Aplicaciones
+
+**Android:**
+- **Distribución Estable:** Google Play Store
+- **Distribución Beta/Testing:** Firebase App Distribution
+- **Flujo:** Build manual en GitHub Actions → Signed APK → Upload a Play Store / App Distribution
+
+**iOS:**
+- **Distribución Estable:** Apple App Store
+- **Distribución Beta/Testing:** TestFlight
+- **Flujo:** Build manual → Signed IPA → Upload a App Store Connect / TestFlight
+
+**Requisitos de Build:**
+- Flutter SDK actualizado (3.0+)
+- Certificates de Apple y Google configurados
+- Versioning en `pubspec.yaml` incrementado por cada release
+
+### IoT Device - Firmware del ESP32
+
+**Proceso de Instalación:**
+- Código desarrollado en C++ usando Arduino IDE
+- Compilación local en Arduino IDE versión 2.0+
+- Upload directo al ESP32 vía puerto Serial (USB)
+- No hay CI/CD automático (es firmware embebido)
+- Versionado en rama `main` del repositorio AquaSave-Device
+
+**Configuración del Dispositivo:**
+```cpp
+// WiFi Configuration
+const char* WIFI_SSID = "AquaSave_Network";
+const char* WIFI_PASSWORD = "secure_password";
+
+// Backend API
+const char* API_ENDPOINT = "https://api.aquasave.render.com";
+
+// Sensor Pins
+const int HUMIDITY_PIN = 34;
+const int TEMPERATURE_PIN = 32;
+const int VALVE_CONTROL_PIN = 26;
+```
 
 ### 6.2. Landing Page, Services & Applications Implementation.
 
@@ -2547,13 +2968,69 @@ En el frontend Flutter se ejecutó `flutter analyze` sobre `AquaSave-Frontend-ma
 
 ##### 6.2.1.6. Execution Evidence for Sprint Review
 
+En esta sección se deja en evidencia lo desarrollado en el sprint.
+
+*Landing Page:*
+
+[![image.png](https://i.postimg.cc/PrpJ05ym/image.png)](https://postimg.cc/VdwzC136)
+
+[![image.png](https://i.postimg.cc/zfjGTbz9/image.png)](https://postimg.cc/NyKtc0r4)
+
+[![image.png](https://i.postimg.cc/pXFVq1Vp/image.png)](https://postimg.cc/7fqyL92k)
+
+[![image.png](https://i.postimg.cc/LsNmncvF/image.png)](https://postimg.cc/06MT4HLV)
+
+[![image.png](https://i.postimg.cc/HWf8YMVy/image.png)](https://postimg.cc/BtBnNX5S)
+
+*Web App:*
+
+[![image.png](https://i.postimg.cc/MpnLyhWx/image.png)](https://postimg.cc/rDLgTZ0Y)
+
+[![image.png](https://i.postimg.cc/Gpm5jQZp/image.png)](https://postimg.cc/TKB0dr28)
+
+[![image.png](https://i.postimg.cc/T3FDk2s0/image.png)](https://postimg.cc/RW1hhm4J)
+
+[![image.png](https://i.postimg.cc/9fPQGWHX/image.png)](https://postimg.cc/t1TbbGg8)
+
+[![image.png](https://i.postimg.cc/rwrmw1hS/image.png)](https://postimg.cc/ts9yrxGT)
+
+[![image.png](https://i.postimg.cc/gj7zYj8q/image.png)](https://postimg.cc/YL1KRpXh)
+
+[![image.png](https://i.postimg.cc/fbvMVBYy/image.png)](https://postimg.cc/Y4j5VNnB)
+
+Link del video de explicación: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221c362_upc_edu_pe/IQDHstfnGBFKT6Si5DLgO6nmAYNIGstqvHFM8Ulu5WNuqqE?e=6Y9Q7W](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221c362_upc_edu_pe/IQDHstfnGBFKT6Si5DLgO6nmAYNIGstqvHFM8Ulu5WNuqqE?e=6Y9Q7W)
+
 ##### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
-No se incluyeron servicios en este sprint, ya que se utilizó una API simulada (fake API).
+No se incluyeron servicios en este sprint.
 
 ##### 6.2.1.8. Software Deployment Evidence for Sprint Review
 
+Durante el sprint, se realizaron las actividades necesarias para el despliegue de los productos desarrollados. A continuación, se detallan las acciones ejecutadas para cada uno de ellos:
+
+*Landing Page:* 
+
+Para el despliegue de la Landing Page se decidió utilizar GitHub Pages, debido a su integración nativa con GitHub y su facilidad para publicar sitios web estáticos directamente desde el repositorio. Además, esta plataforma permite automatizar el proceso de despliegue mediante GitHub Actions, de modo que cada actualización realizada en la rama principal genera automáticamente una nueva versión publicada. Esto asegura un flujo de integración y entrega continua más eficiente y organizado.
+
+[![image.png](https://i.postimg.cc/prsZybdb/image.png)](https://postimg.cc/dZTdSfd4)
+
+[![image.png](https://i.postimg.cc/PrpJ05ym/image.png)](https://postimg.cc/VdwzC136)
+
+*Web App:*
+
+La aplicación web fue desplegada utilizando Firebase, aprovechando su integración con proyectos desarrollados en GitHub, su facilidad de configuración y la posibilidad de automatizar los despliegues mediante GitHub Actions. Además, Firebase ofrece una infraestructura confiable y optimizada para aplicaciones web, permitiendo publicar nuevas versiones de manera rápida y eficiente cada vez que se realizan cambios en el repositorio principal.
+
+[![image.png](https://i.postimg.cc/GpnkLhjm/image.png)](https://postimg.cc/sMKBKz8k)
+
+[![image.png](https://i.postimg.cc/MpnLyhWx/image.png)](https://postimg.cc/rDLgTZ0Y)
+
 ##### 6.2.1.9. Team Collaboration Insights during Sprint
+
+En esta sección se presenta la evidencia de la colaboración realizada durante el sprint.
+
+[![image.png](https://i.postimg.cc/4y0WBRRf/image.png)](https://postimg.cc/sGpPg82q)
+
+[![image.png](https://i.postimg.cc/c1F2rP2Z/image.png)](https://postimg.cc/kDtfHY7h)
 
 ### 6.3. Validation Interviews
 
