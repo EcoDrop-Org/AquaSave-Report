@@ -1070,6 +1070,7 @@ Usuario: Micro-Agricultor Periurbano
   <img src="image/Impact Map — Carlos Mendoza.png" alt="Diagrama" width="600">
 
 </div>
+
 ### 3.3. Product Backlog
 
 | Orden | User Story ID | Título | Descripción | Story Points |
