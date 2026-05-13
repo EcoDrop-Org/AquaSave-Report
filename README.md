@@ -2362,13 +2362,350 @@ Historial:
 
 ### 6.1. Software Configuration Management
 
+En esta sección se especifican los productos de software, herramientas y plataformas que el equipo de EcoDrop utiliza para colaborar durante todo el ciclo de vida del desarrollo de la solución AquaSave. Se detallan los nombres de los productos, el propósito de uso en el proyecto y la ruta de acceso o descarga de cada herramienta.
+
 #### 6.1.1. Software Development Environment Configuration
+### Project Management & Scrum Tracking
+
+**Monday.com**
+- **Propósito:** Gestión de sprints, product backlog, user stories y tracking de tareas del equipo
+- **Acceso:** https://monday.com
+- **URL del Proyecto:** https://matthewtr29s-team.monday.com/boards/18413046917
+- **Configuración del Board:**
+  - Board principal: "AquaSave - Product Development"
+  - Grupos de Sprints: Sprint 1 (Foundation & Authentication), Sprint 2 (Monitoring & Automation), Sprint 3 (Intelligence & Analytics)
+  - Columnas: Nombre, Responsable, Estado, Vencimiento, Prioridad, Notas, Archivos, Cronograma
+  - Labels: Por Epic (EP01-EP08)
+  - Responsables: Todo el equipo actualiza sus user stories y tareas
+
+<p align="center">
+  <img src="image/monday-board.png" width="70%">
+</p>
+
+### Requirements Management & Documentation
+
+**Markdown con Visual Studio Code**
+- **Propósito:** Documentación técnica versionada en repositorio de GitHub
+- **Editor:** Visual Studio Code
+- **Descarga:** https://code.visualstudio.com
+- **Ubicación de Documentación:** Directorio `/docs` en cada repositorio y repositorio principal `AquaSave-Report`
+- **Extensiones utilizadas:**
+  - Markdown All in One (edición y preview de archivos .md)
+  - Markdown Preview Enhanced (visualización mejorada)
+  - markdownlint (validación de sintaxis)
+- **Responsables:** Todos los developers documentan sus componentes
+
+### Product UX/UI Design
+
+**Figma**
+- **Propósito:** Diseño de interfaces de usuario, prototipado interactivo y design system
+- **Acceso:** https://figma.com
+- **Proyecto Principal:** https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1&t=ZtUqPezLYQwqnFq4-1
+- **Archivos del Proyecto:**
+  - AquaSave - Mobile & Web App Design (wireframes y mockups de la aplicación multiplataforma)
+  - AquaSave - Landing Page (diseño web estático)
+- **Configuración de Acceso:** Workspace compartido para todo el equipo de diseño y desarrollo
+
+<p align="center">
+  <img src="image/figma-UXUI.png" width="70%">
+</p>
+
+### Software Development - IDEs y Editores de Código
+
+**Visual Studio Code**
+- **Propósito:** Editor principal para desarrollo de Frontend (Flutter), Backend (Node.js) y documentación
+- **Versión Requerida:** 1.85 o superior
+- **Descarga:** https://code.visualstudio.com
+- **Extensiones Principales:**
+  - Dart (oficial de Flutter)
+  - Flutter (oficial)
+  - REST Client (prueba de API endpoints)
+  - ES7+ Code Snippets (JavaScript/Node.js)
+  - Markdown All in One (documentación)
+  - GitFlow (visualización de Git)
+  - Thunder Client (alternativa para pruebas de API)
+
+**Arduino IDE**
+- **Propósito:** Desarrollo de firmware para dispositivo IoT (ESP32)
+- **Versión Requerida:** 2.0 o superior
+- **Descarga:** https://www.arduino.cc/en/software
+- **Configuración Recomendada:**
+  - Placa: ESP32 Dev Module
+  - Puerto: COM (Windows) o /dev/ttyUSB (Linux/Mac)
+  - Velocidad de conexión: 115200 baud
+- **Bibliotecas Esenciales:**
+  - ESP32 by Espressif Systems (núcleo)
+  - WiFi (conectividad)
+  - DHT (sensor de temperatura/humedad)
+  - Sensor de humedad capacitivo (custom)
+
+**Wokwi Simulator**
+- **Propósito:** Simulación y prueba de código IoT sin hardware físico
+- **Acceso:** https://wokwi.com
+- **Uso:** Testing de lógica del ESP32, prototipos de sensores, validación de comunicación WiFi
+- **Configuración:** Simulador online con ESP32, sensores virtuales y WiFi mock
+
 
 #### 6.1.2. Source Code Management
+Organizamos todo nuestro código en repositorios dentro de GitHub bajo la organización EcoDrop.
+
+**Organización:** https://github.com/EcoDrop-Org
+
+### Repositorios del Proyecto
+
+**1. AquaSave-Frontend**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Frontend
+- **Stack Tecnológico:** Dart + Flutter (Multiplataforma: Web, Android, iOS)
+- **Propósito:** Aplicación móvil y web responsive para monitoreo y control de riego
+- **Estructura de Branches:**
+  - `main`: código estable en producción (mobile y web)
+  - `develop`: integración de features
+  - `feature/*`: desarrollo de nuevas funcionalidades
+
+**2. AquaSave-Backend**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Backend
+- **Stack Tecnológico:** Node.js + TypeScript/JavaScript
+- **Propósito:** API REST para gestión de datos, usuarios, dispositivos y sensores
+- **Estructura de Branches:**
+  - `main`: código en producción
+  - `develop`: integración de features
+  - `feature/*`: nuevas funcionalidades en desarrollo
+
+**3. AquaSave-Device**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Device
+- **Stack Tecnológico:** C++ (Arduino)
+- **Propósito:** Firmware del dispositivo IoT (ESP32) para captura de sensores y control de válvulas
+- **Estructura de Branches:**
+  - `main`: versión estable del firmware
+  - `develop`: nuevas características
+  - `feature/*`: desarrollo de nuevas funcionalidades
+
+**4. AquaSave-Report**
+- **URL:** https://github.com/EcoDrop-Org/AquaSave-Report
+- **Stack Tecnológico:** Markdown + GitHub
+- **Propósito:** Documentación técnica completa del proyecto, especificaciones y reportes
+- **Branch Principal:** main (documentación versionada)
+
+### Metodología de Ramas: GitFlow
+
+Implementamos el modelo GitFlow para un flujo de integración controlado y bien estructurado:
+
+**Ramas Principales:**
+- `main`: Rama de producción. Contiene versiones estables y listas para release
+- `develop`: Rama de desarrollo. Integración y validación de features antes de producción
+
+**Ramas Auxiliares:**
+- `feature/<nombre>`: Ramas para implementar funcionalidades específicas (ej: `feature/user-authentication`, `feature/sensor-monitoring`)
+- `bugfix/<nombre>`: Correcciones de bugs en desarrollo (ej: `bugfix/wifi-connection-issue`)
+- `hotfix/<nombre>`: Correcciones críticas en producción que se fusionan directo a `main` y `develop`
+- `release/<versión>`: Preparación de nuevas versiones (ej: `release/v1.0.0`)
+
+Todas las ramas se fusionan a través de Pull Requests con revisión de al menos 2 integrantes del equipo antes de hacer merge.
+
+### Convenciones para los Commits
+
+Adoptamos la convención **Conventional Commits** para mantener un historial de cambios claro e identificable:
+
+```
+<type>(<scope>): <description>
+```
+
+**Ejemplo:**
+```
+feat(authentication): implement user login with JWT tokens
+fix(device-pairing): resolve QR code scanning issue on iOS
+docs(api): update endpoint documentation for sensor data
+```
+
+**Descripción de los Campos:**
+
+- `type`: Campo obligatorio que define el tipo de cambio:
+  - `feat`: Nueva funcionalidad
+  - `fix`: Corrección de errores
+  - `style`: Cambios en formato (indentación, comillas, etc.)
+  - `refactor`: Mejoras de código sin cambiar funcionalidad
+  - `docs`: Cambios en documentación
+  - `test`: Adición o modificación de tests
+  - `chore`: Cambios en configuración o dependencias
+  - `perf`: Mejoras de rendimiento
+
+- `scope`: Campo opcional que indica el módulo afectado:
+  - Para Frontend: `auth`, `dashboard`, `device-management`, `irrigation-control`
+  - Para Backend: `users`, `devices`, `sensors`, `irrigation`
+  - Para Device: `wifi`, `sensors`, `valve-control`, `communication`
+
+- `description`: Breve descripción del cambio en inglés, iniciando con verbo en infinitivo
 
 #### 6.1.3. Source Code Style Guide & Conventions
+### Dart + Flutter
+
+- Usar `camelCase` para variables, funciones y parámetros
+- Usar `PascalCase` para clases, enums e interfaces
+- Usar `UPPERCASE` con guiones bajos para constantes
+- Preferir `final` y `const` sobre `var`
+- Nombres descriptivos y evitar abreviaciones
+- Comentarios en inglés para código público
+- Máximo 80 caracteres por línea en documentación
+
+**Ejemplo:**
+```dart
+const int maxHumidityThreshold = 75;
+final userController = TextEditingController();
+class SensorMonitoringScreen extends StatefulWidget { }
+```
+
+### Node.js / TypeScript / JavaScript
+
+- Usar `camelCase` para variables, funciones y propiedades
+- Usar `PascalCase` para clases y constructores
+- Usar `UPPERCASE` con guiones bajos para constantes globales
+- Evitar `var`; usar `const` y `let` según corresponda
+- Usar async/await en lugar de callbacks
+- Validación de entrada en todas las endpoints
+
+**Ejemplo:**
+```javascript
+const maxRetries = 3;
+async function getUserDevices(userId) { }
+class SensorDataProcessor { }
+```
+
+### C++ (Arduino / ESP32)
+
+- Usar `camelCase` para variables y funciones
+- Usar `PascalCase` para clases
+- Usar `UPPERCASE` con guiones bajos para constantes (#define)
+- Comentarios descriptivos para lógica compleja
+- Verificar disponibilidad de memoria (ESP32 limitado)
+
+**Ejemplo:**
+```cpp
+#define WIFI_SSID "AquaSave_IoT"
+const int sensorPin = 34;
+void initializeWiFiConnection() { }
+class SensorReader { }
+```
 
 #### 6.1.4. Software Deployment Configuration
+La solución AquaSave está distribuida en múltiples plataformas de hosting según la naturaleza de cada componente:
+
+- **Backend API (Node.js):** Desplegado en Render (PaaS)
+- **Base de Datos:** MySQL en Render (managed database)
+- **Frontend Web:** Firebase Hosting (CDN global)
+- **Mobile Android:** Google Play Store + Firebase App Distribution (testing)
+- **Mobile iOS:** App Store + TestFlight (testing)
+- **IoT Firmware:** Descargado directamente al ESP32 vía Arduino IDE
+
+### Backend API - Despliegue en Render
+
+**Especificaciones del Servicio:**
+- **Plataforma:** Render (https://render.com)
+- **Tipo de Servicio:** Web Service (Node.js)
+- **Runtime:** Node.js 18 LTS
+- **Región:** North America (us-east)
+- **Memoria:** 0.5 GB (plan starter)
+- **Base de Datos:** MySQL 8.0 (managed database en Render)
+
+**Configuración de Variables de Entorno:**
+```
+DATABASE_URL=mysql://user:password@host:port/aquasave
+JWT_SECRET=<secret_key>
+NODE_ENV=production
+CORS_ORIGIN=https://aquasave-web.web.app
+PORT=10000
+```
+
+**Puertos:**
+- Puerto 10000: API REST de la aplicación
+- Puerto 3306: MySQL (solo accesible internamente desde el backend)
+
+**Proceso de Despliegue Automatizado:**
+El despliegue está completamente automatizado mediante GitHub Actions. Cuando se hace push a la rama `main` del repositorio AquaSave-Backend:
+
+1. **Trigger:** GitHub Actions detecta el push a `main`
+2. **Build:** Se ejecuta `npm install` y se validan las dependencias
+3. **Test:** Se ejecutan tests (cuando estén implementados)
+4. **Deploy:** Render automáticamente detecta cambios y redeploya la aplicación
+5. **Live:** La nueva versión queda disponible en el endpoint de Render
+
+El servicio se reinicia automáticamente en caso de fallos. No se requiere intervención manual.
+
+### Base de Datos - MySQL en Render
+
+**Especificaciones:**
+- **Motor:** MySQL 8.0
+- **Almacenamiento:** 1 GB (plan starter)
+- **Backups:** Automáticos diarios
+- **Host:** Proporcionado por Render (conexión segura)
+- **Puerto:** 3306 (solo desde aplicaciones en Render)
+
+**Configuración de Seguridad:**
+- Acceso restringido solo desde la aplicación backend
+- Credenciales almacenadas en variables de entorno
+- Conexiones SSL/TLS habilitadas
+
+### Frontend Web - Despliegue en Firebase Hosting
+
+**Especificaciones:**
+- **Plataforma:** Firebase Hosting (Google Cloud)
+- **Proyecto:** aquasave-web
+- **URL de Producción:** https://aquasave-web.web.app
+- **CDN:** Global, con edge locations en múltiples regiones
+
+**Proceso de Despliegue Automatizado:**
+
+Cuando se hace push a la rama `main` del repositorio AquaSave-Frontend:
+
+1. **Trigger:** GitHub Actions detecta cambios en `main`
+2. **Build:** Se ejecuta `flutter build web --release` generando archivos optimizados
+3. **Deploy:** Los archivos estáticos se suben automáticamente a Firebase Hosting
+4. **Live:** La nueva versión queda disponible instantáneamente (sin downtime)
+
+El proceso completo toma 3-5 minutos desde commit hasta producción.
+
+**Configuración SPA:**
+Firebase está configurado como Single Page Application (SPA), con rewrites a `index.html` para que Flutter maneje todo el routing del lado del cliente.
+
+### Mobile - Distribución de Aplicaciones
+
+**Android:**
+- **Distribución Estable:** Google Play Store
+- **Distribución Beta/Testing:** Firebase App Distribution
+- **Flujo:** Build manual en GitHub Actions → Signed APK → Upload a Play Store / App Distribution
+
+**iOS:**
+- **Distribución Estable:** Apple App Store
+- **Distribución Beta/Testing:** TestFlight
+- **Flujo:** Build manual → Signed IPA → Upload a App Store Connect / TestFlight
+
+**Requisitos de Build:**
+- Flutter SDK actualizado (3.0+)
+- Certificates de Apple y Google configurados
+- Versioning en `pubspec.yaml` incrementado por cada release
+
+### IoT Device - Firmware del ESP32
+
+**Proceso de Instalación:**
+- Código desarrollado en C++ usando Arduino IDE
+- Compilación local en Arduino IDE versión 2.0+
+- Upload directo al ESP32 vía puerto Serial (USB)
+- No hay CI/CD automático (es firmware embebido)
+- Versionado en rama `main` del repositorio AquaSave-Device
+
+**Configuración del Dispositivo:**
+```cpp
+// WiFi Configuration
+const char* WIFI_SSID = "AquaSave_Network";
+const char* WIFI_PASSWORD = "secure_password";
+
+// Backend API
+const char* API_ENDPOINT = "https://api.aquasave.render.com";
+
+// Sensor Pins
+const int HUMIDITY_PIN = 34;
+const int TEMPERATURE_PIN = 32;
+const int VALVE_CONTROL_PIN = 26;
+```
 
 ### 6.2. Landing Page, Services & Applications Implementation.
 
