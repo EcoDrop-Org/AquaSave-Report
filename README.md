@@ -3127,7 +3127,7 @@ El Sprint Backlog 2 reúne las User Stories y tareas seleccionadas para la entre
 
 A diferencia del Sprint 1, donde gran parte del comportamiento se trabajó a nivel de interfaz y simulación visual, en este Sprint 2 se avanzó en la conexión de la aplicación con servicios internos y en la preparación de endpoints necesarios para sostener el flujo de AquaSave. Sin embargo, la validación con el dispositivo ESP32 físico no forma parte del alcance de esta iteración. Para este sprint, las funcionalidades relacionadas con sensores, estado del dispositivo, caudal y control de riego se validan mediante servicios, datos simulados o contratos de API, dejando la prueba física con ESP32 para el siguiente sprint.
 
-Sprint Board URL:
+
 
 | Sprint \# | Sprint 2 |  |  |  |  |  |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
