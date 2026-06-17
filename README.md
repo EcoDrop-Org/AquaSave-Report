@@ -3099,6 +3099,16 @@ Durante el Sprint 2 se desarrollaron los incrementos correspondientes al desplie
 
 ##### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
+Durante este sprint se realizaron verificaciones para validar el correcto funcionamiento del backend desplegado y las mejoras implementadas en el frontend de AquaSave. En el backend se probaron los principales endpoints de autenticación, usuarios y dispositivos, confirmando su disponibilidad y correcta conexión con la base de datos.
+
+En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado **No issues found**. Además, se realizaron pruebas funcionales sobre los módulos de login, registro, dashboard y configuración, verificando la correcta integración con los servicios del backend y el adecuado funcionamiento de las mejoras visuales y de navegación implementadas durante el sprint.
+
+| Repository | Branch | Commit Id | Validation | Result | Date |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | a8f42c1 | Pruebas de disponibilidad de endpoints, autenticación JWT y conexión con base de datos tras el despliegue. | Passed | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | c51d9e7 | Ejecución de flutter analyze y validación de integración con servicios backend. | Passed | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | main | e27b4fa | Verificación posterior al merge para confirmar la integración de mejoras visuales, navegación y consumo de API. | Passed | 2026-06-16 |
+
 ##### 6.2.2.6. Execution Evidence for Sprint Review
 
 ##### 6.2.2.7. Services Documentation Evidence for Sprint Review
