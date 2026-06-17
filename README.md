@@ -3078,6 +3078,25 @@ En esta sección se presenta la evidencia de la colaboración realizada durante 
 
 ##### 6.2.2.4. Development Evidence for Sprint Review
 
+Durante el Sprint 2 se desarrollaron los incrementos correspondientes al despliegue y consolidación del backend de AquaSave, así como a la mejora continua del frontend. En el backend se implementaron y desplegaron los servicios de la aplicación. Por otro lado, en el frontend se realizaron mejoras funcionales y visuales sobre los módulos previamente desarrollados, optimizando la experiencia de usuario, la navegación y la integración con los servicios del backend. 
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | cfad4cf | feat:api conection | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 657c263 | feat:Add postgresql | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 41c1ed2 | fix:use relative server URL in OpenAPI spec | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | ee6ac98 | fix:restore Swagger servers with production and local URLs | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 6bdf663 | feat:Add new endpoint | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | aa3c1df | fix:Update envitoment | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | e6cb983 | feat : profile and validations | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | b30eb37 | feat : profile | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 5218544 | feat : icon | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | f7a5c71 | feat: new endpoint | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 27a0fd5 | fix: endpoints | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | d9ab1a8 | feat: endpoints | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | b43654b | feat : comisiones | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 4142ee4 | feat : icon | 2026-06-15 |
+
 ##### 6.2.2.5. Testing Suite Evidence for Sprint Review
 
 ##### 6.2.2.6. Execution Evidence for Sprint Review
