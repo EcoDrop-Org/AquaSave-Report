@@ -3267,9 +3267,9 @@ Durante este Sprint se completó la documentación OpenAPI 3.0.3 de todos los We
 
 
 ##### 6.2.2.8. Software Deployment Evidence for Sprint Review
+
 Durante este Sprint se realizó el despliegue del **Web Service (backend)** en Render y se actualizó el **frontend Flutter** para consumir la API en producción eliminando el modo mock. A continuación se describen los pasos realizados para cada producto.
 
----
 
 ### Backend — Despliegue en Render
 
@@ -3282,16 +3282,12 @@ Durante este Sprint se realizó el despliegue del **Web Service (backend)** en R
 
 Se creó un servicio de tipo **PostgreSQL** en Render (sección Databases → New PostgreSQL). Render provisionó la instancia y generó automáticamente la `Internal Database URL` que se utiliza como `DATABASE_URL` en el Web Service.
 
-<p align="center">
-  <img src="docs/img/render-postgres-create.png" width="70%">
-</p>
-
 **2. Creación del Web Service en Render**
 
 Se creó un Web Service conectado al repositorio de GitHub (`matthewsrt29/AquaSave-Backend`), rama `main`. Render detecta automáticamente nuevos pushes y ejecuta el pipeline de build y despliegue.
 
 <p align="center">
-  <img src="docs/img/render-create-service.png" width="70%">
+  <img src="image/render-create-service.png" width="80%">
 </p>
 
 **3. Configuración de variables de entorno en Render**
@@ -3307,7 +3303,7 @@ En el panel del Web Service → Environment se configuraron las siguientes varia
 | `ALLOWED_ORIGINS` | URL del frontend desplegado en Firebase |
 
 <p align="center">
-  <img src="docs/img/render-env-vars.png" width="70%">
+  <img src="image/render-env-vars.png" width="80%">
 </p>
 
 **4. Build y Start commands**
@@ -3327,14 +3323,13 @@ Tras el push del commit `b43654b`, Render ejecutó el pipeline automáticamente.
 - `GET https://aquasave-backend.onrender.com/api/docs` → Swagger UI visible
 
 <p align="center">
-  <img src="docs/img/render-deploy-log.png" width="70%">
+  <img src="image/render-deploy-log.png" width="80%">
 </p>
 
 <p align="center">
-  <img src="docs/img/swagger-production.png" width="70%">
+  <img src="image/swagger-production.png" width="80%">
 </p>
 
----
 
 ### Frontend Flutter — Actualización para consumir el backend
 
@@ -3374,23 +3369,8 @@ Todos los datasources leen el token desde `SharedPreferences` bajo la clave `aut
 flutter build web --dart-define=API_BASE_URL=https://aquasave-backend.onrender.com
 ```
 
-Commits relevantes del frontend:
 
-| Commit | Mensaje |
-|--------|---------|
-| `cfad4cf` | feat: api conection |
-| `7276f64` | feat: deployment |
-| `b9f35a1` | feat: profile and validations |
-| `b30eb37` | feat: profile |
-| `4142ee4` | feat: icon |
-
-**4. Despliegue en Firebase Hosting**
-
-```bash
-firebase deploy --only hosting
-```
-
-**5. Verificación de integración**
+**4. Verificación de integración**
 
 Se probó el flujo completo en el frontend desplegado:
 
