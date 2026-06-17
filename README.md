@@ -3406,6 +3406,43 @@ Se probó el flujo completo en el frontend desplegado:
 
 #### 6.3.1. Diseño de Entrevistas
 
+En esta sección se presenta el diseño de entrevistas de validación para AquaSave. El objetivo principal es evaluar la experiencia de uso de la aplicación web, considerando el flujo de registro, creación de dispositivo, configuración del huerto o parcela y revisión del dashboard principal.
+
+Durante las entrevistas, los usuarios interactuarán con la aplicación, por lo que se les explicará que los datos de humedad, temperatura y estado de conexión todavía dependen de la futura integración con el dispositivo físico. Por ello, las preguntas se enfocan en validar la claridad de la interfaz, la facilidad de uso, la comprensión del flujo y la utilidad percibida de la solución.
+
+**Entrevistas usuario segmento Horticultores Urbanos**
+
+1. ¿Consideras que el proceso de registro e inicio de sesión es claro desde una primera impresión?
+
+2. ¿Consideras que el proceso para crear un dispositivo o huerto es fácil de seguir?
+
+3. ¿Consideras que los datos solicitados para configurar el huerto, como ubicación, cantidad de plantas, tipo de cultivo y humedad objetivo, son fáciles de entender?
+
+4. ¿Consideras que el dashboard principal muestra de forma clara el estado general de tu huerto?
+
+5. ¿Consideras que los indicadores de humedad, temperatura y estado de conexión serían útiles para saber cuándo tus plantas necesitan riego?
+
+6. Al ver que algunos datos aparecen en cero o sin conexión, ¿entiendes que estos valores dependerán del dispositivo físico en una versión final?
+
+7. Después de probar esta versión preliminar, ¿usarías AquaSave como apoyo para cuidar y monitorear tu huerto doméstico? ¿Por qué?
+
+**Entrevistas usuario segmento Micro-Agricultores Periurbanos**
+
+1. ¿Consideras que el proceso de registro e inicio de sesión es sencillo para una persona con poca experiencia tecnológica?
+
+2. ¿Consideras que el proceso para registrar un dispositivo de riego o parcela es claro y fácil de completar?
+
+3. ¿Consideras que los datos solicitados para configurar el dispositivo, como ubicación, cantidad de plantas, tipo de cultivo y rango de humedad, son adecuados para una parcela pequeña?
+
+4. ¿Consideras que el dashboard principal permite conocer rápidamente el estado del cultivo sin revisar muchas pantallas?
+
+5. ¿Consideras que los indicadores de humedad, temperatura y estado de conexión serían importantes para tomar mejores decisiones de riego?
+
+6. Al saber que los datos reales vendrán del dispositivo físico en una versión final, ¿te parece comprensible el funcionamiento actual de esta fase en proceso?
+
+7. Después de probar esta versión preliminar, ¿usarías AquaSave como apoyo para monitorear y mejorar el riego de una parcela pequeña? ¿Por qué?
+
+
 #### 6.3.2. Registro de Entrevistas
 
 #### 6.3.3. Evaluaciones según heurísticas
