@@ -3267,6 +3267,48 @@ Durante este Sprint se completó la documentación OpenAPI 3.0.3 de todos los We
 
 
 ##### 6.2.2.8. Software Deployment Evidence for Sprint Review
+Durante este Sprint se realizó el despliegue del **Web Service (backend)** en Render y se actualizó el **frontend Flutter** para consumir la API en producción eliminando el modo mock. A continuación se describen los pasos realizados para cada producto.
+
+---
+
+### Backend — Despliegue en Render
+
+**Plataforma:** [Render](https://render.com)  
+**URL producción:** `https://aquasave-backend.onrender.com`
+
+#### Pasos realizados
+
+**1. Creación de la base de datos PostgreSQL en Render**
+
+Se creó un servicio de tipo **PostgreSQL** en Render (sección Databases → New PostgreSQL). Render provisionó la instancia y generó automáticamente la `Internal Database URL` que se utiliza como `DATABASE_URL` en el Web Service.
+
+<p align="center">
+  <img src="docs/img/render-postgres-create.png" width="70%">
+</p>
+
+**2. Creación del Web Service en Render**
+
+Se creó un Web Service conectado al repositorio de GitHub (`matthewsrt29/AquaSave-Backend`), rama `main`. Render detecta automáticamente nuevos pushes y ejecuta el pipeline de build y despliegue.
+
+<p align="center">
+  <img src="docs/img/render-create-service.png" width="70%">
+</p>
+
+**3. Configuración de variables de entorno en Render**
+
+En el panel del Web Service → Environment se configuraron las siguientes variables:
+
+| Variable | Valor |
+|----------|-------|
+| `NODE_ENV` | `production` |
+| `DATABASE_URL` | Internal URL de la instancia PostgreSQL de Render |
+| `JWT_SECRET` | Secreto generado para firmar sesiones |
+| `EDGE_API_KEY` | Clave compartida con los dispositivos ESP32 |
+| `ALLOWED_ORIGINS` | URL del frontend desplegado en Firebase |
+
+<p align="center">
+  <img src="docs/img/render-env-vars.png" width="70%">
+</p>
 
 ##### 6.2.2.9. Team Collaboration Insights during Sprint
 
