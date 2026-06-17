@@ -3069,10 +3069,32 @@ En esta sección se presenta la evidencia de la colaboración realizada durante 
 [![image.png](https://i.postimg.cc/c1F2rP2Z/image.png)](https://postimg.cc/kDtfHY7h)
 
 #### 6.2.2. Sprint 2
+En esta iteración, el equipo EcoDrop se enfocó en evolucionar AquaSave desde un prototipo visual inicial hacia una solución más integrada, considerando mejoras en la Landing Page, la Web Application, los servicios backend, la documentación de APIs, el despliegue de los productos digitales y la preparación de evidencias para la validación del producto.
 
 ##### 6.2.2.1. Sprint Planning 2
 
+El Sprint Planning 2 fue la reunión inicial de planificación del segundo sprint. En esta sesión, el equipo revisó los resultados obtenidos en el Sprint 1, identificó oportunidades de mejora y definió el nuevo incremento de producto que debía entregarse para AV2. La planificación permitió alinear el trabajo técnico, funcional y documental, considerando que esta entrega requiere evidenciar no solo avances de interfaz, sino también servicios, despliegue, pruebas, validación y video del producto.
+
+A continuación, se presenta la tabla del Sprint Planning 2:
+
+| Sprint \# | Sprint 2 |
+| ----- | ----- |
+| **Sprint Planning Background** |  |
+| Date | 2026-06-1 |
+| Time | 06:30 PM |
+| Location | Reunión virtual realizada mediante videollamada del equipo de desarrollo. |
+| Prepared By | Gutierrez Condo, Maylhy Olinda |
+| Attendees (to planning meeting) | Gutierrez Condo, Maylhy Olinda / Roca Tineo, Steven Mathew / Rodríguez Rodríguez, Luis Piero / Román Pajuelo, Luis Gustavo / Silva Morales, Renzo Cesar |
+| Sprint 1 Review Summary | Durante el Sprint 1, el equipo logró implementar la primera versión funcional de AquaSave a nivel de Landing Page y frontend. Se desarrolló una Landing Page responsive con secciones informativas, páginas complementarias y llamados a la acción. Asimismo, se implementó una Web Application inicial con pantallas de autenticación a nivel de prototipo, dashboard, gestión visual de dispositivos, configuración de umbrales, recomendaciones climáticas, historial de riegos y análisis visual. El incremento permitió validar la navegación principal y la propuesta visual del producto, aunque todavía sin integración real con backend, servicios externos o dispositivo IoT físico. |
+| Sprint 1 Retrospective Summary | El equipo identificó como aciertos la división de responsabilidades, la entrega de una experiencia visual coherente, el uso de Flutter para construir una interfaz adaptable y la organización del trabajo mediante repositorios versionados. Como oportunidades de mejora, se reconoció la necesidad de iniciar la integración backend con mayor anticipación, diferenciar claramente las funcionalidades simuladas de las funcionalidades reales, reforzar la documentación de servicios, mejorar las evidencias de pruebas y preparar con mayor orden las capturas, enlaces y videos requeridos para la entrega. |
+| **Sprint Goal & User Stories** |  |
+| Sprint 2 Goal | Our focus is on delivering a more integrated and review-ready version of AquaSave by improving the Landing Page and Web Application, preparing the first version of backend services, documenting the service endpoints, organizing testing evidence, supporting deployment evidence, and preparing product validation artifacts. We believe it delivers a more reliable and demonstrable smart irrigation experience to urban horticulturists, peri-urban micro-farmers and project evaluators. This will be confirmed when users and reviewers can access an updated Landing Page, interact with the updated Web Application, review service documentation, verify testing and execution evidence, observe deployment evidence, and evaluate the product through validation interviews and the About-the-Product video. |
+| Sprint 2 Velocity | 60 |
+| Sum of Story Points | 60 |
+
+
 ##### 6.2.2.2. Aspect Leaders and Collaborators
+
 
 ##### 6.2.2.3. Sprint Backlog 2
 
