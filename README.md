@@ -3095,6 +3095,30 @@ A continuación, se presenta la tabla del Sprint Planning 2:
 
 ##### 6.2.2.2. Aspect Leaders and Collaborators
 
+Para el Sprint 2, el equipo definió una matriz de liderazgo y colaboración con el objetivo de organizar las responsabilidades de manera clara. Esta matriz permite identificar quién lidera cada aspecto principal del sprint y quiénes participan como colaboradores, asegurando una distribución equilibrada del trabajo y una mejor coordinación interna.
+
+Los aspectos considerados para este sprint se definieron tomando en cuenta el alcance de AV2 y las responsabilidades asignadas por el equipo:
+
+1. Sprint Planning and Sprint Backlog  
+2. Landing Page and Web Application Improvements  
+3. Backend Services and API Documentation  
+4. Testing Suite and Quality Review  
+5. Execution Evidence and Product Demonstration  
+6. Software Deployment Evidence  
+7. Validation Interviews  
+8. Video About-the-Product  
+9. Team Collaboration and Report Consistency
+
+A continuación, se presenta la matriz LACX del Sprint 2:
+
+| Team Member (Last Name, First Name) | GitHub Username | Sprint Planning and Backlog | Landing Page and Web App Improvements | Backend Services and API Documentation | Testing Suite and Quality Review | Execution Evidence and Product Demonstration | Software Deployment Evidence | Validation Interviews | Video About-the-Product | Team Collaboration and Report Consistency |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Gutierrez Condo, Maylhy Olinda | Ly009463 | L | C | C | C | C | C | C | C | L |
+| Roca Tineo, Steven Mathew | matthewsrt29 | C | C | L | C | C | L | C | C | C |
+| Rodríguez Rodríguez, Luis Piero | luisprr | C | C | C | C | C | C | L | C | C |
+| Román Pajuelo, Luis Gustavo | Raizo400Z | C | C | C | C | C | C | L | C | C |
+| Silva Morales, Renzo Cesar | rrenzosilva | C | L | C | L | L | C | C | L | C |
+
 
 ##### 6.2.2.3. Sprint Backlog 2
 
