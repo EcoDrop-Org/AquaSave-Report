@@ -3215,6 +3215,56 @@ En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado 
 ##### 6.2.2.6. Execution Evidence for Sprint Review
 
 ##### 6.2.2.7. Services Documentation Evidence for Sprint Review
+Durante este Sprint se completó la documentación OpenAPI 3.0.3 de todos los Web Services de AquaSave. La API cubre cuatro bounded contexts: **Identity Access Management**, **Device Management**, **Irrigation Intelligence** y **Edge API** (comunicación con dispositivos ESP32). El contrato OpenAPI se sirve desde el propio servidor en `/api/docs` (Swagger UI interactivo) y `/api/openapi.json` (spec JSON).
+
+**URL base producción:** `https://aquasave-backend.onrender.com`  
+**Swagger UI desplegado:** `https://aquasave-backend.onrender.com/api/docs`  
+**Repositorio Web Services:** `https://github.com/matthewsrt29/AquaSave-Backend`
+
+**Commits relacionados con documentación este Sprint:**
+
+| Commit | Mensaje |
+|--------|---------|
+| `b43654b` | feat : comisiones |
+| `a18765e` | feat: endpoints |
+| `d9ab1a8` | feat: endpoints |
+| `27a0fd5` | fix: endpoints |
+| `f7a5c71` | feat: new endpoint |
+| `ee6ac98` | fix:restore Swagger servers with production and local URLs |
+
+---
+
+### Tabla de Endpoints
+
+> Auth de usuario: `Authorization: Bearer <token>`. Edge API: `x-edge-api-key: <api-key>`.
+
+| Tag | Método | Ruta | Parámetros / Body | Respuesta |
+|-----|--------|------|-------------------|-----------|
+| Health | GET | `/health` | — | `200 OK` |
+| IAM | POST | `/api/auth/register` | `email`, `password`, `fullName`, `profileType`, `spaceType`, `cropTypes`, `locationCity` | `201` `{ user, token, expiresAt }` |
+| IAM | POST | `/api/auth/login` | `email`, `password` | `200` `{ user, token, expiresAt }` · `401` credenciales inválidas |
+| IAM | GET | `/api/auth/me` | — | `200` `{ id, email, profile, isActive, lastLoginAt }` |
+| IAM | PATCH | `/api/auth/me` | Campos de perfil a actualizar | `200` `{ ...PublicUser }` |
+| IAM | POST | `/api/auth/logout` | — | `204` sin cuerpo |
+| IAM | POST | `/api/auth/change-password` | `currentPassword`, `newPassword` | `204` sin cuerpo · `401` contraseña incorrecta |
+| Device Management | GET | `/api/devices` | — | `200` `{ devices: [ { id, name, location, status, valveState, plantCount, cropType, lastTelemetry } ] }` |
+| Device Management | POST | `/api/devices` | `name`, `location { label, latitude, longitude }`, `plantCount`, `cropType`, `firmwareVersion` | `201` `{ device }` |
+| Device Management | GET | `/api/devices/{deviceId}` | `deviceId` (path) | `200` `{ device }` · `404` no encontrado |
+| Device Management | PATCH | `/api/devices/{deviceId}` | `deviceId` (path) + campos opcionales: `name`, `location`, `plantCount`, `cropType` | `200` `{ device }` · `404` no encontrado |
+| Device Management | DELETE | `/api/devices/{deviceId}` | `deviceId` (path) | `204` sin cuerpo · `404` no encontrado |
+| Device Management | GET | `/api/devices/{deviceId}/settings` | `deviceId` (path) | `200` `{ settings }` |
+| Device Management | PUT | `/api/devices/{deviceId}/settings` | `deviceId` (path) + configuración del dispositivo | `200` `{ settings }` |
+| Irrigation Intelligence | GET | `/api/irrigation/devices/{deviceId}/state` | `deviceId` (path) | `200` `{ state: { valveState, isRunning, elapsedSeconds, runningEvent } }` |
+| Irrigation Intelligence | POST | `/api/irrigation/devices/{deviceId}/start` | `deviceId` (path) | `202` `{ event: { id, startedAt, triggerType: "manual", status: "running" } }` |
+| Irrigation Intelligence | POST | `/api/irrigation/devices/{deviceId}/stop` | `deviceId` (path) | `202` `{ event: { id, endedAt, litersConsumed, status: "completed" } }` |
+| Irrigation Intelligence | GET | `/api/irrigation/devices/{deviceId}/events` | `deviceId` (path) | `200` `{ events: [ { id, startedAt, endedAt, litersConsumed, triggerType, status } ] }` |
+| Irrigation Intelligence | GET | `/api/irrigation/analytics` | `deviceId` (query) | `200` `{ kpis: { totalLiters, avgDailyLiters, totalEvents, avgDurationMin }, daily, cumulative, cropBreakdown }` |
+| Weather | GET | `/api/weather/forecast` | `deviceId` (query) | `200` `{ forecast: { temperatureC, humidityPct, rainProbabilityPct, precipitationMm, windSpeedKmh, conditionLabel } }` |
+| Edge API | POST | `/api/edge/devices/{deviceId}/telemetry` | `deviceId` (path) + `soilMoisturePct`, `temperatureC`, `flowRateLMin`, `batteryPct`, `recordedAt` | `202` `{ device }` con `lastTelemetry` actualizado |
+| Edge API | POST | `/api/edge/devices/{deviceId}/status` | `deviceId` (path) + `status`, `firmwareVersion` | `202` `{ device }` |
+| Edge API | GET | `/api/edge/devices/{deviceId}/commands/pending` | `deviceId` (path) | `200` `{ commands: [ { id, type: "open-valve"\|"close-valve", status: "pending" } ] }` |
+| Edge API | POST | `/api/edge/devices/{deviceId}/commands/{commandId}/ack` | `deviceId`, `commandId` (path) | `202` `{ command: { id, status: "acknowledged", acknowledgedAt } }` |
+
 
 ##### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
