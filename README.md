@@ -3310,6 +3310,96 @@ En el panel del Web Service → Environment se configuraron las siguientes varia
   <img src="docs/img/render-env-vars.png" width="70%">
 </p>
 
+**4. Build y Start commands**
+
+```
+Build Command:  npm install && npm run build
+Start Command:  npm start
+```
+
+El servidor escucha en el puerto asignado automáticamente por Render a través de la variable `$PORT`.
+
+**5. Despliegue y verificación**
+
+Tras el push del commit `b43654b`, Render ejecutó el pipeline automáticamente. Se verificó:
+
+- `GET https://aquasave-backend.onrender.com/health` → `200 OK`
+- `GET https://aquasave-backend.onrender.com/api/docs` → Swagger UI visible
+
+<p align="center">
+  <img src="docs/img/render-deploy-log.png" width="70%">
+</p>
+
+<p align="center">
+  <img src="docs/img/swagger-production.png" width="70%">
+</p>
+
+---
+
+### Frontend Flutter — Actualización para consumir el backend
+
+**Repositorio frontend:** `https://github.com/matthewsrt29/aquasave` (rama `main`)  
+**Plataforma de hosting:** Firebase Hosting  
+**URL producción frontend:** Configurada en `firebase.json`
+
+#### Cambios realizados este Sprint
+
+**1. Conexión a la API de producción**
+
+El archivo `lib/core/constants/app_constants.dart` ya tenía la URL de producción como valor por defecto:
+
+```dart
+static const String apiBaseUrl = String.fromEnvironment(
+  'API_BASE_URL',
+  defaultValue: 'https://aquasave-backend.onrender.com',
+);
+```
+
+Se verificó que `useMockData` esté en `false` por defecto para que todos los datasources remotos apunten al backend real.
+
+**2. Datasources remotos activados**
+
+Se activaron los siguientes datasources para consumir la API real:
+
+- `auth_remote_datasource.dart` — `POST /api/auth/login`, `POST /api/auth/register`
+- `devices_remote_datasource.dart` — CRUD de dispositivos
+- `irrigation_remote_datasource.dart` — Estado, inicio/stop, eventos y analíticas
+- `weather_remote_datasource.dart` — Pronóstico del tiempo
+
+Todos los datasources leen el token desde `SharedPreferences` bajo la clave `auth_token` y lo incluyen como `Authorization: Bearer <token>`.
+
+**3. Build web para Firebase Hosting**
+
+```bash
+flutter build web --dart-define=API_BASE_URL=https://aquasave-backend.onrender.com
+```
+
+Commits relevantes del frontend:
+
+| Commit | Mensaje |
+|--------|---------|
+| `cfad4cf` | feat: api conection |
+| `7276f64` | feat: deployment |
+| `b9f35a1` | feat: profile and validations |
+| `b30eb37` | feat: profile |
+| `4142ee4` | feat: icon |
+
+**4. Despliegue en Firebase Hosting**
+
+```bash
+firebase deploy --only hosting
+```
+
+**5. Verificación de integración**
+
+Se probó el flujo completo en el frontend desplegado:
+
+- Login con usuario real → token almacenado en `SharedPreferences`
+- Listado de dispositivos desde `GET /api/devices`
+- Inicio y stop de riego desde `POST /api/irrigation/devices/{id}/start|stop`
+- Carga de analíticas desde `GET /api/irrigation/analytics?deviceId={id}`
+- Pronóstico desde `GET /api/weather/forecast?deviceId={id}`
+
 ##### 6.2.2.9. Team Collaboration Insights during Sprint
 
 #### 6.2.3. Sprint 3
