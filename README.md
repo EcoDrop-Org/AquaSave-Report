@@ -3445,6 +3445,111 @@ Durante las entrevistas, los usuarios interactuarán con la aplicación, por lo 
 
 #### 6.3.2. Registro de Entrevistas
 
+En esta subsección se presenta el registro de las entrevistas de validación realizadas para AquaSave. Durante las sesiones, los participantes revisaron la landing page y posteriormente interactuaron con la aplicación web, evaluando el flujo de registro, la creación del dispositivo o huerto, la configuración de datos del cultivo, la visualización del dashboard y la utilidad percibida de los indicadores de humedad, temperatura y conexión. Estos registros permiten recopilar observaciones clave para mejorar la experiencia de usuario y orientar la evolución del producto hacia una versión integrada con el dispositivo IoT físico.
+
+A continuación, se muestra la relación de entrevistados organizados según el segmento objetivo al que pertenecen.
+
+| N° | Entrevistado      | Segmento objetivo              | Minuto del video |
+| -- | ----------------- | ------------------------------ | --------------- |
+| 1  | Daniela Gómez     | Horticultores Urbanos          | 00:00           |
+| 2  | Jose Chinchay     | Horticultores Urbanos          | 08:35           |
+| 3  | Santiago Cárdenas | Horticultores Urbanos          | 47:18           |
+| 4  | Werner Lang       | Micro-Agricultores Periurbanos | 34:36           |
+| 5  | Fernando Asensio  | Micro-Agricultores Periurbanos | 56:36           |
+| 6  | Mariela Koqui     | Micro-Agricultores Periurbanos | 20:35           |
+
+---
+
+### Segmento Objetivo 1: Horticultores Urbanos
+
+#### Entrevistado(a) #1: Daniela Gómez
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 00:00
+
+**Resumen de la entrevista:**
+Daniela consideró que el proceso de registro e inicio de sesión es claro, directo y fácil de comprender desde una primera impresión. También indicó que el flujo para crear un huerto o dispositivo se entiende correctamente porque los pasos se presentan de forma ordenada. Respecto a la configuración del huerto, señaló que datos como ubicación, cantidad de plantas y tipo de cultivo son intuitivos, aunque recomendó incluir referencias o recomendaciones más específicas según el cultivo. Además, valoró que el dashboard muestre la información de forma simple y no sobrecargada. Finalmente, afirmó que usaría AquaSave como apoyo para cuidar sus plantas, ya que los datos en tiempo real le darían mayor confianza al momento de decidir cuándo regar.
+
+
+
+<br>
+
+#### Entrevistado(a) #2: Jose Chinchay
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 08:35
+
+**Resumen de la entrevista:**
+Jose señaló que el registro le pareció sencillo, ya que solo debía ingresar datos básicos como nombre, correo y contraseña. También consideró adecuado que la aplicación solicite primero la creación del huerto antes de mostrar la información del panel principal. En cuanto a la configuración, mencionó que la mayoría de datos son claros, aunque la humedad objetivo podría generar dudas si el usuario no conoce el porcentaje adecuado para cada planta. Por ello, sugirió que AquaSave recomiende rangos automáticos según el tipo de cultivo. Asimismo, destacó que el dashboard resume correctamente información como humedad, temperatura, batería y conexión. Finalmente, indicó que usaría la aplicación porque le ayudaría a evitar el desperdicio de agua y tomar decisiones más seguras sobre el riego, especialmente si en la versión final se incorporan sensores reales y alertas.
+
+
+<br>
+
+#### Entrevistado(a) #3: Santiago Cárdenas
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 47:18
+
+**Resumen de la entrevista:**
+Santiago consideró que el registro y el inicio de sesión son claros, ya que los campos son fáciles de entender y similares a los de otras aplicaciones. También afirmó que el proceso para crear un huerto o dispositivo no le pareció complicado, debido a que el flujo guía al usuario paso a paso. Sobre los datos solicitados, comentó que ubicación, cantidad de plantas y tipo de cultivo son comprensibles, aunque la humedad objetivo podría requerir una recomendación automática según el cultivo seleccionado. Además, valoró que el dashboard muestre la información principal en una sola pantalla, evitando que el usuario tenga que buscar demasiado. Finalmente, indicó que usaría AquaSave porque le permitiría cuidar mejor su huerto y dejar de regar solo por intuición, destacando la importancia de contar con datos en tiempo real y alertas cuando las plantas necesiten agua.
+
+
+
+<br>
+
+---
+
+### Segmento Objetivo 2: Micro-Agricultores Periurbanos
+
+#### Entrevistado(a) #1: Werner Lang
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 34:36
+
+**Resumen de la entrevista:**
+Werner consideró que el proceso de registro es sencillo incluso para una persona con poca experiencia tecnológica, ya que solo requiere ingresar datos básicos. Respecto al registro del dispositivo o parcela, señaló que el flujo es comprensible, aunque recomendó mejorar algunos detalles, como permitir visualizar la contraseña y hacer más precisa la búsqueda de ubicación. También indicó que los datos solicitados para configurar una parcela pequeña son adecuados, especialmente la ubicación, tipo de cultivo, cantidad de plantas y rango de humedad. Sin embargo, sugirió ampliar las recomendaciones según el cultivo, ya que las opciones actuales podrían sentirse limitadas. Además, destacó que el dashboard concentra la información principal en un solo lugar, lo cual es útil para personas que trabajan en campo y necesitan ahorrar tiempo. Finalmente, afirmó que usaría AquaSave si el costo del dispositivo es accesible, porque ayudaría a ahorrar agua y tomar mejores decisiones sin depender únicamente de la observación manual.
+
+
+
+<br>
+
+#### Entrevistado(a) #2: Fernando Asensio
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 56:36
+
+**Resumen de la entrevista:**
+Fernando indicó que la aplicación le pareció interesante y que el registro fue bastante sencillo, ya que solicita información básica y necesaria. También consideró que el proceso para añadir un dispositivo o parcela es claro, debido a que entendió desde el inicio que debía registrar su parcela para que la aplicación pudiera mostrar información relacionada al cultivo. Respecto a los datos de configuración, señaló que son adecuados para una parcela pequeña, ya que permiten personalizar el monitoreo mediante ubicación, cantidad de plantas, tipo de cultivo y rango de humedad. Además, resaltó que el dashboard permite revisar rápidamente el estado del cultivo sin navegar por muchas secciones. Para él, los indicadores más importantes son la humedad y la temperatura, porque ayudan a decidir si el cultivo necesita riego. Finalmente, afirmó que usaría AquaSave porque permitiría controlar mejor el riego, evitar el desperdicio de agua y tomar mejores decisiones, sobre todo si la versión final muestra datos en tiempo real y envía alertas cuando el cultivo necesita agua.
+
+
+
+<br>
+
+#### Entrevistado(a) #3: Mariela Koqui
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 20:35
+
+**Resumen de la entrevista:**
+Mariela evaluó el recorrido de la landing page y de la aplicación web de AquaSave, observando principalmente el flujo de registro, la conexión simulada del dispositivo y la configuración de una parcela pequeña. A partir de la revisión, consideró que la aplicación resulta comprensible para una versión preliminar, ya que presenta pasos ordenados y solicita datos relevantes para el monitoreo del cultivo. También valoró que el dashboard permita visualizar información importante como humedad, temperatura y estado de conexión en una sola pantalla. Como recomendación, se considera importante reforzar las alertas, explicar con mayor claridad que los datos reales dependerán del dispositivo físico e incluir sugerencias de humedad según el tipo de cultivo. En general, su validación permite reforzar que AquaSave puede ser útil para micro-agricultores que buscan optimizar el riego y reducir el desperdicio de agua mediante datos más precisos.
+
+
+
+<br>
+
+
 #### 6.3.3. Evaluaciones según heurísticas
 
 ### 6.4. Video About-the-Product
