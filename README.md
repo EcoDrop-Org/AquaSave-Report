@@ -256,17 +256,41 @@
         </ul>
         <a href="#62-landing-page-services--applications-implementation">6.2. Landing Page, Services & Applications Implementation</a><br>
         <ul>
-            <a href="#621-sprint-n">6.2.1. Sprint n</a><br>
+            <a href="#621-sprint-n">6.2.1. Sprint 1</a><br>
             <ul>
-                <a href="#6211-sprint-planning-n">6.2.1.1. Sprint Planning n</a><br>
+                <a href="#6211-sprint-planning-n">6.2.1.1. Sprint Planning 1</a><br>
                 <a href="#6212-aspect-leaders-and-collaborators">6.2.1.2. Aspect Leaders and Collaborators</a><br>
-                <a href="#6213-sprint-backlog-n">6.2.1.3. Sprint Backlog n</a><br>
+                <a href="#6213-sprint-backlog-n">6.2.1.3. Sprint Backlog 1</a><br>
                 <a href="#6214-development-evidence-for-sprint-review">6.2.1.4. Development Evidence for Sprint Review</a><br>
                 <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.1.5. Testing Suite Evidence for Sprint Review</a><br>
                 <a href="#6216-execution-evidence-for-sprint-review">6.2.1.6. Execution Evidence for Sprint Review</a><br>
                 <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.1.7. Services Documentation Evidence for Sprint Review</a><br>
                 <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.1.8. Software Deployment Evidence for Sprint Review</a><br>
                 <a href="#6219-team-collaboration-insights-during-sprint">6.2.1.9. Team Collaboration Insights during Sprint</a><br>
+            </ul>
+                        <a href="#621-sprint-n">6.2.2. Sprint 2</a><br>
+            <ul>
+                <a href="#6211-sprint-planning-2">6.2.2.1. Sprint Planning 2</a><br>
+                <a href="#6212-aspect-leaders-and-collaborators">6.2.2.2. Aspect Leaders and Collaborators</a><br>
+                <a href="#6213-sprint-backlog-n">6.2.2.3. Sprint Backlog 2</a><br>
+                <a href="#6214-development-evidence-for-sprint-review">6.2.2.4. Development Evidence for Sprint Review</a><br>
+                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.2.5. Testing Suite Evidence for Sprint Review</a><br>
+                <a href="#6216-execution-evidence-for-sprint-review">6.2.2.6. Execution Evidence for Sprint Review</a><br>
+                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.2.7. Services Documentation Evidence for Sprint Review</a><br>
+                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.2.8. Software Deployment Evidence for Sprint Review</a><br>
+                <a href="#6219-team-collaboration-insights-during-sprint">6.2.2.9. Team Collaboration Insights during Sprint</a><br>
+            </ul>
+                        <a href="#621-sprint-n">6.2.3. Sprint 3</a><br>
+            <ul>
+                <a href="#6211-sprint-planning-n">6.2.3.1. Sprint Planning 3</a><br>
+                <a href="#6212-aspect-leaders-and-collaborators">6.2.3.2. Aspect Leaders and Collaborators</a><br>
+                <a href="#6213-sprint-backlog-n">6.2.3.3. Sprint Backlog 3</a><br>
+                <a href="#6214-development-evidence-for-sprint-review">6.2.3.4. Development Evidence for Sprint Review</a><br>
+                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.3.5. Testing Suite Evidence for Sprint Review</a><br>
+                <a href="#6216-execution-evidence-for-sprint-review">6.2.3.6. Execution Evidence for Sprint Review</a><br>
+                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.3.7. Services Documentation Evidence for Sprint Review</a><br>
+                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.3.8. Software Deployment Evidence for Sprint Review</a><br>
+                <a href="#6219-team-collaboration-insights-during-sprint">6.2.3.9. Team Collaboration Insights during Sprint</a><br>
             </ul>
         </ul>
         <a href="#63-validation-interviews">6.3. Validation Interviews</a><br>
@@ -3044,15 +3068,585 @@ En esta sección se presenta la evidencia de la colaboración realizada durante 
 
 [![image.png](https://i.postimg.cc/c1F2rP2Z/image.png)](https://postimg.cc/kDtfHY7h)
 
+#### 6.2.2. Sprint 2
+En esta iteración, el equipo EcoDrop se enfocó en evolucionar AquaSave desde un prototipo visual inicial hacia una solución más integrada, considerando mejoras en la Landing Page, la Web Application, los servicios backend, la documentación de APIs, el despliegue de los productos digitales y la preparación de evidencias para la validación del producto.
+
+##### 6.2.2.1. Sprint Planning 2
+
+El Sprint Planning 2 fue la reunión inicial de planificación del segundo sprint. En esta sesión, el equipo revisó los resultados obtenidos en el Sprint 1, identificó oportunidades de mejora y definió el nuevo incremento de producto que debía entregarse para AV2. La planificación permitió alinear el trabajo técnico, funcional y documental, considerando que esta entrega requiere evidenciar no solo avances de interfaz, sino también servicios, despliegue, pruebas, validación y video del producto.
+
+A continuación, se presenta la tabla del Sprint Planning 2:
+
+| Sprint \# | Sprint 2 |
+| ----- | ----- |
+| **Sprint Planning Background** |  |
+| Date | 2026-06-1 |
+| Time | 06:30 PM |
+| Location | Reunión virtual realizada mediante videollamada del equipo de desarrollo. |
+| Prepared By | Gutierrez Condo, Maylhy Olinda |
+| Attendees (to planning meeting) | Gutierrez Condo, Maylhy Olinda / Roca Tineo, Steven Mathew / Rodríguez Rodríguez, Luis Piero / Román Pajuelo, Luis Gustavo / Silva Morales, Renzo Cesar |
+| Sprint 1 Review Summary | Durante el Sprint 1, el equipo logró implementar la primera versión funcional de AquaSave a nivel de Landing Page y frontend. Se desarrolló una Landing Page responsive con secciones informativas, páginas complementarias y llamados a la acción. Asimismo, se implementó una Web Application inicial con pantallas de autenticación a nivel de prototipo, dashboard, gestión visual de dispositivos, configuración de umbrales, recomendaciones climáticas, historial de riegos y análisis visual. El incremento permitió validar la navegación principal y la propuesta visual del producto, aunque todavía sin integración real con backend, servicios externos o dispositivo IoT físico. |
+| Sprint 1 Retrospective Summary | El equipo identificó como aciertos la división de responsabilidades, la entrega de una experiencia visual coherente, el uso de Flutter para construir una interfaz adaptable y la organización del trabajo mediante repositorios versionados. Como oportunidades de mejora, se reconoció la necesidad de iniciar la integración backend con mayor anticipación, diferenciar claramente las funcionalidades simuladas de las funcionalidades reales, reforzar la documentación de servicios, mejorar las evidencias de pruebas y preparar con mayor orden las capturas, enlaces y videos requeridos para la entrega. |
+| **Sprint Goal & User Stories** |  |
+| Sprint 2 Goal | Our focus is on delivering a more integrated and review-ready version of AquaSave by improving the Landing Page and Web Application, preparing the first version of backend services, documenting the service endpoints, organizing testing evidence, supporting deployment evidence, and preparing product validation artifacts. We believe it delivers a more reliable and demonstrable smart irrigation experience to urban horticulturists, peri-urban micro-farmers and project evaluators. This will be confirmed when users and reviewers can access an updated Landing Page, interact with the updated Web Application, review service documentation, verify testing and execution evidence, observe deployment evidence, and evaluate the product through validation interviews and the About-the-Product video. |
+| Sprint 2 Velocity | 60 |
+| Sum of Story Points | 60 |
+
+
+##### 6.2.2.2. Aspect Leaders and Collaborators
+
+Para el Sprint 2, el equipo definió una matriz de liderazgo y colaboración con el objetivo de organizar las responsabilidades de manera clara. Esta matriz permite identificar quién lidera cada aspecto principal del sprint y quiénes participan como colaboradores, asegurando una distribución equilibrada del trabajo y una mejor coordinación interna.
+
+Los aspectos considerados para este sprint se definieron tomando en cuenta el alcance de AV2 y las responsabilidades asignadas por el equipo:
+
+1. Sprint Planning and Sprint Backlog  
+2. Landing Page and Web Application Improvements  
+3. Backend Services and API Documentation  
+4. Testing Suite and Quality Review  
+5. Execution Evidence and Product Demonstration  
+6. Software Deployment Evidence  
+7. Validation Interviews  
+8. Video About-the-Product  
+9. Team Collaboration and Report Consistency
+
+A continuación, se presenta la matriz LACX del Sprint 2:
+
+| Team Member (Last Name, First Name) | GitHub Username | Sprint Planning and Backlog | Landing Page and Web App Improvements | Backend Services and API Documentation | Testing Suite and Quality Review | Execution Evidence and Product Demonstration | Software Deployment Evidence | Validation Interviews | Video About-the-Product | Team Collaboration and Report Consistency |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Gutierrez Condo, Maylhy Olinda | Ly009463 | L | C | C | C | C | C | C | C | L |
+| Roca Tineo, Steven Mathew | matthewsrt29 | C | C | L | C | C | L | C | C | C |
+| Rodríguez Rodríguez, Luis Piero | luisprr | C | C | C | C | C | C | L | C | C |
+| Román Pajuelo, Luis Gustavo | Raizo400Z | C | C | C | C | C | C | L | C | C |
+| Silva Morales, Renzo Cesar | rrenzosilva | C | L | C | L | L | C | C | L | C |
+
+
+##### 6.2.2.3. Sprint Backlog 2
+
+
+El Sprint Backlog 2 reúne las User Stories y tareas seleccionadas para la entrega AV2 – Sprint Review. En esta iteración, el equipo priorizó las funcionalidades relacionadas con la integración de la Web Application con servicios backend, autenticación, perfiles, monitoreo de datos, configuración de riego, consulta climática, historial, dashboard, documentación de servicios, pruebas, despliegue y preparación de evidencias.
+
+A diferencia del Sprint 1, donde gran parte del comportamiento se trabajó a nivel de interfaz y simulación visual, en este Sprint 2 se avanzó en la conexión de la aplicación con servicios internos y en la preparación de endpoints necesarios para sostener el flujo de AquaSave. Sin embargo, la validación con el dispositivo ESP32 físico no forma parte del alcance de esta iteración. Para este sprint, las funcionalidades relacionadas con sensores, estado del dispositivo, caudal y control de riego se validan mediante servicios, datos simulados o contratos de API, dejando la prueba física con ESP32 para el siguiente sprint.
+
+
+
+| Sprint \# | Sprint 2 |  |  |  |  |  |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **User Story** | **Work-Item / Task** |  |  |  |  |  |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** |
+| US04 | Recuperar contraseña olvidada | 1 | Crear endpoint de solicitud de recuperación | Implementar el servicio para recibir el correo del usuario y generar una solicitud de recuperación de contraseña. | 3 | Roca Tineo, Steven Mathew |
+| US04 | Recuperar contraseña olvidada | 2 | Conectar vista de recuperación con backend | Integrar la pantalla de recuperación de contraseña con el endpoint correspondiente y mostrar mensajes de confirmación. | 2 | Silva Morales, Renzo Cesar |
+| US05 | Cerrar sesión | 1 | Implementar cierre de sesión en frontend | Permitir que el usuario cierre sesión desde la aplicación, limpiando el estado local de autenticación y redirigiendo al login. | 2 | Silva Morales, Renzo Cesar |
+| US06 | Configurar perfil de horticultor urbano | 1 | Crear estructura de datos para perfil de horticultor | Definir los campos requeridos para registrar tipo de espacio, cultivos y preferencias del horticultor urbano. | 3 | Roca Tineo, Steven Mathew |
+| US06 | Configurar perfil de horticultor urbano | 2 | Integrar formulario de perfil con servicio | Conectar la vista de perfil con el servicio backend para guardar y consultar la información del horticultor urbano. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US07 | Configurar perfil de micro-agricultor periurbano | 1 | Crear estructura de datos para perfil de micro-agricultor | Definir los campos para tamaño de parcela, tipo de cultivo, ubicación y preferencias de riego del micro-agricultor. | 3 | Roca Tineo, Steven Mathew |
+| US07 | Configurar perfil de micro-agricultor periurbano | 2 | Integrar formulario de parcela con servicio | Conectar la edición del perfil de micro-agricultor con el backend, validando campos obligatorios y mensajes de error. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US08 | Editar información del perfil | 1 | Implementar actualización de datos de perfil | Permitir que el usuario modifique sus datos personales y configuración de perfil desde la Web Application. | 3 | Silva Morales, Renzo Cesar |
+| US08 | Editar información del perfil | 2 | Persistir cambios de perfil | Conectar la actualización de datos con el servicio correspondiente para mantener la información sincronizada. | 3 | Roca Tineo, Steven Mathew |
+| US09 | Ver humedad del suelo en tiempo real | 1 | Preparar endpoint de lectura de humedad | Implementar el endpoint para consultar el valor de humedad asociado al dispositivo activo, usando datos simulados o registrados por API. | 4 | Roca Tineo, Steven Mathew |
+| US09 | Ver humedad del suelo en tiempo real | 2 | Integrar humedad en dashboard | Conectar el dashboard con el servicio de humedad para mostrar porcentaje, estado y última actualización del dato. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US10 | Ver temperatura del suelo y ambiente | 1 | Preparar endpoint de temperatura | Implementar la consulta de temperatura del suelo o ambiente a nivel de servicio, sin depender todavía del ESP32 físico. | 3 | Roca Tineo, Steven Mathew |
+| US10 | Ver temperatura del suelo y ambiente | 2 | Mostrar temperatura en Web Application | Integrar la temperatura en el dashboard y en las recomendaciones visuales, considerando estados normales y extremos. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US11 | Ver caudal de agua durante el riego | 1 | Preparar modelo de caudal | Definir la estructura de datos para representar litros por minuto y consumo estimado durante un ciclo de riego. | 3 | Roca Tineo, Steven Mathew |
+| US11 | Ver caudal de agua durante el riego | 2 | Mostrar caudal simulado en historial y métricas | Integrar valores de caudal en vistas de historial y análisis, usando datos simulados hasta realizar la prueba física del ESP32. | 3 | Gutierrez Condo, Maylhy Olinda |
+| US12 | Ver estado de conexión del dispositivo IoT | 1 | Preparar estado lógico del dispositivo | Implementar estados de conexión como En línea, Sin conexión o Última lectura disponible desde el backend o mock service. | 3 | Roca Tineo, Steven Mathew |
+| US12 | Ver estado de conexión del dispositivo IoT | 2 | Mostrar estado del dispositivo en la interfaz | Actualizar tarjetas de dispositivos y dashboard para reflejar el estado lógico de conexión del dispositivo activo. | 2 | Silva Morales, Renzo Cesar |
+| US13 | Activar el riego manualmente desde la app | 1 | Crear endpoint de activación de riego | Implementar el endpoint que recibe la orden de iniciar riego desde la Web Application, sin ejecutar todavía la activación física del ESP32. | 4 | Roca Tineo, Steven Mathew |
+| US13 | Activar el riego manualmente desde la app | 2 | Conectar botón de inicio de riego | Integrar el botón de iniciar riego con el servicio correspondiente y mostrar confirmación visual al usuario. | 3 | Silva Morales, Renzo Cesar |
+| US14 | Detener el riego manualmente desde la app | 1 | Crear endpoint de detención de riego | Implementar el endpoint que recibe la orden de detener riego, dejando preparado el contrato para futura conexión con el dispositivo físico. | 4 | Roca Tineo, Steven Mathew |
+| US14 | Detener el riego manualmente desde la app | 2 | Conectar botón de detener riego | Integrar el botón de detener riego con el servicio correspondiente y actualizar el estado visual del ciclo de riego. | 3 | Silva Morales, Renzo Cesar |
+| US15 | Configurar umbrales de humedad para riego automático | 1 | Persistir umbrales de humedad | Implementar el guardado de humedad mínima, óptima y máxima asociada al dispositivo o cultivo. | 4 | Roca Tineo, Steven Mathew |
+| US15 | Configurar umbrales de humedad para riego automático | 2 | Integrar configuración de umbrales en frontend | Conectar la pantalla de configuración con el backend para consultar y actualizar los umbrales de humedad. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US16 | Programar horarios de riego | 1 | Implementar servicio de horarios de riego | Crear endpoints para registrar, listar, activar, desactivar o eliminar horarios de riego programado. | 4 | Roca Tineo, Steven Mathew |
+| US16 | Programar horarios de riego | 2 | Integrar horarios en pantalla de configuración | Conectar la gestión de horarios de riego con la interfaz de configuración, validando formato de hora y estado activo. | 3 | Silva Morales, Renzo Cesar |
+| US17 | Consultar pronóstico del clima desde la app | 1 | Integrar servicio climático externo | Conectar el backend o capa de servicio con una API climática para obtener temperatura, lluvia y condiciones relevantes. | 4 | Roca Tineo, Steven Mathew |
+| US17 | Consultar pronóstico del clima desde la app | 2 | Mostrar clima por ubicación del huerto | Presentar el pronóstico en el dashboard según la ubicación configurada para el dispositivo o huerto activo. | 3 | Silva Morales, Renzo Cesar |
+| US18 | Pausar el riego automático ante lluvia prevista | 1 | Implementar regla de pausa por lluvia | Aplicar una regla de negocio para recomendar o registrar pausa del riego cuando la probabilidad de lluvia supera el umbral configurado. | 4 | Roca Tineo, Steven Mathew |
+| US18 | Pausar el riego automático ante lluvia prevista | 2 | Mostrar recomendación de pausa en la Web Application | Actualizar la interfaz para informar al usuario cuando el sistema recomienda no regar por lluvia prevista. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US19 | Configurar umbral de lluvia para pausa automática | 1 | Persistir umbral de lluvia | Guardar el porcentaje de probabilidad de lluvia definido por el usuario para activar recomendaciones de pausa. | 3 | Roca Tineo, Steven Mathew |
+| US19 | Configurar umbral de lluvia para pausa automática | 2 | Integrar slider de lluvia con backend | Conectar el control de configuración de lluvia con el servicio correspondiente y validar el rango permitido. | 2 | Silva Morales, Renzo Cesar |
+| US24 | Ver historial de riegos realizados | 1 | Crear endpoint de historial de riegos | Implementar el servicio para listar ciclos de riego con fecha, duración, tipo, litros consumidos y humedad antes/después. | 4 | Roca Tineo, Steven Mathew |
+| US24 | Ver historial de riegos realizados | 2 | Integrar historial con datos del servicio | Conectar la tabla de historial con el backend, manteniendo filtros y formato de lectura clara para el usuario. | 3 | Gutierrez Condo, Maylhy Olinda |
+| US25 | Ver consumo de agua diario, semanal y mensual | 1 | Preparar cálculo de consumo hídrico | Implementar la estructura para agrupar consumo de agua por día, semana y mes usando datos disponibles o simulados. | 4 | Roca Tineo, Steven Mathew |
+| US25 | Ver consumo de agua diario, semanal y mensual | 2 | Mostrar métricas de consumo en análisis | Integrar gráficas o tarjetas de consumo hídrico en la sección de análisis de la Web Application. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| US30 | Ver notificaciones recientes en el dashboard | 1 | Preparar modelo de notificaciones | Definir estructura para mostrar alertas recientes de humedad, temperatura, clima o riego dentro del dashboard. | 3 | Roca Tineo, Steven Mathew |
+| US30 | Ver notificaciones recientes en el dashboard | 2 | Integrar panel de notificaciones recientes | Mostrar las últimas alertas en el dashboard, diferenciando estados normales, preventivos y críticos. | 3 | Gutierrez Condo, Maylhy Olinda / Silva Morales, Renzo Cesar |
+| TS01 | Documentar servicios del Sprint 2 | 1 | Registrar endpoints en OpenAPI/Swagger | Documentar los endpoints implementados para autenticación, perfiles, dispositivos, riego, clima, historial y métricas. | 5 | Roca Tineo, Steven Mathew |
+| TS02 | Preparar evidencias de testing del Sprint 2 | 1 | Ejecutar y registrar pruebas del sprint | Preparar evidencias de pruebas unitarias, integración o validaciones manuales relacionadas con los servicios y la Web Application. | 5 | Silva Morales, Renzo Cesar |
+| TS03 | Preparar evidencia de despliegue | 1 | Registrar despliegues de Landing Page, Web Application y Services | Documentar capturas, URLs y estado de despliegue de los productos desarrollados o actualizados durante el sprint. | 4 | Roca Tineo, Steven Mathew |
+| TS04 | Actualizar reporte del Sprint 2 | 1 | Redactar secciones del Sprint 2 en el informe | Organizar la redacción de Sprint Planning, Aspect Leaders, Sprint Backlog y coherencia del reporte para AV2. | 4 | Gutierrez Condo, Maylhy Olinda |
+
+**Nota sobre el alcance técnico del Sprint 2:**  
+Las tareas relacionadas con sensores, caudal, estado del dispositivo y control de riego se desarrollaron a nivel de servicios, contratos de API, integración web y datos simulados. La verificación con el dispositivo ESP32 físico, la lectura real de sensores y la activación física del sistema de riego se mantienen fuera del alcance de este sprint y serán abordadas en la siguiente iteración.
+
+
+##### 6.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se desarrollaron los incrementos correspondientes al despliegue y consolidación del backend de AquaSave, así como a la mejora continua del frontend. En el backend se implementaron y desplegaron los servicios de la aplicación. Por otro lado, en el frontend se realizaron mejoras funcionales y visuales sobre los módulos previamente desarrollados, optimizando la experiencia de usuario, la navegación y la integración con los servicios del backend. 
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | cfad4cf | feat:api conection | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 657c263 | feat:Add postgresql | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 41c1ed2 | fix:use relative server URL in OpenAPI spec | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | ee6ac98 | fix:restore Swagger servers with production and local URLs | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 6bdf663 | feat:Add new endpoint | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | aa3c1df | fix:Update envitoment | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | e6cb983 | feat : profile and validations | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | b30eb37 | feat : profile | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 5218544 | feat : icon | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | f7a5c71 | feat: new endpoint | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 27a0fd5 | fix: endpoints | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | d9ab1a8 | feat: endpoints | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | b43654b | feat : comisiones | 2026-06-13 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 4142ee4 | feat : icon | 2026-06-15 |
+
+##### 6.2.2.5. Testing Suite Evidence for Sprint Review
+
+Durante este sprint se realizaron verificaciones para validar el correcto funcionamiento del backend desplegado y las mejoras implementadas en el frontend de AquaSave. En el backend se probaron los principales endpoints de autenticación, usuarios y dispositivos, confirmando su disponibilidad y correcta conexión con la base de datos.
+
+En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado **No issues found**. Además, se realizaron pruebas funcionales sobre los módulos de login, registro, dashboard y configuración, verificando la correcta integración con los servicios del backend y el adecuado funcionamiento de las mejoras visuales y de navegación implementadas durante el sprint.
+
+| Repository | Branch | Commit Id | Validation | Result | Date |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | a8f42c1 | Pruebas de disponibilidad de endpoints, autenticación JWT y conexión con base de datos tras el despliegue. | Passed | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | c51d9e7 | Ejecución de flutter analyze y validación de integración con servicios backend. | Passed | 2026-06-11 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | main | e27b4fa | Verificación posterior al merge para confirmar la integración de mejoras visuales, navegación y consumo de API. | Passed | 2026-06-16 |
+
+##### 6.2.2.6. Execution Evidence for Sprint Review
+
+##### 6.2.2.7. Services Documentation Evidence for Sprint Review
+Durante este Sprint se completó la documentación OpenAPI 3.0.3 de todos los Web Services de AquaSave. La API cubre cuatro bounded contexts: **Identity Access Management**, **Device Management**, **Irrigation Intelligence** y **Edge API** (comunicación con dispositivos ESP32). El contrato OpenAPI se sirve desde el propio servidor en `/api/docs` (Swagger UI interactivo) y `/api/openapi.json` (spec JSON).
+
+**URL base producción:** `https://aquasave-backend.onrender.com`  
+**Swagger UI desplegado:** `https://aquasave-backend.onrender.com/api/docs`  
+**Repositorio Web Services:** `https://github.com/matthewsrt29/AquaSave-Backend`
+
+**Commits relacionados con documentación este Sprint:**
+
+| Commit | Mensaje |
+|--------|---------|
+| `b43654b` | feat : comisiones |
+| `a18765e` | feat: endpoints |
+| `d9ab1a8` | feat: endpoints |
+| `27a0fd5` | fix: endpoints |
+| `f7a5c71` | feat: new endpoint |
+| `ee6ac98` | fix:restore Swagger servers with production and local URLs |
+
+---
+
+### Tabla de Endpoints
+
+> Auth de usuario: `Authorization: Bearer <token>`. Edge API: `x-edge-api-key: <api-key>`.
+
+| Tag | Método | Ruta | Parámetros / Body | Respuesta |
+|-----|--------|------|-------------------|-----------|
+| Health | GET | `/health` | — | `200 OK` |
+| IAM | POST | `/api/auth/register` | `email`, `password`, `fullName`, `profileType`, `spaceType`, `cropTypes`, `locationCity` | `201` `{ user, token, expiresAt }` |
+| IAM | POST | `/api/auth/login` | `email`, `password` | `200` `{ user, token, expiresAt }` · `401` credenciales inválidas |
+| IAM | GET | `/api/auth/me` | — | `200` `{ id, email, profile, isActive, lastLoginAt }` |
+| IAM | PATCH | `/api/auth/me` | Campos de perfil a actualizar | `200` `{ ...PublicUser }` |
+| IAM | POST | `/api/auth/logout` | — | `204` sin cuerpo |
+| IAM | POST | `/api/auth/change-password` | `currentPassword`, `newPassword` | `204` sin cuerpo · `401` contraseña incorrecta |
+| Device Management | GET | `/api/devices` | — | `200` `{ devices: [ { id, name, location, status, valveState, plantCount, cropType, lastTelemetry } ] }` |
+| Device Management | POST | `/api/devices` | `name`, `location { label, latitude, longitude }`, `plantCount`, `cropType`, `firmwareVersion` | `201` `{ device }` |
+| Device Management | GET | `/api/devices/{deviceId}` | `deviceId` (path) | `200` `{ device }` · `404` no encontrado |
+| Device Management | PATCH | `/api/devices/{deviceId}` | `deviceId` (path) + campos opcionales: `name`, `location`, `plantCount`, `cropType` | `200` `{ device }` · `404` no encontrado |
+| Device Management | DELETE | `/api/devices/{deviceId}` | `deviceId` (path) | `204` sin cuerpo · `404` no encontrado |
+| Device Management | GET | `/api/devices/{deviceId}/settings` | `deviceId` (path) | `200` `{ settings }` |
+| Device Management | PUT | `/api/devices/{deviceId}/settings` | `deviceId` (path) + configuración del dispositivo | `200` `{ settings }` |
+| Irrigation Intelligence | GET | `/api/irrigation/devices/{deviceId}/state` | `deviceId` (path) | `200` `{ state: { valveState, isRunning, elapsedSeconds, runningEvent } }` |
+| Irrigation Intelligence | POST | `/api/irrigation/devices/{deviceId}/start` | `deviceId` (path) | `202` `{ event: { id, startedAt, triggerType: "manual", status: "running" } }` |
+| Irrigation Intelligence | POST | `/api/irrigation/devices/{deviceId}/stop` | `deviceId` (path) | `202` `{ event: { id, endedAt, litersConsumed, status: "completed" } }` |
+| Irrigation Intelligence | GET | `/api/irrigation/devices/{deviceId}/events` | `deviceId` (path) | `200` `{ events: [ { id, startedAt, endedAt, litersConsumed, triggerType, status } ] }` |
+| Irrigation Intelligence | GET | `/api/irrigation/analytics` | `deviceId` (query) | `200` `{ kpis: { totalLiters, avgDailyLiters, totalEvents, avgDurationMin }, daily, cumulative, cropBreakdown }` |
+| Weather | GET | `/api/weather/forecast` | `deviceId` (query) | `200` `{ forecast: { temperatureC, humidityPct, rainProbabilityPct, precipitationMm, windSpeedKmh, conditionLabel } }` |
+| Edge API | POST | `/api/edge/devices/{deviceId}/telemetry` | `deviceId` (path) + `soilMoisturePct`, `temperatureC`, `flowRateLMin`, `batteryPct`, `recordedAt` | `202` `{ device }` con `lastTelemetry` actualizado |
+| Edge API | POST | `/api/edge/devices/{deviceId}/status` | `deviceId` (path) + `status`, `firmwareVersion` | `202` `{ device }` |
+| Edge API | GET | `/api/edge/devices/{deviceId}/commands/pending` | `deviceId` (path) | `200` `{ commands: [ { id, type: "open-valve"\|"close-valve", status: "pending" } ] }` |
+| Edge API | POST | `/api/edge/devices/{deviceId}/commands/{commandId}/ack` | `deviceId`, `commandId` (path) | `202` `{ command: { id, status: "acknowledged", acknowledgedAt } }` |
+
+
+##### 6.2.2.8. Software Deployment Evidence for Sprint Review
+
+Durante este Sprint se realizó el despliegue del **Web Service (backend)** en Render y se actualizó el **frontend Flutter** para consumir la API en producción eliminando el modo mock. A continuación se describen los pasos realizados para cada producto.
+
+
+### Backend — Despliegue en Render
+
+**Plataforma:** [Render](https://render.com)  
+**URL producción:** `https://aquasave-backend.onrender.com`
+
+#### Pasos realizados
+
+**1. Creación de la base de datos PostgreSQL en Render**
+
+Se creó un servicio de tipo **PostgreSQL** en Render (sección Databases → New PostgreSQL). Render provisionó la instancia y generó automáticamente la `Internal Database URL` que se utiliza como `DATABASE_URL` en el Web Service.
+
+**2. Creación del Web Service en Render**
+
+Se creó un Web Service conectado al repositorio de GitHub (`matthewsrt29/AquaSave-Backend`), rama `main`. Render detecta automáticamente nuevos pushes y ejecuta el pipeline de build y despliegue.
+
+<p align="center">
+  <img src="image/render-create-service.png" width="80%">
+</p>
+
+**3. Configuración de variables de entorno en Render**
+
+En el panel del Web Service → Environment se configuraron las siguientes variables:
+
+| Variable | Valor |
+|----------|-------|
+| `NODE_ENV` | `production` |
+| `DATABASE_URL` | Internal URL de la instancia PostgreSQL de Render |
+| `JWT_SECRET` | Secreto generado para firmar sesiones |
+| `EDGE_API_KEY` | Clave compartida con los dispositivos ESP32 |
+| `ALLOWED_ORIGINS` | URL del frontend desplegado en Firebase |
+
+<p align="center">
+  <img src="image/render-env-vars.png" width="80%">
+</p>
+
+**4. Build y Start commands**
+
+```
+Build Command:  npm install && npm run build
+Start Command:  npm start
+```
+
+El servidor escucha en el puerto asignado automáticamente por Render a través de la variable `$PORT`.
+
+**5. Despliegue y verificación**
+
+Tras el push del commit `b43654b`, Render ejecutó el pipeline automáticamente. Se verificó:
+
+- `GET https://aquasave-backend.onrender.com/health` → `200 OK`
+- `GET https://aquasave-backend.onrender.com/api/docs` → Swagger UI visible
+
+<p align="center">
+  <img src="image/render-deploy-log.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="image/swagger-production.png" width="80%">
+</p>
+
+
+### Frontend Flutter — Actualización para consumir el backend
+
+**Repositorio frontend:** `https://github.com/matthewsrt29/aquasave` (rama `main`)  
+**Plataforma de hosting:** Firebase Hosting  
+**URL producción frontend:** `https://aquasave-cae9e.web.app`
+
+<p align="center">
+ <img src="image/mobile.png" width="80%">
+</p>
+
+#### Cambios realizados este Sprint
+
+**1. Conexión a la API de producción**
+
+El archivo `lib/core/constants/app_constants.dart` ya tenía la URL de producción como valor por defecto:
+
+```dart
+static const String apiBaseUrl = String.fromEnvironment(
+  'API_BASE_URL',
+  defaultValue: 'https://aquasave-backend.onrender.com',
+);
+```
+
+Se verificó que `useMockData` esté en `false` por defecto para que todos los datasources remotos apunten al backend real.
+
+**2. Datasources remotos activados**
+
+Se activaron los siguientes datasources para consumir la API real:
+
+- `auth_remote_datasource.dart` — `POST /api/auth/login`, `POST /api/auth/register`
+- `devices_remote_datasource.dart` — CRUD de dispositivos
+- `irrigation_remote_datasource.dart` — Estado, inicio/stop, eventos y analíticas
+- `weather_remote_datasource.dart` — Pronóstico del tiempo
+
+Todos los datasources leen el token desde `SharedPreferences` bajo la clave `auth_token` y lo incluyen como `Authorization: Bearer <token>`.
+
+**3. Build web para Firebase Hosting**
+
+```bash
+flutter build web --dart-define=API_BASE_URL=https://aquasave-backend.onrender.com
+```
+
+
+**4. Verificación de integración**
+
+Se probó el flujo completo en el frontend desplegado:
+
+- Login con usuario real → token almacenado en `SharedPreferences`
+- Listado de dispositivos desde `GET /api/devices`
+- Inicio y stop de riego desde `POST /api/irrigation/devices/{id}/start|stop`
+- Carga de analíticas desde `GET /api/irrigation/analytics?deviceId={id}`
+- Pronóstico desde `GET /api/weather/forecast?deviceId={id}`
+
+##### 6.2.2.9. Team Collaboration Insights during Sprint
+
+#### 6.2.3. Sprint 3
+
+##### 6.2.3.1. Sprint Planning 3
+
+##### 6.2.3.2. Aspect Leaders and Collaborators
+
+##### 6.2.3.3. Sprint Backlog 3
+
+##### 6.2.3.4. Development Evidence for Sprint Review
+
+##### 6.2.3.5. Testing Suite Evidence for Sprint Review
+
+##### 6.2.3.6. Execution Evidence for Sprint Review
+
+##### 6.2.3.7. Services Documentation Evidence for Sprint Review
+
+##### 6.2.3.8. Software Deployment Evidence for Sprint Review
+
+##### 6.2.3.9. Team Collaboration Insights during Sprint
+
 ### 6.3. Validation Interviews
 
 #### 6.3.1. Diseño de Entrevistas
 
+En esta sección se presenta el diseño de entrevistas de validación para AquaSave. El objetivo principal es evaluar la experiencia de uso de la aplicación web, considerando el flujo de registro, creación de dispositivo, configuración del huerto o parcela y revisión del dashboard principal.
+
+Durante las entrevistas, los usuarios interactuarán con la aplicación, por lo que se les explicará que los datos de humedad, temperatura y estado de conexión todavía dependen de la futura integración con el dispositivo físico. Por ello, las preguntas se enfocan en validar la claridad de la interfaz, la facilidad de uso, la comprensión del flujo y la utilidad percibida de la solución.
+
+**Entrevistas usuario segmento Horticultores Urbanos**
+
+1. ¿Consideras que el proceso de registro e inicio de sesión es claro desde una primera impresión?
+
+2. ¿Consideras que el proceso para crear un dispositivo o huerto es fácil de seguir?
+
+3. ¿Consideras que los datos solicitados para configurar el huerto, como ubicación, cantidad de plantas, tipo de cultivo y humedad objetivo, son fáciles de entender?
+
+4. ¿Consideras que el dashboard principal muestra de forma clara el estado general de tu huerto?
+
+5. ¿Consideras que los indicadores de humedad, temperatura y estado de conexión serían útiles para saber cuándo tus plantas necesitan riego?
+
+6. Al ver que algunos datos aparecen en cero o sin conexión, ¿entiendes que estos valores dependerán del dispositivo físico en una versión final?
+
+7. Después de probar esta versión preliminar, ¿usarías AquaSave como apoyo para cuidar y monitorear tu huerto doméstico? ¿Por qué?
+
+**Entrevistas usuario segmento Micro-Agricultores Periurbanos**
+
+1. ¿Consideras que el proceso de registro e inicio de sesión es sencillo para una persona con poca experiencia tecnológica?
+
+2. ¿Consideras que el proceso para registrar un dispositivo de riego o parcela es claro y fácil de completar?
+
+3. ¿Consideras que los datos solicitados para configurar el dispositivo, como ubicación, cantidad de plantas, tipo de cultivo y rango de humedad, son adecuados para una parcela pequeña?
+
+4. ¿Consideras que el dashboard principal permite conocer rápidamente el estado del cultivo sin revisar muchas pantallas?
+
+5. ¿Consideras que los indicadores de humedad, temperatura y estado de conexión serían importantes para tomar mejores decisiones de riego?
+
+6. Al saber que los datos reales vendrán del dispositivo físico en una versión final, ¿te parece comprensible el funcionamiento actual de esta fase en proceso?
+
+7. Después de probar esta versión preliminar, ¿usarías AquaSave como apoyo para monitorear y mejorar el riego de una parcela pequeña? ¿Por qué?
+
+
 #### 6.3.2. Registro de Entrevistas
+
+En esta subsección se presenta el registro de las entrevistas de validación realizadas para AquaSave. Durante las sesiones, los participantes revisaron la landing page y posteriormente interactuaron con la aplicación web, evaluando el flujo de registro, la creación del dispositivo o huerto, la configuración de datos del cultivo, la visualización del dashboard y la utilidad percibida de los indicadores de humedad, temperatura y conexión. Estos registros permiten recopilar observaciones clave para mejorar la experiencia de usuario y orientar la evolución del producto hacia una versión integrada con el dispositivo IoT físico.
+
+A continuación, se muestra la relación de entrevistados organizados según el segmento objetivo al que pertenecen.
+
+| N° | Entrevistado      | Segmento objetivo              | Minuto del video |
+| -- | ----------------- | ------------------------------ | --------------- |
+| 1  | Daniela Gómez     | Horticultores Urbanos          | 00:00           |
+| 2  | Jose Chinchay     | Horticultores Urbanos          | 08:35           |
+| 3  | Santiago Cárdenas | Horticultores Urbanos          | 47:18           |
+| 4  | Werner Lang       | Micro-Agricultores Periurbanos | 34:36           |
+| 5  | Fernando Asensio  | Micro-Agricultores Periurbanos | 56:36           |
+| 6  | Mariela Koqui     | Micro-Agricultores Periurbanos | 20:35           |
+
+---
+
+### Segmento Objetivo 1: Horticultores Urbanos
+
+#### Entrevistado(a) #1: Daniela Gómez
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 00:00
+
+<p align="center">
+  <img src="image/Daniela_Gomez_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Daniela consideró que el proceso de registro e inicio de sesión es claro, directo y fácil de comprender desde una primera impresión. También indicó que el flujo para crear un huerto o dispositivo se entiende correctamente porque los pasos se presentan de forma ordenada. Respecto a la configuración del huerto, señaló que datos como ubicación, cantidad de plantas y tipo de cultivo son intuitivos, aunque recomendó incluir referencias o recomendaciones más específicas según el cultivo. Además, valoró que el dashboard muestre la información de forma simple y no sobrecargada. Finalmente, afirmó que usaría AquaSave como apoyo para cuidar sus plantas, ya que los datos en tiempo real le darían mayor confianza al momento de decidir cuándo regar.
+
+
+
+<br>
+
+#### Entrevistado(a) #2: Jose Chinchay
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 08:35
+
+<p align="center">
+  <img src="image/Jose_Chinchay_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Jose señaló que el registro le pareció sencillo, ya que solo debía ingresar datos básicos como nombre, correo y contraseña. También consideró adecuado que la aplicación solicite primero la creación del huerto antes de mostrar la información del panel principal. En cuanto a la configuración, mencionó que la mayoría de datos son claros, aunque la humedad objetivo podría generar dudas si el usuario no conoce el porcentaje adecuado para cada planta. Por ello, sugirió que AquaSave recomiende rangos automáticos según el tipo de cultivo. Asimismo, destacó que el dashboard resume correctamente información como humedad, temperatura, batería y conexión. Finalmente, indicó que usaría la aplicación porque le ayudaría a evitar el desperdicio de agua y tomar decisiones más seguras sobre el riego, especialmente si en la versión final se incorporan sensores reales y alertas.
+
+
+<br>
+
+#### Entrevistado(a) #3: Santiago Cárdenas
+
+**Segmento:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 47:18
+
+<p align="center">
+  <img src="image/Santiago_Cardenas_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Santiago consideró que el registro y el inicio de sesión son claros, ya que los campos son fáciles de entender y similares a los de otras aplicaciones. También afirmó que el proceso para crear un huerto o dispositivo no le pareció complicado, debido a que el flujo guía al usuario paso a paso. Sobre los datos solicitados, comentó que ubicación, cantidad de plantas y tipo de cultivo son comprensibles, aunque la humedad objetivo podría requerir una recomendación automática según el cultivo seleccionado. Además, valoró que el dashboard muestre la información principal en una sola pantalla, evitando que el usuario tenga que buscar demasiado. Finalmente, indicó que usaría AquaSave porque le permitiría cuidar mejor su huerto y dejar de regar solo por intuición, destacando la importancia de contar con datos en tiempo real y alertas cuando las plantas necesiten agua.
+
+
+
+<br>
+
+---
+
+### Segmento Objetivo 2: Micro-Agricultores Periurbanos
+
+#### Entrevistado(a) #1: Werner Lang
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 34:36
+
+<p align="center">
+  <img src="image/Werner_Lang_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Werner consideró que el proceso de registro es sencillo incluso para una persona con poca experiencia tecnológica, ya que solo requiere ingresar datos básicos. Respecto al registro del dispositivo o parcela, señaló que el flujo es comprensible, aunque recomendó mejorar algunos detalles, como permitir visualizar la contraseña y hacer más precisa la búsqueda de ubicación. También indicó que los datos solicitados para configurar una parcela pequeña son adecuados, especialmente la ubicación, tipo de cultivo, cantidad de plantas y rango de humedad. Sin embargo, sugirió ampliar las recomendaciones según el cultivo, ya que las opciones actuales podrían sentirse limitadas. Además, destacó que el dashboard concentra la información principal en un solo lugar, lo cual es útil para personas que trabajan en campo y necesitan ahorrar tiempo. Finalmente, afirmó que usaría AquaSave si el costo del dispositivo es accesible, porque ayudaría a ahorrar agua y tomar mejores decisiones sin depender únicamente de la observación manual.
+
+
+
+<br>
+
+#### Entrevistado(a) #2: Fernando Asensio
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 56:36
+
+<p align="center">
+  <img src="image/Fernando_Asensio_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Fernando indicó que la aplicación le pareció interesante y que el registro fue bastante sencillo, ya que solicita información básica y necesaria. También consideró que el proceso para añadir un dispositivo o parcela es claro, debido a que entendió desde el inicio que debía registrar su parcela para que la aplicación pudiera mostrar información relacionada al cultivo. Respecto a los datos de configuración, señaló que son adecuados para una parcela pequeña, ya que permiten personalizar el monitoreo mediante ubicación, cantidad de plantas, tipo de cultivo y rango de humedad. Además, resaltó que el dashboard permite revisar rápidamente el estado del cultivo sin navegar por muchas secciones. Para él, los indicadores más importantes son la humedad y la temperatura, porque ayudan a decidir si el cultivo necesita riego. Finalmente, afirmó que usaría AquaSave porque permitiría controlar mejor el riego, evitar el desperdicio de agua y tomar mejores decisiones, sobre todo si la versión final muestra datos en tiempo real y envía alertas cuando el cultivo necesita agua.
+
+
+
+<br>
+
+#### Entrevistado(a) #3: Mariela Koqui
+
+**Segmento:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 20:35
+
+<p align="center">
+  <img src="image/Mariela_Koqui_EV.png" alt="insight" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Mariela evaluó el recorrido de la landing page y de la aplicación web de AquaSave, observando principalmente el flujo de registro, la conexión simulada del dispositivo y la configuración de una parcela pequeña. A partir de la revisión, consideró que la aplicación resulta comprensible para una versión preliminar, ya que presenta pasos ordenados y solicita datos relevantes para el monitoreo del cultivo. También valoró que el dashboard permita visualizar información importante como humedad, temperatura y estado de conexión en una sola pantalla. Como recomendación, se considera importante reforzar las alertas, explicar con mayor claridad que los datos reales dependerán del dispositivo físico e incluir sugerencias de humedad según el tipo de cultivo. En general, su validación permite reforzar que AquaSave puede ser útil para micro-agricultores que buscan optimizar el riego y reducir el desperdicio de agua mediante datos más precisos.
+
+
+
+<br>
+
 
 #### 6.3.3. Evaluaciones según heurísticas
 
+##### Metadatos de la Auditoría UX
+* **Curso:** Desarrollo de Soluciones IoT (1ASI0657)
+* **NRC:** 6770
+* **Docente:** Javier Antonio Prudencio Vidal
+* **Auditor / Evaluador:** Equipo EcoDrop
+* **Producto Evaluado:** AquaSave
+* **Clientes de Control:** Daniela Gómez, Jose Chinchay, Santiago Cárdenas, Werner Lang, Fernando Asensio y Mariela Koqui.
+* **Segmentos Evaluados:** Horticultores Urbanos y Micro-Agricultores Periurbanos.
+* **Tareas Auditadas:** Registro e inicio de sesión, creación de huerto o dispositivo, configuración de parcela, selección de ubicación, cantidad de plantas, tipo de cultivo, rango de humedad, revisión del dashboard, interpretación de humedad, temperatura, batería, conexión y comprensión de datos simulados dependientes del dispositivo IoT físico.
+* **Exclusiones del Alcance:** Integración física completa con ESP32, lectura real de sensores en campo, activación física del sistema de riego, validación prolongada de consumo hídrico real y algoritmos avanzados de recomendación automática basados en historial productivo.
+
+##### Escala de Severidad Utilizada
+1. **Problema superficial:** Puede ser superado fácilmente por el usuario o aparece con poca frecuencia. Prioridad baja.
+2. **Problema menor:** Puede generar dudas o fricción moderada, pero no impide completar el flujo principal. Prioridad baja/media.
+3. **Problema mayor:** Afecta la toma de decisiones del usuario o reduce la confianza en funciones importantes del producto. Prioridad alta.
+4. **Problema muy grave:** Impide completar una tarea crítica o bloquea el uso de la herramienta. Debe corregirse antes del despliegue final.
+
+##### Tabla Resumen de Hallazgos Heurísticos
+
+| # | Problema Detectado | Severidad | Heurística / Principio Violado |
+| :---: | :--- | :---: | :--- |
+| 1 | Falta de recomendaciones automáticas para humedad objetivo según tipo de cultivo. | 3 | Correspondencia entre el sistema y el mundo real / Reconocimiento antes que recuerdo |
+| 2 | Explicación insuficiente sobre datos simulados, valores en cero o estado sin conexión. | 2 | Visibilidad del estado del sistema / Información y feedback adecuados |
+| 3 | Alertas de humedad, temperatura y riego aún poco reforzadas dentro de la experiencia. | 3 | Prevención de errores / Visibilidad de condiciones críticas |
+| 4 | Búsqueda o configuración de ubicación puede requerir mayor precisión. | 2 | Prevención de errores / Control y libertad del usuario |
+| 5 | Ausencia o baja visibilidad de opción para mostrar/ocultar contraseña. | 2 | Control del usuario / Prevención de errores |
+| 6 | Falta de mayor claridad sobre costo y accesibilidad del dispositivo IoT. | 2 | Transparencia de información / Apoyo a la toma de decisiones |
+
+##### Diagnóstico Técnico Detallado y Plan de Mitigación
+
+###### Problema #1: Falta de recomendaciones automáticas para humedad objetivo según cultivo
+* **Severidad:** 3
+* **Descripción:** Varios entrevistados comprendieron el flujo de configuración del huerto o parcela, pero señalaron que la humedad objetivo puede generar dudas si el usuario no conoce el porcentaje adecuado para cada planta. Esta observación fue recurrente en ambos segmentos, especialmente porque AquaSave busca reemplazar el riego por intuición con decisiones basadas en datos.
+* **Recomendación de Ingeniería:** Implementar una tabla de rangos sugeridos por tipo de cultivo dentro del backend o una fuente local inicial en el frontend. Al seleccionar un cultivo, el sistema debería proponer humedad mínima, óptima y máxima, permitiendo que el usuario edite los valores si tiene experiencia previa. Además, se recomienda mostrar una ayuda breve junto al campo, por ejemplo: “Rango sugerido para este cultivo: 45% - 65%”.
+
+###### Problema #2: Explicación insuficiente sobre datos simulados o dependientes del dispositivo físico
+* **Severidad:** 2
+* **Descripción:** Durante las entrevistas se explicó que los datos de humedad, temperatura y conexión dependen de la futura integración con el dispositivo físico. Sin embargo, se identificó que la interfaz debe comunicar mejor cuándo un dato es simulado, cuándo proviene del backend y cuándo representa una lectura real del ESP32.
+* **Recomendación de Ingeniería:** Añadir etiquetas visibles como `Dato simulado`, `Última lectura disponible`, `Sin conexión` o `Esperando dispositivo físico`. También se recomienda incluir la hora de última actualización y un pequeño estado contextual en el dashboard para evitar que los valores en cero sean interpretados como errores del sistema.
+
+###### Problema #3: Alertas críticas poco reforzadas en la experiencia
+* **Severidad:** 3
+* **Descripción:** Los usuarios valoraron especialmente las futuras alertas de humedad, temperatura y necesidad de riego. Sin embargo, también se recomendó reforzar su presencia, ya que estas alertas son esenciales para que AquaSave cumpla su promesa principal: prevenir riego insuficiente, exceso de agua y pérdida de cultivos.
+* **Recomendación de Ingeniería:** Priorizar un módulo visible de alertas recientes en el dashboard con colores semánticos, íconos y mensajes accionables. Las alertas deben diferenciar estados normales, preventivos y críticos. Asimismo, se recomienda implementar reglas de negocio para humedad baja, humedad excesiva, temperatura extrema y riego innecesario, alineadas con las historias de usuario US20, US21, US22 y US23.
+
+###### Problema #4: Precisión limitada en la configuración de ubicación
+* **Severidad:** 2
+* **Descripción:** En el segmento de micro-agricultores periurbanos se mencionó que la búsqueda de ubicación debería ser más precisa. Este punto es relevante porque la ubicación afecta el pronóstico climático, las recomendaciones de lluvia y la contextualización del dispositivo o parcela.
+* **Recomendación de Ingeniería:** Mejorar el formulario de ubicación mediante autocompletado, validación por distrito/provincia/país y confirmación visual del lugar seleccionado. Si se utiliza una API de geocodificación, se recomienda mostrar alternativas cuando existan nombres repetidos y permitir corrección manual antes de guardar el dispositivo.
+
+###### Problema #5: Baja visibilidad de mostrar/ocultar contraseña
+* **Severidad:** 2
+* **Descripción:** Aunque el flujo de registro e inicio de sesión fue considerado sencillo, se sugirió permitir visualizar la contraseña. Esto es especialmente importante para usuarios con menor experiencia tecnológica, ya que reduce errores al escribir credenciales y evita frustración durante el acceso.
+* **Recomendación de Ingeniería:** Incorporar un ícono de visibilidad en los campos de contraseña del registro, inicio de sesión y cambio de contraseña. El control debe permitir alternar entre texto oculto y visible, manteniendo accesibilidad táctil y consistencia visual con Material Design.
+
+###### Problema #6: Falta de claridad sobre costo y accesibilidad del dispositivo IoT
+* **Severidad:** 2
+* **Descripción:** Uno de los entrevistados indicó que usaría AquaSave si el costo del dispositivo resulta accesible. Este hallazgo es importante porque el proyecto está dirigido a usuarios que buscan tecnificar el riego con bajo costo, especialmente micro-agricultores periurbanos.
+* **Recomendación de Ingeniería:** Reforzar en la landing page y en la sección de planes el valor económico del dispositivo, el posible ahorro de agua y la diferencia entre funciones gratuitas y premium. También se recomienda incluir una estimación de retorno de inversión o beneficios esperados para que el usuario entienda mejor la relación costo-beneficio antes de adoptar la solución.
+
 ### 6.4. Video About-the-Product
+
+El video About-the-Product ofrece una explicación clara y comprensible sobre la finalidad y el alcance de nuestra solución, destacando el problema que busca resolver, su propuesta de valor y las funcionalidades más relevantes del ecosistema tecnológico, compuesto por las plataformas Web, Mobile e IoT. Está orientado a los visitantes de la Landing Page y a potenciales usuarios que desean conocer el modelo de negocio y las capacidades de la herramienta para optimizar el cuidado de sus plantas mediante tecnología inteligente.
+
+[![image.png](https://i.postimg.cc/qRMvNNPX/image.png)](https://postimg.cc/06Fs3y2b)
+
+Link del video: [https://goo.su/V19mNf](https://goo.su/V19mNf)
 
 ---
 
