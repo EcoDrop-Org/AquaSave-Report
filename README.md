@@ -3642,6 +3642,12 @@ Mariela evaluó el recorrido de la landing page y de la aplicación web de AquaS
 
 ### 6.4. Video About-the-Product
 
+El video About-the-Product ofrece una explicación clara y comprensible sobre la finalidad y el alcance de nuestra solución, destacando el problema que busca resolver, su propuesta de valor y las funcionalidades más relevantes del ecosistema tecnológico, compuesto por las plataformas Web, Mobile e IoT. Está orientado a los visitantes de la Landing Page y a potenciales usuarios que desean conocer el modelo de negocio y las capacidades de la herramienta para optimizar el cuidado de sus plantas mediante tecnología inteligente.
+
+[![image.png](https://i.postimg.cc/qRMvNNPX/image.png)](https://postimg.cc/06Fs3y2b)
+
+Link del video: [https://goo.su/V19mNf](https://goo.su/V19mNf)
+
 ---
 
 ## Conclusiones
