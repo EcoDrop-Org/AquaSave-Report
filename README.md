@@ -3580,6 +3580,66 @@ Mariela evaluó el recorrido de la landing page y de la aplicación web de AquaS
 
 #### 6.3.3. Evaluaciones según heurísticas
 
+##### Metadatos de la Auditoría UX
+* **Curso:** Desarrollo de Soluciones IoT (1ASI0657)
+* **NRC:** 6770
+* **Docente:** Javier Antonio Prudencio Vidal
+* **Auditor / Evaluador:** Equipo EcoDrop
+* **Producto Evaluado:** AquaSave
+* **Clientes de Control:** Daniela Gómez, Jose Chinchay, Santiago Cárdenas, Werner Lang, Fernando Asensio y Mariela Koqui.
+* **Segmentos Evaluados:** Horticultores Urbanos y Micro-Agricultores Periurbanos.
+* **Tareas Auditadas:** Registro e inicio de sesión, creación de huerto o dispositivo, configuración de parcela, selección de ubicación, cantidad de plantas, tipo de cultivo, rango de humedad, revisión del dashboard, interpretación de humedad, temperatura, batería, conexión y comprensión de datos simulados dependientes del dispositivo IoT físico.
+* **Exclusiones del Alcance:** Integración física completa con ESP32, lectura real de sensores en campo, activación física del sistema de riego, validación prolongada de consumo hídrico real y algoritmos avanzados de recomendación automática basados en historial productivo.
+
+##### Escala de Severidad Utilizada
+1. **Problema superficial:** Puede ser superado fácilmente por el usuario o aparece con poca frecuencia. Prioridad baja.
+2. **Problema menor:** Puede generar dudas o fricción moderada, pero no impide completar el flujo principal. Prioridad baja/media.
+3. **Problema mayor:** Afecta la toma de decisiones del usuario o reduce la confianza en funciones importantes del producto. Prioridad alta.
+4. **Problema muy grave:** Impide completar una tarea crítica o bloquea el uso de la herramienta. Debe corregirse antes del despliegue final.
+
+##### Tabla Resumen de Hallazgos Heurísticos
+
+| # | Problema Detectado | Severidad | Heurística / Principio Violado |
+| :---: | :--- | :---: | :--- |
+| 1 | Falta de recomendaciones automáticas para humedad objetivo según tipo de cultivo. | 3 | Correspondencia entre el sistema y el mundo real / Reconocimiento antes que recuerdo |
+| 2 | Explicación insuficiente sobre datos simulados, valores en cero o estado sin conexión. | 2 | Visibilidad del estado del sistema / Información y feedback adecuados |
+| 3 | Alertas de humedad, temperatura y riego aún poco reforzadas dentro de la experiencia. | 3 | Prevención de errores / Visibilidad de condiciones críticas |
+| 4 | Búsqueda o configuración de ubicación puede requerir mayor precisión. | 2 | Prevención de errores / Control y libertad del usuario |
+| 5 | Ausencia o baja visibilidad de opción para mostrar/ocultar contraseña. | 2 | Control del usuario / Prevención de errores |
+| 6 | Falta de mayor claridad sobre costo y accesibilidad del dispositivo IoT. | 2 | Transparencia de información / Apoyo a la toma de decisiones |
+
+##### Diagnóstico Técnico Detallado y Plan de Mitigación
+
+###### Problema #1: Falta de recomendaciones automáticas para humedad objetivo según cultivo
+* **Severidad:** 3
+* **Descripción:** Varios entrevistados comprendieron el flujo de configuración del huerto o parcela, pero señalaron que la humedad objetivo puede generar dudas si el usuario no conoce el porcentaje adecuado para cada planta. Esta observación fue recurrente en ambos segmentos, especialmente porque AquaSave busca reemplazar el riego por intuición con decisiones basadas en datos.
+* **Recomendación de Ingeniería:** Implementar una tabla de rangos sugeridos por tipo de cultivo dentro del backend o una fuente local inicial en el frontend. Al seleccionar un cultivo, el sistema debería proponer humedad mínima, óptima y máxima, permitiendo que el usuario edite los valores si tiene experiencia previa. Además, se recomienda mostrar una ayuda breve junto al campo, por ejemplo: “Rango sugerido para este cultivo: 45% - 65%”.
+
+###### Problema #2: Explicación insuficiente sobre datos simulados o dependientes del dispositivo físico
+* **Severidad:** 2
+* **Descripción:** Durante las entrevistas se explicó que los datos de humedad, temperatura y conexión dependen de la futura integración con el dispositivo físico. Sin embargo, se identificó que la interfaz debe comunicar mejor cuándo un dato es simulado, cuándo proviene del backend y cuándo representa una lectura real del ESP32.
+* **Recomendación de Ingeniería:** Añadir etiquetas visibles como `Dato simulado`, `Última lectura disponible`, `Sin conexión` o `Esperando dispositivo físico`. También se recomienda incluir la hora de última actualización y un pequeño estado contextual en el dashboard para evitar que los valores en cero sean interpretados como errores del sistema.
+
+###### Problema #3: Alertas críticas poco reforzadas en la experiencia
+* **Severidad:** 3
+* **Descripción:** Los usuarios valoraron especialmente las futuras alertas de humedad, temperatura y necesidad de riego. Sin embargo, también se recomendó reforzar su presencia, ya que estas alertas son esenciales para que AquaSave cumpla su promesa principal: prevenir riego insuficiente, exceso de agua y pérdida de cultivos.
+* **Recomendación de Ingeniería:** Priorizar un módulo visible de alertas recientes en el dashboard con colores semánticos, íconos y mensajes accionables. Las alertas deben diferenciar estados normales, preventivos y críticos. Asimismo, se recomienda implementar reglas de negocio para humedad baja, humedad excesiva, temperatura extrema y riego innecesario, alineadas con las historias de usuario US20, US21, US22 y US23.
+
+###### Problema #4: Precisión limitada en la configuración de ubicación
+* **Severidad:** 2
+* **Descripción:** En el segmento de micro-agricultores periurbanos se mencionó que la búsqueda de ubicación debería ser más precisa. Este punto es relevante porque la ubicación afecta el pronóstico climático, las recomendaciones de lluvia y la contextualización del dispositivo o parcela.
+* **Recomendación de Ingeniería:** Mejorar el formulario de ubicación mediante autocompletado, validación por distrito/provincia/país y confirmación visual del lugar seleccionado. Si se utiliza una API de geocodificación, se recomienda mostrar alternativas cuando existan nombres repetidos y permitir corrección manual antes de guardar el dispositivo.
+
+###### Problema #5: Baja visibilidad de mostrar/ocultar contraseña
+* **Severidad:** 2
+* **Descripción:** Aunque el flujo de registro e inicio de sesión fue considerado sencillo, se sugirió permitir visualizar la contraseña. Esto es especialmente importante para usuarios con menor experiencia tecnológica, ya que reduce errores al escribir credenciales y evita frustración durante el acceso.
+* **Recomendación de Ingeniería:** Incorporar un ícono de visibilidad en los campos de contraseña del registro, inicio de sesión y cambio de contraseña. El control debe permitir alternar entre texto oculto y visible, manteniendo accesibilidad táctil y consistencia visual con Material Design.
+
+###### Problema #6: Falta de claridad sobre costo y accesibilidad del dispositivo IoT
+* **Severidad:** 2
+* **Descripción:** Uno de los entrevistados indicó que usaría AquaSave si el costo del dispositivo resulta accesible. Este hallazgo es importante porque el proyecto está dirigido a usuarios que buscan tecnificar el riego con bajo costo, especialmente micro-agricultores periurbanos.
+* **Recomendación de Ingeniería:** Reforzar en la landing page y en la sección de planes el valor económico del dispositivo, el posible ahorro de agua y la diferencia entre funciones gratuitas y premium. También se recomienda incluir una estimación de retorno de inversión o beneficios esperados para que el usuario entienda mejor la relación costo-beneficio antes de adoptar la solución.
+
 ### 6.4. Video About-the-Product
 
 ---
