@@ -3335,7 +3335,10 @@ Tras el push del commit `b43654b`, Render ejecutó el pipeline automáticamente.
 
 **Repositorio frontend:** `https://github.com/matthewsrt29/aquasave` (rama `main`)  
 **Plataforma de hosting:** Firebase Hosting  
-**URL producción frontend:** Configurada en `firebase.json`
+**URL producción frontend:** `https://aquasave-cae9e.web.app`
+
+<p align="center">mobile.png" width="80%">
+</p>
 
 #### Cambios realizados este Sprint
 
