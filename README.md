@@ -1135,6 +1135,7 @@ Usuario: Micro-Agricultor Periurbano
 |:-----:|:-------------:|--------|-------------|:------------:|
 | 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, Quiero crear una cuenta indicando mi tipo de perfil, Para acceder a las funcionalidades de monitoreo y control de riego de AquaSave. | 3 |
 | 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, Quiero iniciar sesión con mis credenciales, Para acceder a mi dashboard y datos de mis cultivos. | 2 |
+| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, Quiero registrarme o iniciar sesión con mi cuenta de Google, Para acceder a AquaSave sin crear credenciales nuevas. | 3 |
 | 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, Quiero restablecer mi contraseña mediante mi correo, Para recuperar el acceso a mi cuenta sin perder mis datos. | 2 |
 | 5 | US05 | Cerrar sesión | Como usuario autenticado, Quiero cerrar sesión desde la app, Para proteger mi cuenta cuando uso un dispositivo compartido. | 1 |
 | 6 | US06 | Configurar perfil de horticultor urbano | Como horticultor urbano, Quiero configurar mi perfil indicando tipo de espacio y cultivos, Para que AquaSave personalice los umbrales de humedad según mi huerto. | 3 |
