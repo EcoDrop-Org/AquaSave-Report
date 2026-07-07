@@ -41,7 +41,7 @@
 | AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en AquaSave. |
 | TB1     | 13/05/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la segunda entrega del informe de nuestro proyecto, hemos realizado la landing page y el frontend de nuestra aplicación AquaSave |
 | AV2     | 17/06/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la tercera entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend e implementación y despliegue del backend. |
-| TB22     | 06/07/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la cuarta entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend,backend y móvil, demás del desarrollo del edge. |
+| TB2     | 07/07/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la cuarta entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend,backend y móvil, demás del desarrollo del edge. |
 
 # Project Report Collaboration Insights
 
