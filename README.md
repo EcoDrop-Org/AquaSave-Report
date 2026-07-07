@@ -4010,6 +4010,10 @@ Link del video: [https://goo.su/V19mNf](https://goo.su/V19mNf)
 
 ### Video About-the-Team
 
+[![image.png](https://i.postimg.cc/c1P836FX/image.png)](https://postimg.cc/CdH1TMTq)
+
+Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
+
 ---
 
 ## Bibliografía
