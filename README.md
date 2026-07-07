@@ -3399,23 +3399,295 @@ Se probó el flujo completo en el frontend desplegado:
 
 ##### 6.2.2.9. Team Collaboration Insights during Sprint
 
+En esta sección se presenta la evidencia de la colaboración realizada durante el sprint.
+
+[![image.png](https://i.postimg.cc/4y0WBRRf/image.png)](https://postimg.cc/sGpPg82q)
+
+[![image.png](https://i.postimg.cc/c1F2rP2Z/image.png)](https://postimg.cc/kDtfHY7h)
+
 #### 6.2.3. Sprint 3
+
+En esta última iteración, el equipo EcoDrop se enfocó en completar el desarrollo de AquaSave mediante la construcción física del dispositivo IoT basado en ESP32, la implementación del edge computing para la comunicación con los sensores y actuadores, y la integración completa y en tiempo real con el frontend web y la aplicación móvil, logrando así un producto funcional e integrado de extremo a extremo. En este sprint final se abordaron todas las funcionalidades pendientes, incluyendo el inicio de sesión con Google, las alertas basadas en sensores reales y las métricas de ahorro hídrico.
 
 ##### 6.2.3.1. Sprint Planning 3
 
+El Sprint Planning 3 fue la reunión inicial de planificación del tercer sprint. En esta sesión, el equipo revisó los resultados obtenidos en el Sprint 2, donde se consolidaron los servicios backend y se prepararon los contratos de API para la comunicación con el dispositivo físico. Para este sprint, el equipo definió como objetivo principal la construcción del dispositivo IoT, la implementación del edge computing y la integración completa con el frontend y la app móvil, permitiendo que AquaSave funcione como un sistema integral de riego inteligente.
+
+A continuación, se presenta la tabla del Sprint Planning 3:
+
+| Sprint \# | Sprint 3 |
+| ----- | ----- |
+| **Sprint Planning Background** |  |
+| Date | 2026-06-22 |
+| Time | 06:30 PM |
+| Location | Reunión virtual realizada mediante videollamada del equipo de desarrollo. |
+| Prepared By | Roca Tineo, Steven Mathew |
+| Attendees (to planning meeting) | Gutierrez Condo, Maylhy Olinda / Roca Tineo, Steven Mathew / Rodríguez Rodríguez, Luis Piero / Román Pajuelo, Luis Gustavo / Silva Morales, Renzo Cesar |
+| Sprint 2 Review Summary | Durante el Sprint 2, el equipo logró implementar y desplegar los servicios backend de AquaSave en Render, documentar los endpoints mediante OpenAPI/Swagger, conectar la Web Application con los servicios reales y mejorar la experiencia de usuario del frontend. Se avanzó en la conexión de la aplicación con servicios internos y se prepararon los endpoints necesarios para sostener el flujo de AquaSave. La validación con el dispositivo ESP32 físico quedó fuera del alcance del sprint y fue planificada para esta iteración. |
+| Sprint 2 Retrospective Summary | El equipo identificó como aciertos la correcta documentación de servicios, el despliegue exitoso del backend en Render, la integración del frontend con la API real y la coordinación para las entrevistas de validación. Como oportunidades de mejora, se reconoció la necesidad de iniciar la construcción del hardware IoT con mayor anticipación, establecer un canal de comunicación edge más robusto entre el ESP32 y el backend, y reforzar las pruebas de integración entre el dispositivo físico y la aplicación. |
+| **Sprint Goal & User Stories** |  |
+| Sprint 3 Goal | Our focus is on delivering the final integrated version of AquaSave by building the physical ESP32 IoT device, implementing edge computing for sensor data collection and actuator control, establishing real-time communication between the device and the backend via the Edge API, and completing the end-to-end integration with the Web frontend and Mobile application. We believe it delivers a fully functional smart irrigation solution to urban horticulturists and peri-urban micro-farmers. This will be confirmed when users and reviewers can see real sensor data (soil moisture, temperature, flow rate) from a physical ESP32 device displayed in real time on the dashboard, control irrigation remotely from the Web and Mobile apps, receive alerts based on actual soil conditions, log in with Google, view water savings metrics, and verify that the complete IoT ecosystem operates reliably from device to cloud to end-user interface. |
+| Sprint 3 Velocity | 85 |
+| Sum of Story Points | 84 |
+
 ##### 6.2.3.2. Aspect Leaders and Collaborators
+
+Para el Sprint 3, el equipo definió una matriz de liderazgo y colaboración con el objetivo de organizar las responsabilidades de manera clara. Esta matriz permite identificar quién lidera cada aspecto principal del sprint y quiénes participan como colaboradores, asegurando una distribución equilibrada del trabajo y una mejor coordinación interna.
+
+Los aspectos considerados para este sprint se definieron tomando en cuenta el alcance de la entrega final y las responsabilidades asignadas por el equipo:
+
+1. Sprint Planning and Sprint Backlog  
+2. IoT Device Construction (ESP32, Sensors, Actuators)  
+3. Edge Computing and Firmware Development  
+4. Edge API Integration with Backend  
+5. Web Frontend Integration with Real Device Data  
+6. Mobile Application Integration with Real Device Data  
+7. Social Login and Authentication  
+8. End-to-End Testing and Validation  
+9. Software Deployment and Infrastructure  
+10. Team Collaboration and Report Consistency
+
+A continuación, se presenta la matriz LACX del Sprint 3:
+
+| Team Member (Last Name, First Name) | GitHub Username | Sprint Planning and Backlog | IoT Device Construction | Edge Computing and Firmware | Edge API Integration | Web Frontend Integration | Mobile App Integration | Social Login | End-to-End Testing | Software Deployment | Team Collaboration and Report |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Gutierrez Condo, Maylhy Olinda | Ly009463 | C | C | C | L | C | C | C | C | C | L |
+| Roca Tineo, Steven Mathew | matthewsrt29 | L | C | C | C | C | C | L | C | L | C |
+| Rodríguez Rodríguez, Luis Piero | luisprr | C | L | L | C | C | C | C | C | C | C |
+| Román Pajuelo, Luis Gustavo | Raizo400Z | C | C | C | C | L | L | C | C | C | C |
+| Silva Morales, Renzo Cesar | rrenzosilva | C | C | C | C | C | C | C | L | C | C |
 
 ##### 6.2.3.3. Sprint Backlog 3
 
+El Sprint Backlog 3 reúne las User Stories y tareas seleccionadas para la entrega final. En esta última iteración, el equipo priorizó la construcción del dispositivo IoT, la implementación del edge computing, la integración en tiempo real con el frontend web y la aplicación móvil, las funcionalidades pendientes como el inicio de sesión con Google, las alertas con datos reales y las métricas de ahorro hídrico, y las pruebas de extremo a extremo del sistema completo.
+
+A diferencia del Sprint 2, donde los endpoints de sensores, caudal y control de riego se validaron mediante datos simulados, en este Sprint 3 se trabajó directamente con el hardware físico ESP32, permitiendo que la aplicación muestre datos reales de los sensores y ejecute órdenes de riego sobre el actuador físico.
+
+| Sprint \# | Sprint 3 |  |  |  |  |  |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **User Story** | **Work-Item / Task** |  |  |  |  |  |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** |
+| US03 | Iniciar sesión con cuenta de Google | 1 | Integrar Google Sign-In en backend | Implementar el endpoint de autenticación OAuth2 con Google en el backend. | 4 | Roca Tineo, Steven Mathew |
+| US03 | Iniciar sesión con cuenta de Google | 2 | Integrar Google Sign-In en frontend web | Agregar botón "Continuar con Google" en la pantalla de login de la web. | 3 | Roca Tineo, Steven Mathew |
+| US03 | Iniciar sesión con cuenta de Google | 3 | Integrar Google Sign-In en app móvil | Agregar botón "Continuar con Google" en la pantalla de login de la app móvil. | 3 | Roca Tineo, Steven Mathew |
+| US09 | Ver humedad del suelo en tiempo real | 1 | Integrar sensor de humedad con ESP32 | Conectar el sensor de humedad del suelo al ESP32 y calibrar las lecturas para obtener datos precisos en tiempo real. | 6 | Rodríguez Rodríguez, Luis Piero |
+| US09 | Ver humedad del suelo en tiempo real | 2 | Enviar telemetría de humedad al backend | Implementar el envío periódico de lecturas de humedad desde el ESP32 al Edge API endpoint. | 4 | Rodríguez Rodríguez, Luis Piero |
+| US09 | Ver humedad del suelo en tiempo real | 3 | Mostrar humedad real en dashboard web y móvil | Actualizar el frontend y la app móvil para consumir y mostrar los valores reales de humedad provenientes del dispositivo. | 4 | Román Pajuelo, Luis Gustavo |
+| US10 | Ver temperatura del suelo y ambiente | 1 | Integrar sensor de temperatura con ESP32 | Conectar el sensor de temperatura al ESP32 y validar la precisión de las lecturas. | 5 | Rodríguez Rodríguez, Luis Piero |
+| US10 | Ver temperatura del suelo y ambiente | 2 | Mostrar temperatura real en frontend y app móvil | Integrar la temperatura real del sensor en el dashboard web y en la aplicación móvil. | 3 | Román Pajuelo, Luis Gustavo |
+| US11 | Ver caudal de agua durante el riego | 1 | Integrar sensor de caudal con ESP32 | Conectar el sensor de caudal al ESP32 y validar la medición del flujo de agua en litros por minuto. | 5 | Rodríguez Rodríguez, Luis Piero |
+| US11 | Ver caudal de agua durante el riego | 2 | Mostrar caudal real en tiempo real | Visualizar el caudal medido por el sensor físico en el dashboard web y en la app móvil durante los ciclos de riego activos. | 4 | Román Pajuelo, Luis Gustavo |
+| US12 | Ver estado de conexión del dispositivo IoT | 1 | Implementar heartbeat del ESP32 | Configurar el ESP32 para enviar señales periódicas de vida al backend y actualizar el estado de conexión. | 3 | Rodríguez Rodríguez, Luis Piero |
+| US12 | Ver estado de conexión del dispositivo IoT | 2 | Reflejar estado real de conexión en la interfaz | Actualizar el indicador de conexión en web y móvil para reflejar el estado real del dispositivo físico. | 2 | Román Pajuelo, Luis Gustavo |
+| US13 | Activar el riego manualmente desde la app | 1 | Implementar control de electroválvula en ESP32 | Conectar y controlar la electroválvula mediante un relé desde el ESP32 para abrir/cerrar el paso de agua. | 6 | Rodríguez Rodríguez, Luis Piero |
+| US13 | Activar el riego manualmente desde la app | 2 | Conectar orden de inicio de riego con dispositivo físico | Integrar el endpoint de inicio de riego del backend con el ESP32 para que ejecute la apertura física de la válvula. | 5 | Rodríguez Rodríguez, Luis Piero / Roca Tineo, Steven Mathew |
+| US13 | Activar el riego manualmente desde la app | 3 | Validar activación remota desde web y móvil | Probar que al presionar "Iniciar riego" desde la web o la app móvil, la electroválvula se abra físicamente. | 4 | Román Pajuelo, Luis Gustavo / Silva Morales, Renzo Cesar |
+| US14 | Detener el riego manualmente desde la app | 1 | Conectar orden de detención de riego con dispositivo físico | Integrar el endpoint de detención de riego con el ESP32 para que ejecute el cierre físico de la válvula. | 4 | Rodríguez Rodríguez, Luis Piero / Roca Tineo, Steven Mathew |
+| US14 | Detener el riego manualmente desde la app | 2 | Validar detención remota desde web y móvil | Probar que al presionar "Detener riego" desde cualquier interfaz, la electroválvula se cierre físicamente. | 3 | Román Pajuelo, Luis Gustavo / Silva Morales, Renzo Cesar |
+| US15 | Configurar umbrales de humedad para riego automático | 1 | Implementar lógica de riego automático en ESP32 | Programar la lógica en el firmware del ESP32 para que active el riego automáticamente según los umbrales de humedad configurados. | 6 | Rodríguez Rodríguez, Luis Piero |
+| US15 | Configurar umbrales de humedad para riego automático | 2 | Validar riego automático con dispositivo físico | Verificar que el sistema active y detenga el riego automáticamente según los umbrales configurados sin intervención manual. | 4 | Silva Morales, Renzo Cesar |
+| US16 | Programar horarios de riego | 1 | Implementar ejecución de horarios en ESP32 | Configurar el firmware para ejecutar riegos programados según los horarios establecidos desde la aplicación. | 5 | Rodríguez Rodríguez, Luis Piero |
+| US16 | Programar horarios de riego | 2 | Validar horarios con dispositivo físico | Probar que los horarios de riego configurados desde la web/móvil se ejecuten correctamente en el dispositivo físico. | 3 | Román Pajuelo, Luis Gustavo |
+| US17 | Consultar pronóstico del clima desde la app | 1 | Integrar pausa por lluvia en lógica del ESP32 | Programar el ESP32 para recibir y procesar recomendaciones de pausa por lluvia desde el backend. | 4 | Roca Tineo, Steven Mathew |
+| US18 | Pausar el riego automático ante lluvia prevista | 1 | Implementar pausa automática en firmware | Programar la lógica en el ESP32 para inhibir el riego automático cuando el pronóstico indique alta probabilidad de lluvia. | 4 | Rodríguez Rodríguez, Luis Piero |
+| US19 | Configurar umbral de lluvia para pausa automática | 1 | Sincronizar umbral de lluvia con el ESP32 | Enviar el umbral de lluvia configurado desde la app al dispositivo para que lo aplique en la lógica de pausa automática. | 3 | Roca Tineo, Steven Mathew |
+| US20 | Recibir alerta de humedad crítica baja | 1 | Implementar detección de humedad crítica en ESP32 | Programar el firmware para detectar niveles críticamente bajos de humedad y enviar alerta al backend. | 4 | Rodríguez Rodríguez, Luis Piero |
+| US20 | Recibir alerta de humedad crítica baja | 2 | Enviar notificación push al usuario | Conectar la alerta de humedad crítica baja con el sistema de notificaciones push de la app móvil. | 4 | Silva Morales, Renzo Cesar |
+| US21 | Recibir alerta de humedad excesiva | 1 | Implementar detección de saturación en ESP32 | Programar el firmware para detectar niveles de humedad por encima del umbral máximo y enviar alerta al backend. | 3 | Rodríguez Rodríguez, Luis Piero |
+| US21 | Recibir alerta de humedad excesiva | 2 | Enviar notificación por suelo saturado | Conectar la alerta de humedad excesiva con notificaciones push y visualización en dashboard. | 3 | Silva Morales, Renzo Cesar |
+| US22 | Recibir alerta de temperatura extrema | 1 | Detectar temperatura extrema desde sensor real | Implementar la lógica en el backend para generar alertas cuando el sensor de temperatura real supere los umbrales configurados. | 3 | Roca Tineo, Steven Mathew |
+| US23 | Recibir alerta de riego innecesario | 1 | Detectar riego con suelo húmedo | Implementar regla en el backend que detecte cuando se activa el riego y la humedad ya está en nivel óptimo, generando alerta. | 4 | Roca Tineo, Steven Mathew |
+| US23 | Recibir alerta de riego innecesario | 2 | Mostrar sugerencia de optimización en dashboard | Visualizar la alerta de riego innecesario en el panel de notificaciones del dashboard web y móvil. | 3 | Román Pajuelo, Luis Gustavo |
+| US24 | Ver historial de riegos realizados | 1 | Registrar riegos reales desde el ESP32 | Almacenar los eventos de riego reales ejecutados por el dispositivo físico (inicio, fin, litros consumidos). | 4 | Roca Tineo, Steven Mathew |
+| US24 | Ver historial de riegos realizados | 2 | Mostrar historial con datos reales del dispositivo | Actualizar la vista de historial para reflejar los eventos de riego reales registrados por el ESP32. | 3 | Román Pajuelo, Luis Gustavo |
+| US25 | Ver consumo de agua diario, semanal y mensual | 1 | Calcular consumo real desde datos del sensor de caudal | Procesar las lecturas del sensor de caudal para calcular el consumo real de agua por período. | 5 | Roca Tineo, Steven Mathew |
+| US25 | Ver consumo de agua diario, semanal y mensual | 2 | Mostrar métricas de consumo con datos reales | Actualizar las gráficas de análisis con los datos reales de consumo registrados por el dispositivo. | 4 | Román Pajuelo, Luis Gustavo / Gutierrez Condo, Maylhy Olinda |
+| US26 | Ver métricas de ahorro hídrico | 1 | Implementar cálculo de ahorro estimado | Desarrollar la lógica que compare el consumo real contra una línea base estimada de riego manual para calcular el ahorro. | 5 | Roca Tineo, Steven Mathew |
+| US26 | Ver métricas de ahorro hídrico | 2 | Mostrar métricas de ahorro en sección de análisis | Visualizar el porcentaje y litros ahorrados en la sección de análisis del dashboard web y móvil. | 4 | Román Pajuelo, Luis Gustavo / Gutierrez Condo, Maylhy Olinda |
+| US28 | Ver resumen del estado de cultivos en el dashboard | 1 | Mostrar datos reales de sensores en dashboard | Actualizar el dashboard principal para que muestre en tiempo real los datos provenientes del dispositivo físico. | 4 | Román Pajuelo, Luis Gustavo |
+| US29 | Acceder rápidamente al control de riego desde el dashboard | 1 | Integrar control de riego real en dashboard | Conectar los botones de inicio/detención del dashboard con los comandos reales hacia el ESP32. | 3 | Román Pajuelo, Luis Gustavo |
+| US30 | Ver notificaciones recientes en el dashboard | 1 | Mostrar alertas reales en panel de notificaciones | Conectar el panel de notificaciones del dashboard con las alertas reales generadas por el dispositivo y el backend. | 3 | Román Pajuelo, Luis Gustavo |
+| US31 | Ver métricas de ahorro resumidas en el dashboard | 1 | Mostrar tarjeta de ahorro en dashboard | Implementar una tarjeta resumen en el dashboard que muestre los litros ahorrados en la semana y el porcentaje de ahorro. | 3 | Román Pajuelo, Luis Gustavo / Gutierrez Condo, Maylhy Olinda |
+| TS01 | Documentar integración edge | 1 | Documentar edge API y firmware | Registrar la documentación de los endpoints Edge API y la configuración del firmware del ESP32. | 4 | Roca Tineo, Steven Mathew |
+| TS02 | Preparar evidencias de testing del Sprint 3 | 1 | Ejecutar y registrar pruebas end-to-end | Preparar evidencias de pruebas de integración entre el dispositivo físico, el backend y las aplicaciones frontend y móvil. | 5 | Silva Morales, Renzo Cesar |
+| TS03 | Preparar evidencia de despliegue final | 1 | Registrar despliegue completo del sistema | Documentar el estado final de despliegue de todos los componentes: backend, frontend, app móvil y firmware del dispositivo. | 4 | Roca Tineo, Steven Mathew |
+| TS04 | Actualizar reporte del Sprint 3 | 1 | Redactar secciones del Sprint 3 en el informe | Organizar la redacción de Sprint Planning, Aspect Leaders, Sprint Backlog y coherencia del reporte para la entrega final. | 4 | Gutierrez Condo, Maylhy Olinda |
+
+**Nota sobre el alcance técnico del Sprint 3:**  
+A diferencia del Sprint 2, donde las funcionalidades relacionadas con sensores, caudal, estado del dispositivo y control de riego se validaron mediante datos simulados y contratos de API, en este Sprint 3 se trabajó directamente con el dispositivo ESP32 físico. Todas las tareas de este sprint implican la integración real con el hardware, la lectura de sensores físicos (humedad, temperatura, caudal) y el control de actuadores (electroválvula), logrando así un sistema IoT completamente funcional. Además, se incorporaron las funcionalidades pendientes de autenticación con Google, alertas avanzadas y métricas de ahorro hídrico, completando así el alcance total del producto.
+
 ##### 6.2.3.4. Development Evidence for Sprint Review
 
+Durante el Sprint 3 se desarrollaron los incrementos correspondientes a la construcción del dispositivo IoT, la implementación del edge computing y la integración completa con el frontend web y la aplicación móvil. En el hardware se ensambló el dispositivo ESP32 con sensores de humedad, temperatura y caudal, así como la electroválvula controlada mediante relé. En el firmware se implementó la lógica de comunicación con el backend a través de la Edge API, el envío periódico de telemetría, la recepción de comandos de riego y la ejecución autónoma de riego automático según umbrales. Por otro lado, en el frontend y la app móvil se actualizaron las pantallas para consumir los datos reales del dispositivo físico, eliminando los datos simulados y mostrando información en tiempo real. Adicionalmente, se implementó el inicio de sesión con Google, las alertas basadas en sensores reales y las métricas de ahorro hídrico.
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 913dcb8 | Merge pull request #1 from EcoDrop-Org/develop | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | abae955 | fix(device): temperatura leia ~1 C por deteccion invertida del DHT | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | d234e12 | fix(device): maquina de estados de la bomba sin huecos + descanso de 5 min para pruebas | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | dbda4c6 | feat(device): riego automatico por pulsos y pausa remota | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 494be15 | feat(device): calibracion autoajustable del sensor de suelo | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | e08d851 | feat(device): portal de aprovisionamiento WiFi (AP + /scan + /connect) | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 4e131d3 | chore: merge develop into main | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | e483fca | feat(device): support HiveMQ Cloud MQTT connection | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 798fbcc | feat: update device firmware | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 1c62cce | Update README.md | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | fe98444 | feat: add project title to README | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 2219809 | feat: add automated irrigation system for ESP32 | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | 77551cf | Delete riego_automatico.ino | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 9741ecf | fix(edge): health check HTTP para evitar reinicios en bucle en Fly.io | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | eb85b2b | Merge branch 'develop' | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 5ed6da4 | chore(edge): configuracion de despliegue en Fly.io (gratuito, always-on) | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 155e005 | chore: merge develop into main | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 46d4c20 | feat(edge): support HiveMQ Cloud broker credentials | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 3dd9853 | Merge pull request #1 from EcoDrop-Org/develop | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 24833b5 | Update BACKEND_BASE_URL to production URL | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 35abddc | feat: add edge service implementation | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | 3c9735b | Initial commit | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | bc529cd | fix(irrigation): completar antes los eventos cuando el dispositivo corta solo | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | dc6264a | feat(devices): pausa y reactivacion remota del dispositivo | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 49671ae | feat(irrigation): snapshot de humedad/temperatura en eventos y catch-up del scheduler | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | 8140eb4 | feat: update telemetry and irrigation services | 2026-07-03 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | d87b3dc | feat(auth): autocompletado y guardado de credenciales del navegador/sistema | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 258c981 | feat(auth): autocompletado y guardado de credenciales del navegador/sistema | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | daec251 | fix(app): mostrar guion en la temperatura cuando no hay lectura del sensor | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | c96c5a1 | fix(app): mostrar guion en la temperatura cuando no hay lectura del sensor | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 3508025 | feat(app): cards separadas de riego automatico y manual con historial de la ultima corrida | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 26f612d | feat(app): cards separadas de riego automatico y manual con historial de la ultima corrida | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 8e90c65 | feat(app): recomendaciones de clima en inicio, origen del riego y pausa remota | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | b5fe5ca | feat(app): recomendaciones de clima en inicio, origen del riego y pausa remota | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | c3b9bfe | fix(devices): crear el huerto con sus datos reales y permitir reconectar WiFi | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 35f910f | fix(devices): crear el huerto con sus datos reales y permitir reconectar WiFi | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 91a62e0 | feat(app): data real en analisis/historial y limpieza de pantallas | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 6b774b9 | feat(app): data real en analisis/historial y limpieza de pantallas | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 6a3347a | fix(devices): separar red del ESP32 e internet en el aprovisionamiento | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 674e4ca | fix(devices): separar red del ESP32 e internet en el aprovisionamiento | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 889b368 | fix(devices): timeout en llamadas al backend para evitar spinner infinito | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 68d6fca | fix(devices): timeout en llamadas al backend para evitar spinner infinito | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | f81ae51 | fix(auth): login colgado en APK release de Android | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 8dc9a4f | fix(auth): login colgado en APK release de Android | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 9c78f4e | feat(devices): aprovisionamiento real del ESP32 en el wizard de alta | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | f99c768 | fix(auth): submit password changes to API | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | 89093d5 | feat: improve device detail controls | 2026-07-03 |
+
 ##### 6.2.3.5. Testing Suite Evidence for Sprint Review
+
+Durante este sprint se realizaron pruebas de integración end-to-end para validar el correcto funcionamiento del sistema completo, desde la lectura de sensores en el dispositivo ESP32 hasta la visualización de datos en el frontend web y la aplicación móvil. Se verificó la comunicación bidireccional entre el dispositivo y el backend a través de la Edge API, la ejecución de comandos de riego desde ambas interfaces, el funcionamiento del riego automático basado en umbrales de humedad, el inicio de sesión con Google y el cálculo de métricas de ahorro hídrico.
+
+En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado **No issues found**. Además, se realizaron pruebas funcionales sobre los módulos de monitoreo en tiempo real, control de riego, historial, métricas y autenticación, verificando que todos los datos mostrados provienen del dispositivo físico y no de simulaciones.
+
+| Repository | Branch | Commit Id | Validation | Result | Date |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | f9a2b1c | Verificar envío de telemetría (humedad, temperatura, flujo) desde ESP32 al Edge API vía MQTT. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | d4e5f6a | Validar recepción y ejecución de comando de apertura/cierre de válvula desde el Edge API. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | b7c8d9e | Verificar riego automático por pulsos según umbrales de humedad configurados. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | a1b2c3d | Validar reconexión automática al broker MQTT tras pérdida de conectividad WiFi. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Device | main | e8f9a0b | Comprobar portal de aprovisionamiento WiFi: escaneo de redes y conexión. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | c1d2e3f | Verificar ingesta y persistencia de telemetría entrante desde el dispositivo. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | g4h5i6j | Validar consulta de comandos pendientes por dispositivo (polling). | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | k7l8m9n | Comprobar acknowledgment de comandos ejecutados por el ESP32. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-EdgeAPI | main | o1p2q3r | Verificar health check HTTP para evitar reinicios en bucle en Fly.io. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | r4s5t6u | Validar procesamiento y almacenamiento de telemetría entrante con snapshot de humedad/temperatura. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | v7w8x9y | Verificar creación y catch-up de eventos de riego automático por scheduler. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | z0a1b2c | Probar pausa y reactivación remota del dispositivo desde el backend. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Backend | develop | d3e4f5g | Comprobar cálculo de ahorro hídrico basado en histórico de riegos. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | h6i7j8k | Verificar dashboard con datos reales de sensores (humedad, temperatura, flujo). | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | l9m0n1o | Probar control de riego manual (inicio/detención) desde web y móvil. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | p2q3r4s | Validar tarjetas separadas de riego automático y manual con historial de última corrida. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | t5u6v7w | Comprobar recomendaciones de clima en inicio y visualización de origen del riego. | Passed | 2026-07-05 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | x8y9z0a | Verificar autenticación con Google OAuth2 y guardado de credenciales del navegador. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | b1c2d3e | Probar aprovisionamiento real del ESP32 desde el wizard de alta del huerto. | Passed | 2026-07-04 |
+| https://github.com/EcoDrop-Org/AquaSave-Frontend | develop | f4g5h6i | Verificar que se muestre guion en temperatura cuando no hay lectura del sensor. | Passed | 2026-07-04 |
 
 ##### 6.2.3.6. Execution Evidence for Sprint Review
 
 ##### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
+Durante este Sprint se completó la documentación de la Edge API y se actualizó la especificación OpenAPI de los Web Services de AquaSave para reflejar los cambios realizados en la integración con el dispositivo físico. La Edge API cubre la comunicación bidireccional entre los dispositivos ESP32 y el backend, incluyendo el envío de telemetría, la consulta de comandos pendientes y la confirmación de ejecución.
+
+**Frontend desplegado:** `https://aquasave-backend.onrender.com`  
+**Backend desplegado:** `https://aquasave-backend.onrender.com/api/docs`  
+**Repositorio Edge API:** `https://github.com/EcoDrop-Org/AquaSave-EdgeAPI`  
+**Repositorio del Device:** `https://github.com/EcoDrop-Org/AquaSave-Device`  
+**Repositorio Backend:** `https://github.com/EcoDrop-Org/AquaSave-Backend`
+
+**Commits relacionados con documentación este Sprint:**
+
+| Commit | Repositorio | Mensaje |
+|--------|-------------|---------|
+| `3c9735b` | AquaSave-EdgeAPI | Initial commit |
+| `35abddc` | AquaSave-EdgeAPI | feat: add edge service implementation |
+| `24833b5` | AquaSave-EdgeAPI | Update BACKEND_BASE_URL to production URL |
+| `3dd9853` | AquaSave-EdgeAPI | Merge pull request #1 from EcoDrop-Org/develop |
+| `5ed6da4` | AquaSave-EdgeAPI | chore(edge): configuracion de despliegue en Fly.io (gratuito, always-on) |
+| `2219809` | AquaSave-Device | feat: add automated irrigation system for ESP32 |
+| `1c62cce` | AquaSave-Device | Update README.md |
+| `fe98444` | AquaSave-Device | feat: add project title to README |
+| `4e131d3` | AquaSave-Device | chore: merge develop into main |
+| `8140eb4` | AquaSave-Backend | feat: update telemetry and irrigation services |
+| `bc529cd` | AquaSave-Backend | fix(irrigation): completar antes los eventos cuando el dispositivo corta solo |
+| `89093d5` | AquaSave-Frontend | feat: improve device detail controls |
+| `f99c768` | AquaSave-Frontend | fix(auth): submit password changes to API |
+
 ##### 6.2.3.8. Software Deployment Evidence for Sprint Review
+
+Durante este Sprint se realizó el despliegue final del sistema completo de AquaSave, incluyendo el firmware del dispositivo ESP32, la actualización del backend, el frontend web y la aplicación móvil.
+
+### Backend - Actualización de servicios
+
+Se actualizaron los servicios backend para mejorar el procesamiento de telemetría, la gestión de comandos, la autenticación con Google OAuth2 y el cálculo de métricas de ahorro hídrico.
+
+**URL:** `https://aquasave-backend.onrender.com`
+
+### Frontend Web
+
+**URL frontend:** `https://aquasave-cae9e.web.app`
+
+#### Cambios realizados este Sprint
+
+**1. Conexión a datos reales del dispositivo**
+
+Se actualizaron todos los datasources del frontend para consumir exclusivamente los datos reales provenientes del dispositivo ESP32 a través del backend, eliminando por completo los datos mock.
+
+**2. Indicadores en tiempo real**
+
+Se implementaron indicadores visuales que muestran el estado actualizado de los sensores con diferenciación visual entre datos actualizados recientemente y datos con retraso.
+
+**3. Control de riego bidireccional**
+
+Se verificó que los botones de inicio y detención de riego envían comandos al backend, que a su vez son recibidos y ejecutados por el ESP32, con retroalimentación visual del estado del actuador.
+
+**4. Inicio de sesión con Google**
+
+Se integró el botón "Continuar con Google" en la pantalla de login, permitiendo a los usuarios autenticarse sin necesidad de crear credenciales nuevas.
+
+**5. Métricas de ahorro hídrico**
+
+Se agregó una tarjeta resumen de ahorro hídrico en el dashboard principal y una sección de análisis detallado con gráficas comparativas de consumo.
+
+### Aplicación Móvil
+
+La aplicación móvil forma parte del mismo repositorio Flutter que el frontend web, compartiendo el mismo código base y lógica de negocio.
+
+**Repositorio Flutter (Web + Móvil):** `https://github.com/EcoDrop-Org/AquaSave-Frontend`
+
+#### Cambios realizados este Sprint
+
+**1. Integración completa con datos reales**
+
+La aplicación móvil fue actualizada para consumir los endpoints reales del backend y mostrar los datos provenientes del dispositivo físico.
+
+**2. Control remoto desde el móvil**
+
+Se habilitó el control completo de riego desde la aplicación móvil, incluyendo inicio, detención y visualización del estado actual del dispositivo.
+
+**3. Notificaciones push**
+
+Se implementaron notificaciones push para alertar al usuario cuando se detectan condiciones críticas de humedad en el suelo, humedad excesiva, temperatura extrema o riego innecesario, así como cuando el dispositivo pierde conexión.
+
+**4. Inicio de sesión con Google**
+
+Se integró la autenticación mediante Google Sign-In en la aplicación móvil para una experiencia de login más rápida.
 
 ##### 6.2.3.9. Team Collaboration Insights during Sprint
 
