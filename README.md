@@ -41,7 +41,7 @@
 | AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en AquaSave. |
 | TB1     | 13/05/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la segunda entrega del informe de nuestro proyecto, hemos realizado la landing page y el frontend de nuestra aplicación AquaSave |
 | AV2     | 17/06/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la tercera entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend e implementación y despliegue del backend. |
-| TB22     | 06/07/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la cuarta entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend,backend y móvil, demás del desarrollo del edge. |
+| TB2     | 06/07/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Silva Morales, Renzo Cesar | En la cuarta entrega del informe de nuestro proyecto, hemos realizado mejoras en el frontend,backend y móvil, demás del desarrollo del edge. |
 
 # Project Report Collaboration Insights
 
@@ -80,6 +80,14 @@ AV2:
 [![image.png](https://i.postimg.cc/Qxx55t3h/image.png)](https://postimg.cc/grQnbGjT)
 
 [![image.png](https://i.postimg.cc/FR4kKFpQ/image.png)](https://postimg.cc/cKFL9SPD)
+
+TB2:
+
+[![image.png](https://i.postimg.cc/HWy2cGpx/image.png)](https://postimg.cc/JtRJv2HV)
+
+[![image.png](https://i.postimg.cc/zvZTSBJS/image.png)](https://postimg.cc/vgh1GGxc)
+
+[![image.png](https://i.postimg.cc/BnYD7NSZ/image.png)](https://postimg.cc/k2SBBQRL)
 
 # Contenido
 
@@ -3227,6 +3235,20 @@ En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado 
 
 ##### 6.2.2.6. Execution Evidence for Sprint Review
 
+A continuación, se muestra la evidencia de ejecución del Sprint 2, correspondiente a la documentación OpenAPI de los Web Services de AquaSave desplegada en Swagger UI:
+
+[![image.png](https://i.postimg.cc/yY6CvNgy/image.png)](https://postimg.cc/mhnnrBSP)
+
+*Imagen 1: Swagger UI — vista general de los endpoints del API.*
+
+[![image.png](https://i.postimg.cc/GmHwnSjR/image.png)](https://postimg.cc/Bj9wxpy7)
+
+*Imagen 2: Endpoints del bounded context Device Management.*
+
+[![image.png](https://i.postimg.cc/R0HkN687/image.png)](https://postimg.cc/2qCct6Cy)
+
+*Imagen 3: Endpoints del bounded context Irrigation Intelligence.*
+
 ##### 6.2.2.7. Services Documentation Evidence for Sprint Review
 Durante este Sprint se completó la documentación OpenAPI 3.0.3 de todos los Web Services de AquaSave. La API cubre cuatro bounded contexts: **Identity Access Management**, **Device Management**, **Irrigation Intelligence** y **Edge API** (comunicación con dispositivos ESP32). El contrato OpenAPI se sirve desde el propio servidor en `/api/docs` (Swagger UI interactivo) y `/api/openapi.json` (spec JSON).
 
@@ -3287,7 +3309,7 @@ Durante este Sprint se realizó el despliegue del **Web Service (backend)** en R
 ### Backend — Despliegue en Render
 
 **Plataforma:** [Render](https://render.com)  
-**URL producción:** `https://aquasave-backend.onrender.com`
+**URL:** `https://aquasave-backend.onrender.com/api/docs`
 
 #### Pasos realizados
 
@@ -3348,7 +3370,7 @@ Tras el push del commit `b43654b`, Render ejecutó el pipeline automáticamente.
 
 **Repositorio frontend:** `https://github.com/matthewsrt29/aquasave` (rama `main`)  
 **Plataforma de hosting:** Firebase Hosting  
-**URL producción frontend:** `https://aquasave-cae9e.web.app`
+**URL frontend:** `https://aquasave-cae9e.web.app`
 
 <p align="center">
  <img src="image/mobile.png" width="80%">
@@ -3597,12 +3619,25 @@ En el frontend Flutter se ejecutó `flutter analyze`, obteniendo como resultado 
 
 ##### 6.2.3.6. Execution Evidence for Sprint Review
 
+A continuación, se muestra la evidencia de ejecución del Sprint 3, correspondiente a la configuración y operación del broker MQTT HiveMQ Cloud para la comunicación con los dispositivos IoT:
+
+[![image.png](https://i.postimg.cc/25KqGJ8g/image.png)](https://postimg.cc/DW1yyxGc)
+
+*Imagen 1: Clúster HiveMQ "Free #1" en estado Running, organización EcoDrop, plan Serverless, TLS 8883.*
+
+[![image.png](https://i.postimg.cc/4dc35x03/image.png)](https://postimg.cc/9RWVXCC3)
+
+*Imagen 2: Log de mensajes MQTT — 1010 mensajes recibidos en el topic de telemetría con payload JSON de lecturas de sensores.*
+
+[![image.png](https://i.postimg.cc/Xq0YD0MF/image.png)](https://postimg.cc/N9pt5Sjf)
+
+*Imagen 3: Web Client conectado como `aquasave-edge`, suscrito a `aquasave/devices/+/telemetry` con QoS 0.*
+
 ##### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
 Durante este Sprint se completó la documentación de la Edge API y se actualizó la especificación OpenAPI de los Web Services de AquaSave para reflejar los cambios realizados en la integración con el dispositivo físico. La Edge API cubre la comunicación bidireccional entre los dispositivos ESP32 y el backend, incluyendo el envío de telemetría, la consulta de comandos pendientes y la confirmación de ejecución.
 
-**Frontend desplegado:** `https://aquasave-backend.onrender.com`  
-**Backend desplegado:** `https://aquasave-backend.onrender.com/api/docs`  
+**Backend desplegado (Swagger):** `https://aquasave-backend.onrender.com/api/docs`  
 **Repositorio Edge API:** `https://github.com/EcoDrop-Org/AquaSave-EdgeAPI`  
 **Repositorio del Device:** `https://github.com/EcoDrop-Org/AquaSave-Device`  
 **Repositorio Backend:** `https://github.com/EcoDrop-Org/AquaSave-Backend`
@@ -3625,19 +3660,49 @@ Durante este Sprint se completó la documentación de la Edge API y se actualiz�
 | `89093d5` | AquaSave-Frontend | feat: improve device detail controls |
 | `f99c768` | AquaSave-Frontend | fix(auth): submit password changes to API |
 
+### Broker MQTT — HiveMQ Cloud
+
+Se configuró **HiveMQ Cloud** como broker MQTT para la comunicación bidireccional entre los dispositivos ESP32 y la Edge API. El clúster gratuito se creó el 2026-07-04 bajo la organización **EcoDrop**, con conexión TLS en el puerto **8883** y la URL `109a1a97e0814454afa8d22b818e2da5.s1.eu.hivemq.cloud`.
+
+La Edge API se conecta al broker mediante las credenciales del dispositivo `aquasave-edge` y se suscribe al topic wildcard `aquasave/devices/+/telemetry` con QoS 0 para recibir la telemetría de todos los dispositivos. El ESP32 publica en topics individuales `aquasave/devices/{deviceId}/telemetry` con payload JSON que incluye `soilMoisturePct`, `temperatureC`, `humidityPct`, `flowRateLMin`, `pumpOn`, entre otros.
+
+A continuación, se muestra la evidencia de la configuración del broker:
+
+[![image.png](https://i.postimg.cc/25KqGJ8g/image.png)](https://postimg.cc/DW1yyxGc)
+
+*Imagen 1: Clúster HiveMQ "Free #1" en estado Running, organización EcoDrop, plan Serverless, TLS 8883.*
+
+[![image.png](https://i.postimg.cc/4dc35x03/image.png)](https://postimg.cc/9RWVXCC3)
+
+*Imagen 2: Log de mensajes MQTT — 1010 mensajes recibidos en el topic de telemetría con payload JSON de lecturas de sensores.*
+
+[![image.png](https://i.postimg.cc/Xq0YD0MF/image.png)](https://postimg.cc/N9pt5Sjf)
+
+*Imagen 3: Web Client conectado como `aquasave-edge`, suscrito a `aquasave/devices/+/telemetry` con QoS 0.*
+
+---
+
 ##### 6.2.3.8. Software Deployment Evidence for Sprint Review
 
-Durante este Sprint se realizó el despliegue final del sistema completo de AquaSave, incluyendo el firmware del dispositivo ESP32, la actualización del backend, el frontend web y la aplicación móvil.
+Durante este Sprint se realizó el despliegue final del sistema completo de AquaSave, incluyendo la arquitectura de comunicación MQTT con HiveMQ Cloud, el despliegue de la Edge API en Fly.io, la actualización del backend en Render, y el frontend web y aplicación móvil en Firebase.
 
-### Backend - Actualización de servicios
+### Edge API — Despliegue en Fly.io
 
-Se actualizaron los servicios backend para mejorar el procesamiento de telemetría, la gestión de comandos y el cálculo de métricas de ahorro hídrico.
+**Repositorio:** `https://github.com/EcoDrop-Org/AquaSave-EdgeAPI`
 
-**URL:** `https://aquasave-backend.onrender.com`
+La Edge API se desplegó como un servicio independiente en **Fly.io** (plan gratuito, always-on), encargado de la comunicación entre los dispositivos ESP32 y el backend. Se conecta al broker **HiveMQ Cloud** suscribiéndose al topic `aquasave/devices/+/telemetry` para recibir la telemetría entrante y exponer endpoints de consulta de comandos pendientes y confirmación de ejecución para los dispositivos.
 
-### Frontend Web
+### Backend — Actualización en Render
 
-**URL frontend:** `https://aquasave-cae9e.web.app`
+**Repositorio:** `https://github.com/EcoDrop-Org/AquaSave-Backend`  
+**Swagger UI:** `https://aquasave-backend.onrender.com/api/docs`
+
+Se actualizaron los servicios backend para mejorar el procesamiento de telemetría entrante desde la Edge API, la gestión de eventos de riego automático y manual, la pausa y reactivación remota de dispositivos, y el cálculo de métricas de ahorro hídrico.
+
+### Frontend Web — Firebase Hosting
+
+**Repositorio Flutter (Web + Móvil):** `https://github.com/EcoDrop-Org/AquaSave-Frontend`  
+**URL frontend:** `https://aquasave-cae9e.web.app/`
 
 #### Cambios realizados este Sprint
 
@@ -3657,7 +3722,7 @@ Se verificó que los botones de inicio y detención de riego envían comandos al
 
 Se agregó una tarjeta resumen de ahorro hídrico en el dashboard principal y una sección de análisis detallado con gráficas comparativas de consumo.
 
-### Aplicación Móvil
+### Aplicación Móvil — Firebase App Distribution
 
 La aplicación móvil forma parte del mismo repositorio Flutter que el frontend web, compartiendo el mismo código base y lógica de negocio.
 
@@ -3678,6 +3743,12 @@ Se habilitó el control completo de riego desde la aplicación móvil, incluyend
 Se implementaron notificaciones push para alertar al usuario cuando se detectan condiciones críticas de humedad en el suelo, humedad excesiva, temperatura extrema o riego innecesario, así como cuando el dispositivo pierde conexión.
 
 ##### 6.2.3.9. Team Collaboration Insights during Sprint
+
+En esta sección se presenta la evidencia de la colaboración realizada durante el sprint.
+
+[![image.png](https://i.postimg.cc/YCvbbcpK/image.png)](https://postimg.cc/Mn87pFMd)
+
+[![image.png](https://i.postimg.cc/02BC6t77/image.png)](https://postimg.cc/SJc93fTK)
 
 ### 6.3. Validation Interviews
 
@@ -3931,11 +4002,11 @@ Link del video: [https://goo.su/V19mNf](https://goo.su/V19mNf)
 
 2. Los usuarios objetivo muestran una necesidad clara de tecnificación, pero con fuertes restricciones de simplicidad, accesibilidad y usabilidad. Tanto horticultores urbanos como micro-agricultores periurbanos comparten patrones: toman decisiones basadas en experiencia, carecen de datos en tiempo real y muestran alta apertura a soluciones tecnológicas. Sin embargo, también presentan barreras como baja adopción tecnológica, necesidad de interfaces intuitivas y preferencia por soluciones fáciles de instalar, lo que define directamente los requisitos clave del producto.
 
-3. AquaSave se posiciona como una solución diferenciada al integrar hardware IoT accesible con software inteligente enfocado en datos reales y contexto local. A diferencia de la competencia, la propuesta combina sensores físicos (humedad, caudal, temperatura) con datos climáticos y plataformas digitales, ofreciendo una solución integral, precisa y orientada a pequeños usuarios. Este enfoque no solo responde al problema identificado, sino que también genera una ventaja competitiva clara basada en accesibilidad, automatización y toma de decisiones basada en datos.
+3. AquaSave se posiciona como una solución diferenciada al integrar hardware IoT accesible con software inteligente en producción. A diferencia de la competencia, la solución combina sensores físicos (humedad, caudal, temperatura) comunicados mediante MQTT a través de HiveMQ Cloud, una Edge API desplegada en Fly.io y un backend en Render con documentación OpenAPI interactiva. Esta arquitectura integral permite automatización de riego, control bidireccional y toma de decisiones basada en datos reales del dispositivo.
    
-4. El desarrollo del frontend y la Landing Page permitió validar tempranamente la experiencia de usuario antes de integrar backend e IoT real. El proyecto ya cuenta con una representación funcional de los flujos principales: presentación del producto, autenticación a nivel prototipo, gestión de dispositivos, dashboard, configuración de riego, recomendaciones climáticas e historial. Esto facilita detectar mejoras de usabilidad, ajustar la arquitectura visual y reducir riesgos antes de avanzar hacia la conexión con sensores, servicios remotos y automatización física.
+4. El frontend web y la aplicación móvil consumen datos reales del dispositivo IoT a través del backend, eliminando por completo los datos mock. El dashboard muestra indicadores en tiempo real de humedad, temperatura y flujo, con control de riego bidireccional (inicio/detención desde web y móvil), notificaciones push ante condiciones críticas y métricas de ahorro hídrico. La landing page y el flujo de registro completan la experiencia de extremo a extremo.
 
-5. La propuesta requiere una evolución progresiva donde la prioridad siguiente debe ser convertir el prototipo visual en un sistema conectado y medible. Si bien el avance actual demuestra la viabilidad conceptual y de interacción, el valor completo de AquaSave dependerá de integrar autenticación real, persistencia de datos, comunicación con ESP32, lectura de sensores, ejecución de riego y notificaciones. Esta transición será clave para pasar de una solución demostrativa a una herramienta operativa capaz de generar ahorro hídrico verificable para los usuarios objetivo.
+5. El sistema conectado de AquaSave ya se encuentra operativo, con comunicación bidireccional funcional entre el dispositivo ESP32, la Edge API y el backend. Las mejoras futuras incluyen expansión a múltiples dispositivos por usuario, integración de sensores adicionales (pH, lluvia), algoritmos predictivos de riego basados en machine learning y un plan de suscripción para soportar la infraestructura cloud. Esta evolución permitirá escalar la solución y generar ahorro hídrico verificable para una base creciente de usuarios.
 
 ### Video About-the-Team
 
