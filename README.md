@@ -2498,6 +2498,12 @@ Es importante destacar que durante la fase de diseño y validación técnica se 
 
 El diseño representa una primera versión de prototipado enfocada en validar la lógica de funcionamiento del sistema de riego inteligente. La simulación permite comprobar que el dispositivo puede leer variables del entorno y activar un actuador cuando las condiciones del cultivo lo requieren. Para futuras iteraciones, se plantea reemplazar el Arduino Uno por un ESP32, incorporar una bomba de agua real, mejorar el circuito de control del actuador y conectar el dispositivo con la API de AquaSave para el envío de datos hacia la aplicación web.
 
+Para el diseño final se trabajó sobre un ESP32, se usó un sensor DHT22 para la temperatura y humedad del ambiente, un sensor de humedad de suelo, un relay, una bomba de agua y una manguera conectada a la bomba que es lo que riega la planta.
+
+<p align="center">
+  <img src="image/prototipo.jpg">
+</p>
+
 ---
 
 ## Capítulo VI: Product Implementation, Validation & Deployment
