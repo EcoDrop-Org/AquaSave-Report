@@ -742,7 +742,7 @@ Werner es un agricultor de 48 años que trabaja en una parcela de aproximadament
 
 En base en las entrevistas recopiladas para cada segmento, se llevó a cabo un análisis, el cual destaca los principales hallazgos y las conclusiones derivadas.
 
-***Segmento objetivo #1: Usuarios principiantes***
+***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas***
 
 **Hallazgos:**
 
@@ -773,7 +773,7 @@ Los horticultores urbanos gestionan el riego de sus plantas de manera empírica,
 Este segmento muestra una alta apertura hacia soluciones tecnológicas, siempre que estas sean simples, intuitivas y no requieran conocimientos técnicos avanzados. El principal valor que buscan es el control y la tranquilidad de saber que están regando correctamente. Por ello, una solución como AquaSave debe enfocarse en ofrecer monitoreo en tiempo real, alertas claras y automatización del riego, junto con una experiencia de instalación guiada y accesible que reduzca la fricción inicial.
 
 
-***Segmento objetivo #2: Usuarios expertos***
+***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas***
 
 **Hallazgos:**
 
@@ -807,14 +807,14 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 
 #### 2.3.1. User Personas
 
-***Segmento objetivo #1: Usuarios principiantes***
+***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 
 <p align="center">
   <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
 </p>
 
 
-***Segmento objetivo #2: Usuarios expertos:***
+***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas:***
 
 <p align="center">
   <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
@@ -822,146 +822,118 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 
 #### 2.3.2. User Task Matrix
 
-| TASK MATRIX |   | Lucía Ramírez |   | Carlos Mendoza |   |
-| ----- | ----- | :---- | :---- | :---- | :---- |
-|   |   | **frecuencia** | **importancia** | **frecuencia** | **importancia** |
-| **Monitorear la humedad del suelo o sustrato** |   | **A veces** | **Alta** | **Siempre** | **Alta** |
-| **Ejecutar el riego manual de plantas/cultivos** |   | **A veces** | **Alta** | **Siempre** | **Alta** |
-| **Calcular la cantidad de agua necesaria** |   |   | **Alta** | **A veces** | **Alta** |
-| **Revisar el pronóstico del clima o temperatura** |   | **A veces** | **Media** | **Siempre** | **Alta** |
-| **Supervisar el consumo y costo de agua** |   | **A veces** | **Media** | **Siempre** | **Alta** |
-| **Configurar horarios o rutinas de riego** |   | **Siempre** | **Alta** |   | **Baja** |
-| **Ajustar válvulas y mangueras de distribución** |   |   | **Baja** | **Siempre** | **Alta** |
+Las tareas describen actividades de cuidado que existen independientemente de AquaSave. Las frecuencias e importancias son hipótesis iniciales: alta implica relación directa con el objetivo; media representa apoyo o una tarea ocasional.
 
-#### 2.3.3. User Journey Mapping
+| Tarea | Principiante: frecuencia propuesta | Principiante: importancia | Experto: frecuencia propuesta | Experto: importancia |
+| :--- | :--- | :--- | :--- | :--- |
+| Observar la planta y el sustrato | En cada evaluación | Alta | En cada evaluación | Alta |
+| Decidir si corresponde regar | En cada evaluación | Alta | En cada evaluación | Alta |
+| Determinar cuánto regar | En cada riego | Alta | En cada riego | Alta |
+| Buscar orientación | Frecuente | Alta | Ocasional | Media |
+| Ajustar rutinas ante cambios | Ocasional | Alta | Recurrente | Alta |
+| Registrar acciones y resultados | Ocasional | Media | Recurrente | Alta |
+| Comparar periodos de cuidado | Ocasional | Media | Recurrente | Alta |
+| Organizar el cuidado durante ausencias | Según necesidad | Alta | Según necesidad | Alta |
+| Revisar el suministro disponible | Antes del riego | Alta | Antes del riego | Alta |
 
-***Segmento objetivo #1: Horticultores Urbanos***
-<p align="center">
-  <img src="image/User_Journey_Mapping_S1.png" alt="UJM1" width="1000">
-</p>
+Ambos segmentos necesitan decidir cuándo y cuánto regar. El principiante requiere mayor orientación para interpretar las condiciones, mientras que el experto busca comparar registros y ajustar sus rutinas.
 
-***Segmento 2: Micro-Agricultores Periurbanos:***
-<p align="center">
-  <img src="image/User_Journey_Mapping_S2.png" alt="UJSM2" width="1000">
-</p>
+#### 2.3.3. Empathy Mapping
 
-#### 2.3.4. Empathy Mapping
-
-***Segmento objetivo #1: Horticultores Urbanos***
+***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 <p align="center">
   <img src="image/Empathy_Mapping_S1.png" alt="EM1" width="1000">
 </p>
 
-***Segmento 2: Micro-Agricultores Periurbanos:***
+***Segmento 2: Usuarios expertos en el cuidado de plantas:***
 <p align="center">
   <img src="image/Empathy_Mapping_S2.png" alt="EM2" width="1000">
 </p>
 
-### 2.4. Big Picture EventStorming
+#### 2.3.4. As-Is Scenario Mapping
 
-Es un espacio de trabajo colaborativo en el que un grupo de personas (como desarrolladores, especialistas del negocio, gerentes de producto, entre otros) analiza y comprende rápidamente un dominio de negocio complejo.
+Los As-Is Scenario Maps describirán la experiencia actual de los usuarios al evaluar sus plantas, decidir el riego y verificar los resultados. Cada escenario organizará las acciones, pensamientos y emociones del segmento para reconocer sus dificultades de cuidado.
 
-**Sus principales propósitos son:**
+**Usuarios principiantes en el cuidado de plantas**
 
-- **Unificar criterios:** Garantizar que todo el equipo comparta la misma visión del proceso de negocio.
+<div align="center">
+  <img src="image/as-is-principiante.png" alt="As-Is Scenario Mapping del usuario principiante" width="600">
+</div>
 
-- **Detectar inconvenientes:** Identificar cuellos de botella, incertidumbres y complejidades que no resultan evidentes a primera vista.
+**Usuarios expertos en el cuidado de plantas**
 
-- **Establecer un lenguaje compartido:** Comenzar a desarrollar un “lenguaje ubicuo”, es decir, un conjunto de términos comunes entre los expertos del negocio y el equipo técnico.
+<div align="center">
+  <img src="image/as-is-experto.png" alt="As-Is Scenario Mapping del usuario experto" width="600">
+</div>
 
-***1. Preparing the room***
+### 2.4. Ubiquitous Language
 
-Para asegurar comodidad, eficiencia y una colaboración en tiempo real, optamos por usar Discord como espacio virtual para nuestra primera reunión. En este entorno, nos encontramos con la finalidad de unificar la comprensión del negocio, detectar dudas relevantes, identificar problemas frecuentes y promover un clima de confianza y comunicación abierta centrado en el cuidado de plantas en el hogar.
-
-<a href="https://ibb.co/k2s8MSV8"><img src="https://i.ibb.co/Jjw7CsW7/Gemini-Generated-Image-t4050vt4050vt405.png" alt="Gemini-Generated-Image-t4050vt4050vt405" border="0"></a>
-
-***2. Energizing the audience***
-
-Para captar la atención y mejorar el ambiente, comenzamos la sesión con una breve rutina de estiramientos dirigida para desarrolladores, seguida de un reto lógico rápido sobre optimización de recursos. El propósito fue elevar los niveles de dopamina, aliviar la tensión de las horas frente al monitor y fomentar la conexión entre los miembros del equipo antes de abordar la complejidad de los dominios, los comandos y los eventos de nuestro sistema IoT.
-
-***3. Briefing and presenting the plan***
-
-Posteriormente, expusimos nuestra visión: crear una solución integral de riego inteligente que combine la robustez del ESP32 con la versatilidad de Flutter. El objetivo es permitir una gestión autónoma y eficiente del agua tanto en jardines residenciales como en cultivos de mediana escala, utilizando el cruce de sensores locales y pronósticos climáticos.
-
-Detallamos también el modelo de negocio, el cual se apoya en la venta del hardware especializado y un modelo SaaS (Software as a Service) que ofrece analítica avanzada de ahorro hídrico y reportes de sostenibilidad para usuarios pro. Finalmente, revisamos el roadmap del proyecto, definiendo los hitos clave para el API REST y la aplicacion móvil.
-
-***4. Generating Domain Events***
-
-Solicitamos a los participantes que anoten en post-its amarillos los “eventos” que tienen lugar en el proceso. Un evento es un hecho significativo para el negocio que ya ocurrió.
-
-[![Aqua-Save-Big-Picture-Event-Storming.jpg](https://i.postimg.cc/y6JjGxJ9/Aqua-Save-Big-Picture-Event-Storming.jpg)](https://postimg.cc/XXb9GVk7)
-
-***5. Sorting Domain Events***
-
-Solicitamos al equipo que organice de manera cronológica los eventos escritos en post-its amarillos sobre una pared, ubicándolos de izquierda a derecha para formar una línea de tiempo del proceso de autocuidado de plantas.
-
-Este ejercicio va más allá de simplemente ordenar elementos: representa el momento más enriquecedor de la sesión. Al discutir si la secuencia planteada es la adecuada, el equipo empieza a evidenciar diferencias en sus perspectivas, supuestos implícitos y posibles malentendidos sobre el funcionamiento real del proceso. Lejos de ser conflictos, estas conversaciones se convierten en oportunidades fundamentales para alinear la comprensión colectiva, detectar vacíos en el flujo del negocio y construir un modelo compartido más claro y preciso del dominio.
-
-[![Aqua-Save-Big-Picture-Event-Storming-(1).jpg](https://i.postimg.cc/3w1nCpCS/Aqua-Save-Big-Picture-Event-Storming-(1).jpg)](https://postimg.cc/rdd1qDHx)
-
-***6. Adding Actors and External Systems***
-
-Para profundizar en la modelación del dominio, asignamos distintos colores a los elementos clave que interactúan con los eventos previamente ordenados:
-
-- Actores: Mediante post-its de color naranja, identificamos quién —o qué rol— inicia o participa en cada evento. Estos actores pueden ser personas, roles o entidades externas involucradas en el proceso. Esto facilita visualizar las responsabilidades humanas dentro del flujo.
-
-- Sistemas externos: Con post-its azules, marcamos los sistemas, servicios o plataformas externas con los que el producto se integra, como una plataforma de pagos, un servicio de envíos, una API de clima local o la aplicación móvil del usuario. Esto permite identificar puntos de integración y prever dependencias técnicas.
-
-- Problemas: Utilizamos el color rojo para señalar inquietudes o inconvenientes, evitando interrumpir el flujo con debates en ese momento y dejando esos puntos registrados para revisarlos posteriormente.
-
-[![Aqua-Save-Big-Picture-Event-Storming-(2).jpg](https://i.postimg.cc/nzQ71Fr0/Aqua-Save-Big-Picture-Event-Storming-(2).jpg)](https://postimg.cc/vgbcYdWV)
-
-***7. Storytelling***
-
-Se recorre la línea de eventos en orden cronológico, desde el inicio hasta el final, relatando la historia que los post-its han construido de forma colectiva. Esta narración permite verificar la coherencia del flujo, identificar posibles inconsistencias, confirmar la secuencia de acciones y detectar omisiones o redundancias dentro del proceso.
-
-[![Aqua-Save-Big-Picture-Event-Storming-(3).jpg](https://i.postimg.cc/4N4yf4GB/Aqua-Save-Big-Picture-Event-Storming-(3).jpg)](https://postimg.cc/XXh4xbpC)
-
-***8. Reverse storytelling***
-
-Como complemento, se puede hacer una narración en sentido inverso: comenzar desde el último evento y retroceder hasta el primero. Este enfoque permite identificar dependencias ocultas, detectar puntos de fricción que no son evidentes en la secuencia normal y evidenciar posibles errores en la relación causal del proceso. Resulta especialmente útil para cuestionar supuestos y revelar interacciones críticas que podrían no notarse al seguir únicamente el orden habitual.
-
-***9. Closing***
-
-Al finalizar la sesión, se revisan los resultados obtenidos:
-
-- La creación de una comprensión compartida del dominio del negocio.
-- La detección clara de problemas, dudas y aspectos aún inciertos.
-- El desarrollo de un lenguaje común entre los participantes, lo que facilita la comunicación técnica y operativa en las siguientes fases.
-
-### 2.5. Ubiquitous Language
+El glosario establece significados comunes entre usuarios, equipo y otras personas interesadas. Incluye conceptos del cuidado doméstico; los protocolos, frameworks y patrones técnicos se describen en arquitectura.
 
 | Término | Definición |
 | :--- | :--- |
-| **Horticultor urbano** | Persona que cultiva plantas en espacios de su hogar por hobby o autoconsumo. |
-| **Micro-agricultor periurbano** | Pequeño productor agrícola con parcelas menores a 5 hectáreas ubicadas cerca de la ciudad. |
-| **Dispositivo IoT** | Equipo físico instalado en el cultivo que recopila y transmite datos en tiempo real. |
-| **Sensor de humedad** | Componente que mide el nivel exacto de agua en la tierra para saber si requiere riego. |
-| **Sensor de caudal** | Componente que mide el flujo de agua en el sistema para calcular el consumo y ahorro. |
-| **Riego inteligente** | Sistema autónomo que activa o detiene el agua según las condiciones del suelo y el clima. |
-| **Pronóstico climático** | Datos meteorológicos obtenidos de internet para anticipar lluvias y evitar riegos innecesarios. |
-| **Huerto / Parcela** | El espacio físico (macetas o terreno) donde se encuentran las plantas monitoreadas. |
-| **Alerta crítica** | Notificación automática al celular cuando la tierra está excesivamente seca o inundada. |
-| **Reporte hídrico** | Resumen visual en la aplicación que muestra el historial de agua usada y el ahorro logrado. |
+| Beginner Plant Care User (Usuario principiante) | Persona que requiere orientación frecuente para interpretar necesidades y decidir el cuidado. |
+| Experienced Plant Care User (Usuario experto) | Persona con autonomía práctica para explicar y adaptar el cuidado de sus plantas domésticas. |
+| Experience Level (Nivel de experiencia) | Preferencia que adapta la orientación; no constituye permiso ni plan comercial. |
+| Domestic Growing Space (Espacio doméstico de cultivo) | Área de la vivienda donde se cuidan plantas. |
+| Plant Profile (Perfil de planta) | Información conocida de la planta, recipiente, sustrato y condiciones de cuidado. |
+| Irrigation Unit (Unidad de riego) | Planta o conjunto compatible que recibe una misma acción de suministro. |
+| Substrate (Sustrato) | Medio donde crece la planta y se conserva parte del agua disponible. |
+| Substrate Moisture (Humedad del sustrato) | Condición de humedad interpretada según la lectura y calibración disponibles. |
+| Moisture Reading (Lectura de humedad) | Observación identificada y fechada de la condición del sustrato. |
+| Reading Freshness (Vigencia de lectura) | Condición temporal que determina si una observación puede usarse para una decisión. |
+| Rain Exposure (Exposición a lluvia) | Posibilidad de que una unidad reciba directamente agua de precipitación. |
+| Irrigation Threshold (Umbral de riego) | Valor aprobado que interviene en el inicio o detención del riego automático. |
+| Irrigation Policy (Política de riego) | Conjunto de límites y condiciones autorizadas para una unidad. |
+| Irrigation Recommendation (Recomendación de riego) | Sugerencia contextualizada cuyo fundamento, vigencia y limitaciones pueden revisarse. |
+| Irrigation Cycle (Ciclo de riego) | Intervalo delimitado de funcionamiento del suministro a una unidad. |
+| Manual Irrigation (Riego manual) | Ciclo solicitado expresamente por el usuario y sujeto a límites. |
+| Automatic Irrigation (Riego automático) | Ciclo iniciado por una política aprobada al cumplirse sus condiciones. |
+| Irrigation Schedule (Horario de riego) | Momento programado para evaluar un riego, sin omitir las demás condiciones. |
+| Irrigation History (Historial de riego) | Registro de ciclos y resultados confirmados, incluyendo interrupciones. |
+| Water Consumption (Consumo de agua) | Volumen utilizado, identificado como medido o estimado según su obtención. |
+| Consumption Baseline (Línea base de consumo) | Referencia documentada de volumen y condiciones para comparar periodos. |
+| Water Savings (Ahorro de agua) | Reducción respecto de una línea base comparable, calculada con método explícito. |
+| Critical Moisture Alert (Alerta de humedad crítica) | Aviso de una condición que supera los límites de atención configurados. |
+| Care Plan (Plan de cuidado) | Organización del seguimiento y riego de una planta según sus condiciones. |
+| Service Plan (Plan de servicio) | Conjunto de prestaciones comerciales contratado; independiente de la experiencia. |
 
-<hr>
 
 ## Capítulo III: Requirements Specification
 
-### 3.1. User Stories
+### 3.1. To-Be Scenario Mapping
+
+Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los usuarios principiantes y expertos. Los escenarios abarcarán la configuración de una unidad, la consulta de sus condiciones, la decisión de riego y la revisión de los resultados, mostrando las mejoras esperadas en cada etapa.
+
+**Usuarios principiantes en cuidado de plantas**
+
+<div align="center">
+  <img src="image/to-be-principiante.png" alt="To-Be Scenario Mapping del usuario principiante" width="600">
+</div>
+
+**Usuarios expertos en cuidado de plantas**
+
+<div align="center">
+  <img src="image/to-be-experto.png" alt="To-Be Scenario Mapping del usuario experto" width="600">
+</div>
+
+### 3.2. User Stories
 
 ## EPICS
 
 | Epic ID | Título | Descripción |
 |:-------:|--------|-------------|
-| EP01 | Autenticación y Registro | Login, registro, social login y gestión de cuentas de horticultores urbanos y micro-agricultores |
-| EP02 | Gestión de Perfiles de Usuario | Perfiles diferenciados para horticultores urbanos y micro-agricultores periurbanos con configuración personalizada |
-| EP03 | Monitoreo de Sensores IoT en Tiempo Real | Visualización en tiempo real de humedad del suelo, temperatura y caudal desde el dispositivo ESP32 |
-| EP04 | Control y Automatización del Riego | Activación/detención manual y automática del riego desde la app según umbrales configurables de humedad |
-| EP05 | Integración con Pronóstico Climático | Consulta de API climática externa para pausar el riego ante lluvias previstas y adaptar decisiones al clima |
-| EP06 | Alertas y Notificaciones | Push notifications, alertas de humedad crítica, riego innecesario y condiciones extremas del suelo |
-| EP07 | Historial y Métricas de Consumo Hídrico | Registro histórico de riegos, consumo de agua por día/semana/mes y métricas de ahorro hídrico |
-| EP08 | Dashboard Principal | Panel de control central con resumen del estado de cultivos, métricas clave y accesos rápidos |
+| EP01 | Autenticación y Registro | Registro, inicio de sesión, acceso con Google y recuperación de cuentas para usuarios principiantes y expertos. |
+| EP02 | Gestión de Perfiles y Plantas Domésticas | Configuración de perfiles, registro de plantas y personalización de la orientación según el nivel de experiencia. |
+| EP03 | Monitoreo y Gestión de Dispositivos IoT | Vinculación de dispositivos ESP32, consulta de humedad del sustrato y temperatura ambiental, configuración y seguimiento de la conexión. |
+| EP04 | Control y Automatización del Riego | Activación y detención del riego, configuración de umbrales y programación de ciclos con límites de duración. |
+| EP05 | Integración con Pronóstico Climático | Consulta del pronóstico y configuración de aplazamientos de riego para plantas expuestas a la lluvia. |
+| EP06 | Alertas y Notificaciones | Avisos sobre humedad, temperatura y condiciones que impiden o modifican un riego previsto. |
+| EP07 | Historial y Consumo de Agua | Consulta de ciclos, consumo por periodo y comparación con una línea base, diferenciando mediciones y estimaciones. |
+| EP08 | Dashboard Principal | Panel con el estado de las plantas, alertas recientes, resumen de consumo y accesos al control del riego. |
+| EP09 | Recomendaciones Apoyadas por IA | Recomendaciones explicadas a partir de las condiciones de cada unidad, con aceptación o descarte por parte del usuario. |
+| EP10 | Landing Page y Acceso a las Aplicaciones | Presentación de AquaSave, información del kit y acceso a los productos digitales con una experiencia accesible e internacionalizada. |
+| EP11 | Planes de Servicio | Consulta de planes y gestión de suscripciones para prestaciones opcionales. |
 
 ---
 
@@ -969,92 +941,134 @@ Al finalizar la sesión, se revisan los resultados obtenidos:
 
 | Story ID | Título | Descripción | Criterios de Aceptación | Epic ID |
 |:--------:|--------|-------------|-------------------------|:-------:|
-| US01 | Registrar cuenta nueva | Como nuevo usuario, Quiero crear una cuenta indicando mi tipo de perfil, Para acceder a las funcionalidades de monitoreo y control de riego de AquaSave. | **Escenario 1:** Registro exitoso Given que el usuario accede al formulario de registro When completa nombre, correo, contraseña y selecciona su tipo (Horticultor Urbano / Micro-Agricultor Periurbano) Then se crea la cuenta y se redirige al onboarding de configuración del dispositivo **Escenario 2:** Correo ya registrado Given que el usuario ingresa un correo ya existente When intenta registrarse Then el sistema muestra el mensaje "El correo ya está registrado. Inicia sesión." | EP01 |
-| US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, Quiero iniciar sesión con mis credenciales, Para acceder a mi dashboard y datos de mis cultivos. | **Escenario 1:** Login exitoso Given que el usuario ingresa correo y contraseña correctos When hace clic en "Iniciar sesión" Then es redirigido a su dashboard personalizado **Escenario 2:** Credenciales incorrectas Given que el usuario ingresa datos incorrectos When intenta iniciar sesión Then el sistema muestra "Correo o contraseña incorrectos" sin revelar cuál campo es errado | EP01 |
-| US03 | Iniciar sesión con cuenta de Google | Como usuario, Quiero registrarme o iniciar sesión con mi cuenta de Google, Para acceder a AquaSave sin crear credenciales nuevas. | **Escenario 1:** Social login exitoso Given que el usuario hace clic en "Continuar con Google" When autoriza el acceso Then la cuenta se crea o vincula automáticamente y se redirige al dashboard **Escenario 2:** Permiso denegado Given que el usuario cancela la autorización de Google When regresa a la app Then permanece en la pantalla de login sin cambios | EP01 |
-| US04 | Recuperar contraseña olvidada | Como usuario registrado, Quiero restablecer mi contraseña mediante mi correo, Para recuperar el acceso a mi cuenta sin perder mis datos. | **Escenario 1:** Solicitud exitosa Given que el usuario escribe su correo registrado When solicita recuperación Then recibe un enlace de restablecimiento válido por 30 minutos **Escenario 2:** Correo no registrado Given que el usuario ingresa un correo inexistente When solicita recuperación Then el sistema muestra el mismo mensaje de confirmación sin revelar si el correo existe | EP01 |
-| US05 | Cerrar sesión | Como usuario autenticado, Quiero cerrar sesión desde la app, Para proteger mi cuenta cuando uso un dispositivo compartido. | **Escenario 1:** Cierre de sesión exitoso Given que el usuario hace clic en "Cerrar sesión" When confirma la acción Then la sesión termina y es redirigido a la pantalla de login **Escenario 2:** Sesión expirada automáticamente Given que el usuario no usa la app por más de 30 días When intenta acceder Then el sistema le solicita iniciar sesión nuevamente | EP01 |
-| US06 | Configurar perfil de horticultor urbano | Como horticultor urbano, Quiero configurar mi perfil indicando tipo de espacio y cultivos, Para que AquaSave personalice los umbrales de humedad según mi huerto. | **Escenario 1:** Configuración guardada Given que el horticultor accede a la configuración de perfil When ingresa tipo de espacio (terraza, balcón, jardín), dimensión y tipo de cultivos Then el sistema guarda los datos y los usa para personalizar alertas y umbrales **Escenario 2:** Interfaz intuitiva Given que el usuario navega la configuración When revisa las opciones Then encuentra íconos descriptivos y textos simples sin tecnicismos | EP02 |
-| US07 | Configurar perfil de micro-agricultor periurbano | Como micro-agricultor periurbano, Quiero configurar mi perfil indicando el tamaño de mi parcela y tipo de cultivos, Para recibir parámetros de riego adecuados a mi situación productiva. | **Escenario 1:** Datos de parcela registrados Given que el micro-agricultor accede a la configuración When ingresa tamaño de parcela en hectáreas, tipo de cultivo y método de riego actual Then el sistema ajusta los umbrales de humedad sugeridos según el cultivo **Escenario 2:** Validación de campos Given que el usuario deja campos obligatorios vacíos When intenta guardar el perfil Then el sistema indica los campos pendientes con mensajes claros | EP02 |
-| US08 | Editar información del perfil | Como usuario registrado, Quiero actualizar mis datos de perfil en cualquier momento, Para mantener la información de mis cultivos siempre actualizada. | **Escenario 1:** Edición exitosa Given que el usuario accede a su perfil When modifica cualquier campo y guarda Then los cambios se reflejan de inmediato en toda la app **Escenario 2:** Cambio de tipo de usuario Given que el usuario cambia su tipo de perfil When guarda el cambio Then el sistema actualiza los umbrales y sugerencias según el nuevo tipo | EP02 |
-| US09 | Ver humedad del suelo en tiempo real | Como usuario, Quiero visualizar el nivel de humedad del suelo medido por el sensor ESP32, Para saber si mis cultivos necesitan agua antes de regar. | **Escenario 1:** Dato de humedad visible Given que el dispositivo ESP32 está conectado y transmitiendo When el usuario accede al dashboard Then ve el porcentaje de humedad actualizado con indicador visual (Seco / Óptimo / Húmedo) **Escenario 2:** Dispositivo sin conexión Given que el dispositivo pierde conexión When el usuario consulta la humedad Then el sistema muestra el último valor registrado con etiqueta "Sin conexión" y la hora de la última lectura | EP03 |
-| US10 | Ver temperatura del suelo y ambiente | Como usuario, Quiero visualizar la temperatura del suelo y del ambiente registrada por los sensores, Para tomar decisiones de riego según las condiciones térmicas actuales. | **Escenario 1:** Temperatura visible Given que los sensores están activos When el usuario abre el dashboard Then ve la temperatura del suelo y del ambiente en °C actualizada en tiempo real **Escenario 2:** Temperatura fuera de rango Given que la temperatura supera el umbral configurado para el cultivo When el sistema lo detecta Then muestra una alerta visual en el dashboard indicando riesgo para el cultivo | EP03 |
-| US11 | Ver caudal de agua durante el riego | Como usuario, Quiero visualizar el caudal de agua que fluye durante un ciclo de riego, Para conocer el consumo real y detectar posibles fugas o bloqueos. | **Escenario 1:** Caudal visible durante riego activo Given que el riego está activo y el sensor de caudal funciona When el usuario consulta el estado Then ve el caudal en litros por minuto en tiempo real **Escenario 2:** Caudal anormal detectado Given que el caudal está fuera del rango esperado When el sistema lo detecta Then muestra alerta de posible fuga o bloqueo en la tubería | EP03 |
-| US12 | Ver estado de conexión del dispositivo IoT | Como usuario, Quiero saber en todo momento si mi dispositivo ESP32 está conectado, Para confiar en que los datos mostrados son actuales y confiables. | **Escenario 1:** Dispositivo conectado Given que el ESP32 tiene conexión activa When el usuario abre la app Then ve un indicador verde "En línea" junto a los datos del dispositivo **Escenario 2:** Dispositivo desconectado Given que el ESP32 pierde la conexión When el usuario revisa el estado Then el indicador cambia a "Sin conexión" y muestra la última vez que estuvo activo | EP03 |
-| US13 | Activar el riego manualmente desde la app | Como usuario, Quiero activar el riego de mis cultivos desde mi celular, Para suministrar agua de forma inmediata sin estar físicamente en el huerto o parcela. | **Escenario 1:** Activación remota exitosa Given que el usuario está en el dashboard y el dispositivo está conectado When presiona "Iniciar riego" Then el sistema envía la orden al ESP32 y confirma la activación con indicador visual en menos de 3 segundos **Escenario 2:** Dispositivo sin conexión al activar Given que el dispositivo no tiene conexión When el usuario intenta activar el riego Then el sistema muestra "No se puede conectar con el dispositivo. Verifica la conexión." | EP04 |
-| US14 | Detener el riego manualmente desde la app | Como usuario, Quiero detener el riego en curso desde mi celular, Para evitar el desperdicio de agua cuando el suelo ya alcanzó el nivel óptimo. | **Escenario 1:** Detención remota exitosa Given que el riego está activo When el usuario presiona "Detener riego" Then el sistema cierra la electroválvula y confirma la detención en menos de 3 segundos **Escenario 2:** Confirmación de acción Given que el usuario presiona detener When el sistema solicita confirmación Then solo ejecuta la orden si el usuario confirma, evitando detenciones accidentales | EP04 |
-| US15 | Configurar umbrales de humedad para riego automático | Como usuario, Quiero definir los niveles mínimo y máximo de humedad del suelo, Para que el sistema active o detenga el riego automáticamente sin intervención manual. | **Escenario 1:** Umbrales guardados Given que el usuario accede a la configuración del dispositivo When ingresa el umbral mínimo (inicio de riego) y máximo (fin de riego) Then el sistema guarda los valores y los aplica al modo automático **Escenario 2:** Riego automático activado por umbral Given que el modo automático está activo y la humedad baja del mínimo When el sistema detecta la condición Then activa el riego automáticamente y notifica al usuario | EP04 |
-| US16 | Programar horarios de riego | Como usuario, Quiero programar horarios fijos de riego por día y hora, Para automatizar el suministro de agua en momentos convenientes. | **Escenario 1:** Creación de horario exitosa Given que el usuario accede a la sección de programación When selecciona día(s), hora de inicio y duración Then el sistema guarda el horario y lo ejecuta automáticamente a la hora indicada **Escenario 2:** Conflicto con riego automático Given que el riego automático por humedad está activo en el mismo horario programado When ocurre el conflicto Then el sistema prioriza el umbral de humedad e informa al usuario del ajuste | EP04 |
-| US17 | Consultar pronóstico del clima desde la app | Como usuario, Quiero ver el pronóstico climático de los próximos días en la app, Para anticipar lluvias y evitar regar innecesariamente. | **Escenario 1:** Pronóstico visible en dashboard Given que la app consume la API climática correctamente When el usuario abre el dashboard Then ve temperatura y probabilidad de lluvia para las próximas 24 y 48 horas **Escenario 2:** API climática sin respuesta Given que la API climática externa no está disponible When el usuario consulta el pronóstico Then el sistema muestra "Pronóstico no disponible temporalmente" sin afectar las demás funciones | EP05 |
-| US18 | Pausar el riego automático ante lluvia prevista | Como usuario, Quiero que el sistema pause el riego automático cuando se pronostique lluvia, Para no desperdiciar agua cuando la naturaleza va a regar por mí. | **Escenario 1:** Pausa automática por lluvia Given que el pronóstico indica precipitación mayor al umbral configurado When el sistema lo detecta Then pausa el riego automático y notifica al usuario el motivo **Escenario 2:** Reactivación tras pausa climática Given que el pronóstico ya no indica lluvia When el período de pausa termina Then el sistema reactiva el riego automático y notifica al usuario | EP05 |
-| US19 | Configurar umbral de lluvia para pausa automática | Como usuario, Quiero definir desde qué probabilidad de lluvia el sistema debe pausar el riego, Para ajustar la sensibilidad climática según mis preferencias y tipo de cultivo. | **Escenario 1:** Umbral configurado exitosamente Given que el usuario accede a la configuración climática When define el porcentaje mínimo de probabilidad de lluvia para pausar el riego Then el sistema guarda el valor y lo aplica en las siguientes consultas a la API **Escenario 2:** Valor fuera de rango Given que el usuario ingresa un valor menor a 0% o mayor a 100% When intenta guardar Then el sistema muestra un mensaje indicando el rango válido | EP05 |
-| US20 | Recibir alerta de humedad crítica baja | Como usuario, Quiero recibir una notificación push cuando la humedad del suelo esté demasiado baja, Para actuar a tiempo y evitar que mis cultivos se sequen. | **Escenario 1:** Alerta enviada por humedad baja Given que el sensor detecta humedad por debajo del umbral mínimo When el sistema procesa la lectura Then envía notificación push con el mensaje "Humedad crítica: tus cultivos necesitan agua." **Escenario 2:** Sin repetición excesiva Given que la humedad sigue baja tras la primera alerta When han pasado menos de 2 horas desde la última notificación Then el sistema no envía una nueva alerta para evitar spam | EP06 |
-| US21 | Recibir alerta de humedad excesiva | Como usuario, Quiero recibir una notificación cuando la humedad del suelo esté demasiado alta, Para detener el riego y evitar el encharcamiento o pudrición de raíces. | **Escenario 1:** Alerta de humedad alta Given que el sensor detecta humedad por encima del umbral máximo When el sistema procesa la lectura Then notifica al usuario con "Suelo saturado: detén el riego para proteger tus cultivos." **Escenario 2:** Riego automático detenido Given que el riego automático está activo y la humedad supera el máximo When el sistema lo detecta Then detiene el riego automáticamente y envía la notificación | EP06 |
-| US22 | Recibir alerta de temperatura extrema | Como usuario, Quiero recibir una notificación cuando la temperatura sea extrema, Para tomar medidas de protección sobre mis cultivos. | **Escenario 1:** Alerta de temperatura alta Given que el sensor detecta temperatura superior al umbral del cultivo When el sistema lo detecta Then envía notificación push indicando riesgo de estrés térmico **Escenario 2:** Alerta de temperatura baja Given que la temperatura cae por debajo del mínimo configurado When el sistema lo detecta Then notifica al usuario sobre el riesgo de helada o daño por frío | EP06 |
-| US23 | Recibir alerta de riego innecesario | Como usuario, Quiero recibir una alerta cuando el sistema detecte riego con el suelo ya húmedo, Para identificar y corregir configuraciones que generen desperdicio. | **Escenario 1:** Alerta de riego innecesario Given que un horario programado activa el riego y la humedad ya está sobre el umbral óptimo When el sistema inicia el ciclo Then notifica al usuario "Riego activado con suelo húmedo. Considera ajustar el horario." **Escenario 2:** Sugerencia de optimización Given que el patrón ocurre más de 3 veces en una semana When el sistema lo detecta Then muestra en el dashboard una sugerencia para revisar la programación | EP06 |
-| US24 | Ver historial de riegos realizados | Como usuario, Quiero consultar el historial de todos los ciclos de riego ejecutados, Para revisar cuándo se regó, por cuánto tiempo y cuánta agua se consumió. | **Escenario 1:** Historial accesible Given que el usuario accede a la sección de historial When selecciona un rango de fechas Then ve la lista de ciclos con fecha, hora, duración y litros consumidos **Escenario 2:** Filtro por período Given que el usuario quiere ver los riegos de una semana específica When aplica el filtro de fechas Then el historial muestra únicamente los registros del período seleccionado | EP07 |
-| US25 | Ver consumo de agua diario, semanal y mensual | Como usuario, Quiero ver gráficas de consumo hídrico agrupadas por día, semana y mes, Para entender mis patrones de uso del agua y detectar oportunidades de ahorro. | **Escenario 1:** Gráfica de consumo visible Given que el usuario accede a las métricas de consumo When selecciona la vista diaria, semanal o mensual Then ve una gráfica de barras con el consumo en litros para cada período **Escenario 2:** Comparativa con período anterior Given que el usuario revisa el consumo mensual When el sistema tiene datos del mes anterior Then muestra la variación porcentual respecto al mes anterior indicando ahorro o aumento | EP07 |
-| US26 | Ver métricas de ahorro hídrico | Como usuario, Quiero ver cuánta agua he ahorrado gracias a AquaSave comparado con el riego manual, Para verificar el impacto real del sistema en mi consumo. | **Escenario 1:** Ahorro calculado y visible Given que el usuario tiene al menos 7 días de uso When accede a las métricas de ahorro Then ve el porcentaje y litros ahorrados estimados respecto al consumo típico sin automatización **Escenario 2:** Datos insuficientes Given que el usuario tiene menos de 7 días de uso When accede a las métricas Then el sistema muestra "Se necesitan más datos para calcular el ahorro estimado." | EP07 |
-| US28 | Ver resumen del estado de cultivos en el dashboard | Como usuario, Quiero ver en una sola pantalla el estado actual de mis cultivos, Para tener una visión rápida sin necesidad de navegar entre secciones. | **Escenario 1:** Dashboard con datos actualizados Given que el dispositivo está conectado When el usuario accede al dashboard Then ve humedad, temperatura, estado del riego y pronóstico del día en un solo vistazo **Escenario 2:** Dashboard con dispositivo desconectado Given que el ESP32 no tiene conexión When el usuario abre el dashboard Then ve los últimos valores conocidos con indicador "Sin conexión" y hora de la última sincronización | EP08 |
-| US29 | Acceder rápidamente al control de riego desde el dashboard | Como usuario, Quiero tener un botón de control del riego visible en el dashboard, Para activar o detener el suministro de agua con el menor número de pasos posible. | **Escenario 1:** Control en dos toques Given que el usuario está en el dashboard When hace clic en el botón de riego Then puede activar o detener el riego sin navegar a otra pantalla **Escenario 2:** Estado del botón refleja la realidad Given que el riego está activo When el usuario abre el dashboard Then el botón muestra claramente "Riego activo" con opción visible de detener | EP08 |
-| US30 | Ver notificaciones recientes en el dashboard | Como usuario, Quiero ver las últimas alertas directamente en el dashboard, Para estar informado del estado de mis cultivos sin revisar cada sección por separado. | **Escenario 1:** Notificaciones visibles Given que se han generado alertas recientes When el usuario abre el dashboard Then ve un panel con las últimas 3 notificaciones ordenadas por fecha con ícono según tipo (humedad, temperatura, clima) **Escenario 2:** Sin notificaciones recientes Given que no hay alertas en las últimas 24 horas When el usuario revisa el panel Then el sistema muestra "Todo en orden. Sin alertas recientes." | EP08 |
-| US31 | Ver métricas de ahorro resumidas en el dashboard | Como usuario, Quiero ver un indicador del agua ahorrada esta semana en el dashboard, Para verificar el valor del sistema de forma inmediata. | **Escenario 1:** Métrica de ahorro visible Given que el usuario tiene al menos 7 días de uso When abre el dashboard Then ve una tarjeta con los litros ahorrados en la semana y el porcentaje respecto a la semana anterior **Escenario 2:** Datos insuficientes Given que el usuario tiene menos de 7 días de uso When abre el dashboard Then la tarjeta muestra "Recopilando datos..." con progreso hacia los 7 días | EP08 |
-| US32 | Vincular dispositivo IoT ESP32 desde la app | Como usuario nuevo, Quiero conectar mi dispositivo ESP32 mediante un proceso guiado, Para comenzar a recibir datos de mis cultivos sin conocimientos técnicos. | **Escenario 1:** Vinculación exitosa Given que el usuario sigue los pasos de la guía e ingresa las credenciales Wi-Fi When el dispositivo se conecta Then aparece como "Dispositivo activo" en la app **Escenario 2:** Error de conexión Given que el usuario ingresa credenciales Wi-Fi incorrectas When el dispositivo no puede conectarse Then el sistema muestra "No se pudo conectar. Verifica la red y contraseña" con opción de reintentar | EP03 |
-| US33 | Configurar umbrales del sensor desde la app | Como usuario, Quiero ajustar los umbrales de humedad y temperatura desde la app, Para personalizar cuándo el sistema considera que el suelo está seco, óptimo o saturado. | **Escenario 1:** Umbrales configurados Given que el usuario accede a la configuración del dispositivo When ajusta los valores de humedad mínima, óptima y máxima Then el sistema guarda los umbrales y los aplica de inmediato **Escenario 2:** Valores inválidos Given que el usuario ingresa un valor mínimo mayor que el máximo When intenta guardar Then el sistema muestra "El valor mínimo no puede ser mayor al máximo. Revisa los umbrales." | EP03 |
-| US34 | Gestionar múltiples dispositivos IoT | Como micro-agricultor con varias zonas de cultivo, Quiero registrar y gestionar más de un dispositivo ESP32, Para monitorear diferentes sectores de mi parcela desde una sola cuenta. | **Escenario 1:** Registro de segundo dispositivo Given que el usuario ya tiene un dispositivo activo When vincula un segundo ESP32 Then el nuevo dispositivo aparece en la app con un nombre identificador editable **Escenario 2:** Cambio entre dispositivos Given que el usuario tiene dos o más dispositivos When selecciona un dispositivo diferente en el dashboard Then la app muestra los datos de sensores e historial correspondientes a ese dispositivo | EP03 |
+| US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | **Escenario 1: Registro exitoso.** Given que el usuario accede al registro, When completa datos válidos y selecciona Principiante o Experto, Then se crea su cuenta y accede a la configuración inicial.<br><br>**Escenario 2: Registro inválido.** Given que existen campos incorrectos o el correo ya está registrado, When intenta crear la cuenta, Then el sistema evita el registro duplicado e indica cómo continuar. | EP01 |
+| US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | **Escenario 1: Acceso exitoso.** Given que el usuario tiene una cuenta, When ingresa credenciales válidas, Then accede al dashboard y a los recursos de su cuenta.<br><br>**Escenario 2: Credenciales incorrectas.** Given que el usuario ingresa credenciales inválidas, When intenta iniciar sesión, Then el sistema muestra "Correo o contraseña incorrectos" sin identificar cuál dato falló. | EP01 |
+| US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | **Escenario 1: Acceso con Google.** Given que el usuario selecciona "Continuar con Google", When autoriza el acceso y se verifica su identidad, Then se reconoce su cuenta vinculada o se crea una nueva.<br><br>**Escenario 2: Autorización cancelada.** Given que el usuario cancela el proceso o la identidad no puede verificarse, When regresa a AquaSave, Then permanece sin autenticar y no se vinculan cuentas únicamente por coincidencia de correo. | EP01 |
+| US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | **Escenario 1: Restablecimiento exitoso.** Given que el usuario dispone de un enlace válido y no utilizado, When registra una nueva contraseña, Then se actualiza la contraseña y el enlace queda invalidado.<br><br>**Escenario 2: Enlace inválido.** Given que el enlace venció o ya fue utilizado, When intenta restablecer la contraseña, Then se rechaza la operación y se ofrece solicitar otro enlace. La solicitud inicial muestra el mismo mensaje exista o no el correo. | EP01 |
+| US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | **Escenario 1: Cierre exitoso.** Given que existe una sesión activa, When el usuario selecciona "Cerrar sesión", Then se eliminan las credenciales locales, se revoca la renovación de esa sesión y se muestra la pantalla de acceso.<br><br>**Escenario 2: Sesión vencida.** Given que la sesión ha vencido, When el usuario intenta acceder a una función protegida, Then se solicita iniciar sesión nuevamente. | EP01 |
+| US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | **Escenario 1: Configuración guiada.** Given que el usuario seleccionó el nivel Principiante, When registra su planta, recipiente y ubicación, Then el sistema guarda los datos y explica los pasos para preparar el monitoreo.<br><br>**Escenario 2: Información desconocida.** Given que el usuario desconoce un dato de cuidado, When lo indica durante la configuración, Then puede conservarlo como desconocido sin activar automáticamente parámetros de riego que dependan de ese dato. | EP02 |
+| US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | **Escenario 1: Configuración guardada.** Given que el usuario configura una unidad, When registra condiciones, exposición y parámetros válidos, Then el sistema guarda la información confirmada.<br><br>**Escenario 2: Parámetros inconsistentes.** Given que los límites ingresados son incompatibles, When intenta guardar, Then se explica el error y se mantiene la configuración anterior. | EP02 |
+| US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | **Escenario 1: Perfil actualizado.** Given que el usuario accede a su perfil, When modifica datos válidos y confirma, Then los cambios se guardan y la orientación corresponde al nivel elegido.<br><br>**Escenario 2: Conservación de información.** Given que la cuenta tiene plantas y dispositivos, When cambia de Principiante a Experto o viceversa, Then se conservan sus dispositivos, permisos, plan, umbrales e historial. | EP02 |
+| US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | **Escenario 1: Lectura disponible.** Given que existe una lectura válida y calibrada, When el usuario consulta su unidad, Then ve el porcentaje normalizado de humedad, su escala y la fecha de medición.<br><br>**Escenario 2: Lectura desactualizada.** Given que la lectura es inválida o tiene más de sesenta segundos, When se muestra, Then se identifica como inválida o desactualizada y no se presenta como una medición actual. | EP03 |
+| US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | **Escenario 1: Temperatura disponible.** Given que el sensor ambiental registra una medición válida, When el usuario consulta su unidad, Then ve la temperatura en grados Celsius y su fecha de medición.<br><br>**Escenario 2: Fallo de lectura.** Given que el sensor no proporciona un dato válido, When se consulta la temperatura, Then se informa que no está disponible, sin sustituirla por una temperatura del sustrato inferida. | EP03 |
+| US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | **Escenario 1: Consumo estimado.** Given que existe un caudal calibrado y una duración confirmada, When se consulta el volumen, Then se muestra como estimado y se explica que se calculó mediante caudal y duración.<br><br>**Escenario 2: Información insuficiente.** Given que no existe una medición ni una calibración suficiente, When se consulta el consumo, Then se muestra "No disponible" en lugar de cero litros. | EP03 |
+| US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | **Escenario 1: Dispositivo conectado.** Given que el dispositivo tuvo un contacto autenticado durante los últimos sesenta segundos, When el usuario consulta su estado, Then se muestra "En línea" y la fecha del último contacto.<br><br>**Escenario 2: Contacto interrumpido.** Given que transcurren más de sesenta segundos sin contacto, When se actualiza el estado, Then se indica "Sin conexión" y se conservan los registros anteriores. | EP03 |
+| US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | **Escenario 1: Activación confirmada.** Given que la unidad pertenece al usuario, está conectada y cumple los límites de operación, When solicita iniciar el riego con una duración válida, Then la orden aparece pendiente y cambia a activa después de la confirmación del dispositivo.<br><br>**Escenario 2: Activación no confirmada.** Given que el dispositivo está desconectado o no confirma dentro de cinco segundos, When se solicita el riego, Then no se muestra como activo y la orden vence sin ejecutarse al reconectar. | EP04 |
+| US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | **Escenario 1: Detención solicitada.** Given que existe un ciclo activo, When el usuario selecciona "Detener riego", Then se envía una orden prioritaria sin pedir otra confirmación al usuario y se muestra la detención cuando el dispositivo la confirma.<br><br>**Escenario 2: Pérdida de comunicación.** Given que el dispositivo no responde, When se solicita detener, Then se informa que la detención remota no está confirmada y el dispositivo conserva su límite local de duración. | EP04 |
+| US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | **Escenario 1: Automatización configurada.** Given que los umbrales, la duración máxima y la pausa entre ciclos son válidos, When el usuario confirma y el dispositivo acepta la configuración, Then se habilita el riego automático con esos límites.<br><br>**Escenario 2: Condiciones insuficientes.** Given que la configuración no fue confirmada o la lectura es inválida, When se evalúa iniciar un ciclo automático, Then el ciclo no comienza y se registra el motivo. | EP04 |
+| US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | **Escenario 1: Evaluación programada.** Given que existe un horario válido y el reloj del dispositivo es confiable, When llega la hora, Then se revisan humedad, pausas y límites de duración y consumo antes de iniciar el riego.<br><br>**Escenario 2: Ciclo omitido.** Given que hay un ciclo activo, humedad suficiente o un horario que ya pasó, When se procesa la programación, Then no se duplica ni se recupera automáticamente el ciclo omitido. | EP04 |
+| US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | **Escenario 1: Pronóstico disponible.** Given que el proveedor devuelve información válida, When el usuario consulta el clima, Then ve la ubicación, el periodo previsto y la hora de actualización.<br><br>**Escenario 2: Pronóstico no disponible.** Given que el servicio falla o el pronóstico está vencido, When se consulta, Then se informa la condición sin bloquear el monitoreo ni la detención del riego. | EP05 |
+| US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | **Escenario 1: Aplazamiento por lluvia.** Given que la unidad está expuesta y cumple las condiciones configuradas de pronóstico y humedad, When se evalúa un riego, Then se aplaza dentro del límite permitido y se registra el motivo.<br><br>**Escenario 2: Pronóstico no aplicable.** Given que la planta está protegida de la lluvia o el pronóstico está vencido, When se evalúa el riego, Then se utiliza la configuración local aprobada sin aplicar un aplazamiento climático. | EP05 |
+| US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | **Escenario 1: Configuración climática válida.** Given que la planta está expuesta a lluvia, When el usuario define una probabilidad entre cero y cien por ciento y un periodo de aplazamiento válido, Then se guarda la configuración aprobada.<br><br>**Escenario 2: Configuración no aplicable.** Given que la planta está protegida o el porcentaje está fuera de rango, When intenta activar el aplazamiento, Then se deshabilita esa opción o se solicita corregir el valor, según corresponda. | EP05 |
+| US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | **Escenario 1: Alerta registrada.** Given que una lectura válida está por debajo del límite configurado, When se confirma la condición, Then se genera una alerta con la unidad afectada, la fecha y una orientación de revisión.<br><br>**Escenario 2: Control de repetición.** Given que la misma alerta continúa abierta, When llegan lecturas equivalentes durante las siguientes dos horas, Then no se repite la notificación salvo que se cumpla una condición de agravamiento configurada. | EP06 |
+| US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | **Escenario 1: Humedad elevada.** Given que una lectura válida supera el límite superior, When se procesa, Then se genera una alerta y se interrumpe el ciclo si se cumple su condición de corte.<br><br>**Escenario 2: Lectura inválida.** Given que el sensor entrega una lectura inválida, When se evalúa la humedad, Then se informa el problema de lectura sin afirmar que el sustrato está saturado. | EP06 |
+| US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | **Escenario 1: Temperatura fuera de rango.** Given que una lectura ambiental válida supera el máximo o está por debajo del mínimo configurado, When se procesa, Then se genera una alerta con el valor, la unidad y la fecha.<br><br>**Escenario 2: Temperatura no disponible.** Given que no existe una lectura válida, When se evalúa la condición, Then se informa la falta de datos sin atribuir una temperatura extrema a la planta. | EP06 |
+| US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | **Escenario 1: Motivo registrado.** Given que un horario coincide con humedad suficiente o una pausa activa, When se evalúa el riego, Then se omite el ciclo y se registra su motivo.<br><br>**Escenario 2: Omisiones recurrentes.** Given que existen varias omisiones, When el usuario consulta el resumen, Then se presentan agrupadas y diferenciadas de los ciclos ejecutados. | EP06 |
+| US24 | Consultar historial de riego | Como usuario, quiero consultar ciclos y resultados por unidad, para revisar qué ocurrió durante el cuidado. | **Escenario 1: Historial disponible.** Given que existen ciclos registrados, When el usuario selecciona una unidad y un periodo, Then ve inicio, fin, origen, resultado y volumen disponible de cada ciclo.<br><br>**Escenario 2: Ciclo incompleto.** Given que un ciclo no tiene cierre confirmado, When se consulta, Then aparece como incompleto sin asignarle una duración final inventada. | EP07 |
+| US25 | Consultar consumo por periodo | Como usuario, quiero consultar consumo diario, semanal y mensual, para comparar patrones de uso del agua. | **Escenario 1: Consumo agrupado.** Given que existen registros compatibles, When el usuario selecciona una vista diaria, semanal o mensual, Then ve el volumen, el método de obtención y la cobertura de datos del periodo.<br><br>**Escenario 2: Datos incompletos.** Given que faltan registros o existen métodos diferentes, When se calcula el consumo, Then se muestran las diferencias y los vacíos sin tratarlos como consumo cero. | EP07 |
+| US26 | Comparar consumo con una línea base | Como usuario, quiero comparar el consumo con una referencia documentada, para evaluar posibles reducciones. | **Escenario 1: Comparación válida.** Given que existe una línea base positiva con condiciones y periodos comparables, When se solicita la comparación, Then se muestra la variación en litros y porcentaje junto con el método utilizado.<br><br>**Escenario 2: Referencia insuficiente.** Given que la línea base no existe, es cero o no es comparable, When se solicita calcular una reducción, Then se informa que no puede determinarse. Un aumento de consumo se presenta como aumento. | EP07 |
+| US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | **Escenario 1: Dashboard actualizado.** Given que existen lecturas vigentes y estados confirmados, When el usuario abre el dashboard, Then ve humedad, temperatura disponible, estado del riego y alertas de cada unidad.<br><br>**Escenario 2: Datos antiguos.** Given que hay lecturas desactualizadas o dispositivos desconectados, When se muestra el resumen, Then se indican las fechas y la falta de información sin presentar las unidades como normales. | EP08 |
+| US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | **Escenario 1: Control de la unidad seleccionada.** Given que el usuario consulta una unidad de su cuenta, When solicita iniciar o detener el riego, Then la orden corresponde al identificador de esa unidad.<br><br>**Escenario 2: Cambio de selección.** Given que el usuario cambia de unidad mientras una orden está pendiente, When llega la respuesta, Then el resultado se asocia a la unidad original. | EP08 |
+| US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | **Escenario 1: Alertas visibles.** Given que existen alertas, When el usuario abre el panel, Then aparecen ordenadas por fecha e identifican la unidad y su estado abierto o resuelto.<br><br>**Escenario 2: Ausencia de lecturas.** Given que no hay alertas recientes pero faltan lecturas vigentes, When se consulta el panel, Then se informa la falta de datos sin afirmar que todas las plantas están en condiciones normales. | EP08 |
+| US30 | Consultar un resumen de consumo | Como usuario, quiero revisar un resumen de consumo y cobertura, para interpretar rápidamente mis registros. | **Escenario 1: Resumen disponible.** Given que existen datos del periodo seleccionado, When el usuario consulta el dashboard, Then ve el volumen registrado, su método de obtención y la cobertura.<br><br>**Escenario 2: Sin línea base.** Given que no existe una referencia válida para comparar, When se muestra el resumen, Then se presenta el consumo disponible sin atribuirle un ahorro. | EP08 |
+| US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | **Escenario 1: Vinculación exitosa.** Given que el dispositivo está disponible y su código es válido, When el usuario completa la guía y acredita su posesión, Then el kit queda asociado de forma única a su cuenta y unidad.<br><br>**Escenario 2: Vinculación rechazada.** Given que el código fue utilizado o el dispositivo pertenece a otra cuenta, When intenta vincularlo, Then se rechaza la asociación sin revelar información del propietario. | EP03 |
+| US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | **Escenario 1: Ajuste válido.** Given que existe una calibración verificada, When el usuario confirma límites ordenados, Then se guarda la versión del ajuste y se aplica a las siguientes lecturas.<br><br>**Escenario 2: Independencia del control.** Given que el usuario cambia la interpretación de las lecturas, When guarda el ajuste, Then los umbrales del riego automático se mantienen hasta que apruebe expresamente su modificación. | EP03 |
+| US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | **Escenario 1: Dispositivo adicional.** Given que el usuario tiene un kit vinculado, When incorpora otro dispositivo autorizado, Then aparece como una unidad adicional con un nombre identificador.<br><br>**Escenario 2: Consulta independiente.** Given que existen varias unidades, When selecciona una, Then se muestran únicamente sus lecturas, configuración e historial. | EP03 |
+| US34 | Consultar una recomendación de riego | Como usuario, quiero recibir una recomendación apoyada por IA con explicación, para evaluar el cuidado de mi unidad. | **Escenario 1: Recomendación disponible.** Given que hay un perfil suficiente, una lectura de hasta sesenta segundos y una configuración válida, When se solicita una recomendación, Then se muestra la propuesta, su fundamento, los datos utilizados y una vigencia máxima de cinco minutos.<br><br>**Escenario 2: Recomendación no disponible.** Given que faltan datos o la respuesta de IA no es válida, When se solicita orientación, Then se informa la limitación sin generar una orden de riego. | EP09 |
+| US35 | Decidir sobre una recomendación | Como usuario, quiero aceptar o descartar una recomendación, para conservar el control de mis decisiones. | **Escenario 1: Recomendación aceptada.** Given que la recomendación está vigente, When el usuario la acepta, Then se verifican nuevamente propiedad, lecturas, configuración y límites antes de emitir una única orden, si corresponde.<br><br>**Escenario 2: Recomendación no ejecutable.** Given que la propuesta fue descartada, venció o ya no corresponde al estado actual, When se procesa la decisión, Then no se inicia el riego y se registra el motivo. | EP09 |
+| US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | **Escenario 1: Propuesta visible.** Given que una persona visita la landing page, When revisa su contenido, Then encuentra el propósito doméstico, los productos y las condiciones de instalación.<br><br>**Escenario 2: Función prevista.** Given que una función todavía no está disponible, When se presenta en la página, Then se identifica como prevista. | EP10 |
+| US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | **Escenario 1: Orientación para principiantes.** Given que el visitante consulta la información para principiantes, When revisa la propuesta, Then encuentra explicaciones sobre instalación, interpretación de lecturas y aprendizaje del cuidado.<br><br>**Escenario 2: Orientación para expertos.** Given que consulta la información para expertos, When revisa la propuesta, Then encuentra funciones de seguimiento, comparación y configuración. | EP10 |
+| US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | **Escenario 1: Acceso disponible.** Given que la aplicación está publicada, When el visitante selecciona el acceso web o móvil, Then llega a la aplicación o al punto de distribución correspondiente.<br><br>**Escenario 2: Acceso pendiente.** Given que una aplicación todavía no está publicada, When se presenta su acceso, Then se informa que no está disponible y no se utiliza un enlace ficticio. | EP10 |
+| US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | **Escenario 1: Requisitos disponibles.** Given que el visitante consulta la información del kit, When revisa sus condiciones, Then identifica requisitos de red, energía, instalación, mantenimiento y el canal de soporte.<br><br>**Escenario 2: Condiciones pendientes.** Given que un costo o prestación aún no está definido, When se consulta, Then se indica que está pendiente de definición sin mostrar un valor inventado. | EP10 |
+| US40 | Consultar planes de servicio | Como usuario, quiero comparar las condiciones de los planes, para elegir prestaciones según mis necesidades. | **Escenario 1: Comparación de planes.** Given que existen planes publicados, When el usuario los consulta, Then identifica precio, vigencia y funciones incluidas.<br><br>**Escenario 2: Elección independiente.** Given que el usuario tiene nivel Principiante o Experto, When consulta los planes, Then puede compararlos sin recibir una suscripción automática por su nivel. | EP11 |
+| US41 | Gestionar la suscripción del servicio | Como usuario, quiero conocer y modificar el estado de mi suscripción, para controlar prestaciones opcionales. | **Escenario 1: Suscripción confirmada.** Given que una operación comercial fue verificada en el entorno de prueba, When se confirma la suscripción, Then su vigencia y prestaciones se aplican una sola vez y se muestran en la cuenta.<br><br>**Escenario 2: Cancelación o vencimiento.** Given que el usuario cancela o la suscripción vence, When se actualiza el plan, Then se informa el cambio de prestaciones sin bloquear la detención del riego ni modificar los límites locales. | EP11 |
+| TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | **Escenario 1: Telemetría aceptada.** Given que llega un POST autenticado con identificadores, fecha, unidades y valores válidos, When se procesa, Then se guarda y responde 201; una repetición idéntica responde 200 sin duplicar el registro.<br><br>**Escenario 2: Telemetría rechazada.** Given que el contenido es inválido o las credenciales no autorizan el envío, When se recibe, Then responde 422, 401 o 403 según corresponda y los datos no se utilizan para controlar el riego. | EP03 |
+| TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | **Escenario 1: Orden aceptada.** Given que una solicitud autorizada contiene un commandId y vencimiento válidos, When se acepta, Then responde 202 y permite consultar el estado de la orden.<br><br>**Escenario 2: Orden repetida.** Given que se reenvía el mismo commandId, When el contenido coincide, Then se devuelve su estado sin repetir la acción; si el contenido cambia, se responde 409. | EP04 |
+| TS03 | Validar el contrato de recomendaciones | Como desarrollador, quiero validar entradas y salidas del servicio de IA, para integrar recomendaciones sin delegar el control del actuador. | **Escenario 1: Respuesta válida.** Given que el servicio recibe una solicitud válida, When devuelve una propuesta dentro del tiempo permitido, Then se verifican acción, explicación y vigencia antes de guardarla.<br><br>**Escenario 2: Respuesta inválida.** Given que la respuesta incumple el contrato o supera el tiempo permitido, When se procesa, Then se registra el fallo y se informa indisponibilidad sin emitir órdenes de riego. | EP09 |
+| TS04 | Publicar y consumir eventos persistentes | Como desarrollador, quiero eventos persistentes con consumidores idempotentes, para construir el historial sin perder ni duplicar ciclos. | **Escenario 1: Evento publicado.** Given que una operación y su evento quedan guardados en una transacción, When se publica desde outbox, Then conserva su eventId y el consumidor actualiza el historial una sola vez.<br><br>**Escenario 2: Evento repetido.** Given que un reinicio provoca la reentrega del evento, When el consumidor reconoce su identificador, Then evita duplicar los registros. | EP07 |
+| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | **Escenario 1: Recorrido integrado.** Given que los productos están disponibles, When se recorre la landing, la web y la aplicación móvil, Then mantienen una experiencia coherente y las aplicaciones utilizan los contratos de la API propia.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisan los productos, When se comprueba su implementación, Then la landing utiliza HTML, CSS y JavaScript; la web utiliza Vue con TypeScript y Material Design; Android utiliza Kotlin; y la API utiliza NestJS con TypeScript. | EP10 |
+| TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | **Escenario 1: Pronóstico normalizado.** Given que el proveedor devuelve una respuesta válida, When el adaptador la procesa, Then normaliza ubicación, unidades, hora de obtención y vigencia.<br><br>**Escenario 2: Fallo del proveedor.** Given que ocurre un error o se supera el tiempo de espera, When se consulta el servicio, Then se informa indisponibilidad sin bloquear el control local. | EP05 |
+| TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | **Escenario 1: Dispositivo integrado.** Given que se dispone del controlador, sensores, alimentación y actuador, When se integran y prueban, Then se obtienen lecturas calibradas y se ejecuta un ciclo dentro de los límites definidos.<br><br>**Escenario 2: Condiciones insuficientes.** Given que falta un componente necesario o una lectura válida, When se evalúa el riego automático, Then se informa el problema y se impide iniciar el ciclo. | EP03 |
+| TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | **Escenario 1: Cambio de experiencia.** Given que una cuenta tiene dispositivos asociados, When cambia su nivel de experiencia, Then conserva los mismos permisos y propiedades.<br><br>**Escenario 2: Recurso ajeno.** Given que una solicitud intenta consultar o controlar una unidad de otra cuenta, When se verifica la autorización, Then se rechaza antes de devolver información o publicar una orden. | EP01 |
+| TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | **Escenario 1: Procedencia registrada.** Given que se guarda una lectura o un consumo, When se persiste, Then incluye fecha, método y versión de calibración cuando corresponde, junto con los datos necesarios para reproducir el cálculo.<br><br>**Escenario 2: Registro ausente.** Given que falta una medición, When se agrega el consumo de un periodo, Then se informa la cobertura incompleta sin sustituir la ausencia por cero. | EP07 |
+| TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | **Escenario 1: Corte local.** Given que existe un ciclo activo, When alcanza su duración máxima o una condición de corte, Then el controlador desactiva el actuador sin depender de internet.<br><br>**Escenario 2: Reinicio o fallo.** Given que ocurre un reinicio, una lectura inválida o falta una configuración válida, When se evalúa la operación, Then el actuador permanece apagado y no se reejecutan órdenes anteriores. | EP04 |
+| TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | **Escenario 1: Entrega identificable.** Given que se prepara una entrega, When se revisan sus repositorios, Then existen documentación, contratos, historial de cambios y referencias de versión.<br><br>**Escenario 2: Cambio integrado.** Given que se incorpora una modificación, When se registra en el repositorio, Then sigue el flujo GitFlow acordado y utiliza Conventional Commits en inglés. | EP10 |
+| TS12 | Aislar IA del control físico | Como desarrollador, quiero que la IA solo produzca propuestas estructuradas, para impedir que una respuesta del modelo active directamente el riego. | **Escenario 1: Propuesta revisada.** Given que la IA genera una propuesta, When se procesa, Then requiere validación, aceptación del usuario y comprobación de límites antes de originar una orden.<br><br>**Escenario 2: Acceso restringido.** Given que el servicio de IA intenta publicar una orden directamente, When se verifica su acceso al broker, Then se rechaza porque no dispone de credenciales ni permisos de control. | EP09 |
+| TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | **Escenario 1: Idioma configurable.** Given que no existe una preferencia guardada, When se utiliza el producto, Then se muestra inglés en_US y se permite seleccionar español es_419 sin modificar identificadores ni unidades; los mensajes y la documentación de API siguen la política de idioma establecida.<br><br>**Escenario 2: Interacción accesible.** Given que se utilizan teclado o tecnologías de asistencia, When se recorren los controles, Then existen etiquetas, foco y semántica accesibles, y los estados no dependen únicamente del color. | EP10 |
 
-### 3.2. Impact Mapping
+### 3.3. Impact Mapping
 
-Usuario: Horticultor Urbano
+Usuario: Usuario Principiante
 <div align="center">
 
   <img src="image/Impact Map — Lucía Ramírez.png" alt="Diagrama" width="600">
 
 </div>
-Usuario: Micro-Agricultor Periurbano
+Usuario: Usuario Experto
 <div align="center">
 
   <img src="image/Impact Map — Carlos Mendoza.png" alt="Diagrama" width="600">
 
 </div>
 
-### 3.3. Product Backlog
+### 3.4. Product Backlog
 
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:-----:|:-------------:|--------|-------------|:------------:|
-| 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, Quiero crear una cuenta indicando mi tipo de perfil, Para acceder a las funcionalidades de monitoreo y control de riego de AquaSave. | 3 |
-| 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, Quiero iniciar sesión con mis credenciales, Para acceder a mi dashboard y datos de mis cultivos. | 2 |
-| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, Quiero registrarme o iniciar sesión con mi cuenta de Google, Para acceder a AquaSave sin crear credenciales nuevas. | 3 |
-| 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, Quiero restablecer mi contraseña mediante mi correo, Para recuperar el acceso a mi cuenta sin perder mis datos. | 2 |
-| 5 | US05 | Cerrar sesión | Como usuario autenticado, Quiero cerrar sesión desde la app, Para proteger mi cuenta cuando uso un dispositivo compartido. | 1 |
-| 6 | US06 | Configurar perfil de horticultor urbano | Como horticultor urbano, Quiero configurar mi perfil indicando tipo de espacio y cultivos, Para que AquaSave personalice los umbrales de humedad según mi huerto. | 3 |
-| 7 | US07 | Configurar perfil de micro-agricultor periurbano | Como micro-agricultor periurbano, Quiero configurar mi perfil indicando el tamaño de mi parcela y tipo de cultivos, Para recibir parámetros de riego adecuados a mi situación productiva. | 3 |
-| 8 | US08 | Editar información del perfil | Como usuario registrado, Quiero actualizar mis datos de perfil en cualquier momento, Para mantener la información de mis cultivos siempre actualizada. | 2 |
-| 9 | US32 | Vincular dispositivo IoT ESP32 desde la app | Como usuario nuevo, Quiero conectar mi dispositivo ESP32 mediante un proceso guiado, Para comenzar a recibir datos de mis cultivos sin conocimientos técnicos. | 5 |
-| 10 | US33 | Configurar umbrales del sensor desde la app | Como usuario, Quiero ajustar los umbrales de humedad y temperatura desde la app, Para personalizar cuándo el sistema considera que el suelo está seco, óptimo o saturado. | 3 |
-| 11 | US34 | Gestionar múltiples dispositivos IoT | Como micro-agricultor con varias zonas de cultivo, Quiero registrar y gestionar más de un dispositivo ESP32, Para monitorear diferentes sectores de mi parcela desde una sola cuenta. | 5 |
-| 12 | US09 | Ver humedad del suelo en tiempo real | Como usuario, Quiero visualizar el nivel de humedad del suelo medido por el sensor ESP32, Para saber si mis cultivos necesitan agua antes de regar. | 5 |
-| 13 | US10 | Ver temperatura del suelo y ambiente | Como usuario, Quiero visualizar la temperatura del suelo y del ambiente registrada por los sensores, Para tomar decisiones de riego según las condiciones térmicas actuales. | 3 |
-| 14 | US11 | Ver caudal de agua durante el riego | Como usuario, Quiero visualizar el caudal de agua que fluye durante un ciclo de riego, Para conocer el consumo real y detectar posibles fugas o bloqueos. | 3 |
-| 15 | US12 | Ver estado de conexión del dispositivo IoT | Como usuario, Quiero saber en todo momento si mi dispositivo ESP32 está conectado, Para confiar en que los datos mostrados son actuales y confiables. | 2 |
-| 16 | US13 | Activar el riego manualmente desde la app | Como usuario, Quiero activar el riego de mis cultivos desde mi celular, Para suministrar agua de forma inmediata sin estar físicamente en el huerto o parcela. | 5 |
-| 17 | US14 | Detener el riego manualmente desde la app | Como usuario, Quiero detener el riego en curso desde mi celular, Para evitar el desperdicio de agua cuando el suelo ya alcanzó el nivel óptimo. | 3 |
-| 18 | US15 | Configurar umbrales de humedad para riego automático | Como usuario, Quiero definir los niveles mínimo y máximo de humedad del suelo, Para que el sistema active o detenga el riego automáticamente sin intervención manual. | 5 |
-| 19 | US16 | Programar horarios de riego | Como usuario, Quiero programar horarios fijos de riego por día y hora, Para automatizar el suministro de agua en momentos convenientes. | 3 |
-| 20 | US17 | Consultar pronóstico del clima desde la app | Como usuario, Quiero ver el pronóstico climático de los próximos días en la app, Para anticipar lluvias y evitar regar innecesariamente. | 5 |
-| 21 | US18 | Pausar el riego automático ante lluvia prevista | Como usuario, Quiero que el sistema pause el riego automático cuando se pronostique lluvia, Para no desperdiciar agua cuando la naturaleza va a regar por mí. | 5 |
-| 22 | US19 | Configurar umbral de lluvia para pausa automática | Como usuario, Quiero definir desde qué probabilidad de lluvia el sistema debe pausar el riego, Para ajustar la sensibilidad climática según mis preferencias y tipo de cultivo. | 3 |
-| 23 | US20 | Recibir alerta de humedad crítica baja | Como usuario, Quiero recibir una notificación push cuando la humedad del suelo esté demasiado baja, Para actuar a tiempo y evitar que mis cultivos se sequen. | 3 |
-| 24 | US21 | Recibir alerta de humedad excesiva | Como usuario, Quiero recibir una notificación cuando la humedad del suelo esté demasiado alta, Para detener el riego y evitar el encharcamiento o pudrición de raíces. | 3 |
-| 25 | US22 | Recibir alerta de temperatura extrema | Como usuario, Quiero recibir una notificación cuando la temperatura sea extrema, Para tomar medidas de protección sobre mis cultivos. | 3 |
-| 26 | US23 | Recibir alerta de riego innecesario | Como usuario, Quiero recibir una alerta cuando el sistema detecte riego con el suelo ya húmedo, Para identificar y corregir configuraciones que generen desperdicio. | 3 |
-| 27 | US28 | Ver resumen del estado de cultivos en el dashboard | Como usuario, Quiero ver en una sola pantalla el estado actual de mis cultivos, Para tener una visión rápida sin necesidad de navegar entre secciones. | 5 |
-| 28 | US29 | Acceder rápidamente al control de riego desde el dashboard | Como usuario, Quiero tener un botón de control del riego visible en el dashboard, Para activar o detener el suministro de agua con el menor número de pasos posible. | 3 |
-| 29 | US30 | Ver notificaciones recientes en el dashboard | Como usuario, Quiero ver las últimas alertas directamente en el dashboard, Para estar informado del estado de mis cultivos sin revisar cada sección por separado. | 2 |
-| 30 | US31 | Ver métricas de ahorro resumidas en el dashboard | Como usuario, Quiero ver un indicador del agua ahorrada esta semana en el dashboard, Para verificar el valor del sistema de forma inmediata. | 3 |
-| 31 | US24 | Ver historial de riegos realizados | Como usuario, Quiero consultar el historial de todos los ciclos de riego ejecutados, Para revisar cuándo se regó, por cuánto tiempo y cuánta agua se consumió. | 3 |
-| 32 | US25 | Ver consumo de agua diario, semanal y mensual | Como usuario, Quiero ver gráficas de consumo hídrico agrupadas por día, semana y mes, Para entender mis patrones de uso del agua y detectar oportunidades de ahorro. | 5 |
-| 33 | US26 | Ver métricas de ahorro hídrico | Como usuario, Quiero ver cuánta agua he ahorrado gracias a AquaSave comparado con el riego manual, Para verificar el impacto real del sistema en mi consumo. | 5 |
+| 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
+| 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | 3 |
+| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | 5 |
+| 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | 3 |
+| 5 | US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | 2 |
+| 6 | US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | 5 |
+| 7 | US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | 5 |
+| 8 | US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | 3 |
+| 9 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | 5 |
+| 10 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | 8 |
+| 11 | TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | 5 |
+| 12 | US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | 8 |
+| 13 | US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | 5 |
+| 14 | US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | 5 |
+| 15 | US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | 5 |
+| 16 | US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | 3 |
+| 17 | US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | 3 |
+| 18 | TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | 3 |
+| 19 | US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | 3 |
+| 20 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | 8 |
+| 21 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | 8 |
+| 22 | US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | 8 |
+| 23 | US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | 5 |
+| 24 | US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | 8 |
+| 25 | US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | 5 |
+| 26 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | 5 |
+| 27 | US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | 3 |
+| 28 | US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | 3 |
+| 29 | US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | 5 |
+| 30 | US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | 3 |
+| 31 | US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | 3 |
+| 32 | US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | 3 |
+| 33 | US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | 3 |
+| 34 | US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | 5 |
+| 35 | US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | 3 |
+| 36 | US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | 3 |
+| 37 | TS04 | Publicar y consumir eventos persistentes | Como desarrollador, quiero eventos persistentes con consumidores idempotentes, para construir el historial sin perder ni duplicar ciclos. | 5 |
+| 38 | US24 | Consultar historial de riego | Como usuario, quiero consultar ciclos y resultados por unidad, para revisar qué ocurrió durante el cuidado. | 5 |
+| 39 | US25 | Consultar consumo por periodo | Como usuario, quiero consultar consumo diario, semanal y mensual, para comparar patrones de uso del agua. | 5 |
+| 40 | US26 | Comparar consumo con una línea base | Como usuario, quiero comparar el consumo con una referencia documentada, para evaluar posibles reducciones. | 5 |
+| 41 | US30 | Consultar un resumen de consumo | Como usuario, quiero revisar un resumen de consumo y cobertura, para interpretar rápidamente mis registros. | 3 |
+| 42 | TS03 | Validar el contrato de recomendaciones | Como desarrollador, quiero validar entradas y salidas del servicio de IA, para integrar recomendaciones sin delegar el control del actuador. | 8 |
+| 43 | TS12 | Aislar IA del control físico | Como desarrollador, quiero que la IA solo produzca propuestas estructuradas, para impedir que una respuesta del modelo active directamente el riego. | 5 |
+| 44 | US34 | Consultar una recomendación de riego | Como usuario, quiero recibir una recomendación apoyada por IA con explicación, para evaluar el cuidado de mi unidad. | 8 |
+| 45 | US35 | Decidir sobre una recomendación | Como usuario, quiero aceptar o descartar una recomendación, para conservar el control de mis decisiones. | 5 |
+| 46 | US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | 3 |
+| 47 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
+| 48 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
+| 49 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
+| 50 | TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | 8 |
+| 51 | TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | 5 |
+| 52 | TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | 3 |
+| 53 | US40 | Consultar planes de servicio | Como usuario, quiero comparar las condiciones de los planes, para elegir prestaciones según mis necesidades. | 3 |
+| 54 | US41 | Gestionar la suscripción del servicio | Como usuario, quiero conocer y modificar el estado de mi suscripción, para controlar prestaciones opcionales. | 5 |
 
 
 ## Capítulo IV: Solution Software Design
