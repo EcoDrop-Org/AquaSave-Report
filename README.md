@@ -150,47 +150,58 @@
 
 # Student Outcome
 
-El curso contribuye al cumplimiento del Student Outcome ABET: **ABET – EAC - Student Outcome 5**
+El curso contribuye al cumplimiento del Student Outcome ABET:
 
-**Criterio:** *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos.*
+ABET – EAC - Student Outcome 3
 
-En el siguiente cuadro se describen las acciones realizadas y los enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 5.
+Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-**Objetivo general:** Desarrollar, como equipo EcoDrop, AquaSave, una solución IoT para optimizar el consumo hídrico en huertos domésticos y parcelas periurbanas. Buscamos diseñar e implementar una plataforma tecnológica basada en el enfoque Domain-Driven Design (DDD), con una arquitectura moderna compuesta por una aplicación móvil/web en Flutter y un backend orientado a microservicios, integrada progresivamente con dispositivos ESP32 para el monitoreo y control inteligente del riego.
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
 
-| Criterio específico | Acciones realizadas | Conclusiones |
+| Criterio específico | Acciones y responsabilidades de TB1 | Conclusiones |
 | :--- | :--- | :--- |
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta.** | **Gutierrez Condo, Maylhy Olinda**<br><br>*AV1*<br>Lideró el desarrollo de los diagramas de componentes y código del bounded context, así como los diagramas de clases del dominio y el diseño de base de datos, coordinando con el equipo para mantener coherencia arquitectónica.<br><br>**Roca Tineo, Steven Mathew**<br><br>*AV1*<br>Como Team Leader, lideró la definición de User Stories, Impact Mapping y Product Backlog, y tomó iniciativa en el diseño de las capas de dominio, interfaz, aplicación e infraestructura del sistema.<br><br>**Rodríguez Rodríguez, Luis Piero**<br><br>*AV1*<br>Lideró la realización de entrevistas con usuarios y la elaboración de los diagramas de contenedores y despliegue de la arquitectura de software, aportando una visión técnica estructurada al equipo.<br><br>**Román Pajuelo, Luis Gustavo**<br><br>*AV1*<br>Lideró el Needfinding, el Ubiquitous Language, el Context Mapping y los diagramas de arquitectura a nivel de sistema, estableciendo las bases del diseño estratégico del proyecto.<br><br>**Luyo Correa, Sandra Luyo**<br><br>*AV1*<br>Lideró el análisis competitivo, el Big Picture EventStorming y el Strategic-Level Domain-Driven Design, incluyendo el Candidate Context Discovery, Domain Message Flows y Bounded Context Canvases, orientando al equipo en la definición del dominio. | **_AV1:_**<br><br>**Objetivo específico:** Promover el liderazgo distribuido entre los integrantes para organizar las actividades iniciales del proyecto, como el diseño de la arquitectura, el modelado del dominio y la documentación base.<br><br>**Conclusión:** Todos los miembros del equipo EcoDrop ejercieron liderazgo conjunto en distintas etapas del proyecto, distribuyendo responsabilidades de manera efectiva según sus fortalezas. La colaboración permitió alcanzar los objetivos del primer entregable, evidenciando la capacidad del equipo para funcionar de manera integrada y equitativa en el desarrollo de AquaSave. |
-| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Gutierrez Condo, Maylhy Olinda**<br><br>*AV1*<br>Planificó y cumplió a tiempo las tareas de arquitectura de componentes, código y base de datos del bounded context, contribuyendo a un entorno de trabajo ordenado y colaborativo.<br><br>**Roca Tineo, Steven Mathew**<br><br>*AV1*<br>Estableció metas claras para el equipo desde su rol de Team Leader, coordinando la planificación del backlog y el diseño por capas, fomentando la participación de todos los integrantes.<br><br>**Rodríguez Rodríguez, Luis Piero**<br><br>*AV1*<br>Facilitó un entorno inclusivo durante la fase de entrevistas y aportó con los diagramas de contenedores y despliegue, cumpliendo sus objetivos en tiempo y forma.<br><br>**Román Pajuelo, Luis Gustavo**<br><br>*AV1*<br>Promovió la planificación colaborativa a través del Needfinding y el Context Mapping, estableciendo objetivos arquitectónicos claros que guiaron el trabajo del resto del equipo.<br><br>**Luyo Correa, Sandra Luyo**<br><br>*AV1*<br>Fomentó la participación activa del equipo en las sesiones de EventStorming y Domain-Driven Design, definiendo junto al grupo los bounded contexts y flujos de mensajes del dominio de AquaSave. | **_AV1:_**<br><br>**Objetivo específico:** Fomentar la participación de todo el equipo en las decisiones iniciales del sistema, estableciendo metas claras en diseño, modelado del dominio y documentación, promoviendo un ambiente inclusivo de trabajo.<br><br>**Conclusión:** El equipo EcoDrop creó un ambiente de colaboración donde se respetaron las contribuciones de todos los integrantes. Las metas y tareas fueron claramente definidas y cumplidas a tiempo en este primer entregable, gracias a una comunicación efectiva y una planificación organizada que permitió avanzar con solidez en el desarrollo de la solución AquaSave. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Gutierrez Condo, Maylhy Olinda:** Explicar la propuesta de EcoDrop, la problemática del riego doméstico y las características de los usuarios principiantes y expertos, utilizando ejemplos de su rutina de cuidado.<br><br>**Roca Tineo, Steven Mathew:** Presentar los supuestos e hipótesis Lean UX, sustentar la comparación de competidores y conducir las preguntas de investigación con un lenguaje comprensible para los participantes.<br><br>**Rodríguez Rodríguez, Luis Piero:** Explicar las necesidades de los usuarios, los escenarios de interacción y la prioridad de las historias, relacionando cada funcionalidad con el beneficio que aporta.<br><br>**Román Pajuelo, Luis Gustavo:** Sustentar el propósito del diseño, los escenarios de calidad y la selección de drivers, explicando las decisiones técnicas y sus consecuencias para el usuario.<br><br>**Luyo Correa, Sandra Luyo:** Exponer la delimitación de los bounded contexts y las vistas de arquitectura, describiendo las responsabilidades y la comunicación entre los componentes. | **TB1:** La comunicación oral del proyecto requiere relacionar las necesidades domésticas con las decisiones de diseño. La distribución de temas permite abordar el problema, la experiencia de usuario y la arquitectura con un lenguaje adecuado para participantes, equipo técnico y docente. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Gutierrez Condo, Maylhy Olinda:** Redactar Startup Profile, los antecedentes y la problemática, los objetivos y la descripción de los segmentos, manteniendo coherencia entre el problema y la propuesta de valor.<br><br>**Roca Tineo, Steven Mathew:** Desarrollar los Problem Statements, Assumptions e Hypothesis Statements, el análisis competitivo y el diseño de entrevistas, empleando preguntas y criterios vinculados con el cuidado doméstico.<br><br>**Rodríguez Rodríguez, Luis Piero:** Documentar las necesidades y tareas de los usuarios, redactar historias y criterios de aceptación y organizar el Product Backlog según el valor del producto.<br><br>**Román Pajuelo, Luis Gustavo:** Elaborar Design Purpose, los inputs de ADD, los escenarios de calidad, las restricciones y el Architectural Drivers Backlog, justificando las decisiones mediante criterios verificables.<br><br>**Luyo Correa, Sandra Luyo:** Documentar EventStorming, el descubrimiento de contextos, los flujos del dominio y las descripciones de arquitectura, revisando la consistencia de términos, límites y responsabilidades. | **TB1:** La documentación escrita necesita conectar problema, necesidades, requisitos y arquitectura. Una terminología común, criterios de aceptación claros y decisiones justificadas permiten que diferentes audiencias comprendan el alcance de AquaSave y revisen su diseño. |
+
 
 ## Capítulo I: Introducción
 
 ### 1.1. Startup Profile
 
 #### 1.1.1. Descripción de la Startup
-EcoDrop es una startup tecnológica enfocada en el desarrollo de soluciones IoT para la gestión inteligente del riego en huertos urbanos y parcelas agrícolas de pequeña escala. Esta iniciativa nace como respuesta a la crítica ineficiencia en el uso del agua dentro del sector agrícola peruano, donde la falta de tecnificación genera un desperdicio significativo del recurso hídrico.
+EcoDrop es una iniciativa tecnológica formada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas. Su propósito es desarrollar productos digitales que ayuden a las personas a comprender las condiciones de sus plantas y a organizar el riego en espacios domésticos mediante información verificable y herramientas accesibles.
 
-Según Ybánez (2023), el sector agrario en Perú emplea aproximadamente el 80% de los recursos hídricos disponibles, pero presenta solo una eficiencia promedio nacional del 35% (párr. 5). Asimismo, Vinelli (2021) señala que "la eficiencia del agua de riego es apenas del 35 %, es decir, existe un alto desperdicio de agua, debido, entre varias razones, a su deficiente aplicación a los predios y el mal estado de conservación de las redes de conducción y distribución" (párr. 4). Esta realidad evidencia la urgente necesidad de implementar herramientas tecnológicas accesibles que permitan optimizar el consumo de agua y brindar a los pequeños productores y horticultores urbanos un control preciso sobre el riego de sus cultivos.
-
-Fundada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, EcoDrop busca democratizar el acceso a tecnologías de agricultura inteligente, conectando dispositivos IoT con plataformas digitales que faciliten el monitoreo en tiempo real y la toma de decisiones basada en datos para el cuidado eficiente de los cultivos.
+EcoDrop orienta su propuesta a viviendas con plantas ornamentales, aromáticas o pequeños espacios de cultivo para autoconsumo. AquaSave adaptará la orientación al conocimiento práctico de cada usuario y ofrecerá información que facilite el cuidado cotidiano, la supervisión durante ausencias y el uso responsable del agua.
 
 **Producto principal**
 
-Su producto principal es AquaSave, un sistema de riego inteligente compuesto por un dispositivo IoT basado en ESP32 con sensores de humedad del suelo, temperatura y caudal, un RESTful API de desarrollo interno que gestiona la lógica de negocio y cruza los datos locales con el pronóstico climático mediante servicios externos, un API que comunica el dispositivo con la nube, una aplicación web y una aplicación móvil desarrollada en Flutter que permiten al usuario monitorear el estado de sus cultivos, visualizar métricas de ahorro hídrico y controlar el sistema de riego en tiempo real desde cualquier lugar. Además, incluye un Landing Page que presenta el modelo de negocio y permite a los visitantes conocer las características de la solución y acceder a las aplicaciones.
+AquaSave propone combinar un kit doméstico basado en ESP32, sensores compatibles, un actuador de riego, servicios internos y aplicaciones de acceso. La lectura de humedad se interpreta según la calibración disponible; la temperatura corresponde al ambiente cuando se utiliza DHT22. El kit se asocia a una unidad de riego, entendida como una planta o conjunto compatible que recibe la misma acción de suministro.
 
-De esta manera, AquaSave no solo automatiza el riego activando o deteniendo el suministro de agua según las condiciones reales del suelo y el clima, sino que también empodera a los usuarios con información clara y oportuna para gestionar sus recursos hídricos de forma eficiente y sostenible.
+El producto permitirá consultar lecturas e historial, configurar umbrales, iniciar o detener ciclos y recibir alertas. La inteligencia artificial se plantea como apoyo para contextualizar recomendaciones y explicar los datos disponibles. La decisión automática por umbrales seguirá una política determinista validada, independiente del modelo de IA.
 
 <p align="center">
   <img src="image/AquaSaveLogo.png" alt="logo" width="350">
 </p>
 
-**Visión**
-
-Ser la plataforma líder en Perú en soluciones IoT accesibles para la gestión inteligente del riego, reduciendo el desperdicio de agua en huertos urbanos y parcelas agrícolas de pequeña escala mediante tecnología al alcance de todos.
-
 **Misión**
 
-Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que permitan a horticultores urbanos y micro-agricultores periurbanos optimizar el uso del agua en sus cultivos, promoviendo prácticas de riego eficientes a través de la integración de dispositivos IoT, datos climáticos y plataformas móviles de monitoreo en tiempo real.
+Brindar herramientas de monitoreo, orientación y control que ayuden a usuarios domésticos con diferentes niveles de experiencia a cuidar sus plantas, comprender sus necesidades de riego y utilizar el agua de manera informada.
+
+**Visión**
+
+Ser una solución de referencia para el cuidado doméstico de plantas en el mercado peruano, reconocida por su facilidad de uso, transparencia de la información y capacidad de acompañar el aprendizaje de sus usuarios.
+
+**Valores**
+
+- **Claridad:** comunicar lecturas, recomendaciones y limitaciones con términos comprensibles.
+- **Confiabilidad:** mantener límites locales de operación y mostrar el estado confirmado del dispositivo.
+- **Inclusión:** permitir distintos niveles de ayuda sin exigir formación técnica o profesional.
+- **Sostenibilidad:** evaluar el uso del agua mediante mediciones o estimaciones identificadas.
+- **Autonomía:** conservar el control del usuario sobre sus configuraciones y decisiones.
+
+**Modelo de negocio propuesto**
+
+Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanzado. La disposición de pago, el costo de soporte, la instalación y el mantenimiento se investigarán antes de definir precios. La condición de principiante o experto no equivale a un plan comercial. El monitoreo básico, la detención y las protecciones locales no deben depender de una suscripción activa.
 
 #### 1.1.2. Perfiles de integrantes del equipo
 
@@ -218,85 +229,149 @@ Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que 
 
 #### 1.2.1. Antecedentes y problemática
 
-**What – ¿Cuál es el problema?**
+#### 1.2.1. Antecedentes y problemática
 
-En el Perú, el sector agrícola consume el 85.9% del agua disponible en el país según el Diagnóstico Nacional del Agua de la ANA (Arauco Livia, 2025); sin embargo, la eficiencia del agua de riego es apenas del 35%, lo que significa que existe un alto desperdicio del recurso hídrico (Vinelli, 2021). Esta ineficiencia afecta de manera desproporcionada a los pequeños productores: según la Encuesta Nacional Agropecuaria del INEI (2022), solo el 7% de los pequeños y medianos productores utiliza sistemas de riego tecnificado, mientras que entre los grandes productores la cifra asciende al 53% (Arauco Livia, 2025). Para los horticultores urbanos y micro-agricultores periurbanos, la situación es aún más precaria, ya que el riego se realiza de forma completamente manual, sin acceso a datos sobre las condiciones reales del suelo ni del clima, generando un uso excesivo o insuficiente del agua que afecta tanto la salud de los cultivos como la economía familiar.
+El cuidado de plantas en viviendas requiere adaptar el riego a las condiciones de cada planta. La University of Maryland Extension (2023) señala que regar siguiendo únicamente un calendario puede proporcionar agua en exceso o en cantidad insuficiente, debido a las diferencias entre sustratos y condiciones ambientales. Por ello, el seguimiento de la humedad constituye un aspecto relevante para orientar el cuidado doméstico.
 
-**When – ¿Cuándo sucede el problema?**
+Las tecnologías de monitoreo ofrecen alternativas para apoyar esta actividad. Rojas-Rengifo et al. (2025) desarrollaron un sistema para plantas de interior que integra sensores y una aplicación móvil para consultar condiciones ambientales y recibir notificaciones. Su investigación, realizada durante diez semanas, constituye un antecedente del uso de dispositivos conectados para facilitar el seguimiento de plantas en espacios domésticos.
 
-El problema se manifiesta de forma continua a lo largo de todo el año, pero se intensifica durante las temporadas de verano y los períodos de sequía, cuando la demanda hídrica de los cultivos aumenta significativamente y la disponibilidad del recurso disminuye. Zapana Churata (2018) evidenció que el déficit hídrico para cultivos como la alfalfa se presenta durante seis meses al año, particularmente de enero a febrero y de septiembre a diciembre, períodos en los que la evapotranspiración es mayor. Además, el problema ocurre diariamente cada vez que un horticultor o agricultor riega sus plantas sin conocer el nivel real de humedad del suelo, desperdiciando agua en momentos donde el riego no era necesario o, por el contrario, dejando de regar cuando el suelo ya estaba en condiciones críticas.
+En este contexto, AquaSave se plantea como una solución dirigida a usuarios principiantes y expertos que necesitan orientación, monitoreo y control del riego de sus plantas.
 
-**Where – ¿Dónde ocurre el problema?**
+**What — ¿Cuál es el problema?**
 
-La problemática se presenta en todo el territorio peruano, con una paradoja hídrica particularmente grave: la vertiente del Pacífico, donde habita el 66% de la población, concentra apenas el 2.2% de los recursos hídricos nacionales (Arauco Livia, 2025). A nivel nacional, apenas el 20% de la superficie agrícola cuenta con riego tecnificado, y Vinelli (2021) señala que "solo el 12 % de los cultivos se riegan bajo sistemas de riego, mientras que el resto usa el riego por gravedad" (párr. 4). En las zonas urbanas de Lima, donde crece la tendencia de huertos domésticos en terrazas, patios y jardines, el riego se realiza de manera artesanal sin ningún tipo de tecnificación. Asimismo, en las áreas periurbanas de ciudades como Lima, Arequipa y Cusco, los micro-agricultores enfrentan limitaciones de infraestructura hídrica que dificultan la adopción de prácticas de riego eficientes.
+El problema consiste en decidir cuándo regar sin contar con información suficiente sobre las condiciones del sustrato y las necesidades de la planta. Shaughnessy y Pertuit (2024) explican que tanto el exceso como la falta de agua pueden deteriorar las raíces y producir síntomas similares, lo que dificulta interpretar correctamente el estado de una planta mediante observaciones aisladas.
 
-**Who – ¿Quiénes están involucrados?**
+Para AquaSave, esta problemática comprende dos necesidades: facilitar la interpretación del riego a quienes están aprendiendo y proporcionar seguimiento a quienes desean gestionar el cuidado con mayor detalle.
 
-Los principales afectados son los horticultores urbanos, personas que mantienen huertos domésticos en sus viviendas y que carecen de herramientas para gestionar el riego de forma eficiente. También se ven impactados los micro-agricultores periurbanos, pequeños productores con parcelas de menos de 5 hectáreas que dependen del riego para su sustento. Según el INEI (2017), en el Perú existían más de 2 millones 244 mil pequeñas y medianas unidades agropecuarias, de las cuales el 70.4% son conducidas por hombres y el 29.6% por mujeres, con un 53.5% de productores entre 40 y 64 años de edad. De este grupo, solo el 11.4% recibió algún tipo de capacitación y apenas el 5.7% recibió asistencia técnica, lo que refleja una importante brecha en el acceso al conocimiento tecnológico.
+**When — ¿Cuándo sucede el problema?**
 
-**Why – ¿Por qué ocurre esta situación?**
+La necesidad de ajustar el riego aparece durante el cuidado cotidiano y cuando cambian las condiciones de crecimiento. Según Shaughnessy y Pertuit (2024), una ubicación cálida, seca y soleada requiere una frecuencia de riego diferente de un ambiente fresco y con poca luz.
 
-Las causas son múltiples. En primer lugar, la falta de infraestructura de riego tecnificado: Vinelli (2021) señala que de los 55,237 kilómetros de canales de riego evaluados en el Perú, solo el 15% están revestidos, lo que provoca pérdidas enormes por filtración y evaporación. En segundo lugar, según Ybánez (2023) se pierde hasta el 45% del agua que se canaliza para el trabajo en tierras de cultivo debido al mal estado de los canales de riego. En tercer lugar, la baja capacitación tecnológica de los productores, ya que según el INEI (2017) solo el 5.7% recibió asistencia técnica. Además, el costo de las soluciones existentes de agricultura inteligente resulta inaccesible para pequeños productores y horticultores domésticos. Finalmente, la ausencia de herramientas digitales que integren datos del suelo con información climática en tiempo real para la toma de decisiones de riego.
+También pueden producirse interrupciones en la rutina de cuidado. Killough et al. (2024) identifican el olvido del riego como una dificultad que motiva el desarrollo de sistemas de asistencia para plantas de interior. AquaSave considerará situaciones como viajes, jornadas prolongadas fuera de casa y cambios en la persona encargada del cuidado.
 
-**How – ¿En qué condiciones usarán el producto?**
+**Where — ¿Dónde ocurre el problema?**
 
-Los horticultores urbanos y micro-agricultores periurbanos que utilicen AquaSave lo harán desde entornos diversos. El dispositivo IoT basado en ESP32 estará instalado directamente en el huerto o parcela, conectado a sensores de humedad, temperatura y caudal, operando de forma autónoma y continua. Los usuarios accederán a la aplicación web o móvil desde sus smartphones o computadoras para monitorear en tiempo real las condiciones de sus cultivos, revisar el historial de consumo hídrico, recibir alertas cuando la humedad del suelo sea crítica y controlar manualmente el riego cuando lo consideren necesario. La interfaz deberá ser intuitiva y accesible, considerando que según el INEI (2017), el 52.9% de los pequeños productores tienen solo educación primaria.
+El proyecto se enfocará inicialmente en viviendas de Lima Metropolitana que cuenten con plantas en interiores, balcones, patios, terrazas o jardines pequeños. Se contemplarán plantas en macetas y unidades de riego domésticas.
 
-**How Much – ¿Cuánto cuesta no resolverlo?**
+La configuración de cada unidad considerará su ubicación y exposición al entorno. Esta decisión responde a que las necesidades de riego dependen, entre otros factores, de la localización de la planta, el recipiente y las características del sustrato (Shaughnessy & Pertuit, 2024).
 
-Los costos de no resolver este problema son significativos tanto a nivel económico como ambiental. Según Ybánez (2023), el sector agrario registra pérdidas diarias de hasta S/ 50 millones por problemas asociados a la gestión hídrica. A nivel global, la FAO advierte que para el 2050 habrá un 25% de déficit de agua, lo que afectaría directamente la producción de alimentos. Actualmente, a nivel nacional solo el 20% de la superficie agrícola cuenta con riego tecnificado (Arauco Livia, 2025), lo que implica que la gran mayoría de productores sigue desperdiciando recursos. En contraste, la implementación de sistemas de riego inteligente basados en IoT ha demostrado reducir el consumo de agua entre un 30% y un 50% en comparación con métodos tradicionales, sin afectar el rendimiento de los cultivos. Para un horticultor urbano, esto representa un ahorro directo en la factura de agua y una mejora sustancial en la salud de sus plantas; para un micro-agricultor periurbano, significa mayor productividad con menor inversión en recursos hídricos.
+**Who — ¿Quiénes están involucrados?**
 
-*Tabla 1\.* Brecha de acceso a riego tecnificado en Perú según tipo de productor (2022)
-<div align="center">
+AquaSave atenderá a dos segmentos:
 
-  <img src="image/tabla .png" alt="Diagrama" width="600">
+- **Usuarios principiantes:** personas que están iniciándose en el cuidado de plantas y buscan orientación para interpretar las condiciones del sustrato y decidir cuándo regar.
+- **Usuarios expertos:** personas con experiencia en el cuidado doméstico que buscan consultar registros, ajustar configuraciones y supervisar sus plantas durante ausencias.
 
-</div>
+La segmentación orientará la investigación y el diseño de la experiencia. El monitoreo mediante aplicaciones móviles, como el desarrollado por Rojas-Rengifo et al. (2025), ofrece un antecedente tecnológico para acercar información sobre las plantas a sus cuidadores. AquaSave explorará cómo presentar esa información según las necesidades de cada segmento.
 
-_Nota._ Adaptado de "Agricultura inteligente: un puente entre la justicia hídrica y la sostenibilidad empresarial en el Perú", por Arauco Livia, 2025, Infobae, basado en datos de la Encuesta Nacional Agropecuaria del INEI (2022).
+**Why — ¿Por qué ocurre esta situación?**
+
+Una causa es la aplicación de rutinas generales a plantas con condiciones diferentes. La University of Maryland Extension (2023) recomienda determinar la necesidad de agua mediante la evaluación del sustrato, en lugar de depender exclusivamente de una frecuencia fija.
+
+Otra dificultad es la interpretación de síntomas: una planta marchita no necesariamente necesita más agua, porque el daño radicular causado por el exceso también puede impedir su absorción (Shaughnessy & Pertuit, 2024). Estos antecedentes sustentan la necesidad de acompañar las observaciones con información contextualizada.
+
+**How — ¿En qué condiciones usarán el producto?**
+
+Actualmente, el cuidado puede apoyarse en la inspección del sustrato y en la comparación del peso de la maceta, métodos descritos por la University of Maryland Extension (2023). Estas prácticas requieren la participación presencial de la persona encargada.
+
+AquaSave complementará el cuidado mediante un dispositivo IoT y aplicaciones web y móvil. El usuario podrá consultar lecturas de humedad, revisar el historial, recibir alertas y solicitar ciclos de riego. La integración de sensores y visualización móvil tiene antecedentes en la investigación de Rojas-Rengifo et al. (2025).
+
+La solución requerirá energía y conectividad compatibles con el dispositivo para sus funciones remotas. Cada lectura mostrará su fecha de actualización y los ciclos de riego incorporarán límites locales de duración. La interfaz ofrecerá orientación comprensible para principiantes y acceso a configuraciones e historial para usuarios expertos.
+
+**How Much — ¿Cuánto cuesta no resolverlo?**
+
+El costo potencial comprende el agua empleada innecesariamente, el tiempo dedicado a revisar las plantas y los gastos de recuperación o reposición. La University of Maryland Extension (2023) identifica el riego excesivo e insuficiente como causas de pérdida de plantas domésticas.
+
+Respecto al uso del agua, Killough et al. (2024) compararon tres modalidades de cuidado y reportaron resultados preliminares favorables para una modalidad inteligente. Sin embargo, mantener estable la humedad del sustrato continuó siendo un desafío. Estos resultados justifican evaluar el consumo, pero no establecen un porcentaje de ahorro aplicable directamente a AquaSave.
+
+La magnitud del problema se determinará mediante entrevistas y registros del piloto. Se evaluarán el tiempo dedicado al cuidado, la frecuencia de incidentes de riego, el volumen de agua utilizado y los gastos reportados por los participantes. Esta información permitirá establecer una línea base para comparar los resultados de la solución.
+
+**Enunciado del problema**
+
+Los usuarios domésticos con distintos niveles de experiencia necesitan interpretar las condiciones de sus plantas y mantener un seguimiento del riego. La dependencia de rutinas generales, observaciones ocasionales y registros dispersos puede dificultar la adaptación del cuidado a cada unidad, especialmente durante ausencias. AquaSave buscará atender esta necesidad mediante información comprensible, historial y mecanismos de control.
+
+**Objetivo general**
+
+Diseñar y desarrollar una solución de software multicomponente que integre monitoreo IoT, control del riego y recomendaciones apoyadas por inteligencia artificial para facilitar el cuidado de plantas domésticas.
+
+**Objetivos específicos**
+
+1. Identificar las necesidades de orientación, monitoreo y seguimiento mediante entrevistas a usuarios principiantes y expertos.
+2. Diseñar una experiencia coherente entre la landing page, la aplicación web y la aplicación móvil.
+3. Desarrollar un dispositivo IoT que permita registrar condiciones del entorno y ejecutar ciclos de riego con límites definidos.
+4. Implementar mecanismos de vinculación y acceso para proteger los dispositivos y la información de cada usuario.
+5. Incorporar recomendaciones comprensibles que consideren los datos disponibles y su vigencia.
+6. Evaluar la usabilidad, confiabilidad y trazabilidad de la solución mediante escenarios medibles.
+7. Registrar el consumo de agua, diferenciando los valores medidos de los estimados, y compararlo con una línea base.
+
+**Alcance**
+
+La solución atenderá plantas domésticas y contemplará una unidad de riego por dispositivo. Permitirá consultar condiciones, controlar ciclos, configurar rutinas, recibir alertas y revisar el historial. El cuidado de parcelas productivas, la fertilización y el diagnóstico fitosanitario quedan fuera del alcance.
+
+La operación conectada requerirá una red compatible y energía estable. El dispositivo incorporará límites locales de duración para controlar los ciclos ante interrupciones de comunicación.
 
 
 #### 1.2.2. Lean UX Process
 
 ##### 1.2.2.1. Lean UX Problem Statements
 
-**Problem Statement 1 (Horticultores Urbanos):**
+**Problem Statement 1 — Usuarios principiantes**
 
-AquaSave ha sido diseñado para ayudar a horticultores urbanos a gestionar el riego de sus huertos domésticos de manera eficiente, mediante un sistema IoT que monitorea las condiciones del suelo en tiempo real e integra datos climáticos para automatizar el suministro de agua.
+AquaSave se propone ayudar a las personas que están iniciándose en el cuidado de plantas domésticas a comprender cuándo regar y cómo interpretar las condiciones del sustrato mediante monitoreo y orientación accesible.
 
-Hemos observado que las personas que mantienen huertos en sus hogares realizan el riego de forma manual y sin información objetiva sobre el estado real de la humedad del suelo. Esto genera un uso excesivo o insuficiente del agua, provocando el deterioro de las plantas, desperdicio del recurso hídrico y frustración por la falta de control sobre el proceso. Según Arauco Livia (2025), apenas el 20% de la superficie agrícola nacional cuenta con riego tecnificado, y en el ámbito doméstico esta cifra es prácticamente inexistente.
+La información visual puede resultar ambigua: Shaughnessy y Pertuit (2024) señalan que el exceso y la falta de agua pueden producir síntomas similares. Asimismo, la University of Maryland Extension (2023) explica que una rutina fija puede suministrar cantidades inadecuadas de agua y recomienda evaluar la necesidad de riego de cada planta.
 
-**¿Cómo podemos ofrecer a los horticultores urbanos una herramienta accesible e intuitiva que les permita monitorear y automatizar el riego de sus cultivos, optimizando el consumo de agua y mejorando la salud de sus plantas sin requerir conocimientos técnicos especializados?**
+A partir de estos antecedentes, planteamos que los principiantes pueden beneficiarse de una experiencia que relacione las lecturas con explicaciones y acciones comprensibles. Esta necesidad se contrastará mediante entrevistas y pruebas de interacción.
 
-**Problem Statement 2 (Micro-Agricultores Periurbanos):**
+**¿Cómo podemos ayudar a los usuarios principiantes a interpretar las condiciones de sus plantas y tomar decisiones de riego informadas mediante una herramienta accesible que no requiera conocimientos técnicos especializados?**
 
-AquaSave fue creado con el objetivo de brindar a los micro-agricultores periurbanos una solución IoT de bajo costo que les permita tecnificar el riego de sus parcelas, accediendo a datos en tiempo real sobre humedad, temperatura y pronóstico climático para tomar decisiones informadas sobre el suministro de agua.
+**Problem Statement 2 — Usuarios expertos**
 
-Hemos identificado que los pequeños productores agrícolas en zonas periurbanas carecen de herramientas tecnológicas asequibles para gestionar el riego de manera eficiente. Según la Encuesta Nacional Agropecuaria del INEI (2022), solo el 7% de los pequeños y medianos productores utiliza sistemas de riego tecnificado (Arauco Livia, 2025), y apenas el 5.7% recibe asistencia técnica (INEI, 2017). Esta brecha tecnológica provoca pérdidas significativas por desperdicio de agua, menor productividad de los cultivos y un impacto negativo en los ingresos de las familias que dependen de la agricultura.
+AquaSave se propone brindar a las personas con experiencia en el cuidado de plantas domésticas herramientas para consultar registros, supervisar sus unidades de riego y ajustar sus configuraciones desde una aplicación.
 
-**¿Cómo podemos facilitar a los micro-agricultores periurbanos el acceso a tecnología de riego inteligente que sea económica, fácil de instalar y que les permita optimizar el uso del agua, incrementar la productividad de sus cultivos y reducir sus costos operativos?**
+Rojas-Rengifo et al. (2025) presentan un sistema que permite consultar variables ambientales y recibir notificaciones mediante una aplicación móvil. Por su parte, Killough et al. (2024) muestran que mantener una humedad estable continúa siendo un desafío incluso al incorporar modalidades automatizadas de cuidado. Ambos antecedentes sustentan la importancia de combinar monitoreo, seguimiento y capacidad de ajuste.
 
+Para este segmento, planteamos la necesidad de conservar el control sobre las decisiones de riego y disponer de información que permita revisar sus resultados, especialmente durante ausencias. La investigación con usuarios permitirá validar qué registros, alertas y configuraciones aportan mayor utilidad.
+
+**¿Cómo podemos ofrecer a los usuarios expertos una herramienta que les permita supervisar sus plantas a distancia, consultar el historial y ajustar el riego de acuerdo con sus criterios de cuidado y las condiciones registradas?**
 
 ##### 1.2.2.2. Lean UX Assumptions
 
-1. Creo que mis clientes necesitan una forma accesible y confiable de monitorear las condiciones de humedad y temperatura de sus cultivos en tiempo real, y automatizar el riego según las necesidades reales de sus plantas y el pronóstico del clima.  
-2. Estas necesidades se pueden resolver con un sistema IoT compuesto por un dispositivo basado en ESP32 con sensores de humedad, temperatura y caudal, una API en la nube que integre datos climáticos externos, y una aplicación web y móvil que permita visualizar métricas, recibir alertas y controlar el riego de forma remota.  
-3. Mis clientes iniciales son (o serán) horticultores urbanos en Lima metropolitana que mantienen huertos domésticos en terrazas, patios o jardines, y micro-agricultores periurbanos con parcelas de menos de 5 hectáreas que buscan tecnificar su riego con soluciones de bajo costo.  
-4. El valor \#1 que un cliente quiere de mi servicio es tener el control total sobre el riego de sus cultivos desde su celular, sabiendo que sus plantas reciben la cantidad exacta de agua que necesitan sin desperdiciar el recurso.  
-5. El cliente también puede obtener estos beneficios adicionales: ahorro mensual en el consumo de agua, historial detallado de consumo hídrico, prevención de pérdidas de cultivos por riego excesivo o insuficiente, y tranquilidad de saber que el sistema detiene el riego automáticamente cuando se aproxima la lluvia.  
-6. Voy a adquirir la mayoría de mis clientes a través de campañas en redes sociales dirigidas a comunidades de jardinería y agricultura urbana, participación en ferias agrícolas y de innovación tecnológica, alianzas con tiendas de jardinería y viveros, y convenios con municipalidades que promuevan huertos urbanos.  
-7. Haré dinero a través de la venta del dispositivo IoT (kit ESP32 con sensores y actuador) y un modelo de suscripción mensual con plan básico gratuito (monitoreo en tiempo real) y plan premium (historial completo de consumo, integración con pronóstico climático, alertas inteligentes, reportes de ahorro y control remoto avanzado).  
-8. Mi competencia principal en el mercado será aplicaciones de jardinería como Planta o Gardenia que ofrecen recordatorios de riego pero sin datos reales del suelo, temporizadores de riego básicos que funcionan con horarios fijos sin adaptarse a las condiciones del ambiente, y soluciones IoT de agricultura industrial como Gardena Smart o sistemas profesionales de riego de precisión que resultan costosos e inaccesibles para pequeños usuarios.  
-9. Los venceremos debido a que ofrecemos una solución integral que combina hardware IoT de bajo costo con software inteligente, específicamente diseñada para huertos urbanos y parcelas pequeñas. A diferencia de las apps de jardinería, nuestro sistema usa datos reales del suelo; a diferencia de los temporizadores, se adapta al clima; y a diferencia de las soluciones industriales, es accesible económicamente.  
-10. Mi mayor riesgo de producto es que los usuarios no perciban el valor suficiente como para pagar la suscripción mensual después de adquirir el dispositivo, o que la instalación del hardware les resulte complicada y abandonen el uso del sistema.  
-11. Resolveremos esto a través de un proceso de instalación guiado paso a paso dentro de la app, tutoriales en video, un período de prueba gratuita del plan premium al adquirir el dispositivo, y métricas visibles de ahorro de agua que demuestren el retorno de inversión desde las primeras semanas de uso.  
-12. **¿Quién es el usuario?** Los usuarios son horticultores urbanos que cultivan en espacios domésticos y buscan optimizar el riego de sus plantas, y micro-agricultores periurbanos con parcelas pequeñas que necesitan tecnificar el riego con soluciones económicas y accesibles.  
-13. **¿Dónde encaja nuestro producto en su trabajo o vida?** AquaSave encaja en la rutina diaria del horticultor urbano al eliminar la incertidumbre de cuándo y cuánto regar, y en la operación del micro-agricultor periurbano al automatizar una tarea que consume tiempo y recursos, permitiéndole enfocarse en otras labores productivas.  
-14. **¿Qué problemas tiene nuestro producto que resolver?** El riego manual sin datos objetivos del suelo, el desperdicio de agua por riego excesivo o en momentos inadecuados, la falta de herramientas accesibles de monitoreo agrícola para pequeños usuarios, y la desconexión entre las condiciones climáticas y las decisiones de riego.  
-15. **¿Cuándo y cómo es nuestro producto usado?** El dispositivo IoT opera de forma continua midiendo las condiciones del suelo. La app se usa diariamente para consultar el estado de los cultivos, revisar alertas y el pronóstico climático. El control manual del riego se activa cuando el usuario lo considera necesario. Los reportes de ahorro se consultan semanal o mensualmente.  
-16. **¿Qué características son importantes?** Monitoreo en tiempo real de humedad y temperatura del suelo, automatización del riego basada en umbrales configurables, integración con API de pronóstico climático para pausar el riego ante lluvias, control remoto manual desde la app, historial de consumo hídrico con métricas de ahorro, alertas push cuando la humedad del suelo es crítica, y un diseño responsivo adaptado a dispositivos móviles y web.  
-17. **¿Cómo debe verse nuestro producto y cómo comportarse?** Debe verse limpio, moderno y orientado a la naturaleza, con colores verdes y terrosos que transmitan sustentabilidad. Debe comportarse de forma rápida, confiable y simple, mostrando la información más relevante de un vistazo sin requerir conocimientos técnicos. Las acciones críticas como activar el riego o configurar alertas deben estar a máximo dos toques de distancia.  
-    
+##### 1.2.2.2. Lean UX Assumptions
+
+1. Creo que mis clientes necesitan una forma accesible y comprensible de conocer las condiciones de sus plantas domésticas, decidir cuándo regar y mantener su cuidado durante ausencias. Los principiantes necesitan orientación para interpretar la información, mientras que los expertos buscan registros y opciones de configuración.
+
+2. Estas necesidades se pueden resolver con un sistema IoT compuesto por un dispositivo basado en ESP32, sensores de humedad del sustrato y temperatura ambiental, un mecanismo de riego y aplicaciones web y móvil. La solución permitirá consultar lecturas, recibir alertas, revisar el historial y obtener recomendaciones apoyadas por inteligencia artificial.
+
+3. Mis clientes iniciales serán personas de Lima Metropolitana que cuidan plantas en interiores, balcones, patios, terrazas o jardines pequeños. Se considerarán dos segmentos: usuarios principiantes que buscan aprender a cuidar sus plantas y usuarios expertos que desean supervisar y ajustar el riego con mayor detalle.
+
+4. El valor principal que un cliente quiere de mi servicio es contar con información comprensible y oportuna para tomar decisiones de riego y mantener el seguimiento de sus plantas, incluso cuando se encuentra fuera de casa.
+
+5. El cliente también puede obtener estos beneficios adicionales: mayor organización de sus rutinas, identificación oportuna de condiciones que requieren atención, acceso al historial de riego y mayor autonomía en el cuidado. Se espera que estas funciones contribuyan a reducir el uso innecesario de agua y el tiempo dedicado a revisiones presenciales.
+
+6. Voy a adquirir la mayoría de mis clientes mediante contenido en redes sociales sobre cuidado de plantas, participación en comunidades de jardinería doméstica, demostraciones del producto y alianzas con viveros y tiendas de jardinería.
+
+7. Haré dinero mediante la venta del kit IoT y un modelo de servicios digitales con un plan básico incluido y una suscripción opcional. El plan básico contemplará monitoreo y control del riego; la suscripción ofrecerá funciones adicionales de análisis del historial, reportes y recomendaciones personalizadas.
+
+8. Mi competencia principal estará conformada por aplicaciones de cuidado de plantas, recordatorios de riego, temporizadores y dispositivos domésticos de monitoreo o riego automatizado. También consideraré como alternativas las prácticas habituales de los usuarios, como revisar manualmente el sustrato y pedir a otra persona que cuide sus plantas.
+
+9. Buscaremos diferenciarnos mediante una experiencia que integre lecturas del sustrato, orientación comprensible, historial y control del riego. La propuesta adaptará la presentación de la información a principiantes y expertos, permitiendo que cada usuario consulte el detalle que necesita.
+
+10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente utilidad para justificar la compra, instalación y mantenimiento del kit, o que no encuentren valor adicional en la suscripción después de utilizar las funciones básicas.
+
+11. Abordaremos este riesgo mediante una instalación guiada, instrucciones de mantenimiento, demostraciones y pruebas con usuarios de ambos segmentos. Evaluaremos la comprensión de las lecturas, la facilidad de uso y la utilidad del historial y las recomendaciones para ajustar la propuesta.
+
+12. **¿Quién es el usuario?** Los usuarios son personas que cuidan plantas en sus viviendas. Los principiantes buscan aprender a interpretar sus necesidades y establecer rutinas; los expertos desean supervisar sus plantas, comparar registros y modificar parámetros de riego. La experiencia en jardinería no implica necesariamente dominio de herramientas tecnológicas.
+
+13. **¿Dónde encaja nuestro producto en su trabajo o vida?** AquaSave encajará en la rutina de cuidado doméstico al facilitar la consulta del estado de las plantas y el seguimiento del riego. También apoyará la supervisión durante viajes o jornadas fuera de casa, manteniendo al usuario informado sobre las condiciones registradas y las acciones ejecutadas.
+
+14. **¿Qué problemas tiene nuestro producto que resolver?** La incertidumbre al decidir cuándo regar, la dificultad para interpretar las lecturas, la falta de registros organizados y la necesidad de supervisar el cuidado durante ausencias. También deberá facilitar la identificación de datos desactualizados para evitar decisiones basadas en información que ya no representa las condiciones actuales.
+
+15. **¿Cuándo y cómo es nuestro producto usado?** El dispositivo registrará periódicamente las condiciones de la unidad de riego. El usuario accederá a la aplicación para consultar lecturas, revisar alertas, solicitar o detener ciclos y modificar configuraciones. El historial se utilizará para revisar las acciones realizadas y evaluar ajustes en la rutina.
+
+16. **¿Qué características son importantes?** Monitoreo de humedad del sustrato y temperatura ambiental, lecturas con fecha de actualización, instalación guiada, control remoto, riego automático con límites definidos, alertas, historial y recomendaciones explicadas. También será importante distinguir el consumo de agua estimado del medido y permitir la detención de un ciclo de forma sencilla.
+
+17. **¿Cómo debe verse nuestro producto y cómo comportarse?** Deberá presentar una interfaz limpia, legible y relacionada visualmente con el cuidado de plantas, utilizando colores verdes y tonos neutros. La información principal deberá comprenderse de un vistazo, con explicaciones accesibles para principiantes y opciones de detalle para expertos. Las acciones de riego deberán mostrar claramente si están pendientes, en ejecución, completadas o interrumpidas.
 
 
 ##### 1.2.2.3. Lean UX Hypothesis Statements
@@ -1804,15 +1879,13 @@ Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
 
 ## Bibliografía
 
-- Arauco Livia, M. (2025, 25 de octubre). *Agricultura inteligente: un puente entre la justicia hídrica y la sostenibilidad empresarial en el Perú*. Infobae. [https://www.infobae.com/peru/2025/10/25/agricultura-inteligente-un-puente-entre-la-justicia-hidrica-y-la-sostenibilidad-empresarial-en-el-peru/](https://www.infobae.com/peru/2025/10/25/agricultura-inteligente-un-puente-entre-la-justicia-hidrica-y-la-sostenibilidad-empresarial-en-el-peru/)
+- Killough, A., Barja, A., & Gurocak, H. (2024). Smart flowerpot as an IoT device for automatic plant care. En *2024 10th International Conference on Automation, Robotics and Applications (ICARA)* (pp. 541–545). IEEE. https://doi.org/10.1109/ICARA60736.2024.10552954
 
-- Instituto Nacional de Estadística e Informática. (2017, 10 de julio). *El riego tecnificado en pequeñas y medianas unidades agropecuarias creció 2,2 puntos porcentuales en el año 2016*. Plataforma del Estado Peruano. [https://www.gob.pe/institucion/inei/noticias/](https://www.gob.pe/institucion/inei/noticias/)
+- Rojas-Rengifo, J. D., Fernández-Mozombite, L. B., Callacna-Ponce, L. G., & Díaz-Delgado, D. (2025). Sistema de maceta inteligente basado en IoT para la monitorización automatizada de parámetros de crecimiento en plantas de interior. *Revista Amazonía Digital, 4*(2), e374. https://doi.org/10.55873/rad.v4i2.374
 
-- Vinelli, M. (2021, 2 de marzo). *La brecha de infraestructura de riego en el sector agropecuario*. Conexión ESAN. [https://www.esan.edu.pe/conexion-esan/la-brecha-de-infraestructura-de-riego-en-el-sector-agropecuario](https://www.esan.edu.pe/conexion-esan/la-brecha-de-infraestructura-de-riego-en-el-sector-agropecuario)
+- Shaughnessy, D., & Pertuit, A. (2024, 21 de junio). *Indoor plants – Watering*. Clemson Cooperative Extension, Home & Garden Information Center. https://hgic.clemson.edu/factsheet/indoor-plants-watering/
 
-- Ybánez, I. (2023, 8 de febrero). *El 45% de agua se pierde por canales de riego en mal estado*. Infobae. [https://www.infobae.com/peru/2023/02/09/el-45-de-agua-se-pierde-por-canales-de-riego-en-mal-estado/](https://www.infobae.com/peru/2023/02/09/el-45-de-agua-se-pierde-por-canales-de-riego-en-mal-estado/)
-
-- Zapana Churata, L. E. (2018). Respuestas a la crisis hídrica en zonas agrícolas y urbanas: Caso de estudio “Proyecto de Irrigación Majes Siguas I” Arequipa – Perú. Agua Y Territorio Water and Landscape, 12, 145-156. [https://doi.org/10.17561/at.12.3532](https://doi.org/10.17561/at.12.3532)  
+- University of Maryland Extension. (2023, 10 de marzo). *Watering indoor plants*. https://extension.umd.edu/resource/watering-indoor-plants
 
 ---
 
