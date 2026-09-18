@@ -229,8 +229,6 @@ Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanza
 
 #### 1.2.1. Antecedentes y problemática
 
-#### 1.2.1. Antecedentes y problemática
-
 El cuidado de plantas en viviendas requiere adaptar el riego a las condiciones de cada planta. La University of Maryland Extension (2023) señala que regar siguiendo únicamente un calendario puede proporcionar agua en exceso o en cantidad insuficiente, debido a las diferencias entre sustratos y condiciones ambientales. Por ello, el seguimiento de la humedad constituye un aspecto relevante para orientar el cuidado doméstico.
 
 Las tecnologías de monitoreo ofrecen alternativas para apoyar esta actividad. Rojas-Rengifo et al. (2025) desarrollaron un sistema para plantas de interior que integra sensores y una aplicación móvil para consultar condiciones ambientales y recibir notificaciones. Su investigación, realizada durante diez semanas, constituye un antecedente del uso de dispositivos conectados para facilitar el seguimiento de plantas en espacios domésticos.
@@ -376,13 +374,18 @@ Para este segmento, planteamos la necesidad de conservar el control sobre las de
 
 ##### 1.2.2.3. Lean UX Hypothesis Statements
 
-**Hypothesis Statement 1 (Horticultores Urbanos):**
+  Las metas siguientes son propuestas experimentales. Con muestras pequeñas se informará el conteo además del porcentaje y no se extrapolarán resultados al conjunto de hogares.
 
-Creemos que el monitoreo en tiempo real de la humedad del suelo combinado con la automatización del riego basada en datos climáticos ayudará a los horticultores urbanos a reducir el desperdicio de agua y mejorar la salud de sus cultivos domésticos. Sabremos que estamos bien cuando los usuarios reporten en sus comentarios que se sienten más seguros y en control del riego de sus plantas, cuando al menos el 60% de los usuarios activos consulten la app al menos tres veces por semana y utilicen la función de riego automático, y cuando se observe una reducción promedio del 30% en el consumo de agua reportado por los usuarios durante los primeros dos meses de uso.
+  | ID | Hipótesis | Experimento y medida de aceptación propuesta |
+  | :--- | :--- | :--- |
+  | H01 | Creemos que una configuración guiada permitirá a los principiantes iniciar el monitoreo con mayor autonomía. | En una prueba con cinco principiantes y kit preparado, al menos cuatro completan registro de planta y vinculación en diez minutos sin intervención del facilitador. |
+  | H02 | Creemos que el historial por unidad permitirá a expertos justificar ajustes con mayor claridad. | En cinco tareas con expertos, al menos cuatro participantes identifican un cambio entre periodos y explican un ajuste usando los registros entregados. |
+  | H03 | Creemos que explicar el fundamento y la vigencia de una recomendación apoyará decisiones informadas. | Al menos cuatro de cinco participantes por segmento reconocen el motivo y una limitación; todos los casos con datos vencidos impiden aplicar la recomendación. |
+  | H04 | Creemos que el control local acotado evitará que una pérdida de red extienda el ciclo más allá del límite configurado. | En treinta pruebas de desconexión, la salida del actuador se desactiva dentro del límite más un segundo; se observa separadamente el cese del flujo. |
+  | H05 | Creemos que una explicación asistida por IA puede ser más comprensible que una explicación fija. | Comparación contrabalanceada con diez participantes: al menos seis prefieren la explicación asistida y no se reduce la comprensión de límites ni la detección de datos insuficientes. |
+  | H06 | Creemos que el seguimiento puede identificar oportunidades de menor consumo. | Registrar catorce días de línea base y catorce de piloto por unidad comparable; calcular la variación con método y cobertura explícitos, sin imponer un ahorro mínimo antes de conocer los datos. |
 
-**Hypothesis Statement 2 (Micro-Agricultores Periurbanos):**
-
-Creemos que un sistema IoT de riego inteligente de bajo costo con alertas de humedad crítica, integración climática y reportes de consumo hídrico permitirá a los micro-agricultores periurbanos optimizar el uso del agua e incrementar la productividad de sus parcelas. Sabremos que esto es cierto cuando los micro-agricultores reporten que las alertas les han permitido prevenir pérdidas de cultivos por falta o exceso de riego, cuando al menos el 50% de ellos utilicen los reportes de consumo hídrico para tomar decisiones de riego semanalmente, y cuando se evidencie un ahorro de agua de al menos el 25% en comparación con su método de riego anterior durante la primera temporada de uso.
+  Una hipótesis rechazada orientará cambios de diseño. Si la IA no mejora la comprensión o introduce afirmaciones sin sustento, se conservará el sistema de reglas y se limitará el componente de explicación hasta corregirlo.
 
 
 ##### 1.2.2.4. Lean UX Canvas
@@ -394,45 +397,45 @@ Creemos que un sistema IoT de riego inteligente de bajo costo con alertas de hum
 
 ### 1.3. Segmentos objetivo
 
-**Segmento Objetivo 1: Horticultores Urbanos**
+**Segmento Objetivo 1: Usuarios principiantes en el cuidado de plantas**
 
-Este segmento está conformado por personas que mantienen huertos domésticos en sus viviendas como actividad de autoconsumo, hobby o interés por la sostenibilidad. Incluye a quienes cultivan hortalizas, hierbas aromáticas, plantas ornamentales o frutales en espacios reducidos como terrazas, patios, balcones o jardines, y que realizan el riego de forma completamente manual.
-
-**Características demográficas:**
-
-Ubicación: Principalmente en zonas urbanas del Perú, con mayor concentración en Lima Metropolitana y ciudades intermedias como Arequipa, Trujillo y Cusco, donde la tendencia de huertos urbanos ha crecido impulsada por el interés en alimentación saludable y sostenibilidad.
-
-Edad: Entre 25 y 50 años, adultos jóvenes y de mediana edad con interés en jardinería, alimentación orgánica y tecnología para el hogar.
-
-Nivel socioeconómico: Clase media y media-alta, con acceso a smartphones y conexión Wi-Fi doméstica.
-
-**Necesidades principales:**
-
-Conocer el estado real de humedad del suelo sin depender de la intuición. Automatizar el riego para evitar desperdicio de agua y deterioro de plantas. Recibir alertas ante condiciones críticas del suelo o lluvias próximas.
-
-**Desafíos:**
-
-Riego por intuición o por horarios fijos sin datos reales del suelo. Ausencia de soluciones IoT accesibles diseñadas para huertos domésticos de pequeña escala.
-
-**Segmento Objetivo 2: Micro-Agricultores Periurbanos**
-
-Este segmento está integrado por pequeños productores agrícolas ubicados en zonas periurbanas que manejan parcelas de menos de 5 hectáreas y dependen del riego para el sustento de sus familias. Buscan soluciones tecnológicas económicas que les permitan mejorar la eficiencia del riego sin grandes inversiones en infraestructura.
+Este segmento está conformado por personas que están iniciándose en el cuidado de plantas domésticas o que necesitan orientación frecuente para mantenerlas. Incluye a quienes tienen plantas ornamentales, hierbas aromáticas u otras especies en interiores, balcones, patios, terrazas o jardines pequeños, y todavía no cuentan con criterios claros para decidir cuándo y cuánto regar.
 
 **Características demográficas:**
 
-Ubicación: Zonas periurbanas y rurales cercanas a ciudades como Lima, Arequipa, Cusco y Trujillo, donde la agricultura de pequeña escala coexiste con el crecimiento urbano.
+Ubicación: Principalmente en Lima Metropolitana, en viviendas que dispongan de espacios interiores o exteriores adecuados para el cuidado de plantas.
 
-Edad: Entre 35 y 65 años, con mayor concentración en el rango de 40 a 64 años, que según el INEI (2017) representa el 53.5% de los productores agropecuarios del país.
+Edad: Personas mayores de 18 años interesadas en aprender sobre el cuidado de plantas y organizar esta actividad dentro de su rutina.
 
-Nivel socioeconómico: Clase media-baja y baja, con ingresos dependientes de la producción agrícola. El 52.9% tiene solo educación primaria (INEI, 2017), lo que demanda interfaces extremadamente intuitivas.
+Nivel socioeconómico: Sin una categoría socioeconómica exclusiva. Se considera a personas con acceso a un teléfono inteligente, conexión Wi-Fi doméstica y disposición para evaluar la adquisición de un kit de cuidado de plantas.
 
 **Necesidades principales:**
 
-Tecnificar el riego con una solución de bajo costo y fácil instalación. Monitorear humedad y temperatura de sus cultivos sin estar físicamente en la parcela. Reducir pérdidas de cultivos y consumo de agua por riego inadecuado.
+Comprender cuándo sus plantas necesitan agua y cómo interpretar las lecturas de humedad. Recibir recomendaciones claras y alertas que indiquen qué condición requiere atención. Contar con una instalación guiada y herramientas que les permitan supervisar el cuidado durante ausencias.
 
 **Desafíos:**
 
-Solo el 7% de pequeños productores usa riego tecnificado frente al 53% de grandes productores (Arauco Livia, 2025). Las soluciones de riego inteligente del mercado están diseñadas para agricultura industrial con costos inaccesibles para este segmento.
+Dificultad para distinguir entre falta y exceso de riego. Dependencia de consejos generales o rutinas fijas que no siempre se ajustan a cada planta. Olvidos y dudas al modificar el cuidado. Posible falta de familiaridad con la instalación y configuración de dispositivos conectados.
+
+**Segmento Objetivo 2: Usuarios expertos en el cuidado de plantas**
+
+Este segmento está integrado por personas con experiencia práctica en el cuidado de plantas domésticas, capaces de adaptar sus rutinas según la especie, el sustrato, el recipiente y las condiciones del entorno. Buscan complementar su conocimiento con información organizada, registros y herramientas de supervisión remota. La experiencia no requiere una certificación profesional ni implica necesariamente conocimientos tecnológicos avanzados.
+
+**Características demográficas:**
+
+Ubicación: Principalmente en Lima Metropolitana, en viviendas con plantas distribuidas en interiores, balcones, patios, terrazas o jardines pequeños.
+
+Edad: Personas mayores de 18 años que hayan desarrollado experiencia y autonomía en el cuidado de plantas, independientemente de su ocupación.
+
+Nivel socioeconómico: Sin una categoría socioeconómica exclusiva. Se considera a personas con acceso a un teléfono inteligente, conexión Wi-Fi doméstica e interés en invertir en herramientas que complementen sus prácticas de cuidado.
+
+**Necesidades principales:**
+
+Consultar el historial de lecturas y acciones de riego por unidad. Comparar registros entre periodos para evaluar ajustes. Configurar parámetros dentro de límites definidos y mantener el control sobre las decisiones. Supervisar sus plantas a distancia y recibir alertas relevantes.
+
+**Desafíos:**
+
+Mantener registros consistentes cuando cuidan varias plantas. Supervisar las condiciones durante viajes o jornadas fuera de casa. Identificar si los ajustes de riego producen los resultados esperados. Evaluar la confiabilidad de las lecturas y conservar el control al utilizar funciones automatizadas.
 
 ---
 
@@ -480,7 +483,7 @@ El análisis competitivo es una herramienta clave por su importancia en la toma 
     <tr>
       <td rowspan="2" style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top; text-align: center;">Perfil de Marketing</td>
       <td style="padding: 10px; border: 1px solid #ddd; background-color: #fafafa; font-weight: bold; vertical-align: top;">Mercado Objetivo</td>
-      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Agricultores medianos y usuarios residenciales eco-conscientes en Latam.</td>
+      <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Usuarios principiantes y expertos en el cuidado de plantas domésticas</td>
       <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Dueños de casas inteligentes de gama alta que buscan estética y facilidad.</td>
       <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Clientes "DIY" (hágalo usted mismo) que compran en ferreterías o Amazon.</td>
       <td style="padding: 10px; border: 1px solid #ddd; vertical-align: top;">Desarrolladores, ingenieros y entusiastas de la domótica y el código abierto.</td>
@@ -593,64 +596,63 @@ Esta sección describe el proceso de investigación de los segmentos objetivo, b
 
 #### 2.2.1. Diseño de entrevistas
 
-La estructura de las entrevistas se ajusta estratégicamente a cada segmento de usuarios con el objetivo de identificar a fondo sus verdaderas demandas y expectativas. Como punto de partida, la dinámica inicia con un bloque de preguntas exploratorias orientadas a recopilar el perfil demográfico fundamental, estableciendo así los cimientos empíricos necesarios para la posterior creación de los arquetipos.
+Las entrevistas se organizarán según los dos segmentos objetivo de AquaSave para conocer sus hábitos, dificultades y expectativas respecto al cuidado de plantas domésticas. Se iniciará con preguntas de caracterización, seguidas de preguntas sobre las prácticas actuales. Finalmente, se presentará brevemente la propuesta para recoger opiniones sobre su utilidad y las funciones que cada participante considera necesarias.
 
-***Segmento objetivo #1: Horticultores Urbanos*** 
-
-***Características demográficas:***
-
-* ¿Cuál es tu nombre y edad?  
-* ¿En qué ciudad y distrito vives actualmente?  
-* ¿A qué te dedicas (ocupación) y cómo encaja el cuidado del huerto en tu rutina diaria?  
-* ¿Qué tipo de espacio tienes para tu huerto (balcón, terraza, patio o jardín) y qué tamaño aproximado tiene?  
-
-***Preguntas Principales***
-
-1. ¿Cuáles son tus principales responsabilidades diarias o semanales para cuidar tu huerto (riego, abonado, poda, control de plagas, cosecha)?  
-2. ¿Cómo gestionas actualmente el riego de tus plantas (por intuición, por horarios fijos, según el clima, según el aspecto de la tierra)?  
-3. ¿Utilizas algún software o herramienta digital para controlar el riego o recordar tareas del huerto (alarmas, calendario, apps de jardinería)? ¿Qué te funciona y qué te frustra?  
-4. ¿Cuáles son los mayores retos que enfrentas al momento de regar (olvidos, exceso/falta de agua, poco tiempo, viajes, no saber si el suelo está realmente húmedo)?  
-5. ¿Qué consecuencias has notado cuando el riego no sale bien (plantas débiles, hojas amarillas, hongos, pérdida de plantas, gasto de agua)?  
-
-***Preguntas sobre el Proyecto*** 
-
-6. ¿Qué te parecería contar con una plataforma/solución que te permita conocer el estado real de la humedad del suelo y saber si tus plantas realmente necesitan agua antes de regar?  
-7. ¿Qué te parecería contar con una plataforma/solución que te permita automatizar el riego y, a la vez, activar o detener el riego manualmente desde el móvil cuando tú lo decidas?  
-8. ¿Qué funcionalidades serían esenciales para ti (monitoreo en tiempo real, alertas de humedad crítica, historial de riegos/consumo, recomendaciones, métricas de ahorro, control remoto)?  
-9. ¿Con qué frecuencia necesitarías revisar esta información (cada día, dos o tres veces por semana, solo en épocas de calor o cuando te ausentas de casa)?  
-10. ¿Qué tan cómodo(a) te sentirías instalando un sensor en el huerto y configurándolo desde una app, y qué tipo de guía o soporte necesitarías para hacerlo sin complicaciones?  
-
-
-***Segmento objetivo #2: Micro-Agricultores Periurbanos*** 
+***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas***
 
 ***Características demográficas:***
 
-* ¿Cuál es tu nombre y edad?  
-* ¿En qué zona se ubica tu parcela y cuántas hectáreas trabajan actualmente?  
-* ¿Cuál es tu cargo o rol específico dentro del trabajo en la parcela (dueño(a), conductor(a), encargado(a) de riego, trabajador(a))?  
-* ¿Qué tipo de teléfono usas normalmente (smartphone o básico) y qué tan estable es la señal o el internet en tu parcela?  
+* ¿Cuál es tu nombre y edad?
+* ¿En qué ciudad y distrito vives actualmente?
+* ¿A qué te dedicas y cómo encaja el cuidado de tus plantas en tu rutina?
+* ¿Qué plantas tienes, dónde están ubicadas y desde cuándo las cuidas?
 
-***Preguntas Principales***
+***Preguntas principales:***
 
-1. ¿Cuáles son tus principales responsabilidades diarias en la parcela y cuánto tiempo te demanda el riego dentro de esa rutina?  
-2. ¿Cómo gestionas actualmente el riego (por gravedad, manguera, aspersión, goteo) y cómo defines los horarios o turnos de riego?  
-3. ¿Cómo decides hoy cuándo regar y cuánta agua usar (experiencia, observación del suelo, calendario, disponibilidad del canal/fuente de agua, estado del cultivo)?  
-4. ¿Cuáles son los mayores retos que enfrentas al momento de regar (pérdidas de agua, falta de agua, costos, mano de obra, necesidad de estar presente para revisar, daños al cultivo)?  
-5. ¿Llevas algún registro (cuaderno, notas en el teléfono) de riegos, gastos o rendimiento del cultivo? ¿Qué información te gustaría tener más clara para tomar decisiones?  
+1. ¿Cómo aprendiste a cuidar tus plantas y a quién recurres cuando tienes dudas?
+2. ¿Cómo decides actualmente cuándo regar y qué cantidad de agua utilizar?
+3. ¿Utilizas recordatorios, aplicaciones o alguna otra herramienta para organizar el cuidado de tus plantas?
+4. ¿Qué dificultades has tenido con el riego y qué ocurrió la última vez que se presentó alguna?
+5. ¿Cómo organizas el cuidado de tus plantas cuando pasas varios días fuera de casa?
 
-***Preguntas sobre el Proyecto*** 
+***Preguntas sobre el proyecto:***
 
-6. ¿Qué te parecería contar con una plataforma/solución que te permita monitorear la humedad y temperatura del suelo para regar con datos y no solo con la experiencia o la intuición?  
-7. ¿Qué te parecería contar con una plataforma/solución que te permita revisar esa información desde el móvil sin estar físicamente en la parcela y recibir alertas cuando el suelo esté en un nivel crítico?  
-8. ¿Qué funcionalidades serían esenciales para ti para que esto sea útil en campo (instalación sencilla, datos fáciles de entender, alertas claras, historial por días/semanas, acceso para más de una persona)?  
-9. ¿Con qué frecuencia necesitarías revisar esta información para tomar decisiones rápidas (por turno de riego, diariamente, semanalmente) y quién sería la persona responsable de revisarla?  
-10. ¿Qué tipo de notificaciones o alertas te serían realmente útiles para tomar decisiones rápidas en el riego (por ejemplo, “suelo muy seco”, “suelo demasiado húmedo”, “riesgo de riego innecesario”) y por qué?  
+6. ¿En qué situaciones te resultaría útil consultar desde tu celular la humedad del sustrato de tus plantas?
+7. ¿Qué información necesitarías para comprender una alerta o recomendación de riego?
+8. ¿Qué funciones considerarías más útiles: consultar lecturas, recibir alertas, revisar el historial, obtener recomendaciones o controlar el riego desde el celular?
+9. ¿Cómo te sentirías utilizando riego automático y qué necesitarías para confiar en su funcionamiento?
+10. ¿Qué ayuda necesitarías para instalar un sensor y un sistema de riego en una maceta y configurarlos desde una aplicación?
+
+***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas***
+
+***Características demográficas:***
+
+* ¿Cuál es tu nombre y edad?
+* ¿En qué ciudad y distrito vives actualmente?
+* ¿A qué te dedicas y cuánto tiempo llevas cuidando plantas?
+* ¿Qué tipos de plantas cuidas y cómo están distribuidas en tu vivienda?
+
+***Preguntas principales:***
+
+1. ¿Qué factores consideras para decidir cuándo regar y cuánta agua necesita cada planta?
+2. ¿Qué ajuste reciente realizaste en tu rutina de riego y cómo evaluaste su resultado?
+3. ¿Llevas registros de riego o utilizas sensores, aplicaciones u otras herramientas para apoyar el cuidado?
+4. ¿Cuáles son las principales dificultades que encuentras al supervisar tus plantas y mantener sus rutinas?
+5. ¿Cómo organizas el cuidado durante una ausencia y qué información necesitas para supervisarlo?
+
+***Preguntas sobre el proyecto:***
+
+6. ¿En qué situaciones te sería útil consultar las lecturas y el historial de riego desde una aplicación?
+7. ¿Qué parámetros te gustaría configurar y qué decisiones preferirías mantener bajo tu control?
+8. ¿Qué información necesitarías para evaluar una recomendación de riego generada con apoyo de inteligencia artificial?
+9. ¿Qué alertas considerarías necesarias para intervenir oportunamente en el cuidado de tus plantas?
+10. ¿Qué tendría que ofrecer AquaSave para que consideres incorporarlo a tu rutina y adquirir el kit?
 
 #### 2.2.2. Registro de entrevistas
 
 Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
-***Segmento 1: Horticultores Urbanos:*** 
+***Segmento 1: Usuarios principiantes:*** 
 
 Nombre: Gabriel Borja  
 Edad: 32  
@@ -693,7 +695,7 @@ Santiago es una profesor de 22 años que mantiene un huerto en su jardín como a
 
 
 
-***Segmento 2: Micro-Agricultores Periurbanos:*** 
+***Segmento 2: Usuarios expertos:*** 
 
 Nombre: Raul Bellido  
 Edad: 42  
@@ -740,7 +742,7 @@ Werner es un agricultor de 48 años que trabaja en una parcela de aproximadament
 
 En base en las entrevistas recopiladas para cada segmento, se llevó a cabo un análisis, el cual destaca los principales hallazgos y las conclusiones derivadas.
 
-***Segmento objetivo #1: Horticultores Urbanos***
+***Segmento objetivo #1: Usuarios principiantes***
 
 **Hallazgos:**
 
@@ -771,7 +773,7 @@ Los horticultores urbanos gestionan el riego de sus plantas de manera empírica,
 Este segmento muestra una alta apertura hacia soluciones tecnológicas, siempre que estas sean simples, intuitivas y no requieran conocimientos técnicos avanzados. El principal valor que buscan es el control y la tranquilidad de saber que están regando correctamente. Por ello, una solución como AquaSave debe enfocarse en ofrecer monitoreo en tiempo real, alertas claras y automatización del riego, junto con una experiencia de instalación guiada y accesible que reduzca la fricción inicial.
 
 
-***Segmento objetivo #2: Micro-Agricultores Periurbanos***
+***Segmento objetivo #2: Usuarios expertos***
 
 **Hallazgos:**
 
@@ -805,14 +807,14 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 
 #### 2.3.1. User Personas
 
-***Segmento objetivo #1: Horticultores Urbanos***
+***Segmento objetivo #1: Usuarios principiantes***
 
 <p align="center">
   <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
 </p>
 
 
-***Segmento 2: Micro-Agricultores Periurbanos:***
+***Segmento objetivo #2: Usuarios expertos:***
 
 <p align="center">
   <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
