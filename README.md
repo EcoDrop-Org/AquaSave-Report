@@ -90,197 +90,52 @@
         <ul>
             <a href="#231-user-personas">2.3.1. User Personas</a><br>
             <a href="#232-user-task-matrix">2.3.2. User Task Matrix</a><br>
-            <a href="#233-user-journey-mapping">2.3.3. User Journey Mapping</a><br>
-            <a href="#234-empathy-mapping">2.3.4. Empathy Mapping</a><br>
+            <a href="#233-empathy-mapping">2.3.3. Empathy Mapping</a><br>
+            <a href="#234-as-is-scenario-mapping">2.3.4. As-Is Scenario Mapping</a><br>
         </ul>
-        <a href="#24-big-picture-eventstorming">2.4. Big Picture EventStorming</a><br>
-        <a href="#25-ubiquitous-language">2.5. Ubiquitous Language</a><br>
+        <a href="#24-ubiquitous-language">2.4. Ubiquitous Language</a><br>
     </ul>
 
 <a href="#capítulo-iii-requirements-specification">Capítulo III: Requirements Specification</a>
     <ul>
-        <a href="#31-user-stories">3.1. User Stories</a><br>
-        <a href="#32-impact-mapping">3.2. Impact Mapping</a><br>
-        <a href="#33-product-backlog">3.3. Product Backlog</a><br>
+        <a href="#31-to-be-scenario-mapping">3.1. To-Be Scenario Mapping</a><br>
+        <a href="#32-user-stories">3.2. User Stories</a><br>
+        <a href="#33-impact-mapping">3.3. Impact Mapping</a><br>
+        <a href="#34-product-backlog">3.4. Product Backlog</a><br>
     </ul>
 
-<a href="#capítulo-iv-solution-software-design">Capítulo IV: Solution Software Design</a>
+<a href="#capítulo-iv-strategic-level-software-design">Capítulo IV: Strategic-Level Software Design</a>
     <ul>
-        <a href="#41-strategic-level-domain-driven-design">4.1. Strategic-Level Domain-Driven Design</a><br>
+        <a href="#41-strategic-level-attribute-driven-design">4.1. Strategic-Level Attribute-Driven Design</a><br>
         <ul>
-            <a href="#411-design-level-eventstorming">4.1.1. Design-Level EventStorming</a><br>
+            <a href="#411-design-purpose">4.1.1. Design Purpose</a><br>
+            <a href="#412-attribute-driven-design-inputs">4.1.2. Attribute-Driven Design Inputs</a><br>
             <ul>
-                <a href="#4111-candidate-context-discovery">4.1.1.1. Candidate Context Discovery</a><br>
-                <a href="#4112-domain-message-flows-modeling">4.1.1.2. Domain Message Flows Modeling</a><br>
-                <a href="#4113-bounded-context-canvases">4.1.1.3. Bounded Context Canvases</a><br>
+                <a href="#4121-primary-functionality-primary-user-stories">4.1.2.1. Primary Functionality (Primary User Stories)</a><br>
+                <a href="#4122-quality-attribute-scenarios">4.1.2.2. Quality Attribute Scenarios</a><br>
+                <a href="#4123-constraints">4.1.2.3. Constraints</a><br>
             </ul>
-            <a href="#412-context-mapping">4.1.2. Context Mapping</a><br>
-            <a href="#413-software-architecture">4.1.3. Software Architecture</a><br>
-            <ul>
-                <a href="#4131-software-architecture-system-landscape-diagram">4.1.3.1. Software Architecture System Landscape Diagram</a><br>
-                <a href="#4132-software-architecture-context-level-diagrams">4.1.3.2. Software Architecture Context Level Diagrams</a><br>
-                <a href="#4133-software-architecture-container-level-diagrams">4.1.3.2. Software Architecture Container Level Diagrams</a><br>
-                <a href="#4134-software-architecture-deployment-diagrams">4.1.3.3. Software Architecture Deployment Diagrams</a><br>
-            </ul>
+            <a href="#413-architectural-drivers-backlog">4.1.3. Architectural Drivers Backlog</a><br>
+            <a href="#414-architectural-design-decisions">4.1.4. Architectural Design Decisions</a><br>
+            <a href="#415-quality-attribute-scenario-refinements">4.1.5. Quality Attribute Scenario Refinements</a><br>
         </ul>
-        <a href="#42-tactical-level-domain-driven-design">4.2. Tactical-Level Domain-Driven Design</a><br>
+        <a href="#42-strategic-level-domain-driven-design">4.2. Strategic-Level Domain-Driven Design</a><br>
         <ul>
-            <a href="#421-bounded-context-device-management">4.2.1. Bounded Context: Device Management</a><br>
-            <ul>
-                <a href="#4211-domain-layer">4.2.1.1. Domain Layer</a><br>
-                <a href="#4212-interface-layer">4.2.1.2. Interface Layer</a><br>
-                <a href="#4213-application-layer">4.2.1.3. Application Layer</a><br>
-                <a href="#4214-infrastructure-layer">4.2.1.4. Infrastructure Layer</a><br>
-                <a href="#4215-bounded-context-software-architecture-component-level-diagrams">4.2.1.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#4216-bounded-context-software-architecture-code-level-diagrams">4.2.1.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
-                <ul>
-                    <a href="#42161-bounded-context-domain-layer-class-diagrams">4.2.1.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42162-bounded-context-database-design-diagram">4.2.1.6.2. Bounded Context Database Design Diagram</a><br>
-                </ul>
-            </ul>
-<a href="#422-bounded-context-irrigation-intelligence">4.2.2. Bounded Context: Irrigation Intelligence</a><br>
-            <ul>
-                <a href="#4221-domain-layer">4.2.2.1. Domain Layer</a><br>
-                <a href="#4222-interface-layer">4.2.2.2. Interface Layer</a><br>
-                <a href="#4223-application-layer">4.2.2.3. Application Layer</a><br>
-                <a href="#4224-infrastructure-layer">4.2.2.4. Infrastructure Layer</a><br>
-                <a href="#4225-bounded-context-software-architecture-component-level-diagrams">4.2.2.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#4226-bounded-context-software-architecture-code-level-diagrams">4.2.2.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
-                <ul>
-                    <a href="#42261-bounded-context-domain-layer-class-diagrams">4.2.2.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42262-bounded-context-database-design-diagram">4.2.2.6.2. Bounded Context Database Design Diagram</a><br>
-                </ul>
-            </ul>
-<a href="#423-bounded-context-identity-access-management">4.2.3. Bounded Context: Identity Access Management</a><br>
-            <ul>
-                <a href="#4231-domain-layer">4.2.3.1. Domain Layer</a><br>
-                <a href="#4232-interface-layer">4.2.3.2. Interface Layer</a><br>
-                <a href="#4233-application-layer">4.2.3.3. Application Layer</a><br>
-                <a href="#4234-infrastructure-layer">4.2.3.4. Infrastructure Layer</a><br>
-                <a href="#4235-bounded-context-software-architecture-component-level-diagrams">4.2.3.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#4236-bounded-context-software-architecture-code-level-diagrams">4.2.3.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
-                <ul>
-                    <a href="#42361-bounded-context-domain-layer-class-diagrams">4.2.3.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42362-bounded-context-database-design-diagram">4.2.3.6.2. Bounded Context Database Design Diagram</a><br>
-                </ul>
-            </ul>
-<a href="#424-bounded-context-monetization">4.2.4. Bounded Context: Monetization</a><br>
-            <ul>
-                <a href="#4241-domain-layer">4.2.4.1. Domain Layer</a><br>
-                <a href="#4242-interface-layer">4.2.4.2. Interface Layer</a><br>
-                <a href="#4243-application-layer">4.2.4.3. Application Layer</a><br>
-                <a href="#4244-infrastructure-layer">4.2.4.4. Infrastructure Layer</a><br>
-                <a href="#4245-bounded-context-software-architecture-component-level-diagrams">4.2.4.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#4246-bounded-context-software-architecture-code-level-diagrams">4.2.4.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
-                <ul>
-                    <a href="#42461-bounded-context-domain-layer-class-diagrams">4.2.4.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42462-bounded-context-database-design-diagram">4.2.4.6.2. Bounded Context Database Design Diagram</a><br>
-                </ul>
-            </ul>
-<a href="#425-bounded-context-analytics">4.2.5. Bounded Context: Analytics</a><br>
-            <ul>
-                <a href="#4251-domain-layer">4.2.5.1. Domain Layer</a><br>
-                <a href="#4252-interface-layer">4.2.5.2. Interface Layer</a><br>
-                <a href="#4253-application-layer">4.2.5.3. Application Layer</a><br>
-                <a href="#4254-infrastructure-layer">4.2.5.4. Infrastructure Layer</a><br>
-                <a href="#4255-bounded-context-software-architecture-component-level-diagrams">4.2.5.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
-                <a href="#4256-bounded-context-software-architecture-code-level-diagrams">4.2.5.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
-                <ul>
-                    <a href="#42561-bounded-context-domain-layer-class-diagrams">4.2.5.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
-                    <a href="#42562-bounded-context-database-design-diagram">4.2.5.6.2. Bounded Context Database Design Diagram</a><br>
-                </ul>
-            </ul>
+            <a href="#421-eventstorming">4.2.1. EventStorming</a><br>
+            <a href="#422-candidate-context-discovery">4.2.2. Candidate Context Discovery</a><br>
+            <a href="#423-domain-message-flows-modeling">4.2.3. Domain Message Flows Modeling</a><br>
+            <a href="#424-bounded-context-canvases">4.2.4. Bounded Context Canvases</a><br>
+            <a href="#425-context-mapping">4.2.5. Context Mapping</a><br>
+        </ul>
+        <a href="#43-software-architecture">4.3. Software Architecture</a><br>
+        <ul>
+            <a href="#431-software-architecture-system-landscape-diagram">4.3.1. Software Architecture System Landscape Diagram</a><br>
+            <a href="#432-software-architecture-context-level-diagrams">4.3.2. Software Architecture Context Level Diagrams</a><br>
+            <a href="#433-software-architecture-container-level-diagrams">4.3.3. Software Architecture Container Level Diagrams</a><br>
+            <a href="#434-software-architecture-deployment-diagrams">4.3.4. Software Architecture Deployment Diagrams</a><br>
         </ul>
     </ul>
-
-<a href="#capítulo-v-solution-uiux-design">Capítulo V: Solution UI/UX Design</a>
-    <ul>
-        <a href="#51-style-guidelines">5.1. Style Guidelines</a><br>
-        <ul>
-            <a href="#511-general-style-guidelines">5.1.1. General Style Guidelines</a><br>
-            <a href="#512-web-mobile-and-iot-style-guidelines">5.1.2. Web, Mobile and IoT Style Guidelines</a><br>
-        </ul>
-        <a href="#52-information-architecture">5.2. Information Architecture</a><br>
-        <ul>
-            <a href="#521-organization-systems">5.2.1. Organization Systems</a><br>
-            <a href="#522-labeling-systems">5.2.2. Labeling Systems</a><br>
-            <a href="#523-seo-tags-and-meta-tags">5.2.3. SEO Tags and Meta Tags</a><br>
-            <a href="#524-searching-systems">5.2.4. Searching Systems</a><br>
-            <a href="#525-navigation-systems">5.2.5. Navigation Systems</a><br>
-        </ul>
-        <a href="#53-landing-page-ui-design">5.3. Landing Page UI Design</a><br>
-        <ul>
-            <a href="#531-landing-page-wireframe">5.3.1. Landing Page Wireframe</a><br>
-            <a href="#532-landing-page-mock-up">5.3.2. Landing Page Mock-up</a><br>
-        </ul>
-        <a href="#54-applications-uxui-design">5.4. Applications UX/UI Design</a><br>
-        <ul>
-            <a href="#541-applications-wireframes">5.4.1. Applications Wireframes</a><br>
-            <a href="#542-applications-wireflow-diagrams">5.4.2. Applications Wireflow Diagrams</a><br>
-            <a href="#543-applications-mock-ups">5.4.2. Applications Mock-ups</a><br>
-            <a href="#544-applications-user-flow-diagrams">5.4.3. Applications User Flow Diagrams</a><br>
-        </ul>
-        <a href="#55-applications-prototyping">5.5. Applications Prototyping</a><br>
-        <a href="#56-iot-device-design">5.6. IoT Device Design</a><br>
-    </ul>
-
-<a href="#capítulo-vi-product-implementation-validation--deployment">Capítulo VI: Product Implementation, Validation & Deployment</a>
-    <ul>
-        <a href="#61-software-configuration-management">6.1. Software Configuration Management</a><br>
-        <ul>
-            <a href="#611-software-development-environment-configuration">6.1.1. Software Development Environment Configuration</a><br>
-            <a href="#612-source-code-management">6.1.2. Source Code Management</a><br>
-            <a href="#613-source-code-style-guide--conventions">6.1.3. Source Code Style Guide & Conventions</a><br>
-            <a href="#614-software-deployment-configuration">6.1.4. Software Deployment Configuration</a><br>
-        </ul>
-        <a href="#62-landing-page-services--applications-implementation">6.2. Landing Page, Services & Applications Implementation</a><br>
-        <ul>
-            <a href="#621-sprint-n">6.2.1. Sprint 1</a><br>
-            <ul>
-                <a href="#6211-sprint-planning-n">6.2.1.1. Sprint Planning 1</a><br>
-                <a href="#6212-aspect-leaders-and-collaborators">6.2.1.2. Aspect Leaders and Collaborators</a><br>
-                <a href="#6213-sprint-backlog-n">6.2.1.3. Sprint Backlog 1</a><br>
-                <a href="#6214-development-evidence-for-sprint-review">6.2.1.4. Development Evidence for Sprint Review</a><br>
-                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.1.5. Testing Suite Evidence for Sprint Review</a><br>
-                <a href="#6216-execution-evidence-for-sprint-review">6.2.1.6. Execution Evidence for Sprint Review</a><br>
-                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.1.7. Services Documentation Evidence for Sprint Review</a><br>
-                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.1.8. Software Deployment Evidence for Sprint Review</a><br>
-                <a href="#6219-team-collaboration-insights-during-sprint">6.2.1.9. Team Collaboration Insights during Sprint</a><br>
-            </ul>
-                        <a href="#621-sprint-n">6.2.2. Sprint 2</a><br>
-            <ul>
-                <a href="#6211-sprint-planning-2">6.2.2.1. Sprint Planning 2</a><br>
-                <a href="#6212-aspect-leaders-and-collaborators">6.2.2.2. Aspect Leaders and Collaborators</a><br>
-                <a href="#6213-sprint-backlog-n">6.2.2.3. Sprint Backlog 2</a><br>
-                <a href="#6214-development-evidence-for-sprint-review">6.2.2.4. Development Evidence for Sprint Review</a><br>
-                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.2.5. Testing Suite Evidence for Sprint Review</a><br>
-                <a href="#6216-execution-evidence-for-sprint-review">6.2.2.6. Execution Evidence for Sprint Review</a><br>
-                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.2.7. Services Documentation Evidence for Sprint Review</a><br>
-                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.2.8. Software Deployment Evidence for Sprint Review</a><br>
-                <a href="#6219-team-collaboration-insights-during-sprint">6.2.2.9. Team Collaboration Insights during Sprint</a><br>
-            </ul>
-                        <a href="#621-sprint-n">6.2.3. Sprint 3</a><br>
-            <ul>
-                <a href="#6211-sprint-planning-n">6.2.3.1. Sprint Planning 3</a><br>
-                <a href="#6212-aspect-leaders-and-collaborators">6.2.3.2. Aspect Leaders and Collaborators</a><br>
-                <a href="#6213-sprint-backlog-n">6.2.3.3. Sprint Backlog 3</a><br>
-                <a href="#6214-development-evidence-for-sprint-review">6.2.3.4. Development Evidence for Sprint Review</a><br>
-                <a href="#6215-testing-suite-evidence-for-sprint-review">6.2.3.5. Testing Suite Evidence for Sprint Review</a><br>
-                <a href="#6216-execution-evidence-for-sprint-review">6.2.3.6. Execution Evidence for Sprint Review</a><br>
-                <a href="#6217-services-documentation-evidence-for-sprint-review">6.2.3.7. Services Documentation Evidence for Sprint Review</a><br>
-                <a href="#6218-software-deployment-evidence-for-sprint-review">6.2.3.8. Software Deployment Evidence for Sprint Review</a><br>
-                <a href="#6219-team-collaboration-insights-during-sprint">6.2.3.9. Team Collaboration Insights during Sprint</a><br>
-            </ul>
-        </ul>
-        <a href="#63-validation-interviews">6.3. Validation Interviews</a><br>
-        <ul>
-            <a href="#631-diseño-de-entrevistas">6.3.1. Diseño de Entrevistas</a><br>
-            <a href="#632-registro-de-entrevistas">6.3.2. Registro de Entrevistas</a><br>
-            <a href="#633-evaluaciones-según-heurísticas">6.3.3. Evaluaciones según heurísticas</a><br>
-        </ul>
-        <a href="#64-video-about-the-product">6.4. Video About-the-Product</a><br>
-    </ul>
-
+    
 <a href="#conclusiones">Conclusiones</a>
     <ul>
         <a href="#conclusiones-y-recomendaciones">Conclusiones y recomendaciones</a><br>
