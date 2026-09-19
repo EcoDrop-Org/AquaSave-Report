@@ -221,7 +221,7 @@ Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanza
 </p>
 
 <p align="center">
-  <img src="image/5P.png" alt="Segmento2" width="1000">
+  <img src="image/PAULA.png" alt="Segmento2" width="1000">
 </p>
 
 
@@ -391,7 +391,7 @@ Para este segmento, planteamos la necesidad de conservar el control sobre las de
 ##### 1.2.2.4. Lean UX Canvas
 <div align="center">
 
-  <img src="image/canvas.png" alt="Diagrama" width="600">
+  <img src="image/CANVAS.png" alt="Diagrama" width="600">
 
 </div>
 
@@ -823,14 +823,14 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 ***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 
 <p align="center">
-  <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
+  <img src="image/Principiante.png" alt="Segmento1" width="1000">
 </p>
 
 
 ***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas:***
 
 <p align="center">
-  <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
+  <img src="image/Experto.png" alt="Segmento2" width="1000">
 </p>
 
 #### 2.3.2. User Task Matrix
@@ -855,12 +855,12 @@ Ambos segmentos necesitan decidir cuándo y cuánto regar. El principiante requi
 
 ***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 <p align="center">
-  <img src="image/Empathy_Mapping_S1.png" alt="EM1" width="1000">
+  <img src="image/SEGMENTO 1 FEEL.png" alt="EM1" width="1000">
 </p>
 
 ***Segmento 2: Usuarios expertos en el cuidado de plantas:***
 <p align="center">
-  <img src="image/Empathy_Mapping_S2.png" alt="EM2" width="1000">
+  <img src="image/SEGMENTO 2 FEEL.png" alt="EM2" width="1000">
 </p>
 
 #### 2.3.4. As-Is Scenario Mapping
@@ -870,13 +870,13 @@ Los As-Is Scenario Maps describirán la experiencia actual de los usuarios al ev
 **Usuarios principiantes en el cuidado de plantas**
 
 <div align="center">
-  <img src="image/as-is-principiante.png" alt="As-Is Scenario Mapping del usuario principiante" width="600">
+  <img src="image/17.png" alt="As-Is Scenario Mapping del usuario principiante" width="600">
 </div>
 
 **Usuarios expertos en el cuidado de plantas**
 
 <div align="center">
-  <img src="image/as-is-experto.png" alt="As-Is Scenario Mapping del usuario experto" width="600">
+  <img src="image/18.png" alt="As-Is Scenario Mapping del usuario experto" width="600">
 </div>
 
 ### 2.4. Ubiquitous Language
@@ -999,7 +999,7 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | **Escenario 1: Orden aceptada.** Given que una solicitud autorizada contiene un commandId y vencimiento válidos, When se acepta, Then responde 202 y permite consultar el estado de la orden.<br><br>**Escenario 2: Orden repetida.** Given que se reenvía el mismo commandId, When el contenido coincide, Then se devuelve su estado sin repetir la acción; si el contenido cambia, se responde 409. | EP04 |
 | TS03 | Validar el contrato de recomendaciones | Como desarrollador, quiero validar entradas y salidas del servicio de IA, para integrar recomendaciones sin delegar el control del actuador. | **Escenario 1: Respuesta válida.** Given que el servicio recibe una solicitud válida, When devuelve una propuesta dentro del tiempo permitido, Then se verifican acción, explicación y vigencia antes de guardarla.<br><br>**Escenario 2: Respuesta inválida.** Given que la respuesta incumple el contrato o supera el tiempo permitido, When se procesa, Then se registra el fallo y se informa indisponibilidad sin emitir órdenes de riego. | EP09 |
 | TS04 | Publicar y consumir eventos persistentes | Como desarrollador, quiero eventos persistentes con consumidores idempotentes, para construir el historial sin perder ni duplicar ciclos. | **Escenario 1: Evento publicado.** Given que una operación y su evento quedan guardados en una transacción, When se publica desde outbox, Then conserva su eventId y el consumidor actualiza el historial una sola vez.<br><br>**Escenario 2: Evento repetido.** Given que un reinicio provoca la reentrega del evento, When el consumidor reconoce su identificador, Then evita duplicar los registros. | EP07 |
-| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | **Escenario 1: Recorrido integrado.** Given que los productos están disponibles, When se recorre la landing, la web y la aplicación móvil, Then mantienen una experiencia coherente y las aplicaciones utilizan los contratos de la API propia.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisan los productos, When se comprueba su implementación, Then la landing utiliza HTML, CSS y JavaScript; la web utiliza Vue con TypeScript y Material Design; Android utiliza Kotlin; y la API utiliza NestJS con TypeScript. | EP10 |
+| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar una landing page en HTML, CSS y JavaScript, aplicaciones web y móvil en Flutter con Dart y una API en Node.js con Express y TypeScript, para ofrecer una experiencia integrada de AquaSave. | **Escenario 1: Integración de los productos.** Given que los productos digitales están disponibles y el usuario tiene una cuenta válida, When accede desde las aplicaciones web y móvil, Then ambas utilizan la misma API y permiten consultar los datos asociados a su cuenta.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisa la implementación de los productos, When se comprueban el código fuente y sus dependencias, Then la landing page utiliza HTML, CSS y JavaScript; las aplicaciones web y móvil utilizan Flutter con Dart; y la API utiliza Node.js con Express y TypeScript. | EP10 |
 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | **Escenario 1: Pronóstico normalizado.** Given que el proveedor devuelve una respuesta válida, When el adaptador la procesa, Then normaliza ubicación, unidades, hora de obtención y vigencia.<br><br>**Escenario 2: Fallo del proveedor.** Given que ocurre un error o se supera el tiempo de espera, When se consulta el servicio, Then se informa indisponibilidad sin bloquear el control local. | EP05 |
 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | **Escenario 1: Dispositivo integrado.** Given que se dispone del controlador, sensores, alimentación y actuador, When se integran y prueban, Then se obtienen lecturas calibradas y se ejecuta un ciclo dentro de los límites definidos.<br><br>**Escenario 2: Condiciones insuficientes.** Given que falta un componente necesario o una lectura válida, When se evalúa el riego automático, Then se informa el problema y se impide iniciar el ciclo. | EP03 |
 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | **Escenario 1: Cambio de experiencia.** Given que una cuenta tiene dispositivos asociados, When cambia su nivel de experiencia, Then conserva los mismos permisos y propiedades.<br><br>**Escenario 2: Recurso ajeno.** Given que una solicitud intenta consultar o controlar una unidad de otra cuenta, When se verifica la autorización, Then se rechaza antes de devolver información o publicar una orden. | EP01 |
@@ -1014,13 +1014,13 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 Usuario: Usuario Principiante
 <div align="center">
 
-  <img src="image/Impact Map — Lucía Ramírez.png" alt="Diagrama" width="600">
+  <img src="image/Impact map 1.png" alt="Diagrama" width="600">
 
 </div>
 Usuario: Usuario Experto
 <div align="center">
 
-  <img src="image/Impact Map — Carlos Mendoza.png" alt="Diagrama" width="600">
+  <img src="image/Impact map 2.png" alt="Diagrama" width="600">
 
 </div>
 
@@ -1077,7 +1077,7 @@ Usuario: Usuario Experto
 | 47 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
 | 48 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
 | 49 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
-| 50 | TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | 8 |
+| 50 | TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar una landing page en HTML, CSS y JavaScript, aplicaciones web y móvil en Flutter con Dart y una API en Node.js con Express y TypeScript, para ofrecer una experiencia integrada de AquaSave. | 8 |
 | 51 | TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | 5 |
 | 52 | TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | 3 |
 | 53 | US40 | Consultar planes de servicio | Como usuario, quiero comparar las condiciones de los planes, para elegir prestaciones según mis necesidades. | 3 |
@@ -1086,29 +1086,316 @@ Usuario: Usuario Experto
 
 ## Capítulo IV: Solution Software Design
 
-### 4.1. Strategic-Level Domain-Driven Design
+### 4.1. Strategic-Level Attribute-Driven Design
 
-En esta sección se describe el procedimiento que utilizamos para identificar y definir los bounded contexts de nuestro sistema. Para lograrlo, empleamos las técnicas de EventStorming y el Bounded Context Canvas, herramientas fundamentales que nos ayudaron a mapear los dominios del negocio, reconocer límites naturales entre sus componentes y alinear la arquitectura con la estructura organizacional y los flujos reales de trabajo.
+El proceso de Attribute-Driven Design de AquaSave establece las decisiones de arquitectura a partir de las funcionalidades principales, los atributos de calidad y las restricciones del proyecto. Su propósito es organizar una solución que permita monitorear las condiciones de las plantas, controlar el riego, consultar registros y recibir recomendaciones, manteniendo una separación clara entre la experiencia de usuario, las reglas de negocio y la operación del dispositivo IoT.
 
-#### 4.1.1. Design-Level EventStorming
+El diseño considera la colaboración entre cinco bounded contexts: Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics. Las decisiones sobre comunicación, persistencia, seguridad y disponibilidad se relacionan con las historias de usuario y se expresan mediante escenarios verificables.
 
-Para desarrollar el EventStorming, el equipo se organizó con el objetivo de obtener una primera aproximación al modelado del dominio de nuestro proyecto. Durante este proceso seguimos una secuencia de nueve pasos.
+#### 4.1.1. Design Purpose
+
+El propósito del diseño es definir una arquitectura que permita a AquaSave integrar las aplicaciones web y móvil con un dispositivo IoT encargado del monitoreo y la ejecución del riego. La solución debe presentar información comprensible, permitir el seguimiento de las acciones y mantener el control del dispositivo aun cuando se interrumpa temporalmente la comunicación con la plataforma.
+
+Desde la perspectiva del negocio, la arquitectura debe facilitar la incorporación de usuarios, la vinculación de dispositivos y la evolución de los servicios digitales. Desde la perspectiva del usuario, debe permitir consultar el estado de sus plantas, conocer la vigencia de las lecturas y distinguir entre una acción solicitada y una acción confirmada.
+
+Los objetivos del diseño son:
+
+1. Separar las responsabilidades de identidad, dispositivos, decisiones de riego, suscripciones y análisis de información.
+2. Integrar los productos digitales mediante contratos consistentes, evitando duplicar reglas de negocio en cada aplicación.
+3. Proteger el acceso a las cuentas, los dispositivos y los registros de cada usuario.
+4. Mantener límites locales de operación para impedir que una interrupción de red prolongue indefinidamente un ciclo de riego.
+5. Incorporar servicios climáticos y recomendaciones apoyadas por IA sin entregarles el control directo del actuador.
+6. Conservar el origen y el método de obtención de los datos utilizados en el historial y las métricas de consumo.
+
+#### 4.1.2. Attribute-Driven Design Inputs
+
+Las entradas del proceso de diseño se organizan en tres grupos. La funcionalidad principal identifica las historias que tienen mayor impacto sobre la estructura de la solución. Los escenarios de calidad establecen cómo debe responder el sistema ante condiciones concretas. Finalmente, las restricciones delimitan las tecnologías, reglas de acceso y condiciones de operación que deben respetarse durante el desarrollo.
+
+##### 4.1.2.1. Primary Functionality (Primary User Stories)
+
+Se seleccionan las historias relacionadas con la vinculación del dispositivo, la consulta de telemetría, el control del riego, el seguimiento del consumo y las recomendaciones. Estas capacidades determinan las principales interacciones entre los usuarios, la API, los bounded contexts y el controlador IoT.
+
+| Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|:-------------------:|--------|-------------|-------------------------|:-----------------------:|
+| US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | **Escenario 1: Vinculación exitosa.** Given que el dispositivo está disponible y su código es válido, When el usuario completa la guía y acredita su posesión, Then el kit queda asociado de forma única a su cuenta y unidad.<br><br>**Escenario 2: Vinculación rechazada.** Given que el código fue utilizado o el dispositivo pertenece a otra cuenta, When intenta vincularlo, Then se rechaza la asociación sin revelar información del propietario. | EP03 |
+| US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | **Escenario 1: Lectura disponible.** Given que existe una lectura válida y calibrada, When el usuario consulta su unidad, Then ve el porcentaje normalizado de humedad, su escala y la fecha de medición.<br><br>**Escenario 2: Lectura desactualizada.** Given que la lectura es inválida o tiene más de sesenta segundos, When se muestra, Then se identifica como inválida o desactualizada y no se presenta como una medición actual. | EP03 |
+| US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | **Escenario 1: Activación confirmada.** Given que la unidad pertenece al usuario, está conectada y cumple los límites de operación, When solicita iniciar el riego con una duración válida, Then la orden aparece pendiente y cambia a activa después de la confirmación del dispositivo.<br><br>**Escenario 2: Activación no confirmada.** Given que el dispositivo está desconectado o no confirma dentro de cinco segundos, When se solicita el riego, Then no se muestra como activo y la orden vence sin ejecutarse al reconectar. | EP04 |
+| US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | **Escenario 1: Detención solicitada.** Given que existe un ciclo activo, When el usuario selecciona "Detener riego", Then se envía una orden prioritaria sin pedir otra confirmación al usuario y se muestra la detención cuando el dispositivo la confirma.<br><br>**Escenario 2: Pérdida de comunicación.** Given que el dispositivo no responde, When se solicita detener, Then se informa que la detención remota no está confirmada y el dispositivo conserva su límite local de duración. | EP04 |
+| US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | **Escenario 1: Automatización configurada.** Given que los umbrales, la duración máxima y la pausa entre ciclos son válidos, When el usuario confirma y el dispositivo acepta la configuración, Then se habilita el riego automático con esos límites.<br><br>**Escenario 2: Condiciones insuficientes.** Given que la configuración no fue confirmada o la lectura es inválida, When se evalúa iniciar un ciclo automático, Then el ciclo no comienza y se registra el motivo. | EP04 |
+| US24 | Consultar historial de riego | Como usuario, quiero consultar ciclos y resultados por unidad, para revisar qué ocurrió durante el cuidado. | **Escenario 1: Historial disponible.** Given que existen ciclos registrados, When el usuario selecciona una unidad y un periodo, Then ve inicio, fin, origen, resultado y volumen disponible de cada ciclo.<br><br>**Escenario 2: Ciclo incompleto.** Given que un ciclo no tiene cierre confirmado, When se consulta, Then aparece como incompleto sin asignarle una duración final inventada. | EP07 |
+| US26 | Comparar consumo con una línea base | Como usuario, quiero comparar el consumo con una referencia documentada, para evaluar posibles reducciones. | **Escenario 1: Comparación válida.** Given que existe una línea base positiva con condiciones y periodos comparables, When se solicita la comparación, Then se muestra la variación en litros y porcentaje junto con el método utilizado.<br><br>**Escenario 2: Referencia insuficiente.** Given que la línea base no existe, es cero o no es comparable, When se solicita calcular una reducción, Then se informa que no puede determinarse. Un aumento de consumo se presenta como aumento. | EP07 |
+| US34 | Consultar una recomendación de riego | Como usuario, quiero recibir una recomendación apoyada por IA con explicación, para evaluar el cuidado de mi unidad. | **Escenario 1: Recomendación disponible.** Given que hay un perfil suficiente, una lectura de hasta sesenta segundos y una configuración válida, When se solicita una recomendación, Then se muestra la propuesta, su fundamento, los datos utilizados y una vigencia máxima de cinco minutos.<br><br>**Escenario 2: Recomendación no disponible.** Given que faltan datos o la respuesta de IA no es válida, When se solicita orientación, Then se informa la limitación sin generar una orden de riego. | EP09 |
+| US35 | Decidir sobre una recomendación | Como usuario, quiero aceptar o descartar una recomendación, para conservar el control de mis decisiones. | **Escenario 1: Recomendación aceptada.** Given que la recomendación está vigente, When el usuario la acepta, Then se verifican nuevamente propiedad, lecturas, configuración y límites antes de emitir una única orden, si corresponde.<br><br>**Escenario 2: Recomendación no ejecutable.** Given que la propuesta fue descartada, venció o ya no corresponde al estado actual, When se procesa la decisión, Then no se inicia el riego y se registra el motivo. | EP09 |
+
+##### 4.1.2.2. Quality Attribute Scenarios
+
+Los escenarios iniciales priorizan la confiabilidad del riego, la protección de los recursos del usuario, la respuesta de las aplicaciones y la trazabilidad de la información. Las medidas establecidas representan objetivos de aceptación para las pruebas de la solución.
+
+| ID | Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta | Medida |
+|:--:|----------|--------|----------|-----------|---------|-----------|--------|
+| QAS01 | Usabilidad | Usuario que utiliza AquaSave por primera vez. | Intenta vincular un dispositivo. | Aplicación y proceso de vinculación. | Cuenta activa, kit preparado y red compatible. | Presenta instrucciones ordenadas, informa el avance y permite corregir errores. | Al menos 4 de 5 participantes completan la vinculación en un máximo de 10 minutos, sin intervención del moderador. |
+| QAS02 | Rendimiento | Usuarios y dispositivos IoT. | Se consulta el dashboard mientras se recibe telemetría. | API, Device Management y almacenamiento de lecturas. | 50 usuarios concurrentes y 100 dispositivos con una lectura cada 30 segundos. | Devuelve el último dato registrado, su fecha y su vigencia. | Tiempo de consulta menor o igual a 2 segundos en el percentil 95; toda lectura de más de 60 segundos se identifica como desactualizada. |
+| QAS03 | Confiabilidad | Aplicación o canal de mensajería. | Reenvía una orden de inicio. | API, Device Management y controlador. | Red con retrasos, duplicados o reconexiones. | Reconoce el identificador de la orden y evita iniciar otro ciclo por el mismo comando. | En 100 órdenes con hasta 5 entregas por orden, cada identificador inicia como máximo un ciclo. Sin confirmación a los 5 segundos, se informa el estado no confirmado. |
+| QAS04 | Seguridad | Usuario sin propiedad sobre un recurso. | Intenta consultar o controlar un dispositivo de otra cuenta. | Identity Access Management, API y Device Management. | Sesiones válidas de cuentas diferentes. | Rechaza la operación antes de devolver información o publicar comandos. | En 100 intentos de acceso cruzado se obtienen 0 lecturas no autorizadas y 0 órdenes publicadas; todos los rechazos quedan registrados. |
+| QAS05 | Confiabilidad y disponibilidad del control local | Interrupción de red o reinicio. | Se pierde la comunicación durante el riego. | Firmware y salida de control del actuador. | Dispositivo energizado sin acceso al backend; reinicio en prueba independiente. | Aplica el límite local de duración y mantiene la salida apagada tras reiniciar. | En 20 desconexiones, la salida se desactiva a más tardar 1 segundo después del límite configurado; en 20 reinicios se producen 0 reactivaciones de órdenes anteriores. |
+| QAS06 | Trazabilidad e integridad | Dispositivo y publicación de eventos. | Se recibe un resultado, se repite un evento o falta una confirmación. | Device Management, Irrigation Intelligence y Analytics. | Operación normal y recuperación tras interrupciones. | Conserva un registro identificable por ciclo, su procedencia y su completitud. | El 100 % de los ciclos confirmados de prueba conserva identificador, tiempos, resultado y procedencia del volumen; los duplicados no incrementan consumo y los registros incompletos se identifican. |
+| QAS07 | Modificabilidad | Equipo de desarrollo. | Sustituye el proveedor climático por otro con datos equivalentes. | Adaptador climático de Irrigation Intelligence. | Contratos y respuestas de prueba disponibles. | Sustituye el adaptador manteniendo el contrato interno y las interfaces públicas. | Cambio en un máximo de 1 jornada de 8 horas, sin modificar los otros cuatro bounded contexts y con todas las pruebas de contrato aprobadas. |
+| QAS08 | Resiliencia | Servicio externo de IA. | No responde o devuelve una propuesta inválida. | Adaptador de recomendaciones e Irrigation Intelligence. | Proveedor lento o no disponible. | Limita la espera, informa la condición y no emite órdenes. | En 30 casos de fallo, la solicitud finaliza en un máximo de 5 segundos con 0 órdenes. Las propuestas válidas vencen en un máximo de 5 minutos y se revalidan antes de ejecutarse. |
+
+##### 4.1.2.3. Constraints
+
+Las restricciones seleccionadas establecen la base tecnológica y las condiciones de operación de AquaSave. La solución utilizará una landing page en HTML, CSS y JavaScript; una aplicación web en Vue con TypeScript y Material Design; una aplicación Android nativa en Kotlin; y una API en NestJS con TypeScript. El dispositivo se desarrollará sobre ESP32.
+
+La propiedad del dispositivo, los límites locales del riego y la separación entre recomendaciones y ejecución constituyen restricciones de diseño. Las funciones comerciales y la personalización de la experiencia no deben anular estas condiciones.
+
+| Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|:------------------:|--------|-------------|-------------------------|:-----------------------:|
+| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | **Escenario 1: Recorrido integrado.** Given que los productos están disponibles, When se recorre la landing, la web y la aplicación móvil, Then mantienen una experiencia coherente y las aplicaciones utilizan los contratos de la API propia.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisan los productos, When se comprueba su implementación, Then la landing utiliza HTML, CSS y JavaScript; la web utiliza Vue con TypeScript y Material Design; Android utiliza Kotlin; y la API utiliza NestJS con TypeScript. | EP10 |
+| TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | **Escenario 1: Dispositivo integrado.** Given que se dispone del controlador, sensores, alimentación y actuador, When se integran y prueban, Then se obtienen lecturas calibradas y se ejecuta un ciclo dentro de los límites definidos.<br><br>**Escenario 2: Condiciones insuficientes.** Given que falta un componente necesario o una lectura válida, When se evalúa el riego automático, Then se informa el problema y se impide iniciar el ciclo. | EP03 |
+| TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | **Escenario 1: Cambio de experiencia.** Given que una cuenta tiene dispositivos asociados, When cambia su nivel de experiencia, Then conserva los mismos permisos y propiedades.<br><br>**Escenario 2: Recurso ajeno.** Given que una solicitud intenta consultar o controlar una unidad de otra cuenta, When se verifica la autorización, Then se rechaza antes de devolver información o publicar una orden. | EP01 |
+| TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | **Escenario 1: Corte local.** Given que existe un ciclo activo, When alcanza su duración máxima o una condición de corte, Then el controlador desactiva el actuador sin depender de internet.<br><br>**Escenario 2: Reinicio o fallo.** Given que ocurre un reinicio, una lectura inválida o falta una configuración válida, When se evalúa la operación, Then el actuador permanece apagado y no se reejecutan órdenes anteriores. | EP04 |
+| TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | **Escenario 1: Entrega identificable.** Given que se prepara una entrega, When se revisan sus repositorios, Then existen documentación, contratos, historial de cambios y referencias de versión.<br><br>**Escenario 2: Cambio integrado.** Given que se incorpora una modificación, When se registra en el repositorio, Then sigue el flujo GitFlow acordado y utiliza Conventional Commits en inglés. | EP10 |
+| TS12 | Aislar IA del control físico | Como desarrollador, quiero que la IA solo produzca propuestas estructuradas, para impedir que una respuesta del modelo active directamente el riego. | **Escenario 1: Propuesta revisada.** Given que la IA genera una propuesta, When se procesa, Then requiere validación, aceptación del usuario y comprobación de límites antes de originar una orden.<br><br>**Escenario 2: Acceso restringido.** Given que el servicio de IA intenta publicar una orden directamente, When se verifica su acceso al broker, Then se rechaza porque no dispone de credenciales ni permisos de control. | EP09 |
+| TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | **Escenario 1: Idioma configurable.** Given que no existe una preferencia guardada, When se utiliza el producto, Then se muestra inglés en_US y se permite seleccionar español es_419 sin modificar identificadores ni unidades; los mensajes y la documentación de API siguen la política de idioma establecida.<br><br>**Escenario 2: Interacción accesible.** Given que se utilizan teclado o tecnologías de asistencia, When se recorren los controles, Then existen etiquetas, foco y semántica accesibles, y los estados no dependen únicamente del color. | EP10 |
+
+#### 4.1.3. Architectural Drivers Backlog
+
+El Architectural Drivers Backlog reúne los requisitos que orientan las decisiones de arquitectura. Su priorización considera el valor para los usuarios y el negocio, las consecuencias de un fallo y la complejidad técnica de implementar cada capacidad.
+
+El orden propuesto sitúa primero los drivers de alta importancia y alto impacto arquitectónico. Los identificadores FD agrupan las historias funcionales seleccionadas; los identificadores QAS corresponden a escenarios de calidad, y los TS conservan la relación con las restricciones técnicas.
+
+| Driver ID | Título de Driver | Descripción | Importancia para Stakeholders | Impacto en Architecture Technical Complexity |
+|:---------:|------------------|-------------|:-----------------------------:|:-------------------------------------------:|
+| FD03 | Control y automatización del riego | US13, US14 y US15: solicitar, detener y automatizar ciclos con confirmación y límites locales. | High | High |
+| QAS05 | Continuidad del control local | Mantener el corte por duración y el estado apagado tras reinicios. | High | High |
+| TS10 | Límites locales obligatorios | Aplicar validaciones y corte sin depender de servicios externos. | High | High |
+| QAS03 | Procesamiento único de órdenes | Evitar ciclos duplicados por reintentos y distinguir solicitudes de ejecuciones. | High | High |
+| QAS04 | Protección de recursos | Rechazar consultas y órdenes sobre unidades de otras cuentas. | High | High |
+| TS08 | Autorización independiente de la experiencia | Verificar propiedad en cada operación. | High | High |
+| FD01 | Vinculación de dispositivos | US31: asociar un dispositivo disponible con la cuenta que acredita su posesión. | High | High |
+| TS07 | Integración del dispositivo IoT | Integrar controlador, sensores, alimentación y actuador con calibración y límites. | High | High |
+| FD02 | Monitoreo de humedad | US09: consultar mediciones calibradas con vigencia visible. | High | High |
+| QAS02 | Rendimiento del monitoreo | Atender consultas concurrentes y distinguir datos desactualizados. | High | High |
+| FD04 | Historial y comparación del consumo | US24 y US26: registrar ciclos y comparar consumo con una línea base documentada. | High | High |
+| QAS06 | Integridad del historial | Conservar procedencia, evitar duplicados e identificar registros incompletos. | High | High |
+| FD05 | Recomendaciones revisables | US34 y US35: generar propuestas explicadas y revalidarlas antes de una posible ejecución. | High | High |
+| QAS08 | Resiliencia de las recomendaciones | Aislar fallos de IA y evitar órdenes derivadas de respuestas inválidas. | High | High |
+| TS12 | Separación entre IA y control físico | Restringir la IA a propuestas sin credenciales de control. | High | High |
+| TS05 | Integración multicomponente | Utilizar las tecnologías definidas y una API propia compartida por web y móvil. | High | High |
+| QAS01 | Vinculación comprensible | Facilitar el primer uso con instrucciones y recuperación de errores. | High | Medium |
+| TS13 | Internacionalización y accesibilidad | Ofrecer inglés por defecto, español y controles accesibles. | High | Medium |
+| QAS07 | Sustitución de proveedores | Aislar el pronóstico externo mediante un contrato estable. | Medium | Medium |
+| TS11 | Versionado y documentación | Mantener contratos, decisiones e historial de cambios trazables. | Medium | Low |
+
+#### 4.1.4. Architectural Design Decisions
+
+El proceso de decisión se organiza siguiendo las etapas del Quality Attribute Workshop: presentación de los objetivos del negocio, revisión de la propuesta arquitectónica, identificación de drivers, generación de escenarios, consolidación, priorización y refinamiento. Los resultados se aplican en iteraciones de diseño que relacionan cada problema con las alternativas consideradas y la decisión propuesta.
+
+**Iteración 1: Organización de responsabilidades e integración**
+
+Los drivers FD01, FD02, TS05 y TS07 orientan la separación entre aplicaciones, API y dispositivo. Se consideran una arquitectura por capas, un monolito modular y una arquitectura de microservicios.
+
+Se propone un backend modular con cinco módulos de dominio correspondientes a los cinco bounded contexts. Cada módulo tendrá sus propios contratos y responsabilidad sobre sus datos. Esta decisión permite desarrollar y desplegar inicialmente una única API sin convertir cada contexto en un servicio independiente.
+
+La landing page, la aplicación web, la aplicación móvil y el firmware conservarán sus responsabilidades de presentación u operación local. No accederán directamente a la base de datos de la plataforma.
+
+**Iteración 2: Seguridad y confiabilidad del riego**
+
+Los drivers FD03, QAS03, QAS04, QAS05, TS08 y TS10 priorizan la autorización y la ejecución acotada. La API verificará la identidad y la propiedad de la unidad antes de solicitar una operación. Device Management administrará el envío y seguimiento de comandos, mientras que el firmware verificará identificadores, vencimientos y límites antes de accionar el dispositivo.
+
+Se propone mensajería MQTT para la comunicación con el controlador, acompañada de órdenes identificables e idempotentes. Una solicitud aceptada por la plataforma no se considerará ejecutada hasta recibir confirmación. La ausencia de respuesta no se interpretará como prueba de que el actuador está apagado.
+
+Las órdenes de inicio vencidas no se ejecutarán al reconectar. La detención tendrá prioridad y no requerirá una segunda confirmación del usuario. El límite de duración se aplicará localmente y la salida de control permanecerá apagada durante el arranque.
+
+**Iteración 3: Recomendaciones e integración externa**
+
+Los drivers FD05, QAS07, QAS08 y TS12 orientan el aislamiento de los proveedores climáticos y de IA. Se consideran llamadas desde las aplicaciones, integración directa en el dominio y adaptación mediante puertos y adaptadores.
+
+Se propone que Irrigation Intelligence concentre la interpretación de condiciones, las políticas y las recomendaciones. Los adaptadores validarán formato, unidades y vigencia. Cada consulta tendrá un tiempo máximo de espera y tratamiento explícito de errores.
+
+La IA producirá propuestas, no comandos. Una recomendación requerirá aceptación del usuario y nueva validación del estado de la unidad antes de originar una orden. El pronóstico solo podrá aplazar el riego de unidades configuradas como expuestas a lluvia. Estas capacidades formarán parte de Irrigation Intelligence y no constituirán nuevos bounded contexts.
+
+**Iteración 4: Historial, evolución e interacción**
+
+Los drivers FD04, QAS01, QAS06, TS11 y TS13 orientan la persistencia y la experiencia de uso. Se propone conservar los cambios relevantes junto con los eventos pendientes de publicación mediante Transactional Outbox. Los consumidores identificarán los eventos procesados para evitar duplicar ciclos o consumo.
+
+Analytics mantendrá los registros destinados al historial y las comparaciones. Una estimación de volumen se distinguirá de una medición, y la ausencia de datos no se reemplazará por cero. Las comparaciones requerirán periodos y condiciones equivalentes.
+
+La vinculación utilizará una secuencia guiada, con mensajes accesibles e internacionalizados. Monetization administrará los planes y las prestaciones opcionales sin impedir la detención ni modificar los límites locales cuando una suscripción venza.
+
+**Candidate Pattern Evaluation Matrix**
+
+| Driver ID | Título de Driver | Pattern 1: Pro / Con | Pattern 2: Pro / Con | Pattern 3: Pro / Con |
+|:---------:|------------------|---------------------|---------------------|---------------------|
+| FD01, FD02, TS05 | Organización del backend | **Arquitectura por capas.** Pro: organización inicial sencilla. Con: las capas por sí solas no delimitan los dominios. | **Monolito modular.** Pro: límites explícitos y despliegue unificado. Con: exige respetar los contratos entre módulos. | **Microservicios.** Pro: despliegue y escalado independientes. Con: mayor complejidad operativa y de consistencia distribuida. |
+| FD03, QAS03 | Entrega de comandos | **Consulta periódica.** Pro: integración HTTP sencilla. Con: la frecuencia condiciona latencia y tráfico. | **Publish–Subscribe.** Pro: comunicación bidireccional desacoplada. Con: exige controlar duplicados, vencimientos y reconexiones. | **Acceso directo aplicación–dispositivo.** Pro: camino corto en la red local. Con: dificulta el acceso remoto y la autorización central. |
+| QAS04, TS08 | Protección del acceso | **Autorización en la interfaz.** Pro: permite ocultar controles. Con: no protege la API frente a solicitudes directas. | **Autorización central y verificación de propiedad.** Pro: política uniforme por recurso. Con: requiere mantener asociaciones y pruebas por operación. | **Autorización duplicada por producto.** Pro: controles locales de experiencia. Con: riesgo de reglas inconsistentes. |
+| QAS05, TS10 | Control ante desconexiones | **Control exclusivo en la nube.** Pro: configuración central. Con: perder la comunicación puede impedir el corte remoto. | **Control local con sincronización.** Pro: límites independientes de internet. Con: requiere versionar políticas y reconciliar estados. | **Control exclusivamente local.** Pro: autonomía. Con: no resuelve por sí solo la supervisión remota ni el historial compartido. |
+| QAS07, QAS08, TS12 | Integración externa | **Llamadas desde las aplicaciones.** Pro: implementación directa. Con: duplica lógica y puede exponer credenciales. | **Integración acoplada al dominio.** Pro: menos intermediarios. Con: los cambios del proveedor afectan las reglas internas. | **Ports and Adapters con Anti-corruption Layer.** Pro: aísla cambios y normaliza contratos. Con: requiere adaptadores y pruebas adicionales. |
+| FD04, QAS06 | Registro del historial | **Doble escritura directa.** Pro: flujo simple. Con: puede guardar un ciclo y perder la publicación de su evento. | **Transactional Outbox y consumidor idempotente.** Pro: recupera publicaciones y evita duplicados. Con: añade procesamiento asíncrono y supervisión. | **Event Sourcing.** Pro: reconstrucción desde eventos. Con: mayor complejidad de versionado y reconstrucción para el alcance inicial. |
+| QAS01, TS13 | Configuración inicial | **Formulario único.** Pro: todos los campos visibles. Con: concentra decisiones y errores. | **Asistente por pasos.** Pro: orientación progresiva y avance conservado. Con: requiere gestionar estados intermedios. | **Configuración por soporte.** Pro: acompañamiento individual. Con: crea dependencia y limita la autonomía. |
+
+Las alternativas seleccionadas son el monolito modular, Publish–Subscribe con comandos idempotentes, la verificación central de identidad y propiedad, el control local con sincronización, Ports and Adapters con Anti-corruption Layer, Transactional Outbox y el asistente de configuración por pasos. Su combinación mantiene separados el criterio de riego, la ejecución física y la presentación de información.
+
+#### 4.1.5. Quality Attribute Scenario Refinements
+
+Los escenarios refinados precisan las condiciones de prueba, los componentes involucrados y las medidas de aceptación. Se presentan en orden de prioridad: primero la operación del riego y la protección del acceso; luego la integridad de los registros, las recomendaciones, el rendimiento, la vinculación y la evolución de las integraciones.
+
+Cada escenario vincula una necesidad del negocio con una respuesta observable. Las preguntas e incidencias delimitan los aspectos que deberán comprobarse durante la implementación y validación.
+
+**Scenario Refinement for QAS05: Confiabilidad del control local**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Interrupción de comunicación durante un ciclo y reinicio del dispositivo. |
+| Business Goals | Evitar que la pérdida de conexión prolongue el riego y mantener límites verificables de operación. |
+| Relevant Quality Attributes | Confiabilidad y disponibilidad del control local. |
+| Stimulus | La conexión se interrumpe mientras el actuador está encendido; en una prueba independiente se reinicia el controlador. |
+| Stimulus Source | Red doméstica o reinicio del ESP32. |
+| Environment | Dispositivo con política válida y ciclo activo. Para la prueba de desconexión, la alimentación permanece estable. |
+| Artifact | Firmware, temporizador local y salida que controla el actuador. |
+| Response | El temporizador aplica el límite de duración sin consultar al backend. Al reiniciar, la salida permanece apagada y el ciclo anterior no se reanuda. Los nuevos ciclos automáticos requieren lecturas y configuración válidas. |
+| Response Measure | En 20 desconexiones, la salida se desactiva a más tardar 1 segundo después de la duración máxima. En 20 reinicios durante un ciclo, se obtienen 0 reactivaciones de órdenes anteriores. |
+| Questions | ¿La salida permanece apagada desde el arranque hasta que el firmware termina su inicialización? Se comprobará midiendo la señal de control durante el reinicio. |
+| Issues | La desactivación eléctrica no demuestra por sí sola el cierre hidráulico. El actuador, la alimentación y el montaje requieren comprobación física independiente. |
+
+**Scenario Refinement for QAS03: Ejecución única de comandos**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Recepción repetida de una misma orden de inicio y pérdida de su confirmación. |
+| Business Goals | Evitar riegos duplicados y mostrar al usuario un estado coherente con las confirmaciones disponibles. |
+| Relevant Quality Attributes | Confiabilidad e integridad de las operaciones. |
+| Stimulus | La aplicación reintenta una solicitud o el canal de mensajería entrega nuevamente un comando. |
+| Stimulus Source | Aplicación web, aplicación móvil o broker MQTT. |
+| Environment | Dispositivo conectado o en reconexión, con retrasos y pérdida de respuestas. |
+| Artifact | API, registro de comandos de Device Management y firmware. |
+| Response | La orden conserva un identificador único y un vencimiento. Su repetición consulta el resultado registrado y no inicia otro ciclo. El dispositivo descarta órdenes de inicio vencidas y conserva la información necesaria para reconocer duplicados después de un reinicio. |
+| Response Measure | En 100 órdenes con hasta 5 entregas por identificador, se produce como máximo un inicio por orden. A los 5 segundos sin confirmación, la interfaz deja de esperar una respuesta inmediata y muestra que la ejecución no está confirmada. |
+| Questions | ¿El dispositivo puede verificar el vencimiento al reconectar? El diseño exige una referencia de tiempo confiable; sin ella, no acepta nuevos inicios remotos. |
+| Issues | La pérdida de la confirmación puede ocurrir después del inicio físico. El sistema no debe presentar ese caso como una detención ni emitir automáticamente otra orden con un identificador distinto. |
+
+**Scenario Refinement for QAS04: Autorización sobre dispositivos**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Acceso a lecturas, historial o control de una unidad perteneciente a otra cuenta. |
+| Business Goals | Proteger la información de los usuarios y evitar acciones no autorizadas sobre sus dispositivos. |
+| Relevant Quality Attributes | Seguridad y confidencialidad. |
+| Stimulus | Un usuario modifica el identificador de la unidad en una solicitud válida. |
+| Stimulus Source | Usuario autenticado sin autorización sobre la unidad solicitada. |
+| Environment | Dos cuentas activas con dispositivos diferentes y servicios disponibles. |
+| Artifact | Controles de acceso de la API, Identity Access Management y Device Management. |
+| Response | La API obtiene la identidad de la sesión y verifica la asociación de propiedad del recurso. Rechaza el acceso antes de devolver información o enviar comandos y registra el intento sin exponer datos sensibles. |
+| Response Measure | En 100 solicitudes de acceso cruzado distribuidas entre consulta, configuración y control, se devuelven 0 datos de recursos ajenos y se publican 0 comandos. El 100 % de los rechazos queda registrado. |
+| Questions | ¿Todas las operaciones que reciben un identificador de unidad verifican la propiedad? La revisión incluirá las rutas de historial, configuración y recomendaciones. |
+| Issues | Un cambio de experiencia o suscripción no concede propiedad sobre dispositivos. Las credenciales de cada dispositivo deben limitar su comunicación a sus propios canales. |
+
+**Scenario Refinement for QAS06: Integridad del historial y consumo**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Publicación repetida de eventos y reconstrucción del historial después de una interrupción. |
+| Business Goals | Permitir que el usuario revise lo ocurrido y compare consumo sin duplicaciones ni valores inventados. |
+| Relevant Quality Attributes | Trazabilidad e integridad de datos. |
+| Stimulus | Se recibe un cierre de ciclo, se repite un evento ya procesado o falta la confirmación final. |
+| Stimulus Source | Device Management y proceso de entrega de eventos. |
+| Environment | Operación normal y recuperación del procesamiento después de una interrupción temporal. |
+| Artifact | Registro de ciclos, Transactional Outbox y proyecciones de Analytics. |
+| Response | El ciclo y el evento pendiente se guardan de forma consistente. Analytics procesa cada evento de manera idempotente y conserva identificador, tiempos, resultado y método de obtención del volumen. Los ciclos sin cierre quedan identificados como incompletos. |
+| Response Measure | Con un conjunto de 100 ciclos confirmados y reentrega de sus eventos, se conservan exactamente 100 ciclos completos. El 100 % identifica la procedencia del volumen o su indisponibilidad. Los casos incompletos adicionales no reciben un cierre ni consumo cero por defecto. |
+| Questions | ¿Se puede reconstruir una estimación con su caudal calibrado, duración y versión de calibración? Cada registro deberá conservar los datos utilizados. |
+| Issues | Una estimación no confirma que existió flujo de agua. La comparación con una línea base debe usar métodos y periodos compatibles, y no presentar un aumento como ahorro. |
+
+**Scenario Refinement for QAS08: Aislamiento de fallos de IA**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Indisponibilidad del proveedor de IA y respuesta incompatible con las reglas de riego. |
+| Business Goals | Ofrecer orientación sin comprometer el control del dispositivo ni bloquear el uso de la plataforma. |
+| Relevant Quality Attributes | Resiliencia y confiabilidad. |
+| Stimulus | La consulta excede el tiempo permitido, devuelve un formato inválido o sugiere una acción fuera de los límites. |
+| Stimulus Source | Servicio externo de IA. |
+| Environment | Usuario autenticado, unidad autorizada y datos de entrada suficientes para solicitar orientación. |
+| Artifact | Adaptador de IA y servicios de recomendaciones de Irrigation Intelligence. |
+| Response | Se limita el tiempo de espera, se valida la respuesta y se informa la indisponibilidad cuando corresponde. Las propuestas válidas incluyen fundamento y vencimiento. La aceptación del usuario vuelve a comprobar propiedad, lecturas, política y límites antes de solicitar una orden. |
+| Response Measure | En 30 casos de fallo, la solicitud finaliza en un máximo de 5 segundos y se publican 0 órdenes de riego. El 100 % de las propuestas válidas vence en un máximo de 5 minutos; ninguna propuesta vencida se ejecuta. |
+| Questions | ¿Los datos actuales todavía respaldan una propuesta aceptada? La comprobación se realiza nuevamente al aceptar, aunque la recomendación no haya vencido. |
+| Issues | El proveedor de IA no dispondrá de credenciales de control ni acceso autorizado a los canales de comandos. El monitoreo y la detención deben permanecer disponibles si falla la recomendación. |
+
+**Scenario Refinement for QAS02: Rendimiento de las consultas**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Consulta concurrente del dashboard durante la recepción periódica de telemetría. |
+| Business Goals | Permitir revisar el estado de las unidades sin demoras que dificulten el uso cotidiano. |
+| Relevant Quality Attributes | Rendimiento y actualidad de la información. |
+| Stimulus | Los usuarios consultan sus unidades mientras los dispositivos envían nuevas lecturas. |
+| Stimulus Source | Aplicaciones web y móvil, y dispositivos IoT. |
+| Environment | 50 usuarios concurrentes consultando cada 5 segundos y 100 dispositivos enviando una lectura cada 30 segundos durante una prueba de 15 minutos. |
+| Artifact | Endpoint de consulta, Device Management y almacenamiento de últimas lecturas. |
+| Response | La consulta utiliza la lectura más reciente almacenada y devuelve su fecha y estado. No espera una respuesta del dispositivo ni una recomendación de IA para mostrar el dashboard. |
+| Response Measure | El percentil 95 del tiempo de consulta de la API es menor o igual a 2 segundos, medido desde el envío hasta la recepción de la respuesta. Toda lectura de más de 60 segundos se presenta como desactualizada. |
+| Questions | ¿La recepción de telemetría y la lectura del dashboard mantienen estos tiempos bajo la misma carga? Se medirán juntas en el entorno de integración. |
+| Issues | La latencia de internet del usuario puede aumentar el tiempo de carga visual. Una respuesta rápida de la API no convierte una lectura antigua en una medición vigente. |
+
+**Scenario Refinement for QAS01: Usabilidad de la vinculación**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Primer registro y asociación de un dispositivo a una cuenta. |
+| Business Goals | Facilitar la activación del kit y reducir el abandono durante la instalación. |
+| Relevant Quality Attributes | Usabilidad y accesibilidad. |
+| Stimulus | El usuario inicia el asistente de vinculación. |
+| Stimulus Source | Persona que utiliza AquaSave por primera vez. |
+| Environment | Cuenta creada, kit preparado y energizado, red compatible y credenciales disponibles. |
+| Artifact | Asistente de configuración de la aplicación web o móvil y servicio de vinculación. |
+| Response | Presenta pasos claros, identifica el dispositivo, valida el código de asociación e informa errores de conexión. Conserva los pasos completados y muestra una confirmación final únicamente cuando se verifica el vínculo. |
+| Response Measure | Al menos 4 de 5 participantes completan la asociación en un máximo de 10 minutos, contados desde el inicio del asistente hasta la confirmación, sin intervención del moderador. |
+| Questions | ¿El participante entiende qué corregir si introduce una contraseña de red incorrecta? La prueba incluirá observación de la recuperación del error sin instrucciones del moderador. |
+| Issues | La prueba evalúa la vinculación digital con el kit preparado. El montaje eléctrico y la calibración física requieren instrucciones y comprobaciones propias. |
+
+**Scenario Refinement for QAS07: Sustitución del proveedor climático**
+
+| Campo | Descripción |
+|:------|-------------|
+| Scenario(s) | Cambio del proveedor de pronóstico sin alterar la lógica de riego ni las aplicaciones. |
+| Business Goals | Reducir la dependencia de un proveedor y facilitar el mantenimiento de las integraciones. |
+| Relevant Quality Attributes | Modificabilidad e interoperabilidad. |
+| Stimulus | Se requiere integrar un proveedor climático alternativo con información equivalente. |
+| Stimulus Source | Equipo de desarrollo. |
+| Environment | Entorno de desarrollo con documentación, credenciales de prueba y ejemplos de respuesta disponibles. |
+| Artifact | Puerto de pronóstico y adaptador externo de Irrigation Intelligence. |
+| Response | Se implementa el adaptador alternativo y se normalizan ubicación, probabilidad de lluvia, periodo del pronóstico, unidades y fecha de obtención. Los consumidores conservan el contrato interno. |
+| Response Measure | La sustitución se completa en un máximo de 1 jornada de 8 horas, sin cambios en los otros cuatro bounded contexts ni en los contratos públicos de web y móvil. Se aprueba el 100 % de las pruebas de contrato definidas. |
+| Questions | ¿Ambos proveedores representan la probabilidad de lluvia para periodos equivalentes? Las diferencias deben resolverse en el adaptador antes de aplicar una política. |
+| Issues | El objetivo presupone datos equivalentes disponibles. Un proveedor que carece de información necesaria requiere revisar la capacidad ofrecida, no completar campos con valores ficticios. |
+
+### 4.2. Strategic-Level Domain-Driven Design
+
+En esta sección se describe el procedimiento de identificación y organización de los bounded contexts de AquaSave. Se utilizan EventStorming, Candidate Context Discovery, Domain Message Flows y Bounded Context Canvas para reconocer las responsabilidades del negocio y establecer cómo deben colaborar.
+
+La separación del dominio permite distinguir la gestión del dispositivo, la interpretación de las condiciones de riego, el acceso de usuarios, los servicios comerciales y el análisis de los registros. Estos límites se mantienen tanto en la documentación como en la organización modular de la solución.
+
+#### 4.2.1. EventStorming
+
+El EventStorming presenta una aproximación al dominio mediante eventos, comandos, políticas y modelos de lectura. El proceso se organiza en nueve pasos para comprender la secuencia de acciones e identificar los límites naturales de la solución.
 
 **Paso 1: Collect Domain Events**
 
-En esta etapa inicial, identificamos todos los eventos relevantes del dominio que tienen lugar en nuestro sistema. Estos eventos representan hechos significativos dentro del proceso de negocio y los registramos utilizando post-its de color naranja.
+En esta etapa se identifican los eventos relevantes del dominio. Cada evento representa un hecho significativo dentro del proceso de negocio, como vincular un dispositivo, completar un ciclo de riego o activar una suscripción. Se utilizan post-its naranjas para distinguirlos de las acciones que los originan.
 
 [![Design-Level-Event-Storming.jpg](https://i.postimg.cc/nrXm5xHt/Design-Level-Event-Storming.jpg)](https://postimg.cc/tnH7ZLZr)
 
 **Paso 2: Timeline**
 
-Ordenamos todos los eventos identificados en una línea de tiempo, ubicándolos de manera cronológica para comprender mejor el flujo del proceso y visualizar la secuencia natural de acciones dentro del sistema.
+Los eventos se organizan en una línea de tiempo para comprender el orden del proceso. Esta secuencia permite reconocer qué debe ocurrir antes de vincular un dispositivo, recibir lecturas, solicitar el riego y consultar sus resultados.
 
 [![Design-Level-Event-Storming-(1).jpg](https://i.postimg.cc/hv0Gp3dy/Design-Level-Event-Storming-(1).jpg)](https://postimg.cc/RJN90dGK)
 
 **Paso 3: Pain and Pivotal Points**
 
-Detectamos los puntos de dolor (pain points) y los momentos decisivos (pivotal points) dentro del proceso. Estos corresponden a áreas que requieren especial atención o que resultan críticas para el correcto funcionamiento del sistema.
+Se identifican los puntos de dolor y las transiciones que requieren especial atención. Entre ellos se consideran la falta de lecturas vigentes, la pérdida de conexión y las órdenes sin confirmación. Estos puntos orientan las reglas y las decisiones de diseño.
 
 [![Design-Level-Event-Storming-(5).jpg](https://i.postimg.cc/pXxPXHhP/Design-Level-Event-Storming-(5).jpg)](https://postimg.cc/t7rK28Nc)
 
@@ -1116,7 +1403,7 @@ Detectamos los puntos de dolor (pain points) y los momentos decisivos (pivotal p
 
 **Paso 4: Commands**
 
-Incorporamos los comandos (representados con post-its azules) que originan los eventos. Estos comandos corresponden a las acciones que realizan los usuarios o sistemas externos para generar cambios en el sistema.
+Se incorporan los comandos que expresan una intención de cambio, utilizando post-its azules. Acciones como vincular un dispositivo, configurar una política o iniciar el riego se diferencian de los eventos que confirman su resultado.
 
 [![Design-Level-Event-Storming-(6).jpg](https://i.postimg.cc/BQkfyP99/Design-Level-Event-Storming-(6).jpg)](https://postimg.cc/3dXq0Rxn)
 
@@ -1130,7 +1417,7 @@ Incorporamos los comandos (representados con post-its azules) que originan los e
 
 **Paso 5: Policies**
 
-Establecimos las políticas o reglas de negocio (con post-its morados) que responden a determinados eventos y producen nuevos eventos como resultado. Estas políticas permiten automatizar decisiones basadas en eventos anteriores.
+Se establecen las políticas que relacionan eventos con nuevas decisiones, utilizando post-its morados. Una lectura puede activar la evaluación de una política de riego, mientras que un resultado confirmado puede actualizar el historial. Las políticas verifican las condiciones de operación antes de solicitar un nuevo ciclo.
 
 [![Design-Level-Event-Storming-(11).jpg](https://i.postimg.cc/PJGKkH4K/Design-Level-Event-Storming-(11).jpg)](https://postimg.cc/0Mf7pLhJ)
 
@@ -1144,7 +1431,7 @@ Establecimos las políticas o reglas de negocio (con post-its morados) que respo
 
 **Paso 6: Read Models**
 
-Identificamos los modelos de lectura o vistas que los usuarios requieren para la toma de decisiones. Estos representan la información que debe estar disponible en momentos específicos del proceso.
+Se identifican los modelos de lectura que necesitan los usuarios para tomar decisiones. Entre ellos se encuentran el estado del dispositivo, la última medición, la configuración vigente, las alertas y el historial. Cada vista muestra la información necesaria junto con su fecha o estado de confirmación.
 
 [![Design-Level-Event-Storming-(16).jpg](https://i.postimg.cc/HLNjnsFY/Design-Level-Event-Storming-(16).jpg)](https://postimg.cc/kVx7h9nz)
 
@@ -1158,7 +1445,7 @@ Identificamos los modelos de lectura o vistas que los usuarios requieren para la
 
 **Paso 7: External Systems**
 
-Señalamos los sistemas externos (con post-its rosados) que interactúan con nuestra solución. Estos son componentes fuera de nuestro control directo, pero que influyen en el proceso.
+Se reconocen los sistemas externos que intervienen en la solución, representados mediante post-its rosados. La autenticación externa, el pronóstico climático, los pagos y las notificaciones requieren contratos de integración. Las respuestas de terceros se validan antes de incorporarse a las reglas del negocio.
 
 [![Design-Level-Event-Storming-(21).jpg](https://i.postimg.cc/Y9jQmnpQ/Design-Level-Event-Storming-(21).jpg)](https://postimg.cc/TLMKzc5P)
 
@@ -1172,7 +1459,7 @@ Señalamos los sistemas externos (con post-its rosados) que interactúan con nue
 
 **Paso 8: Aggregates**
 
-Organizamos los comandos y eventos relacionados en unidades lógicas llamadas agregados (representados con post-its amarillos). Cada agregado encapsula un conjunto consistente de funcionalidades.
+Los comandos y eventos relacionados se agrupan alrededor de las unidades que mantienen reglas de consistencia. Se consideran responsabilidades como la asociación de un dispositivo, la configuración de una política de riego y la vigencia de una suscripción. Los agregados delimitan qué condiciones deben comprobarse juntas para aceptar un cambio.
 
 [![Design-Level-Event-Storming-(26).jpg](https://i.postimg.cc/Zn4BxwZ4/Design-Level-Event-Storming-(26).jpg)](https://postimg.cc/jw3SsQLF)
 
@@ -1186,7 +1473,7 @@ Organizamos los comandos y eventos relacionados en unidades lógicas llamadas ag
 
 **Paso 9: Bounded Context**
 
-Finalmente, definimos los contextos delimitados o bounded contexts, que representan áreas de responsabilidad claramente diferenciadas dentro del sistema.
+Se delimitan las áreas de responsabilidad a partir de los eventos, comandos, reglas y agregados. La organización conserva cinco bounded contexts: Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics. Cada contexto mantiene su modelo y colabora con los demás mediante contratos definidos.
 
 [![Design-Level-Event-Storming-(31).jpg](https://i.postimg.cc/W1g78Hcp/Design-Level-Event-Storming-(31).jpg)](https://postimg.cc/zyDWXpf4)
 
@@ -1200,11 +1487,13 @@ Finalmente, definimos los contextos delimitados o bounded contexts, que represen
 
 [![Design-Level-Event-Storming-(36).jpg](https://i.postimg.cc/vTnvKqxW/Design-Level-Event-Storming-(36).jpg)](https://postimg.cc/vxQ9gvzB)
 
-##### 4.1.1.1. Candidate Context Discovery
+#### 4.2.2. Candidate Context Discovery
 
-A partir del EventStorming realizado en Miro, el equipo llevó a cabo una sesión de Candidate Context Discovery con el fin de identificar los bounded contexts de la solución. Durante esta actividad, se utilizó principalmente la técnica look-for-pivotal-events.
+A partir del modelo de EventStorming se identifican los bounded contexts de la solución. El proceso combina las técnicas Start-with-Value, Start-with-Simple y Look-for-Pivotal-Events para reconocer responsabilidades que comparten lenguaje, reglas y objetivos.
 
-Proceso de identificación: se inició revisando el modelo completo previamente construido, poniendo especial énfasis en los eventos clave y en los agregados identificados.
+**Revisión del modelo**
+
+Se revisan los eventos y agregados del proceso completo, prestando especial atención a las acciones relacionadas con el acceso, los dispositivos, el riego, los planes y las métricas.
 
 [![Design-Level-Event-Storming-(37).jpg](https://i.postimg.cc/YqZHYhtr/Design-Level-Event-Storming-(37).jpg)](https://postimg.cc/mtYJGZcJ)
 
@@ -1216,7 +1505,9 @@ Proceso de identificación: se inició revisando el modelo completo previamente 
 
 [![Design-Level-Event-Storming-(41).jpg](https://i.postimg.cc/Xv760F8c/Design-Level-Event-Storming-(41).jpg)](https://postimg.cc/hXw5LXNf)
 
-Detección de agrupaciones naturales: se reconocieron patrones y conjuntos naturales de comandos, eventos y políticas que operaban sobre las mismas entidades o procesos.
+**Detección de agrupaciones naturales**
+
+Se agrupan los comandos, eventos y políticas que operan sobre las mismas entidades o requieren reglas de consistencia compartidas. Esta revisión permite distinguir la gestión del hardware de las decisiones de riego y separar los registros analíticos de las operaciones comerciales.
 
 [![Design-Level-Event-Storming-(21).jpg](https://i.postimg.cc/Y9jQmnpQ/Design-Level-Event-Storming-(21).jpg)](https://postimg.cc/TLMKzc5P)
 
@@ -1230,59 +1521,47 @@ Detección de agrupaciones naturales: se reconocieron patrones y conjuntos natur
 
 [![Design-Level-Event-Storming-(42).jpg](https://i.postimg.cc/sXmcCQTf/Design-Level-Event-Storming-(42).jpg)](https://postimg.cc/CBZDj1y9)
 
-Una vez que se establecieron todas las relaciones dentro del Event Storming, se procedió a realizar la agrupación con el fin de identificar y definir el contexto de los bounded contexts.
+**1. Start-with-Value**
 
-1. Start-with-Value
+Se identifican las capacidades que aportan mayor valor al producto. Irrigation Intelligence concentra las decisiones de riego y las recomendaciones. Device Management permite obtener información del dispositivo y ejecutar acciones, mientras que Analytics transforma los registros en historial y métricas. Identity Access Management y Monetization aportan las capacidades de acceso y gestión comercial que acompañan la experiencia.
 
-Comenzamos identificando las áreas core del dominio, es decir, aquellas con mayor impacto en la propuesta de valor del sistema.
+**2. Start-with-Simple**
 
-Core: Irrigation Management, Device Management, Analytics
+El proceso se divide en pasos comprensibles: acceder a la plataforma, vincular un dispositivo, consultar lecturas, evaluar el riego, ejecutar un ciclo y revisar su resultado. Esta secuencia ayuda a asignar responsabilidades sin mezclar en una misma operación la identidad del usuario, el criterio de riego y la ejecución física.
 
-Supporting: IAM, Monetization
+**3. Look-for-Pivotal-Events**
 
-2. Start-with-Simple
-
-Para no perdernos en la complejidad, descompusimos el flujo en pasos secuenciales simples, lo que permitió distinguir qué parte del sistema debía encargarse de cada responsabilidad.
-
-3. Look-for-Pivotal-Events
-
-Se identificaron eventos clave que señalaban transiciones entre distintos subsistemas. Algunas son:
-
-- "App session started": frontera entre IAM y Device Management
-
-- "Settings updated": frontera entre IAM y Monetization
-
-- "Water savings metric calculated": frontera entre Irrigation Intelligence y Analytics
+Se reconocen eventos que indican un cambio relevante entre áreas del negocio. La vinculación de un dispositivo habilita su uso por una cuenta; la finalización de un ciclo genera información para el historial; y la activación de una suscripción modifica las prestaciones comerciales disponibles. Estas transiciones permiten identificar qué contexto produce información y cuál necesita consumirla.
 
 [![Design-Level-Event-Storming-(36).jpg](https://i.postimg.cc/vTnvKqxW/Design-Level-Event-Storming-(36).jpg)](https://postimg.cc/vxQ9gvzB)
 
 **Primer agrupamiento**
 
-Se definieron los contextos iniciales de IAM y Device Management, los cuales responden a responsabilidades diferenciadas, como la autenticación de usuarios y la gestión del hardware.
+Se delimitan Identity Access Management y Device Management. El primero se encarga de las cuentas, sesiones y condiciones de acceso. El segundo administra la identidad del dispositivo, su vinculación, sus lecturas y la comunicación con el controlador.
 
 [![Design-Level-Event-Storming-(43).jpg](https://i.postimg.cc/Nj4GvQ1X/Design-Level-Event-Storming-(43).jpg)](https://postimg.cc/TKKvrMN2)
 
 **Segundo agrupamiento**
 
-Se aislaron los contextos centrales de negocio: Irrigation Intelligence, Monetization y Analytics. Aquí ubicamos la lógica principal sobre la riego, monetización y analítica.
+Se delimitan Irrigation Intelligence, Monetization y Analytics. Irrigation Intelligence administra las políticas y decisiones de riego; Monetization gestiona planes y suscripciones; y Analytics organiza los registros para su consulta y comparación.
 
 [![Design-Level-Event-Storming-(44).jpg](https://i.postimg.cc/D0FYh3QV/Design-Level-Event-Storming-(44).jpg)](https://postimg.cc/sQ6JP80K)
 
-**Consolidación final** 
+**Consolidación final**
 
-Como resultado se obtuvo un mapa compuesto por 5 Bounded Context:
+El modelo queda organizado en los siguientes cinco bounded contexts:
 
-IAM
-Device Management
-Monetization
-Irrigation Intelligence
-Analytics
+- **Device Management:** gestiona la vinculación, configuración operativa, conectividad, telemetría y seguimiento de comandos de los dispositivos IoT.
+- **Irrigation Intelligence:** interpreta las condiciones registradas, administra políticas de riego y genera recomendaciones. Incluye las capacidades de pronóstico climático, orientación apoyada por IA y alertas relacionadas con el cuidado.
+- **Identity Access Management:** administra cuentas, autenticación, sesiones y preferencias de usuario. Proporciona la identidad necesaria para verificar el acceso a cada recurso.
+- **Monetization:** administra planes, suscripciones y prestaciones opcionales del servicio.
+- **Analytics:** organiza el historial de ciclos y las métricas de consumo, conservando el método de obtención y la cobertura de los datos.
 
-Cada uno cuenta con responsabilidades y límites claramente definidos, lo que contribuye a disminuir su complejidad.
+#### 4.2.3. Domain Message Flows Modeling
 
-##### 4.1.1.2. Domain Message Flows Modeling
+Los Domain Message Flows representan la colaboración entre los bounded contexts. Mediante Domain Storytelling se identifican los participantes, las acciones y la información que intercambian para completar un proceso del negocio.
 
-Los Domain Message Flows representan las interacciones entre distintos bounded contexts, evidenciando la forma en que se comunican entre sí. A continuación, se describen los flujos de mensajes correspondientes a tres escenarios principales de nuestra aplicación:
+El modelado parte de una acción del usuario y sigue los mensajes necesarios hasta obtener un resultado. Los comandos expresan una solicitud, los eventos informan un hecho ocurrido y las consultas recuperan información sin modificar el estado del dominio.
 
 [![Strategic-Domain-Driven-Design.jpg](https://i.postimg.cc/28hQZbmJ/Strategic-Domain-Driven-Design.jpg)](https://postimg.cc/1fRVxz8c)
 
@@ -1290,11 +1569,21 @@ Los Domain Message Flows representan las interacciones entre distintos bounded c
 
 [![Strategic-Domain-Driven-Design-(2).jpg](https://i.postimg.cc/wMKtq2tp/Strategic-Domain-Driven-Design-(2).jpg)](https://postimg.cc/bDTYLQHC)
 
-Estos flujos de mensaje son pilares fundamentales de la arquitectura del sistema, ya que revelan cómo los distintos Bounded Context se coordinan de forma coherente, asíncrona y bien definida. Al mapear cada evento, comando e intercambio de mensajes entre contextos, no solo visualizamos el flujo de información entre componentes, sino que también identificamos puntos críticos de acoplamiento, posibles cuellos de botella en la comunicación y oportunidades para optimizar la escalabilidad y la resiliencia. Además, garantizan que la arquitectura esté alineada con los casos de uso del negocio, asegurando que cada interacción tenga propósito, trazabilidad y cumplimiento de contratos de dominio fundamentales para construir un sistema robusto, mantenible y adaptativo a largo plazo.
+La colaboración se organiza alrededor de tres recorridos principales:
 
-##### 4.1.1.3. Bounded Context Canvases
+1. **Acceso y uso del dispositivo.** Identity Access Management valida la identidad del usuario. Device Management comprueba la vinculación de la unidad y proporciona sus lecturas y estado. La experiencia de usuario consulta esta información mediante la API.
+2. **Decisión y ejecución del riego.** Irrigation Intelligence evalúa la política, la vigencia de las lecturas y los límites de operación. Cuando corresponde solicitar un ciclo, Device Management registra y transmite el comando. La confirmación del controlador permite actualizar el resultado, y Analytics incorpora los eventos confirmados al historial.
+3. **Suscripción y prestaciones.** Monetization verifica la operación comercial y actualiza la vigencia del plan. Los contextos consumidores consultan las prestaciones habilitadas, conservando la propiedad del dispositivo y las funciones necesarias para detener un ciclo.
 
-Los Bounded Context Canvases son herramientas visuales que permiten documentar las características esenciales de cada contexto delimitado, capturando su propósito estratégico, modelo de dominio, lenguaje ubicuo, políticas y relaciones con otros contextos. A continuación, se presentan los canvases de los bounded context identificados, los cuales han servido para definir con claridad sus responsabilidades y límites.
+Los mensajes entre contextos incluyen identificadores que permiten relacionar la solicitud, el dispositivo y su resultado. Los eventos de un ciclo conservan su fecha y origen, de modo que un reintento no duplique el historial. El acceso a servicios externos se realiza mediante adaptadores del contexto responsable.
+
+#### 4.2.4. Bounded Context Canvases
+
+Los Bounded Context Canvases permiten documentar las características esenciales de cada contexto, incluyendo su propósito, lenguaje ubicuo, reglas de negocio, capacidades, mensajes y relaciones con otros contextos.
+
+La revisión sigue las etapas de Context Overview Definition, Business Rules Distillation & Ubiquitous Language Capture, Capability Analysis, Capability Layering, Dependencies Capture y Design Critique. Se comienza por el propósito del contexto, se precisan sus reglas y capacidades, y se contrastan sus dependencias para evitar responsabilidades duplicadas.
+
+Los canvases corresponden a Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics.
 
 <a href="https://ibb.co/9mDPm279"><img src="https://i.ibb.co/1YgcYKkf/canvas1.png" alt="canvas1" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
@@ -1306,580 +1595,101 @@ Los Bounded Context Canvases son herramientas visuales que permiten documentar l
 
 <a href="https://ibb.co/cK8Mjcfj"><img src="https://i.ibb.co/qLgXvMqv/canvas5.png" alt="canvas5" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
 
-#### 4.1.2. Context Mapping
-Con el Context Mapping se presentan las relaciones entre los bounded contexts identificados de AquaSave.
+#### 4.2.5. Context Mapping
+
+El Context Mapping presenta las relaciones entre los cinco bounded contexts de AquaSave. Para definirlas se revisan los mensajes, la propiedad de la información y las capacidades que cada contexto necesita de los demás.
 
 <p align="center">
   <img src="image/Context_Mapping.png" alt="CM" width="1000">
 </p>
 
-La relación Partnership entre IAM y Monetization refleja que ambos contextos evolucionan de forma coordinada, ya que el estado de suscripción impacta directamente en los permisos de acceso.
+La relación **Partnership** entre Identity Access Management y Monetization permite coordinar la identificación de la cuenta con las prestaciones de su suscripción. Ambos contextos conservan modelos separados: IAM administra la identidad y Monetization determina las condiciones comerciales.
 
-Las relaciones Customer–Supplier (CUS → SUP) se presentan desde IAM y Monetization hacia Irrigation Intelligence, dado que este depende de la identidad del usuario y su plan activo para operar. Asimismo, Device Management actúa como supplier de Irrigation Intelligence, suministrando la telemetría del sensor ESP32 para las decisiones de riego.
+Las relaciones **Customer–Supplier** establecen quién proporciona información y quién la consume. Device Management actúa como proveedor de telemetría y resultados de ejecución para Irrigation Intelligence. Por su parte, Irrigation Intelligence consume la identidad proporcionada por IAM y las prestaciones opcionales informadas por Monetization.
 
-La relación Published Language (PL) entre Irrigation Intelligence y Analytics establece que el primero expone eventos estructurados de consumo hídrico que Analytics consume para generar métricas y reportes.
+La relación **Published Language** entre Irrigation Intelligence y Analytics utiliza eventos con una estructura conocida para comunicar decisiones y resultados de riego. Analytics consume esta información junto con los datos confirmados del dispositivo para construir el historial y las comparaciones de consumo.
 
-#### 4.1.3. Software Architecture
+Para los proveedores externos se propone una **Anti-corruption Layer** dentro del contexto que realiza la integración. De esta manera, cambios en las respuestas del servicio climático, la autenticación externa o los pagos no modifican directamente los modelos internos.
 
-##### 4.1.3.1. Software Architecture System Landscape Diagram
+Al evaluar la ubicación de las capacidades, se mantiene la gestión de planes en Monetization, la ejecución del dispositivo en Device Management y la decisión de riego en Irrigation Intelligence. Las métricas permanecen en Analytics para que la generación de reportes no condicione la ejecución de un ciclo. Esta organización conserva los cinco límites del dominio y evita compartir reglas de negocio mediante accesos directos a tablas de otro contexto.
 
-El System Landscape Diagram presenta la vista más amplia de la solución AquaSave, mostrando cómo se relaciona con sus actores, sistemas externos y hardware IoT en campo. Esta perspectiva permite identificar los límites del sistema, las integraciones críticas y el flujo de valor entre usuarios, servicios cloud y dispositivos físicos.
+### 4.3. Software Architecture
+
+La arquitectura de AquaSave se presenta mediante las vistas System Landscape, Context, Container y Deployment. Estas permiten comprender el entorno de la solución, sus interacciones, la distribución de responsabilidades y los recursos necesarios para su ejecución.
+
+La propuesta conecta las aplicaciones web y móvil con una API modular y un dispositivo IoT. Los cinco bounded contexts organizan las responsabilidades del backend, mientras que los servicios externos complementan la autenticación, las suscripciones, las notificaciones, el pronóstico climático y las recomendaciones.
+
+#### 4.3.1. Software Architecture System Landscape Diagram
+
+El System Landscape Diagram presenta la vista más amplia de AquaSave. Permite identificar a los usuarios, la plataforma, el dispositivo IoT y los servicios externos que participan en el monitoreo y control del riego.
 
 <p align="center">
   <img src="image/System_Landscape_Diagram.png" alt="SLD" width="1000">
 </p>
 
-En esta vista se evidencia que AquaSave opera como una arquitectura distribuida donde la experiencia de usuario se articula mediante interfaces web y móviles, la lógica de negocio gestiona el cruce de datos del sensor con pronósticos climáticos, y la operación en campo se sostiene a través del dispositivo IoT ESP32. El landscape deja explícita además la dependencia de servicios externos como Google OAuth2, Stripe y Resend para autenticación, pagos y notificaciones respectivamente.
+La solución contempla el acceso desde aplicaciones web y móvil, la recepción de lecturas del dispositivo y el envío de solicitudes de control. La plataforma concentra la autenticación, la evaluación de políticas y la consulta de registros, mientras que el controlador mantiene los límites de operación local.
 
-##### 4.1.3.2. Software Architecture Context Level Diagrams
+Las integraciones propuestas incluyen Google para autenticación externa, Stripe para suscripciones, Resend para correos transaccionales y OpenWeatherMap para pronóstico climático. La capacidad de recomendaciones apoyadas por IA se incorpora mediante un proveedor externo conectado a Irrigation Intelligence. Los proveedores no reciben acceso directo al dispositivo ni a los canales de comandos.
 
-El diagrama de contexto presenta una vista de alto nivel de AquaSave, identificando a los actores principales y los sistemas externos que interactúan con la solución. Se observa cómo el Horticultor Urbano y el Micro-Agricultor Periurbano utilizan la plataforma para monitorear el suelo y controlar el riego de forma remota, mientras que Google OAuth2, Stripe, Resend y OpenWeatherMap complementan las funciones de autenticación, pagos, notificaciones y datos climáticos. El diagrama delimita claramente la frontera del sistema y sus dependencias estratégicas con proveedores externos y el hardware IoT.
+#### 4.3.2. Software Architecture Context Level Diagrams
+
+El diagrama de contexto delimita AquaSave como un sistema y presenta las relaciones que mantiene con sus usuarios, el hardware IoT y los servicios externos. Esta perspectiva permite comprender quién utiliza la solución, qué información intercambia y de qué integraciones depende.
 
 <p align="center">
   <img src="image/Context_Level_Diagram.png" alt="CLD" width="1000">
 </p>
 
-##### 4.1.3.2. Software Architecture Container Level Diagrams
+Los usuarios consultan el estado de sus plantas, configuran sus unidades, solicitan acciones de riego y revisan el historial. El dispositivo proporciona lecturas y resultados de ejecución, y recibe configuraciones y comandos autorizados desde la plataforma.
 
-El diagrama de contenedores descompone la plataforma AquaSave en sus principales unidades de ejecución y responsabilidades técnicas, permitiendo comprender cómo se distribuyen las funciones entre interfaces de usuario, servicios backend, almacenamiento de datos y componentes IoT. En esta vista se identifican la Landing Page, la Web Application (SPA), la Mobile Application, la Mobile SQLite Database, la AquaSave API, la Platform PostgreSQL Database y el Dispositivo IoT ESP32. Esta representación permite evidenciar la separación entre experiencia de usuario, lógica de negocio, persistencia y procesamiento en campo, mostrando además las principales relaciones de comunicación entre los frontends web y móvil, el backend central y los dispositivos físicos instalados en las parcelas. Se hace visible también la dependencia con sistemas externos como Google OAuth2 para autenticación, Stripe para suscripciones, OpenWeatherMap para datos climáticos y Resend para notificaciones transaccionales, los cuales complementan la lógica central sin formar parte del sistema desplegado.
+Google complementa el acceso mediante una identidad externa; Stripe permite verificar operaciones de suscripción; Resend participa en los correos transaccionales; y OpenWeatherMap aporta información meteorológica. Las notificaciones push utilizarán el mecanismo de entrega de la aplicación móvil. La generación de recomendaciones se integra como una capacidad de Irrigation Intelligence y requiere validación antes de presentar una propuesta.
+
+Las relaciones externas se gestionan mediante contratos definidos. La indisponibilidad de un proveedor climático, comercial o de IA no debe impedir que el dispositivo aplique su límite local de duración ni que la plataforma procese una solicitud de detención cuando exista comunicación.
+
+#### 4.3.3. Software Architecture Container Level Diagrams
+
+El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite distribuir las responsabilidades entre las interfaces, los servicios backend, las bases de datos y el dispositivo.
 
 <p align="center">
   <img src="image/DiagramaContainerAquaSave.png" alt="ContainerDiagram" width="1000">
 </p>
 
-##### 4.1.3.3. Software Architecture Deployment Diagrams
+La arquitectura propuesta se organiza en los siguientes contenedores:
 
-El diagrama de despliegue muestra la distribución física y tecnológica de los principales contenedores del sistema en su entorno operativo de producción. A través de esta vista se observa cómo las aplicaciones frontend web se alojan en Netlify como plataforma de publicación estática con CDN global, mientras que la aplicación móvil se distribuye y gestiona mediante Firebase, aprovechando su infraestructura de hosting y configuración remota sobre Google Cloud. El backend de AquaSave se despliega sobre AWS mediante Elastic Beanstalk o ECS con contenedores Docker, respaldado por Amazon RDS como servidor gestionado de PostgreSQL para la persistencia principal, y AWS IoT Core como broker MQTT para la comunicación bidireccional con los dispositivos de campo. La capa IoT se materializa en el entorno físico de las parcelas a través de la placa ESP32, la cual reporta telemetría de sensores y recibe comandos de riego a través del broker. Esta perspectiva evidencia que AquaSave no opera como un sistema puramente centralizado, sino como una arquitectura distribuida donde servicios cloud, dispositivos de usuario y hardware IoT cooperan para sostener el monitoreo en tiempo real, la automatización del riego y la sincronización continua de datos con la plataforma.
+- **Landing Page:** presenta el producto, sus características, requisitos y accesos a las aplicaciones. Se desarrollará con HTML, CSS y JavaScript.
+- **Web Application:** permite consultar unidades, lecturas, alertas, configuraciones e historial. Se desarrollará con Vue, TypeScript y componentes de Material Design, consumiendo la API mediante HTTPS.
+- **Mobile Application:** permite acceder a las funciones de AquaSave desde Android. Se desarrollará de forma nativa con Kotlin y utilizará los mismos contratos de negocio que la aplicación web.
+- **Mobile SQLite Database:** conserva preferencias y una caché local de información consultada. Los datos almacenados mantienen su fecha y no sustituyen la validación de permisos ni la confirmación de una operación remota.
+- **AquaSave API:** implementa los casos de uso mediante NestJS y TypeScript. Integra los módulos de Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics, junto con sus adaptadores externos.
+- **Platform PostgreSQL Database:** almacena cuentas, asociaciones de dispositivos, configuraciones, registros de lecturas, comandos, ciclos, suscripciones y eventos pendientes. La propiedad de los datos se organiza por módulo y cada contexto modifica únicamente la información que le corresponde.
+- **Dispositivo IoT ESP32:** obtiene lecturas, recibe configuraciones y ejecuta ciclos de riego dentro de límites locales. Conserva la identificación de las órdenes necesaria para evitar ejecuciones duplicadas.
+
+La comunicación entre las aplicaciones y la API utiliza HTTPS. La comunicación bidireccional con los dispositivos se propone mediante un broker MQTT autenticado, integrado desde Device Management. Las aplicaciones no publican directamente en los canales del dispositivo.
+
+El backend se desplegará inicialmente como una aplicación modular. Los bounded contexts representan límites del dominio y no requieren procesos independientes. Los eventos internos y el procesamiento de Analytics se integrarán mediante contratos que permitan recuperar publicaciones pendientes sin duplicar registros.
+
+Para atender las consultas del dashboard, Device Management mantendrá el acceso a la última lectura por unidad y consultas indexadas por dispositivo y fecha. La respuesta no esperará una nueva medición física ni una recomendación de IA. Cada valor conservará su fecha para que la interfaz pueda distinguir los datos actuales de los desactualizados.
+
+#### 4.3.4. Software Architecture Deployment Diagrams
+
+El diagrama de despliegue presenta la distribución de los contenedores entre los equipos de los usuarios, la infraestructura de servicios y el entorno físico donde funciona el dispositivo IoT. Esta vista permite identificar los nodos de ejecución y los canales de comunicación necesarios para operar AquaSave.
 
 <p align="center">
   <img src="image/DiagramaDeploymentAquaSave.png" alt="DeploymentDiagram" width="1000">
 </p>
 
-## 4.2. Tactical-Level Domain-Driven Design
-
-### 4.2.1. Bounded Context: Device Management
-
-#### 4.2.1.1. Domain Layer
-
-Esta capa encapsula las reglas de negocio para la gestión del dispositivo IoT ESP32, sus sensores y conectividad.
-
-**Entities:**
-
-- `Device`: Entidad principal que representa el dispositivo ESP32 con propiedades como DeviceId, AccountId, DeviceName, FirmwareVersion, IsActive, CreatedAt y UpdatedAt. Define comportamientos para conectar, desconectar y actualizar firmware.
-- `SensorReading`: Entidad que registra cada lectura de los sensores con propiedades como ReadingId, DeviceId, SoilMoisture, Temperature, AirHumidity, WaterFlow, Timestamp y IsValid.
-- `WaterValve`: Entidad que representa la electroválvula con propiedades como ValveId, DeviceId, IsOpen, LastToggledAt y ToggleCount.
-
-**Value Objects:**
-
-- `SoilMoistureLevel`: Valida y clasifica el porcentaje de humedad del suelo (Seco / Óptimo / Húmedo) según umbrales configurados.
-- `WifiCredentials`: Encapsula SSID y contraseña de forma segura para la conexión del dispositivo.
-- `FirmwareVersion`: Objeto de valor con formato semántico (major.minor.patch) y lógica de comparación de versiones.
-- `DeviceConnectionStatus`: Enumera los estados posibles del dispositivo (Online, Offline, Connecting, Error).
-
-**Aggregates:**
-
-- `DeviceAggregate`: Mantiene consistencia entre el dispositivo, sus lecturas activas y el estado de la válvula, asegurando que no se realicen lecturas si el dispositivo está desconectado.
-
-**Domain Services:**
-
-- `IDeviceConnectionService`: Define el contrato para gestionar la conexión y reconexión automática del dispositivo a la red WiFi.
-- `ISensorCalibrationService`: Interface para calibrar sensores y validar lecturas fuera de rango.
-- `IFirmwareUpdateService`: Define el contrato para gestionar el ciclo de actualización de firmware del ESP32.
-
-**Repositories (Interfaces):**
-
-- `IDeviceRepository`: Define métodos para persistencia de dispositivos (FindByDeviceId, FindByAccountId, Save, UpdateStatus, etc.).
-- `ISensorReadingRepository`: Interface para almacenamiento y consulta de lecturas históricas de sensores.
-
----
-
-#### 4.2.1.2. Interface Layer
-
-Expone funcionalidades del dispositivo a través de APIs REST y endpoints MQTT.
-
-**Controllers:**
-
-- `DeviceController`: Maneja endpoints `/api/devices` para operaciones de vinculación, configuración y estado del dispositivo.
-- `SensorController`: Gestiona endpoints `/api/devices/{id}/sensors` para consulta de lecturas en tiempo real e historial.
-- `ValveController`: Maneja endpoints `/api/devices/{id}/valve` para control manual de apertura y cierre del riego.
-
----
-
-#### 4.2.1.3. Application Layer
-
-Coordina los flujos de negocio relacionados con la gestión del dispositivo IoT.
-
-**Command Services:**
-
-- `PairDeviceCommandService`: Procesa la vinculación de un nuevo dispositivo ESP32 a una cuenta de usuario.
-- `UpdateFirmwareCommandService`: Gestiona el proceso de actualización de firmware con validación de versión y rollback ante fallos.
-- `ToggleValveCommandService`: Procesa órdenes de apertura y cierre de la electroválvula con confirmación de ejecución.
-- `CalibrateDeviceCommandService`: Coordina la calibración de sensores y almacena los factores de corrección.
-- `TriggerFactoryResetCommandService`: Gestiona el reseteo de fábrica del dispositivo con limpieza de datos locales.
-
-**Query Services:**
-
-- `DeviceStatusQueryService`: Resuelve consultas sobre el estado actual de conexión, batería y sensores del dispositivo.
-- `SensorReadingQueryService`: Maneja consultas de lecturas en tiempo real e historial por rango de fechas.
-
-**Event Handlers:**
-
-- `DevicePairedEventHandler`: Procesa el evento de vinculación exitosa, inicializando configuraciones por defecto.
-- `WiFiConnectionLostEventHandler`: Maneja la pérdida de conexión, activando la política de reconexión automática.
-- `IrregularFlowDetectedEventHandler`: Procesa detecciones de flujo irregular, disparando alertas de posible fuga.
-
----
-
-#### 4.2.1.4. Infrastructure Layer
-
-Implementa persistencia y servicios externos para la gestión del dispositivo.
-
-**Persistence/Repositories:**
-
-- `PostgresDeviceRepository`: Implementación de persistencia usando PostgreSQL con índices optimizados para búsquedas por AccountId y DeviceId.
-- `TimeSeriesReadingRepository`: Gestiona lecturas de sensores en base de datos de series temporales (InfluxDB) para consultas eficientes por rango de tiempo.
-
-**External Services:**
-
-- `MqttBrokerService`: Integración con broker MQTT para comunicación bidireccional en tiempo real con el dispositivo ESP32.
-- `OTAFirmwareService`: Servicio de actualización Over-The-Air que gestiona la descarga y aplicación de firmware en el dispositivo.
-- `DeviceHealthMonitorService`: Monitorea métricas de hardware del dispositivo (voltaje, temperatura del chip, calidad de señal WiFi).
-
----
-
-#### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
-<p align="center">
-  <img src="image/dc1.png" alt="Segmento2" width="1000">
-</p>
-
-
-
-#### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
-
-##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
-
-<p align="center">
-  <img src="image/DEVICE-MANAGEMENT.png" alt="Segmento2" width="1000">
-</p>
-
-##### 4.2.1.6.2. Bounded Context Database Design Diagram
-<p align="center">
-  <img src="image/b1.png" alt="Segmento2" width="1000">
-</p>
-
-
----
-
-### 4.2.2. Bounded Context: Irrigation Intelligence
-
-#### 4.2.2.1. Domain Layer
-
-Esta capa encapsula las reglas de negocio para la automatización y toma de decisiones del riego basadas en datos del suelo y clima.
-
-**Entities:**
-
-- `IrrigationSchedule`: Entidad principal con propiedades como ScheduleId, DeviceId, CropType, StartTime, Duration, FrequencyDays, IsActive y CreatedAt. Define comportamientos para activar, pausar y modificar programaciones.
-- `IrrigationEvent`: Entidad que registra cada ciclo de riego ejecutado con propiedades como EventId, DeviceId, StartedAt, EndedAt, LitersConsumed, TriggerType (Manual/Automático/Programado) y WasSkipped.
-- `WeatherForecast`: Entidad que almacena pronósticos climáticos con propiedades como ForecastId, DeviceId, RainProbability, Temperature, RetrievedAt y ValidUntil.
-- `MoistureThreshold`: Entidad que define los umbrales de humedad configurados por el usuario con MinMoisture, MaxMoisture, OptimalMoisture y CropType.
-
-**Value Objects:**
-
-- `RainProbability`: Valida y clasifica la probabilidad de lluvia (Baja / Media / Alta) con el umbral de pausa configurable.
-- `IrrigationDuration`: Encapsula la duración en segundos con validaciones de mínimo y máximo según el tipo de cultivo.
-- `CropType`: Enumera los tipos de cultivo disponibles (Hortalizas, Aromáticas, Ornamentales, Frutales, Cereales) con sus parámetros hídricos asociados.
-
-**Aggregates:**
-
-- `IrrigationAggregate`: Mantiene consistencia entre la programación, los eventos de riego y las condiciones actuales del suelo, garantizando que no se inicie un riego si la humedad ya está en rango óptimo.
-
-**Domain Services:**
-
-- `IIrrigationDecisionService`: Define el contrato para evaluar si se debe iniciar, continuar o pausar el riego según humedad y pronóstico.
-- `IWeatherIntegrationService`: Interface para obtener y procesar pronósticos climáticos desde APIs externas.
-- `IWaterSavingsCalculationService`: Define el cálculo de ahorro hídrico comparando consumo real vs. consumo estimado sin automatización.
-
-**Repositories (Interfaces):**
-
-- `IIrrigationScheduleRepository`: Define métodos para gestión de programaciones (FindByDeviceId, Save, Deactivate, etc.).
-- `IIrrigationEventRepository`: Interface para almacenamiento y consulta del historial de riegos.
-- `IWeatherForecastRepository`: Interface para persistencia y consulta de pronósticos climáticos.
-
----
-
-#### 4.2.2.2. Interface Layer
-
-**Controllers:**
-
-- `IrrigationScheduleController`: Maneja endpoints `/api/irrigation/schedules` para crear, modificar y eliminar programaciones de riego.
-- `IrrigationEventController`: Gestiona endpoints `/api/irrigation/events` para consultar el historial de ciclos ejecutados.
-- `WeatherController`: Maneja endpoints `/api/weather/forecast` para consultar el pronóstico climático actual del dispositivo.
-
----
-
-#### 4.2.2.3. Application Layer
-
-**Command Services:**
-
-- `GenerateIrrigationScheduleCommandService`: Crea programaciones de riego personalizadas según el tipo de cultivo y preferencias del usuario.
-- `ApplyWeatherOverrideCommandService`: Procesa la pausa del riego automático cuando la probabilidad de lluvia supera el umbral configurado.
-- `UpdateIrrigationPlanCommandService`: Gestiona modificaciones a programaciones existentes con recalculo de próximas ejecuciones.
-- `LogIrrigationActivityCommandService`: Registra cada ciclo de riego con métricas de consumo y tipo de disparador.
-
-**Query Services:**
-
-- `IrrigationForecastQueryService`: Resuelve consultas sobre la próxima programación de riego y condiciones actuales del suelo.
-- `WaterSavingsQueryService`: Calcula y retorna métricas de ahorro hídrico acumulado por período.
-
-**Event Handlers:**
-
-- `MoistureThresholdReachedEventHandler`: Procesa el evento de humedad crítica, activando el riego automático.
-- `HighRainProbabilityEventHandler`: Maneja pronósticos de lluvia alta, pausando el riego programado y notificando al usuario.
-- `IrrigationDurationTimeoutEventHandler`: Gestiona el fin automático del riego cuando se alcanza la duración máxima configurada.
-
----
-
-#### 4.2.2.4. Infrastructure Layer
-
-**Persistence/Repositories:**
-
-- `PostgresIrrigationScheduleRepository`: Persistencia de programaciones con índices para búsqueda por DeviceId y próxima ejecución.
-- `PostgresIrrigationEventRepository`: Almacenamiento de eventos de riego con particionamiento por fecha para consultas históricas eficientes.
-
-**External Services:**
-
-- `OpenWeatherMapService`: Integración con OpenWeatherMap API para obtener pronósticos de temperatura y precipitación por coordenadas GPS.
-- `IrrigationSchedulerService`: Servicio de scheduling que evalúa y dispara programaciones de riego en los horarios configurados.
-
----
-
-#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
-
-<p align="center">
-  <img src="image/dc2.png" alt="Segmento2" width="1000">
-</p>
-
-
-#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
-
-##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
-
-<p align="center">
-  <img src="image/IRRIGATION-INTELLIGENCE.png" alt="Segmento2" width="1000">
-</p>
-
-##### 4.2.2.6.2. Bounded Context Database Design Diagram
-<p align="center">
-  <img src="image/b2.png" alt="Segmento2" width="1000">
-</p>
-
----
-
-### 4.2.3. Bounded Context: Identity Access Management
-
-#### 4.2.3.1. Domain Layer
-
-Esta capa encapsula las reglas de negocio para la autenticación, registro y gestión de perfiles de usuarios de AquaSave.
-
-**Entities:**
-
-- `User`: Entidad principal con propiedades como UserId, Email, PasswordHash, ProfileType (HorticulturUrbano / MicroAgricultor), IsActive, CreatedAt y LastLoginAt.
-- `UserProfile`: Entidad que extiende el perfil con propiedades como ProfileId, UserId, FullName, SpaceType, CropTypes, ParcelSizeHa y LocationCity.
-- `AppSession`: Entidad que representa sesiones activas con SessionId, UserId, DeviceInfo, CreatedAt y ExpiresAt.
-
-**Value Objects:**
-
-- `Email`: Valida formato y unicidad del correo electrónico.
-- `PasswordHash`: Encapsula el hash seguro de contraseña con el algoritmo bcrypt.
-- `ProfileType`: Enumera los tipos de perfil (HorticulturUrbano, MicroAgricultorPeriurbano) con sus configuraciones por defecto.
-- `SpaceType`: Enumera los tipos de espacio de cultivo (Terraza, Balcón, Jardín, Parcela).
-
-**Aggregates:**
-
-- `UserAggregate`: Mantiene consistencia entre el usuario, su perfil y sus sesiones activas.
-
-**Domain Services:**
-
-- `IAuthenticationService`: Define el contrato para autenticación con credenciales propias y OAuth (Google).
-- `IProfileValidationService`: Interface para validar que los datos del perfil sean consistentes con el tipo de usuario.
-
-**Repositories (Interfaces):**
-
-- `IUserRepository`: Define métodos para gestión de usuarios (FindByEmail, FindByUserId, Save, UpdateLastLogin, etc.).
-- `ISessionRepository`: Interface para gestión del ciclo de vida de sesiones.
-
----
-
-#### 4.2.3.2. Interface Layer
-
-**Controllers:**
-
-- `AuthController`: Maneja endpoints `/api/auth` para registro, login, social login con Google y recuperación de contraseña.
-- `ProfileController`: Gestiona endpoints `/api/profiles` para configuración y actualización de perfiles de horticultor y micro-agricultor.
-- `SessionController`: Maneja endpoints `/api/sessions` para gestión de sesiones activas y cierre de sesión.
-
----
-
-#### 4.2.3.3. Application Layer
-
-**Command Services:**
-
-- `CreateUserAccountCommandService`: Procesa el registro de nuevos usuarios con validación de unicidad de correo y configuración de perfil inicial.
-- `AuthenticateUserCommandService`: Gestiona el proceso de autenticación con credenciales propias y OAuth, generando tokens JWT.
-- `UpdateUserProfileCommandService`: Procesa actualizaciones de perfil validando consistencia con el tipo de usuario.
-- `ResetPasswordCommandService`: Gestiona el flujo de recuperación de contraseña con tokens de un solo uso.
-
-**Query Services:**
-
-- `UserProfileQueryService`: Resuelve consultas sobre datos del perfil, configuraciones y tipo de usuario.
-
-**Event Handlers:**
-
-- `UserAccountCreatedEventHandler`: Procesa el registro exitoso, enviando email de bienvenida e iniciando el tutorial de onboarding.
-- `AppSessionStartedEventHandler`: Registra el inicio de sesión y actualiza métricas de actividad del usuario.
-
----
-
-#### 4.2.3.4. Infrastructure Layer
-
-**Persistence/Repositories:**
-
-- `PostgresUserRepository`: Implementación de persistencia con índices únicos sobre Email y UserId.
-- `RedisSessionRepository`: Gestiona sesiones activas en Redis con TTL automático para expiración de tokens.
-
-**External Services:**
-
-- `GoogleOAuthService`: Integración con Google OAuth 2.0 para autenticación social.
-- `JwtTokenService`: Generación y validación de tokens JWT con refresh token rotation.
-- `EmailNotificationService`: Envío de correos transaccionales (bienvenida, recuperación de contraseña) vía SendGrid.
-
----
-
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
-
-<p align="center">
-  <img src="image/dc3.png" alt="Segmento2" width="1000">
-</p>
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
-
-##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
-
-<p align="center">
-  <img src="image/ACCESS.png" alt="Segmento2" width="1000">
-</p>
-
-##### 4.2.3.6.2. Bounded Context Database Design Diagram
-
-<p align="center">
-  <img src="image/b3.png" alt="Segmento2" width="1000">
-</p>
-
----
-
-### 4.2.4. Bounded Context: Monetization
-
-#### 4.2.4.1. Domain Layer
-
-Esta capa encapsula las reglas de negocio para la gestión de suscripciones, pagos y planes de AquaSave.
-
-**Entities:**
-
-- `Subscription`: Entidad principal con propiedades como SubscriptionId, UserId, PlanType (Free / Premium), Status, StartDate, EndDate, RenewalDate y AutoRenew.
-- `PaymentMethod`: Entidad que representa métodos de pago registrados con PaymentMethodId, UserId, Type, LastFourDigits, ExpiryDate y IsDefault.
-- `PaymentTransaction`: Entidad que registra cada transacción con TransactionId, SubscriptionId, Amount, Currency, Status, ProcessedAt y StripePaymentIntentId.
-
-**Value Objects:**
-
-- `PlanType`: Enumera los planes disponibles (Free, Premium) con sus funcionalidades y límites de dispositivos asociados.
-- `SubscriptionStatus`: Enumera los estados posibles (Active, Cancelled, Expired, GracePeriod, PastDue).
-- `Money`: Objeto de valor que encapsula Amount y Currency con validaciones de precisión decimal.
-
-**Aggregates:**
-
-- `SubscriptionAggregate`: Mantiene consistencia entre la suscripción, los métodos de pago y el historial de transacciones, aplicando las políticas de periodo de gracia y recuperación de pago.
-
-**Domain Services:**
-
-- `ISubscriptionPolicyService`: Define las reglas de negocio para cambios de plan, periodos de gracia y restricciones de funcionalidades.
-- `IBillingService`: Interface para la lógica de facturación recurrente y manejo de fallos de pago.
-
-**Repositories (Interfaces):**
-
-- `ISubscriptionRepository`: Define métodos para gestión de suscripciones (FindByUserId, Save, UpdateStatus, etc.).
-- `IPaymentTransactionRepository`: Interface para historial de transacciones y auditoría de pagos.
-
----
-
-#### 4.2.4.2. Interface Layer
-
-**Controllers:**
-
-- `SubscriptionController`: Maneja endpoints `/api/subscriptions` para activación, consulta y cancelación de planes.
-- `PaymentController`: Gestiona endpoints `/api/payments` para registro de métodos de pago, procesamiento y historial.
-- `PlanController`: Maneja endpoints `/api/plans` para comparativa de planes y upgrade desde el plan gratuito.
-
----
-
-#### 4.2.4.3. Application Layer
-
-**Command Services:**
-
-- `ActivateFreeTierCommandService`: Procesa la activación automática del plan gratuito al registrar una cuenta nueva.
-- `InitializePremiumCheckoutCommandService`: Inicia el flujo de pago con Stripe para la suscripción premium.
-- `ProcessRecurringBillingCommandService`: Gestiona el cobro automático mensual con manejo de reintentos.
-- `CancelSubscriptionCommandService`: Procesa la cancelación con aplicación de la política de periodo de gracia.
-- `ExecuteRefundCommandService`: Gestiona devoluciones procesando el reembolso vía Stripe.
-
-**Query Services:**
-
-- `SubscriptionStatusQueryService`: Resuelve consultas sobre el plan activo, fecha de renovación y funcionalidades disponibles.
-- `PaymentHistoryQueryService`: Retorna el historial de transacciones con filtros por período.
-
-**Event Handlers:**
-
-- `SubscriptionConfirmedEventHandler`: Habilita las funcionalidades premium en la cuenta del usuario.
-- `RecurringBillingFailedEventHandler`: Activa el periodo de gracia y notifica al usuario sobre el fallo de pago.
-- `SubscriptionCancelledEventHandler`: Restringe funcionalidades premium al finalizar el período pagado.
-
----
-
-#### 4.2.4.4. Infrastructure Layer
-
-**Persistence/Repositories:**
-
-- `PostgresSubscriptionRepository`: Persistencia de suscripciones con índices por UserId y estado para consultas de renovaciones próximas.
-- `PostgresPaymentTransactionRepository`: Almacenamiento de transacciones con auditoría completa e inmutabilidad de registros.
-
-**External Services:**
-
-- `StripePaymentService`: Integración con Stripe API para procesamiento de pagos, gestión de métodos de pago y webhooks de eventos de facturación.
-- `BillingSchedulerService`: Servicio de scheduling para ejecutar cobros recurrentes y verificar suscripciones próximas a vencer.
-
----
-
-#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
-
-<p align="center">
-  <img src="image/dc4.png" alt="Segmento2" width="1000">
-</p>
-
-#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
-
-
-##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
-
-<p align="center">
-  <img src="image/MONETIZATION.png" alt="Segmento2" width="1000">
-</p>
-
-##### 4.2.4.6.2. Bounded Context Database Design Diagram
-<p align="center">
-  <img src="image/b4.png" alt="Segmento2" width="1000">
-</p>
-
----
-
-### 4.2.5. Bounded Context: Analytics
-
-#### 4.2.5.1. Domain Layer
-
-Esta capa encapsula las reglas de negocio para el cálculo de métricas de ahorro hídrico y generación de reportes de sostenibilidad.
-
-**Entities:**
-
-- `WaterSavingsMetric`: Entidad principal con propiedades como MetricId, DeviceId, UserId, Period (Daily/Weekly/Monthly), LitersConsumed, LitersSaved, SavingsPercentage y CalculatedAt.
-- `CropHealthReport`: Entidad que representa reportes semanales del estado de los cultivos con ReportId, DeviceId, WeekStart, AverageMoisture, AverageTemperature, IrrigationCount y HealthScore.
-- `SustainabilitySummary`: Entidad que consolida métricas mensuales de sostenibilidad con TotalLitersSaved, CO2Equivalent, EconomicSavingsSOL y ComparedToPreviousMonth.
-
-**Value Objects:**
-
-- `SavingsPeriod`: Enumera los períodos de análisis (Daily, Weekly, Monthly, Seasonal) con sus rangos de fechas.
-- `HealthScore`: Encapsula la puntuación de salud del cultivo (0-100) con clasificación (Crítico / Regular / Bueno / Excelente).
-- `WaterVolume`: Objeto de valor que encapsula litros con conversiones a m³ y validaciones de rango.
-
-**Aggregates:**
-
-- `AnalyticsAggregate`: Mantiene consistencia entre las métricas de ahorro, los reportes de cultivo y los resúmenes de sostenibilidad por dispositivo y período.
-
-**Domain Services:**
-
-- `IWaterSavingsCalculationService`: Define el algoritmo para calcular el ahorro comparando consumo real vs. consumo estimado sin automatización.
-- `ICropHealthScoringService`: Interface para evaluar la salud del cultivo basándose en datos históricos de humedad y temperatura.
-
-**Repositories (Interfaces):**
-
-- `IWaterSavingsMetricRepository`: Define métodos para persistencia y consulta de métricas (FindByDeviceIdAndPeriod, Save, etc.).
-- `ICropHealthReportRepository`: Interface para gestión de reportes semanales de salud de cultivos.
-
----
-
-#### 4.2.5.2. Interface Layer
-
-**Controllers:**
-
-- `WaterSavingsController`: Maneja endpoints `/api/analytics/savings` para consultar métricas de ahorro hídrico por período.
-- `CropReportController`: Gestiona endpoints `/api/analytics/crop-reports` para reportes semanales del estado de los cultivos.
-- `SustainabilityController`: Maneja endpoints `/api/analytics/sustainability` para resúmenes mensuales de sostenibilidad.
-
----
-
-#### 4.2.5.3. Application Layer
-
-**Command Services:**
-
-- `CalculateWaterSavingsCommandService`: Procesa el cálculo periódico de ahorro hídrico agregando datos de consumo del contexto de Irrigation Intelligence.
-- `GenerateWeeklyCropReportCommandService`: Genera automáticamente reportes semanales de salud del cultivo al finalizar cada semana.
-- `DeliverMonthlySustainabilitySummaryCommandService`: Consolida métricas mensuales y las envía al usuario como resumen de sostenibilidad.
-
-**Query Services:**
-
-- `WaterSavingsDashboardQueryService`: Resuelve consultas del dashboard de ahorro con agregaciones por día, semana y mes.
-- `HistoricalDataExportQueryService`: Prepara exportaciones de datos históricos en formato CSV con filtros configurables.
-
-**Event Handlers:**
-
-- `WaterSavingsMetricCalculatedEventHandler`: Procesa el cálculo completado, actualizando el dashboard del usuario en tiempo real.
-- `DailySavingsTargetAchievedEventHandler`: Notifica al usuario cuando alcanza el objetivo diario de ahorro configurado.
-
----
-
-#### 4.2.5.4. Infrastructure Layer
-
-**Persistence/Repositories:**
-
-- `PostgresWaterSavingsRepository`: Persistencia de métricas con particionamiento por mes para consultas históricas eficientes.
-- `PostgresCropHealthReportRepository`: Almacenamiento de reportes semanales con índices por DeviceId y semana de inicio.
-
-**External Services:**
-
-- `AnalyticsSchedulerService`: Servicio de scheduling que dispara el cálculo de métricas diarias, semanales y mensuales automáticamente.
-- `DataExportService`: Genera archivos CSV con datos históricos de consumo y ahorro para descarga del usuario.
-
----
-
-#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
-
-<p align="center">
-  <img src="image/dc5.png" alt="Segmento2" width="1000">
-</p>
-
-#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
-
-
-
-##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
-
-<p align="center">
-  <img src="image/ANALYTICS.png" alt="Segmento2" width="1000">
-</p>
-
-##### 4.2.5.6.2. Bounded Context Database Design Diagram
-
-<p align="center">
-  <img src="image/b5.png" alt="Segmento2" width="1000">
-</p>
-
-
+La propuesta de despliegue considera:
+
+- **Frontend web:** publicación de la landing page y los archivos de la aplicación web en Netlify. El navegador del usuario ejecutará la aplicación y consultará la API por HTTPS.
+- **Aplicación móvil:** ejecución en el dispositivo Android del usuario. Firebase App Distribution se utilizará para distribuir versiones de prueba, y Firebase Cloud Messaging para la entrega de notificaciones push. La aplicación y su base de datos SQLite se ejecutarán localmente en el teléfono.
+- **Backend:** ejecución de AquaSave API en un contenedor Docker sobre Amazon ECS con Fargate. Los módulos del dominio y los procesos de entrega de eventos formarán parte de la misma aplicación desplegada.
+- **Persistencia:** almacenamiento principal en Amazon RDS para PostgreSQL. La base de datos se ubicará en una red privada accesible desde el backend, con credenciales administradas fuera del código fuente.
+- **Comunicación IoT:** uso de AWS IoT Core como broker MQTT. Cada dispositivo utilizará una identidad propia y permisos limitados a sus canales de telemetría, configuración y comandos.
+- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación y actuador. El firmware aplicará los límites de duración aun cuando no exista conexión con la nube.
+- **Servicios externos:** acceso desde el backend a autenticación, pagos, correo, clima y recomendaciones. Las credenciales de integración permanecerán en la infraestructura del servidor.
+
+El despliegue separa la exposición pública de las aplicaciones y la API del acceso privado a los datos. Las configuraciones y credenciales se administrarán por entorno, y los registros de operación permitirán relacionar solicitudes, comandos y resultados.
+
+Ante una desconexión, la aplicación conservará el último estado confirmado con su fecha, sin presentar datos almacenados como actuales. El dispositivo aplicará su política local válida y sus condiciones de corte. Al restablecerse la comunicación, la plataforma actualizará los resultados pendientes y descartará los inicios vencidos, evitando repetir ciclos omitidos.
 
 
 ---
