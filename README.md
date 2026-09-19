@@ -391,7 +391,7 @@ Para este segmento, planteamos la necesidad de conservar el control sobre las de
 ##### 1.2.2.4. Lean UX Canvas
 <div align="center">
 
-  <img src="image/canvas.png" alt="Diagrama" width="600">
+  <img src="image/CANVAS.png" alt="Diagrama" width="600">
 
 </div>
 
