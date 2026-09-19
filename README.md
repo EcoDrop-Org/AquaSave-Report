@@ -398,7 +398,7 @@ Proporcionar herramientas tecnológicas asequibles, confiables e intuitivas que 
 </p>
 
 <p align="center">
-  <img src="image/5P.png" alt="Segmento2" width="1000">
+  <img src="image/pa" alt="Segmento2" width="1000">
 </p>
 
 
