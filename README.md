@@ -221,7 +221,7 @@ Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanza
 </p>
 
 <p align="center">
-  <img src="image/6P.png" alt="Segmento2" width="1000">
+  <img src="image/PAULA.png" alt="Segmento2" width="1000">
 </p>
 
 
@@ -810,14 +810,14 @@ Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barre
 ***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 
 <p align="center">
-  <img src="image/Segmento%201%20-%20USER%20PERSONA.png" alt="Segmento1" width="1000">
+  <img src="image/Principiante.png" alt="Segmento1" width="1000">
 </p>
 
 
 ***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas:***
 
 <p align="center">
-  <img src="image/Segmento%202%20-%20USER%20PERSONA.png" alt="Segmento2" width="1000">
+  <img src="image/Experto.png" alt="Segmento2" width="1000">
 </p>
 
 #### 2.3.2. User Task Matrix
@@ -842,12 +842,12 @@ Ambos segmentos necesitan decidir cuándo y cuánto regar. El principiante requi
 
 ***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas:***
 <p align="center">
-  <img src="image/Empathy_Mapping_S1.png" alt="EM1" width="1000">
+  <img src="image/SEGMENTO 1 FEEL.png" alt="EM1" width="1000">
 </p>
 
 ***Segmento 2: Usuarios expertos en el cuidado de plantas:***
 <p align="center">
-  <img src="image/Empathy_Mapping_S2.png" alt="EM2" width="1000">
+  <img src="image/SEGMENTO 2 FEEL.png" alt="EM2" width="1000">
 </p>
 
 #### 2.3.4. As-Is Scenario Mapping
@@ -857,13 +857,13 @@ Los As-Is Scenario Maps describirán la experiencia actual de los usuarios al ev
 **Usuarios principiantes en el cuidado de plantas**
 
 <div align="center">
-  <img src="image/as-is-principiante.png" alt="As-Is Scenario Mapping del usuario principiante" width="600">
+  <img src="image/17.png" alt="As-Is Scenario Mapping del usuario principiante" width="600">
 </div>
 
 **Usuarios expertos en el cuidado de plantas**
 
 <div align="center">
-  <img src="image/as-is-experto.png" alt="As-Is Scenario Mapping del usuario experto" width="600">
+  <img src="image/18.png" alt="As-Is Scenario Mapping del usuario experto" width="600">
 </div>
 
 ### 2.4. Ubiquitous Language
