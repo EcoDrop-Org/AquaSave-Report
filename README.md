@@ -1144,13 +1144,15 @@ Los escenarios iniciales priorizan la confiabilidad del riego, la protección de
 
 ##### 4.1.2.3. Constraints
 
-Las restricciones seleccionadas establecen la base tecnológica y las condiciones de operación de AquaSave. La solución utilizará una landing page en HTML, CSS y JavaScript; una aplicación web en Vue con TypeScript y Material Design; una aplicación Android nativa en Kotlin; y una API en NestJS con TypeScript. El dispositivo se desarrollará sobre ESP32.
+Las restricciones seleccionadas establecen la base tecnológica y las condiciones de operación de AquaSave. La landing page utiliza HTML, CSS y JavaScript. Las aplicaciones web y móvil se desarrollan con Flutter y Dart, compartiendo una base de código y componentes de Material Design. La API se implementa en Node.js con Express y TypeScript, mientras que el firmware del dispositivo ESP32 utiliza C++ con el entorno Arduino.
+
+La integración del dispositivo se realiza mediante una EdgeAPI desarrollada en Node.js y TypeScript, que conecta la mensajería MQTT de HiveMQ Cloud con los endpoints HTTP del backend. La persistencia principal utiliza PostgreSQL y los contratos de la API se documentan mediante OpenAPI y Swagger.
 
 La propiedad del dispositivo, los límites locales del riego y la separación entre recomendaciones y ejecución constituyen restricciones de diseño. Las funciones comerciales y la personalización de la experiencia no deben anular estas condiciones.
 
 | Technical Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |:------------------:|--------|-------------|-------------------------|:-----------------------:|
-| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar landing HTML, web Vue, móvil Android nativo y API NestJS, para entregar una solución multicomponente coherente. | **Escenario 1: Recorrido integrado.** Given que los productos están disponibles, When se recorre la landing, la web y la aplicación móvil, Then mantienen una experiencia coherente y las aplicaciones utilizan los contratos de la API propia.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisan los productos, When se comprueba su implementación, Then la landing utiliza HTML, CSS y JavaScript; la web utiliza Vue con TypeScript y Material Design; Android utiliza Kotlin; y la API utiliza NestJS con TypeScript. | EP10 |
+| TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar una landing page en HTML, CSS y JavaScript, aplicaciones web y móvil en Flutter con Dart y una API en Node.js con Express y TypeScript, para ofrecer una experiencia integrada de AquaSave. | **Escenario 1: Integración de los productos.** Given que los productos digitales están disponibles y el usuario tiene una cuenta válida, When accede desde las aplicaciones web y móvil, Then ambas utilizan la misma API y permiten consultar los datos asociados a su cuenta.<br><br>**Escenario 2: Tecnologías verificadas.** Given que se revisa la implementación de los productos, When se comprueban el código fuente y sus dependencias, Then la landing page utiliza HTML, CSS y JavaScript; las aplicaciones web y móvil utilizan Flutter con Dart; y la API utiliza Node.js con Express y TypeScript. | EP10 |
 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | **Escenario 1: Dispositivo integrado.** Given que se dispone del controlador, sensores, alimentación y actuador, When se integran y prueban, Then se obtienen lecturas calibradas y se ejecuta un ciclo dentro de los límites definidos.<br><br>**Escenario 2: Condiciones insuficientes.** Given que falta un componente necesario o una lectura válida, When se evalúa el riego automático, Then se informa el problema y se impide iniciar el ciclo. | EP03 |
 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | **Escenario 1: Cambio de experiencia.** Given que una cuenta tiene dispositivos asociados, When cambia su nivel de experiencia, Then conserva los mismos permisos y propiedades.<br><br>**Escenario 2: Recurso ajeno.** Given que una solicitud intenta consultar o controlar una unidad de otra cuenta, When se verifica la autorización, Then se rechaza antes de devolver información o publicar una orden. | EP01 |
 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | **Escenario 1: Corte local.** Given que existe un ciclo activo, When alcanza su duración máxima o una condición de corte, Then el controlador desactiva el actuador sin depender de internet.<br><br>**Escenario 2: Reinicio o fallo.** Given que ocurre un reinicio, una lectura inválida o falta una configuración válida, When se evalúa la operación, Then el actuador permanece apagado y no se reejecutan órdenes anteriores. | EP04 |
@@ -1189,53 +1191,59 @@ El orden propuesto sitúa primero los drivers de alta importancia y alto impacto
 
 #### 4.1.4. Architectural Design Decisions
 
-El proceso de decisión se organiza siguiendo las etapas del Quality Attribute Workshop: presentación de los objetivos del negocio, revisión de la propuesta arquitectónica, identificación de drivers, generación de escenarios, consolidación, priorización y refinamiento. Los resultados se aplican en iteraciones de diseño que relacionan cada problema con las alternativas consideradas y la decisión propuesta.
+El proceso de decisión se organiza siguiendo las etapas del Quality Attribute Workshop: presentación de los objetivos del negocio, revisión de la propuesta arquitectónica, identificación de drivers, generación de escenarios, consolidación, priorización y refinamiento. Las decisiones relacionan las necesidades de AquaSave con la organización de sus aplicaciones, servicios y dispositivo IoT.
 
 **Iteración 1: Organización de responsabilidades e integración**
 
-Los drivers FD01, FD02, TS05 y TS07 orientan la separación entre aplicaciones, API y dispositivo. Se consideran una arquitectura por capas, un monolito modular y una arquitectura de microservicios.
+Los drivers FD01, FD02, TS05 y TS07 orientan la separación entre presentación, reglas de negocio, persistencia y operación del dispositivo. Se consideran una arquitectura por capas, un monolito modular y una arquitectura de microservicios.
 
-Se propone un backend modular con cinco módulos de dominio correspondientes a los cinco bounded contexts. Cada módulo tendrá sus propios contratos y responsabilidad sobre sus datos. Esta decisión permite desarrollar y desplegar inicialmente una única API sin convertir cada contexto en un servicio independiente.
+Se adopta un backend modular implementado en Node.js con Express y TypeScript. La organización inicial contiene los módulos Identity Access Management, Device Management e Irrigation Intelligence, con responsabilidades distribuidas en dominio, aplicación, infraestructura e interfaces HTTP. El diseño mantiene los cinco bounded contexts e incorpora progresivamente las capacidades de Analytics y Monetization.
 
-La landing page, la aplicación web, la aplicación móvil y el firmware conservarán sus responsabilidades de presentación u operación local. No accederán directamente a la base de datos de la plataforma.
+Las aplicaciones web y móvil utilizan Flutter con Dart y comparten componentes de presentación y acceso a datos. Su organización distingue presentación, dominio y datos; BLoC y Cubit gestionan los estados de interacción. Ambas consumen la misma API, mientras que la landing page se mantiene como un sitio independiente en HTML, CSS y JavaScript.
+
+La EdgeAPI se ejecuta como un servicio técnico separado que conecta MQTT con HTTP. Su responsabilidad es transportar telemetría, estados y comandos entre el dispositivo y el backend. Las reglas de acceso y los casos de uso permanecen en la API.
 
 **Iteración 2: Seguridad y confiabilidad del riego**
 
-Los drivers FD03, QAS03, QAS04, QAS05, TS08 y TS10 priorizan la autorización y la ejecución acotada. La API verificará la identidad y la propiedad de la unidad antes de solicitar una operación. Device Management administrará el envío y seguimiento de comandos, mientras que el firmware verificará identificadores, vencimientos y límites antes de accionar el dispositivo.
+Los drivers FD03, QAS03, QAS04, QAS05, TS08 y TS10 orientan la protección del acceso y la ejecución del riego. Identity Access Management administra la autenticación mediante JWT y las sesiones. Los servicios de aplicación verifican la asociación entre la cuenta y el dispositivo antes de permitir las operaciones correspondientes.
 
-Se propone mensajería MQTT para la comunicación con el controlador, acompañada de órdenes identificables e idempotentes. Una solicitud aceptada por la plataforma no se considerará ejecutada hasta recibir confirmación. La ausencia de respuesta no se interpretará como prueba de que el actuador está apagado.
+Irrigation Intelligence utiliza un puerto de comunicación para registrar los comandos de riego. La EdgeAPI consulta periódicamente los comandos pendientes del backend y los publica en HiveMQ Cloud. El ESP32 recibe los mensajes MQTT, procesa las acciones y comunica sus respuestas. La EdgeAPI devuelve los reconocimientos al backend mediante HTTP, mientras que la telemetría permite actualizar el estado reportado por el dispositivo.
 
-Las órdenes de inicio vencidas no se ejecutarán al reconectar. La detención tendrá prioridad y no requerirá una segunda confirmación del usuario. El límite de duración se aplicará localmente y la salida de control permanecerá apagada durante el arranque.
+Como objetivos de confiabilidad se mantienen la distinción entre solicitud y ejecución confirmada, el tratamiento de comandos duplicados, el vencimiento de órdenes y la prioridad de detención. Estas condiciones se evaluarán mediante los escenarios de calidad definidos. El reconocimiento de un mensaje y la comprobación del estado físico se consideran aspectos distintos del seguimiento.
+
+El control local del ESP32 debe mantener límites de duración y condiciones de corte independientes de la comunicación con la nube.
 
 **Iteración 3: Recomendaciones e integración externa**
 
-Los drivers FD05, QAS07, QAS08 y TS12 orientan el aislamiento de los proveedores climáticos y de IA. Se consideran llamadas desde las aplicaciones, integración directa en el dominio y adaptación mediante puertos y adaptadores.
+Los drivers FD05, QAS07, QAS08 y TS12 orientan la integración de servicios externos mediante puertos y adaptadores. Irrigation Intelligence utiliza un contrato interno de información climática y un adaptador para consultar Open-Meteo. Esta separación permite modificar el proveedor sin trasladar sus formatos a las aplicaciones.
 
-Se propone que Irrigation Intelligence concentre la interpretación de condiciones, las políticas y las recomendaciones. Los adaptadores validarán formato, unidades y vigencia. Cada consulta tendrá un tiempo máximo de espera y tratamiento explícito de errores.
+La incorporación de recomendaciones apoyadas por IA se contempla como una ampliación de Irrigation Intelligence. Las propuestas deberán incluir una explicación y someterse a las validaciones del dominio antes de originar una acción aceptada por el usuario.
 
-La IA producirá propuestas, no comandos. Una recomendación requerirá aceptación del usuario y nueva validación del estado de la unidad antes de originar una orden. El pronóstico solo podrá aplazar el riego de unidades configuradas como expuestas a lluvia. Estas capacidades formarán parte de Irrigation Intelligence y no constituirán nuevos bounded contexts.
+La adaptación del riego al pronóstico y las recomendaciones conservarán las condiciones de ubicación, vigencia de las lecturas y límites de operación establecidos para cada unidad.
 
 **Iteración 4: Historial, evolución e interacción**
 
-Los drivers FD04, QAS01, QAS06, TS11 y TS13 orientan la persistencia y la experiencia de uso. Se propone conservar los cambios relevantes junto con los eventos pendientes de publicación mediante Transactional Outbox. Los consumidores identificarán los eventos procesados para evitar duplicar ciclos o consumo.
+Los drivers FD04, QAS01, QAS06, TS11 y TS13 orientan la persistencia y la experiencia de uso. El backend utiliza interfaces de repositorio con implementaciones para PostgreSQL. También dispone de almacenamiento en archivos JSON para escenarios de desarrollo y pruebas sin base de datos.
 
-Analytics mantendrá los registros destinados al historial y las comparaciones. Una estimación de volumen se distinguirá de una medición, y la ausencia de datos no se reemplazará por cero. Las comparaciones requerirán periodos y condiciones equivalentes.
+Irrigation Intelligence conserva inicialmente los registros de los ciclos y proporciona su consulta a las aplicaciones. Analytics mantiene su responsabilidad prevista sobre el análisis del historial y las métricas. La incorporación de Transactional Outbox y consumidores idempotentes se considera una evolución para publicar eventos de forma recuperable cuando se implemente esa colaboración.
 
-La vinculación utilizará una secuencia guiada, con mensajes accesibles e internacionalizados. Monetization administrará los planes y las prestaciones opcionales sin impedir la detención ni modificar los límites locales cuando una suscripción venza.
+Una estimación de volumen se distinguirá de una medición, y la ausencia de datos no se reemplazará por cero. Las comparaciones requerirán periodos y condiciones equivalentes.
+
+La experiencia compartida en Flutter permite mantener recorridos de vinculación, consulta y control consistentes entre web y móvil. Monetization incorporará la gestión de planes y prestaciones opcionales sin impedir la detención ni modificar los límites locales cuando una suscripción venza.
 
 **Candidate Pattern Evaluation Matrix**
 
 | Driver ID | Título de Driver | Pattern 1: Pro / Con | Pattern 2: Pro / Con | Pattern 3: Pro / Con |
 |:---------:|------------------|---------------------|---------------------|---------------------|
-| FD01, FD02, TS05 | Organización del backend | **Arquitectura por capas.** Pro: organización inicial sencilla. Con: las capas por sí solas no delimitan los dominios. | **Monolito modular.** Pro: límites explícitos y despliegue unificado. Con: exige respetar los contratos entre módulos. | **Microservicios.** Pro: despliegue y escalado independientes. Con: mayor complejidad operativa y de consistencia distribuida. |
-| FD03, QAS03 | Entrega de comandos | **Consulta periódica.** Pro: integración HTTP sencilla. Con: la frecuencia condiciona latencia y tráfico. | **Publish–Subscribe.** Pro: comunicación bidireccional desacoplada. Con: exige controlar duplicados, vencimientos y reconexiones. | **Acceso directo aplicación–dispositivo.** Pro: camino corto en la red local. Con: dificulta el acceso remoto y la autorización central. |
-| QAS04, TS08 | Protección del acceso | **Autorización en la interfaz.** Pro: permite ocultar controles. Con: no protege la API frente a solicitudes directas. | **Autorización central y verificación de propiedad.** Pro: política uniforme por recurso. Con: requiere mantener asociaciones y pruebas por operación. | **Autorización duplicada por producto.** Pro: controles locales de experiencia. Con: riesgo de reglas inconsistentes. |
-| QAS05, TS10 | Control ante desconexiones | **Control exclusivo en la nube.** Pro: configuración central. Con: perder la comunicación puede impedir el corte remoto. | **Control local con sincronización.** Pro: límites independientes de internet. Con: requiere versionar políticas y reconciliar estados. | **Control exclusivamente local.** Pro: autonomía. Con: no resuelve por sí solo la supervisión remota ni el historial compartido. |
-| QAS07, QAS08, TS12 | Integración externa | **Llamadas desde las aplicaciones.** Pro: implementación directa. Con: duplica lógica y puede exponer credenciales. | **Integración acoplada al dominio.** Pro: menos intermediarios. Con: los cambios del proveedor afectan las reglas internas. | **Ports and Adapters con Anti-corruption Layer.** Pro: aísla cambios y normaliza contratos. Con: requiere adaptadores y pruebas adicionales. |
-| FD04, QAS06 | Registro del historial | **Doble escritura directa.** Pro: flujo simple. Con: puede guardar un ciclo y perder la publicación de su evento. | **Transactional Outbox y consumidor idempotente.** Pro: recupera publicaciones y evita duplicados. Con: añade procesamiento asíncrono y supervisión. | **Event Sourcing.** Pro: reconstrucción desde eventos. Con: mayor complejidad de versionado y reconstrucción para el alcance inicial. |
-| QAS01, TS13 | Configuración inicial | **Formulario único.** Pro: todos los campos visibles. Con: concentra decisiones y errores. | **Asistente por pasos.** Pro: orientación progresiva y avance conservado. Con: requiere gestionar estados intermedios. | **Configuración por soporte.** Pro: acompañamiento individual. Con: crea dependencia y limita la autonomía. |
+| FD01, FD02, TS05 | Organización del backend | **Arquitectura por capas.** Pro: organización inicial sencilla. Con: las capas por sí solas no delimitan los dominios. | **Monolito modular.** Pro: separación de responsabilidades y despliegue unificado. Con: requiere controlar las dependencias entre módulos. | **Microservicios.** Pro: despliegue y escalado independientes. Con: mayor complejidad operativa y de consistencia distribuida. |
+| FD03, QAS03 | Entrega de comandos | **Consulta HTTP desde el dispositivo.** Pro: integración directa con la API. Con: traslada al firmware la consulta periódica y la adaptación al backend. | **MQTT con puente HTTP.** Pro: combina mensajería del dispositivo con la API existente. Con: requiere supervisar la EdgeAPI y tratar reintentos y reconocimientos. | **Acceso directo aplicación–dispositivo.** Pro: comunicación local sencilla. Con: dificulta el acceso remoto y la autorización central. |
+| QAS04, TS08 | Protección del acceso | **Autorización en la interfaz.** Pro: permite ocultar controles. Con: no protege la API frente a solicitudes directas. | **Autenticación central y verificación de propiedad.** Pro: permite validar cada recurso solicitado. Con: requiere mantener asociaciones y pruebas por operación. | **Autorización duplicada por producto.** Pro: controles locales de experiencia. Con: riesgo de reglas inconsistentes. |
+| QAS05, TS10 | Control ante desconexiones | **Control exclusivo en la nube.** Pro: configuración central. Con: perder la comunicación puede impedir el corte remoto. | **Control local con sincronización.** Pro: límites independientes de internet. Con: requiere reconciliar los estados del dispositivo y la plataforma. | **Control exclusivamente local.** Pro: autonomía. Con: limita la supervisión remota y el historial compartido. |
+| QAS07, QAS08, TS12 | Integración externa | **Llamadas desde las aplicaciones.** Pro: implementación directa. Con: duplica la integración. | **Integración acoplada al dominio.** Pro: menos intermediarios. Con: los cambios del proveedor afectan las reglas internas. | **Ports and Adapters.** Pro: separa los contratos internos de los proveedores. Con: requiere adaptadores y pruebas de integración. |
+| FD04, QAS06 | Registro del historial | **Repositorios y persistencia relacional.** Pro: consulta directa de ciclos y organización de los datos. Con: la publicación de eventos requiere un mecanismo adicional. | **Transactional Outbox y consumidor idempotente.** Pro: permite recuperar publicaciones y evitar duplicados. Con: añade procesamiento asíncrono y supervisión. | **Event Sourcing.** Pro: reconstrucción desde eventos. Con: mayor complejidad de versionado y reconstrucción. |
+| QAS01, TS13 | Configuración inicial | **Formulario único.** Pro: todos los campos visibles. Con: concentra decisiones y errores. | **Asistente por pasos.** Pro: orientación progresiva. Con: requiere gestionar estados intermedios. | **Configuración por soporte.** Pro: acompañamiento individual. Con: crea dependencia y limita la autonomía. |
 
-Las alternativas seleccionadas son el monolito modular, Publish–Subscribe con comandos idempotentes, la verificación central de identidad y propiedad, el control local con sincronización, Ports and Adapters con Anti-corruption Layer, Transactional Outbox y el asistente de configuración por pasos. Su combinación mantiene separados el criterio de riego, la ejecución física y la presentación de información.
+La base arquitectónica combina un backend modular, clientes Flutter, persistencia mediante repositorios y comunicación MQTT a través de la EdgeAPI. Los mecanismos adicionales de confiabilidad y publicación de eventos se incorporarán conforme se implementen y validen los escenarios definidos.
 
 #### 4.1.5. Quality Attribute Scenario Refinements
 
@@ -1375,7 +1383,9 @@ Cada escenario vincula una necesidad del negocio con una respuesta observable. L
 
 En esta sección se describe el procedimiento de identificación y organización de los bounded contexts de AquaSave. Se utilizan EventStorming, Candidate Context Discovery, Domain Message Flows y Bounded Context Canvas para reconocer las responsabilidades del negocio y establecer cómo deben colaborar.
 
-La separación del dominio permite distinguir la gestión del dispositivo, la interpretación de las condiciones de riego, el acceso de usuarios, los servicios comerciales y el análisis de los registros. Estos límites se mantienen tanto en la documentación como en la organización modular de la solución.
+El diseño mantiene cinco bounded contexts: Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics. La implementación inicial del backend organiza los tres primeros en módulos de dominio. Analytics y Monetization conservan su lugar en el diseño para incorporar progresivamente las capacidades analíticas y comerciales.
+
+La EdgeAPI participa como un componente técnico de integración entre HTTP y MQTT. Su separación como servicio permite mantener la conexión con los dispositivos sin añadir otro bounded context al modelo.
 
 #### 4.2.1. EventStorming
 
@@ -1617,79 +1627,87 @@ Al evaluar la ubicación de las capacidades, se mantiene la gestión de planes e
 
 La arquitectura de AquaSave se presenta mediante las vistas System Landscape, Context, Container y Deployment. Estas permiten comprender el entorno de la solución, sus interacciones, la distribución de responsabilidades y los recursos necesarios para su ejecución.
 
-La propuesta conecta las aplicaciones web y móvil con una API modular y un dispositivo IoT. Los cinco bounded contexts organizan las responsabilidades del backend, mientras que los servicios externos complementan la autenticación, las suscripciones, las notificaciones, el pronóstico climático y las recomendaciones.
+La solución integra una landing page, aplicaciones web y móvil desarrolladas con Flutter, una API modular en Node.js con Express y TypeScript, una EdgeAPI de integración y un dispositivo ESP32. PostgreSQL proporciona la persistencia principal, HiveMQ Cloud permite la comunicación MQTT y Open-Meteo aporta información climática.
+
+Los cinco bounded contexts orientan la organización del dominio. La implementación inicial concentra acceso, dispositivos y riego, mientras que las recomendaciones apoyadas por IA, las capacidades especializadas de Analytics y la gestión comercial de Monetization se incorporarán progresivamente.
 
 #### 4.3.1. Software Architecture System Landscape Diagram
 
-El System Landscape Diagram presenta la vista más amplia de AquaSave. Permite identificar a los usuarios, la plataforma, el dispositivo IoT y los servicios externos que participan en el monitoreo y control del riego.
+El System Landscape Diagram presenta la vista general de AquaSave. Permite identificar a los usuarios, los productos digitales, el dispositivo IoT y los servicios externos que intervienen en el monitoreo y control del riego.
 
 <p align="center">
   <img src="image/System_Landscape_Diagram.png" alt="SLD" width="1000">
 </p>
 
-La solución contempla el acceso desde aplicaciones web y móvil, la recepción de lecturas del dispositivo y el envío de solicitudes de control. La plataforma concentra la autenticación, la evaluación de políticas y la consulta de registros, mientras que el controlador mantiene los límites de operación local.
+Los usuarios conocen la propuesta mediante la landing page y acceden a las aplicaciones web o móvil para consultar sus dispositivos, revisar lecturas y gestionar el riego. Ambas aplicaciones se comunican con la misma API, que concentra los casos de uso y el acceso a los datos.
 
-Las integraciones propuestas incluyen Google para autenticación externa, Stripe para suscripciones, Resend para correos transaccionales y OpenWeatherMap para pronóstico climático. La capacidad de recomendaciones apoyadas por IA se incorpora mediante un proveedor externo conectado a Irrigation Intelligence. Los proveedores no reciben acceso directo al dispositivo ni a los canales de comandos.
+El dispositivo ESP32 intercambia mensajes con HiveMQ Cloud. La EdgeAPI recibe esos mensajes y los comunica al backend mediante HTTP; también obtiene los comandos pendientes y los publica hacia el dispositivo.
+
+Open-Meteo proporciona el pronóstico climático utilizado por Irrigation Intelligence. La autenticación de las cuentas se gestiona en la API mediante JWT y sesiones. La autenticación externa, los pagos, el correo transaccional y las recomendaciones apoyadas por IA se contemplan como integraciones posteriores según las funcionalidades previstas.
 
 #### 4.3.2. Software Architecture Context Level Diagrams
 
-El diagrama de contexto delimita AquaSave como un sistema y presenta las relaciones que mantiene con sus usuarios, el hardware IoT y los servicios externos. Esta perspectiva permite comprender quién utiliza la solución, qué información intercambia y de qué integraciones depende.
+El diagrama de contexto delimita AquaSave como un sistema y presenta sus relaciones con los usuarios, el entorno físico y los servicios externos. Esta vista permite comprender qué información intercambia la solución y de qué servicios depende.
 
 <p align="center">
   <img src="image/Context_Level_Diagram.png" alt="CLD" width="1000">
 </p>
 
-Los usuarios consultan el estado de sus plantas, configuran sus unidades, solicitan acciones de riego y revisan el historial. El dispositivo proporciona lecturas y resultados de ejecución, y recibe configuraciones y comandos autorizados desde la plataforma.
+Los usuarios consultan las condiciones de sus plantas y solicitan operaciones desde las aplicaciones web y móvil. La plataforma administra sus cuentas, identifica los dispositivos asociados y proporciona acceso al historial de riego.
 
-Google complementa el acceso mediante una identidad externa; Stripe permite verificar operaciones de suscripción; Resend participa en los correos transaccionales; y OpenWeatherMap aporta información meteorológica. Las notificaciones push utilizarán el mecanismo de entrega de la aplicación móvil. La generación de recomendaciones se integra como una capacidad de Irrigation Intelligence y requiere validación antes de presentar una propuesta.
+El ESP32 obtiene las lecturas y ejecuta las acciones sobre el actuador. HiveMQ Cloud transporta los mensajes MQTT y la EdgeAPI conecta ese intercambio con la API de AquaSave. Open-Meteo aporta información meteorológica consultada desde el backend.
 
-Las relaciones externas se gestionan mediante contratos definidos. La indisponibilidad de un proveedor climático, comercial o de IA no debe impedir que el dispositivo aplique su límite local de duración ni que la plataforma procese una solicitud de detención cuando exista comunicación.
+Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orientación dentro de Irrigation Intelligence. Las integraciones comerciales se vincularán con Monetization, manteniendo la gestión del dispositivo y las decisiones de riego dentro de la plataforma.
 
 #### 4.3.3. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite distribuir las responsabilidades entre las interfaces, los servicios backend, las bases de datos y el dispositivo.
+El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas y las responsabilidades de cada componente.
 
 <p align="center">
   <img src="image/DiagramaContainerAquaSave.png" alt="ContainerDiagram" width="1000">
 </p>
 
-La arquitectura propuesta se organiza en los siguientes contenedores:
+La arquitectura se organiza en los siguientes contenedores:
 
-- **Landing Page:** presenta el producto, sus características, requisitos y accesos a las aplicaciones. Se desarrollará con HTML, CSS y JavaScript.
-- **Web Application:** permite consultar unidades, lecturas, alertas, configuraciones e historial. Se desarrollará con Vue, TypeScript y componentes de Material Design, consumiendo la API mediante HTTPS.
-- **Mobile Application:** permite acceder a las funciones de AquaSave desde Android. Se desarrollará de forma nativa con Kotlin y utilizará los mismos contratos de negocio que la aplicación web.
-- **Mobile SQLite Database:** conserva preferencias y una caché local de información consultada. Los datos almacenados mantienen su fecha y no sustituyen la validación de permisos ni la confirmación de una operación remota.
-- **AquaSave API:** implementa los casos de uso mediante NestJS y TypeScript. Integra los módulos de Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics, junto con sus adaptadores externos.
-- **Platform PostgreSQL Database:** almacena cuentas, asociaciones de dispositivos, configuraciones, registros de lecturas, comandos, ciclos, suscripciones y eventos pendientes. La propiedad de los datos se organiza por módulo y cada contexto modifica únicamente la información que le corresponde.
-- **Dispositivo IoT ESP32:** obtiene lecturas, recibe configuraciones y ejecuta ciclos de riego dentro de límites locales. Conserva la identificación de las órdenes necesaria para evitar ejecuciones duplicadas.
+- **Landing Page:** sitio desarrollado con HTML, CSS y JavaScript. Presenta la propuesta de AquaSave, sus características y los accesos a los productos digitales.
+- **Web Application:** aplicación desarrollada con Flutter y Dart, compilada para ejecutarse en el navegador. Permite acceder a cuentas, dispositivos, lecturas, historial y control del riego mediante la API.
+- **Mobile Application:** aplicación desarrollada con Flutter y Dart para Android. Comparte la base de código y los contratos de acceso a datos de la versión web.
+- **AquaSave API:** backend desarrollado con Node.js, Express y TypeScript. Expone endpoints REST para autenticación, gestión de dispositivos, telemetría, riego y pronóstico climático. Organiza los casos de uso mediante módulos con capas de dominio, aplicación, infraestructura e interfaces.
+- **Platform PostgreSQL Database:** almacena usuarios, sesiones, dispositivos, telemetría, comandos y registros de riego mediante los repositorios del backend.
+- **AquaSave EdgeAPI:** servicio desarrollado con Node.js y TypeScript que conecta MQTT con HTTP. Recibe telemetría y estados, consulta comandos pendientes, los publica en HiveMQ Cloud y comunica los reconocimientos al backend.
+- **Dispositivo IoT ESP32:** ejecuta el firmware desarrollado en C++ con Arduino, obtiene las lecturas y controla el actuador de riego. Se comunica con HiveMQ Cloud mediante MQTT.
 
-La comunicación entre las aplicaciones y la API utiliza HTTPS. La comunicación bidireccional con los dispositivos se propone mediante un broker MQTT autenticado, integrado desde Device Management. Las aplicaciones no publican directamente en los canales del dispositivo.
+Las aplicaciones Flutter organizan su código en presentación, dominio y datos. Utilizan BLoC y Cubit para gestionar estados, repositorios para el acceso a la información y SharedPreferences para conservar datos locales de sesión. El almacenamiento local forma parte de los clientes y no constituye una base de datos SQLite independiente.
 
-El backend se desplegará inicialmente como una aplicación modular. Los bounded contexts representan límites del dominio y no requieren procesos independientes. Los eventos internos y el procesamiento de Analytics se integrarán mediante contratos que permitan recuperar publicaciones pendientes sin duplicar registros.
+La API mantiene PostgreSQL como persistencia principal. Para desarrollo y pruebas también existen implementaciones de repositorio basadas en archivos JSON. Los contratos HTTP se documentan con OpenAPI y Swagger.
 
-Para atender las consultas del dashboard, Device Management mantendrá el acceso a la última lectura por unidad y consultas indexadas por dispositivo y fecha. La respuesta no esperará una nueva medición física ni una recomendación de IA. Cada valor conservará su fecha para que la interfaz pueda distinguir los datos actuales de los desactualizados.
+La telemetría recorre el dispositivo, HiveMQ Cloud y la EdgeAPI antes de llegar al backend. En sentido inverso, la API registra comandos que la EdgeAPI consulta y publica hacia el ESP32. Las aplicaciones consultan la API y no necesitan conectarse directamente al broker.
+
+Los bounded contexts constituyen límites del dominio dentro del backend modular. La EdgeAPI se despliega por separado debido a su función de comunicación; esa separación no convierte cada contexto en un microservicio.
 
 #### 4.3.4. Software Architecture Deployment Diagrams
 
-El diagrama de despliegue presenta la distribución de los contenedores entre los equipos de los usuarios, la infraestructura de servicios y el entorno físico donde funciona el dispositivo IoT. Esta vista permite identificar los nodos de ejecución y los canales de comunicación necesarios para operar AquaSave.
+El diagrama de despliegue presenta la distribución de los componentes entre los dispositivos de los usuarios, los servicios de infraestructura y el entorno físico de las plantas.
 
 <p align="center">
   <img src="image/DiagramaDeploymentAquaSave.png" alt="DeploymentDiagram" width="1000">
 </p>
 
-La propuesta de despliegue considera:
+La distribución de la solución considera:
 
-- **Frontend web:** publicación de la landing page y los archivos de la aplicación web en Netlify. El navegador del usuario ejecutará la aplicación y consultará la API por HTTPS.
-- **Aplicación móvil:** ejecución en el dispositivo Android del usuario. Firebase App Distribution se utilizará para distribuir versiones de prueba, y Firebase Cloud Messaging para la entrega de notificaciones push. La aplicación y su base de datos SQLite se ejecutarán localmente en el teléfono.
-- **Backend:** ejecución de AquaSave API en un contenedor Docker sobre Amazon ECS con Fargate. Los módulos del dominio y los procesos de entrega de eventos formarán parte de la misma aplicación desplegada.
-- **Persistencia:** almacenamiento principal en Amazon RDS para PostgreSQL. La base de datos se ubicará en una red privada accesible desde el backend, con credenciales administradas fuera del código fuente.
-- **Comunicación IoT:** uso de AWS IoT Core como broker MQTT. Cada dispositivo utilizará una identidad propia y permisos limitados a sus canales de telemetría, configuración y comandos.
-- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación y actuador. El firmware aplicará los límites de duración aun cuando no exista conexión con la nube.
-- **Servicios externos:** acceso desde el backend a autenticación, pagos, correo, clima y recomendaciones. Las credenciales de integración permanecerán en la infraestructura del servidor.
+- **Landing page:** publicación como sitio estático independiente, compuesto por archivos HTML, CSS, JavaScript y recursos visuales. Sus enlaces permiten continuar hacia las aplicaciones.
+- **Frontend web:** compilación de Flutter para web y publicación en Firebase Hosting mediante GitHub Actions. El navegador ejecuta la aplicación y consume la API por HTTPS.
+- **Aplicación móvil:** compilación de Flutter para Android y distribución de versiones de prueba mediante Firebase App Distribution. La aplicación se ejecuta en el teléfono y utiliza la misma API que el frontend web.
+- **Backend:** ejecución de la API Node.js con Express y TypeScript en Render. El servicio recibe las solicitudes de las aplicaciones y de la EdgeAPI, consulta PostgreSQL y expone la documentación OpenAPI mediante Swagger.
+- **Persistencia:** conexión del backend a PostgreSQL mediante la configuración del entorno. Los clientes acceden a la información a través de la API.
+- **EdgeAPI:** ejecución como servicio Node.js en Fly.io, utilizando el contenedor definido para ese componente. Mantiene la conexión MQTT, consulta los comandos pendientes del backend y expone una comprobación HTTP de salud para la plataforma de despliegue.
+- **Broker MQTT:** uso de HiveMQ Cloud para el intercambio de telemetría, estados, comandos y reconocimientos entre la EdgeAPI y el ESP32.
+- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación y actuador. El firmware obtiene las lecturas y ejecuta el control local del riego.
+- **Servicio climático:** consulta de Open-Meteo desde el backend mediante el adaptador de Irrigation Intelligence.
 
-El despliegue separa la exposición pública de las aplicaciones y la API del acceso privado a los datos. Las configuraciones y credenciales se administrarán por entorno, y los registros de operación permitirán relacionar solicitudes, comandos y resultados.
+La configuración permite administrar las direcciones de los servicios y los parámetros de conexión por entorno. La compilación y publicación de las aplicaciones web y Android se automatizan mediante los flujos de GitHub Actions definidos para cada producto.
 
-Ante una desconexión, la aplicación conservará el último estado confirmado con su fecha, sin presentar datos almacenados como actuales. El dispositivo aplicará su política local válida y sus condiciones de corte. Al restablecerse la comunicación, la plataforma actualizará los resultados pendientes y descartará los inicios vencidos, evitando repetir ciclos omitidos.
+La comunicación entre el dispositivo y la plataforma depende de la conexión con el broker y la EdgeAPI. Los límites locales de operación y las condiciones de recuperación se evaluarán mediante los escenarios de calidad definidos. Las integraciones posteriores de IA y servicios comerciales se incorporarán sin cambiar las tecnologías base de los clientes y la API.
 
 
 ---
