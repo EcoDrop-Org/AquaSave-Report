@@ -1001,13 +1001,13 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 Usuario: Usuario Principiante
 <div align="center">
 
-  <img src="image/Impact Map — Lucía Ramírez.png" alt="Diagrama" width="600">
+  <img src="image/Impact map 1.png" alt="Diagrama" width="600">
 
 </div>
 Usuario: Usuario Experto
 <div align="center">
 
-  <img src="image/Impact Map — Carlos Mendoza.png" alt="Diagrama" width="600">
+  <img src="image/Impact map 2.png" alt="Diagrama" width="600">
 
 </div>
 
