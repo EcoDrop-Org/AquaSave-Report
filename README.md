@@ -652,90 +652,103 @@ Las entrevistas se organizarán según los dos segmentos objetivo de AquaSave pa
 
 Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
-***Segmento 1: Usuarios principiantes:*** 
+**<u>Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas</u>** 
 
-Nombre: Gabriel Borja  
-Edad: 32  
-Ocupación: Diseñador gráfico  
-Distrito: Santiago de Surco, Lima  
-Timing: 0:00
+**Entrevista #1:**
 
-<p align="center">
-  <img src="image/entrevista1.png" alt="Entrevista1" width="1000">
-</p>
-
-Gabriel es un diseñador gráfico de 32 años que trabaja desde casa y utiliza el cuidado de su huerto como una actividad de relajo dentro de su rutina diaria. En su experiencia, dedica tiempo constante al mantenimiento de sus plantas, realizando tareas como riego, poda y control de plagas. Sin embargo, menciona que actualmente gestiona el riego de manera intuitiva, lo que le genera incertidumbre sobre si está aplicando la cantidad correcta de agua. Además, ha tenido problemas como el deterioro de sus plantas y un posible desperdicio de agua. Utiliza herramientas simples como alarmas en el celular, pero no ha encontrado una solución digital que realmente se adapte a sus necesidades. Muestra un alto interés en una solución que le permita monitorear la humedad del suelo en tiempo real y automatizar el riego, destacando la importancia de recibir alertas y contar con un historial para entender mejor el comportamiento de sus cultivos. También valora que el sistema sea fácil de instalar mediante guías claras.
-
-
-Nombre: Lukas Coronado  
-Edad: 28  
-Ocupación: Especialista en marketing digital  
-Distrito: Miraflores, Lima  
-Timing: 4:29  
+**Nombre:** Mariel Mendoza  
+**Edad:** 28  
+**Ocupación:** Universitaria, prácticas a medio tiempo  
+**Distrito:** Jesús María, Lima  
+**Inicio:** 00:06  
+**Fin:** 05:21  
 
 <p align="center">
-  <img src="image/entrevista2.png" alt="Entrevista2" width="1000">
+  <img src="image/entrevistas/entrevista1.png" alt="Entrevista1" width="1000">
 </p>
 
-Lukas es un profesional de marketing digital de 28 años que mantiene un huerto pequeño en el balcón de su departamento como hobby para desconectarse del trabajo. Su rutina de cuidado es sencilla pero constante, centrada en el riego y mantenimiento básico. Actualmente, gestiona el riego por rutina o intuición, sin contar con datos precisos, lo que le ha generado problemas como el crecimiento deficiente de sus plantas y desperdicio de agua. Aunque utiliza recordatorios en el celular, considera que las aplicaciones existentes no son suficientemente útiles ni personalizadas. Expresa interés en una solución que le brinde información real sobre el estado de sus plantas y que facilite la automatización del riego, especialmente en situaciones donde no se encuentra en casa. Valora la simplicidad, la facilidad de uso y la claridad de las alertas como factores clave para adoptar una nueva herramienta.
+**Resumen:** Mariel es una estudiante con una rutina muy variable que le dificulta mantener la constancia en el cuidado de sus plantas, llevándola muchas veces a ahogarlas (como a su menta) por no saber medir la cantidad de agua o distinguir si realmente la necesitan. Su principal dolor es el estrés y la dependencia de amigos para el riego cuando viaja o pasa todo el día fuera de casa, por lo que ve un inmenso valor en el control remoto y las alertas preventivas de AquaSave. Para adoptar el producto con confianza, necesita que la app le dé indicaciones directas sin tecnicismos, le confirme con notificaciones cada vez que el sistema automático actúe, y cuente con un kit de instalación sumamente intuitivo guiado por videos.
 
+**Entrevista #2:**
 
+**Nombre:** Gabriela Aliaga  
+**Edad:** 20  
+**Ocupación:** Universitaria  
+**Distrito:** Pueblo Libre, Lima  
+**Inicio:** 05:23  
+**Fin:** 10:54
 
-Nombre: Santiago Cárdenas  
-Edad: 22 
-Ocupación: Profesor  
-Distrito: Arequipa  
-Timing: 7:03
+<p align="center">
+  <img src="image/entrevistas/entrevista2.png" alt="Entrevista1" width="1000">
+</p>
+
+**Resumen:** Gabriela es una universitaria cuyos impredecibles horarios académicos y largas jornadas de estudio (especialmente en época de finales) le impiden establecer una rutina de riego, lo que la ha llevado a perder plantas, como su cactus, por exceso de riego basado en la pura intuición. Ella valora en AquaSave principalmente la capacidad de automatizar y controlar el riego desde el celular durante sus ausencias o viajes familiares, eliminando así su carga mental constante. Para confiar plenamente en el ecosistema, exige una aplicación que le hable de forma coloquial ("tu helecho necesita agua"), le confirme exactamente cuánta agua se suministró y que el dispositivo sea totalmente "a prueba de errores", armable solo con las manos y sin herramientas.
+
+**Entrevista #3:**
+
+**Nombre:** xd  
+**Edad:** xd  
+**Ocupación:** xd  
+**Distrito:** xd  
+**Inicio:** 00:00  
+**Fin:** 00:00
 
 <p align="center">
   <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-Santiago es una profesor de 22 años que mantiene un huerto en su jardín como actividad complementaria en su tiempo libre. Cuenta con experiencia en el cuidado de plantas y realiza tareas diarias como riego, abonado y control de plagas. Sin embargo, su gestión del riego se basa completamente en la experiencia, lo que en ocasiones genera errores debido a cambios climáticos o falta de información precisa. Ha enfrentado pérdidas de plantas tanto por exceso como por falta de agua. No utiliza herramientas tecnológicas para el cuidado de su huerto, lo que evidencia una oportunidad para soluciones intuitivas y accesibles. Muestra interés en una plataforma que le permita visualizar datos claros y recibir alertas que mejoren la toma de decisiones. También considera importante contar con apoyo en la instalación del sistema, lo que sugiere la necesidad de procesos guiados y simples.
+**Resumen:** xd
 
 
 
-***Segmento 2: Usuarios expertos:*** 
+**<u>Segmento objetivo #2: Usuarios expertos en el cuidado de plantas</u>**
 
-Nombre: Raul Bellido  
-Edad: 42  
-Ocupación: Agricultor y propietario  
-Distrito: Lurín, Lima  
-Timing: 9:52  
+**Entrevista #4:**
 
-<p align="center">
-  <img src="image/entrevista4.png" alt="Entrevista4" width="1000">
-</p>
-
-Raul es un agricultor de 42 años que gestiona una parcela de aproximadamente 3 hectáreas en Lurín, donde asume múltiples responsabilidades, incluyendo el riego y la supervisión del cultivo. Su jornada diaria está fuertemente influenciada por las labores de riego, las cuales consumen una gran cantidad de tiempo. Actualmente utiliza métodos tradicionales como riego por gravedad y toma decisiones basadas en la experiencia y observación directa del cultivo. Identifica como principales problemas la dificultad para optimizar el uso del agua y la necesidad de estar físicamente presente en la parcela para supervisar el riego. Aunque lleva algunos registros manuales, no cuenta con información precisa sobre el consumo hídrico. Muestra un alto interés en soluciones tecnológicas que le permitan monitorear el estado del suelo en tiempo real, recibir alertas y mejorar la eficiencia del riego, siempre que estas sean fáciles de usar e interpretar.
-
-
-
-Nombre: Santiago Suarez  
-Edad: 30  
-Ocupación: Encargado de cultivo  
-Distrito: Cusco  
-Timing: 13:32  
+**Nombre:** xd  
+**Edad:** xd  
+**Ocupación:** xd  
+**Distrito:** xd  
+**Inicio:** 00:00  
+**Fin:** 00:00
 
 <p align="center">
-  <img src="image/entrevista5.png" alt="Entrevista5" width="1000">
+  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-Santiago es un agricultor de 30 años que trabaja en una parcela de aproximadamente 2 hectáreas en Cusco, donde se encarga tanto del cultivo como del riego. Su trabajo es completamente manual y demanda gran parte de su tiempo diario. Gestiona el riego utilizando métodos tradicionales y toma decisiones basadas en su experiencia y observación del suelo. Ha enfrentado problemas relacionados con la pérdida o escasez de agua, lo que impacta directamente en la productividad de sus cultivos. No lleva registros detallados, lo que limita su capacidad de análisis y mejora continua. Muestra interés en una solución tecnológica que le permita acceder a información sin necesidad de estar físicamente en el campo, destacando la importancia de la simplicidad, la claridad de los datos y las alertas como elementos clave para su adopción.
+**Resumen:** xd
 
 
+**Entrevista #5:**
 
-Nombre: Werner Lang  
-Edad: 48  
-Ocupación: Agricultor  
-Distrito: Arequipa  
-Timing: 16:02  
+**Nombre:** xd  
+**Edad:** xd  
+**Ocupación:** xd  
+**Distrito:** xd  
+**Inicio:** 00:00  
+**Fin:** 00:00
 
 <p align="center">
-  <img src="image/entrevista6.png" alt="Entrevista6" width="1000">
+  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-Werner es un agricultor de 48 años que trabaja en una parcela de aproximadamente 4 hectáreas en Arequipa, donde se encarga de todas las actividades relacionadas con el cultivo. Su rutina es intensiva y está centrada en el trabajo manual, incluyendo el riego por gravedad. Su toma de decisiones se basa principalmente en la experiencia, lo que en ocasiones genera problemas debido a la falta de información precisa sobre las condiciones del suelo. Identifica como principal desafío la gestión eficiente del agua, ya que puede haber tanto escasez como exceso. No cuenta con registros formales ni herramientas tecnológicas que apoyen su trabajo. A pesar de ello, muestra apertura hacia una solución que sea simple, clara y fácil de usar, valorando especialmente la posibilidad de recibir alertas que le permitan tomar decisiones rápidas y mejorar la gestión del riego.
+**Resumen:** xd
+
+
+**Entrevista #6:**
+
+**Nombre:** xd  
+**Edad:** xd  
+**Ocupación:** xd  
+**Distrito:** xd  
+**Inicio:** 00:00  
+**Fin:** 00:00
+
+<p align="center">
+  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+</p>
+
+**Resumen:** xd
 
 
 #### 2.2.3. Análisis de entrevistas
