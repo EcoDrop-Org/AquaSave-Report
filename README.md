@@ -694,7 +694,7 @@ Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.shar
 **Fin:** 15:59
 
 <p align="center">
-  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+  <img src="image/EntrevistaA.png" alt="EntrevistaA" width="1000">
 </p>
 
 **Resumen:** Alfredo es un estudiante de Ingeniería de 22 años que cuida cinco plantas distribuidas entre su habitación, la sala y el balcón desde hace aproximadamente ocho meses. El cuidado de sus plantas forma parte de sus actividades nocturnas y de fin de semana, aunque reconoce que en ocasiones lo descuida debido a sus responsabilidades académicas. Ha aprendido principalmente mediante videos, búsquedas en internet y consejos de familiares con mayor experiencia.
@@ -717,7 +717,7 @@ Alfredo considera que AquaSave podría ayudarlo a comprobar la humedad antes de 
 **Fin:** 21:34
 
 <p align="center">
-  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+  <img src="image/EntrevistaE.png" alt="EntrevistaE" width="1000">
 </p>
 
 **Resumen:** Ernesto es un diseñador gráfico de 22 años que cuenta con aproximadamente siete años de experiencia en el cuidado de plantas. Actualmente mantiene cerca de dieciocho ejemplares, entre monsteras, potus, calatheas, cactus, suculentas y hierbas aromáticas, distribuidos en diferentes espacios de su vivienda según sus necesidades de iluminación.
@@ -737,7 +737,7 @@ Su principal dificultad consiste en recordar cuándo regó cada planta y determi
 **Fin:** 26:44
 
 <p align="center">
-  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+  <img src="image/EntrevistaS.png" alt="EntrevistaS" width="1000">
 </p>
 
 **Resumen:** Santiago es un profesor de 20 años que lleva aproximadamente cinco años cuidando plantas. Su colección está formada por cerca de veinticinco ejemplares, incluyendo orquídeas, helechos, begonias, cactus y hierbas aromáticas. Las distribuye entre el balcón y las ventanas de la sala de acuerdo con la cantidad de luz que requiere cada especie.
@@ -757,7 +757,7 @@ Santiago identifica como principal dificultad la variación de las necesidades d
 **Fin:** 32:18
 
 <p align="center">
-  <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
+  <img src="image/EntrevistaB.png" alt="EntrevistaB" width="1000">
 </p>
 
 **Resumen:** Gabriel Borja es un arquitecto de 23 años residente en Santiago de Surco que cuenta con aproximadamente ocho años de experiencia en el cuidado de plantas. Mantiene alrededor de veinte plantas de interior, suculentas y aromáticas distribuidas entre la sala, las ventanas y el balcón de su vivienda. Para decidir el riego considera la humedad del sustrato, la especie, la luz, el clima y el tamaño de la maceta; sin embargo, reconoce que supervisar varias plantas y recordar sus distintas rutinas puede ser complicado.
