@@ -657,7 +657,7 @@ Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.shar
 **Entrevista #1:**
 
 **Nombre:** Mariel Mendoza  
-**Edad:** 28  
+**Edad:** 28 años
 **Ocupación:** Universitaria, prácticas a medio tiempo  
 **Distrito:** Jesús María, Lima  
 **Inicio:** 00:06  
@@ -672,7 +672,7 @@ Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.shar
 **Entrevista #2:**
 
 **Nombre:** Gabriela Aliaga  
-**Edad:** 20  
+**Edad:** 20 años  
 **Ocupación:** Universitaria  
 **Distrito:** Pueblo Libre, Lima  
 **Inicio:** 05:23  
@@ -686,18 +686,22 @@ Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.shar
 
 **Entrevista #3:**
 
-**Nombre:** xd  
-**Edad:** xd  
-**Ocupación:** xd  
-**Distrito:** xd  
-**Inicio:** 00:00  
-**Fin:** 00:00
+**Nombre:** Alfredo Minaya  
+**Edad:** 22 años 
+**Ocupación:** Universitario   
+**Distrito:** San Miguel, Lima  
+**Inicio:** 10:55  
+**Fin:** 15:59
 
 <p align="center">
   <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-**Resumen:** xd
+**Resumen:** Alfredo es un estudiante de Ingeniería de 22 años que cuida cinco plantas distribuidas entre su habitación, la sala y el balcón desde hace aproximadamente ocho meses. El cuidado de sus plantas forma parte de sus actividades nocturnas y de fin de semana, aunque reconoce que en ocasiones lo descuida debido a sus responsabilidades académicas. Ha aprendido principalmente mediante videos, búsquedas en internet y consejos de familiares con mayor experiencia.
+
+Actualmente decide cuándo regar observando la superficie de la tierra, pero no utiliza una medida específica para determinar la cantidad de agua. Esta falta de precisión le genera dudas y ya ocasionó que regara en exceso una suculenta, cuyas hojas comenzaron a ponerse blandas. Utiliza una alarma semanal como recordatorio, aunque admite que puede ignorarla o regar cuando el sustrato todavía conserva humedad. Durante sus ausencias, suele regar antes de salir y solicitar ayuda a un familiar, pero tiene dificultades para brindar instrucciones diferentes para cada planta.
+
+Alfredo considera que AquaSave podría ayudarlo a comprobar la humedad antes de regar y supervisar sus plantas cuando se encuentre fuera de casa. Valora especialmente las alertas, las recomendaciones y el control del riego desde el celular. Sin embargo, siente cierta preocupación por el funcionamiento del riego automático, por lo que necesitaría configurar límites, recibir notificaciones y conservar la posibilidad de detenerlo. Asimismo, considera fundamental disponer de instrucciones visuales paso a paso y una confirmación que le indique que el sensor y el sistema de riego fueron instalados correctamente.
 
 
 
@@ -705,55 +709,65 @@ Las entrevistas están en un video en el siguiente URL: https://upcedupe-my.shar
 
 **Entrevista #4:**
 
-**Nombre:** xd  
-**Edad:** xd  
-**Ocupación:** xd  
-**Distrito:** xd  
-**Inicio:** 00:00  
-**Fin:** 00:00
+**Nombre:** Ernesto Rodas  
+**Edad:** 22 años  
+**Ocupación:** Diseñador gráfico  
+**Distrito:** San Miguel, Lima  
+**Inicio:** 16:03  
+**Fin:** 21:34
 
 <p align="center">
   <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-**Resumen:** xd
+**Resumen:** Ernesto es un diseñador gráfico de 22 años que cuenta con aproximadamente siete años de experiencia en el cuidado de plantas. Actualmente mantiene cerca de dieciocho ejemplares, entre monsteras, potus, calatheas, cactus, suculentas y hierbas aromáticas, distribuidos en diferentes espacios de su vivienda según sus necesidades de iluminación.
+
+Para decidir el riego considera la especie, el tamaño de la maceta, el tipo de sustrato, la temperatura y la exposición a la luz. También revisa la humedad de la tierra antes de regar. Como parte de su experiencia, menciona que redujo la frecuencia de riego de una monstera después de observar hojas amarillas y comprobó una mejora al permitir que el sustrato se secara durante más tiempo. Utiliza un medidor básico de humedad, alarmas y anotaciones para las plantas que requieren mayor seguimiento, aunque no mantiene un registro completo de toda su colección.
+
+Su principal dificultad consiste en recordar cuándo regó cada planta y determinar si un problema se relaciona con el agua, la iluminación o el sustrato. Considera que AquaSave sería especialmente útil durante sus ausencias y para comparar el comportamiento de las plantas mediante un historial. Le interesaría configurar los niveles de humedad, la duración del riego y las alertas, manteniendo bajo su control la activación del modo automático y la detención de los ciclos. Para considerar la adquisición del kit, espera que sea fácil de instalar, confiable, accesible y capaz de explicar las recomendaciones a partir de datos comprensibles.
 
 
 **Entrevista #5:**
 
-**Nombre:** xd  
-**Edad:** xd  
-**Ocupación:** xd  
-**Distrito:** xd  
-**Inicio:** 00:00  
-**Fin:** 00:00
+**Nombre:** Santiago Suarez   
+**Edad:** 20 años  
+**Ocupación:** Profesor    
+**Distrito:** Jesús María, Lima    
+**Inicio:** 21:37  
+**Fin:** 26:44
 
 <p align="center">
   <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-**Resumen:** xd
+**Resumen:** Santiago es un profesor de 20 años que lleva aproximadamente cinco años cuidando plantas. Su colección está formada por cerca de veinticinco ejemplares, incluyendo orquídeas, helechos, begonias, cactus y hierbas aromáticas. Las distribuye entre el balcón y las ventanas de la sala de acuerdo con la cantidad de luz que requiere cada especie.
+
+Para determinar el riego observa la humedad del sustrato, el estado de las hojas, el clima, el tipo de planta y el material de la maceta. Como parte de sus ajustes recientes, cambió el sustrato de unas begonias para mejorar el drenaje y redujo la cantidad de agua, evaluando el resultado mediante el estado de las hojas y las raíces. A diferencia de otros usuarios, utiliza una hoja de cálculo para registrar el riego y la fertilización, además de un medidor de humedad para sus plantas más delicadas.
+
+Santiago identifica como principal dificultad la variación de las necesidades de las plantas según la temporada y la detección oportuna del exceso de humedad. Durante sus ausencias utiliza recipientes de autorriego y solicita apoyo a un familiar, aunque considera importante conocer el último riego y recibir avisos ante condiciones anormales. AquaSave le resultaría útil para consultar lecturas durante viajes y comparar las condiciones actuales con registros anteriores. Valora la posibilidad de configurar límites de humedad, duración máxima del riego y alertas, manteniendo bajo su control la activación del modo automático. Para incorporar el kit a su rutina, espera mediciones confiables, una instalación sencilla, configuraciones diferentes para cada planta y poco mantenimiento.
 
 
 **Entrevista #6:**
 
-**Nombre:** xd  
-**Edad:** xd  
-**Ocupación:** xd  
-**Distrito:** xd  
-**Inicio:** 00:00  
-**Fin:** 00:00
+**Nombre:** Gabriel Borja  
+**Edad:** 23 años  
+**Ocupación:** Arquitecto  
+**Distrito:** Santiago de Surco, Lima  
+**Inicio:** 26:46  
+**Fin:** 32:18
 
 <p align="center">
   <img src="image/entrevista3.png" alt="Entrevista3" width="1000">
 </p>
 
-**Resumen:** xd
+**Resumen:** Gabriel Borja es un arquitecto de 23 años residente en Santiago de Surco que cuenta con aproximadamente ocho años de experiencia en el cuidado de plantas. Mantiene alrededor de veinte plantas de interior, suculentas y aromáticas distribuidas entre la sala, las ventanas y el balcón de su vivienda. Para decidir el riego considera la humedad del sustrato, la especie, la luz, el clima y el tamaño de la maceta; sin embargo, reconoce que supervisar varias plantas y recordar sus distintas rutinas puede ser complicado.
+
+Actualmente utiliza de forma ocasional registros en el celular y un medidor manual de humedad, pero no conserva un historial ordenado que le permita comparar resultados. Durante sus ausencias deja indicaciones a familiares, por lo que valora poder revisar a distancia la humedad actual, el último riego y las plantas que requieren atención. Muestra interés en AquaSave para consultar lecturas e historial, configurar límites de humedad, duración y horarios de riego, además de recibir alertas sobre condiciones críticas, desconexiones o ciclos no realizados. Consideraría adquirir el kit si ofrece lecturas confiables, control de varias plantas, configuración flexible y recomendaciones explicadas que mantengan al usuario como responsable de la decisión final.
 
 
 #### 2.2.3. Análisis de entrevistas
 
-En base en las entrevistas recopiladas para cada segmento, se llevó a cabo un análisis, el cual destaca los principales hallazgos y las conclusiones derivadas.
+A partir de los registros de las seis entrevistas, se identificaron los principales hábitos, dificultades y expectativas de los participantes respecto al cuidado de plantas domésticas. El análisis se organiza en dos segmentos, con tres entrevistados en cada uno. Los porcentajes describen únicamente las respuestas documentadas en esta muestra y no representan a todos los usuarios del mercado objetivo.
 
 ***Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas***
 
@@ -761,30 +775,29 @@ En base en las entrevistas recopiladas para cada segmento, se llevó a cabo un a
 
 | Característica | Hallazgos | Porcentaje |
 | :---- | :---- | :---- |
-| Gestión del Riego | El riego se realiza principalmente por intuición o rutinas fijas sin datos objetivos. | 100% |
-| Uso de Tecnología | Uso limitado de herramientas digitales; solo recordatorios básicos o ninguno. | 100% |
-| Problema Principal | Incertidumbre sobre la cantidad correcta de agua (exceso o falta). | 100% |
-| Consecuencias | Deterioro o pérdida de plantas y posible desperdicio de agua. | 100% |
-| Frecuencia de Cuidado | Dedicación constante pero no siempre suficiente o precisa. | 100% |
-| Interés en Automatización | Alta disposición a automatizar el riego para mayor control. | 100% |
-| Interés en Datos en Tiempo Real | Gran interés en conocer la humedad real del suelo. | 100% |
-| Barrera de Entrada | Temor o dificultad inicial en la instalación de tecnología. | 66% |
-| Valor Percibido | Buscan control, tranquilidad y mejor salud de sus plantas. | 100% |
-| Frecuencia de Uso Esperada | Revisarían la app constantemente o varias veces por semana. | 100% |
+| Organización del cuidado | Las responsabilidades académicas y los horarios variables dificultan mantener una rutina de cuidado constante. | 100% (3 de 3) |
+| Decisión de riego | Presentan dudas para determinar cuándo regar o qué cantidad de agua utilizar. | 100% (3 de 3) |
+| Problemas experimentados | Relatan episodios de exceso de riego asociados al deterioro o pérdida de plantas. | 100% (3 de 3) |
+| Cuidado durante ausencias | Valoran supervisar o controlar el riego desde el celular cuando no se encuentran en casa. | 100% (3 de 3) |
+| Claridad de la información | Necesitan mensajes sencillos que expliquen qué planta requiere atención y qué acción realizar. | 100% (3 de 3) |
+| Alertas y confirmaciones | Valoran recibir avisos sobre las necesidades de sus plantas o las acciones del sistema de riego. | 100% (3 de 3) |
+| Confianza en la automatización | Condicionan su confianza a poder comprobar el funcionamiento mediante notificaciones, información sobre el agua suministrada o límites de operación. | 100% (3 de 3) |
+| Instalación guiada | Solicitan instrucciones visuales, videos o pasos claros para instalar y configurar el kit. | 100% (3 de 3) |
+| Control manual de seguridad | Alfredo solicita expresamente establecer límites y poder detener el riego automático desde el celular. | 33,3% (1 de 3) |
+| Facilidad de montaje | Gabriela solicita expresamente un dispositivo que pueda armarse con las manos y sin herramientas. | 33,3% (1 de 3) |
 
 | Insights | Respaldo |
 | :---- | :---- |
-| El riego se basa en la intuición, no en datos. Esto genera errores constantes. | 100% menciona regar por intuición o rutina. |
-| Existe una necesidad clara de certeza y control sobre el estado del suelo. | Todos expresan inseguridad sobre si riegan bien. |
-| La tecnología es aceptada, pero debe ser simple y guiada. | 66% menciona necesidad de guía para instalación. |
-| El valor principal es reducir errores y mejorar el cuidado de las plantas. | Todos mencionan pérdidas o problemas por riego. |
+| El apoyo debe ayudar a decidir si corresponde regar, además de recordar la tarea. | Mariel, Gabriela y Alfredo describen dudas o errores por exceso de agua. Alfredo señala que una alarma puede llevarlo a regar aunque el sustrato siga húmedo. |
+| La supervisión remota puede reducir la incertidumbre durante las ausencias. | Los tres participantes valoran consultar o controlar el riego fuera de casa; Mariel y Alfredo también describen la dependencia de otras personas para el cuidado. |
+| La confianza requiere que el sistema explique sus acciones y permita comprobarlas. | Mariel solicita confirmaciones cuando actúa el riego automático; Gabriela quiere conocer el agua suministrada; Alfredo pide notificaciones, límites y posibilidad de detenerlo. |
+| La instalación y el lenguaje forman parte central de la experiencia del principiante. | Los tres solicitan orientación visual para la instalación y explicaciones comprensibles. Gabriela añade la preferencia por un montaje sin herramientas. |
 
 **Conclusiones:**
 
-Los horticultores urbanos gestionan el riego de sus plantas de manera empírica, basándose en la observación y la rutina, lo que genera incertidumbre y errores frecuentes. Aunque dedican tiempo al cuidado de sus cultivos, la falta de información objetiva limita su efectividad, provocando problemas como el deterioro de plantas y el desperdicio de agua.
+Los usuarios principiantes entrevistados necesitan apoyo para decidir cuándo regar y cuánta agua utilizar. Sus dificultades combinan la falta de experiencia con horarios variables, olvidos e interpretación imprecisa del estado del sustrato. Los episodios de exceso de riego muestran que un recordatorio por sí solo no resuelve la necesidad de comprender las condiciones de cada planta.
 
-Este segmento muestra una alta apertura hacia soluciones tecnológicas, siempre que estas sean simples, intuitivas y no requieran conocimientos técnicos avanzados. El principal valor que buscan es el control y la tranquilidad de saber que están regando correctamente. Por ello, una solución como AquaSave debe enfocarse en ofrecer monitoreo en tiempo real, alertas claras y automatización del riego, junto con una experiencia de instalación guiada y accesible que reduzca la fricción inicial.
-
+AquaSave debe facilitar la consulta de humedad, ofrecer alertas claras y presentar recomendaciones con acciones comprensibles. La automatización resulta atractiva para este grupo, especialmente durante sus ausencias, pero su aceptación depende de que puedan entender qué hace el sistema y conservar mecanismos de control. Una instalación guiada mediante imágenes o videos, junto con confirmaciones de configuración y funcionamiento, contribuiría a reducir la incertidumbre inicial.
 
 ***Segmento objetivo #2: Usuarios expertos en el cuidado de plantas***
 
@@ -792,29 +805,29 @@ Este segmento muestra una alta apertura hacia soluciones tecnológicas, siempre 
 
 | Característica | Hallazgos | Porcentaje |
 | :---- | :---- | :---- |
-| Método de Riego | Uso predominante de métodos tradicionales (gravedad, manguera). | 100% |
-| Toma de Decisiones | Basada en experiencia, observación del suelo y clima. | 100% |
-| Problema Principal | Dificultad para optimizar el uso del agua (exceso o escasez). | 100% |
-| Tiempo de Trabajo | El riego consume gran parte de la jornada diaria. | 100% |
-| Necesidad de Presencia | Requiere estar físicamente en la parcela para supervisar. | 100% |
-| Uso de Tecnología | Uso limitado o básico de tecnología (smartphone con conectividad irregular). | 100% |
-| Registro de Información | Registros manuales o inexistentes sobre riego y consumo. | 100% |
-| Interés en Monitoreo Remoto | Alto interés en controlar el riego sin estar en campo. | 100% |
-| Valor de Alertas | Necesidad de alertas simples y claras para decisiones rápidas. | 100% |
-| Preferencia de Solución | Debe ser económica, simple y fácil de usar. | 100% |
+| Experiencia de cuidado | Reportan entre cinco y ocho años de experiencia y mantienen colecciones de aproximadamente dieciocho a veinticinco plantas domésticas. | 100% (3 de 3) |
+| Toma de decisiones | Consideran la humedad del sustrato, el tipo de planta y las condiciones ambientales al decidir el riego. | 100% (3 de 3) |
+| Ajustes de la rutina | Describen cambios recientes en la frecuencia, cantidad de agua o sustrato y observan posteriormente la respuesta de las plantas. | 100% (3 de 3) |
+| Uso de sensores | Utilizan un medidor manual o básico de humedad como apoyo para el cuidado. | 100% (3 de 3) |
+| Registros parciales | Ernesto y Gabriel realizan anotaciones ocasionales o incompletas y dependen también de su memoria para el seguimiento. | 66,7% (2 de 3) |
+| Registro organizado | Santiago utiliza una hoja de cálculo para registrar el riego y la fertilización. | 33,3% (1 de 3) |
+| Monitoreo e historial | Valoran consultar las condiciones de sus plantas durante ausencias y comparar registros para evaluar sus rutinas. | 100% (3 de 3) |
+| Configuración y control | Solicitan ajustar límites de humedad y duración del riego, conservando decisiones sobre la automatización o la detención de los ciclos. | 100% (3 de 3) |
+| Alertas relevantes | Solicitan avisos ante humedad baja o excesiva, desconexiones y problemas en la ejecución del riego. | 100% (3 de 3) |
+| Condiciones de adopción | Consideran necesaria la confiabilidad de las lecturas o del sistema para incorporar AquaSave a su rutina. | 100% (3 de 3) |
 
 | Insights | Respaldo |
 | :---- | :---- |
-| La experiencia reemplaza a los datos, pero no es suficiente para optimizar el riego. | 100% decide en base a experiencia. |
-| El riego es una actividad costosa en tiempo y esfuerzo. | Todos mencionan que consume varias horas diarias. |
-| La falta de monitoreo remoto limita la eficiencia operativa. | 100% necesita estar presente en la parcela. |
-| La simplicidad es clave para la adopción tecnológica. | Todos enfatizan facilidad de uso y claridad. |
+| La solución debe complementar el criterio del usuario experto, no sustituirlo. | Los tres consideran múltiples factores al regar y solicitan configuraciones ajustables. Ernesto y Santiago quieren decidir cuándo habilitar la automatización; Gabriel enfatiza conservar la decisión final. |
+| El historial aporta valor al permitir evaluar ajustes, incluso cuando ya existen herramientas de seguimiento. | Ernesto y Gabriel reconocen registros incompletos. Santiago ya utiliza una hoja de cálculo, pero también valora comparar las condiciones actuales con registros anteriores. |
+| La supervisión remota debe mostrar tanto el estado de las plantas como los problemas del dispositivo. | Los tres quieren consultar información durante ausencias y recibir alertas de desconexión o fallos del riego, además de avisos sobre humedad. |
+| Las recomendaciones necesitan fundamentos comprensibles para resultar útiles. | Ernesto pide conocer los datos utilizados y las limitaciones; Santiago solicita lecturas, fecha y motivo; Gabriel requiere información contextual y una explicación de la decisión propuesta. |
 
 **Conclusiones:**
 
-Los micro-agricultores periurbanos dependen completamente de métodos tradicionales y de su experiencia para gestionar el riego, lo que genera ineficiencias en el uso del agua y un alto consumo de tiempo. La necesidad de supervisión constante limita su productividad y dificulta la toma de decisiones informadas.
+Los usuarios expertos entrevistados cuentan con experiencia práctica, adaptan sus rutinas a cada planta y utilizan medidores de humedad u otras herramientas de seguimiento. Sus dificultades se relacionan con organizar el cuidado de varias especies, reconocer cambios en sus necesidades y disponer de registros suficientes para evaluar los ajustes realizados. Por tanto, no se trata de introducir tecnología en una actividad sin herramientas, sino de integrar y facilitar información que actualmente consultan o registran de manera separada.
 
-Este segmento muestra una clara necesidad de tecnificación, pero enfrenta barreras relacionadas con el acceso, la simplicidad y la conectividad. Para que una solución como AquaSave sea viable, debe centrarse en ofrecer una experiencia extremadamente simple, con datos claros y accionables, alertas directas y una instalación sencilla. El valor principal radica en permitir el monitoreo remoto, reducir el esfuerzo operativo y mejorar la eficiencia del uso del agua sin requerir conocimientos técnicos avanzados.
+AquaSave debe priorizar lecturas confiables, historial por unidad de riego, supervisión remota y parámetros configurables. Las alertas deben informar tanto sobre condiciones de humedad como sobre desconexiones o problemas durante los ciclos. Las recomendaciones apoyadas por inteligencia artificial deberán explicar sus motivos y los datos utilizados, manteniendo al usuario en control de las decisiones. El interés expresado está condicionado a estas prestaciones y no constituye una decisión de compra confirmada.
 
 ### 2.3. Needfinding
 
