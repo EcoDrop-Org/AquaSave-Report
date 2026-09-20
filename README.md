@@ -1039,6 +1039,14 @@ Usuario: Usuario Experto
 
 ### 3.4. Product Backlog
 
+URL del Product Backlog: https://trello.com/b/tQbBo5rs
+
+<div align="center">
+
+  <img src="image/Trello.png" alt="Trello" width="1000">
+
+</div>
+
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:-----:|:-------------:|--------|-------------|:------------:|
 | 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
