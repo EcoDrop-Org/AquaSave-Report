@@ -43,8 +43,13 @@
 
 # Project Report Collaboration Insights
 
+AV1:
 
+<p align="center">
+  <img src="image/insightsav1.png" alt="insight" width="1000">
+</p>
 
+-------------------
 
 # Contenido
 
@@ -1046,6 +1051,9 @@ URL del Product Backlog: https://trello.com/b/tQbBo5rs
   <img src="image/Trello.png" alt="Trello" width="1000">
 
 </div>
+
+------
+
 
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:-----:|:-------------:|--------|-------------|:------------:|
