@@ -1739,12 +1739,6 @@ La comunicación entre el dispositivo y la plataforma depende de la conexión co
 
 5. El sistema conectado de AquaSave ya se encuentra operativo, con comunicación bidireccional funcional entre el dispositivo ESP32, la Edge API y el backend. Las mejoras futuras incluyen expansión a múltiples dispositivos por usuario, integración de sensores adicionales (pH, lluvia), algoritmos predictivos de riego basados en machine learning y un plan de suscripción para soportar la infraestructura cloud. Esta evolución permitirá escalar la solución y generar ahorro hídrico verificable para una base creciente de usuarios.
 
-### Video About-the-Team
-
-[![image.png](https://i.postimg.cc/c1P836FX/image.png)](https://postimg.cc/CdH1TMTq)
-
-Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
-
 ---
 
 ## Bibliografía
@@ -1761,4 +1755,4 @@ Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
 
 ## Anexos
 
-- Video de entrevistas: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- Video de entrevistas:[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ)
