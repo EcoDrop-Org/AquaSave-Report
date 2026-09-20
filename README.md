@@ -1657,7 +1657,7 @@ Los cinco bounded contexts orientan la organización del dominio. La implementac
 El System Landscape Diagram presenta la vista general de AquaSave. Permite identificar a los usuarios, los productos digitales, el dispositivo IoT y los servicios externos que intervienen en el monitoreo y control del riego.
 
 <p align="center">
-  <img src="image/System_Landscape_Diagram.png" alt="SLD" width="1000">
+  <img src="image/System_Landscape_Diagram.jpeg" alt="SLD" width="1000">
 </p>
 
 Los usuarios conocen la propuesta mediante la landing page y acceden a las aplicaciones web o móvil para consultar sus dispositivos, revisar lecturas y gestionar el riego. Ambas aplicaciones se comunican con la misma API, que concentra los casos de uso y el acceso a los datos.
@@ -1671,7 +1671,7 @@ Open-Meteo proporciona el pronóstico climático utilizado por Irrigation Intell
 El diagrama de contexto delimita AquaSave como un sistema y presenta sus relaciones con los usuarios, el entorno físico y los servicios externos. Esta vista permite comprender qué información intercambia la solución y de qué servicios depende.
 
 <p align="center">
-  <img src="image/Context_Level_Diagram.png" alt="CLD" width="1000">
+  <img src="image/Context_Level_Diagram.jpeg" alt="CLD" width="1000">
 </p>
 
 Los usuarios consultan las condiciones de sus plantas y solicitan operaciones desde las aplicaciones web y móvil. La plataforma administra sus cuentas, identifica los dispositivos asociados y proporciona acceso al historial de riego.
@@ -1685,7 +1685,7 @@ Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orien
 El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas y las responsabilidades de cada componente.
 
 <p align="center">
-  <img src="image/DiagramaContainerAquaSave.png" alt="ContainerDiagram" width="1000">
+  <img src="image/DiagramaContainerAquaSave.jpeg" alt="ContainerDiagram" width="1000">
 </p>
 
 La arquitectura se organiza en los siguientes contenedores:
@@ -1747,12 +1747,6 @@ La comunicación entre el dispositivo y la plataforma depende de la conexión co
 
 5. El sistema conectado de AquaSave ya se encuentra operativo, con comunicación bidireccional funcional entre el dispositivo ESP32, la Edge API y el backend. Las mejoras futuras incluyen expansión a múltiples dispositivos por usuario, integración de sensores adicionales (pH, lluvia), algoritmos predictivos de riego basados en machine learning y un plan de suscripción para soportar la infraestructura cloud. Esta evolución permitirá escalar la solución y generar ahorro hídrico verificable para una base creciente de usuarios.
 
-### Video About-the-Team
-
-[![image.png](https://i.postimg.cc/c1P836FX/image.png)](https://postimg.cc/CdH1TMTq)
-
-Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
-
 ---
 
 ## Bibliografía
@@ -1769,4 +1763,4 @@ Link del video: [https://goo.su/HSpvbAd](https://goo.su/HSpvbAd)
 
 ## Anexos
 
-- Video de entrevistas: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311334_upc_edu_pe/IQDzK0EKnZzBRI0KipOh-3IfASO4awboHbeUGCySeQEBNEw?e=T6AHSh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- Video de entrevistas:[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ)
