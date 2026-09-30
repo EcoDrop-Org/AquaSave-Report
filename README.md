@@ -1836,6 +1836,607 @@ La comunicación entre el dispositivo y la plataforma depende de la conexión co
 
 ---
 
+## Capítulo V: Tactical-Level Software Design
+
+Este capítulo desarrolla el diseño táctico de los cinco bounded contexts definidos para AquaSave: Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics. Para cada contexto se describen las responsabilidades de las capas Domain, Interface, Application e Infrastructure, junto con sus diagramas de componentes, clases y base de datos.
+
+La solución utiliza TypeScript con Node.js y Express para la API, PostgreSQL para la persistencia, Flutter con Dart para las aplicaciones web y Android, y un dispositivo ESP32 programado en C++ con Arduino. La comunicación MQTT se integra mediante EdgeAPI y HiveMQ Cloud. Estos componentes conservan los límites del dominio sin exigir que cada bounded context sea un microservicio independiente.
+
+Los diagramas presentan el modelo conceptual del contexto y sus posibilidades de extensión. La descripción de las capas diferencia los componentes existentes en el código de los contratos propuestos. Los nombres de clases, tipos y operaciones de los diagramas no implican el uso de otro lenguaje o framework. Monetization, la separación completa de Analytics y las recomendaciones apoyadas por IA se documentan como diseño previsto, no como módulos terminados.
+
+### 5.1. Bounded Context: Device Management
+
+Device Management administra los dispositivos asociados a una cuenta, su identificación, ubicación, configuración y última información recibida. Su responsabilidad es conocer qué equipo pertenece a cada usuario y qué datos están disponibles; la decisión de iniciar un ciclo corresponde a Irrigation Intelligence.
+
+#### 5.1.1. Domain Layer
+
+Esta capa encapsula la información del dispositivo doméstico y las reglas necesarias para interpretar su estado.
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `Device` | Representa un kit ESP32 mediante `id`, `accountId`, `name`, `location`, `status`, `firmwareVersion`, `isActive`, `plantCount`, `cropType`, `valveState`, `lastTelemetry`, `createdAt` y `updatedAt`. | Se vincula a una cuenta y permite actualizar sus datos. Las funciones `touchDevice` y `withEffectiveStatus` actualizan su fecha e interpretan su conexión según la vigencia de la telemetría. |
+| `SensorReading` | Contiene `deviceId`, `soilMoisturePct`, `temperatureC`, `humidityPct`, `pumpOn`, `flowRateLMin`, `batteryPct` y `recordedAt`, según la información recibida. | Se relaciona con un dispositivo. `normalizeReading` normaliza los valores antes de utilizarlos en la aplicación. |
+| `WaterValve` | Representa conceptualmente el actuador y su estado de apertura o cierre. | En la implementación base, su estado se mantiene en `Device.valveState` y se contrasta con `SensorReading.pumpOn`; no requiere una entidad persistida por separado. |
+
+**Value Objects:**
+
+- `GeoLocation`: agrupa la etiqueta de ubicación y las coordenadas utilizadas para consultar el pronóstico.
+- `DeviceStatus`: define los estados admitidos para representar la conectividad del kit.
+- `SoilMoistureLevel`: objeto conceptual para interpretar un porcentaje de humedad según la calibración y los límites configurados.
+- `FirmwareVersion`: identifica la versión del firmware reportada por el ESP32. Registrar una versión no implica disponer de actualización remota OTA.
+
+**Aggregates:**
+
+- `DeviceAggregate`: delimita la consistencia entre la identidad del kit, su cuenta, configuración, última lectura y estado del actuador. En el código base, esta responsabilidad se organiza alrededor del tipo `Device` y sus servicios, sin una clase adicional con ese nombre.
+- Una unidad puede agrupar plantas compatibles con una misma acción de riego. Tener varios nombres de plantas no significa que un solo sensor proporcione una lectura independiente para cada maceta.
+
+**Domain Services:**
+
+- La interpretación de conexión debe conservar la fecha del último contacto y distinguir un equipo sin conexión de una planta en condiciones normales.
+- La calibración y la clasificación de humedad se plantean como reglas explícitas, sin convertir valores desconocidos en mediciones válidas.
+- El cambio de nombre, ubicación o experiencia del usuario no transfiere la propiedad del dispositivo.
+
+**Repositories (Interfaces):**
+
+- `DeviceRepository`: define operaciones como `findById`, `findByAccountId`, `save`, `update`, `deleteById`, `updateStatus`, `recordTelemetry`, `updateValveState`, `getSettings` y `putSettings`.
+- El contrato evita que el dominio dependa de SQL, archivos JSON, HTTP o MQTT.
+
+#### 5.1.2. Interface Layer
+
+La API expone las operaciones de dispositivos mediante routers de Express. Los controladores del modelo conceptual se implementan como manejadores HTTP que validan entradas y delegan en los servicios de aplicación.
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createDeviceRouter` | `GET /api/devices`, `POST /api/devices` | Consultar los kits de la cuenta y registrar una asociación. |
+| Manejadores de dispositivo | `GET`, `PATCH` y `DELETE /api/devices/:deviceId` | Consultar, editar o desvincular un dispositivo autorizado. |
+| Manejadores de configuración | `GET` y `PUT /api/devices/:deviceId/settings` | Obtener y guardar los ajustes asociados al kit. |
+| Manejadores de activación | `POST /api/devices/:deviceId/pause` y `resume` | Solicitar pausa o reanudación de la operación del dispositivo. |
+| Interfaz interna de EdgeAPI | Recepción de telemetría y estado del equipo | Integrar mensajes del ESP32 a través de la comunicación entre EdgeAPI y backend. |
+
+La aplicación Flutter consulta la API mediante sus repositorios y fuentes de datos. No necesita publicar directamente en el broker ni conocer las credenciales MQTT del dispositivo.
+
+#### 5.1.3. Application Layer
+
+Esta capa coordina los casos de uso y verifica la asociación del recurso con la cuenta que realiza la solicitud.
+
+**Command Services:**
+
+- `PairDeviceService`: registra el dispositivo y lo asocia con la cuenta del usuario.
+- `UpdateDeviceService`: modifica nombre, ubicación y datos de la unidad autorizada.
+- `UnpairDeviceService`: desvincula el kit de la cuenta.
+- `RecordTelemetryService`: recibe y registra la lectura correspondiente al dispositivo.
+- `UpdateDeviceStatusService`: actualiza el estado reportado por la integración con EdgeAPI.
+
+**Query Services:**
+
+- `GetDeviceQuery`: obtiene un kit específico verificando la cuenta asociada.
+- `ListDevicesQuery`: devuelve los dispositivos de la cuenta para su selección en la aplicación.
+
+**Event Handlers:**
+
+- En EdgeAPI, `TelemetryEventHandler` y `StatusEventHandler` procesan los mensajes MQTT y los comunican a la API.
+- La publicación persistente de eventos y la deduplicación por identificador se mantienen como contratos de evolución del diseño. No se asume la existencia de un bus adicional por representar eventos en el modelo.
+
+#### 5.1.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgDeviceRepository`: implementa el contrato mediante PostgreSQL.
+- `FileDeviceRepository`: ofrece persistencia basada en archivos para los entornos que utilizan esa configuración.
+- La última telemetría se conserva en el campo JSONB `last_telemetry`; los ajustes se almacenan en `device_settings`.
+
+**External Services e integración IoT:**
+
+- `MqttBrokerClient`, en EdgeAPI, encapsula la conexión MQTT con HiveMQ Cloud.
+- `AquaSaveHttpClient`, en EdgeAPI, transmite la información al backend mediante HTTP.
+- El firmware ESP32 obtiene las lecturas y publica los mensajes. La recuperación de red y el control físico pertenecen al dispositivo y su integración, no a la interfaz Flutter.
+- Los almacenes de series temporales y la actualización OTA mostrados como extensiones del modelo no forman parte de la infraestructura base documentada.
+
+#### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama organiza la recepción de solicitudes, los servicios de dispositivos y los adaptadores de persistencia e integración. En la solución base, la comunicación con el broker se encapsula en EdgeAPI y la persistencia se realiza en PostgreSQL.
+
+<p align="center">
+  <img src="image/dc1.png" alt="Diagrama de componentes de Device Management" width="1000">
+</p>
+
+#### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo de clases relaciona el dispositivo con sus lecturas, estado del actuador y contratos. La cuenta identifica al propietario; la aplicación no mezcla lecturas o configuraciones entre kits.
+
+<p align="center">
+  <img src="image/DEVICE-MANAGEMENT.png" alt="Diagrama de clases de Device Management" width="1000">
+</p>
+
+##### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diagrama representa el diseño lógico de dispositivos y datos asociados. Su implementación base se concentra en las siguientes estructuras de PostgreSQL:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `devices` | `id` como PK; `account_id`, `name`, coordenadas, `status`, `valve_state`, `last_telemetry`, fechas. | Una cuenta puede asociar varios dispositivos. La autorización por `account_id` se verifica en los servicios; este campo no está declarado como FK en la migración base. |
+| `device_settings` | `device_id` como PK y FK; `settings` JSONB; `updated_at`. | Un registro de configuración por kit. La FK referencia `devices.id` y utiliza eliminación en cascada. |
+
+Las tablas separadas de lecturas, calibración, válvulas y actualizaciones representan una posible normalización del modelo; no se presentan como tablas ya creadas.
+
+<p align="center">
+  <img src="image/b1.png" alt="Diseño lógico de base de datos de Device Management" width="1000">
+</p>
+
+---
+
+### 5.2. Bounded Context: Irrigation Intelligence
+
+Irrigation Intelligence concentra los ciclos de riego, las reglas de humedad, la programación y la consideración del pronóstico. Su propósito es coordinar solicitudes de riego y conservar resultados que puedan ser consultados por el usuario.
+
+#### 5.2.1. Domain Layer
+
+Esta capa define las condiciones de una decisión de riego sin depender del proveedor climático, de Express o del broker MQTT.
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `IrrigationEvent` | Registra `id`, `deviceId`, `startedAt`, `endedAt`, `litersConsumed`, `triggerType`, `status`, `wasSkipped`, `skipReason`, `commandId` y lecturas disponibles. | Identifica el origen manual, automático o programado del ciclo y permite conservar su resultado por dispositivo. |
+| `WeatherForecast` | Contiene ubicación, coordenadas, temperatura, humedad, probabilidad de lluvia, precipitación, viento, condición, `retrievedAt` y `validUntil`. | Aporta información externa con una vigencia explícita; no reemplaza las lecturas del sustrato. |
+| `EdgeCommand` | Incluye `id`, `deviceId`, `type`, `status`, `issuedAt` y `acknowledgedAt`. | Representa una solicitud pendiente, confirmada o fallida en el contrato con el dispositivo. |
+| `IrrigationSchedule` | Modelo conceptual de días, hora, duración y habilitación de una evaluación programada. | En la base actual, sus ajustes forman parte de la configuración del dispositivo, sin una tabla independiente de horarios. |
+
+**Value Objects:**
+
+- `MoistureThreshold`: contiene humedad mínima, óptima y máxima. Su validación exige valores entre 0 y 100 y una relación ordenada entre los límites.
+- La duración del ciclo y el periodo de pausa deben interpretarse con unidades explícitas.
+- El motivo de omisión diferencia una decisión por humedad suficiente, una pausa y un fallo de operación.
+
+**Aggregates:**
+
+- El agregado de riego conserva la coherencia entre el dispositivo, la orden solicitada y el evento asociado. Un resultado de una unidad no puede atribuirse a otra.
+- Una orden aceptada y una ejecución física confirmada son estados distintos. La respuesta de la API no sustituye la confirmación del ESP32.
+
+**Domain Services:**
+
+- `IrrigationDecisionService`: evalúa telemetría, umbrales y pronóstico para devolver una decisión como iniciar, pausar o mantener detenido, junto con su motivo.
+- La política diseñada contempla límites de duración y cortes locales independientes de internet.
+- El uso del pronóstico debe considerar la exposición real de la unidad a la lluvia; las plantas protegidas no reciben el mismo beneficio que una planta exterior.
+
+**Repositories y Ports:**
+
+- `IrrigationEventRepository`: define `save`, `findByDeviceId`, `findRunningByDeviceId`, `findAllRunning` y `completeRunningEvent`.
+- `EdgeDeviceGateway`: define el envío de solicitudes de apertura, cierre, pausa y reanudación, además de la consulta de pendientes y su confirmación.
+- `WeatherIntegrationService`: permite obtener el pronóstico mediante un adaptador externo.
+
+#### 5.2.2. Interface Layer
+
+Los manejadores HTTP de Express reciben las solicitudes de las aplicaciones y delegan el control en los servicios.
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createIrrigationRouter` | `GET /api/irrigation/devices/:deviceId/state` | Consultar el estado de riego de una unidad autorizada. |
+| Manejadores de control | `POST /api/irrigation/devices/:deviceId/start` y `stop` | Solicitar el inicio o la detención; la API responde con aceptación de la solicitud. |
+| Manejador de eventos | `GET /api/irrigation/devices/:deviceId/events` | Consultar el historial correspondiente al dispositivo. |
+| `createWeatherRouter` | Rutas bajo `/api/weather` | Entregar información climática obtenida mediante el adaptador. |
+
+La interfaz de recomendaciones asistidas por IA se plantea dentro de este contexto. Cuando se implemente, deberá mostrar una propuesta con fundamento y permitir aceptarla o descartarla; no se describe como una integración ya disponible.
+
+#### 5.2.3. Application Layer
+
+**Command Services:**
+
+- `StartIrrigationService`: verifica el dispositivo de la cuenta, coordina la orden de apertura y registra el evento asociado.
+- `StopIrrigationService`: coordina la solicitud de cierre y el seguimiento del ciclo.
+- `ScheduledIrrigationService`: procesa la evaluación de los horarios configurados.
+- `SyncPumpStateService`: sincroniza la información recibida de la bomba con el estado y los eventos del riego.
+
+**Query Services:**
+
+- `GetIrrigationStateQuery`: obtiene el estado de control para la unidad consultada.
+- `ListIrrigationEventsQuery`: consulta los ciclos del dispositivo.
+- `GetWeatherForecastQuery`: coordina la consulta del pronóstico.
+
+**Event Handlers y recomendaciones propuestas:**
+
+- La recepción del estado de la bomba permite actualizar el seguimiento del ciclo.
+- El diseño de recomendaciones apoyadas por IA contempla registrar datos utilizados, explicación y vencimiento. La aceptación deberá volver a comprobar propiedad, lecturas y límites antes de generar una orden.
+- Los fallos del proveedor climático o del futuro servicio de IA no deben impedir la detención del riego.
+
+#### 5.2.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgIrrigationEventRepository` y `FileIrrigationEventRepository`: implementan el almacenamiento y consulta de eventos.
+- `PgEdgeDeviceGateway` y `FileEdgeDeviceGateway`: implementan el contrato de órdenes pendientes y confirmaciones según la configuración del entorno.
+
+**External Services:**
+
+- `OpenMeteoWeatherService`: adapta las respuestas de Open-Meteo al modelo del dominio.
+- `CommandDispatchService`, en EdgeAPI, coordina la distribución de órdenes hacia el broker y su comunicación con la API.
+- El adaptador de IA se mantiene pendiente. Su diseño no concede al modelo acceso directo a las credenciales o al canal de control físico.
+
+#### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama muestra la separación entre controladores, decisiones de riego, repositorios y el adaptador climático. El proveedor utilizado en la implementación base es Open-Meteo; el dominio no depende del nombre comercial de ese servicio.
+
+<p align="center">
+  <img src="image/dc2.png" alt="Diagrama de componentes de Irrigation Intelligence" width="1000">
+</p>
+
+#### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo relaciona ciclos, programación, umbrales y pronóstico. Los contratos del gateway separan la decisión de negocio de la publicación MQTT y permiten conocer el resultado de cada solicitud.
+
+<p align="center">
+  <img src="image/IRRIGATION-INTELLIGENCE.png" alt="Diagrama de clases de Irrigation Intelligence" width="1000">
+</p>
+
+##### 5.2.6.2. Bounded Context Database Design Diagram
+
+La estructura lógica organiza eventos, horarios y parámetros. En PostgreSQL, la base implementada utiliza las siguientes tablas:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `irrigation_events` | `id` como PK; `device_id`, inicio, fin, litros, origen, estado, motivo y `command_id`. | Un dispositivo puede tener varios eventos. El vínculo se valida en la aplicación; la migración base no declara una FK sobre `device_id`. |
+| `edge_commands` | `id` como PK; `device_id`, tipo, estado, emisión y confirmación. | Conserva el seguimiento de las solicitudes y un índice por dispositivo y estado. |
+| `device_settings` | `device_id` como PK y FK; `settings` JSONB. | Mantiene los ajustes de umbrales y programación asociados al kit. |
+
+El pronóstico se obtiene mediante el servicio externo. Las tablas específicas de horarios, pronósticos y pausas del diagrama representan el modelo lógico ampliado, no una migración adicional ya ejecutada.
+
+<p align="center">
+  <img src="image/b2.png" alt="Diseño lógico de base de datos de Irrigation Intelligence" width="1000">
+</p>
+
+---
+
+### 5.3. Bounded Context: Identity Access Management
+
+Identity Access Management administra cuentas, autenticación, sesiones y datos de perfil. La experiencia principiante o experta personaliza la orientación, pero no concede acceso a dispositivos de otras personas ni determina un plan comercial.
+
+#### 5.3.1. Domain Layer
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `User` | Contiene `id`, `email`, `passwordHash`, `profile`, `avatarUrl`, `phone`, `isActive`, `createdAt` y `lastLoginAt`. | Mantiene la identidad de la cuenta. `toPublicUser` excluye el hash de contraseña de la información pública. |
+| `UserProfile` | Agrupa nombre, datos de ubicación y condiciones registradas para personalizar la experiencia. | En el código base forma parte de `User.profile`, sin un repositorio independiente. |
+| `AppSession` | Incluye `id`, `token`, `userId`, `createdAt`, `expiresAt` y `revokedAt`. | Se relaciona con una cuenta. `isSessionValid` comprueba vencimiento y revocación. |
+
+**Value Objects:**
+
+- El correo debe conservar un formato válido y una identidad única en la cuenta.
+- La contraseña se procesa mediante el contrato de hash; no se almacena en texto plano ni se devuelve en la respuesta.
+- `ExperienceLevel` representa conceptualmente la preferencia principiante o experto. Su incorporación a los campos del perfil es una evolución del diseño, no un permiso de administración.
+
+**Aggregates:**
+
+- `UserAggregate`: organiza identidad y perfil alrededor de la cuenta. Su representación base es el tipo `User`.
+- Las sesiones se vinculan al usuario mediante su identificador, conservando vencimiento y revocación.
+
+**Domain Services:**
+
+- `PasswordHasher`: contrato para generar y verificar hashes.
+- `JwtService`: contrato para el manejo de los tokens utilizados por la autenticación.
+- El reconocimiento de una identidad externa de Google y los enlaces de recuperación pertenecen al diseño de las historias pendientes.
+
+**Repositories (Interfaces):**
+
+- `UserRepository`: permite `findById`, `findByEmail`, `save`, `updateLastLogin`, `updateProfile` y `updatePassword`.
+- `SessionRepository`: permite `save`, `findByToken` y `revokeByToken`.
+
+#### 5.3.2. Interface Layer
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createAuthRouter` | `POST /api/auth/register` y `login` | Validar los datos y solicitar registro o autenticación. |
+| Manejador de cierre | `POST /api/auth/logout` | Solicitar la revocación de la sesión. |
+| Manejadores de perfil | `GET` y `PATCH /api/auth/me` | Consultar o actualizar los datos del usuario autenticado. |
+| Manejador de contraseña | `POST /api/auth/change-password` | Verificar la contraseña actual antes de solicitar su cambio. |
+
+La validación de entradas se realiza mediante los esquemas de la API y el middleware de autenticación. El frontend muestra mensajes de corrección y conserva la navegación de acceso separada de las pantallas operativas.
+
+#### 5.3.3. Application Layer
+
+**Command Services:**
+
+- `RegisterUserService`: comprueba el correo, procesa la contraseña y crea la cuenta.
+- `LoginUserService`: verifica credenciales y genera la sesión.
+- `LogoutUserService`: revoca la sesión indicada.
+- La actualización del perfil y el cambio de contraseña se coordinan desde los manejadores con los contratos de repositorio y hash existentes.
+
+**Query Services:**
+
+- `AuthenticateSessionService`: valida la sesión utilizada para acceder a recursos protegidos.
+- `GetCurrentUserQuery`: obtiene los datos de la cuenta autenticada.
+
+**Event Handlers y extensiones propuestas:**
+
+- El registro y el acceso permiten actualizar la información de cuenta y el último inicio de sesión.
+- La recuperación por correo y el acceso con Google se incorporarán mediante adaptadores específicos cuando se implementen sus historias.
+- Cambiar el nivel de experiencia no debe generar una suscripción, transferir dispositivos o alterar políticas de riego aprobadas.
+
+#### 5.3.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgUserRepository` y `PgSessionRepository`: implementan la persistencia en PostgreSQL.
+- `FileUserRepository` y `FileSessionRepository`: ofrecen los adaptadores basados en archivos.
+- La sesión se consulta y revoca mediante su repositorio. Redis no es una dependencia de la implementación base.
+
+**External Services:**
+
+- Los adaptadores de autenticación externa y envío de enlaces se mantienen como extensiones previstas.
+- La base actual no se presenta como una integración terminada con Google OAuth o un proveedor de correos.
+
+#### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama organiza el ingreso de credenciales, la gestión de usuarios y sesiones, y los servicios externos previstos. Los routers de Express y PostgreSQL constituyen la base actual; los servicios externos del modelo no son obligatorios para el acceso con correo y contraseña.
+
+<p align="center">
+  <img src="image/dc3.png" alt="Diagrama de componentes de Identity Access Management" width="1000">
+</p>
+
+#### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+Las relaciones permiten identificar la cuenta, su perfil y sus sesiones. La personalización por experiencia se mantiene separada de la autorización de recursos.
+
+<p align="center">
+  <img src="image/ACCESS.png" alt="Diagrama de clases de Identity Access Management" width="1000">
+</p>
+
+##### 5.3.6.2. Bounded Context Database Design Diagram
+
+El diseño lógico contempla usuarios, perfiles, sesiones y recuperación. La implementación física base utiliza:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `users` | `id` como PK; `email` único; `password_hash`, nombre, campos de perfil, estado y fechas. | El perfil se almacena dentro de esta tabla; no hay una tabla adicional de perfiles en la migración base. |
+| `sessions` | `id` como PK; `token` único; `user_id` como FK; creación, vencimiento y revocación. | Una cuenta puede tener varias sesiones. `user_id` referencia `users.id`. |
+
+La tabla de enlaces de recuperación y la separación de perfiles quedan como extensiones. La preferencia principiante o experto deberá mantenerse independiente de la propiedad de los dispositivos.
+
+<p align="center">
+  <img src="image/b3.png" alt="Diseño lógico de base de datos de Identity Access Management" width="1000">
+</p>
+
+---
+
+### 5.4. Bounded Context: Monetization
+
+Monetization define el modelo previsto para consultar planes y gestionar prestaciones opcionales. Este contexto se conserva en el diseño de AquaSave, pero la implementación base revisada no contiene un módulo de facturación operativo.
+
+#### 5.4.1. Domain Layer
+
+**Entities propuestas:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `Subscription` | Incluye `subscriptionId`, `userId`, `planType`, `status`, `startDate`, `endDate`, `renewalDate` y `autoRenew`. | Representa la vigencia de las prestaciones elegidas y permite consultar, activar o cancelar una suscripción verificada. |
+| `PaymentMethod` | Conserva identificador, usuario, tipo, últimos dígitos, vencimiento y referencia tokenizada del proveedor. | Permite identificar un medio de pago sin almacenar el número completo de tarjeta ni el código de seguridad. |
+| `PaymentTransaction` | Contiene identificador, suscripción, importe, moneda, estado, fecha y referencia externa. | Registra el resultado de una operación sin duplicarlo ante una nueva entrega de la confirmación. |
+
+**Value Objects:**
+
+- `PlanType`: identifica un plan y sus prestaciones aprobadas. Las denominaciones Free y Premium del modelo son alternativas de diseño; no fijan precios o condiciones comerciales.
+- `SubscriptionStatus`: diferencia estados activos, cancelados, vencidos o pendientes de regularización.
+- `Money`: agrupa importe y moneda con una representación decimal consistente.
+
+**Aggregates:**
+
+- `SubscriptionAggregate`: mantiene las transiciones de la suscripción y las referencias de sus operaciones comerciales.
+- La confirmación de pago debe aplicarse una sola vez. Un reintento no genera otra vigencia o un cargo duplicado.
+
+**Domain Services:**
+
+- `ISubscriptionPolicyService`: establece cambios de plan, vigencia y prestaciones opcionales.
+- `IBillingService`: define el contrato de procesamiento comercial.
+- Ninguna política comercial impide detener el riego o modifica los límites locales de un ciclo en curso.
+
+**Repositories (Interfaces):**
+
+- `ISubscriptionRepository`: consulta por usuario y guarda cambios de estado.
+- `IPaymentTransactionRepository`: conserva operaciones y referencias únicas del proveedor.
+
+#### 5.4.2. Interface Layer
+
+**Controllers propuestos:**
+
+- `PlanController`: consulta la comparación de planes bajo una interfaz prevista como `/api/plans`.
+- `SubscriptionController`: consulta y gestiona suscripciones bajo `/api/subscriptions`.
+- `PaymentController`: coordina las operaciones verificadas del proveedor bajo `/api/payments`.
+
+Estas rutas son contratos propuestos; no se incluyen como endpoints existentes. Cuando se implementen, utilizarán manejadores de Express, autenticación y validación de las confirmaciones externas.
+
+#### 5.4.3. Application Layer
+
+**Command Services propuestos:**
+
+- `InitializePremiumCheckoutCommandService`: inicia una operación de contratación en un entorno de prueba del proveedor seleccionado.
+- `ConfirmSubscriptionCommandService`: aplica una confirmación verificada de forma idempotente.
+- `CancelSubscriptionCommandService`: registra la cancelación según las condiciones de vigencia.
+- `ProcessRecurringBillingCommandService`: coordina renovaciones únicamente si esa modalidad fue aprobada y aceptada por el usuario.
+
+**Query Services:**
+
+- `SubscriptionStatusQueryService`: obtiene estado, vigencia y prestaciones de la suscripción.
+- `PaymentHistoryQueryService`: consulta las operaciones de la cuenta.
+
+**Event Handlers:**
+
+- `SubscriptionConfirmedEventHandler`: actualiza las prestaciones opcionales tras una confirmación válida.
+- `RecurringBillingFailedEventHandler`: registra el resultado y comunica la condición al usuario.
+- `SubscriptionCancelledEventHandler`: actualiza la vigencia sin intervenir en el control físico.
+
+#### 5.4.4. Infrastructure Layer
+
+**Persistence / Repositories propuestos:**
+
+- `PostgresSubscriptionRepository`: implementará el almacenamiento de suscripciones con consultas por usuario y estado.
+- `PostgresPaymentTransactionRepository`: conservará referencias externas únicas y resultados de cada operación.
+
+**External Services:**
+
+- `StripePaymentService`: representa el adaptador de pagos del modelo conceptual. Su utilización requiere seleccionar y configurar el proveedor; no se presenta como una integración ya realizada.
+- `BillingSchedulerService`: representa la coordinación de renovaciones previstas.
+- Las credenciales y confirmaciones del proveedor se resolverán en el backend, no en el código público de Flutter.
+
+#### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama presenta el diseño de los controladores, servicios de suscripción, repositorios y adaptador comercial. Es una vista de la capacidad propuesta, no una evidencia de cobros implementados.
+
+<p align="center">
+  <img src="image/dc4.png" alt="Diagrama de componentes propuesto para Monetization" width="1000">
+</p>
+
+#### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo relaciona suscripciones, medios de pago y transacciones, manteniendo la identidad de la cuenta como referencia externa al contexto.
+
+<p align="center">
+  <img src="image/MONETIZATION.png" alt="Diagrama de clases propuesto para Monetization" width="1000">
+</p>
+
+##### 5.4.6.2. Bounded Context Database Design Diagram
+
+El diseño propone `subscriptions`, `payment_methods`, `payment_transactions` y `billing_grace_periods`. Una suscripción puede asociar varias transacciones; cada registro conserva una PK y las referencias necesarias para su trazabilidad.
+
+La implementación deberá establecer FKs internas, unicidad de referencias de pago y precisión decimal para importes. Las referencias a usuarios respetarán los límites del contexto. Estas tablas no forman parte de las migraciones base actuales.
+
+<p align="center">
+  <img src="image/b4.png" alt="Diseño lógico de base de datos propuesto para Monetization" width="1000">
+</p>
+
+---
+
+### 5.5. Bounded Context: Analytics
+
+Analytics organiza el diseño de las consultas históricas, los indicadores de consumo y las comparaciones por periodo. Su responsabilidad es explicar los registros de las unidades, sin modificar órdenes o políticas de riego.
+
+La implementación base contiene consultas agregadas dentro de Irrigation Intelligence y pantallas de Análisis e Historial en Flutter. La separación en un módulo Analytics con repositorios propios se mantiene como evolución prevista.
+
+#### 5.5.1. Domain Layer
+
+**Entities propuestas:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `WaterSavingsMetric` | Contiene identificador, dispositivo, usuario, periodo, consumo, variación, porcentaje y fecha de cálculo. | Compara periodos o una línea base válida, conservando el método utilizado. |
+| `CropHealthReport` | Agrupa periodo, humedad y temperatura disponibles, número de ciclos e indicadores definidos. | Resume condiciones registradas; no constituye un diagnóstico de salud de la planta. |
+| `SustainabilitySummary` | Consolida resultados por dispositivo y periodo. | Presenta consumo y comparaciones que puedan sustentarse con los datos disponibles. |
+
+**Value Objects:**
+
+- `SavingsPeriod`: delimita fechas de análisis diario, semanal o mensual.
+- `WaterVolume`: representa una cantidad con su unidad y método de obtención.
+- `HealthScore`: indicador conceptual cuya fórmula y alcance deben documentarse antes de utilizarlo.
+
+**Aggregates:**
+
+- `AnalyticsAggregate`: organiza proyecciones por unidad y periodo, manteniendo su procedencia y fecha de cálculo.
+- Los resultados de distintos dispositivos no se mezclan sin indicar el criterio de agrupación.
+
+**Domain Services:**
+
+- `IWaterSavingsCalculationService`: calcula variaciones respecto de una referencia positiva y comparable. Sin una referencia válida no se informa ahorro.
+- `ICropHealthScoringService`: define indicadores de seguimiento, sin atribuir enfermedades o causas que los sensores no pueden demostrar.
+- El modelo no convierte una ausencia de datos en un consumo real igual a cero.
+
+**Repositories (Interfaces):**
+
+- `IWaterSavingsMetricRepository`: permite guardar y consultar métricas por dispositivo y periodo.
+- `ICropHealthReportRepository`: define consultas de resúmenes históricos.
+
+#### 5.5.2. Interface Layer
+
+**Interfaz existente:**
+
+- `GET /api/irrigation/analytics`: proporciona indicadores y agregaciones de eventos completados, con filtro opcional por dispositivo.
+- Las aplicaciones Flutter consumen estos resultados y consultan el historial mediante la interfaz de eventos.
+
+**Controllers propuestos:**
+
+- `WaterSavingsController`: consulta métricas y comparaciones.
+- `CropReportController`: entrega resúmenes de seguimiento.
+- `SustainabilityController`: organiza las consultas consolidadas del modelo conceptual.
+
+La futura interfaz bajo `/api/analytics` se describe como contrato de diseño, no como un conjunto de rutas ya implementadas.
+
+#### 5.5.3. Application Layer
+
+**Command Services propuestos:**
+
+- `CalculateWaterSavingsCommandService`: coordina agregaciones y comparaciones a partir de ciclos registrados.
+- `GenerateWeeklyCropReportCommandService`: prepara un resumen por unidad y semana.
+- `DeliverMonthlySustainabilitySummaryCommandService`: consolida resultados documentados por periodo.
+
+**Query Services:**
+
+- `WaterSavingsDashboardQueryService`: organiza consumo y comparaciones para el dashboard.
+- Las consultas del historial permiten revisar fecha, origen, duración y resultado del ciclo, sin reconstruir un cierre no confirmado.
+
+**Event Handlers:**
+
+- `WaterSavingsMetricCalculatedEventHandler`: actualiza la proyección consultada por las aplicaciones.
+- El consumo de eventos persistentes e idempotentes se mantiene como parte del diseño de integración. Los consumidores no deben ejecutar nuevamente el riego.
+
+#### 5.5.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- La base actual consulta los registros de `irrigation_events` mediante sus repositorios.
+- `PostgresWaterSavingsRepository` y `PostgresCropHealthReportRepository` representan la persistencia propia propuesta para Analytics.
+- Los índices por dispositivo y periodo facilitarán consultas sin incorporar una base de datos distinta por obligación.
+
+**External Services:**
+
+- `AnalyticsSchedulerService`: representa la coordinación prevista de cálculos periódicos.
+- La presentación de gráficos corresponde al frontend Flutter.
+- La entrega de resúmenes o avisos fuera de la aplicación requiere una integración adicional; no se afirma que exista un servicio push implementado.
+
+#### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama separa la consulta de indicadores, los cálculos y los adaptadores de almacenamiento. La arquitectura permite evolucionar las agregaciones actuales hacia el contexto sin trasladar a Analytics el control del dispositivo.
+
+<p align="center">
+  <img src="image/dc5.png" alt="Diagrama de componentes propuesto para Analytics" width="1000">
+</p>
+
+#### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo de clases organiza métricas y reportes por unidad. Cada comparación debe conservar su periodo y la referencia utilizada.
+
+<p align="center">
+  <img src="image/ANALYTICS.png" alt="Diagrama de clases propuesto para Analytics" width="1000">
+</p>
+
+##### 5.5.6.2. Bounded Context Database Design Diagram
+
+El diagrama propone `water_savings_metrics`, `crop_health_reports` y `sustainability_summaries`. Cada registro posee una PK y referencias al dispositivo, al usuario o a la métrica correspondiente.
+
+Antes de implementar estas tablas se definirán relaciones internas, unicidad por unidad y periodo, cobertura de datos y fórmulas de comparación. Los campos de equivalencia de CO₂ o ahorro económico del modelo requieren factores y costos documentados; no representan resultados demostrados ni métricas disponibles en la base actual.
+
+<p align="center">
+  <img src="image/b5.png" alt="Diseño lógico de base de datos propuesto para Analytics" width="1000">
+</p>
+
+---
+
 ## Conclusiones
 
 ### Conclusiones y recomendaciones
