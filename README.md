@@ -2436,6 +2436,481 @@ Antes de implementar estas tablas se definirán relaciones internas, unicidad po
 </p>
 
 ---
+## Capítulo VI: Solution UX Design
+
+Este capítulo presenta los lineamientos visuales, la arquitectura de información y el diseño de interacción de AquaSave. La experiencia se orienta a usuarios principiantes y expertos en el cuidado de plantas domésticas, manteniendo una estructura común para consultar lecturas, gestionar unidades y controlar el riego.
+
+La aplicación web y la aplicación Android se desarrollan con Flutter y Dart. El diseño utiliza los componentes y estilos del frontend como base, mientras que los wireframes representan la organización propuesta de las pantallas y sus recorridos. Los valores, nombres y porcentajes visibles en las imágenes son ejemplos de diseño, no resultados de pruebas o mediciones del producto.
+
+### 6.1. Style Guidelines
+
+Los lineamientos de estilo buscan transmitir claridad, confianza y cuidado responsable de las plantas. La identidad visual utiliza tonos naturales, tarjetas con información jerarquizada y acciones reconocibles, evitando que el usuario necesite interpretar detalles técnicos para conocer el estado de su unidad.
+
+#### 6.1.1. General Style Guidelines
+
+**Branding y concepto visual**
+
+AquaSave relaciona el cuidado de plantas con la tecnología de monitoreo y riego. Su logotipo combina la identidad del producto con elementos asociados al agua y al crecimiento vegetal. La marca se mantiene visible en la landing page, el acceso a la aplicación y la navegación principal.
+
+Las tarjetas permiten agrupar información de humedad, clima, conexión y riego. Los controles se distinguen de los datos informativos para que el usuario pueda reconocer qué está consultando y qué acción está por solicitar.
+
+<p align="center">
+  <img src="image/General_Style_Guidelines.png" alt="Guía visual general de AquaSave" width="1000">
+</p>
+
+**Tipografía y legibilidad**
+
+El frontend define sus estilos en `AppTextStyles`. La familia Manrope se utiliza para encabezados y títulos, mientras que Inter se emplea en el contenido, las etiquetas y los controles.
+
+| Uso | Fuente | Tamaños base | Peso habitual | Propósito |
+| :--- | :--- | :--- | :--- | :--- |
+| Títulos destacados | Manrope | 26, 30 y 44 | 800 | Presentar el nombre de una vista o un bloque principal. |
+| Encabezados | Manrope | 20, 24 y 28 | 800 | Organizar secciones y tarjetas. |
+| Títulos de contenido | Inter | 15, 17 y 19 | 700 | Identificar elementos y métricas. |
+| Texto de cuerpo | Inter | 14, 16 y 19 | 500 | Explicar estados, instrucciones y resultados. |
+| Etiquetas | Inter | 11.5, 13 y 13.5 | 700 | Identificar campos, acciones y datos secundarios. |
+
+Los valores de humedad y temperatura deben mostrarse junto con su unidad. La fecha de la lectura y la condición de conexión se conservan cerca del dato para evitar que un valor antiguo se interprete como actual.
+
+**Paleta de colores**
+
+Los tokens de color se centralizan en `AppColors`. El modo claro utiliza fondos suaves y verdes para las acciones principales. El modo oscuro conserva esa identidad mediante superficies oscuras y textos claros.
+
+| Token visual | Color base | Uso |
+| :--- | :--- | :--- |
+| `lightBackground` | `#F3F7EF` | Fondo principal del modo claro. |
+| `lightSurface` | `#EAF3E5` | Superficies y agrupaciones de contenido. |
+| `lightPrimary` | `#497654` | Acciones principales e indicadores seleccionados. |
+| `lightCard` | `#F8FBF4` | Tarjetas de información. |
+| `lightText` | `#2D3D2C` | Texto principal. |
+| `lightDivider` | `#D9E2D3` | Bordes y separadores. |
+| `secondary` | `#FE5C73` | Acento y señales de atención según el componente. |
+| `darkBackground` | `#0F1A18` | Fondo principal del modo oscuro. |
+| `darkSurface` | `#162421` | Superficies del modo oscuro. |
+| `darkCard` | `#1D2E2A` | Tarjetas del modo oscuro. |
+| `darkPrimary` | `#7FD09E` | Acciones principales del modo oscuro. |
+| `darkText` | `#E7EFE9` | Texto principal del modo oscuro. |
+
+La lámina resume la identidad visual de la marca; los valores de esta tabla corresponden a los tokens del frontend. Los estados también deben incluir texto e iconos, de modo que una alerta o una desconexión no dependan únicamente del color.
+
+**Espaciado, bordes y retícula**
+
+`AppDimensions` define una escala de espaciado consistente para relacionar controles y separar secciones.
+
+| Token | Valor base | Uso |
+| :--- | :--- | :--- |
+| `spaceXs` | 8 | Separación mínima entre elementos relacionados. |
+| `spaceSm` | 14 | Separación entre campos y controles. |
+| `spaceMd` | 20 | Espacio entre bloques de contenido. |
+| `spaceLg` | 28 | Márgenes y relleno de secciones principales. |
+| `spaceXl` | 39 | Separación amplia entre grupos. |
+| Radio de campos | 14 | Bordes de entradas y controles. |
+| Radio de tarjetas | 20 | Contenedores de información. |
+| Radio de bloques destacados | 24 | Tarjetas principales o de presentación. |
+| `inputHeight` y `buttonHeight` | 57 | Altura base de los componentes definidos por la aplicación. |
+| `sidebarWidth` | 236 | Ancho de la navegación lateral. |
+
+Los valores se expresan como unidades lógicas de Flutter y se adaptan al tamaño disponible. El tema base de los botones utiliza una altura mínima de 52 unidades; los componentes específicos pueden utilizar el token de 57.
+
+**Componentes y estados visuales**
+
+- **Botones primarios:** destacan la acción principal del formulario o la pantalla.
+- **Botones secundarios:** permiten cancelar, regresar o consultar detalles sin competir con la acción principal.
+- **Campos de entrada:** mantienen una etiqueta visible, ayuda cuando corresponde y un mensaje próximo al campo si ocurre un error.
+- **Switches y controles de rango:** muestran el valor seleccionado y explican qué configuración se está modificando.
+- **Tarjetas:** agrupan información por dispositivo o propósito y utilizan bordes redondeados, con elevación baja o nula según el componente.
+- **Estados de carga y error:** informan si se está consultando información, si la operación no pudo completarse o si es posible reintentar.
+- **Estados de riego:** diferencian una solicitud enviada del estado reportado por el dispositivo.
+
+**Tono de comunicación**
+
+La comunicación debe ser cercana, respetuosa y directa. Para un principiante, se prioriza explicar qué sucede y cuál es el siguiente paso; para un experto, se permite consultar parámetros y detalles adicionales sin cambiar sus permisos.
+
+| Dimensión | Lineamiento | Ejemplo |
+| :--- | :--- | :--- |
+| Formalidad | Lenguaje cotidiano sin perder precisión. | “Revisa la conexión del dispositivo.” |
+| Humor | Tono principalmente serio en alertas y control. | Evitar bromas ante un fallo del riego. |
+| Respeto | No responsabilizar al usuario por un error. | “Revisa los valores antes de guardar.” |
+| Entusiasmo | Moderado, especialmente en confirmaciones. | “Configuración guardada.” |
+
+Las recomendaciones se presentan como apoyo y no como instrucciones infalibles. Cuando falten datos, el mensaje debe explicar la limitación sin afirmar que la planta está en buen estado.
+
+**Inclusión y accesibilidad**
+
+El diseño contempla textos comprensibles, tamaño legible, estados identificados por texto e iconos y navegación con foco reconocible. Los formularios deben permitir corregir errores sin perder información válida. Estas pautas son criterios de diseño que se verificarán durante la implementación y las pruebas; no equivalen a una certificación de accesibilidad ya obtenida.
+
+#### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+**Web Style Guidelines**
+
+La aplicación Flutter Web utiliza Material Design 3 y una estructura adaptativa. En pantallas amplias, la barra lateral permite cambiar de sección sin perder el contexto de la vista.
+
+| Elemento | Lineamiento |
+| :--- | :--- |
+| Navegación | Sidebar con logotipo, iconos y sección seleccionada. |
+| Layout | Tarjetas distribuidas en columnas según el ancho disponible. |
+| Formularios | Campos agrupados por propósito y acciones próximas al contenido. |
+| Control de riego | Estado de la unidad y acciones de inicio o detención claramente identificadas. |
+| Consultas | Indicadores de carga, información disponible y posibilidad de reintento. |
+| Acceso por teclado | Orden de foco y controles reconocibles como criterio de verificación. |
+
+El cambio de navegación se realiza a partir del ancho disponible: con 800 unidades o más se utiliza la barra lateral; con menos espacio se utiliza la navegación inferior. La reorganización depende del tamaño de la ventana, no únicamente de si el sistema se ejecuta en navegador o Android.
+
+**Mobile Style Guidelines**
+
+La aplicación Android conserva la identidad, los datos y las tareas de la versión web. En pantallas estrechas, las tarjetas se apilan y los controles se distribuyen para permitir una interacción táctil clara.
+
+| Elemento | Lineamiento |
+| :--- | :--- |
+| Navegación inferior | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. |
+| Etiquetas | Se destaca la etiqueta del destino seleccionado. |
+| Tarjetas | Una columna cuando no existe espacio para una retícula. |
+| Formularios | Campos apilados y desplazamiento vertical. |
+| Modales | Contenido ajustado al ancho y acciones sin desbordamientos. |
+| Lecturas | Valor, unidad y fecha visibles sin depender de un gráfico. |
+| Acciones críticas | Área táctil suficiente y estado de la solicitud visible. |
+
+La preferencia de tema se gestiona desde el frontend. Las etiquetas disponibles se organizan mediante `AppLocalizations`, manteniendo los mismos identificadores y unidades en las distintas versiones de la interfaz.
+
+**Devices Style Guidelines**
+
+El ESP32 no se plantea como una pantalla adicional de la aplicación. La experiencia del dispositivo se concentra en la instalación, la vinculación y la comprensión de su estado desde el celular o navegador.
+
+| Información del kit | Representación en la interfaz | Propósito |
+| :--- | :--- | :--- |
+| Humedad del sustrato | Porcentaje, interpretación y fecha. | Evaluar la necesidad de revisar el riego. |
+| Temperatura ambiente | Valor en °C y momento de lectura. | Comprender las condiciones del entorno. |
+| Conectividad | “En línea” o “Sin conexión”, con último contacto. | Reconocer si la información es reciente. |
+| Actuador | Estado reportado y seguimiento de la solicitud. | Distinguir control solicitado y operación confirmada. |
+| Configuración | Valores, unidades y validaciones. | Evitar ajustes ambiguos. |
+| Instalación | Pasos, ilustraciones y confirmación de conexión. | Reducir las dudas durante la preparación del kit. |
+
+La guía no debe presentar un dato opcional como si estuviera disponible en todos los kits. Una lectura ausente o una interrupción de comunicación debe explicarse de forma explícita.
+
+### 6.2. Information Architecture
+
+La arquitectura de información organiza AquaSave alrededor de las tareas de cuidado doméstico. Las secciones visibles utilizan términos próximos al usuario, mientras que los bounded contexts permanecen como una división interna del software.
+
+#### 6.2.1. Organization Systems
+
+El sistema principal es **funcional por tareas**. Cada sección reúne acciones asociadas a un objetivo reconocible.
+
+| Sección | Objetivo del usuario | Contenido principal |
+| :--- | :--- | :--- |
+| Inicio | Conocer rápidamente el estado de una unidad. | Lecturas disponibles, conexión, clima y control rápido. |
+| Dispositivos | Identificar y gestionar los kits propios. | Listado, selección, datos de unidad y configuración asociada. |
+| Análisis | Comprender patrones de consumo. | Indicadores, gráficos y comparaciones cuando existan datos suficientes. |
+| Historial | Revisar lo ocurrido durante el riego. | Ciclos, fechas, origen y resultados disponibles. |
+| Perfil | Mantener los datos de la cuenta. | Información personal y ajustes de acceso. |
+| Configuración | Ajustar preferencias y reglas. | Umbrales, programación y otros parámetros de la unidad. |
+
+También se aplican los siguientes sistemas:
+
+- **Jerárquico:** sección principal, dispositivo seleccionado y detalle de la unidad.
+- **Cronológico:** historial ordenado por fecha y periodo de consulta.
+- **Secuencial:** proceso guiado para preparar y vincular el dispositivo.
+- **Por estado:** diferenciación entre datos disponibles, desactualizados, solicitudes pendientes y condiciones que requieren atención.
+
+La personalización principiante o experta modifica el nivel de explicación. Ambas experiencias conservan la misma organización principal y solo permiten acceder a los recursos de la cuenta.
+
+#### 6.2.2. Labeling Systems
+
+Las etiquetas deben ser breves, consistentes y comprensibles. El usuario no necesita conocer el nombre técnico del bounded context para encontrar una función.
+
+**Labels de navegación:**
+
+| Label | Significado |
+| :--- | :--- |
+| Inicio | Resumen del estado y acceso al control rápido. |
+| Dispositivos | Kits y unidades asociados a la cuenta. |
+| Análisis | Indicadores y gráficos de los registros. |
+| Historial | Consulta de los ciclos de riego. |
+| Perfil | Información de la cuenta. |
+| Configuración | Preferencias y parámetros de operación. |
+
+**Labels de acción:**
+
+| Acción | Resultado esperado |
+| :--- | :--- |
+| Agregar dispositivo | Iniciar el registro o la vinculación de un kit. |
+| Ver detalles | Consultar la unidad seleccionada. |
+| Verificar zona | Comprobar una ubicación para la consulta climática. |
+| Iniciar riego | Enviar una solicitud de inicio. |
+| Detener riego | Enviar una solicitud de detención. |
+| Agregar horario | Registrar una evaluación programada. |
+| Guardar configuración | Validar y guardar los ajustes. |
+| Cancelar | Abandonar una edición sin confirmar los cambios. |
+
+**Labels de estado:**
+
+| Estado | Interpretación |
+| :--- | :--- |
+| En línea | Existe contacto reciente con el dispositivo. |
+| Sin conexión | No existe contacto vigente; puede conservarse el último dato. |
+| Solicitud pendiente | La orden fue solicitada y falta conocer su resultado. |
+| Riego activo | El dispositivo ha reportado la operación. |
+| Detenido | El estado disponible indica ausencia de riego activo. |
+| Datos insuficientes | No existe información suficiente para el resultado solicitado. |
+| Configuración guardada | Los ajustes fueron aceptados por la aplicación; su aplicación al dispositivo debe confirmarse cuando corresponda. |
+
+Una alerta debe indicar la unidad involucrada, el problema observado y una acción posible. “Sin alertas” no debe utilizarse como equivalente a “Todo en orden” cuando faltan lecturas.
+
+#### 6.2.3. Searching Systems
+
+AquaSave utiliza búsquedas específicas y selección de unidades, en lugar de un buscador global de contenido. La función más relevante del frontend es localizar la zona utilizada para obtener el pronóstico.
+
+**Búsqueda de ubicación climática:**
+
+| Entrada | Función |
+| :--- | :--- |
+| País | Acotar la búsqueda geográfica. |
+| Ciudad | Diferenciar zonas con nombres similares. |
+| Distrito o zona | Identificar el lugar donde se encuentra la unidad. |
+| Código postal | Aportar una referencia adicional para resolver la ubicación. |
+
+El resultado permite asociar una etiqueta y coordenadas al dispositivo. La interfaz debe mostrar la zona encontrada antes de confirmar los datos.
+
+**Selección y filtros:**
+
+- En Dispositivos, el usuario selecciona el kit mediante sus tarjetas y nombres.
+- Las consultas de historial y análisis conservan el dispositivo seleccionado.
+- El diseño de filtros por periodo permite acotar registros sin cambiar su procedencia.
+- Si la búsqueda no produce un resultado, se debe permitir corregir los datos sin utilizar una ubicación ficticia.
+
+La búsqueda climática no equivale a identificar una planta o reconocer su especie. Esas capacidades no se consideran implementadas por disponer de un formulario de ubicación.
+
+#### 6.2.4. SEO Tags and Meta Tags
+
+Los metadatos identifican el producto y explican su propósito al compartir o consultar el sitio. Para la aplicación Flutter Web, el archivo `web/index.html` contiene una configuración estática básica.
+
+| Recurso | Valor en la aplicación base | Propósito |
+| :--- | :--- | :--- |
+| `title` | `AquaSave` | Identificar la pestaña del navegador. |
+| `charset` | `UTF-8` | Representar correctamente los caracteres. |
+| `description` | `AquaSave - monitoreo y riego inteligente.` | Resumir el propósito del producto. |
+| Nombre de acceso móvil | `AquaSave` | Identificar el acceso directo. |
+| Favicon e icono móvil | Recursos del logotipo AquaSave. | Mantener la identidad visual. |
+| `manifest.json` | Recurso vinculado desde la página. | Definir la configuración base del acceso web. |
+
+**Metadatos propuestos para la landing page:**
+
+| Elemento | Contenido propuesto | Criterio |
+| :--- | :--- | :--- |
+| Título | AquaSave — Monitoreo y riego para tus plantas. | Comunicar producto y uso doméstico. |
+| Descripción | Conoce las condiciones de tus plantas, consulta su historial y gestiona el riego con AquaSave. | Evitar porcentajes de ahorro no demostrados. |
+| Palabras clave | cuidado de plantas, riego doméstico, humedad del sustrato, monitoreo IoT. | Mantener relación con la propuesta. |
+| Autor | EcoDrop. | Identificar al equipo responsable. |
+| Open Graph | Nombre, descripción, imagen de marca y URL publicada. | Mejorar la presentación al compartir el enlace. |
+| URL canónica | Dirección definitiva de la landing publicada. | Evitar enlaces ficticios o dominios no confirmados. |
+
+La landing pública concentra la presentación del producto. La aplicación autenticada no necesita exponer datos de usuarios o dispositivos a los buscadores.
+
+**ASO para la distribución móvil:**
+
+La futura ficha Android utilizará el nombre AquaSave, una descripción del cuidado doméstico, capturas coherentes con las funciones disponibles y requisitos del kit. El material debe indicar si una capacidad está prevista y no presentar la publicación en una tienda como realizada mientras no exista un destino de distribución confirmado.
+
+#### 6.2.5. Navigation Systems
+
+La navegación conserva las mismas secciones en web y Android, ajustando su presentación al espacio disponible.
+
+**Navegación de escritorio:**
+
+- Sidebar con logotipo y destinos principales.
+- Indicación de la sección seleccionada.
+- Acceso a detalles de la unidad sin perder su identificación.
+- Formularios y diálogos para editar datos relacionados con la tarea actual.
+
+**Navegación en pantallas estrechas:**
+
+- Barra inferior con seis destinos.
+- Contenido apilado y desplazamiento vertical.
+- Identificación visible del destino seleccionado.
+- Regreso a la sección de origen al terminar o cancelar una edición.
+
+**Niveles de navegación:**
+
+| Nivel | Pantallas o destinos | Condición |
+| :--- | :--- | :--- |
+| Público | Landing y accesos publicados. | No exige autenticación. |
+| Acceso | Inicio de sesión y registro. | Disponible antes de ingresar a la cuenta. |
+| Operativo | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. | Requiere una sesión válida. |
+| Detalle | Unidad, configuración y registros asociados. | Requiere que el recurso pertenezca a la cuenta. |
+
+El identificador de la unidad seleccionada se conserva al consultar sus datos o solicitar una acción. Si el usuario cambia de dispositivo, un resultado pendiente no debe atribuirse al nuevo kit.
+
+### 6.3. Landing Page UI Design
+
+La landing page presenta el problema, la propuesta de AquaSave y los pasos para utilizar el producto. Su organización busca que un visitante comprenda el uso doméstico, conozca el kit y encuentre un acceso claro a las aplicaciones o al contacto del equipo.
+
+| Sección | Contenido | Propósito |
+| :--- | :--- | :--- |
+| Encabezado | Marca, navegación y llamada a la acción. | Identificar el producto y facilitar el recorrido. |
+| Presentación principal | Propuesta de valor y representación del monitoreo. | Explicar qué problema busca resolver AquaSave. |
+| Beneficios | Información, cuidado, supervisión y uso responsable del agua. | Relacionar las funciones con las necesidades del usuario. |
+| Cómo funciona | Preparar el kit, consultar datos y configurar el cuidado. | Explicar el proceso inicial. |
+| Funcionalidades | Monitoreo, control, historial y orientación prevista. | Mostrar el alcance sin confundir diseño con disponibilidad. |
+| Acerca del equipo | Presentación de EcoDrop y AquaSave. | Dar contexto a la propuesta. |
+| Contacto | Información y canal de consulta. | Resolver dudas de instalación y compatibilidad. |
+| Acceso final y pie de página | Destinos publicados, ayuda y condiciones. | Permitir continuar la experiencia. |
+
+#### 6.3.1. Landing Page Wireframe
+
+El wireframe define la jerarquía de las secciones, el espacio reservado a los recursos visuales y los puntos de acceso. La navegación superior permite llegar a beneficios, funcionamiento, características y contacto.
+
+<p align="center">
+  <img src="image/wireframeLading.png" alt="Wireframe de la landing page de AquaSave" width="70%">
+</p>
+
+En pantallas estrechas, se plantea conservar el orden de lectura y apilar las tarjetas. Los accesos a aplicaciones o tiendas deben mostrarse como enlaces disponibles únicamente cuando exista su destino; su presencia en el wireframe no demuestra una publicación.
+
+#### 6.3.2. Landing Page Mock-up
+
+El mock-up aplica la identidad visual mediante la paleta natural, el logotipo, las ilustraciones y las tarjetas de contenido. La propuesta utiliza llamadas a la acción visibles y bloques breves para facilitar el recorrido.
+
+<p align="center">
+  <img src="image/mockup-landing.png" alt="Mock-up de la landing page de AquaSave" width="70%">
+</p>
+
+Los mensajes de sostenibilidad expresan el propósito del producto. Los valores concretos de ahorro deberán sustentarse con registros comparables antes de comunicarse como resultados.
+
+[Diseño de la landing page en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=43-3936)
+
+### 6.4. Applications UX/UI Design
+
+Las aplicaciones reúnen monitoreo, control y consulta histórica en una experiencia común. El principiante necesita orientación clara y una instalación guiada; el experto necesita comparar registros y revisar parámetros, conservando la decisión final sobre sus unidades.
+
+Los wireframes presentan la estructura de las pantallas. Para Android y ventanas estrechas, se conserva su jerarquía mediante tarjetas y campos apilados y navegación inferior. Las pantallas de diseño no se utilizan como evidencia de que todos sus elementos estén implementados.
+
+#### 6.4.1. Applications Wireframes
+
+**Inicio de sesión y registro**
+
+Las pantallas de acceso reservan un bloque para la presentación de marca y otro para los campos y acciones. Inicio de sesión y registro son recorridos alternativos; no es necesario registrarse nuevamente para entrar a una cuenta existente.
+
+En el formulario funcional se utiliza correo y contraseña. El registro incorpora la información de cuenta correspondiente y presenta los errores junto a los campos.
+
+<p align="center">
+  <img src="image/1ws.png" alt="Wireframe de inicio de sesión" width="40%">
+  <img src="image/2ws.png" alt="Wireframe de registro" width="40%">
+</p>
+
+**Dashboard**
+
+Inicio muestra la unidad seleccionada, sus lecturas, la conexión y el acceso al control rápido. El usuario puede revisar la información disponible antes de solicitar el riego.
+
+La fecha del dato y el estado reportado permiten diferenciar una lectura vigente de un valor conservado. El pronóstico se interpreta según la ubicación y la exposición de la unidad.
+
+<p align="center">
+  <img src="image/1wd.png" alt="Wireframe del dashboard de AquaSave" width="70%">
+</p>
+
+**Dispositivos y vinculación guiada**
+
+Dispositivos presenta los kits propios mediante tarjetas. Desde esta vista se inicia el proceso de agregar un dispositivo y se consulta el detalle de una unidad.
+
+El recorrido guiado contempla preparación del ESP32, conectividad, verificación, configuración básica, revisión de umbrales, prueba de lecturas y confirmación. Las etapas visibles representan el diseño de la instalación, no una garantía de que todo el aprovisionamiento Wi-Fi se encuentre automatizado en la aplicación base.
+
+<p align="center">
+  <img src="image/w1dis.png" alt="Wireframe del listado de dispositivos" width="45%">
+  <img src="image/w2dis.png" alt="Wireframe de preparación del ESP32" width="45%">
+  <br><br>
+  <img src="image/w3dis.png" alt="Wireframe de conexión Wi-Fi" width="45%">
+  <img src="image/w4dis.png" alt="Wireframe de verificación de conexión" width="45%">
+  <br><br>
+  <img src="image/w5dis.png" alt="Wireframe de revisión de umbrales" width="45%">
+  <img src="image/w6dis.png" alt="Wireframe de prueba de sensores" width="45%">
+  <br><br>
+  <img src="image/w7dis.png" alt="Wireframe de confirmación del dispositivo" width="70%">
+</p>
+
+Los porcentajes y lecturas mostrados son ejemplos. Los valores sugeridos requieren revisión y calibración; no constituyen una recomendación universal para todas las plantas. La lista de sensores debe corresponder al kit instalado y no inferir una medición de un componente ausente.
+
+**Registro, edición y detalle de plantas**
+
+El diseño permite identificar las plantas asociadas a una unidad, revisar sus datos y consultar el último riego disponible. Los formularios incluyen acciones para guardar o cancelar sin modificar otra unidad.
+
+<p align="center">
+  <img src="image/w8dis.png" alt="Wireframe de registro de una planta" width="45%">
+  <img src="image/w9dis.png" alt="Wireframe de edición de una planta" width="45%">
+  <br><br>
+  <img src="image/w10dis.png" alt="Wireframe del detalle de una planta" width="70%">
+</p>
+
+La identificación automática de especies y los porcentajes de confianza visibles en el modelo son elementos propuestos, no una integración de IA implementada. La representación por planta tampoco implica sensores o actuadores independientes para cada ejemplar: la información corresponde a la unidad de riego compatible que se haya configurado.
+
+**Perfil**
+
+Perfil agrupa información personal y opciones de la cuenta. La experiencia principiante o experta se utiliza para ajustar la orientación; su modificación no cambia propiedad, permisos ni suscripción.
+
+<p align="center">
+  <img src="image/wperfil.png" alt="Wireframe del perfil de usuario" width="70%">
+</p>
+
+**Análisis**
+
+Análisis organiza indicadores y gráficos para comprender los registros por periodo y unidad. La presentación distingue consumo de una comparación de ahorro, que requiere una referencia válida.
+
+<p align="center">
+  <img src="image/wanalisis.png" alt="Wireframe de análisis de consumo" width="70%">
+</p>
+
+Las cifras ilustrativas del wireframe no representan resultados obtenidos. Si faltan registros o una línea base, se muestra la limitación en lugar de afirmar un ahorro demostrado.
+
+**Historial**
+
+Historial permite revisar fecha, unidad, origen, duración y datos disponibles de cada ciclo. La organización cronológica facilita comparar lo ocurrido con los cambios de configuración.
+
+<p align="center">
+  <img src="image/whistorial.png" alt="Wireframe del historial de riego" width="70%">
+</p>
+
+Los campos del diseño se presentan únicamente cuando exista información que los respalde. Un ciclo sin cierre confirmado conserva esa condición y no se completa con una duración inventada.
+
+[Diseño de las aplicaciones en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1)
+
+#### 6.4.2. Applications Wireflow Diagrams
+
+Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
+
+**User Goal 1: Registrarse o iniciar sesión en AquaSave**
+
+- **Perfil:** principiante o experto que desea acceder a su cuenta.
+- **Objetivo:** ingresar a la aplicación y consultar sus unidades.
+- **Recorrido principal:** acceder a la pantalla de inicio de sesión, registrar una cuenta si es necesario, completar los datos válidos y llegar a Inicio.
+- **Recorrido alternativo:** ante credenciales incorrectas o campos inválidos, permanecer en el formulario y mostrar una opción de corrección.
+- **Resultado:** una sesión válida con acceso a los recursos propios. Inicio de sesión y registro son alternativas de acceso, no pasos obligatorios consecutivos.
+
+<p align="center">
+  <img src="image/userflow.png" alt="Wireflow del acceso a AquaSave" width="90%">
+</p>
+
+**User Goal 2: Agregar un nuevo dispositivo IoT**
+
+- **Perfil:** principiante que necesita orientación o experto que incorpora otra unidad.
+- **Objetivo:** vincular un kit a la cuenta y verificar su información.
+- **Recorrido principal:** abrir Dispositivos, seleccionar Agregar dispositivo, preparar el ESP32, completar los pasos de conexión y configuración y revisar la confirmación.
+- **Recorrido alternativo:** si no se logra conexión o los datos son inválidos, conservar el paso, explicar el problema y permitir reintentar sin crear una asociación duplicada.
+- **Resultado:** dispositivo identificado y asociado a la cuenta. El estado conectado requiere información del equipo y no únicamente haber terminado el formulario.
+
+<p align="center">
+  <img src="image/userflow (1).png" alt="Wireflow de vinculación del dispositivo IoT" width="90%">
+</p>
+
+**User Goal 3: Registrar y consultar una planta de una unidad**
+
+- **Perfil:** principiante que organiza sus primeras plantas o experto que mantiene varias unidades.
+- **Objetivo:** identificar una planta dentro de una unidad compatible y consultar la información asociada.
+- **Recorrido principal:** abrir el detalle del dispositivo, ingresar los datos de la planta, confirmar la asociación y revisar el detalle con las lecturas y registros disponibles.
+- **Recorrido alternativo:** si falta información o la unidad no corresponde a la cuenta, no guardar la asociación y explicar la corrección necesaria. Cancelar permite volver sin confirmar cambios.
+- **Resultado:** planta identificada dentro de su unidad, sin atribuirle mediciones independientes que el kit no proporcione.
+
+<p align="center">
+  <img src="image/userflow (2).png" alt="Wireflow de registro y consulta de una planta" width="90%">
+</p>
+
+Estos recorridos mantienen la relación entre navegación, dispositivo seleccionado y autorización. El control manual, la automatización y las futuras recomendaciones se integran a la misma experiencia, conservando la identificación de la unidad y la posibilidad de detener el riego.
+
+---
 
 ## Conclusiones
 
