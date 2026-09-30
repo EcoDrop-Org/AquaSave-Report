@@ -25,7 +25,7 @@
   <p align="center"><code>U202311361</code> - Roca Tineo, Steven Mathew</p>
   <p align="center"><code>U202311334</code> - Rodríguez Rodríguez, Luis Piero</p>
   <p align="center"><code>U202123373</code> - Román Pajuelo, Luis Gustavo</p>
-  <p align="center"><code>U20221C362</code> - Luyo Correa, Sandra Luyo</p>
+  <p align="center"><code>U20221C362</code> - Luyo Correa, Sandra Paula</p>
     
   <br>
   
@@ -36,9 +36,11 @@
 
 # Registro de Versiones del Informe
 
-| Versión | Fecha      | Autor                                                                                                                                                         | Descripción de modificación |
-|---------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Luyo | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en AquaSave. |
+| Versión | Fecha | Autor | Descripción de modificación |
+| :---: | :---: | :--- | :--- |
+| AV1 | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | Elaboración de los capítulos I al IV: presentación de EcoDrop y AquaSave, definición de los segmentos de usuarios principiantes y expertos en el cuidado de plantas domésticas, investigación de necesidades, historias de usuario, Product Backlog y diseño estratégico de la solución. |
+| TP1 | 29/09/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | Incorporación del capítulo V, Tactical-Level Software Design, con la descripción de las capas, componentes, clases y modelos de datos de los cinco bounded contexts. Incorporación del capítulo VI, Solution UX Design, con lineamientos de estilo, arquitectura de información, wireframe y mock-up de la landing page, wireframes de las aplicaciones y wireflows. Alineación de las descripciones con Flutter/Dart, Node.js/Express/TypeScript y PostgreSQL, diferenciando la implementación base de las capacidades propuestas. Actualización del índice, las conclusiones y recomendaciones y el Student Outcome; corrección de la identificación del primer avance como AV1. |
+
 
 
 # Project Report Collaboration Insights
