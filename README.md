@@ -140,6 +140,101 @@ AV1:
             <a href="#434-software-architecture-deployment-diagrams">4.3.4. Software Architecture Deployment Diagrams</a><br>
         </ul>
     </ul>
+  <a href="#capítulo-v-tactical-level-software-design">Capítulo V: Tactical-Level Software Design</a>
+    <ul>
+    <a href="#51-bounded-context-device-management">5.1. Bounded Context: Device Management</a><br>
+        <ul>
+        <a href="#511-domain-layer">5.1.1. Domain Layer</a><br>
+        <a href="#512-interface-layer">5.1.2. Interface Layer</a><br>
+        <a href="#513-application-layer">5.1.3. Application Layer</a><br>
+        <a href="#514-infrastructure-layer">5.1.4. Infrastructure Layer</a><br>
+        <a href="#515-bounded-context-software-architecture-component-level-diagrams">5.1.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#516-bounded-context-software-architecture-code-level-diagrams">5.1.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5161-bounded-context-domain-layer-class-diagrams">5.1.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5162-bounded-context-database-design-diagram">5.1.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#52-bounded-context-irrigation-intelligence">5.2. Bounded Context: Irrigation Intelligence</a><br>
+        <ul>
+        <a href="#521-domain-layer">5.2.1. Domain Layer</a><br>
+        <a href="#522-interface-layer">5.2.2. Interface Layer</a><br>
+        <a href="#523-application-layer">5.2.3. Application Layer</a><br>
+        <a href="#524-infrastructure-layer">5.2.4. Infrastructure Layer</a><br>
+        <a href="#525-bounded-context-software-architecture-component-level-diagrams">5.2.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#526-bounded-context-software-architecture-code-level-diagrams">5.2.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5261-bounded-context-domain-layer-class-diagrams">5.2.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5262-bounded-context-database-design-diagram">5.2.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#53-bounded-context-identity-access-management">5.3. Bounded Context: Identity Access Management</a><br>
+        <ul>
+        <a href="#531-domain-layer">5.3.1. Domain Layer</a><br>
+        <a href="#532-interface-layer">5.3.2. Interface Layer</a><br>
+        <a href="#533-application-layer">5.3.3. Application Layer</a><br>
+        <a href="#534-infrastructure-layer">5.3.4. Infrastructure Layer</a><br>
+        <a href="#535-bounded-context-software-architecture-component-level-diagrams">5.3.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#536-bounded-context-software-architecture-code-level-diagrams">5.3.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5361-bounded-context-domain-layer-class-diagrams">5.3.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5362-bounded-context-database-design-diagram">5.3.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#54-bounded-context-monetization">5.4. Bounded Context: Monetization</a><br>
+        <ul>
+        <a href="#541-domain-layer">5.4.1. Domain Layer</a><br>
+        <a href="#542-interface-layer">5.4.2. Interface Layer</a><br>
+        <a href="#543-application-layer">5.4.3. Application Layer</a><br>
+        <a href="#544-infrastructure-layer">5.4.4. Infrastructure Layer</a><br>
+        <a href="#545-bounded-context-software-architecture-component-level-diagrams">5.4.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#546-bounded-context-software-architecture-code-level-diagrams">5.4.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5461-bounded-context-domain-layer-class-diagrams">5.4.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5462-bounded-context-database-design-diagram">5.4.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#55-bounded-context-analytics">5.5. Bounded Context: Analytics</a><br>
+        <ul>
+        <a href="#551-domain-layer">5.5.1. Domain Layer</a><br>
+        <a href="#552-interface-layer">5.5.2. Interface Layer</a><br>
+        <a href="#553-application-layer">5.5.3. Application Layer</a><br>
+        <a href="#554-infrastructure-layer">5.5.4. Infrastructure Layer</a><br>
+        <a href="#555-bounded-context-software-architecture-component-level-diagrams">5.5.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#556-bounded-context-software-architecture-code-level-diagrams">5.5.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5561-bounded-context-domain-layer-class-diagrams">5.5.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5562-bounded-context-database-design-diagram">5.5.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    </ul>
+<a href="#capítulo-vi-solution-ux-design">Capítulo VI: Solution UX Design</a>
+    <ul>
+    <a href="#61-style-guidelines">6.1. Style Guidelines</a><br>
+        <ul>
+        <a href="#611-general-style-guidelines">6.1.1. General Style Guidelines</a><br>
+        <a href="#612-web-mobile--devices-style-guidelines">6.1.2. Web, Mobile & Devices Style Guidelines</a><br>
+        </ul>
+    <a href="#62-information-architecture">6.2. Information Architecture</a><br>
+        <ul>
+        <a href="#621-organization-systems">6.2.1. Organization Systems</a><br>
+        <a href="#622-labeling-systems">6.2.2. Labeling Systems</a><br>
+        <a href="#623-searching-systems">6.2.3. Searching Systems</a><br>
+        <a href="#624-seo-tags-and-meta-tags">6.2.4. SEO Tags and Meta Tags</a><br>
+        <a href="#625-navigation-systems">6.2.5. Navigation Systems</a><br>
+        </ul>
+    <a href="#63-landing-page-ui-design">6.3. Landing Page UI Design</a><br>
+        <ul>
+        <a href="#631-landing-page-wireframe">6.3.1. Landing Page Wireframe</a><br>
+        <a href="#632-landing-page-mock-up">6.3.2. Landing Page Mock-up</a><br>
+        </ul>
+    <a href="#64-applications-uxui-design">6.4. Applications UX/UI Design</a><br>
+        <ul>
+        <a href="#641-applications-wireframes">6.4.1. Applications Wireframes</a><br>
+        <a href="#642-applications-wireflow-diagrams">6.4.2. Applications Wireflow Diagrams</a><br>
+        </ul>
+    </ul>
+
     
 <a href="#conclusiones">Conclusiones</a>
     <ul>
