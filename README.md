@@ -1762,7 +1762,7 @@ Los cinco bounded contexts orientan la organización del dominio. La implementac
 El System Landscape Diagram presenta la vista general de AquaSave. Permite identificar a los usuarios, los productos digitales, el dispositivo IoT y los servicios externos que intervienen en el monitoreo y control del riego.
 
 <p align="center">
-  <img src="image/System_Landscape_Diagram.jpeg" alt="SLD" width="1000">
+  <img src="image/01-landscape.png" alt="SLD" width="1000">
 </p>
 
 Los usuarios conocen la propuesta mediante la landing page y acceden a las aplicaciones web o móvil para consultar sus dispositivos, revisar lecturas y gestionar el riego. Ambas aplicaciones se comunican con la misma API, que concentra los casos de uso y el acceso a los datos.
@@ -1776,7 +1776,7 @@ Open-Meteo proporciona el pronóstico climático utilizado por Irrigation Intell
 El diagrama de contexto delimita AquaSave como un sistema y presenta sus relaciones con los usuarios, el entorno físico y los servicios externos. Esta vista permite comprender qué información intercambia la solución y de qué servicios depende.
 
 <p align="center">
-  <img src="image/Context_Level_Diagram.jpeg" alt="CLD" width="1000">
+  <img src="image/02-context.png" alt="CLD" width="1000">
 </p>
 
 Los usuarios consultan las condiciones de sus plantas y solicitan operaciones desde las aplicaciones web y móvil. La plataforma administra sus cuentas, identifica los dispositivos asociados y proporciona acceso al historial de riego.
@@ -1790,7 +1790,7 @@ Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orien
 El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas y las responsabilidades de cada componente.
 
 <p align="center">
-  <img src="image/DiagramaContainerAquaSave.jpeg" alt="ContainerDiagram" width="1000">
+  <img src="image/03-containers.png" alt="ContainerDiagram" width="1000">
 </p>
 
 La arquitectura se organiza en los siguientes contenedores:
@@ -1816,7 +1816,7 @@ Los bounded contexts constituyen límites del dominio dentro del backend modular
 El diagrama de despliegue presenta la distribución de los componentes entre los dispositivos de los usuarios, los servicios de infraestructura y el entorno físico de las plantas.
 
 <p align="center">
-  <img src="image/DiagramaDeploymentAquaSave.png" alt="DeploymentDiagram" width="1000">
+  <img src="image/04-deployment.png" alt="DeploymentDiagram" width="1000">
 </p>
 
 La distribución de la solución considera:
