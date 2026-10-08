@@ -43,11 +43,47 @@
 
 # Project Report Collaboration Insights
 
-AV1:
+**Repositorio del informe:** [EcoDrop-Org/AquaSave-Report](https://github.com/EcoDrop-Org/AquaSave-Report)
+
+**Rama de publicación del informe:** [main](https://github.com/EcoDrop-Org/AquaSave-Report/tree/main)
+
+El informe de AquaSave se elaboró de manera colaborativa mediante la distribución de secciones entre los integrantes del equipo. Cada aporte comprendió la redacción del contenido, la preparación de diagramas o recursos visuales y la revisión de su coherencia con las demás secciones.
+
+GitHub permitió conservar el historial de modificaciones e identificar sus autores mediante commits. Los cambios se prepararon e integraron en develop para su revisión y posterior incorporación a main mediante pull requests. La rama main se utiliza para publicar la versión final del informe correspondiente a cada entrega.
+
+## AV1
+
+Durante AV1, el equipo desarrolló los capítulos I al IV, incluyendo la propuesta de AquaSave, la investigación de usuarios, los requisitos y el diseño estratégico de la solución. La revisión conjunta permitió relacionar las necesidades de los segmentos objetivo con las historias de usuario y las decisiones de arquitectura.
+
+La siguiente captura muestra la actividad de las cuentas que contribuyeron al repositorio. Estos indicadores complementan el registro de versiones y la descripción de responsabilidades individuales.
 
 <p align="center">
-  <img src="image/insightsav1.png" alt="insight" width="1000">
+  <img src="image/insightsav1.png" alt="Contribuciones de los integrantes al repositorio del informe" width="1000">
 </p>
+
+## TP1
+
+Durante TP1, el equipo amplió el reporte con el diseño táctico de los cinco bounded contexts y el diseño de experiencia de usuario. Asimismo, revisó la coherencia entre la documentación, las tecnologías utilizadas y los recursos visuales de la solución.
+
+Las observaciones del primer avance orientaron la revisión de la priorización del Product Backlog, los objetivos del Impact Mapping y la correspondencia entre el texto y los diagramas C4.
+
+### Analíticos de colaboración
+
+La siguiente captura presenta las contribuciones registradas durante el periodo correspondiente al trabajo parcial. Permite observar la participación de las cuentas del equipo y la distribución temporal de las modificaciones.
+
+<p align="center">
+  <img src="image/insightstp1-actualizado.png" alt="Analíticos de colaboración correspondientes a TP1" width="1000">
+</p>
+
+### Historial de commits
+
+El historial de commits permite identificar los autores, las fechas y los cambios incorporados al informe. Esta evidencia facilita la trazabilidad de las actualizaciones y complementa las responsabilidades descritas en el registro de versiones.
+
+<p align="center">
+  <img src="image/commitstp1.png" alt="Historial de commits del reporte correspondiente a TP1" width="1000">
+</p>
+
+Los analíticos y el historial se interpretan junto con los aportes documentados de cada integrante, considerando que la cantidad de commits no representa por sí sola la totalidad del trabajo realizado.
 
 -------------------
 
