@@ -4,7 +4,7 @@
 
   # <p align="center">Universidad Peruana de Ciencias Aplicadas</p>
   ## <p align="center">Ingeniería de Software</p>
-  <p align="center">Periodo: 202610</p>
+  <p align="center">Periodo: 202620</p>
   <p align="center">Arquitecturas De Software Emergentes</p>
   <p align="center">NRC: 16365</p>
   <p align="center">Docente: Enrique Alejandro Valdivia Verde</p>
@@ -22,10 +22,10 @@
   
   <p align="center">Integrantes:</p>
   <p align="center"><code>U202311220</code> - Gutierrez Condo, Maylhy Olinda</p>
+  <p align="center"><code>U20221C362</code> - Luyo Correa, Sandra Paula</p>
   <p align="center"><code>U202311361</code> - Roca Tineo, Steven Mathew</p>
   <p align="center"><code>U202311334</code> - Rodríguez Rodríguez, Luis Piero</p>
   <p align="center"><code>U202123373</code> - Román Pajuelo, Luis Gustavo</p>
-  <p align="center"><code>U20221C362</code> - Luyo Correa, Sandra Luyo</p>
     
   <br>
   
@@ -36,15 +36,56 @@
 
 # Registro de Versiones del Informe
 
-| Versión | Fecha      | Autor                                                                                                                                                         | Descripción de modificación |
-|---------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| AV1     | 26/04/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Luyo | En la primera entrega del informe de nuestro proyecto, hemos realizado los primeros capítulos del informe y definimos todas las entidades que emplearemos en AquaSave. |
-
+| Versión | Fecha | Autor | Descripción de modificación |
+| :---: | :---: | :--- | :--- |
+| AV1 | 25/09/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Luyo Correa, Sandra Paula<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo | **Maylhy Olinda:** elaboración del Startup Profile, antecedentes, problemática, objetivos y descripción de los segmentos objetivo.<br><br>**Sandra Paula:** documentación de EventStorming, Candidate Context Discovery y diagramas de arquitectura C4; organización del índice y revisión de coherencia del informe.<br><br>**Steven Mathew:** desarrollo de Lean UX, análisis competitivo y diseño de entrevistas.<br><br>**Luis Piero:** elaboración del registro y análisis de entrevistas, User Personas, User Task Matrix, Empathy Mapping, historias de usuario y Product Backlog.<br><br>**Luis Gustavo:** desarrollo del Design Purpose, inputs e iteraciones de ADD, escenarios de calidad y Architectural Drivers Backlog. |
+| TP1 | 08/10/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Luyo Correa, Sandra Paula<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br> | **Maylhy Olinda:** revisión de la propuesta de valor y los segmentos; elaboración de conclusiones y recomendaciones correspondientes al trabajo parcial.<br><br>**Sandra Paula:** alineación de las descripciones técnicas con Flutter/Dart, Node.js/Express/TypeScript y PostgreSQL; actualización del índice, registro de versiones y Student Outcome, identificando el primer avance como AV1 y diferenciando las capacidades implementadas de las propuestas.<br><br>**Steven Mathew:** desarrollo de los lineamientos de estilo y la arquitectura de información del capítulo VI, Solution UX Design.<br><br>**Luis Piero:** documentación de los wireframes y mock-ups de la landing page, wireframes de las aplicaciones y wireflows de los principales recorridos.<br><br>**Luis Gustavo:** desarrollo del capítulo V, Tactical-Level Software Design, incluyendo capas, componentes, clases y modelos de datos de los cinco bounded contexts. |
 
 # Project Report Collaboration Insights
 
+**Repositorio del informe:** [EcoDrop-Org/AquaSave-Report](https://github.com/EcoDrop-Org/AquaSave-Report)
 
+**Rama de publicación del informe:** [main](https://github.com/EcoDrop-Org/AquaSave-Report/tree/main)
 
+El informe de AquaSave se elaboró de manera colaborativa mediante la distribución de secciones entre los integrantes del equipo. Cada aporte comprendió la redacción del contenido, la preparación de diagramas o recursos visuales y la revisión de su coherencia con las demás secciones.
+
+GitHub permitió conservar el historial de modificaciones e identificar sus autores mediante commits. Los cambios se prepararon e integraron en develop para su revisión y posterior incorporación a main mediante pull requests. La rama main se utiliza para publicar la versión final del informe correspondiente a cada entrega.
+
+## AV1
+
+Durante AV1, el equipo desarrolló los capítulos I al IV, incluyendo la propuesta de AquaSave, la investigación de usuarios, los requisitos y el diseño estratégico de la solución. La revisión conjunta permitió relacionar las necesidades de los segmentos objetivo con las historias de usuario y las decisiones de arquitectura.
+
+La siguiente captura muestra la actividad de las cuentas que contribuyeron al repositorio. Estos indicadores complementan el registro de versiones y la descripción de responsabilidades individuales.
+
+<p align="center">
+  <img src="image/insightsav1.png" alt="Contribuciones de los integrantes al repositorio del informe" width="1000">
+</p>
+
+## TP1
+
+Durante TP1, el equipo amplió el reporte con el diseño táctico de los cinco bounded contexts y el diseño de experiencia de usuario. Asimismo, revisó la coherencia entre la documentación, las tecnologías utilizadas y los recursos visuales de la solución.
+
+Las observaciones del primer avance orientaron la revisión de la priorización del Product Backlog, los objetivos del Impact Mapping y la correspondencia entre el texto y los diagramas C4.
+
+### Analíticos de colaboración
+
+La siguiente captura presenta las contribuciones registradas durante el periodo correspondiente al trabajo parcial. Permite observar la participación de las cuentas del equipo y la distribución temporal de las modificaciones.
+
+<p align="center">
+  <img src="image/insightstp1-actualizado.png" alt="Analíticos de colaboración correspondientes a TP1" width="1000">
+</p>
+
+### Historial de commits
+
+El historial de commits permite identificar los autores, las fechas y los cambios incorporados al informe. Esta evidencia facilita la trazabilidad de las actualizaciones y complementa las responsabilidades descritas en el registro de versiones.
+
+<p align="center">
+  <img src="image/commitstp1.png" alt="Historial de commits del reporte correspondiente a TP1" width="1000">
+</p>
+
+Los analíticos y el historial se interpretan junto con los aportes documentados de cada integrante, considerando que la cantidad de commits no representa por sí sola la totalidad del trabajo realizado.
+
+-------------------
 
 # Contenido
 
@@ -135,6 +176,101 @@
             <a href="#434-software-architecture-deployment-diagrams">4.3.4. Software Architecture Deployment Diagrams</a><br>
         </ul>
     </ul>
+  <a href="#capítulo-v-tactical-level-software-design">Capítulo V: Tactical-Level Software Design</a>
+    <ul>
+    <a href="#51-bounded-context-device-management">5.1. Bounded Context: Device Management</a><br>
+        <ul>
+        <a href="#511-domain-layer">5.1.1. Domain Layer</a><br>
+        <a href="#512-interface-layer">5.1.2. Interface Layer</a><br>
+        <a href="#513-application-layer">5.1.3. Application Layer</a><br>
+        <a href="#514-infrastructure-layer">5.1.4. Infrastructure Layer</a><br>
+        <a href="#515-bounded-context-software-architecture-component-level-diagrams">5.1.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#516-bounded-context-software-architecture-code-level-diagrams">5.1.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5161-bounded-context-domain-layer-class-diagrams">5.1.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5162-bounded-context-database-design-diagram">5.1.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#52-bounded-context-irrigation-intelligence">5.2. Bounded Context: Irrigation Intelligence</a><br>
+        <ul>
+        <a href="#521-domain-layer">5.2.1. Domain Layer</a><br>
+        <a href="#522-interface-layer">5.2.2. Interface Layer</a><br>
+        <a href="#523-application-layer">5.2.3. Application Layer</a><br>
+        <a href="#524-infrastructure-layer">5.2.4. Infrastructure Layer</a><br>
+        <a href="#525-bounded-context-software-architecture-component-level-diagrams">5.2.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#526-bounded-context-software-architecture-code-level-diagrams">5.2.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5261-bounded-context-domain-layer-class-diagrams">5.2.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5262-bounded-context-database-design-diagram">5.2.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#53-bounded-context-identity-access-management">5.3. Bounded Context: Identity Access Management</a><br>
+        <ul>
+        <a href="#531-domain-layer">5.3.1. Domain Layer</a><br>
+        <a href="#532-interface-layer">5.3.2. Interface Layer</a><br>
+        <a href="#533-application-layer">5.3.3. Application Layer</a><br>
+        <a href="#534-infrastructure-layer">5.3.4. Infrastructure Layer</a><br>
+        <a href="#535-bounded-context-software-architecture-component-level-diagrams">5.3.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#536-bounded-context-software-architecture-code-level-diagrams">5.3.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5361-bounded-context-domain-layer-class-diagrams">5.3.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5362-bounded-context-database-design-diagram">5.3.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#54-bounded-context-monetization">5.4. Bounded Context: Monetization</a><br>
+        <ul>
+        <a href="#541-domain-layer">5.4.1. Domain Layer</a><br>
+        <a href="#542-interface-layer">5.4.2. Interface Layer</a><br>
+        <a href="#543-application-layer">5.4.3. Application Layer</a><br>
+        <a href="#544-infrastructure-layer">5.4.4. Infrastructure Layer</a><br>
+        <a href="#545-bounded-context-software-architecture-component-level-diagrams">5.4.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#546-bounded-context-software-architecture-code-level-diagrams">5.4.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5461-bounded-context-domain-layer-class-diagrams">5.4.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5462-bounded-context-database-design-diagram">5.4.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    <a href="#55-bounded-context-analytics">5.5. Bounded Context: Analytics</a><br>
+        <ul>
+        <a href="#551-domain-layer">5.5.1. Domain Layer</a><br>
+        <a href="#552-interface-layer">5.5.2. Interface Layer</a><br>
+        <a href="#553-application-layer">5.5.3. Application Layer</a><br>
+        <a href="#554-infrastructure-layer">5.5.4. Infrastructure Layer</a><br>
+        <a href="#555-bounded-context-software-architecture-component-level-diagrams">5.5.5. Bounded Context Software Architecture Component Level Diagrams</a><br>
+        <a href="#556-bounded-context-software-architecture-code-level-diagrams">5.5.6. Bounded Context Software Architecture Code Level Diagrams</a><br>
+            <ul>
+            <a href="#5561-bounded-context-domain-layer-class-diagrams">5.5.6.1. Bounded Context Domain Layer Class Diagrams</a><br>
+            <a href="#5562-bounded-context-database-design-diagram">5.5.6.2. Bounded Context Database Design Diagram</a><br>
+            </ul>
+        </ul>
+    </ul>
+<a href="#capítulo-vi-solution-ux-design">Capítulo VI: Solution UX Design</a>
+    <ul>
+    <a href="#61-style-guidelines">6.1. Style Guidelines</a><br>
+        <ul>
+        <a href="#611-general-style-guidelines">6.1.1. General Style Guidelines</a><br>
+        <a href="#612-web-mobile--devices-style-guidelines">6.1.2. Web, Mobile & Devices Style Guidelines</a><br>
+        </ul>
+    <a href="#62-information-architecture">6.2. Information Architecture</a><br>
+        <ul>
+        <a href="#621-organization-systems">6.2.1. Organization Systems</a><br>
+        <a href="#622-labeling-systems">6.2.2. Labeling Systems</a><br>
+        <a href="#623-searching-systems">6.2.3. Searching Systems</a><br>
+        <a href="#624-seo-tags-and-meta-tags">6.2.4. SEO Tags and Meta Tags</a><br>
+        <a href="#625-navigation-systems">6.2.5. Navigation Systems</a><br>
+        </ul>
+    <a href="#63-landing-page-ui-design">6.3. Landing Page UI Design</a><br>
+        <ul>
+        <a href="#631-landing-page-wireframe">6.3.1. Landing Page Wireframe</a><br>
+        <a href="#632-landing-page-mock-up">6.3.2. Landing Page Mock-up</a><br>
+        </ul>
+    <a href="#64-applications-uxui-design">6.4. Applications UX/UI Design</a><br>
+        <ul>
+        <a href="#641-applications-wireframes">6.4.1. Applications Wireframes</a><br>
+        <a href="#642-applications-wireflow-diagrams">6.4.2. Applications Wireflow Diagrams</a><br>
+        </ul>
+    </ul>
+
     
 <a href="#conclusiones">Conclusiones</a>
     <ul>
@@ -152,16 +288,16 @@
 
 El curso contribuye al cumplimiento del Student Outcome ABET:
 
-ABET – EAC - Student Outcome 3
+**ABET – EAC – Student Outcome 3**
 
-Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias.
+**Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
+El siguiente cuadro presenta las acciones de comunicación oral y escrita correspondientes a AV1 y TP1, junto con las conclusiones del equipo sobre su contribución al logro del Student Outcome 3.
 
-| Criterio específico | Acciones y responsabilidades de TB1 | Conclusiones |
+| Criterio específico | Acciones y responsabilidades de AV1 y TP1 | Conclusiones |
 | :--- | :--- | :--- |
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Gutierrez Condo, Maylhy Olinda:** Explicar la propuesta de EcoDrop, la problemática del riego doméstico y las características de los usuarios principiantes y expertos, utilizando ejemplos de su rutina de cuidado.<br><br>**Roca Tineo, Steven Mathew:** Presentar los supuestos e hipótesis Lean UX, sustentar la comparación de competidores y conducir las preguntas de investigación con un lenguaje comprensible para los participantes.<br><br>**Rodríguez Rodríguez, Luis Piero:** Explicar las necesidades de los usuarios, los escenarios de interacción y la prioridad de las historias, relacionando cada funcionalidad con el beneficio que aporta.<br><br>**Román Pajuelo, Luis Gustavo:** Sustentar el propósito del diseño, los escenarios de calidad y la selección de drivers, explicando las decisiones técnicas y sus consecuencias para el usuario.<br><br>**Luyo Correa, Sandra Luyo:** Exponer la delimitación de los bounded contexts y las vistas de arquitectura, describiendo las responsabilidades y la comunicación entre los componentes. | **TB1:** La comunicación oral del proyecto requiere relacionar las necesidades domésticas con las decisiones de diseño. La distribución de temas permite abordar el problema, la experiencia de usuario y la arquitectura con un lenguaje adecuado para participantes, equipo técnico y docente. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Gutierrez Condo, Maylhy Olinda:** Redactar Startup Profile, los antecedentes y la problemática, los objetivos y la descripción de los segmentos, manteniendo coherencia entre el problema y la propuesta de valor.<br><br>**Roca Tineo, Steven Mathew:** Desarrollar los Problem Statements, Assumptions e Hypothesis Statements, el análisis competitivo y el diseño de entrevistas, empleando preguntas y criterios vinculados con el cuidado doméstico.<br><br>**Rodríguez Rodríguez, Luis Piero:** Documentar las necesidades y tareas de los usuarios, redactar historias y criterios de aceptación y organizar el Product Backlog según el valor del producto.<br><br>**Román Pajuelo, Luis Gustavo:** Elaborar Design Purpose, los inputs de ADD, los escenarios de calidad, las restricciones y el Architectural Drivers Backlog, justificando las decisiones mediante criterios verificables.<br><br>**Luyo Correa, Sandra Luyo:** Documentar EventStorming, el descubrimiento de contextos, los flujos del dominio y las descripciones de arquitectura, revisando la consistencia de términos, límites y responsabilidades. | **TB1:** La documentación escrita necesita conectar problema, necesidades, requisitos y arquitectura. Una terminología común, criterios de aceptación claros y decisiones justificadas permiten que diferentes audiencias comprendan el alcance de AquaSave y revisen su diseño. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **AV1:**<br><br>**Gutiérrez Condo, Maylhy Olinda:** Explicó la propuesta de EcoDrop, la problemática del riego doméstico y las características de los usuarios principiantes y expertos mediante ejemplos de sus rutinas de cuidado.<br><br>**Luyo Correa, Sandra Paula:** Expuso los resultados de EventStorming, la delimitación de los bounded contexts y las vistas C4, describiendo sus responsabilidades e interacciones.<br><br>**Roca Tineo, Steven Mathew:** Presentó los supuestos e hipótesis Lean UX y la comparación de competidores. Formuló las preguntas de investigación con un lenguaje comprensible para los participantes.<br><br>**Rodríguez Rodríguez, Luis Piero:** Explicó los hallazgos de las entrevistas, las tareas de los usuarios y las historias de usuario, relacionando las funcionalidades propuestas con las necesidades identificadas.<br><br>**Román Pajuelo, Luis Gustavo:** Sustentó el propósito del diseño, los escenarios de calidad y los drivers arquitectónicos, explicando las decisiones técnicas y sus efectos sobre la experiencia del usuario.<br><br>**TP1:**<br><br>**Gutiérrez Condo, Maylhy Olinda:** Explicó cómo la propuesta de AquaSave responde a las necesidades de ambos segmentos y presentó las conclusiones y recomendaciones del trabajo parcial.<br><br>**Luyo Correa, Sandra Paula:** Explicó la integración entre Flutter, la API Express, PostgreSQL, la EdgeAPI y el ESP32, diferenciando las capacidades implementadas de las previstas.<br><br>**Roca Tineo, Steven Mathew:** Presentó los lineamientos de estilo y la arquitectura de información, explicando cómo favorecen la comprensión y navegación de los productos digitales.<br><br>**Rodríguez Rodríguez, Luis Piero:** Explicó los wireframes, mock-ups y wireflows, describiendo los recorridos de consulta, configuración y control del riego mediante ejemplos de uso.<br><br>**Román Pajuelo, Luis Gustavo:** Sustentó el diseño táctico de los cinco bounded contexts, explicando la organización de las capas y las relaciones entre componentes, clases y modelos de datos. | **AV1:** El equipo relacionó las necesidades de los usuarios con los requisitos y las decisiones de arquitectura. La distribución de temas permitió comunicar la propuesta desde perspectivas de negocio, experiencia de usuario y diseño técnico.<br><br>**TP1:** El equipo complementó la explicación de la propuesta con recorridos de interfaz y diagramas de diseño táctico. Los ejemplos y recursos visuales facilitaron la comunicación de las responsabilidades de los componentes y del alcance de la solución. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **AV1:**<br><br>**Gutiérrez Condo, Maylhy Olinda:** Redactó el Startup Profile, los antecedentes, la problemática, los objetivos y los segmentos objetivo, manteniendo coherencia con la propuesta de valor.<br><br>**Luyo Correa, Sandra Paula:** Documentó EventStorming, Candidate Context Discovery y las vistas C4. Revisó la consistencia de los términos, límites y responsabilidades de la arquitectura.<br><br>**Roca Tineo, Steven Mathew:** Desarrolló los Problem Statements, Assumptions e Hypothesis Statements, el análisis competitivo y el diseño de entrevistas con preguntas vinculadas al cuidado doméstico.<br><br>**Rodríguez Rodríguez, Luis Piero:** Documentó las entrevistas y su análisis, User Personas, User Task Matrix y Empathy Mapping. Redactó las historias de usuario, sus criterios de aceptación y el Product Backlog.<br><br>**Román Pajuelo, Luis Gustavo:** Elaboró el Design Purpose, los inputs e iteraciones de ADD, los escenarios de calidad, las restricciones y el Architectural Drivers Backlog, justificando las decisiones de diseño.<br><br>**TP1:**<br><br>**Gutiérrez Condo, Maylhy Olinda:** Revisó la coherencia de la propuesta con los segmentos actuales y redactó las conclusiones y recomendaciones correspondientes al trabajo parcial.<br><br>**Luyo Correa, Sandra Paula:** Revisó la alineación técnica con Flutter/Dart, Node.js/Express/TypeScript y PostgreSQL. Actualizó el índice, el registro de versiones y el Student Outcome, diferenciando implementación y capacidades propuestas.<br><br>**Roca Tineo, Steven Mathew:** Documentó los lineamientos de estilo y la arquitectura de información, describiendo los criterios de presentación y organización del contenido.<br><br>**Rodríguez Rodríguez, Luis Piero:** Documentó los wireframes y mock-ups de la landing page, los wireframes de las aplicaciones y los wireflows, explicando las acciones y transiciones de cada recorrido.<br><br>**Román Pajuelo, Luis Gustavo:** Desarrolló el capítulo de Tactical-Level Software Design, describiendo las capas, componentes, clases y modelos de datos de los cinco bounded contexts. | **AV1:** La documentación conectó el problema, la investigación de usuarios, los requisitos y la arquitectura mediante una terminología común. Los criterios de aceptación y las explicaciones permitieron revisar el propósito de las funcionalidades propuestas.<br><br>**TP1:** El informe amplió la descripción de AquaSave mediante el diseño táctico y los recorridos de experiencia de usuario. Las explicaciones asociadas a los diagramas y las interfaces facilitaron la comprensión del alcance y de las decisiones de la solución. |
 
 
 ## Capítulo I: Introducción
@@ -208,6 +344,11 @@ Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanza
 <p align="center">
   <img src="image/1P.png" alt="Segmento2" width="1000">
 </p>
+
+<p align="center">
+  <img src="image/PAULA.png" alt="Segmento2" width="1000">
+</p>
+
 <p align="center">
   <img src="image/2P.png" alt="Segmento2" width="1000">
 </p>
@@ -218,10 +359,6 @@ Se plantea evaluar la venta del kit y servicios opcionales de seguimiento avanza
 
 <p align="center">
   <img src="image/4P.png" alt="Segmento2" width="1000">
-</p>
-
-<p align="center">
-  <img src="image/PAULA.png" alt="Segmento2" width="1000">
 </p>
 
 
@@ -1024,59 +1161,101 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 
 ### 3.3. Impact Mapping
 
-Usuario: Usuario Principiante
+El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores que pueden influir en su cumplimiento, los cambios de comportamiento esperados y las funcionalidades que permitirán generar dichos impactos. A partir de los hallazgos obtenidos con usuarios principiantes y expertos, se proponen los siguientes Business Goals bajo criterios SMART, incorporando una métrica verificable y un horizonte de evaluación.
+
+**Business Goal 1 :  Mejorar la comprensión del estado de las plantas**
+
+**Objetivo SMART:** Lograr que al menos el 80% de los usuarios principiantes evaluados identifique correctamente, sin asistencia, si una planta requiere atención a partir de la información mostrada por AquaSave, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
+
+**Actores principales:** usuarios principiantes en el cuidado de plantas.
+
+**Impactos esperados:** comprender la lectura de humedad, reconocer cuándo una planta necesita atención, reducir decisiones de riego basadas únicamente en intuición y consultar orientación antes de realizar una acción de riego.
+
+**Deliverables relacionados:** consulta de humedad del sustrato, configuración guiada del perfil, alertas de humedad baja o elevada, resumen del estado de las plantas y recomendaciones de riego explicadas.
+
 <div align="center">
-
-  <img src="image/Impact map 1.png" alt="Diagrama" width="600">
-
+  <img src="image/IM1.png" alt="Diagrama" width="600">
 </div>
-Usuario: Usuario Experto
+
+
+**Business Goal 2 :  Favorecer un uso más eficiente del agua de riego**  
+**Objetivo SMART:** Lograr una reducción mínima del 15% en el consumo estimado de agua destinado al riego en las unidades evaluadas, comparando un periodo inicial con un periodo posterior de uso de AquaSave durante las pruebas del proyecto.
+
+**Actores principales:** usuarios principiantes y usuarios expertos.
+
+**Impactos esperados:** revisar las condiciones de la planta antes de regar, evitar riegos innecesarios, ajustar parámetros según las condiciones observadas y comparar el consumo de agua entre distintos periodos.
+
+**Deliverables relacionados:** consulta de humedad, configuración de riego automático, programación de evaluaciones de riego, consideración de lluvia para plantas expuestas, historial de riego, consulta de consumo por periodo y comparación del consumo con una línea base.
+
 <div align="center">
-
-  <img src="image/Impact map 2.png" alt="Diagrama" width="600">
-
+  <img src="image/IM22.png" alt="Diagrama" width="600">
 </div>
+
+**Business Goal 3 :  Mejorar el seguimiento y control del cuidado de las plantas**  
+**Objetivo SMART:** Conseguir que al menos el 80% de los usuarios evaluados pueda consultar el estado de sus plantas, revisar alertas e historial y ejecutar una acción básica de control sin asistencia, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
+
+**Actores principales:** usuarios principiantes y usuarios expertos.
+
+**Impactos esperados:** supervisar las plantas desde una única interfaz, identificar cuáles requieren atención, revisar eventos anteriores, mantener el control sobre la automatización y tomar decisiones a partir de información comprensible y verificable.
+
+**Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial de riego, activación y detención del riego, configuración de parámetros y recomendaciones explicadas con opción de aceptación o descarte.
+
+<div align="center">
+  <img src="image/IM33.png" alt="Diagrama" width="600">
+</div>
+
 
 ### 3.4. Product Backlog
 
+URL del Product Backlog: https://trello.com/b/tQbBo5rs
+
+<div align="center">
+
+  <img src="image/trellocaptura.png" alt="Trello" width="1000">
+
+</div>
+
+------
+
+
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:-----:|:-------------:|--------|-------------|:------------:|
-| 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
-| 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | 3 |
-| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | 5 |
-| 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | 3 |
-| 5 | US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | 2 |
-| 6 | US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | 5 |
-| 7 | US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | 5 |
-| 8 | US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | 3 |
-| 9 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | 5 |
-| 10 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | 8 |
-| 11 | TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | 5 |
-| 12 | US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | 8 |
-| 13 | US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | 5 |
-| 14 | US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | 5 |
-| 15 | US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | 5 |
-| 16 | US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | 3 |
-| 17 | US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | 3 |
-| 18 | TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | 3 |
-| 19 | US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | 3 |
-| 20 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | 8 |
-| 21 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | 8 |
-| 22 | US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | 8 |
-| 23 | US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | 5 |
-| 24 | US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | 8 |
-| 25 | US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | 5 |
-| 26 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | 5 |
-| 27 | US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | 3 |
-| 28 | US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | 3 |
-| 29 | US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | 5 |
-| 30 | US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | 3 |
-| 31 | US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | 3 |
-| 32 | US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | 3 |
-| 33 | US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | 3 |
-| 34 | US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | 5 |
-| 35 | US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | 3 |
-| 36 | US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | 3 |
+| 1 | US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | 3 |
+| 2 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
+| 3 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
+| 4 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
+| 5 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | 8 |
+| 6 | TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | 5 |
+| 7 | TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | 3 |
+| 8 | US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | 5 |
+| 9 | US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | 3 |
+| 10 | US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | 3 |
+| 11 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | 8 |
+| 12 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | 8 |
+| 13 | US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | 8 |
+| 14 | US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | 5 |
+| 15 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
+| 16 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | 3 |
+| 17 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | 5 |
+| 18 | US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | 8 |
+| 19 | US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | 5 |
+| 20 | US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | 5 |
+| 21 | US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | 5 |
+| 22 | US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | 5 |
+| 23 | US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | 8 |
+| 24 | US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | 5 |
+| 25 | US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | 3 |
+| 26 | US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | 5 |
+| 27 | US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | 3 |
+| 28 | US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | 3 |
+| 29 | US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | 3 |
+| 30 | US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | 3 |
+| 31 | US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | 3 |
+| 32 | US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | 3 |
+| 33 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | 5 |
+| 34 | US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | 3 |
+| 35 | US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | 3 |
+| 36 | US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | 5 |
 | 37 | TS04 | Publicar y consumir eventos persistentes | Como desarrollador, quiero eventos persistentes con consumidores idempotentes, para construir el historial sin perder ni duplicar ciclos. | 5 |
 | 38 | US24 | Consultar historial de riego | Como usuario, quiero consultar ciclos y resultados por unidad, para revisar qué ocurrió durante el cuidado. | 5 |
 | 39 | US25 | Consultar consumo por periodo | Como usuario, quiero consultar consumo diario, semanal y mensual, para comparar patrones de uso del agua. | 5 |
@@ -1086,10 +1265,10 @@ Usuario: Usuario Experto
 | 43 | TS12 | Aislar IA del control físico | Como desarrollador, quiero que la IA solo produzca propuestas estructuradas, para impedir que una respuesta del modelo active directamente el riego. | 5 |
 | 44 | US34 | Consultar una recomendación de riego | Como usuario, quiero recibir una recomendación apoyada por IA con explicación, para evaluar el cuidado de mi unidad. | 8 |
 | 45 | US35 | Decidir sobre una recomendación | Como usuario, quiero aceptar o descartar una recomendación, para conservar el control de mis decisiones. | 5 |
-| 46 | US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | 3 |
-| 47 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
-| 48 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
-| 49 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
+| 46 | US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | 3 |
+| 47 | US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | 5 |
+| 48 | US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | 2 |
+| 49 | US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | 3 |
 | 50 | TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar una landing page en HTML, CSS y JavaScript, aplicaciones web y móvil en Flutter con Dart y una API en Node.js con Express y TypeScript, para ofrecer una experiencia integrada de AquaSave. | 8 |
 | 51 | TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | 5 |
 | 52 | TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | 3 |
@@ -1649,7 +1828,7 @@ Los cinco bounded contexts orientan la organización del dominio. La implementac
 El System Landscape Diagram presenta la vista general de AquaSave. Permite identificar a los usuarios, los productos digitales, el dispositivo IoT y los servicios externos que intervienen en el monitoreo y control del riego.
 
 <p align="center">
-  <img src="image/System_Landscape_Diagram.jpeg" alt="SLD" width="1000">
+  <img src="image/01-landscape.png" alt="SLD" width="1000">
 </p>
 
 Los usuarios conocen la propuesta mediante la landing page y acceden a las aplicaciones web o móvil para consultar sus dispositivos, revisar lecturas y gestionar el riego. Ambas aplicaciones se comunican con la misma API, que concentra los casos de uso y el acceso a los datos.
@@ -1663,7 +1842,7 @@ Open-Meteo proporciona el pronóstico climático utilizado por Irrigation Intell
 El diagrama de contexto delimita AquaSave como un sistema y presenta sus relaciones con los usuarios, el entorno físico y los servicios externos. Esta vista permite comprender qué información intercambia la solución y de qué servicios depende.
 
 <p align="center">
-  <img src="image/Context_Level_Diagram.jpeg" alt="CLD" width="1000">
+  <img src="image/02-context.png" alt="CLD" width="1000">
 </p>
 
 Los usuarios consultan las condiciones de sus plantas y solicitan operaciones desde las aplicaciones web y móvil. La plataforma administra sus cuentas, identifica los dispositivos asociados y proporciona acceso al historial de riego.
@@ -1674,21 +1853,28 @@ Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orien
 
 #### 4.3.3. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas y las responsabilidades de cada componente.
+El diagrama de contenedores descompone la Plataforma AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas, las responsabilidades de cada contenedor y sus relaciones con los sistemas situados fuera del límite de la plataforma.
 
 <p align="center">
-  <img src="image/DiagramaContainerAquaSave.jpeg" alt="ContainerDiagram" width="1000">
+  <img src="image/03-containers.png" alt="ContainerDiagram" width="1000">
 </p>
 
-La arquitectura se organiza en los siguientes contenedores:
+Dentro del límite de la Plataforma AquaSave se encuentran los siguientes contenedores:
 
-- **Landing Page:** sitio desarrollado con HTML, CSS y JavaScript. Presenta la propuesta de AquaSave, sus características y los accesos a los productos digitales.
 - **Web Application:** aplicación desarrollada con Flutter y Dart, compilada para ejecutarse en el navegador. Permite acceder a cuentas, dispositivos, lecturas, historial y control del riego mediante la API.
 - **Mobile Application:** aplicación desarrollada con Flutter y Dart para Android. Comparte la base de código y los contratos de acceso a datos de la versión web.
 - **AquaSave API:** backend desarrollado con Node.js, Express y TypeScript. Expone endpoints REST para autenticación, gestión de dispositivos, telemetría, riego y pronóstico climático. Organiza los casos de uso mediante módulos con capas de dominio, aplicación, infraestructura e interfaces.
 - **Platform PostgreSQL Database:** almacena usuarios, sesiones, dispositivos, telemetría, comandos y registros de riego mediante los repositorios del backend.
 - **AquaSave EdgeAPI:** servicio desarrollado con Node.js y TypeScript que conecta MQTT con HTTP. Recibe telemetría y estados, consulta comandos pendientes, los publica en HiveMQ Cloud y comunica los reconocimientos al backend.
-- **Dispositivo IoT ESP32:** ejecuta el firmware desarrollado en C++ con Arduino, obtiene las lecturas y controla el actuador de riego. Se comunica con HiveMQ Cloud mediante MQTT.
+
+Fuera del límite de la plataforma se representan los siguientes sistemas relacionados:
+
+- **Landing Page AquaSave:** sitio independiente desarrollado con HTML, CSS y JavaScript. Presenta la propuesta de AquaSave y proporciona un enlace a la aplicación web.
+- **Kit IoT AquaSave:** sistema físico compuesto por el ESP32, los sensores y la bomba con relé. El firmware desarrollado en C++ con Arduino obtiene las lecturas, controla el actuador de riego y se comunica con HiveMQ Cloud mediante MQTT.
+- **HiveMQ Cloud:** servicio externo de mensajería que transporta telemetría, estados, comandos y reconocimientos entre el kit IoT y la EdgeAPI.
+- **Open-Meteo:** servicio externo que proporciona pronóstico climático y geocodificación mediante consultas desde la API.
+
+La landing page y el kit IoT pertenecen a la solución de EcoDrop, pero se presentan como sistemas separados de la Plataforma AquaSave. Su ubicación fuera del límite indica esa separación arquitectónica.
 
 Las aplicaciones Flutter organizan su código en presentación, dominio y datos. Utilizan BLoC y Cubit para gestionar estados, repositorios para el acceso a la información y SharedPreferences para conservar datos locales de sesión. El almacenamiento local forma parte de los clientes y no constituye una base de datos SQLite independiente.
 
@@ -1703,25 +1889,1100 @@ Los bounded contexts constituyen límites del dominio dentro del backend modular
 El diagrama de despliegue presenta la distribución de los componentes entre los dispositivos de los usuarios, los servicios de infraestructura y el entorno físico de las plantas.
 
 <p align="center">
-  <img src="image/DiagramaDeploymentAquaSave.png" alt="DeploymentDiagram" width="1000">
+  <img src="image/04-deployment.png" alt="DeploymentDiagram" width="1000">
 </p>
 
 La distribución de la solución considera:
 
-- **Landing page:** publicación como sitio estático independiente, compuesto por archivos HTML, CSS, JavaScript y recursos visuales. Sus enlaces permiten continuar hacia las aplicaciones.
-- **Frontend web:** compilación de Flutter para web y publicación en Firebase Hosting mediante GitHub Actions. El navegador ejecuta la aplicación y consume la API por HTTPS.
+- **Landing page:** publicación en GitHub Pages como sitio estático independiente, compuesto por archivos HTML, CSS, JavaScript y recursos visuales. Proporciona un enlace a la aplicación web alojada en Firebase Hosting.
+- **Frontend web:** compilación de Flutter para web y publicación en Firebase Hosting mediante GitHub Actions. El navegador descarga y ejecuta la aplicación, que consume la API por HTTPS.
 - **Aplicación móvil:** compilación de Flutter para Android y distribución de versiones de prueba mediante Firebase App Distribution. La aplicación se ejecuta en el teléfono y utiliza la misma API que el frontend web.
 - **Backend:** ejecución de la API Node.js con Express y TypeScript en Render. El servicio recibe las solicitudes de las aplicaciones y de la EdgeAPI, consulta PostgreSQL y expone la documentación OpenAPI mediante Swagger.
-- **Persistencia:** conexión del backend a PostgreSQL mediante la configuración del entorno. Los clientes acceden a la información a través de la API.
+- **Persistencia:** conexión del backend a un servidor PostgreSQL mediante la configuración del entorno. El diagrama no atribuye su alojamiento a un proveedor específico. Los clientes acceden a la información a través de la API.
 - **EdgeAPI:** ejecución como servicio Node.js en Fly.io, utilizando el contenedor definido para ese componente. Mantiene la conexión MQTT, consulta los comandos pendientes del backend y expone una comprobación HTTP de salud para la plataforma de despliegue.
 - **Broker MQTT:** uso de HiveMQ Cloud para el intercambio de telemetría, estados, comandos y reconocimientos entre la EdgeAPI y el ESP32.
-- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación y actuador. El firmware obtiene las lecturas y ejecuta el control local del riego.
+- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación, relé y bomba. El firmware obtiene las lecturas y ejecuta el control local del riego.
 - **Servicio climático:** consulta de Open-Meteo desde el backend mediante el adaptador de Irrigation Intelligence.
 
 La configuración permite administrar las direcciones de los servicios y los parámetros de conexión por entorno. La compilación y publicación de las aplicaciones web y Android se automatizan mediante los flujos de GitHub Actions definidos para cada producto.
 
 La comunicación entre el dispositivo y la plataforma depende de la conexión con el broker y la EdgeAPI. Los límites locales de operación y las condiciones de recuperación se evaluarán mediante los escenarios de calidad definidos. Las integraciones posteriores de IA y servicios comerciales se incorporarán sin cambiar las tecnologías base de los clientes y la API.
 
+---
+
+## Capítulo V: Tactical-Level Software Design
+
+Este capítulo desarrolla el diseño táctico de los cinco bounded contexts definidos para AquaSave: Device Management, Irrigation Intelligence, Identity Access Management, Monetization y Analytics. Para cada contexto se describen las responsabilidades de las capas Domain, Interface, Application e Infrastructure, junto con sus diagramas de componentes, clases y base de datos.
+
+La solución utiliza TypeScript con Node.js y Express para la API, PostgreSQL para la persistencia, Flutter con Dart para las aplicaciones web y Android, y un dispositivo ESP32 programado en C++ con Arduino. La comunicación MQTT se integra mediante EdgeAPI y HiveMQ Cloud. Estos componentes conservan los límites del dominio sin exigir que cada bounded context sea un microservicio independiente.
+
+Los diagramas presentan el modelo conceptual del contexto y sus posibilidades de extensión. La descripción de las capas diferencia los componentes existentes en el código de los contratos propuestos. Los nombres de clases, tipos y operaciones de los diagramas no implican el uso de otro lenguaje o framework. Monetization, la separación completa de Analytics y las recomendaciones apoyadas por IA se documentan como diseño previsto, no como módulos terminados.
+
+### 5.1. Bounded Context: Device Management
+
+Device Management administra los dispositivos asociados a una cuenta, su identificación, ubicación, configuración y última información recibida. Su responsabilidad es conocer qué equipo pertenece a cada usuario y qué datos están disponibles; la decisión de iniciar un ciclo corresponde a Irrigation Intelligence.
+
+#### 5.1.1. Domain Layer
+
+Esta capa encapsula la información del dispositivo doméstico y las reglas necesarias para interpretar su estado.
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `Device` | Representa un kit ESP32 mediante `id`, `accountId`, `name`, `location`, `status`, `firmwareVersion`, `isActive`, `plantCount`, `cropType`, `valveState`, `lastTelemetry`, `createdAt` y `updatedAt`. | Se vincula a una cuenta y permite actualizar sus datos. Las funciones `touchDevice` y `withEffectiveStatus` actualizan su fecha e interpretan su conexión según la vigencia de la telemetría. |
+| `SensorReading` | Contiene `deviceId`, `soilMoisturePct`, `temperatureC`, `humidityPct`, `pumpOn`, `flowRateLMin`, `batteryPct` y `recordedAt`, según la información recibida. | Se relaciona con un dispositivo. `normalizeReading` normaliza los valores antes de utilizarlos en la aplicación. |
+| `WaterValve` | Representa conceptualmente el actuador y su estado de apertura o cierre. | En la implementación base, su estado se mantiene en `Device.valveState` y se contrasta con `SensorReading.pumpOn`; no requiere una entidad persistida por separado. |
+
+**Value Objects:**
+
+- `GeoLocation`: agrupa la etiqueta de ubicación y las coordenadas utilizadas para consultar el pronóstico.
+- `DeviceStatus`: define los estados admitidos para representar la conectividad del kit.
+- `SoilMoistureLevel`: objeto conceptual para interpretar un porcentaje de humedad según la calibración y los límites configurados.
+- `FirmwareVersion`: identifica la versión del firmware reportada por el ESP32. Registrar una versión no implica disponer de actualización remota OTA.
+
+**Aggregates:**
+
+- `DeviceAggregate`: delimita la consistencia entre la identidad del kit, su cuenta, configuración, última lectura y estado del actuador. En el código base, esta responsabilidad se organiza alrededor del tipo `Device` y sus servicios, sin una clase adicional con ese nombre.
+- Una unidad puede agrupar plantas compatibles con una misma acción de riego. Tener varios nombres de plantas no significa que un solo sensor proporcione una lectura independiente para cada maceta.
+
+**Domain Services:**
+
+- La interpretación de conexión debe conservar la fecha del último contacto y distinguir un equipo sin conexión de una planta en condiciones normales.
+- La calibración y la clasificación de humedad se plantean como reglas explícitas, sin convertir valores desconocidos en mediciones válidas.
+- El cambio de nombre, ubicación o experiencia del usuario no transfiere la propiedad del dispositivo.
+
+**Repositories (Interfaces):**
+
+- `DeviceRepository`: define operaciones como `findById`, `findByAccountId`, `save`, `update`, `deleteById`, `updateStatus`, `recordTelemetry`, `updateValveState`, `getSettings` y `putSettings`.
+- El contrato evita que el dominio dependa de SQL, archivos JSON, HTTP o MQTT.
+
+#### 5.1.2. Interface Layer
+
+La API expone las operaciones de dispositivos mediante routers de Express. Los controladores del modelo conceptual se implementan como manejadores HTTP que validan entradas y delegan en los servicios de aplicación.
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createDeviceRouter` | `GET /api/devices`, `POST /api/devices` | Consultar los kits de la cuenta y registrar una asociación. |
+| Manejadores de dispositivo | `GET`, `PATCH` y `DELETE /api/devices/:deviceId` | Consultar, editar o desvincular un dispositivo autorizado. |
+| Manejadores de configuración | `GET` y `PUT /api/devices/:deviceId/settings` | Obtener y guardar los ajustes asociados al kit. |
+| Manejadores de activación | `POST /api/devices/:deviceId/pause` y `resume` | Solicitar pausa o reanudación de la operación del dispositivo. |
+| Interfaz interna de EdgeAPI | Recepción de telemetría y estado del equipo | Integrar mensajes del ESP32 a través de la comunicación entre EdgeAPI y backend. |
+
+La aplicación Flutter consulta la API mediante sus repositorios y fuentes de datos. No necesita publicar directamente en el broker ni conocer las credenciales MQTT del dispositivo.
+
+#### 5.1.3. Application Layer
+
+Esta capa coordina los casos de uso y verifica la asociación del recurso con la cuenta que realiza la solicitud.
+
+**Command Services:**
+
+- `PairDeviceService`: registra el dispositivo y lo asocia con la cuenta del usuario.
+- `UpdateDeviceService`: modifica nombre, ubicación y datos de la unidad autorizada.
+- `UnpairDeviceService`: desvincula el kit de la cuenta.
+- `RecordTelemetryService`: recibe y registra la lectura correspondiente al dispositivo.
+- `UpdateDeviceStatusService`: actualiza el estado reportado por la integración con EdgeAPI.
+
+**Query Services:**
+
+- `GetDeviceQuery`: obtiene un kit específico verificando la cuenta asociada.
+- `ListDevicesQuery`: devuelve los dispositivos de la cuenta para su selección en la aplicación.
+
+**Event Handlers:**
+
+- En EdgeAPI, `TelemetryEventHandler` y `StatusEventHandler` procesan los mensajes MQTT y los comunican a la API.
+- La publicación persistente de eventos y la deduplicación por identificador se mantienen como contratos de evolución del diseño. No se asume la existencia de un bus adicional por representar eventos en el modelo.
+
+#### 5.1.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgDeviceRepository`: implementa el contrato mediante PostgreSQL.
+- `FileDeviceRepository`: ofrece persistencia basada en archivos para los entornos que utilizan esa configuración.
+- La última telemetría se conserva en el campo JSONB `last_telemetry`; los ajustes se almacenan en `device_settings`.
+
+**External Services e integración IoT:**
+
+- `MqttBrokerClient`, en EdgeAPI, encapsula la conexión MQTT con HiveMQ Cloud.
+- `AquaSaveHttpClient`, en EdgeAPI, transmite la información al backend mediante HTTP.
+- El firmware ESP32 obtiene las lecturas y publica los mensajes. La recuperación de red y el control físico pertenecen al dispositivo y su integración, no a la interfaz Flutter.
+- Los almacenes de series temporales y la actualización OTA mostrados como extensiones del modelo no forman parte de la infraestructura base documentada.
+
+#### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama organiza la recepción de solicitudes, los servicios de dispositivos y los adaptadores de persistencia e integración. En la solución base, la comunicación con el broker se encapsula en EdgeAPI y la persistencia se realiza en PostgreSQL.
+
+<p align="center">
+  <img src="image/dc1.png" alt="Diagrama de componentes de Device Management" width="1000">
+</p>
+
+#### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo de clases relaciona el dispositivo con sus lecturas, estado del actuador y contratos. La cuenta identifica al propietario; la aplicación no mezcla lecturas o configuraciones entre kits.
+
+<p align="center">
+  <img src="image/DEVICE-MANAGEMENT.png" alt="Diagrama de clases de Device Management" width="1000">
+</p>
+
+##### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diagrama representa el diseño lógico de dispositivos y datos asociados. Su implementación base se concentra en las siguientes estructuras de PostgreSQL:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `devices` | `id` como PK; `account_id`, `name`, coordenadas, `status`, `valve_state`, `last_telemetry`, fechas. | Una cuenta puede asociar varios dispositivos. La autorización por `account_id` se verifica en los servicios; este campo no está declarado como FK en la migración base. |
+| `device_settings` | `device_id` como PK y FK; `settings` JSONB; `updated_at`. | Un registro de configuración por kit. La FK referencia `devices.id` y utiliza eliminación en cascada. |
+
+Las tablas separadas de lecturas, calibración, válvulas y actualizaciones representan una posible normalización del modelo; no se presentan como tablas ya creadas.
+
+<p align="center">
+  <img src="image/b1.png" alt="Diseño lógico de base de datos de Device Management" width="1000">
+</p>
+
+---
+
+### 5.2. Bounded Context: Irrigation Intelligence
+
+Irrigation Intelligence concentra los ciclos de riego, las reglas de humedad, la programación y la consideración del pronóstico. Su propósito es coordinar solicitudes de riego y conservar resultados que puedan ser consultados por el usuario.
+
+#### 5.2.1. Domain Layer
+
+Esta capa define las condiciones de una decisión de riego sin depender del proveedor climático, de Express o del broker MQTT.
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `IrrigationEvent` | Registra `id`, `deviceId`, `startedAt`, `endedAt`, `litersConsumed`, `triggerType`, `status`, `wasSkipped`, `skipReason`, `commandId` y lecturas disponibles. | Identifica el origen manual, automático o programado del ciclo y permite conservar su resultado por dispositivo. |
+| `WeatherForecast` | Contiene ubicación, coordenadas, temperatura, humedad, probabilidad de lluvia, precipitación, viento, condición, `retrievedAt` y `validUntil`. | Aporta información externa con una vigencia explícita; no reemplaza las lecturas del sustrato. |
+| `EdgeCommand` | Incluye `id`, `deviceId`, `type`, `status`, `issuedAt` y `acknowledgedAt`. | Representa una solicitud pendiente, confirmada o fallida en el contrato con el dispositivo. |
+| `IrrigationSchedule` | Modelo conceptual de días, hora, duración y habilitación de una evaluación programada. | En la base actual, sus ajustes forman parte de la configuración del dispositivo, sin una tabla independiente de horarios. |
+
+**Value Objects:**
+
+- `MoistureThreshold`: contiene humedad mínima, óptima y máxima. Su validación exige valores entre 0 y 100 y una relación ordenada entre los límites.
+- La duración del ciclo y el periodo de pausa deben interpretarse con unidades explícitas.
+- El motivo de omisión diferencia una decisión por humedad suficiente, una pausa y un fallo de operación.
+
+**Aggregates:**
+
+- El agregado de riego conserva la coherencia entre el dispositivo, la orden solicitada y el evento asociado. Un resultado de una unidad no puede atribuirse a otra.
+- Una orden aceptada y una ejecución física confirmada son estados distintos. La respuesta de la API no sustituye la confirmación del ESP32.
+
+**Domain Services:**
+
+- `IrrigationDecisionService`: evalúa telemetría, umbrales y pronóstico para devolver una decisión como iniciar, pausar o mantener detenido, junto con su motivo.
+- La política diseñada contempla límites de duración y cortes locales independientes de internet.
+- El uso del pronóstico debe considerar la exposición real de la unidad a la lluvia; las plantas protegidas no reciben el mismo beneficio que una planta exterior.
+
+**Repositories y Ports:**
+
+- `IrrigationEventRepository`: define `save`, `findByDeviceId`, `findRunningByDeviceId`, `findAllRunning` y `completeRunningEvent`.
+- `EdgeDeviceGateway`: define el envío de solicitudes de apertura, cierre, pausa y reanudación, además de la consulta de pendientes y su confirmación.
+- `WeatherIntegrationService`: permite obtener el pronóstico mediante un adaptador externo.
+
+#### 5.2.2. Interface Layer
+
+Los manejadores HTTP de Express reciben las solicitudes de las aplicaciones y delegan el control en los servicios.
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createIrrigationRouter` | `GET /api/irrigation/devices/:deviceId/state` | Consultar el estado de riego de una unidad autorizada. |
+| Manejadores de control | `POST /api/irrigation/devices/:deviceId/start` y `stop` | Solicitar el inicio o la detención; la API responde con aceptación de la solicitud. |
+| Manejador de eventos | `GET /api/irrigation/devices/:deviceId/events` | Consultar el historial correspondiente al dispositivo. |
+| `createWeatherRouter` | Rutas bajo `/api/weather` | Entregar información climática obtenida mediante el adaptador. |
+
+La interfaz de recomendaciones asistidas por IA se plantea dentro de este contexto. Cuando se implemente, deberá mostrar una propuesta con fundamento y permitir aceptarla o descartarla; no se describe como una integración ya disponible.
+
+#### 5.2.3. Application Layer
+
+**Command Services:**
+
+- `StartIrrigationService`: verifica el dispositivo de la cuenta, coordina la orden de apertura y registra el evento asociado.
+- `StopIrrigationService`: coordina la solicitud de cierre y el seguimiento del ciclo.
+- `ScheduledIrrigationService`: procesa la evaluación de los horarios configurados.
+- `SyncPumpStateService`: sincroniza la información recibida de la bomba con el estado y los eventos del riego.
+
+**Query Services:**
+
+- `GetIrrigationStateQuery`: obtiene el estado de control para la unidad consultada.
+- `ListIrrigationEventsQuery`: consulta los ciclos del dispositivo.
+- `GetWeatherForecastQuery`: coordina la consulta del pronóstico.
+
+**Event Handlers y recomendaciones propuestas:**
+
+- La recepción del estado de la bomba permite actualizar el seguimiento del ciclo.
+- El diseño de recomendaciones apoyadas por IA contempla registrar datos utilizados, explicación y vencimiento. La aceptación deberá volver a comprobar propiedad, lecturas y límites antes de generar una orden.
+- Los fallos del proveedor climático o del futuro servicio de IA no deben impedir la detención del riego.
+
+#### 5.2.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgIrrigationEventRepository` y `FileIrrigationEventRepository`: implementan el almacenamiento y consulta de eventos.
+- `PgEdgeDeviceGateway` y `FileEdgeDeviceGateway`: implementan el contrato de órdenes pendientes y confirmaciones según la configuración del entorno.
+
+**External Services:**
+
+- `OpenMeteoWeatherService`: adapta las respuestas de Open-Meteo al modelo del dominio.
+- `CommandDispatchService`, en EdgeAPI, coordina la distribución de órdenes hacia el broker y su comunicación con la API.
+- El adaptador de IA se mantiene pendiente. Su diseño no concede al modelo acceso directo a las credenciales o al canal de control físico.
+
+#### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama muestra la separación entre controladores, decisiones de riego, repositorios y el adaptador climático. El proveedor utilizado en la implementación base es Open-Meteo; el dominio no depende del nombre comercial de ese servicio.
+
+<p align="center">
+  <img src="image/dc2.png" alt="Diagrama de componentes de Irrigation Intelligence" width="1000">
+</p>
+
+#### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo relaciona ciclos, programación, umbrales y pronóstico. Los contratos del gateway separan la decisión de negocio de la publicación MQTT y permiten conocer el resultado de cada solicitud.
+
+<p align="center">
+  <img src="image/IRRIGATION-INTELLIGENCE.png" alt="Diagrama de clases de Irrigation Intelligence" width="1000">
+</p>
+
+##### 5.2.6.2. Bounded Context Database Design Diagram
+
+La estructura lógica organiza eventos, horarios y parámetros. En PostgreSQL, la base implementada utiliza las siguientes tablas:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `irrigation_events` | `id` como PK; `device_id`, inicio, fin, litros, origen, estado, motivo y `command_id`. | Un dispositivo puede tener varios eventos. El vínculo se valida en la aplicación; la migración base no declara una FK sobre `device_id`. |
+| `edge_commands` | `id` como PK; `device_id`, tipo, estado, emisión y confirmación. | Conserva el seguimiento de las solicitudes y un índice por dispositivo y estado. |
+| `device_settings` | `device_id` como PK y FK; `settings` JSONB. | Mantiene los ajustes de umbrales y programación asociados al kit. |
+
+El pronóstico se obtiene mediante el servicio externo. Las tablas específicas de horarios, pronósticos y pausas del diagrama representan el modelo lógico ampliado, no una migración adicional ya ejecutada.
+
+<p align="center">
+  <img src="image/b2.png" alt="Diseño lógico de base de datos de Irrigation Intelligence" width="1000">
+</p>
+
+---
+
+### 5.3. Bounded Context: Identity Access Management
+
+Identity Access Management administra cuentas, autenticación, sesiones y datos de perfil. La experiencia principiante o experta personaliza la orientación, pero no concede acceso a dispositivos de otras personas ni determina un plan comercial.
+
+#### 5.3.1. Domain Layer
+
+**Entities:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `User` | Contiene `id`, `email`, `passwordHash`, `profile`, `avatarUrl`, `phone`, `isActive`, `createdAt` y `lastLoginAt`. | Mantiene la identidad de la cuenta. `toPublicUser` excluye el hash de contraseña de la información pública. |
+| `UserProfile` | Agrupa nombre, datos de ubicación y condiciones registradas para personalizar la experiencia. | En el código base forma parte de `User.profile`, sin un repositorio independiente. |
+| `AppSession` | Incluye `id`, `token`, `userId`, `createdAt`, `expiresAt` y `revokedAt`. | Se relaciona con una cuenta. `isSessionValid` comprueba vencimiento y revocación. |
+
+**Value Objects:**
+
+- El correo debe conservar un formato válido y una identidad única en la cuenta.
+- La contraseña se procesa mediante el contrato de hash; no se almacena en texto plano ni se devuelve en la respuesta.
+- `ExperienceLevel` representa conceptualmente la preferencia principiante o experto. Su incorporación a los campos del perfil es una evolución del diseño, no un permiso de administración.
+
+**Aggregates:**
+
+- `UserAggregate`: organiza identidad y perfil alrededor de la cuenta. Su representación base es el tipo `User`.
+- Las sesiones se vinculan al usuario mediante su identificador, conservando vencimiento y revocación.
+
+**Domain Services:**
+
+- `PasswordHasher`: contrato para generar y verificar hashes.
+- `JwtService`: contrato para el manejo de los tokens utilizados por la autenticación.
+- El reconocimiento de una identidad externa de Google y los enlaces de recuperación pertenecen al diseño de las historias pendientes.
+
+**Repositories (Interfaces):**
+
+- `UserRepository`: permite `findById`, `findByEmail`, `save`, `updateLastLogin`, `updateProfile` y `updatePassword`.
+- `SessionRepository`: permite `save`, `findByToken` y `revokeByToken`.
+
+#### 5.3.2. Interface Layer
+
+**Controllers y rutas:**
+
+| Componente | Operaciones | Responsabilidad |
+| :--- | :--- | :--- |
+| `createAuthRouter` | `POST /api/auth/register` y `login` | Validar los datos y solicitar registro o autenticación. |
+| Manejador de cierre | `POST /api/auth/logout` | Solicitar la revocación de la sesión. |
+| Manejadores de perfil | `GET` y `PATCH /api/auth/me` | Consultar o actualizar los datos del usuario autenticado. |
+| Manejador de contraseña | `POST /api/auth/change-password` | Verificar la contraseña actual antes de solicitar su cambio. |
+
+La validación de entradas se realiza mediante los esquemas de la API y el middleware de autenticación. El frontend muestra mensajes de corrección y conserva la navegación de acceso separada de las pantallas operativas.
+
+#### 5.3.3. Application Layer
+
+**Command Services:**
+
+- `RegisterUserService`: comprueba el correo, procesa la contraseña y crea la cuenta.
+- `LoginUserService`: verifica credenciales y genera la sesión.
+- `LogoutUserService`: revoca la sesión indicada.
+- La actualización del perfil y el cambio de contraseña se coordinan desde los manejadores con los contratos de repositorio y hash existentes.
+
+**Query Services:**
+
+- `AuthenticateSessionService`: valida la sesión utilizada para acceder a recursos protegidos.
+- `GetCurrentUserQuery`: obtiene los datos de la cuenta autenticada.
+
+**Event Handlers y extensiones propuestas:**
+
+- El registro y el acceso permiten actualizar la información de cuenta y el último inicio de sesión.
+- La recuperación por correo y el acceso con Google se incorporarán mediante adaptadores específicos cuando se implementen sus historias.
+- Cambiar el nivel de experiencia no debe generar una suscripción, transferir dispositivos o alterar políticas de riego aprobadas.
+
+#### 5.3.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- `PgUserRepository` y `PgSessionRepository`: implementan la persistencia en PostgreSQL.
+- `FileUserRepository` y `FileSessionRepository`: ofrecen los adaptadores basados en archivos.
+- La sesión se consulta y revoca mediante su repositorio. Redis no es una dependencia de la implementación base.
+
+**External Services:**
+
+- Los adaptadores de autenticación externa y envío de enlaces se mantienen como extensiones previstas.
+- La base actual no se presenta como una integración terminada con Google OAuth o un proveedor de correos.
+
+#### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama organiza el ingreso de credenciales, la gestión de usuarios y sesiones, y los servicios externos previstos. Los routers de Express y PostgreSQL constituyen la base actual; los servicios externos del modelo no son obligatorios para el acceso con correo y contraseña.
+
+<p align="center">
+  <img src="image/dc3.png" alt="Diagrama de componentes de Identity Access Management" width="1000">
+</p>
+
+#### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+Las relaciones permiten identificar la cuenta, su perfil y sus sesiones. La personalización por experiencia se mantiene separada de la autorización de recursos.
+
+<p align="center">
+  <img src="image/ACCESS.png" alt="Diagrama de clases de Identity Access Management" width="1000">
+</p>
+
+##### 5.3.6.2. Bounded Context Database Design Diagram
+
+El diseño lógico contempla usuarios, perfiles, sesiones y recuperación. La implementación física base utiliza:
+
+| Tabla | Claves y campos relevantes | Relación y restricciones |
+| :--- | :--- | :--- |
+| `users` | `id` como PK; `email` único; `password_hash`, nombre, campos de perfil, estado y fechas. | El perfil se almacena dentro de esta tabla; no hay una tabla adicional de perfiles en la migración base. |
+| `sessions` | `id` como PK; `token` único; `user_id` como FK; creación, vencimiento y revocación. | Una cuenta puede tener varias sesiones. `user_id` referencia `users.id`. |
+
+La tabla de enlaces de recuperación y la separación de perfiles quedan como extensiones. La preferencia principiante o experto deberá mantenerse independiente de la propiedad de los dispositivos.
+
+<p align="center">
+  <img src="image/b3.png" alt="Diseño lógico de base de datos de Identity Access Management" width="1000">
+</p>
+
+---
+
+### 5.4. Bounded Context: Monetization
+
+Monetization define el modelo previsto para consultar planes y gestionar prestaciones opcionales. Este contexto se conserva en el diseño de AquaSave, pero la implementación base revisada no contiene un módulo de facturación operativo.
+
+#### 5.4.1. Domain Layer
+
+**Entities propuestas:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `Subscription` | Incluye `subscriptionId`, `userId`, `planType`, `status`, `startDate`, `endDate`, `renewalDate` y `autoRenew`. | Representa la vigencia de las prestaciones elegidas y permite consultar, activar o cancelar una suscripción verificada. |
+| `PaymentMethod` | Conserva identificador, usuario, tipo, últimos dígitos, vencimiento y referencia tokenizada del proveedor. | Permite identificar un medio de pago sin almacenar el número completo de tarjeta ni el código de seguridad. |
+| `PaymentTransaction` | Contiene identificador, suscripción, importe, moneda, estado, fecha y referencia externa. | Registra el resultado de una operación sin duplicarlo ante una nueva entrega de la confirmación. |
+
+**Value Objects:**
+
+- `PlanType`: identifica un plan y sus prestaciones aprobadas. Las denominaciones Free y Premium del modelo son alternativas de diseño; no fijan precios o condiciones comerciales.
+- `SubscriptionStatus`: diferencia estados activos, cancelados, vencidos o pendientes de regularización.
+- `Money`: agrupa importe y moneda con una representación decimal consistente.
+
+**Aggregates:**
+
+- `SubscriptionAggregate`: mantiene las transiciones de la suscripción y las referencias de sus operaciones comerciales.
+- La confirmación de pago debe aplicarse una sola vez. Un reintento no genera otra vigencia o un cargo duplicado.
+
+**Domain Services:**
+
+- `ISubscriptionPolicyService`: establece cambios de plan, vigencia y prestaciones opcionales.
+- `IBillingService`: define el contrato de procesamiento comercial.
+- Ninguna política comercial impide detener el riego o modifica los límites locales de un ciclo en curso.
+
+**Repositories (Interfaces):**
+
+- `ISubscriptionRepository`: consulta por usuario y guarda cambios de estado.
+- `IPaymentTransactionRepository`: conserva operaciones y referencias únicas del proveedor.
+
+#### 5.4.2. Interface Layer
+
+**Controllers propuestos:**
+
+- `PlanController`: consulta la comparación de planes bajo una interfaz prevista como `/api/plans`.
+- `SubscriptionController`: consulta y gestiona suscripciones bajo `/api/subscriptions`.
+- `PaymentController`: coordina las operaciones verificadas del proveedor bajo `/api/payments`.
+
+Estas rutas son contratos propuestos; no se incluyen como endpoints existentes. Cuando se implementen, utilizarán manejadores de Express, autenticación y validación de las confirmaciones externas.
+
+#### 5.4.3. Application Layer
+
+**Command Services propuestos:**
+
+- `InitializePremiumCheckoutCommandService`: inicia una operación de contratación en un entorno de prueba del proveedor seleccionado.
+- `ConfirmSubscriptionCommandService`: aplica una confirmación verificada de forma idempotente.
+- `CancelSubscriptionCommandService`: registra la cancelación según las condiciones de vigencia.
+- `ProcessRecurringBillingCommandService`: coordina renovaciones únicamente si esa modalidad fue aprobada y aceptada por el usuario.
+
+**Query Services:**
+
+- `SubscriptionStatusQueryService`: obtiene estado, vigencia y prestaciones de la suscripción.
+- `PaymentHistoryQueryService`: consulta las operaciones de la cuenta.
+
+**Event Handlers:**
+
+- `SubscriptionConfirmedEventHandler`: actualiza las prestaciones opcionales tras una confirmación válida.
+- `RecurringBillingFailedEventHandler`: registra el resultado y comunica la condición al usuario.
+- `SubscriptionCancelledEventHandler`: actualiza la vigencia sin intervenir en el control físico.
+
+#### 5.4.4. Infrastructure Layer
+
+**Persistence / Repositories propuestos:**
+
+- `PostgresSubscriptionRepository`: implementará el almacenamiento de suscripciones con consultas por usuario y estado.
+- `PostgresPaymentTransactionRepository`: conservará referencias externas únicas y resultados de cada operación.
+
+**External Services:**
+
+- `StripePaymentService`: representa el adaptador de pagos del modelo conceptual. Su utilización requiere seleccionar y configurar el proveedor; no se presenta como una integración ya realizada.
+- `BillingSchedulerService`: representa la coordinación de renovaciones previstas.
+- Las credenciales y confirmaciones del proveedor se resolverán en el backend, no en el código público de Flutter.
+
+#### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama presenta el diseño de los controladores, servicios de suscripción, repositorios y adaptador comercial. Es una vista de la capacidad propuesta, no una evidencia de cobros implementados.
+
+<p align="center">
+  <img src="image/dc4.png" alt="Diagrama de componentes propuesto para Monetization" width="1000">
+</p>
+
+#### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo relaciona suscripciones, medios de pago y transacciones, manteniendo la identidad de la cuenta como referencia externa al contexto.
+
+<p align="center">
+  <img src="image/MONETIZATION.png" alt="Diagrama de clases propuesto para Monetization" width="1000">
+</p>
+
+##### 5.4.6.2. Bounded Context Database Design Diagram
+
+El diseño propone `subscriptions`, `payment_methods`, `payment_transactions` y `billing_grace_periods`. Una suscripción puede asociar varias transacciones; cada registro conserva una PK y las referencias necesarias para su trazabilidad.
+
+La implementación deberá establecer FKs internas, unicidad de referencias de pago y precisión decimal para importes. Las referencias a usuarios respetarán los límites del contexto. Estas tablas no forman parte de las migraciones base actuales.
+
+<p align="center">
+  <img src="image/b4.png" alt="Diseño lógico de base de datos propuesto para Monetization" width="1000">
+</p>
+
+---
+
+### 5.5. Bounded Context: Analytics
+
+Analytics organiza el diseño de las consultas históricas, los indicadores de consumo y las comparaciones por periodo. Su responsabilidad es explicar los registros de las unidades, sin modificar órdenes o políticas de riego.
+
+La implementación base contiene consultas agregadas dentro de Irrigation Intelligence y pantallas de Análisis e Historial en Flutter. La separación en un módulo Analytics con repositorios propios se mantiene como evolución prevista.
+
+#### 5.5.1. Domain Layer
+
+**Entities propuestas:**
+
+| Elemento | Propósito y atributos principales | Comportamientos y relaciones |
+| :--- | :--- | :--- |
+| `WaterSavingsMetric` | Contiene identificador, dispositivo, usuario, periodo, consumo, variación, porcentaje y fecha de cálculo. | Compara periodos o una línea base válida, conservando el método utilizado. |
+| `CropHealthReport` | Agrupa periodo, humedad y temperatura disponibles, número de ciclos e indicadores definidos. | Resume condiciones registradas; no constituye un diagnóstico de salud de la planta. |
+| `SustainabilitySummary` | Consolida resultados por dispositivo y periodo. | Presenta consumo y comparaciones que puedan sustentarse con los datos disponibles. |
+
+**Value Objects:**
+
+- `SavingsPeriod`: delimita fechas de análisis diario, semanal o mensual.
+- `WaterVolume`: representa una cantidad con su unidad y método de obtención.
+- `HealthScore`: indicador conceptual cuya fórmula y alcance deben documentarse antes de utilizarlo.
+
+**Aggregates:**
+
+- `AnalyticsAggregate`: organiza proyecciones por unidad y periodo, manteniendo su procedencia y fecha de cálculo.
+- Los resultados de distintos dispositivos no se mezclan sin indicar el criterio de agrupación.
+
+**Domain Services:**
+
+- `IWaterSavingsCalculationService`: calcula variaciones respecto de una referencia positiva y comparable. Sin una referencia válida no se informa ahorro.
+- `ICropHealthScoringService`: define indicadores de seguimiento, sin atribuir enfermedades o causas que los sensores no pueden demostrar.
+- El modelo no convierte una ausencia de datos en un consumo real igual a cero.
+
+**Repositories (Interfaces):**
+
+- `IWaterSavingsMetricRepository`: permite guardar y consultar métricas por dispositivo y periodo.
+- `ICropHealthReportRepository`: define consultas de resúmenes históricos.
+
+#### 5.5.2. Interface Layer
+
+**Interfaz existente:**
+
+- `GET /api/irrigation/analytics`: proporciona indicadores y agregaciones de eventos completados, con filtro opcional por dispositivo.
+- Las aplicaciones Flutter consumen estos resultados y consultan el historial mediante la interfaz de eventos.
+
+**Controllers propuestos:**
+
+- `WaterSavingsController`: consulta métricas y comparaciones.
+- `CropReportController`: entrega resúmenes de seguimiento.
+- `SustainabilityController`: organiza las consultas consolidadas del modelo conceptual.
+
+La futura interfaz bajo `/api/analytics` se describe como contrato de diseño, no como un conjunto de rutas ya implementadas.
+
+#### 5.5.3. Application Layer
+
+**Command Services propuestos:**
+
+- `CalculateWaterSavingsCommandService`: coordina agregaciones y comparaciones a partir de ciclos registrados.
+- `GenerateWeeklyCropReportCommandService`: prepara un resumen por unidad y semana.
+- `DeliverMonthlySustainabilitySummaryCommandService`: consolida resultados documentados por periodo.
+
+**Query Services:**
+
+- `WaterSavingsDashboardQueryService`: organiza consumo y comparaciones para el dashboard.
+- Las consultas del historial permiten revisar fecha, origen, duración y resultado del ciclo, sin reconstruir un cierre no confirmado.
+
+**Event Handlers:**
+
+- `WaterSavingsMetricCalculatedEventHandler`: actualiza la proyección consultada por las aplicaciones.
+- El consumo de eventos persistentes e idempotentes se mantiene como parte del diseño de integración. Los consumidores no deben ejecutar nuevamente el riego.
+
+#### 5.5.4. Infrastructure Layer
+
+**Persistence / Repositories:**
+
+- La base actual consulta los registros de `irrigation_events` mediante sus repositorios.
+- `PostgresWaterSavingsRepository` y `PostgresCropHealthReportRepository` representan la persistencia propia propuesta para Analytics.
+- Los índices por dispositivo y periodo facilitarán consultas sin incorporar una base de datos distinta por obligación.
+
+**External Services:**
+
+- `AnalyticsSchedulerService`: representa la coordinación prevista de cálculos periódicos.
+- La presentación de gráficos corresponde al frontend Flutter.
+- La entrega de resúmenes o avisos fuera de la aplicación requiere una integración adicional; no se afirma que exista un servicio push implementado.
+
+#### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama separa la consulta de indicadores, los cálculos y los adaptadores de almacenamiento. La arquitectura permite evolucionar las agregaciones actuales hacia el contexto sin trasladar a Analytics el control del dispositivo.
+
+<p align="center">
+  <img src="image/dc5.png" alt="Diagrama de componentes propuesto para Analytics" width="1000">
+</p>
+
+#### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+El modelo de clases organiza métricas y reportes por unidad. Cada comparación debe conservar su periodo y la referencia utilizada.
+
+<p align="center">
+  <img src="image/ANALYTICS.png" alt="Diagrama de clases propuesto para Analytics" width="1000">
+</p>
+
+##### 5.5.6.2. Bounded Context Database Design Diagram
+
+El diagrama propone `water_savings_metrics`, `crop_health_reports` y `sustainability_summaries`. Cada registro posee una PK y referencias al dispositivo, al usuario o a la métrica correspondiente.
+
+Antes de implementar estas tablas se definirán relaciones internas, unicidad por unidad y periodo, cobertura de datos y fórmulas de comparación. Los campos de equivalencia de CO₂ o ahorro económico del modelo requieren factores y costos documentados; no representan resultados demostrados ni métricas disponibles en la base actual.
+
+<p align="center">
+  <img src="image/b5.png" alt="Diseño lógico de base de datos propuesto para Analytics" width="1000">
+</p>
+
+---
+## Capítulo VI: Solution UX Design
+
+Este capítulo presenta los lineamientos visuales, la arquitectura de información y el diseño de interacción de AquaSave. La experiencia se orienta a usuarios principiantes y expertos en el cuidado de plantas domésticas, manteniendo una estructura común para consultar lecturas, gestionar unidades y controlar el riego.
+
+La aplicación web y la aplicación Android se desarrollan con Flutter y Dart. El diseño utiliza los componentes y estilos del frontend como base, mientras que los wireframes representan la organización propuesta de las pantallas y sus recorridos. Los valores, nombres y porcentajes visibles en las imágenes son ejemplos de diseño, no resultados de pruebas o mediciones del producto.
+
+### 6.1. Style Guidelines
+
+Los lineamientos de estilo buscan transmitir claridad, confianza y cuidado responsable de las plantas. La identidad visual utiliza tonos naturales, tarjetas con información jerarquizada y acciones reconocibles, evitando que el usuario necesite interpretar detalles técnicos para conocer el estado de su unidad.
+
+#### 6.1.1. General Style Guidelines
+
+**Branding y concepto visual**
+
+AquaSave relaciona el cuidado de plantas con la tecnología de monitoreo y riego. Su logotipo combina la identidad del producto con elementos asociados al agua y al crecimiento vegetal. La marca se mantiene visible en la landing page, el acceso a la aplicación y la navegación principal.
+
+Las tarjetas permiten agrupar información de humedad, clima, conexión y riego. Los controles se distinguen de los datos informativos para que el usuario pueda reconocer qué está consultando y qué acción está por solicitar.
+
+<p align="center">
+  <img src="image/General_Style_Guidelines.png" alt="Guía visual general de AquaSave" width="1000">
+</p>
+
+**Tipografía y legibilidad**
+
+El frontend define sus estilos en `AppTextStyles`. La familia Manrope se utiliza para encabezados y títulos, mientras que Inter se emplea en el contenido, las etiquetas y los controles.
+
+| Uso | Fuente | Tamaños base | Peso habitual | Propósito |
+| :--- | :--- | :--- | :--- | :--- |
+| Títulos destacados | Manrope | 26, 30 y 44 | 800 | Presentar el nombre de una vista o un bloque principal. |
+| Encabezados | Manrope | 20, 24 y 28 | 800 | Organizar secciones y tarjetas. |
+| Títulos de contenido | Inter | 15, 17 y 19 | 700 | Identificar elementos y métricas. |
+| Texto de cuerpo | Inter | 14, 16 y 19 | 500 | Explicar estados, instrucciones y resultados. |
+| Etiquetas | Inter | 11.5, 13 y 13.5 | 700 | Identificar campos, acciones y datos secundarios. |
+
+Los valores de humedad y temperatura deben mostrarse junto con su unidad. La fecha de la lectura y la condición de conexión se conservan cerca del dato para evitar que un valor antiguo se interprete como actual.
+
+**Paleta de colores**
+
+Los tokens de color se centralizan en `AppColors`. El modo claro utiliza fondos suaves y verdes para las acciones principales. El modo oscuro conserva esa identidad mediante superficies oscuras y textos claros.
+
+| Token visual | Color base | Uso |
+| :--- | :--- | :--- |
+| `lightBackground` | `#F3F7EF` | Fondo principal del modo claro. |
+| `lightSurface` | `#EAF3E5` | Superficies y agrupaciones de contenido. |
+| `lightPrimary` | `#497654` | Acciones principales e indicadores seleccionados. |
+| `lightCard` | `#F8FBF4` | Tarjetas de información. |
+| `lightText` | `#2D3D2C` | Texto principal. |
+| `lightDivider` | `#D9E2D3` | Bordes y separadores. |
+| `secondary` | `#FE5C73` | Acento y señales de atención según el componente. |
+| `darkBackground` | `#0F1A18` | Fondo principal del modo oscuro. |
+| `darkSurface` | `#162421` | Superficies del modo oscuro. |
+| `darkCard` | `#1D2E2A` | Tarjetas del modo oscuro. |
+| `darkPrimary` | `#7FD09E` | Acciones principales del modo oscuro. |
+| `darkText` | `#E7EFE9` | Texto principal del modo oscuro. |
+
+La lámina resume la identidad visual de la marca; los valores de esta tabla corresponden a los tokens del frontend. Los estados también deben incluir texto e iconos, de modo que una alerta o una desconexión no dependan únicamente del color.
+
+**Espaciado, bordes y retícula**
+
+`AppDimensions` define una escala de espaciado consistente para relacionar controles y separar secciones.
+
+| Token | Valor base | Uso |
+| :--- | :--- | :--- |
+| `spaceXs` | 8 | Separación mínima entre elementos relacionados. |
+| `spaceSm` | 14 | Separación entre campos y controles. |
+| `spaceMd` | 20 | Espacio entre bloques de contenido. |
+| `spaceLg` | 28 | Márgenes y relleno de secciones principales. |
+| `spaceXl` | 39 | Separación amplia entre grupos. |
+| Radio de campos | 14 | Bordes de entradas y controles. |
+| Radio de tarjetas | 20 | Contenedores de información. |
+| Radio de bloques destacados | 24 | Tarjetas principales o de presentación. |
+| `inputHeight` y `buttonHeight` | 57 | Altura base de los componentes definidos por la aplicación. |
+| `sidebarWidth` | 236 | Ancho de la navegación lateral. |
+
+Los valores se expresan como unidades lógicas de Flutter y se adaptan al tamaño disponible. El tema base de los botones utiliza una altura mínima de 52 unidades; los componentes específicos pueden utilizar el token de 57.
+
+**Componentes y estados visuales**
+
+- **Botones primarios:** destacan la acción principal del formulario o la pantalla.
+- **Botones secundarios:** permiten cancelar, regresar o consultar detalles sin competir con la acción principal.
+- **Campos de entrada:** mantienen una etiqueta visible, ayuda cuando corresponde y un mensaje próximo al campo si ocurre un error.
+- **Switches y controles de rango:** muestran el valor seleccionado y explican qué configuración se está modificando.
+- **Tarjetas:** agrupan información por dispositivo o propósito y utilizan bordes redondeados, con elevación baja o nula según el componente.
+- **Estados de carga y error:** informan si se está consultando información, si la operación no pudo completarse o si es posible reintentar.
+- **Estados de riego:** diferencian una solicitud enviada del estado reportado por el dispositivo.
+
+**Tono de comunicación**
+
+La comunicación debe ser cercana, respetuosa y directa. Para un principiante, se prioriza explicar qué sucede y cuál es el siguiente paso; para un experto, se permite consultar parámetros y detalles adicionales sin cambiar sus permisos.
+
+| Dimensión | Lineamiento | Ejemplo |
+| :--- | :--- | :--- |
+| Formalidad | Lenguaje cotidiano sin perder precisión. | “Revisa la conexión del dispositivo.” |
+| Humor | Tono principalmente serio en alertas y control. | Evitar bromas ante un fallo del riego. |
+| Respeto | No responsabilizar al usuario por un error. | “Revisa los valores antes de guardar.” |
+| Entusiasmo | Moderado, especialmente en confirmaciones. | “Configuración guardada.” |
+
+Las recomendaciones se presentan como apoyo y no como instrucciones infalibles. Cuando falten datos, el mensaje debe explicar la limitación sin afirmar que la planta está en buen estado.
+
+**Inclusión y accesibilidad**
+
+El diseño contempla textos comprensibles, tamaño legible, estados identificados por texto e iconos y navegación con foco reconocible. Los formularios deben permitir corregir errores sin perder información válida. Estas pautas son criterios de diseño que se verificarán durante la implementación y las pruebas; no equivalen a una certificación de accesibilidad ya obtenida.
+
+#### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+**Web Style Guidelines**
+
+La aplicación Flutter Web utiliza Material Design 3 y una estructura adaptativa. En pantallas amplias, la barra lateral permite cambiar de sección sin perder el contexto de la vista.
+
+| Elemento | Lineamiento |
+| :--- | :--- |
+| Navegación | Sidebar con logotipo, iconos y sección seleccionada. |
+| Layout | Tarjetas distribuidas en columnas según el ancho disponible. |
+| Formularios | Campos agrupados por propósito y acciones próximas al contenido. |
+| Control de riego | Estado de la unidad y acciones de inicio o detención claramente identificadas. |
+| Consultas | Indicadores de carga, información disponible y posibilidad de reintento. |
+| Acceso por teclado | Orden de foco y controles reconocibles como criterio de verificación. |
+
+El cambio de navegación se realiza a partir del ancho disponible: con 800 unidades o más se utiliza la barra lateral; con menos espacio se utiliza la navegación inferior. La reorganización depende del tamaño de la ventana, no únicamente de si el sistema se ejecuta en navegador o Android.
+
+**Mobile Style Guidelines**
+
+La aplicación Android conserva la identidad, los datos y las tareas de la versión web. En pantallas estrechas, las tarjetas se apilan y los controles se distribuyen para permitir una interacción táctil clara.
+
+| Elemento | Lineamiento |
+| :--- | :--- |
+| Navegación inferior | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. |
+| Etiquetas | Se destaca la etiqueta del destino seleccionado. |
+| Tarjetas | Una columna cuando no existe espacio para una retícula. |
+| Formularios | Campos apilados y desplazamiento vertical. |
+| Modales | Contenido ajustado al ancho y acciones sin desbordamientos. |
+| Lecturas | Valor, unidad y fecha visibles sin depender de un gráfico. |
+| Acciones críticas | Área táctil suficiente y estado de la solicitud visible. |
+
+La preferencia de tema se gestiona desde el frontend. Las etiquetas disponibles se organizan mediante `AppLocalizations`, manteniendo los mismos identificadores y unidades en las distintas versiones de la interfaz.
+
+**Devices Style Guidelines**
+
+El ESP32 no se plantea como una pantalla adicional de la aplicación. La experiencia del dispositivo se concentra en la instalación, la vinculación y la comprensión de su estado desde el celular o navegador.
+
+| Información del kit | Representación en la interfaz | Propósito |
+| :--- | :--- | :--- |
+| Humedad del sustrato | Porcentaje, interpretación y fecha. | Evaluar la necesidad de revisar el riego. |
+| Temperatura ambiente | Valor en °C y momento de lectura. | Comprender las condiciones del entorno. |
+| Conectividad | “En línea” o “Sin conexión”, con último contacto. | Reconocer si la información es reciente. |
+| Actuador | Estado reportado y seguimiento de la solicitud. | Distinguir control solicitado y operación confirmada. |
+| Configuración | Valores, unidades y validaciones. | Evitar ajustes ambiguos. |
+| Instalación | Pasos, ilustraciones y confirmación de conexión. | Reducir las dudas durante la preparación del kit. |
+
+La guía no debe presentar un dato opcional como si estuviera disponible en todos los kits. Una lectura ausente o una interrupción de comunicación debe explicarse de forma explícita.
+
+### 6.2. Information Architecture
+
+La arquitectura de información organiza AquaSave alrededor de las tareas de cuidado doméstico. Las secciones visibles utilizan términos próximos al usuario, mientras que los bounded contexts permanecen como una división interna del software.
+
+#### 6.2.1. Organization Systems
+
+El sistema principal es **funcional por tareas**. Cada sección reúne acciones asociadas a un objetivo reconocible.
+
+| Sección | Objetivo del usuario | Contenido principal |
+| :--- | :--- | :--- |
+| Inicio | Conocer rápidamente el estado de una unidad. | Lecturas disponibles, conexión, clima y control rápido. |
+| Dispositivos | Identificar y gestionar los kits propios. | Listado, selección, datos de unidad y configuración asociada. |
+| Análisis | Comprender patrones de consumo. | Indicadores, gráficos y comparaciones cuando existan datos suficientes. |
+| Historial | Revisar lo ocurrido durante el riego. | Ciclos, fechas, origen y resultados disponibles. |
+| Perfil | Mantener los datos de la cuenta. | Información personal y ajustes de acceso. |
+| Configuración | Ajustar preferencias y reglas. | Umbrales, programación y otros parámetros de la unidad. |
+
+También se aplican los siguientes sistemas:
+
+- **Jerárquico:** sección principal, dispositivo seleccionado y detalle de la unidad.
+- **Cronológico:** historial ordenado por fecha y periodo de consulta.
+- **Secuencial:** proceso guiado para preparar y vincular el dispositivo.
+- **Por estado:** diferenciación entre datos disponibles, desactualizados, solicitudes pendientes y condiciones que requieren atención.
+
+La personalización principiante o experta modifica el nivel de explicación. Ambas experiencias conservan la misma organización principal y solo permiten acceder a los recursos de la cuenta.
+
+#### 6.2.2. Labeling Systems
+
+Las etiquetas deben ser breves, consistentes y comprensibles. El usuario no necesita conocer el nombre técnico del bounded context para encontrar una función.
+
+**Labels de navegación:**
+
+| Label | Significado |
+| :--- | :--- |
+| Inicio | Resumen del estado y acceso al control rápido. |
+| Dispositivos | Kits y unidades asociados a la cuenta. |
+| Análisis | Indicadores y gráficos de los registros. |
+| Historial | Consulta de los ciclos de riego. |
+| Perfil | Información de la cuenta. |
+| Configuración | Preferencias y parámetros de operación. |
+
+**Labels de acción:**
+
+| Acción | Resultado esperado |
+| :--- | :--- |
+| Agregar dispositivo | Iniciar el registro o la vinculación de un kit. |
+| Ver detalles | Consultar la unidad seleccionada. |
+| Verificar zona | Comprobar una ubicación para la consulta climática. |
+| Iniciar riego | Enviar una solicitud de inicio. |
+| Detener riego | Enviar una solicitud de detención. |
+| Agregar horario | Registrar una evaluación programada. |
+| Guardar configuración | Validar y guardar los ajustes. |
+| Cancelar | Abandonar una edición sin confirmar los cambios. |
+
+**Labels de estado:**
+
+| Estado | Interpretación |
+| :--- | :--- |
+| En línea | Existe contacto reciente con el dispositivo. |
+| Sin conexión | No existe contacto vigente; puede conservarse el último dato. |
+| Solicitud pendiente | La orden fue solicitada y falta conocer su resultado. |
+| Riego activo | El dispositivo ha reportado la operación. |
+| Detenido | El estado disponible indica ausencia de riego activo. |
+| Datos insuficientes | No existe información suficiente para el resultado solicitado. |
+| Configuración guardada | Los ajustes fueron aceptados por la aplicación; su aplicación al dispositivo debe confirmarse cuando corresponda. |
+
+Una alerta debe indicar la unidad involucrada, el problema observado y una acción posible. “Sin alertas” no debe utilizarse como equivalente a “Todo en orden” cuando faltan lecturas.
+
+#### 6.2.3. Searching Systems
+
+AquaSave utiliza búsquedas específicas y selección de unidades, en lugar de un buscador global de contenido. La función más relevante del frontend es localizar la zona utilizada para obtener el pronóstico.
+
+**Búsqueda de ubicación climática:**
+
+| Entrada | Función |
+| :--- | :--- |
+| País | Acotar la búsqueda geográfica. |
+| Ciudad | Diferenciar zonas con nombres similares. |
+| Distrito o zona | Identificar el lugar donde se encuentra la unidad. |
+| Código postal | Aportar una referencia adicional para resolver la ubicación. |
+
+El resultado permite asociar una etiqueta y coordenadas al dispositivo. La interfaz debe mostrar la zona encontrada antes de confirmar los datos.
+
+**Selección y filtros:**
+
+- En Dispositivos, el usuario selecciona el kit mediante sus tarjetas y nombres.
+- Las consultas de historial y análisis conservan el dispositivo seleccionado.
+- El diseño de filtros por periodo permite acotar registros sin cambiar su procedencia.
+- Si la búsqueda no produce un resultado, se debe permitir corregir los datos sin utilizar una ubicación ficticia.
+
+La búsqueda climática no equivale a identificar una planta o reconocer su especie. Esas capacidades no se consideran implementadas por disponer de un formulario de ubicación.
+
+#### 6.2.4. SEO Tags and Meta Tags
+
+Los metadatos identifican el producto y explican su propósito al compartir o consultar el sitio. Para la aplicación Flutter Web, el archivo `web/index.html` contiene una configuración estática básica.
+
+| Recurso | Valor en la aplicación base | Propósito |
+| :--- | :--- | :--- |
+| `title` | `AquaSave` | Identificar la pestaña del navegador. |
+| `charset` | `UTF-8` | Representar correctamente los caracteres. |
+| `description` | `AquaSave - monitoreo y riego inteligente.` | Resumir el propósito del producto. |
+| Nombre de acceso móvil | `AquaSave` | Identificar el acceso directo. |
+| Favicon e icono móvil | Recursos del logotipo AquaSave. | Mantener la identidad visual. |
+| `manifest.json` | Recurso vinculado desde la página. | Definir la configuración base del acceso web. |
+
+**Metadatos propuestos para la landing page:**
+
+| Elemento | Contenido propuesto | Criterio |
+| :--- | :--- | :--- |
+| Título | AquaSave — Monitoreo y riego para tus plantas. | Comunicar producto y uso doméstico. |
+| Descripción | Conoce las condiciones de tus plantas, consulta su historial y gestiona el riego con AquaSave. | Evitar porcentajes de ahorro no demostrados. |
+| Palabras clave | cuidado de plantas, riego doméstico, humedad del sustrato, monitoreo IoT. | Mantener relación con la propuesta. |
+| Autor | EcoDrop. | Identificar al equipo responsable. |
+| Open Graph | Nombre, descripción, imagen de marca y URL publicada. | Mejorar la presentación al compartir el enlace. |
+| URL canónica | Dirección definitiva de la landing publicada. | Evitar enlaces ficticios o dominios no confirmados. |
+
+La landing pública concentra la presentación del producto. La aplicación autenticada no necesita exponer datos de usuarios o dispositivos a los buscadores.
+
+**ASO para la distribución móvil:**
+
+La futura ficha Android utilizará el nombre AquaSave, una descripción del cuidado doméstico, capturas coherentes con las funciones disponibles y requisitos del kit. El material debe indicar si una capacidad está prevista y no presentar la publicación en una tienda como realizada mientras no exista un destino de distribución confirmado.
+
+#### 6.2.5. Navigation Systems
+
+La navegación conserva las mismas secciones en web y Android, ajustando su presentación al espacio disponible.
+
+**Navegación de escritorio:**
+
+- Sidebar con logotipo y destinos principales.
+- Indicación de la sección seleccionada.
+- Acceso a detalles de la unidad sin perder su identificación.
+- Formularios y diálogos para editar datos relacionados con la tarea actual.
+
+**Navegación en pantallas estrechas:**
+
+- Barra inferior con seis destinos.
+- Contenido apilado y desplazamiento vertical.
+- Identificación visible del destino seleccionado.
+- Regreso a la sección de origen al terminar o cancelar una edición.
+
+**Niveles de navegación:**
+
+| Nivel | Pantallas o destinos | Condición |
+| :--- | :--- | :--- |
+| Público | Landing y accesos publicados. | No exige autenticación. |
+| Acceso | Inicio de sesión y registro. | Disponible antes de ingresar a la cuenta. |
+| Operativo | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. | Requiere una sesión válida. |
+| Detalle | Unidad, configuración y registros asociados. | Requiere que el recurso pertenezca a la cuenta. |
+
+El identificador de la unidad seleccionada se conserva al consultar sus datos o solicitar una acción. Si el usuario cambia de dispositivo, un resultado pendiente no debe atribuirse al nuevo kit.
+
+### 6.3. Landing Page UI Design
+
+La landing page presenta el problema, la propuesta de AquaSave y los pasos para utilizar el producto. Su organización busca que un visitante comprenda el uso doméstico, conozca el kit y encuentre un acceso claro a las aplicaciones o al contacto del equipo.
+
+| Sección | Contenido | Propósito |
+| :--- | :--- | :--- |
+| Encabezado | Marca, navegación y llamada a la acción. | Identificar el producto y facilitar el recorrido. |
+| Presentación principal | Propuesta de valor y representación del monitoreo. | Explicar qué problema busca resolver AquaSave. |
+| Beneficios | Información, cuidado, supervisión y uso responsable del agua. | Relacionar las funciones con las necesidades del usuario. |
+| Cómo funciona | Preparar el kit, consultar datos y configurar el cuidado. | Explicar el proceso inicial. |
+| Funcionalidades | Monitoreo, control, historial y orientación prevista. | Mostrar el alcance sin confundir diseño con disponibilidad. |
+| Acerca del equipo | Presentación de EcoDrop y AquaSave. | Dar contexto a la propuesta. |
+| Contacto | Información y canal de consulta. | Resolver dudas de instalación y compatibilidad. |
+| Acceso final y pie de página | Destinos publicados, ayuda y condiciones. | Permitir continuar la experiencia. |
+
+#### 6.3.1. Landing Page Wireframe
+
+El wireframe define la jerarquía de las secciones, el espacio reservado a los recursos visuales y los puntos de acceso. La navegación superior permite llegar a beneficios, funcionamiento, características y contacto.
+
+<p align="center">
+  <img src="image/wireframeLading.png" alt="Wireframe de la landing page de AquaSave" width="70%">
+</p>
+
+En pantallas estrechas, se plantea conservar el orden de lectura y apilar las tarjetas. Los accesos a aplicaciones o tiendas deben mostrarse como enlaces disponibles únicamente cuando exista su destino; su presencia en el wireframe no demuestra una publicación.
+
+#### 6.3.2. Landing Page Mock-up
+
+El mock-up aplica la identidad visual mediante la paleta natural, el logotipo, las ilustraciones y las tarjetas de contenido. La propuesta utiliza llamadas a la acción visibles y bloques breves para facilitar el recorrido.
+
+<p align="center">
+  <img src="image/mockup-landing.png" alt="Mock-up de la landing page de AquaSave" width="70%">
+</p>
+
+Los mensajes de sostenibilidad expresan el propósito del producto. Los valores concretos de ahorro deberán sustentarse con registros comparables antes de comunicarse como resultados.
+
+[Diseño de la landing page en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=43-3936)
+
+### 6.4. Applications UX/UI Design
+
+Las aplicaciones reúnen monitoreo, control y consulta histórica en una experiencia común. El principiante necesita orientación clara y una instalación guiada; el experto necesita comparar registros y revisar parámetros, conservando la decisión final sobre sus unidades.
+
+Los wireframes presentan la estructura de las pantallas. Para Android y ventanas estrechas, se conserva su jerarquía mediante tarjetas y campos apilados y navegación inferior. Las pantallas de diseño no se utilizan como evidencia de que todos sus elementos estén implementados.
+
+#### 6.4.1. Applications Wireframes
+
+**Inicio de sesión y registro**
+
+Las pantallas de acceso reservan un bloque para la presentación de marca y otro para los campos y acciones. Inicio de sesión y registro son recorridos alternativos; no es necesario registrarse nuevamente para entrar a una cuenta existente.
+
+En el formulario funcional se utiliza correo y contraseña. El registro incorpora la información de cuenta correspondiente y presenta los errores junto a los campos.
+
+<p align="center">
+  <img src="image/1ws.png" alt="Wireframe de inicio de sesión" width="40%">
+  <img src="image/2ws.png" alt="Wireframe de registro" width="40%">
+</p>
+
+**Dashboard**
+
+Inicio muestra la unidad seleccionada, sus lecturas, la conexión y el acceso al control rápido. El usuario puede revisar la información disponible antes de solicitar el riego.
+
+La fecha del dato y el estado reportado permiten diferenciar una lectura vigente de un valor conservado. El pronóstico se interpreta según la ubicación y la exposición de la unidad.
+
+<p align="center">
+  <img src="image/1wd.png" alt="Wireframe del dashboard de AquaSave" width="70%">
+</p>
+
+**Dispositivos y vinculación guiada**
+
+Dispositivos presenta los kits propios mediante tarjetas. Desde esta vista se inicia el proceso de agregar un dispositivo y se consulta el detalle de una unidad.
+
+El recorrido guiado contempla preparación del ESP32, conectividad, verificación, configuración básica, revisión de umbrales, prueba de lecturas y confirmación. Las etapas visibles representan el diseño de la instalación, no una garantía de que todo el aprovisionamiento Wi-Fi se encuentre automatizado en la aplicación base.
+
+<p align="center">
+  <img src="image/w1dis.png" alt="Wireframe del listado de dispositivos" width="45%">
+  <img src="image/w2dis.png" alt="Wireframe de preparación del ESP32" width="45%">
+  <br><br>
+  <img src="image/w3dis.png" alt="Wireframe de conexión Wi-Fi" width="45%">
+  <img src="image/w4dis.png" alt="Wireframe de verificación de conexión" width="45%">
+  <br><br>
+  <img src="image/w5dis.png" alt="Wireframe de revisión de umbrales" width="45%">
+  <img src="image/w6dis.png" alt="Wireframe de prueba de sensores" width="45%">
+  <br><br>
+  <img src="image/w7dis.png" alt="Wireframe de confirmación del dispositivo" width="70%">
+</p>
+
+Los porcentajes y lecturas mostrados son ejemplos. Los valores sugeridos requieren revisión y calibración; no constituyen una recomendación universal para todas las plantas. La lista de sensores debe corresponder al kit instalado y no inferir una medición de un componente ausente.
+
+**Registro, edición y detalle de plantas**
+
+El diseño permite identificar las plantas asociadas a una unidad, revisar sus datos y consultar el último riego disponible. Los formularios incluyen acciones para guardar o cancelar sin modificar otra unidad.
+
+<p align="center">
+  <img src="image/w8dis.png" alt="Wireframe de registro de una planta" width="45%">
+  <img src="image/w9dis.png" alt="Wireframe de edición de una planta" width="45%">
+  <br><br>
+  <img src="image/w10dis.png" alt="Wireframe del detalle de una planta" width="70%">
+</p>
+
+La identificación automática de especies y los porcentajes de confianza visibles en el modelo son elementos propuestos, no una integración de IA implementada. La representación por planta tampoco implica sensores o actuadores independientes para cada ejemplar: la información corresponde a la unidad de riego compatible que se haya configurado.
+
+**Perfil**
+
+Perfil agrupa información personal y opciones de la cuenta. La experiencia principiante o experta se utiliza para ajustar la orientación; su modificación no cambia propiedad, permisos ni suscripción.
+
+<p align="center">
+  <img src="image/wperfil.png" alt="Wireframe del perfil de usuario" width="70%">
+</p>
+
+**Análisis**
+
+Análisis organiza indicadores y gráficos para comprender los registros por periodo y unidad. La presentación distingue consumo de una comparación de ahorro, que requiere una referencia válida.
+
+<p align="center">
+  <img src="image/wanalisis.png" alt="Wireframe de análisis de consumo" width="70%">
+</p>
+
+Las cifras ilustrativas del wireframe no representan resultados obtenidos. Si faltan registros o una línea base, se muestra la limitación en lugar de afirmar un ahorro demostrado.
+
+**Historial**
+
+Historial permite revisar fecha, unidad, origen, duración y datos disponibles de cada ciclo. La organización cronológica facilita comparar lo ocurrido con los cambios de configuración.
+
+<p align="center">
+  <img src="image/whistorial.png" alt="Wireframe del historial de riego" width="70%">
+</p>
+
+Los campos del diseño se presentan únicamente cuando exista información que los respalde. Un ciclo sin cierre confirmado conserva esa condición y no se completa con una duración inventada.
+
+[Diseño de las aplicaciones en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1)
+
+#### 6.4.2. Applications Wireflow Diagrams
+
+Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
+
+**User Goal 1: Registrarse o iniciar sesión en AquaSave**
+
+- **Perfil:** principiante o experto que desea acceder a su cuenta.
+- **Objetivo:** ingresar a la aplicación y consultar sus unidades.
+- **Recorrido principal:** acceder a la pantalla de inicio de sesión, registrar una cuenta si es necesario, completar los datos válidos y llegar a Inicio.
+- **Recorrido alternativo:** ante credenciales incorrectas o campos inválidos, permanecer en el formulario y mostrar una opción de corrección.
+- **Resultado:** una sesión válida con acceso a los recursos propios. Inicio de sesión y registro son alternativas de acceso, no pasos obligatorios consecutivos.
+
+<p align="center">
+  <img src="image/userflow.png" alt="Wireflow del acceso a AquaSave" width="90%">
+</p>
+
+**User Goal 2: Agregar un nuevo dispositivo IoT**
+
+- **Perfil:** principiante que necesita orientación o experto que incorpora otra unidad.
+- **Objetivo:** vincular un kit a la cuenta y verificar su información.
+- **Recorrido principal:** abrir Dispositivos, seleccionar Agregar dispositivo, preparar el ESP32, completar los pasos de conexión y configuración y revisar la confirmación.
+- **Recorrido alternativo:** si no se logra conexión o los datos son inválidos, conservar el paso, explicar el problema y permitir reintentar sin crear una asociación duplicada.
+- **Resultado:** dispositivo identificado y asociado a la cuenta. El estado conectado requiere información del equipo y no únicamente haber terminado el formulario.
+
+<p align="center">
+  <img src="image/userflow (1).png" alt="Wireflow de vinculación del dispositivo IoT" width="90%">
+</p>
+
+**User Goal 3: Registrar y consultar una planta de una unidad**
+
+- **Perfil:** principiante que organiza sus primeras plantas o experto que mantiene varias unidades.
+- **Objetivo:** identificar una planta dentro de una unidad compatible y consultar la información asociada.
+- **Recorrido principal:** abrir el detalle del dispositivo, ingresar los datos de la planta, confirmar la asociación y revisar el detalle con las lecturas y registros disponibles.
+- **Recorrido alternativo:** si falta información o la unidad no corresponde a la cuenta, no guardar la asociación y explicar la corrección necesaria. Cancelar permite volver sin confirmar cambios.
+- **Resultado:** planta identificada dentro de su unidad, sin atribuirle mediciones independientes que el kit no proporcione.
+
+<p align="center">
+  <img src="image/userflow (2).png" alt="Wireflow de registro y consulta de una planta" width="90%">
+</p>
+
+Estos recorridos mantienen la relación entre navegación, dispositivo seleccionado y autorización. El control manual, la automatización y las futuras recomendaciones se integran a la misma experiencia, conservando la identificación de la unidad y la posibilidad de detener el riego.
 
 ---
 
@@ -1729,15 +2990,25 @@ La comunicación entre el dispositivo y la plataforma depende de la conexión co
 
 ### Conclusiones y recomendaciones
 
-1. Existe una problemática crítica y validada en el uso ineficiente del agua que justifica plenamente la propuesta de AquaSave. El análisis del contexto demuestra que el sector agrícola peruano presenta niveles muy bajos de eficiencia hídrica (alrededor del 35%), afectando especialmente a pequeños productores y horticultores urbanos que dependen de métodos manuales e intuitivos. Esto confirma que el problema no solo es real, sino también recurrente, masivo y con impacto económico y ambiental significativo.
+1. La investigación realizada permitió identificar dificultades en el cuidado de plantas domésticas relacionadas con la incertidumbre sobre cuándo regar, qué cantidad de agua utilizar y cómo supervisar las plantas durante una ausencia. Las entrevistas muestran que estas dificultades afectan tanto a usuarios principiantes como a expertos, aunque sus necesidades de orientación y seguimiento son diferentes. Estos hallazgos respaldan la propuesta de AquaSave dentro de la muestra estudiada, sin representar una validación general de todos los usuarios domésticos.
 
-2. Los usuarios objetivo muestran una necesidad clara de tecnificación, pero con fuertes restricciones de simplicidad, accesibilidad y usabilidad. Tanto horticultores urbanos como micro-agricultores periurbanos comparten patrones: toman decisiones basadas en experiencia, carecen de datos en tiempo real y muestran alta apertura a soluciones tecnológicas. Sin embargo, también presentan barreras como baja adopción tecnológica, necesidad de interfaces intuitivas y preferencia por soluciones fáciles de instalar, lo que define directamente los requisitos clave del producto.
+2. La diferenciación entre usuarios principiantes y expertos permitió definir experiencias acordes con sus necesidades. Los principiantes requieren instrucciones sencillas, alertas comprensibles y una instalación guiada que reduzca sus dudas. Los expertos valoran el historial, la configuración de parámetros y las explicaciones que les permitan evaluar sus decisiones. Ambos segmentos consideran importante supervisar sus plantas a distancia y conservar la posibilidad de intervenir en el riego.
 
-3. AquaSave se posiciona como una solución diferenciada al integrar hardware IoT accesible con software inteligente en producción. A diferencia de la competencia, la solución combina sensores físicos (humedad, caudal, temperatura) comunicados mediante MQTT a través de HiveMQ Cloud, una Edge API desplegada en Fly.io y un backend en Render con documentación OpenAPI interactiva. Esta arquitectura integral permite automatización de riego, control bidireccional y toma de decisiones basada en datos reales del dispositivo.
-   
-4. El frontend web y la aplicación móvil consumen datos reales del dispositivo IoT a través del backend, eliminando por completo los datos mock. El dashboard muestra indicadores en tiempo real de humedad, temperatura y flujo, con control de riego bidireccional (inicio/detención desde web y móvil), notificaciones push ante condiciones críticas y métricas de ahorro hídrico. La landing page y el flujo de registro completan la experiencia de extremo a extremo.
+3. El diseño estratégico de AquaSave relaciona las necesidades identificadas con los requisitos y las decisiones de arquitectura. Las historias de usuario, los escenarios de calidad, las iteraciones de ADD y el descubrimiento de bounded contexts permiten establecer responsabilidades y criterios verificables. La revisión del Product Backlog priorizó la presentación de la propuesta y las capacidades de monitoreo y control, mientras que el Impact Mapping estableció metas de comprensión, seguimiento y uso eficiente del agua que deberán evaluarse mediante pruebas.
 
-5. El sistema conectado de AquaSave ya se encuentra operativo, con comunicación bidireccional funcional entre el dispositivo ESP32, la Edge API y el backend. Las mejoras futuras incluyen expansión a múltiples dispositivos por usuario, integración de sensores adicionales (pH, lluvia), algoritmos predictivos de riego basados en machine learning y un plan de suscripción para soportar la infraestructura cloud. Esta evolución permitirá escalar la solución y generar ahorro hídrico verificable para una base creciente de usuarios.
+4. La documentación arquitectónica establece una solución coherente con las tecnologías seleccionadas: Flutter y Dart para las aplicaciones web y móvil, Node.js con Express y TypeScript para la API, PostgreSQL para la persistencia y firmware C++ con Arduino para el ESP32. HiveMQ Cloud transporta los mensajes MQTT, la EdgeAPI conecta el dispositivo con el backend y Open-Meteo proporciona información climática. Los diagramas C4 actualizados explican esta integración y distinguen los límites del dominio de los componentes desplegados.
+
+5. El trabajo parcial amplió el diseño de AquaSave mediante la descripción de capas, componentes, clases y modelos de datos de los cinco bounded contexts, así como los lineamientos de estilo, la arquitectura de información y los recorridos de las interfaces. Estos artefactos proporcionan una base para desarrollar y revisar la solución. El diseño documentado no constituye por sí solo evidencia de que todas las capacidades propuestas estén implementadas ni de que las metas de ahorro y usabilidad se hayan alcanzado.
+
+**Recomendaciones:**
+
+- Realizar pruebas de usabilidad con participantes de ambos segmentos para evaluar la comprensión de las lecturas, las alertas, la instalación guiada y los recorridos de control. Registrar los resultados y contrastarlos con las metas del Impact Mapping.
+
+- Validar la comunicación entre las aplicaciones, la API, la EdgeAPI y el ESP32, incluyendo desconexiones, órdenes sin confirmación y recuperación del servicio. La interfaz debe diferenciar una solicitud de riego de una ejecución confirmada.
+
+- Evaluar el consumo estimado mediante periodos comparables de 14 días sin AquaSave y 14 días utilizando el sistema, conservando condiciones y métodos de cálculo consistentes. Presentar el ahorro como resultado únicamente cuando exista evidencia suficiente.
+
+- Incorporar progresivamente las recomendaciones apoyadas por inteligencia artificial y las prestaciones comerciales, manteniendo explicaciones comprensibles y el control del usuario. Actualizar la documentación y las evidencias para distinguir las funcionalidades implementadas, verificadas y pendientes.
 
 ---
 
@@ -1756,3 +3027,5 @@ La comunicación entre el dispositivo y la plataforma depende de la conexión co
 ## Anexos
 
 - Video de entrevistas:[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ)
+
+- Exposicion entrega TB1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA)
