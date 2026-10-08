@@ -1126,18 +1126,49 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 
 ### 3.3. Impact Mapping
 
-Usuario: Usuario Principiante
+El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores que pueden influir en su cumplimiento, los cambios de comportamiento esperados y las funcionalidades que permitirán generar dichos impactos. A partir de los hallazgos obtenidos con usuarios principiantes y expertos, se proponen los siguientes Business Goals bajo criterios SMART, incorporando una métrica verificable y un horizonte de evaluación.
+
+**Business Goal 1 :  Mejorar la comprensión del estado de las plantas**
+
+**Objetivo SMART:** Lograr que al menos el 80% de los usuarios principiantes evaluados identifique correctamente, sin asistencia, si una planta requiere atención a partir de la información mostrada por AquaSave, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
+
+**Actores principales:** usuarios principiantes en el cuidado de plantas.
+
+**Impactos esperados:** comprender la lectura de humedad, reconocer cuándo una planta necesita atención, reducir decisiones de riego basadas únicamente en intuición y consultar orientación antes de realizar una acción de riego.
+
+**Deliverables relacionados:** consulta de humedad del sustrato, configuración guiada del perfil, alertas de humedad baja o elevada, resumen del estado de las plantas y recomendaciones de riego explicadas.
+
 <div align="center">
 
-  <img src="image/Impact map 1.png" alt="Diagrama" width="600">
+  <img src="image/IM1.png" alt="Diagrama" width="600">
 
-</div>
-Usuario: Usuario Experto
+
+**Business Goal 2 :  Favorecer un uso más eficiente del agua de riego**  
+**Objetivo SMART:** Lograr una reducción mínima del 15% en el consumo estimado de agua destinado al riego en las unidades evaluadas, comparando un periodo inicial con un periodo posterior de uso de AquaSave durante las pruebas del proyecto.
+
+**Actores principales:** usuarios principiantes y usuarios expertos.
+
+**Impactos esperados:** revisar las condiciones de la planta antes de regar, evitar riegos innecesarios, ajustar parámetros según las condiciones observadas y comparar el consumo de agua entre distintos periodos.
+
+**Deliverables relacionados:** consulta de humedad, configuración de riego automático, programación de evaluaciones de riego, consideración de lluvia para plantas expuestas, historial de riego, consulta de consumo por periodo y comparación del consumo con una línea base.
+
 <div align="center">
 
-  <img src="image/Impact map 2.png" alt="Diagrama" width="600">
+  <img src="image/IM2.png" alt="Diagrama" width="600">
 
-</div>
+**Business Goal 3 :  Mejorar el seguimiento y control del cuidado de las plantas**  
+**Objetivo SMART:** Conseguir que al menos el 80% de los usuarios evaluados pueda consultar el estado de sus plantas, revisar alertas e historial y ejecutar una acción básica de control sin asistencia, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
+
+**Actores principales:** usuarios principiantes y usuarios expertos.
+
+**Impactos esperados:** supervisar las plantas desde una única interfaz, identificar cuáles requieren atención, revisar eventos anteriores, mantener el control sobre la automatización y tomar decisiones a partir de información comprensible y verificable.
+
+**Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial de riego, activación y detención del riego, configuración de parámetros y recomendaciones explicadas con opción de aceptación o descarte.
+
+<div align="center">
+
+  <img src="image/IM3.png" alt="Diagrama" width="600">
+
 
 ### 3.4. Product Backlog
 
