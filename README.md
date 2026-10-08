@@ -4,7 +4,7 @@
 
   # <p align="center">Universidad Peruana de Ciencias Aplicadas</p>
   ## <p align="center">Ingeniería de Software</p>
-  <p align="center">Periodo: 202610</p>
+  <p align="center">Periodo: 202620</p>
   <p align="center">Arquitecturas De Software Emergentes</p>
   <p align="center">NRC: 16365</p>
   <p align="center">Docente: Enrique Alejandro Valdivia Verde</p>
@@ -38,10 +38,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---: | :---: | :--- | :--- |
-| AV1 | 26/08/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | Elaboración de los capítulos I al IV: presentación de EcoDrop y AquaSave, definición de los segmentos de usuarios principiantes y expertos en el cuidado de plantas domésticas, investigación de necesidades, historias de usuario, Product Backlog y diseño estratégico de la solución. |
-| TP1 | 29/09/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | Incorporación del capítulo V, Tactical-Level Software Design, con la descripción de las capas, componentes, clases y modelos de datos de los cinco bounded contexts. Incorporación del capítulo VI, Solution UX Design, con lineamientos de estilo, arquitectura de información, wireframe y mock-up de la landing page, wireframes de las aplicaciones y wireflows. Alineación de las descripciones con Flutter/Dart, Node.js/Express/TypeScript y PostgreSQL, diferenciando la implementación base de las capacidades propuestas. Actualización del índice, las conclusiones y recomendaciones y el Student Outcome; corrección de la identificación del primer avance como AV1. |
-
-
+| AV1 | 26/08/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | **Maylhy Olinda:** elaboración del Startup Profile, antecedentes, problemática, objetivos y descripción de los segmentos objetivo.<br><br>**Steven Mathew:** desarrollo de Lean UX, análisis competitivo y diseño de entrevistas.<br><br>**Luis Piero:** elaboración del registro y análisis de entrevistas, User Personas, User Task Matrix, Empathy Mapping, historias de usuario y Product Backlog.<br><br>**Luis Gustavo:** desarrollo del Design Purpose, inputs e iteraciones de ADD, escenarios de calidad y Architectural Drivers Backlog.<br><br>**Sandra Paula:** documentación de EventStorming, Candidate Context Discovery y diagramas de arquitectura C4; organización del índice y revisión de coherencia del informe. |
+| TP1 | 29/09/2026 | - Gutiérrez Condo, Maylhy Olinda<br>- Roca Tineo, Steven Mathew<br>- Rodríguez Rodríguez, Luis Piero<br>- Román Pajuelo, Luis Gustavo<br>- Luyo Correa, Sandra Paula | **Maylhy Olinda:** revisión de la propuesta de valor y los segmentos; elaboración de conclusiones y recomendaciones correspondientes al trabajo parcial.<br><br>**Steven Mathew:** desarrollo de los lineamientos de estilo y la arquitectura de información del capítulo VI, Solution UX Design.<br><br>**Luis Piero:** documentación de los wireframes y mock-ups de la landing page, wireframes de las aplicaciones y wireflows de los principales recorridos.<br><br>**Luis Gustavo:** desarrollo del capítulo V, Tactical-Level Software Design, incluyendo capas, componentes, clases y modelos de datos de los cinco bounded contexts.<br><br>**Sandra Paula:** alineación de las descripciones técnicas con Flutter/Dart, Node.js/Express/TypeScript y PostgreSQL; actualización del índice, registro de versiones y Student Outcome, identificando el primer avance como AV1 y diferenciando las capacidades implementadas de las propuestas. |
 
 # Project Report Collaboration Insights
 
