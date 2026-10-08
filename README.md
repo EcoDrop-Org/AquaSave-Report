@@ -472,7 +472,6 @@ Para este segmento, planteamos la necesidad de conservar el control sobre las de
 
 ##### 1.2.2.2. Lean UX Assumptions
 
-##### 1.2.2.2. Lean UX Assumptions
 
 1. Creo que mis clientes necesitan una forma accesible y comprensible de conocer las condiciones de sus plantas domésticas, decidir cuándo regar y mantener su cuidado durante ausencias. Los principiantes necesitan orientación para interpretar la información, mientras que los expertos buscan registros y opciones de configuración.
 
@@ -3028,4 +3027,4 @@ Estos recorridos mantienen la relación entre navegación, dispositivo seleccion
 
 - Video de entrevistas:[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAIdrZ_7tXNTolQ44z3bzjvAeowsqkT3QGPucIg05oEdF4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jCpCeQ)
 
-- Exposicion entrega TB1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA)
+- Exposicion entrega AV1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA)
