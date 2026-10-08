@@ -1185,42 +1185,42 @@ URL del Product Backlog: https://trello.com/b/tQbBo5rs
 
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:-----:|:-------------:|--------|-------------|:------------:|
-| 1 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
-| 2 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | 3 |
-| 3 | US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | 5 |
-| 4 | US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | 3 |
-| 5 | US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | 2 |
-| 6 | US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | 5 |
-| 7 | US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | 5 |
-| 8 | US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | 3 |
-| 9 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | 5 |
-| 10 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | 8 |
-| 11 | TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | 5 |
-| 12 | US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | 8 |
-| 13 | US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | 5 |
-| 14 | US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | 5 |
-| 15 | US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | 5 |
-| 16 | US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | 3 |
-| 17 | US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | 3 |
-| 18 | TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | 3 |
-| 19 | US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | 3 |
-| 20 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | 8 |
-| 21 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | 8 |
-| 22 | US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | 8 |
-| 23 | US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | 5 |
-| 24 | US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | 8 |
-| 25 | US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | 5 |
-| 26 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | 5 |
-| 27 | US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | 3 |
-| 28 | US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | 3 |
-| 29 | US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | 5 |
-| 30 | US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | 3 |
-| 31 | US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | 3 |
-| 32 | US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | 3 |
-| 33 | US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | 3 |
-| 34 | US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | 5 |
-| 35 | US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | 3 |
-| 36 | US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | 3 |
+| 1 | US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | 3 |
+| 2 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
+| 3 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
+| 4 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
+| 5 | TS07 | Diseñar e implementar el dispositivo IoT | Como desarrollador, quiero diseñar e implementar un dispositivo IoT basado en ESP32, para medir las condiciones de una unidad doméstica y controlar su riego. | 8 |
+| 6 | TS01 | Recibir telemetría mediante API interna | Como desarrollador, quiero un contrato de telemetría versionado, para integrar dispositivos sin ambigüedad de unidades. | 5 |
+| 7 | TS09 | Conservar procedencia de las mediciones | Como desarrollador, quiero registrar método, tiempo y versión de calibración, para evitar que estimaciones se presenten como mediciones. | 3 |
+| 8 | US09 | Consultar humedad del sustrato | Como usuario, quiero consultar la humedad y su vigencia, para evaluar las condiciones de mis plantas antes de regar. | 5 |
+| 9 | US10 | Consultar temperatura ambiente | Como usuario, quiero consultar la temperatura ambiente disponible, para interpretar el entorno de mis plantas. | 3 |
+| 10 | US12 | Consultar conexión del dispositivo | Como usuario, quiero conocer el estado y último contacto de mi dispositivo, para interpretar la actualidad de los datos. | 3 |
+| 11 | TS02 | Gestionar órdenes idempotentes | Como desarrollador, quiero un contrato de órdenes con confirmación, para evitar ciclos duplicados y estados falsos. | 8 |
+| 12 | TS10 | Aplicar límites locales de riego | Como desarrollador, quiero que el controlador valide y detenga los ciclos localmente, para mantener la operación acotada ante fallos de red. | 8 |
+| 13 | US13 | Activar el riego de una unidad doméstica | Como usuario, quiero iniciar un ciclo de mi unidad doméstica, para atenderla cuando lo necesite. | 8 |
+| 14 | US14 | Detener el riego de una unidad doméstica | Como usuario, quiero detener un ciclo activo, para interrumpir el suministro cuando lo considere necesario. | 5 |
+| 15 | US01 | Registrar cuenta nueva | Como nuevo usuario, quiero crear una cuenta e indicar mi nivel de experiencia, para acceder a una orientación adecuada. | 3 |
+| 16 | US02 | Iniciar sesión con correo y contraseña | Como usuario registrado, quiero iniciar sesión con mis credenciales, para consultar y gestionar mis unidades domésticas. | 3 |
+| 17 | TS08 | Separar experiencia y autorización | Como desarrollador, quiero verificar propiedad en cada operación, para mantener el acceso independiente del nivel de experiencia. | 5 |
+| 18 | US31 | Vincular un dispositivo doméstico | Como usuario, quiero vincular un kit mediante pasos guiados, para comenzar a monitorear mi unidad de riego. | 8 |
+| 19 | US33 | Gestionar múltiples dispositivos domésticos | Como usuario, quiero identificar y consultar mis distintos kits, para supervisar varias unidades desde una cuenta. | 5 |
+| 20 | US32 | Ajustar parámetros de interpretación | Como usuario, quiero revisar límites de interpretación y calibración, para comprender el significado de las lecturas. | 5 |
+| 21 | US06 | Configurar perfil de usuario principiante | Como usuario principiante, quiero registrar mis plantas con orientación, para preparar su monitoreo y comprender la configuración. | 5 |
+| 22 | US07 | Configurar perfil de usuario experto | Como usuario experto, quiero registrar las condiciones de mis plantas y revisar sus parámetros, para adaptar el seguimiento a mi cuidado doméstico. | 5 |
+| 23 | US15 | Configurar el riego automático | Como usuario, quiero revisar y aprobar umbrales y límites de riego, para automatizar el cuidado de una unidad. | 8 |
+| 24 | US16 | Programar evaluaciones de riego | Como usuario, quiero programar momentos de evaluación, para organizar el cuidado sin omitir las condiciones de la planta. | 5 |
+| 25 | US11 | Consultar el método de cálculo del consumo | Como usuario, quiero conocer cómo se obtiene el consumo del riego, para distinguir mediciones de estimaciones. | 3 |
+| 26 | US27 | Consultar el estado de mis plantas | Como usuario, quiero consultar un resumen por unidad, para reconocer cuáles requieren atención. | 5 |
+| 27 | US28 | Acceder al control de la unidad consultada | Como usuario, quiero actuar sobre la unidad que estoy revisando, para controlar el riego sin confundir dispositivos. | 3 |
+| 28 | US20 | Recibir alerta de humedad baja | Como usuario, quiero recibir un aviso de humedad baja, para revisar oportunamente mis plantas. | 3 |
+| 29 | US21 | Recibir alerta de humedad excesiva | Como usuario, quiero recibir un aviso de humedad elevada, para revisar el riego y el drenaje. | 3 |
+| 30 | US22 | Recibir alerta de temperatura extrema | Como usuario, quiero conocer condiciones ambientales fuera de mis límites configurados, para evaluar medidas de cuidado. | 3 |
+| 31 | US23 | Conocer riegos omitidos por las condiciones | Como usuario, quiero conocer por qué se omite un riego previsto, para revisar mi configuración con información. | 3 |
+| 32 | US29 | Consultar alertas recientes | Como usuario, quiero revisar alertas recientes por unidad, para priorizar mi atención. | 3 |
+| 33 | TS06 | Consumir un servicio externo con aislamiento | Como desarrollador, quiero consumir un pronóstico externo mediante un adaptador, para incorporar información de terceros sin acoplar el dominio. | 5 |
+| 34 | US17 | Consultar pronóstico climático | Como usuario con plantas exteriores, quiero consultar el pronóstico de mi ubicación, para anticipar condiciones relevantes. | 3 |
+| 35 | US19 | Configurar la consideración de lluvia | Como usuario, quiero registrar exposición a lluvia y límites de aplazamiento, para adaptar la política a la ubicación real. | 3 |
+| 36 | US18 | Considerar lluvia para plantas expuestas | Como usuario con plantas expuestas a lluvia, quiero que se evalúe el pronóstico junto con la humedad, para evitar riegos innecesarios. | 5 |
 | 37 | TS04 | Publicar y consumir eventos persistentes | Como desarrollador, quiero eventos persistentes con consumidores idempotentes, para construir el historial sin perder ni duplicar ciclos. | 5 |
 | 38 | US24 | Consultar historial de riego | Como usuario, quiero consultar ciclos y resultados por unidad, para revisar qué ocurrió durante el cuidado. | 5 |
 | 39 | US25 | Consultar consumo por periodo | Como usuario, quiero consultar consumo diario, semanal y mensual, para comparar patrones de uso del agua. | 5 |
@@ -1230,10 +1230,10 @@ URL del Product Backlog: https://trello.com/b/tQbBo5rs
 | 43 | TS12 | Aislar IA del control físico | Como desarrollador, quiero que la IA solo produzca propuestas estructuradas, para impedir que una respuesta del modelo active directamente el riego. | 5 |
 | 44 | US34 | Consultar una recomendación de riego | Como usuario, quiero recibir una recomendación apoyada por IA con explicación, para evaluar el cuidado de mi unidad. | 8 |
 | 45 | US35 | Decidir sobre una recomendación | Como usuario, quiero aceptar o descartar una recomendación, para conservar el control de mis decisiones. | 5 |
-| 46 | US36 | Conocer AquaSave desde la landing page | Como visitante, quiero conocer el problema y la propuesta de AquaSave, para evaluar su utilidad en mi hogar. | 3 |
-| 47 | US37 | Acceder a orientación según mi experiencia | Como visitante principiante o experto, quiero encontrar información relevante para mi experiencia, para comprender cómo AquaSave me ayudaría. | 3 |
-| 48 | US38 | Acceder a las aplicaciones | Como visitante, quiero acceder a la aplicación web o al punto de descarga móvil, para continuar la experiencia de AquaSave. | 2 |
-| 49 | US39 | Consultar requisitos y soporte del kit | Como visitante, quiero conocer requisitos, mantenimiento y soporte, para decidir si puedo utilizar AquaSave. | 3 |
+| 46 | US04 | Recuperar contraseña olvidada | Como usuario registrado, quiero restablecer mi contraseña, para recuperar acceso sin perder mis registros. | 3 |
+| 47 | US03 | Iniciar sesión con cuenta de Google | Como usuario, quiero utilizar mi cuenta de Google, para acceder a AquaSave con una identidad existente. | 5 |
+| 48 | US05 | Cerrar sesión | Como usuario autenticado, quiero cerrar mi sesión, para proteger el acceso desde un equipo compartido. | 2 |
+| 49 | US08 | Actualizar perfil y nivel de experiencia | Como usuario, quiero modificar mi información y nivel de experiencia, para adaptar la orientación sin perder mis registros. | 3 |
 | 50 | TS05 | Integrar los productos digitales del curso | Como desarrollador, quiero integrar una landing page en HTML, CSS y JavaScript, aplicaciones web y móvil en Flutter con Dart y una API en Node.js con Express y TypeScript, para ofrecer una experiencia integrada de AquaSave. | 8 |
 | 51 | TS13 | Internacionalizar y hacer accesible la experiencia | Como desarrollador, quiero ofrecer inglés por defecto y español con una experiencia accesible, para atender de manera inclusiva a los usuarios de los productos. | 5 |
 | 52 | TS11 | Mantener documentación y versiones trazables | Como desarrollador, quiero mantener contratos y documentación en repositorios versionados, para reproducir y revisar la solución durante el curso. | 3 |
