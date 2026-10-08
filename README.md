@@ -1211,7 +1211,7 @@ URL del Product Backlog: https://trello.com/b/tQbBo5rs
 
 <div align="center">
 
-  <img src="image/Trello.png" alt="Trello" width="1000">
+  <img src="image/trellocaptura.png" alt="Trello" width="1000">
 
 </div>
 
