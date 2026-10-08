@@ -1853,21 +1853,28 @@ Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orien
 
 #### 4.3.3. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores descompone AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas y las responsabilidades de cada componente.
+El diagrama de contenedores descompone la Plataforma AquaSave en sus principales unidades de ejecución y almacenamiento. Esta vista permite identificar las tecnologías utilizadas, las responsabilidades de cada contenedor y sus relaciones con los sistemas situados fuera del límite de la plataforma.
 
 <p align="center">
   <img src="image/03-containers.png" alt="ContainerDiagram" width="1000">
 </p>
 
-La arquitectura se organiza en los siguientes contenedores:
+Dentro del límite de la Plataforma AquaSave se encuentran los siguientes contenedores:
 
-- **Landing Page:** sitio desarrollado con HTML, CSS y JavaScript. Presenta la propuesta de AquaSave, sus características y los accesos a los productos digitales.
 - **Web Application:** aplicación desarrollada con Flutter y Dart, compilada para ejecutarse en el navegador. Permite acceder a cuentas, dispositivos, lecturas, historial y control del riego mediante la API.
 - **Mobile Application:** aplicación desarrollada con Flutter y Dart para Android. Comparte la base de código y los contratos de acceso a datos de la versión web.
 - **AquaSave API:** backend desarrollado con Node.js, Express y TypeScript. Expone endpoints REST para autenticación, gestión de dispositivos, telemetría, riego y pronóstico climático. Organiza los casos de uso mediante módulos con capas de dominio, aplicación, infraestructura e interfaces.
 - **Platform PostgreSQL Database:** almacena usuarios, sesiones, dispositivos, telemetría, comandos y registros de riego mediante los repositorios del backend.
 - **AquaSave EdgeAPI:** servicio desarrollado con Node.js y TypeScript que conecta MQTT con HTTP. Recibe telemetría y estados, consulta comandos pendientes, los publica en HiveMQ Cloud y comunica los reconocimientos al backend.
-- **Dispositivo IoT ESP32:** ejecuta el firmware desarrollado en C++ con Arduino, obtiene las lecturas y controla el actuador de riego. Se comunica con HiveMQ Cloud mediante MQTT.
+
+Fuera del límite de la plataforma se representan los siguientes sistemas relacionados:
+
+- **Landing Page AquaSave:** sitio independiente desarrollado con HTML, CSS y JavaScript. Presenta la propuesta de AquaSave y proporciona un enlace a la aplicación web.
+- **Kit IoT AquaSave:** sistema físico compuesto por el ESP32, los sensores y la bomba con relé. El firmware desarrollado en C++ con Arduino obtiene las lecturas, controla el actuador de riego y se comunica con HiveMQ Cloud mediante MQTT.
+- **HiveMQ Cloud:** servicio externo de mensajería que transporta telemetría, estados, comandos y reconocimientos entre el kit IoT y la EdgeAPI.
+- **Open-Meteo:** servicio externo que proporciona pronóstico climático y geocodificación mediante consultas desde la API.
+
+La landing page y el kit IoT pertenecen a la solución de EcoDrop, pero se presentan como sistemas separados de la Plataforma AquaSave. Su ubicación fuera del límite indica esa separación arquitectónica.
 
 Las aplicaciones Flutter organizan su código en presentación, dominio y datos. Utilizan BLoC y Cubit para gestionar estados, repositorios para el acceso a la información y SharedPreferences para conservar datos locales de sesión. El almacenamiento local forma parte de los clientes y no constituye una base de datos SQLite independiente.
 
@@ -1887,20 +1894,19 @@ El diagrama de despliegue presenta la distribución de los componentes entre los
 
 La distribución de la solución considera:
 
-- **Landing page:** publicación como sitio estático independiente, compuesto por archivos HTML, CSS, JavaScript y recursos visuales. Sus enlaces permiten continuar hacia las aplicaciones.
-- **Frontend web:** compilación de Flutter para web y publicación en Firebase Hosting mediante GitHub Actions. El navegador ejecuta la aplicación y consume la API por HTTPS.
+- **Landing page:** publicación en GitHub Pages como sitio estático independiente, compuesto por archivos HTML, CSS, JavaScript y recursos visuales. Proporciona un enlace a la aplicación web alojada en Firebase Hosting.
+- **Frontend web:** compilación de Flutter para web y publicación en Firebase Hosting mediante GitHub Actions. El navegador descarga y ejecuta la aplicación, que consume la API por HTTPS.
 - **Aplicación móvil:** compilación de Flutter para Android y distribución de versiones de prueba mediante Firebase App Distribution. La aplicación se ejecuta en el teléfono y utiliza la misma API que el frontend web.
 - **Backend:** ejecución de la API Node.js con Express y TypeScript en Render. El servicio recibe las solicitudes de las aplicaciones y de la EdgeAPI, consulta PostgreSQL y expone la documentación OpenAPI mediante Swagger.
-- **Persistencia:** conexión del backend a PostgreSQL mediante la configuración del entorno. Los clientes acceden a la información a través de la API.
+- **Persistencia:** conexión del backend a un servidor PostgreSQL mediante la configuración del entorno. El diagrama no atribuye su alojamiento a un proveedor específico. Los clientes acceden a la información a través de la API.
 - **EdgeAPI:** ejecución como servicio Node.js en Fly.io, utilizando el contenedor definido para ese componente. Mantiene la conexión MQTT, consulta los comandos pendientes del backend y expone una comprobación HTTP de salud para la plataforma de despliegue.
 - **Broker MQTT:** uso de HiveMQ Cloud para el intercambio de telemetría, estados, comandos y reconocimientos entre la EdgeAPI y el ESP32.
-- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación y actuador. El firmware obtiene las lecturas y ejecuta el control local del riego.
+- **Entorno físico:** instalación del ESP32 con sus sensores, alimentación, relé y bomba. El firmware obtiene las lecturas y ejecuta el control local del riego.
 - **Servicio climático:** consulta de Open-Meteo desde el backend mediante el adaptador de Irrigation Intelligence.
 
 La configuración permite administrar las direcciones de los servicios y los parámetros de conexión por entorno. La compilación y publicación de las aplicaciones web y Android se automatizan mediante los flujos de GitHub Actions definidos para cada producto.
 
 La comunicación entre el dispositivo y la plataforma depende de la conexión con el broker y la EdgeAPI. Los límites locales de operación y las condiciones de recuperación se evaluarán mediante los escenarios de calidad definidos. Las integraciones posteriores de IA y servicios comerciales se incorporarán sin cambiar las tecnologías base de los clientes y la API.
-
 
 ---
 
