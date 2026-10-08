@@ -1139,8 +1139,8 @@ El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores
 **Deliverables relacionados:** consulta de humedad del sustrato, configuración guiada del perfil, alertas de humedad baja o elevada, resumen del estado de las plantas y recomendaciones de riego explicadas.
 
 <div align="center">
-
   <img src="image/IM1.png" alt="Diagrama" width="600">
+</div>
 
 
 **Business Goal 2 :  Favorecer un uso más eficiente del agua de riego**  
@@ -1153,8 +1153,8 @@ El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores
 **Deliverables relacionados:** consulta de humedad, configuración de riego automático, programación de evaluaciones de riego, consideración de lluvia para plantas expuestas, historial de riego, consulta de consumo por periodo y comparación del consumo con una línea base.
 
 <div align="center">
-
   <img src="image/IM2.png" alt="Diagrama" width="600">
+</div>
 
 **Business Goal 3 :  Mejorar el seguimiento y control del cuidado de las plantas**  
 **Objetivo SMART:** Conseguir que al menos el 80% de los usuarios evaluados pueda consultar el estado de sus plantas, revisar alertas e historial y ejecutar una acción básica de control sin asistencia, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
@@ -1166,8 +1166,8 @@ El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores
 **Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial de riego, activación y detención del riego, configuración de parámetros y recomendaciones explicadas con opción de aceptación o descarte.
 
 <div align="center">
-
   <img src="image/IM3.png" alt="Diagrama" width="600">
+</div>
 
 
 ### 3.4. Product Backlog
