@@ -1331,7 +1331,7 @@ Los escenarios iniciales priorizan la confiabilidad del riego, la protección de
 | QAS05 | Confiabilidad y disponibilidad del control local | Interrupción de red o reinicio. | Se pierde la comunicación durante el riego. | Firmware y salida de control del actuador. | Dispositivo energizado sin acceso al backend; reinicio en prueba independiente. | Aplica el límite local de duración y mantiene la salida apagada tras reiniciar. | En 20 desconexiones, la salida se desactiva a más tardar 1 segundo después del límite configurado; en 20 reinicios se producen 0 reactivaciones de órdenes anteriores. |
 | QAS06 | Trazabilidad e integridad | Dispositivo y publicación de eventos. | Se recibe un resultado, se repite un evento o falta una confirmación. | Device Management, Irrigation Intelligence y Analytics. | Operación normal y recuperación tras interrupciones. | Conserva un registro identificable por ciclo, su procedencia y su completitud. | El 100 % de los ciclos confirmados de prueba conserva identificador, tiempos, resultado y procedencia del volumen; los duplicados no incrementan consumo y los registros incompletos se identifican. |
 | QAS07 | Modificabilidad | Equipo de desarrollo. | Sustituye el proveedor climático por otro con datos equivalentes. | Adaptador climático de Irrigation Intelligence. | Contratos y respuestas de prueba disponibles. | Sustituye el adaptador manteniendo el contrato interno y las interfaces públicas. | Cambio en un máximo de 1 jornada de 8 horas, sin modificar los otros cuatro bounded contexts y con todas las pruebas de contrato aprobadas. |
-| QAS08 | Resiliencia | Servicio externo de IA. | No responde o devuelve una propuesta inválida. | Adaptador de recomendaciones e Irrigation Intelligence. | Proveedor lento o no disponible. | Limita la espera, informa la condición y no emite órdenes. | En 30 casos de fallo, la solicitud finaliza en un máximo de 5 segundos con 0 órdenes. Las propuestas válidas vencen en un máximo de 5 minutos y se revalidan antes de ejecutarse. |
+| QAS08 | Resiliencia | Servicio externo Gemini. | El proveedor falla, excede el tiempo de espera o entrega una respuesta inutilizable. | Adaptador GeminiAdviceService y servicios de recomendación y chat de Irrigation Intelligence. | Usuario autenticado y planta de su cuenta. | La tarjeta conserva el diagnóstico y la orientación por reglas; el asistente devuelve un resumen local. | Tiempo de espera configurado de 6 segundos por llamada a Gemini; uso de la respuesta de respaldo ante error, timeout o contenido inválido; 0 órdenes de riego originadas por estas consultas. |
 
 ##### 4.1.2.3. Constraints
 
@@ -1371,9 +1371,9 @@ El orden propuesto sitúa primero los drivers de alta importancia y alto impacto
 | QAS02 | Rendimiento del monitoreo | Atender consultas concurrentes y distinguir datos desactualizados. | High | High |
 | FD04 | Historial y comparación del consumo | US24 y US26: registrar ciclos y comparar consumo con una línea base documentada. | High | High |
 | QAS06 | Integridad del historial | Conservar procedencia, evitar duplicados e identificar registros incompletos. | High | High |
-| FD05 | Recomendaciones revisables | US34 y US35: generar propuestas explicadas y revalidarlas antes de una posible ejecución. | High | High |
-| QAS08 | Resiliencia de las recomendaciones | Aislar fallos de IA y evitar órdenes derivadas de respuestas inválidas. | High | High |
-| TS12 | Separación entre IA y control físico | Restringir la IA a propuestas sin credenciales de control. | High | High |
+| FD05 | Recomendaciones y asistencia por planta | US34 permite consultar el diagnóstico y su explicación; US35 permite conversar sobre las plantas de la cuenta mediante el asistente. | High | High |
+| QAS08 | Resiliencia de las recomendaciones | Limitar la espera de cada llamada a Gemini y conservar orientación por reglas cuando el proveedor falla, sin generar órdenes de riego. | High | High |
+| TS12 | Separación entre IA y control físico | La consulta de recomendaciones y el chat producen información; el envío de órdenes pertenece a los servicios de control. | High | High |
 | TS05 | Integración multicomponente | Utilizar las tecnologías definidas y una API propia compartida por web y móvil. | High | High |
 | QAS01 | Vinculación comprensible | Facilitar el primer uso con instrucciones y recuperación de errores. | High | Medium |
 | TS13 | Internacionalización y accesibilidad | Ofrecer inglés por defecto, español y controles accesibles. | High | Medium |
@@ -1408,9 +1408,9 @@ El control local del ESP32 debe mantener límites de duración y condiciones de 
 
 Los drivers FD05, QAS07, QAS08 y TS12 orientan la integración de servicios externos mediante puertos y adaptadores. Irrigation Intelligence utiliza un contrato interno de información climática y un adaptador para consultar Open-Meteo. Esta separación permite modificar el proveedor sin trasladar sus formatos a las aplicaciones.
 
-La incorporación de recomendaciones apoyadas por IA se contempla como una ampliación de Irrigation Intelligence. Las propuestas deberán incluir una explicación y someterse a las validaciones del dominio antes de originar una acción aceptada por el usuario.
+Irrigation Intelligence calcula el diagnóstico de la tarjeta con reglas del dominio. Después puede consultar a Gemini para redactar una explicación adecuada al nivel de experiencia y ampliar los consejos. La etiqueta de origen identifica quién redactó el texto; el nivel y el motivo del diagnóstico se mantienen aunque Gemini no responda. El asistente utiliza el mismo adaptador para responder preguntas sobre las plantas de la cuenta.
 
-La adaptación del riego al pronóstico y las recomendaciones conservarán las condiciones de ubicación, vigencia de las lecturas y límites de operación establecidos para cada unidad.
+Las decisiones de orientación y de actuación siguen caminos distintos. La tarjeta y el chat no envían comandos a la EdgeAPI. Una solicitud manual de riego se realiza mediante las operaciones de control. US34 corresponde a la tarjeta de orientación y US35 al asistente conversacional; ambos utilizan información de las plantas registradas en la cuenta.
 
 **Iteración 4: Historial, evolución e interacción**
 
@@ -1510,17 +1510,17 @@ Cada escenario vincula una necesidad del negocio con una respuesta observable. L
 
 | Campo | Descripción |
 |:------|-------------|
-| Scenario(s) | Indisponibilidad del proveedor de IA y respuesta incompatible con las reglas de riego. |
-| Business Goals | Ofrecer orientación sin comprometer el control del dispositivo ni bloquear el uso de la plataforma. |
+| Scenario(s) | Gemini no responde, devuelve texto vacío o entrega un JSON inutilizable para la tarjeta. |
+| Business Goals | Mantener la orientación por planta y conservar el control del suministro de agua. |
 | Relevant Quality Attributes | Resiliencia y confiabilidad. |
-| Stimulus | La consulta excede el tiempo permitido, devuelve un formato inválido o sugiere una acción fuera de los límites. |
-| Stimulus Source | Servicio externo de IA. |
-| Environment | Usuario autenticado, unidad autorizada y datos de entrada suficientes para solicitar orientación. |
-| Artifact | Adaptador de IA y servicios de recomendaciones de Irrigation Intelligence. |
-| Response | Se limita el tiempo de espera, se valida la respuesta y se informa la indisponibilidad cuando corresponde. Las propuestas válidas incluyen fundamento y vencimiento. La aceptación del usuario vuelve a comprobar propiedad, lecturas, política y límites antes de solicitar una orden. |
-| Response Measure | En 30 casos de fallo, la solicitud finaliza en un máximo de 5 segundos y se publican 0 órdenes de riego. El 100 % de las propuestas válidas vence en un máximo de 5 minutos; ninguna propuesta vencida se ejecuta. |
-| Questions | ¿Los datos actuales todavía respaldan una propuesta aceptada? La comprobación se realiza nuevamente al aceptar, aunque la recomendación no haya vencido. |
-| Issues | El proveedor de IA no dispondrá de credenciales de control ni acceso autorizado a los canales de comandos. El monitoreo y la detención deben permanecer disponibles si falla la recomendación. |
+| Stimulus | Se solicita una recomendación o se formula una pregunta mientras el proveedor está indisponible. |
+| Stimulus Source | Servicio de IA externo. |
+| Environment | Cuenta autenticada. La consulta puede realizarse con o sin telemetría de la planta. |
+| Artifact | `GeminiAdviceService`, `GetRecommendationQuery` y `PlantChatService`. |
+| Response | La tarjeta conserva el diagnóstico y los consejos por reglas. El chat devuelve un resumen de la planta seleccionada o de la primera planta de la cuenta cuando no se eligió una. La respuesta de la API identifica su origen mediante source. Ninguna de estas consultas solicita abrir o cerrar el riego. |
+| Response Measure | Cada llamada a Gemini utiliza un timeout configurado de 6000 ms. Ante error del proveedor, timeout o contenido inutilizable, se devuelve la orientación de respaldo. La consulta de recomendación y el chat originan 0 comandos de riego. |
+| Questions | ¿Qué alcance tiene el límite temporal? Se aplica a la llamada a Gemini. La duración total también depende de las consultas de datos, clima y ficha botánica que intervengan en el recorrido. |
+| Issues | La tarjeta valida la estructura del JSON y conserva el nivel, el título y el motivo calculados por reglas. El chat recibe texto libre. Esta validación de formato no comprueba la exactitud botánica de cada frase generada. |
 
 **Scenario Refinement for QAS02: Rendimiento de las consultas**
 
@@ -1818,9 +1818,9 @@ Al evaluar la ubicación de las capacidades, se mantiene la gestión de planes e
 
 La arquitectura de AquaSave se presenta mediante las vistas System Landscape, Context, Container y Deployment. Estas permiten comprender el entorno de la solución, sus interacciones, la distribución de responsabilidades y los recursos necesarios para su ejecución.
 
-La solución integra una landing page, aplicaciones web y móvil desarrolladas con Flutter, una API modular en Node.js con Express y TypeScript, una EdgeAPI de integración y un dispositivo ESP32. PostgreSQL proporciona la persistencia principal, HiveMQ Cloud permite la comunicación MQTT y Open-Meteo aporta información climática.
+La solución integra una landing page, aplicaciones Flutter para web y Android, una API modular con Node.js, Express y TypeScript, una EdgeAPI y un kit ESP32. PostgreSQL almacena los registros del producto, HiveMQ Cloud transporta mensajes MQTT, Open-Meteo aporta información climática y Gemini proporciona generación de texto a través de la API del backend.
 
-Los cinco bounded contexts orientan la organización del dominio. La implementación inicial concentra acceso, dispositivos y riego, mientras que las recomendaciones apoyadas por IA, las capacidades especializadas de Analytics y la gestión comercial de Monetization se incorporarán progresivamente.
+Los cinco bounded contexts organizan las responsabilidades del dominio. La ejecución del backend reúne las funciones de cuenta, dispositivos, riego y consulta de registros. Irrigation Intelligence incorpora el cálculo de recomendaciones por planta y la integración del asistente con Gemini. Los límites del dominio se distinguen de las unidades de despliegue de la plataforma.
 
 #### 4.3.1. Software Architecture System Landscape Diagram
 
@@ -1834,7 +1834,7 @@ Los usuarios conocen la propuesta mediante la landing page y acceden a las aplic
 
 El dispositivo ESP32 intercambia mensajes con HiveMQ Cloud. La EdgeAPI recibe esos mensajes y los comunica al backend mediante HTTP; también obtiene los comandos pendientes y los publica hacia el dispositivo.
 
-Open-Meteo proporciona el pronóstico climático utilizado por Irrigation Intelligence. La autenticación de las cuentas se gestiona en la API mediante JWT y sesiones. La autenticación externa, los pagos, el correo transaccional y las recomendaciones apoyadas por IA se contemplan como integraciones posteriores según las funcionalidades previstas.
+Open-Meteo proporciona información climática. Gemini es un sistema externo al que la API consulta para explicar el diagnóstico de riego y responder preguntas. La autenticación de AquaSave se gestiona en la API mediante JWT y sesiones.
 
 #### 4.3.2. Software Architecture Context Level Diagrams
 
@@ -1848,7 +1848,7 @@ Los usuarios consultan las condiciones de sus plantas y solicitan operaciones de
 
 El ESP32 obtiene las lecturas y ejecuta las acciones sobre el actuador. HiveMQ Cloud transporta los mensajes MQTT y la EdgeAPI conecta ese intercambio con la API de AquaSave. Open-Meteo aporta información meteorológica consultada desde el backend.
 
-Las recomendaciones apoyadas por IA se incorporarán como una capacidad de orientación dentro de Irrigation Intelligence. Las integraciones comerciales se vincularán con Monetization, manteniendo la gestión del dispositivo y las decisiones de riego dentro de la plataforma.
+AquaSave solicita a Gemini orientación textual para los usuarios principiantes y expertos. El servicio externo recibe el contexto preparado por la plataforma y devuelve texto. La responsabilidad de interpretar la telemetría y gestionar el control del dispositivo permanece en AquaSave.
 
 #### 4.3.3. Software Architecture Container Level Diagrams
 
@@ -1860,9 +1860,9 @@ El diagrama de contenedores descompone la Plataforma AquaSave en sus principales
 
 Dentro del límite de la Plataforma AquaSave se encuentran los siguientes contenedores:
 
-- **Web Application:** aplicación desarrollada con Flutter y Dart, compilada para ejecutarse en el navegador. Permite acceder a cuentas, dispositivos, lecturas, historial y control del riego mediante la API.
-- **Mobile Application:** aplicación desarrollada con Flutter y Dart para Android. Comparte la base de código y los contratos de acceso a datos de la versión web.
-- **AquaSave API:** backend desarrollado con Node.js, Express y TypeScript. Expone endpoints REST para autenticación, gestión de dispositivos, telemetría, riego y pronóstico climático. Organiza los casos de uso mediante módulos con capas de dominio, aplicación, infraestructura e interfaces.
+- **Web Application:** aplicación Flutter/Dart ejecutada en el navegador. Consulta las plantas de la cuenta, sus lecturas y recomendaciones; ofrece el asistente y las acciones de control mediante la API.
+- **Mobile Application:** aplicación Flutter/Dart para Android. Comparte con la web el acceso a plantas, recomendaciones y chat a través de la misma API.
+- **AquaSave API:** backend modular en Node.js, Express y TypeScript. Expone endpoints de cuentas, plantas, telemetría, riego, clima y orientación. Irrigation Intelligence calcula el diagnóstico e integra Gemini; la aplicación cliente no necesita la clave del proveedor.
 - **Platform PostgreSQL Database:** almacena usuarios, sesiones, dispositivos, telemetría, comandos y registros de riego mediante los repositorios del backend.
 - **AquaSave EdgeAPI:** servicio desarrollado con Node.js y TypeScript que conecta MQTT con HTTP. Recibe telemetría y estados, consulta comandos pendientes, los publica en HiveMQ Cloud y comunica los reconocimientos al backend.
 
@@ -1872,12 +1872,13 @@ Fuera del límite de la plataforma se representan los siguientes sistemas relaci
 - **Kit IoT AquaSave:** sistema físico compuesto por el ESP32, los sensores y la bomba con relé. El firmware desarrollado en C++ con Arduino obtiene las lecturas, controla el actuador de riego y se comunica con HiveMQ Cloud mediante MQTT.
 - **HiveMQ Cloud:** servicio externo de mensajería que transporta telemetría, estados, comandos y reconocimientos entre el kit IoT y la EdgeAPI.
 - **Open-Meteo:** servicio externo que proporciona pronóstico climático y geocodificación mediante consultas desde la API.
+- **Google Gemini API:** servicio de generación de texto consultado por la AquaSave API mediante HTTPS. No participa en la publicación de mensajes MQTT.
 
 La landing page y el kit IoT pertenecen a la solución de EcoDrop, pero se presentan como sistemas separados de la Plataforma AquaSave. Su ubicación fuera del límite indica esa separación arquitectónica.
 
 Las aplicaciones Flutter organizan su código en presentación, dominio y datos. Utilizan BLoC y Cubit para gestionar estados, repositorios para el acceso a la información y SharedPreferences para conservar datos locales de sesión. El almacenamiento local forma parte de los clientes y no constituye una base de datos SQLite independiente.
 
-La API mantiene PostgreSQL como persistencia principal. Para desarrollo y pruebas también existen implementaciones de repositorio basadas en archivos JSON. Los contratos HTTP se documentan con OpenAPI y Swagger.
+La API utiliza PostgreSQL y dispone de repositorios JSON para desarrollo local. Los contratos HTTP se describen mediante OpenAPI. Las consultas de recomendación y del asistente se atienden desde las rutas de Irrigation Intelligence, con autenticación y acceso a las plantas de la cuenta.
 
 La telemetría recorre el dispositivo, HiveMQ Cloud y la EdgeAPI antes de llegar al backend. En sentido inverso, la API registra comandos que la EdgeAPI consulta y publica hacia el ESP32. Las aplicaciones consultan la API y no necesitan conectarse directamente al broker.
 
@@ -1915,7 +1916,7 @@ Este capítulo desarrolla el diseño táctico de los cinco bounded contexts defi
 
 La solución utiliza TypeScript con Node.js y Express para la API, PostgreSQL para la persistencia, Flutter con Dart para las aplicaciones web y Android, y un dispositivo ESP32 programado en C++ con Arduino. La comunicación MQTT se integra mediante EdgeAPI y HiveMQ Cloud. Estos componentes conservan los límites del dominio sin exigir que cada bounded context sea un microservicio independiente.
 
-Los diagramas presentan el modelo conceptual del contexto y sus posibilidades de extensión. La descripción de las capas diferencia los componentes existentes en el código de los contratos propuestos. Los nombres de clases, tipos y operaciones de los diagramas no implican el uso de otro lenguaje o framework. Monetization, la separación completa de Analytics y las recomendaciones apoyadas por IA se documentan como diseño previsto, no como módulos terminados.
+Los diagramas representan la organización de los contextos y sus relaciones. Las descripciones de las capas detallan los componentes del backend y su correspondencia con las aplicaciones. Device Management administra los registros de plantas y su especie, mientras que Irrigation Intelligence reúne los servicios de riego, las recomendaciones calculadas por reglas y el asistente integrado con Gemini.
 
 ### 5.1. Bounded Context: Device Management
 
@@ -1929,7 +1930,7 @@ Esta capa encapsula la información del dispositivo doméstico y las reglas nece
 
 | Elemento | Propósito y atributos principales | Comportamientos y relaciones |
 | :--- | :--- | :--- |
-| `Device` | Representa un kit ESP32 mediante `id`, `accountId`, `name`, `location`, `status`, `firmwareVersion`, `isActive`, `plantCount`, `cropType`, `valveState`, `lastTelemetry`, `createdAt` y `updatedAt`. | Se vincula a una cuenta y permite actualizar sus datos. Las funciones `touchDevice` y `withEffectiveStatus` actualizan su fecha e interpretan su conexión según la vigencia de la telemetría. |
+| `Device` | Registro de una planta de la cuenta, con `id`, `accountId`, `name`, `speciesId`, `location`, `isActive`, `lastTelemetry` y estado del actuador. `cropType` admite una nota libre y `plantCount` se conserva por compatibilidad. | Cada alta nueva corresponde a una planta. `speciesId` permite consultar el catálogo de cuidado; la ausencia de telemetría se distingue de una medición de humedad igual a cero. |
 | `SensorReading` | Contiene `deviceId`, `soilMoisturePct`, `temperatureC`, `humidityPct`, `pumpOn`, `flowRateLMin`, `batteryPct` y `recordedAt`, según la información recibida. | Se relaciona con un dispositivo. `normalizeReading` normaliza los valores antes de utilizarlos en la aplicación. |
 | `WaterValve` | Representa conceptualmente el actuador y su estado de apertura o cierre. | En la implementación base, su estado se mantiene en `Device.valveState` y se contrasta con `SensorReading.pumpOn`; no requiere una entidad persistida por separado. |
 
@@ -1943,7 +1944,7 @@ Esta capa encapsula la información del dispositivo doméstico y las reglas nece
 **Aggregates:**
 
 - `DeviceAggregate`: delimita la consistencia entre la identidad del kit, su cuenta, configuración, última lectura y estado del actuador. En el código base, esta responsabilidad se organiza alrededor del tipo `Device` y sus servicios, sin una clase adicional con ese nombre.
-- Una unidad puede agrupar plantas compatibles con una misma acción de riego. Tener varios nombres de plantas no significa que un solo sensor proporcione una lectura independiente para cada maceta.
+- Una cuenta puede registrar varias plantas. Cada nueva ficha corresponde a una planta y conserva su propia identidad y especie. La presencia de lecturas depende de la telemetría del dispositivo asociado; los consejos del catálogo pueden consultarse sin una lectura del sustrato.
 
 **Domain Services:**
 
@@ -2033,7 +2034,7 @@ El diagrama representa el diseño lógico de dispositivos y datos asociados. Su 
 
 | Tabla | Claves y campos relevantes | Relación y restricciones |
 | :--- | :--- | :--- |
-| `devices` | `id` como PK; `account_id`, `name`, coordenadas, `status`, `valve_state`, `last_telemetry`, fechas. | Una cuenta puede asociar varios dispositivos. La autorización por `account_id` se verifica en los servicios; este campo no está declarado como FK en la migración base. |
+| `devices` | `id` como PK; `account_id`, `name`, `species_id`, ubicación, `status`, `valve_state`, `last_telemetry` y fechas. | La cuenta puede registrar varias plantas; cada registro nuevo representa una planta. La propiedad del recurso se verifica al atender las solicitudes. |
 | `device_settings` | `device_id` como PK y FK; `settings` JSONB; `updated_at`. | Un registro de configuración por kit. La FK referencia `devices.id` y utiliza eliminación en cascada. |
 
 Las tablas separadas de lecturas, calibración, válvulas y actualizaciones representan una posible normalización del modelo; no se presentan como tablas ya creadas.
@@ -2046,7 +2047,7 @@ Las tablas separadas de lecturas, calibración, válvulas y actualizaciones repr
 
 ### 5.2. Bounded Context: Irrigation Intelligence
 
-Irrigation Intelligence concentra los ciclos de riego, las reglas de humedad, la programación y la consideración del pronóstico. Su propósito es coordinar solicitudes de riego y conservar resultados que puedan ser consultados por el usuario.
+Irrigation Intelligence concentra las reglas, la programación y el control del riego. También atiende dos consultas de orientación: la tarjeta de recomendación por planta y el chat. Ambas utilizan datos de la cuenta; solo los servicios de control pueden solicitar acciones físicas.
 
 #### 5.2.1. Domain Layer
 
@@ -2057,9 +2058,8 @@ Esta capa define las condiciones de una decisión de riego sin depender del prov
 | Elemento | Propósito y atributos principales | Comportamientos y relaciones |
 | :--- | :--- | :--- |
 | `IrrigationEvent` | Registra `id`, `deviceId`, `startedAt`, `endedAt`, `litersConsumed`, `triggerType`, `status`, `wasSkipped`, `skipReason`, `commandId` y lecturas disponibles. | Identifica el origen manual, automático o programado del ciclo y permite conservar su resultado por dispositivo. |
-| `WeatherForecast` | Contiene ubicación, coordenadas, temperatura, humedad, probabilidad de lluvia, precipitación, viento, condición, `retrievedAt` y `validUntil`. | Aporta información externa con una vigencia explícita; no reemplaza las lecturas del sustrato. |
+| `WeatherForecast` | Contiene ubicación, temperatura, humedad, probabilidad de lluvia, precipitación, viento, `retrievedAt`, `validUntil` e `isEstimated`. | Distingue la respuesta del proveedor de los valores estimados de respaldo. Un valor estimado no constituye una observación meteorológica. |
 | `EdgeCommand` | Incluye `id`, `deviceId`, `type`, `status`, `issuedAt` y `acknowledgedAt`. | Representa una solicitud pendiente, confirmada o fallida en el contrato con el dispositivo. |
-| `IrrigationSchedule` | Modelo conceptual de días, hora, duración y habilitación de una evaluación programada. | En la base actual, sus ajustes forman parte de la configuración del dispositivo, sin una tabla independiente de horarios. |
 
 **Value Objects:**
 
@@ -2075,8 +2075,10 @@ Esta capa define las condiciones de una decisión de riego sin depender del prov
 **Domain Services:**
 
 - `IrrigationDecisionService`: evalúa telemetría, umbrales y pronóstico para devolver una decisión como iniciar, pausar o mantener detenido, junto con su motivo.
-- La política diseñada contempla límites de duración y cortes locales independientes de internet.
-- El uso del pronóstico debe considerar la exposición real de la unidad a la lluvia; las plantas protegidas no reciben el mismo beneficio que una planta exterior.
+- `buildIrrigationAdvice` calcula la orientación de la tarjeta. Examina la última humedad de la planta, los rangos de la especie, el estado de pausa y el pronóstico disponible. Distingue situaciones como falta de lectura, exceso de agua, lluvia prevista y humedad baja. `buildCareTips` genera consejos del catálogo incluso sin sensor conectado.
+- El resultado `Recommendation` contiene el diagnóstico (`irrigation`), consejos (`care`), ficha opcional (`info`) y fechas de generación y vencimiento. El campo `source` indica si el texto procede de reglas o de IA; no indica que Gemini haya tomado la decisión de riego.
+- Los rangos de humedad de la especie orientan el diagnóstico de la tarjeta. Los umbrales configurados para el control del riego se gestionan mediante sus propios ajustes y servicios.
+- La consulta utiliza la última humedad almacenada y puede considerar el pronóstico de la ubicación. Su tiempo de generación identifica el consejo elaborado a partir de esos datos; no representa una nueva medición del sensor.
 
 **Repositories y Ports:**
 
@@ -2096,8 +2098,11 @@ Los manejadores HTTP de Express reciben las solicitudes de las aplicaciones y de
 | Manejadores de control | `POST /api/irrigation/devices/:deviceId/start` y `stop` | Solicitar el inicio o la detención; la API responde con aceptación de la solicitud. |
 | Manejador de eventos | `GET /api/irrigation/devices/:deviceId/events` | Consultar el historial correspondiente al dispositivo. |
 | `createWeatherRouter` | Rutas bajo `/api/weather` | Entregar información climática obtenida mediante el adaptador. |
+| Recomendación | `GET /api/irrigation/devices/:deviceId/recommendation` | Verifica que el registro pertenezca a la cuenta y entrega el diagnóstico, su motivo, los consejos y su origen. |
+| Asistente | `GET /api/irrigation/chat/plants` y `POST /api/irrigation/chat` | Lista las plantas disponibles para la conversación y responde un mensaje en el contexto de la cuenta. |
+| Ficha botánica | `GET /api/irrigation/plant-suggestions`, `GET /api/irrigation/plants-info` y `GET /api/irrigation/devices/:deviceId/fact` | Busca alternativas por nombre y consulta información, imágenes o datos curiosos. |
 
-La interfaz de recomendaciones asistidas por IA se plantea dentro de este contexto. Cuando se implemente, deberá mostrar una propuesta con fundamento y permitir aceptarla o descartarla; no se describe como una integración ya disponible.
+Las rutas del asistente y de la recomendación requieren autenticación. Flutter consume la API propia, presenta la tarjeta en Inicio y permite elegir una planta en el chat. Las respuestas se presentan como orientación. Los controles de inicio y detención conservan sus propias operaciones.
 
 #### 5.2.3. Application Layer
 
@@ -2113,12 +2118,15 @@ La interfaz de recomendaciones asistidas por IA se plantea dentro de este contex
 - `GetIrrigationStateQuery`: obtiene el estado de control para la unidad consultada.
 - `ListIrrigationEventsQuery`: consulta los ciclos del dispositivo.
 - `GetWeatherForecastQuery`: coordina la consulta del pronóstico.
+- `GetRecommendationQuery`: verifica la propiedad de la planta, obtiene la especie, el perfil de experiencia y el clima disponible, calcula la orientación y solicita a Gemini que la explique. La recomendación se conserva en memoria hasta 10 minutos; la clave de caché incluye el dispositivo, la humedad y el estado de activación. Esta vigencia corresponde a la recomendación, no a la antigüedad de la lectura.
+- `PlantChatService`: utiliza las plantas de la cuenta, sus rangos, la última humedad disponible y hasta ocho mensajes recientes de conversación. Adapta el tono al perfil y puede responder con un resumen de reglas cuando Gemini no entrega texto. El historial de conversación no equivale al historial de riegos.
+- `PlantFactService` y `PlantSuggestionsService`: ofrecen datos curiosos y sugerencias por nombre. Si la búsqueda en iNaturalist no encuentra plantas, la API puede pedir a Gemini nombres alternativos y volver a buscar. Las imágenes son referencias para la selección del usuario.
 
-**Event Handlers y recomendaciones propuestas:**
+**Event Handlers y recomendaciones:**
 
 - La recepción del estado de la bomba permite actualizar el seguimiento del ciclo.
-- El diseño de recomendaciones apoyadas por IA contempla registrar datos utilizados, explicación y vencimiento. La aceptación deberá volver a comprobar propiedad, lecturas y límites antes de generar una orden.
-- Los fallos del proveedor climático o del futuro servicio de IA no deben impedir la detención del riego.
+- La recomendación incluye diagnóstico, explicación, fecha de generación y vencimiento a los 10 minutos. El asistente responde preguntas sobre las plantas de la cuenta y utiliza el contexto reciente de la conversación.
+- Consultar la recomendación no modifica el estado del actuador. La solicitud de detención mantiene su propio servicio y no espera una respuesta de Gemini.
 
 #### 5.2.4. Infrastructure Layer
 
@@ -2129,13 +2137,14 @@ La interfaz de recomendaciones asistidas por IA se plantea dentro de este contex
 
 **External Services:**
 
-- `OpenMeteoWeatherService`: adapta las respuestas de Open-Meteo al modelo del dominio.
+- `OpenMeteoWeatherService` consulta Open-Meteo. Si falla la consulta externa, produce un pronóstico de respaldo marcado con `isEstimated: true` y de vigencia breve. Un cero de precipitación en ese respaldo no demuestra ausencia real de lluvia.
 - `CommandDispatchService`, en EdgeAPI, coordina la distribución de órdenes hacia el broker y su comunicación con la API.
-- El adaptador de IA se mantiene pendiente. Su diseño no concede al modelo acceso directo a las credenciales o al canal de control físico.
+- `GeminiAdviceService` llama a la API de Google desde el backend. `GEMINI_API_KEY` habilita el enriquecimiento y `GEMINI_MODEL` selecciona el modelo; el valor por defecto es `gemini-3.5-flash-lite`. El adaptador limita la llamada a 6 segundos. Para la tarjeta solicita JSON, comprueba que haya un cuerpo de texto y filtra los consejos por estructura. Solo sustituye la redacción: el nivel y el motivo permanecen definidos por las reglas. Ante un fallo se conserva la orientación local. El chat utiliza una respuesta de texto libre y dispone de su propio respaldo.
+- `PlantInfoService` consulta Wikipedia e iNaturalist para complementar la ficha. Puede solicitar a Gemini una descripción cuando no obtiene una adecuada de las fuentes consultadas. No analiza fotografías subidas por el usuario para reconocer especies.
 
 #### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-El diagrama muestra la separación entre controladores, decisiones de riego, repositorios y el adaptador climático. El proveedor utilizado en la implementación base es Open-Meteo; el dominio no depende del nombre comercial de ese servicio.
+El diagrama conserva la estructura del control de riego. La implementación añade un camino de consulta: el router delega en `GetRecommendationQuery`, que utiliza las reglas del dominio y `GeminiAdviceService` para la explicación; `PlantChatService` utiliza ese mismo adaptador para conversar. El camino de inicio y detención sigue pasando por los servicios de riego y su gateway. El adaptador de Gemini no publica órdenes en MQTT.
 
 <p align="center">
   <img src="image/dc2.png" alt="Diagrama de componentes de Irrigation Intelligence" width="1000">
@@ -2145,7 +2154,7 @@ El diagrama muestra la separación entre controladores, decisiones de riego, rep
 
 ##### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-El modelo relaciona ciclos, programación, umbrales y pronóstico. Los contratos del gateway separan la decisión de negocio de la publicación MQTT y permiten conocer el resultado de cada solicitud.
+El modelo relaciona ciclos, programación, umbrales y pronóstico. La recomendación añade nivel, motivo, texto y vigencia. Sus datos describen orientación; la orden al equipo sigue representada por un contrato diferente. Las dependencias del servicio de Gemini pertenecen a infraestructura y no al modelo de clases del dominio.
 
 <p align="center">
   <img src="image/IRRIGATION-INTELLIGENCE.png" alt="Diagrama de clases de Irrigation Intelligence" width="1000">
@@ -2153,7 +2162,7 @@ El modelo relaciona ciclos, programación, umbrales y pronóstico. Los contratos
 
 ##### 5.2.6.2. Bounded Context Database Design Diagram
 
-La estructura lógica organiza eventos, horarios y parámetros. En PostgreSQL, la base implementada utiliza las siguientes tablas:
+La persistencia del contexto organiza eventos, comandos y parámetros del dispositivo. En PostgreSQL se utilizan las siguientes tablas:
 
 | Tabla | Claves y campos relevantes | Relación y restricciones |
 | :--- | :--- | :--- |
@@ -2161,7 +2170,7 @@ La estructura lógica organiza eventos, horarios y parámetros. En PostgreSQL, l
 | `edge_commands` | `id` como PK; `device_id`, tipo, estado, emisión y confirmación. | Conserva el seguimiento de las solicitudes y un índice por dispositivo y estado. |
 | `device_settings` | `device_id` como PK y FK; `settings` JSONB. | Mantiene los ajustes de umbrales y programación asociados al kit. |
 
-El pronóstico se obtiene mediante el servicio externo. Las tablas específicas de horarios, pronósticos y pausas del diagrama representan el modelo lógico ampliado, no una migración adicional ya ejecutada.
+El pronóstico se obtiene mediante el adaptador externo. Los parámetros de programación y pausa se incluyen en la configuración del dispositivo. La recomendación se conserva en memoria durante un máximo de 10 minutos y los mensajes recientes del chat se envían en la petición de consulta. El diagrama ilustra las relaciones lógicas del contexto; la tabla anterior identifica su almacenamiento en PostgreSQL.
 
 <p align="center">
   <img src="image/b2.png" alt="Diseño lógico de base de datos de Irrigation Intelligence" width="1000">
@@ -2635,7 +2644,7 @@ La aplicación Android conserva la identidad, los datos y las tareas de la versi
 
 | Elemento | Lineamiento |
 | :--- | :--- |
-| Navegación inferior | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. |
+| Navegación inferior | Inicio, Mis plantas, Asistente, Análisis, Historial, Perfil y Configuración. El asistente también se abre desde el botón flotante en las demás pantallas autenticadas. |
 | Etiquetas | Se destaca la etiqueta del destino seleccionado. |
 | Tarjetas | Una columna cuando no existe espacio para una retícula. |
 | Formularios | Campos apilados y desplazamiento vertical. |
@@ -2670,8 +2679,9 @@ El sistema principal es **funcional por tareas**. Cada sección reúne acciones 
 
 | Sección | Objetivo del usuario | Contenido principal |
 | :--- | :--- | :--- |
-| Inicio | Conocer rápidamente el estado de una unidad. | Lecturas disponibles, conexión, clima y control rápido. |
-| Dispositivos | Identificar y gestionar los kits propios. | Listado, selección, datos de unidad y configuración asociada. |
+| Inicio | Consultar el estado de la planta seleccionada. | Lecturas, conexión, clima, tarjeta de recomendación y acceso al control. |
+| Mis plantas | Registrar una planta y consultar su ficha. | Nombre, especie, consejos y datos del kit cuando esté conectado. |
+| Asistente | Resolver una duda sobre las plantas de la cuenta. | Selección de planta, pregunta, respuesta y continuidad de la conversación. |
 | Análisis | Comprender patrones de consumo. | Indicadores, gráficos y comparaciones cuando existan datos suficientes. |
 | Historial | Revisar lo ocurrido durante el riego. | Ciclos, fechas, origen y resultados disponibles. |
 | Perfil | Mantener los datos de la cuenta. | Información personal y ajustes de acceso. |
@@ -2695,7 +2705,8 @@ Las etiquetas deben ser breves, consistentes y comprensibles. El usuario no nece
 | Label | Significado |
 | :--- | :--- |
 | Inicio | Resumen del estado y acceso al control rápido. |
-| Dispositivos | Kits y unidades asociados a la cuenta. |
+| Mis plantas | Plantas registradas, especie seleccionada y datos disponibles de cada una. |
+| Asistente | Conversación sobre las plantas que pertenecen a la cuenta. |
 | Análisis | Indicadores y gráficos de los registros. |
 | Historial | Consulta de los ciclos de riego. |
 | Perfil | Información de la cuenta. |
@@ -2705,7 +2716,7 @@ Las etiquetas deben ser breves, consistentes y comprensibles. El usuario no nece
 
 | Acción | Resultado esperado |
 | :--- | :--- |
-| Agregar dispositivo | Iniciar el registro o la vinculación de un kit. |
+| Agregar planta | Crear la ficha y seleccionar su especie. La ficha puede existir sin lecturas; la conexión del kit se verifica por separado. |
 | Ver detalles | Consultar la unidad seleccionada. |
 | Verificar zona | Comprobar una ubicación para la consulta climática. |
 | Iniciar riego | Enviar una solicitud de inicio. |
@@ -2730,7 +2741,7 @@ Una alerta debe indicar la unidad involucrada, el problema observado y una acci�
 
 #### 6.2.3. Searching Systems
 
-AquaSave utiliza búsquedas específicas y selección de unidades, en lugar de un buscador global de contenido. La función más relevante del frontend es localizar la zona utilizada para obtener el pronóstico.
+AquaSave ofrece búsquedas y selecciones relacionadas con dos tareas: indicar dónde está una planta para consultar el clima y elegir su especie para personalizar la orientación.
 
 **Búsqueda de ubicación climática:**
 
@@ -2745,12 +2756,12 @@ El resultado permite asociar una etiqueta y coordenadas al dispositivo. La inter
 
 **Selección y filtros:**
 
-- En Dispositivos, el usuario selecciona el kit mediante sus tarjetas y nombres.
+- En Mis plantas, el usuario elige una ficha por su nombre y consulta la especie y los datos disponibles de esa planta.
 - Las consultas de historial y análisis conservan el dispositivo seleccionado.
 - El diseño de filtros por periodo permite acotar registros sin cambiar su procedencia.
 - Si la búsqueda no produce un resultado, se debe permitir corregir los datos sin utilizar una ubicación ficticia.
 
-La búsqueda climática no equivale a identificar una planta o reconocer su especie. Esas capacidades no se consideran implementadas por disponer de un formulario de ubicación.
+La aplicación permite elegir una especie del catálogo. Por separado, la API ofrece sugerencias por nombre con imágenes de referencia; si no encuentra coincidencias puede consultar a Gemini por nombres alternativos. Este mecanismo no identifica una especie a partir de una fotografía tomada por el usuario.
 
 #### 6.2.4. SEO Tags and Meta Tags
 
@@ -2795,7 +2806,7 @@ La navegación conserva las mismas secciones en web y Android, ajustando su pres
 
 **Navegación en pantallas estrechas:**
 
-- Barra inferior con seis destinos.
+- Barra inferior con siete destinos; el botón flotante ofrece acceso al chat desde las otras pantallas autenticadas.
 - Contenido apilado y desplazamiento vertical.
 - Identificación visible del destino seleccionado.
 - Regreso a la sección de origen al terminar o cancelar una edición.
@@ -2806,7 +2817,7 @@ La navegación conserva las mismas secciones en web y Android, ajustando su pres
 | :--- | :--- | :--- |
 | Público | Landing y accesos publicados. | No exige autenticación. |
 | Acceso | Inicio de sesión y registro. | Disponible antes de ingresar a la cuenta. |
-| Operativo | Inicio, Dispositivos, Análisis, Historial, Perfil y Configuración. | Requiere una sesión válida. |
+| Operativo | Inicio, Mis plantas, Asistente, Análisis, Historial, Perfil y Configuración. | Requiere una sesión válida. |
 | Detalle | Unidad, configuración y registros asociados. | Requiere que el recurso pertenezca a la cuenta. |
 
 El identificador de la unidad seleccionada se conserva al consultar sus datos o solicitar una acción. Si el usuario cambia de dispositivo, un resultado pendiente no debe atribuirse al nuevo kit.
@@ -2821,7 +2832,7 @@ La landing page presenta el problema, la propuesta de AquaSave y los pasos para 
 | Presentación principal | Propuesta de valor y representación del monitoreo. | Explicar qué problema busca resolver AquaSave. |
 | Beneficios | Información, cuidado, supervisión y uso responsable del agua. | Relacionar las funciones con las necesidades del usuario. |
 | Cómo funciona | Preparar el kit, consultar datos y configurar el cuidado. | Explicar el proceso inicial. |
-| Funcionalidades | Monitoreo, control, historial y orientación prevista. | Mostrar el alcance sin confundir diseño con disponibilidad. |
+| Funcionalidades | Monitoreo, control, historial y orientación sobre el cuidado de plantas. | Explicar la utilidad de cada función y facilitar el acceso a la aplicación. |
 | Acerca del equipo | Presentación de EcoDrop y AquaSave. | Dar contexto a la propuesta. |
 | Contacto | Información y canal de consulta. | Resolver dudas de instalación y compatibilidad. |
 | Acceso final y pie de página | Destinos publicados, ayuda y condiciones. | Permitir continuar la experiencia. |
@@ -2869,19 +2880,19 @@ En el formulario funcional se utiliza correo y contraseña. El registro incorpor
 
 **Dashboard**
 
-Inicio muestra la unidad seleccionada, sus lecturas, la conexión y el acceso al control rápido. El usuario puede revisar la información disponible antes de solicitar el riego.
+Inicio reúne las lecturas, el clima y los accesos al riego de la planta seleccionada. La tarjeta de recomendación presenta el diagnóstico por reglas y su explicación; la insignia **IA** indica cuándo Gemini redactó el texto. El perfil experto también visualiza el motivo con los datos del diagnóstico. Ver la tarjeta no solicita riego.
 
-La fecha del dato y el estado reportado permiten diferenciar una lectura vigente de un valor conservado. El pronóstico se interpreta según la ubicación y la exposición de la unidad.
+El wireframe ilustra la distribución de la información. La fecha de generación del consejo no debe confundirse con la fecha de la última lectura del sensor.
 
 <p align="center">
   <img src="image/1wd.png" alt="Wireframe del dashboard de AquaSave" width="70%">
 </p>
 
-**Dispositivos y vinculación guiada**
+**Mis plantas y vinculación del kit**
 
-Dispositivos presenta los kits propios mediante tarjetas. Desde esta vista se inicia el proceso de agregar un dispositivo y se consulta el detalle de una unidad.
+La aplicación utiliza la etiqueta **Mis plantas**. Desde **Agregar planta**, el usuario crea la ficha y elige una especie. La ficha puede consultarse antes de recibir telemetría. Los wireframes de esta sección conservan la denominación «Dispositivos» como referencia visual del registro del kit asociado.
 
-El recorrido guiado contempla preparación del ESP32, conectividad, verificación, configuración básica, revisión de umbrales, prueba de lecturas y confirmación. Las etapas visibles representan el diseño de la instalación, no una garantía de que todo el aprovisionamiento Wi-Fi se encuentre automatizado en la aplicación base.
+El registro de la aplicación se organiza en cuatro pasos: selección de especie, datos de la planta, indicaciones para conectar el dispositivo y resumen de confirmación. El usuario elige una especie del catálogo o indica el nombre cuando selecciona «Otra planta». La conectividad Wi-Fi del kit se establece mediante la configuración del firmware. Las imágenes ilustran la preparación y consulta del dispositivo; la secuencia funcional corresponde a los cuatro pasos descritos.
 
 <p align="center">
   <img src="image/w1dis.png" alt="Wireframe del listado de dispositivos" width="45%">
@@ -2900,7 +2911,7 @@ Los porcentajes y lecturas mostrados son ejemplos. Los valores sugeridos requier
 
 **Registro, edición y detalle de plantas**
 
-El diseño permite identificar las plantas asociadas a una unidad, revisar sus datos y consultar el último riego disponible. Los formularios incluyen acciones para guardar o cancelar sin modificar otra unidad.
+El usuario consulta una ficha por planta, con su especie, consejos y datos disponibles. Registrar una ficha no confirma que el ESP32 ya esté conectado ni que exista una lectura del sustrato.
 
 <p align="center">
   <img src="image/w8dis.png" alt="Wireframe de registro de una planta" width="45%">
@@ -2909,7 +2920,11 @@ El diseño permite identificar las plantas asociadas a una unidad, revisar sus d
   <img src="image/w10dis.png" alt="Wireframe del detalle de una planta" width="70%">
 </p>
 
-La identificación automática de especies y los porcentajes de confianza visibles en el modelo son elementos propuestos, no una integración de IA implementada. La representación por planta tampoco implica sensores o actuadores independientes para cada ejemplar: la información corresponde a la unidad de riego compatible que se haya configurado.
+Las fotografías del catálogo sirven como referencia visual para la selección de especie. El registro se realiza mediante la selección o el nombre indicado por el usuario. Los elementos de cámara y confianza presentes en la figura no forman parte de este recorrido funcional.
+
+**Asistente**
+
+El asistente permite formular preguntas sobre las plantas registradas y seleccionar una de ellas para enfocar la conversación. Utiliza la especie, la última humedad disponible y los mensajes recientes como contexto. Gemini genera la respuesta y, si el proveedor falla, se muestra un resumen local. El acceso se encuentra en **Asistente** y en el botón flotante de las pantallas autenticadas. La conversación proporciona orientación y conserva el control del riego en sus acciones correspondientes.
 
 **Perfil**
 
@@ -2961,27 +2976,33 @@ Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. 
 
 - **Perfil:** principiante que necesita orientación o experto que incorpora otra unidad.
 - **Objetivo:** vincular un kit a la cuenta y verificar su información.
-- **Recorrido principal:** abrir Dispositivos, seleccionar Agregar dispositivo, preparar el ESP32, completar los pasos de conexión y configuración y revisar la confirmación.
-- **Recorrido alternativo:** si no se logra conexión o los datos son inválidos, conservar el paso, explicar el problema y permitir reintentar sin crear una asociación duplicada.
+- **Recorrido principal:** abrir **Mis plantas**, seleccionar **Agregar planta**, elegir la especie, completar sus datos, revisar las indicaciones de conexión y confirmar el resumen. El kit utiliza la conectividad configurada en su firmware y sus lecturas se consultan cuando llegan a la plataforma.
+- **Recorrido alternativo:** si falta la especie o un dato obligatorio, mostrar el mensaje correspondiente antes de continuar. Si el registro aún no tiene telemetría, conservar la ficha y permitir consultar sus referencias de cuidado.
 - **Resultado:** dispositivo identificado y asociado a la cuenta. El estado conectado requiere información del equipo y no únicamente haber terminado el formulario.
 
 <p align="center">
   <img src="image/userflow (1).png" alt="Wireflow de vinculación del dispositivo IoT" width="90%">
 </p>
 
-**User Goal 3: Registrar y consultar una planta de una unidad**
+**User Goal 3: Registrar y consultar una planta**
 
 - **Perfil:** principiante que organiza sus primeras plantas o experto que mantiene varias unidades.
-- **Objetivo:** identificar una planta dentro de una unidad compatible y consultar la información asociada.
-- **Recorrido principal:** abrir el detalle del dispositivo, ingresar los datos de la planta, confirmar la asociación y revisar el detalle con las lecturas y registros disponibles.
-- **Recorrido alternativo:** si falta información o la unidad no corresponde a la cuenta, no guardar la asociación y explicar la corrección necesaria. Cancelar permite volver sin confirmar cambios.
-- **Resultado:** planta identificada dentro de su unidad, sin atribuirle mediciones independientes que el kit no proporcione.
+- **Objetivo:** identificar la planta por su especie y consultar la orientación disponible para ella.
+- **Recorrido principal:** abrir **Mis plantas**, agregar la ficha, elegir la especie y guardar. Consultar los consejos de la planta y, cuando el kit reporte humedad, revisar la recomendación en Inicio.
+- **Recorrido alternativo:** si no se dispone de una especie específica, seleccionar «Otra planta». Si no hay telemetría, consultar los cuidados generales sin interpretar la falta de lectura como suelo seco.
+- **Resultado:** la ficha queda asociada a la cuenta y conserva la identificación de la planta aunque todavía no reciba mediciones.
 
 <p align="center">
   <img src="image/userflow (2).png" alt="Wireflow de registro y consulta de una planta" width="90%">
 </p>
 
-Estos recorridos mantienen la relación entre navegación, dispositivo seleccionado y autorización. El control manual, la automatización y las futuras recomendaciones se integran a la misma experiencia, conservando la identificación de la unidad y la posibilidad de detener el riego.
+**User Goal 4: Consultar al asistente sobre una planta**
+
+- **Perfil:** principiante que necesita orientación o experto que consulta las condiciones de sus plantas.
+- **Objetivo:** obtener una respuesta contextualizada sobre el cuidado de una planta registrada.
+- **Recorrido principal:** abrir **Asistente** desde la navegación o el botón flotante, seleccionar una planta, escribir una pregunta y consultar la respuesta. Los mensajes recientes permiten continuar la conversación.
+- **Recorrido alternativo:** si Gemini no responde, mostrar el resumen local de la planta seleccionada. Si la cuenta no tiene plantas, indicar que se agregue una desde **Mis plantas**.
+- **Resultado:** orientación sobre el cuidado de la planta. La consulta no inicia ni detiene el riego.
 
 ---
 
@@ -2995,7 +3016,7 @@ Estos recorridos mantienen la relación entre navegación, dispositivo seleccion
 
 3. El diseño estratégico de AquaSave relaciona las necesidades identificadas con los requisitos y las decisiones de arquitectura. Las historias de usuario, los escenarios de calidad, las iteraciones de ADD y el descubrimiento de bounded contexts permiten establecer responsabilidades y criterios verificables. La revisión del Product Backlog priorizó la presentación de la propuesta y las capacidades de monitoreo y control, mientras que el Impact Mapping estableció metas de comprensión, seguimiento y uso eficiente del agua que deberán evaluarse mediante pruebas.
 
-4. La documentación arquitectónica establece una solución coherente con las tecnologías seleccionadas: Flutter y Dart para las aplicaciones web y móvil, Node.js con Express y TypeScript para la API, PostgreSQL para la persistencia y firmware C++ con Arduino para el ESP32. HiveMQ Cloud transporta los mensajes MQTT, la EdgeAPI conecta el dispositivo con el backend y Open-Meteo proporciona información climática. Los diagramas C4 actualizados explican esta integración y distinguen los límites del dominio de los componentes desplegados.
+4. AquaSave integra el monitoreo IoT y la orientación por especie mediante aplicaciones Flutter y Dart, una API en Node.js con Express y TypeScript, persistencia PostgreSQL y firmware C++ con Arduino para el ESP32. Las reglas del dominio calculan el diagnóstico de riego y Gemini amplía la explicación y atiende preguntas sobre las plantas de la cuenta. Open-Meteo aporta información climática, mientras que la EdgeAPI y HiveMQ Cloud conectan el backend con el dispositivo. Las consultas de orientación conservan un respaldo local ante fallos de Gemini y se mantienen separadas de las operaciones de control físico.
 
 5. El trabajo parcial amplió el diseño de AquaSave mediante la descripción de capas, componentes, clases y modelos de datos de los cinco bounded contexts, así como los lineamientos de estilo, la arquitectura de información y los recorridos de las interfaces. Estos artefactos proporcionan una base para desarrollar y revisar la solución. El diseño documentado no constituye por sí solo evidencia de que todas las capacidades propuestas estén implementadas ni de que las metas de ahorro y usabilidad se hayan alcanzado.
 
@@ -3007,7 +3028,7 @@ Estos recorridos mantienen la relación entre navegación, dispositivo seleccion
 
 - Evaluar el consumo estimado mediante periodos comparables de 14 días sin AquaSave y 14 días utilizando el sistema, conservando condiciones y métodos de cálculo consistentes. Presentar el ahorro como resultado únicamente cuando exista evidencia suficiente.
 
-- Incorporar progresivamente las recomendaciones apoyadas por inteligencia artificial y las prestaciones comerciales, manteniendo explicaciones comprensibles y el control del usuario. Actualizar la documentación y las evidencias para distinguir las funcionalidades implementadas, verificadas y pendientes.
+- Revisar periódicamente la comprensión de los consejos y las respuestas del asistente con usuarios de ambos segmentos. Mantener identificados el origen de la orientación y los datos utilizados, evaluar las respuestas de respaldo y documentar los resultados de las pruebas de uso y de integración.
 
 ---
 
