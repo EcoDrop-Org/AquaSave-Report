@@ -3140,7 +3140,13 @@ Los User Flows desarrollan los tres User Goals definidos en los wireflows. Cada 
 - **Rutas alternativas:** corregir campos inválidos o credenciales rechazadas; ante un error de comunicación, permanecer en el acceso y permitir un nuevo intento.
 - **Resultado:** sesión de la cuenta y acceso a sus propias plantas. Si todavía no hay registros, el usuario puede iniciar el alta de su primera planta.
 
-<!-- EVIDENCIA: insertar User Flow 1 con mock-ups y rutas principal y alternativas. -->
+**Diagrama base de referencia del recorrido de acceso**
+
+<p align="center">
+  <img src="image/userflow-login.png" alt="User Flow de acceso: base visual para actualizar" width="1000">
+</p>
+
+La figura conserva la estructura de acceso y registro del diseño base. Los formularios deben reflejar correo, contraseña y selección de experiencia conforme al recorrido descrito arriba.
 
 **User Goal 2: Agregar un nuevo dispositivo IoT**
 
@@ -3151,7 +3157,13 @@ Los User Flows desarrollan los tres User Goals definidos en los wireflows. Cada 
 - **Rutas alternativas:** corregir datos obligatorios antes de guardar; conservar la ficha sin telemetría cuando el dispositivo todavía no reporte información.
 - **Resultado:** unidad registrada e identificada. La recepción de lecturas confirma la comunicación con el equipo y se verifica de manera independiente al formulario.
 
-<!-- EVIDENCIA: insertar User Flow 2. No representar el formulario como conexión Wi-Fi automática ni como calibración física ya comprobada. -->
+**Diagrama base de referencia del alta de una unidad**
+
+<p align="center">
+  <img src="image/userflow-agregar-dispositivo.png" alt="User Flow de dispositivo: referencia de diseño" width="1000">
+</p>
+
+Esta figura contiene la secuencia previa de configuración del kit. Se conserva como referencia visual; el recorrido que debe reflejar su actualización es el alta de cuatro pasos descrita arriba, con comprobación de comunicación independiente del registro.
 
 **User Goal 3: Registrar y consultar una planta**
 
@@ -3163,7 +3175,15 @@ Los User Flows desarrollan los tres User Goals definidos en los wireflows. Cada 
 
 La consulta al asistente amplía el tercer recorrido y no constituye un cuarto User Goal. La solicitud de riego se mantiene en los controles de la unidad, diferenciada de la lectura de recomendaciones.
 
-<!-- EVIDENCIA: insertar User Flow 3 con la consulta de recomendación y la opción de abrir el asistente. -->
+**Diagrama base de referencia del registro y consulta de una planta**
+
+<p align="center">
+  <img src="image/userflow-registrar-planta-huerto.png" alt="User Flow de planta: referencia de diseño" width="1000">
+</p>
+
+La figura aporta la base de registro y detalle. Su actualización incorpora la consulta de recomendación y la apertura del asistente dentro de este mismo User Goal.
+
+**Tablero editable de los flujos:** [User Flows de AquaSave en Miro](https://miro.com/app/board/uXjVJHRMhjA=/?share_link_id=284169649022).
 
 ### 6.5. Applications Prototyping
 
