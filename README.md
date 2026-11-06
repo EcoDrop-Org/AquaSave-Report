@@ -3187,20 +3187,25 @@ La figura aporta la base de registro y detalle. Su actualización incorpora la c
 
 ### 6.5. Applications Prototyping
 
-El prototipo de AquaSave permite recorrer la experiencia propuesta antes de evaluar su ejecución en el producto. Su navegación sigue los tres User Goals: acceder a una cuenta, registrar una unidad y consultar una planta. La organización mantiene los accesos a Inicio, Mis plantas, Asistente, Historial, Análisis y Perfil, con adaptaciones visuales para web y Android.
+El prototipado permite revisar la navegación y organización visual de AquaSave. Los recorridos que se documentan son el acceso a la cuenta, el alta de una unidad y la consulta de una planta, incluyendo recomendación y asistente dentro del tercer objetivo. Se mantiene una experiencia orientada a usuarios principiantes y expertos.
 
-Las interacciones del prototipo representan la selección de acciones, los cambios de pantalla y la respuesta visual de los formularios. Los estados de ejemplo permiten revisar la comprensión de una recomendación, la ausencia de lecturas y la identificación de la planta consultada. La evaluación del prototipo se diferencia de las pruebas de comunicación con la API y del funcionamiento físico del kit.
+**Recursos editables y navegables disponibles**
 
-**Archivo de diseño:** [AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1).
-
-| Producto | Recorridos que se muestran | Evidencia de navegación |
+| Recurso | Enlace | Uso |
 | :--- | :--- | :--- |
-| Aplicación web | Acceso, alta de planta y consulta de información, recomendación y asistente. | POR COMPLETAR: enlace navegable al prototipo, enlace de Microsoft Stream y tramo del video. |
-| Aplicación Android | Los mismos objetivos, utilizando la distribución móvil de pantallas y controles. | POR COMPLETAR: enlace al recorrido móvil, enlace de Microsoft Stream y tramo del video. |
+| Archivo de diseño | [AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1) | Edición de las pantallas y adaptación de las vistas web y Android. |
+| Prototipo web de referencia | [AquaSave Web Application Prototype](https://www.figma.com/proto/a6zhtNKsD231UViUfGgsS2/AquaSave-PROTOTYPE?node-id=23-259&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A259) | Recorrido disponible del diseño base; comprobar permisos y actualizar sus pantallas antes de usarlo como versión final. |
+| Flujos de navegación | [User Flows en Miro](https://miro.com/app/board/uXjVJHRMhjA=/?share_link_id=284169649022) | Organización y edición de los tres recorridos de usuario. |
 
-La demostración identifica el producto, explica los pasos principales y muestra al menos una ruta alternativa por objetivo. El registro audiovisual permite comparar el diseño con las observaciones de los participantes durante la validación.
+**Vista del prototipo de referencia**
 
-<!-- EVIDENCIA: una captura representativa del video por aplicación. Si se utiliza un video consolidado, indicar el tramo de web y el de Android. -->
+<p align="center">
+  <img src="image/aquasave-application-prototype.png" alt="Vista del prototipo web de referencia" width="1000">
+</p>
+
+El archivo de diseño y el prototipo enlazado tienen identificadores diferentes en Figma. El enlace de prototipo se conserva como recurso de referencia y su captura muestra el acceso del diseño base. Estos recursos no acreditan todavía un recorrido actualizado del asistente ni un prototipo móvil completo.
+
+La grabación del prototipo final debe identificar los tramos web y Android y permitir relacionar cada recorrido con su resultado. La navegación de una maqueta se distingue de la ejecución de la aplicación conectada a la API.
 
 ## Capítulo VII: Product Implementation, Validation & Deployment
 
@@ -3314,7 +3319,11 @@ Las variables de acceso se registran como secretos de la plataforma correspondie
 
 El despliegue conserva la separación entre la landing, la plataforma digital y el kit descrita en 4.3.4. La web y Android consultan AquaSave API por HTTPS; la EdgeAPI comunica esa API con HiveMQ Cloud; el ESP32 intercambia mensajes con el broker. Gemini complementa la orientación desde el backend y no se conecta al ESP32.
 
-<!-- EVIDENCIA: reutilizar aquí la figura vigente image/04-deployment.png o referenciar expresamente la figura de 4.3.4, según el formato final del informe. No se genera un diagrama nuevo con este archivo. -->
+La distribución de los productos y servicios se representa en la misma vista de despliegue presentada en 4.3.4.
+
+<p align="center">
+  <img src="image/04-deployment.png" alt="Despliegue de AquaSave: clientes, API, servicios externos y kit" width="1000">
+</p>
 
 ### 7.2. Solution Implementation
 
@@ -3352,7 +3361,15 @@ El Sprint Backlog descompone las historias seleccionadas en actividades verifica
 
 Las historias US36, US37, US38 y US39 de la landing se mantienen como parte del Sprint 1 documentado. Las tarjetas terminadas conservan su estado y se contrastan con sus criterios de aceptación. El orden de la tabla de 3.4 establece la prioridad del producto; el tablero registra el estado de ejecución.
 
-<!-- EVIDENCIA: insertar captura actual del Sprint 1. Mantener la evidencia de US36–US39 en Done; confirmar la aceptación de cada criterio y actualizar la columna Backlog si pretende mostrar la prioridad vigente. -->
+**Tablero de trabajo**
+
+[Abrir el tablero de AquaSave en Trello](https://trello.com/b/tQbBo5rs).
+
+<p align="center">
+  <img src="image/trellocaptura.png" alt="Tablero de AquaSave y estado registrado del Sprint 1" width="1000">
+</p>
+
+Las historias US36, US37, US38 y US39, correspondientes a la landing page, se incluyeron desde el Sprint 1 y se muestran en la columna «Sprint 1 Done» de la captura. La tabla de 3.4 establece la prioridad del producto; el tablero registra el estado del trabajo. La captura conserva el estado documentado y debe corresponder al periodo indicado en la planificación.
 
 **Descomposición de trabajo para confirmar con el acta del equipo**
 
@@ -3469,7 +3486,16 @@ La revisión de los repositorios no identificó archivos `.feature` ni definicio
 | Repositorio, rama y commits | POR COMPLETAR: enlaces de la suite y cambios de testing. |
 | Comando y resultado | POR COMPLETAR: comando, fecha, casos aprobados/fallidos y evidencia de salida. |
 
-<!-- EVIDENCIA: incorporar capturas o registros de pruebas. Para cumplir la exigencia de BDD del enunciado, se necesitan artefactos ejecutables y resultados reales; este texto no los sustituye. -->
+**Fuentes de las pruebas documentadas**
+
+| Grupo | Archivo del backend |
+| :--- | :--- |
+| Recomendaciones | [recommendation.test.ts](https://github.com/EcoDrop-Org/AquaSave-Backend/blob/007e6a6c6faa522899bfb0bff502833f7417346c/src/contexts/irrigation-intelligence/domain/recommendation.test.ts) |
+| Decisión de riego | [irrigation-decision.service.test.ts](https://github.com/EcoDrop-Org/AquaSave-Backend/blob/007e6a6c6faa522899bfb0bff502833f7417346c/src/contexts/irrigation-intelligence/domain/services/irrigation-decision.service.test.ts) |
+| Flujo de autenticación | [auth-flow.test.ts](https://github.com/EcoDrop-Org/AquaSave-Backend/blob/007e6a6c6faa522899bfb0bff502833f7417346c/src/contexts/identity-access/interfaces/http/auth-flow.test.ts) |
+| CORS | [app.cors.test.ts](https://github.com/EcoDrop-Org/AquaSave-Backend/blob/007e6a6c6faa522899bfb0bff502833f7417346c/src/app.cors.test.ts) |
+
+Estos enlaces permiten consultar el código de los casos descritos en las tablas anteriores. Los resultados conservan la versión y la fecha de ejecución indicadas en esta sección. Los enlaces al código no sustituyen la salida de pruebas ni acreditan una suite BDD con archivos `.feature` y Steps.
 
 ##### 7.2.1.5. Execution Evidence for Sprint Review
 
@@ -3490,8 +3516,31 @@ La ejecución se documenta mediante recorridos que relacionan la interfaz con la
 
 La respuesta HTTP de inicio o detención y el registro de un comando acreditan su tratamiento en software. Para afirmar que el riego físico funciona de extremo a extremo, la evidencia debe mostrar también la comunicación del kit y la actuación de la bomba.
 
-<!-- EVIDENCIA: insertar capturas de las vistas ejecutadas y un cuadro representativo del video. -->
+**Landing page — registro visual reutilizado**
 
+Las siguientes capturas documentan la presentación pública disponible como base de la demostración. Conservan su contenido original y no representan por sí solas una nueva prueba de navegación o de disponibilidad.
+
+**Portada**
+
+<p align="center">
+  <img src="https://i.postimg.cc/PrpJ05ym/image.png" alt="Portada de la landing de AquaSave" width="1000">
+</p>
+
+**Beneficios**
+
+<p align="center">
+  <img src="https://i.postimg.cc/zfjGTbz9/image.png" alt="Beneficios presentados en la landing" width="1000">
+</p>
+
+**Presentación de EcoDrop**
+
+<p align="center">
+  <img src="https://i.postimg.cc/HWf8YMVy/image.png" alt="Presentación de EcoDrop y AquaSave" width="1000">
+</p>
+
+**Acceso a los productos:** [Landing page](https://ecodrop-org.github.io/AquaSave-LandingPage/) · [Aplicación web](https://aquasave-cae9e.web.app/).
+
+El recorrido de la aplicación con recomendación, asistente y control se documenta en la tabla anterior mediante la versión ejecutada y los minutos de su grabación. Las capturas de la landing no sustituyen ese recorrido autenticado.
 
 ##### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -3625,7 +3674,19 @@ La entrada admite mensajes de hasta 500 caracteres y hasta 20 turnos en `history
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [EcoDrop-Org/AquaSave-Backend](https://github.com/EcoDrop-Org/AquaSave-Backend) | main | [e7ab140b](https://github.com/EcoDrop-Org/AquaSave-Backend/commit/e7ab140b90e536ba944fec6118f02638833461fd) | docs(openapi): document recommendation endpoint and new fields | Sin cuerpo adicional. | 26/10/2026 21:41 |
 
-<!-- EVIDENCIA: capturas de solicitudes y respuestas reales en Swagger UI para los endpoints documentados, con datos de prueba. Para el asistente, incorporar una captura del cliente HTTP y no atribuirla a Swagger mientras no figure en su contrato. -->
+**Documentación interactiva de AquaSave API**
+
+- [Swagger UI](https://aquasave-backend.onrender.com/api/docs/).
+- [Contrato OpenAPI](https://aquasave-backend.onrender.com/api/openapi.json).
+- [Repositorio de servicios](https://github.com/EcoDrop-Org/AquaSave-Backend).
+
+**Captura de referencia de Swagger UI**
+
+<p align="center">
+  <img src="image/swagger-production.png" alt="Swagger UI: consulta de salud en el registro disponible" width="1000">
+</p>
+
+La captura muestra la documentación interactiva y una consulta de salud del servicio. Su alcance no comprende todos los endpoints de la tabla ni acredita la ejecución del asistente. Las rutas no incluidas en el contrato OpenAPI se consultan desde un cliente HTTP y se identifican con su método, ruta y respuesta.
 
 ##### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
@@ -3654,7 +3715,34 @@ La evidencia de despliegue reúne los recursos publicados y los resultados de lo
 | Fly.io y HiveMQ Cloud | Estado del proceso, salud HTTP y mensajes del dispositivo durante la demostración. |
 | ESP32 | Montaje utilizado, firmware cargado y secuencia de lectura y control. |
 
-<!-- EVIDENCIA: insertar capturas actuales por producto. Sustituir la observación de 503 solo después de una nueva comprobación con su fecha y resultado; no convertir una configuración en evidencia de disponibilidad. -->
+**Recurso de alojamiento de la API — referencia visual**
+
+<p align="center">
+  <img src="image/render-create-service.png" alt="Recurso de alojamiento de AquaSave en Render" width="1000">
+</p>
+
+La captura se utiliza para ilustrar el recurso de alojamiento de la API. Los resultados de publicación y disponibilidad se interpretan según la fecha y la versión indicadas en la tabla de esta sección.
+
+**Montaje de referencia del kit**
+
+<p align="center">
+  <img src="image/prototipo.jpg" alt="Montaje de referencia del kit de riego de AquaSave" width="1000">
+</p>
+
+La fotografía conserva el montaje utilizado como referencia del dispositivo, sus conexiones y el circuito de agua. La actuación de la bomba y el intercambio de mensajes se verifican mediante el recorrido de ejecución; no se deducen únicamente de esta fotografía.
+
+**Publicaciones y comprobaciones disponibles**
+
+| Producto | Recurso |
+| :--- | :--- |
+| Landing | [GitHub Pages](https://ecodrop-org.github.io/AquaSave-LandingPage/) |
+| Web | [Firebase Hosting](https://aquasave-cae9e.web.app/) |
+| Compilación/publicación web | [Ejecución registrada de GitHub Actions](https://github.com/EcoDrop-Org/AquaSave-Frontend/actions/runs/40451953767) |
+| Compilación/distribución Android | [Ejecución registrada de GitHub Actions](https://github.com/EcoDrop-Org/AquaSave-Frontend/actions/runs/40451953768) |
+| API | [Health](https://aquasave-backend.onrender.com/health) y [Swagger UI](https://aquasave-backend.onrender.com/api/docs/) |
+| EdgeAPI | [Health](https://aquasave-edgeapi.fly.dev/health) |
+
+Los enlaces identifican los recursos y ejecuciones documentados. La disponibilidad actual y el acceso del probador al APK se comprueban de manera separada.
 
 ##### 7.2.1.8. Team Collaboration Insights during Sprint
 
@@ -3677,7 +3765,18 @@ La colaboración se documenta mediante el historial de cambios, las revisiones y
 | Rodríguez Rodríguez, Luis Piero | POR COMPLETAR. | POR COMPLETAR. |
 | Román Pajuelo, Luis Gustavo | POR COMPLETAR: delimitar correcciones del informe y demás actividades del periodo. | POR COMPLETAR. |
 
-<!-- EVIDENCIA: capturas de Insights y del historial del periodo del Sprint 1. Confirmar la correspondencia entre cuentas y personas antes de distribuir responsabilidades. -->
+**Consulta de los cambios del equipo**
+
+| Producto | Historial |
+| :--- | :--- |
+| Informe | [Commits de develop](https://github.com/EcoDrop-Org/AquaSave-Report/commits/develop/) |
+| Landing page | [Commits de main](https://github.com/EcoDrop-Org/AquaSave-LandingPage/commits/main/) |
+| Aplicaciones web y Android | [Commits de main](https://github.com/EcoDrop-Org/AquaSave-Frontend/commits/main/) |
+| API | [Commits de main](https://github.com/EcoDrop-Org/AquaSave-Backend/commits/main/) |
+| EdgeAPI | [Commits de main](https://github.com/EcoDrop-Org/AquaSave-EdgeAPI/commits/main/) |
+| Firmware | [Commits de main](https://github.com/EcoDrop-Org/AquaSave-Device/commits/main/) |
+
+Los historiales permiten revisar autores, fechas y contenido de los cambios. La delimitación del periodo corresponde al Sprint Planning y se relaciona con la tabla de participación. Las capturas de AV1 y TP1 permanecen en sus apartados; no se presentan como analíticos nuevos de TB2.
 
 ### 7.3. Validation Interviews
 
@@ -3758,49 +3857,127 @@ La prueba del asistente complementa las tareas de comprensión y seguimiento. Lo
 
 #### 7.3.2. Registro de Entrevistas
 
-El registro organiza las sesiones por segmento y relaciona las observaciones con las tareas del diseño de validación. Para cada participante se conserva su identificación, la versión utilizada, el enlace del video y el tramo de la entrevista. Los resultados se incorporan a partir de las sesiones realizadas.
+#### 7.3.2. Registro de Entrevistas
 
-**Video consolidado de validación:** POR COMPLETAR: enlace de Microsoft Stream.
+> **REFERENCIA TEMPORAL — SUSTITUIR ANTES DE LA ENTREGA FINAL.** Este bloque conserva las seis entrevistas del registro anterior con sus nombres, fotografías, resúmenes, grupos y minutos originales. Sirve como modelo para completar las fichas de TB2; no acredita una nueva validación de la recomendación ni del asistente.
 
-| Entrevista | Segmento | Nombre y apellidos | Edad | Distrito | Fecha | Inicio y duración |
-| :---: | :--- | :--- | :---: | :--- | :--- | :--- |
-| 1 | Principiante | POR COMPLETAR | — | — | — | — |
-| 2 | Principiante | POR COMPLETAR | — | — | — | — |
-| 3 | Principiante | POR COMPLETAR | — | — | — | — |
-| 4 | Experto | POR COMPLETAR | — | — | — | — |
-| 5 | Experto | POR COMPLETAR | — | — | — | — |
-| 6 | Experto | POR COMPLETAR | — | — | — | — |
+Los grupos originales se mantienen únicamente para no alterar el sentido de esos registros. La validación del producto documentado utiliza los segmentos **usuario principiante** y **usuario experto**. Las personas no se reasignan automáticamente a esos segmentos y no se les atribuyen respuestas sobre funciones que no constan en sus entrevistas.
 
-**Ficha de registro — repetir para cada entrevista**
+**Video de referencia del registro:** [Abrir las entrevistas](https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R).
 
-**Entrevista #POR COMPLETAR**
+| N° | Entrevistado      | Segmento objetivo              | Minuto del video |
+| -- | ----------------- | ------------------------------ | --------------- |
+| 1  | Daniela Gómez     | Horticultores Urbanos          | 00:00           |
+| 2  | Jose Chinchay     | Horticultores Urbanos          | 08:35           |
+| 3  | Santiago Cárdenas | Horticultores Urbanos          | 47:18           |
+| 4  | Werner Lang       | Micro-Agricultores Periurbanos | 34:36           |
+| 5  | Fernando Asensio  | Micro-Agricultores Periurbanos | 56:36           |
+| 6  | Mariela Koqui     | Micro-Agricultores Periurbanos | 20:35           |
 
-**Nombre:** POR COMPLETAR  
-**Edad:** POR COMPLETAR  
-**Distrito:** POR COMPLETAR  
-**Segmento:** POR COMPLETAR  
-**Fecha:** POR COMPLETAR  
-**Producto y versión:** POR COMPLETAR  
-**Inicio:** POR COMPLETAR  
-**Duración:** POR COMPLETAR  
-**Enlace:** POR COMPLETAR
+---
 
-<!-- EVIDENCIA: insertar un cuadro del video correspondiente a esta persona. -->
+##### Grupo original de referencia 1: Horticultores Urbanos
 
-| Tarea | Resultado observado | Ayuda del moderador | Dificultad o comentario |
-| :--- | :--- | :--- | :--- |
-| POR COMPLETAR | POR COMPLETAR: completada, no completada o interrumpida por causa técnica. | POR COMPLETAR | POR COMPLETAR |
+**Entrevistado(a) #1: Daniela Gómez**
 
-**Resumen:** POR COMPLETAR: describir cómo comprendió la propuesta, qué tareas logró, qué dificultades tuvo y qué valoración dio a la recomendación, al asistente y al control. Utilizar únicamente lo observado o expresado durante la sesión.
+**Segmento del registro original:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
 
-**Síntesis por segmento**
+**Minuto:** 00:00
 
-| Segmento | Participantes evaluados | Tareas logradas sin ayuda | Dificultades recurrentes | Implicaciones para la experiencia |
-| :--- | :---: | :--- | :--- | :--- |
-| Principiantes | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
-| Expertos | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR | POR COMPLETAR |
+<p align="center">
+  <img src="image/Daniela_Gomez_EV.png" alt="Entrevista de referencia: Daniela Gómez" width="1000">
+</p>
 
-Los porcentajes se acompañan del número de participantes que los sustenta. Con tres participantes, un caso representa aproximadamente el 33,3% de la muestra del segmento; los resultados no se generalizan a toda la población de usuarios domésticos.
+**Resumen de la entrevista:**
+Daniela consideró que el proceso de registro e inicio de sesión es claro, directo y fácil de comprender desde una primera impresión. También indicó que el flujo para crear un huerto o dispositivo se entiende correctamente porque los pasos se presentan de forma ordenada. Respecto a la configuración del huerto, señaló que datos como ubicación, cantidad de plantas y tipo de cultivo son intuitivos, aunque recomendó incluir referencias o recomendaciones más específicas según el cultivo. Además, valoró que el dashboard muestre la información de forma simple y no sobrecargada. Finalmente, afirmó que usaría AquaSave como apoyo para cuidar sus plantas, ya que los datos en tiempo real le darían mayor confianza al momento de decidir cuándo regar.
+
+<br>
+
+**Entrevistado(a) #2: Jose Chinchay**
+
+**Segmento del registro original:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 08:35
+
+<p align="center">
+  <img src="image/Jose_Chinchay_EV.png" alt="Entrevista de referencia: Jose Chinchay" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Jose señaló que el registro le pareció sencillo, ya que solo debía ingresar datos básicos como nombre, correo y contraseña. También consideró adecuado que la aplicación solicite primero la creación del huerto antes de mostrar la información del panel principal. En cuanto a la configuración, mencionó que la mayoría de datos son claros, aunque la humedad objetivo podría generar dudas si el usuario no conoce el porcentaje adecuado para cada planta. Por ello, sugirió que AquaSave recomiende rangos automáticos según el tipo de cultivo. Asimismo, destacó que el dashboard resume correctamente información como humedad, temperatura, batería y conexión. Finalmente, indicó que usaría la aplicación porque le ayudaría a evitar el desperdicio de agua y tomar decisiones más seguras sobre el riego, especialmente si en la versión final se incorporan sensores reales y alertas.
+
+
+<br>
+
+**Entrevistado(a) #3: Santiago Cárdenas**
+
+**Segmento del registro original:** Horticultores Urbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 47:18
+
+<p align="center">
+  <img src="image/Santiago_Cardenas_EV.png" alt="Entrevista de referencia: Santiago Cárdenas" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Santiago consideró que el registro y el inicio de sesión son claros, ya que los campos son fáciles de entender y similares a los de otras aplicaciones. También afirmó que el proceso para crear un huerto o dispositivo no le pareció complicado, debido a que el flujo guía al usuario paso a paso. Sobre los datos solicitados, comentó que ubicación, cantidad de plantas y tipo de cultivo son comprensibles, aunque la humedad objetivo podría requerir una recomendación automática según el cultivo seleccionado. Además, valoró que el dashboard muestre la información principal en una sola pantalla, evitando que el usuario tenga que buscar demasiado. Finalmente, indicó que usaría AquaSave porque le permitiría cuidar mejor su huerto y dejar de regar solo por intuición, destacando la importancia de contar con datos en tiempo real y alertas cuando las plantas necesiten agua.
+
+<br>
+
+---
+
+##### Grupo original de referencia 2: Micro-Agricultores Periurbanos
+
+**Entrevistado(a) #1: Werner Lang**
+
+**Segmento del registro original:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 34:36
+
+<p align="center">
+  <img src="image/Werner_Lang_EV.png" alt="Entrevista de referencia: Werner Lang" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Werner consideró que el proceso de registro es sencillo incluso para una persona con poca experiencia tecnológica, ya que solo requiere ingresar datos básicos. Respecto al registro del dispositivo o parcela, señaló que el flujo es comprensible, aunque recomendó mejorar algunos detalles, como permitir visualizar la contraseña y hacer más precisa la búsqueda de ubicación. También indicó que los datos solicitados para configurar una parcela pequeña son adecuados, especialmente la ubicación, tipo de cultivo, cantidad de plantas y rango de humedad. Sin embargo, sugirió ampliar las recomendaciones según el cultivo, ya que las opciones actuales podrían sentirse limitadas. Además, destacó que el dashboard concentra la información principal en un solo lugar, lo cual es útil para personas que trabajan en campo y necesitan ahorrar tiempo. Finalmente, afirmó que usaría AquaSave si el costo del dispositivo es accesible, porque ayudaría a ahorrar agua y tomar mejores decisiones sin depender únicamente de la observación manual.
+
+<br>
+
+**Entrevistado(a) #2: Fernando Asensio**
+
+**Segmento del registro original:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 56:36
+
+<p align="center">
+  <img src="image/Fernando_Asensio_EV.png" alt="Entrevista de referencia: Fernando Asensio" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Fernando indicó que la aplicación le pareció interesante y que el registro fue bastante sencillo, ya que solicita información básica y necesaria. También consideró que el proceso para añadir un dispositivo o parcela es claro, debido a que entendió desde el inicio que debía registrar su parcela para que la aplicación pudiera mostrar información relacionada al cultivo. Respecto a los datos de configuración, señaló que son adecuados para una parcela pequeña, ya que permiten personalizar el monitoreo mediante ubicación, cantidad de plantas, tipo de cultivo y rango de humedad. Además, resaltó que el dashboard permite revisar rápidamente el estado del cultivo sin navegar por muchas secciones. Para él, los indicadores más importantes son la humedad y la temperatura, porque ayudan a decidir si el cultivo necesita riego. Finalmente, afirmó que usaría AquaSave porque permitiría controlar mejor el riego, evitar el desperdicio de agua y tomar mejores decisiones, sobre todo si la versión final muestra datos en tiempo real y envía alertas cuando el cultivo necesita agua.
+
+<br>
+
+**Entrevistado(a) #3: Mariela Koqui**
+
+**Segmento del registro original:** Micro-Agricultores Periurbanos
+**Enlace del video completo de la entrevista:** https://1drv.ms/v/c/14335893236ec3fd/IQAZJ8E1O_fAS7DilP7dRKY4AQuuPWU2PJq4lRAdG8MNqmY?e=gITd5R
+
+**Minuto:** 20:35
+
+<p align="center">
+  <img src="image/Mariela_Koqui_EV.png" alt="Entrevista de referencia: Mariela Koqui" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+Mariela evaluó el recorrido de la landing page y de la aplicación web de AquaSave, observando principalmente el flujo de registro, la conexión simulada del dispositivo y la configuración de una parcela pequeña. A partir de la revisión, consideró que la aplicación resulta comprensible para una versión preliminar, ya que presenta pasos ordenados y solicita datos relevantes para el monitoreo del cultivo. También valoró que el dashboard permita visualizar información importante como humedad, temperatura y estado de conexión en una sola pantalla. Como recomendación, se considera importante reforzar las alertas, explicar con mayor claridad que los datos reales dependerán del dispositivo físico e incluir sugerencias de humedad según el tipo de cultivo. En general, su validación permite reforzar que AquaSave puede ser útil para micro-agricultores que buscan optimizar el riego y reducir el desperdicio de agua mediante datos más precisos.
+
+<br>
 
 #### 7.3.3. Evaluaciones según heurísticas
 
@@ -3871,9 +4048,15 @@ La pauta combina una situación de cuidado doméstico, escenas de uso y opinione
 **YouTube:** POR COMPLETAR.  
 **Publicación en la landing:** POR COMPLETAR: ubicación del video incrustado.
 
-<!-- EVIDENCIA: insertar un cuadro representativo del video. Este video es distinto del video de exposición académica y del recorrido técnico de Sprint Review. -->
+**Video de referencia para preparar About-the-Product**
 
+El material disponible sirve como base para recuperar tomas de presentación y del producto. Su incorporación al montaje final requiere comprobar que el contenido represente los segmentos y las funciones descritos en esta sección.
 
+[![Vista del video de referencia del producto](https://i.postimg.cc/qRMvNNPX/image.png)](https://goo.su/V19mNf)
+
+**Enlace del material de referencia:** [Video del producto](https://goo.su/V19mNf).
+
+Este enlace conserva el recurso registrado; no acredita que el video incluya el asistente actual ni las opiniones de validación de TB2. Los tiempos y enlaces del montaje definitivo se registran en la tabla superior.
 
 ---
 
