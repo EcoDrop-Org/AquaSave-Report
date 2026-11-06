@@ -1937,30 +1937,31 @@ Esta capa encapsula la información del dispositivo doméstico y las reglas nece
 | :--- | :--- | :--- |
 | `Device` | Registro de una planta de la cuenta, con `id`, `accountId`, `name`, `speciesId`, `location`, `isActive`, `lastTelemetry` y estado del actuador. `cropType` admite una nota libre y `plantCount` se conserva por compatibilidad. | Cada alta nueva corresponde a una planta. `speciesId` permite consultar el catálogo de cuidado; la ausencia de telemetría se distingue de una medición de humedad igual a cero. |
 | `SensorReading` | Contiene `deviceId`, `soilMoisturePct`, `temperatureC`, `humidityPct`, `pumpOn`, `flowRateLMin`, `batteryPct` y `recordedAt`, según la información recibida. | Se relaciona con un dispositivo. `normalizeReading` normaliza los valores antes de utilizarlos en la aplicación. |
-| `WaterValve` | Representa conceptualmente el actuador y su estado de apertura o cierre. | En la implementación base, su estado se mantiene en `Device.valveState` y se contrasta con `SensorReading.pumpOn`; no requiere una entidad persistida por separado. |
+| `PlantSpecies` | Catálogo de especies con `id`, `commonName`, `category`, `soilMinPct`, `soilMaxPct`, `sunlight`, `careTip` y `scientificName`. | Se define en TypeScript. `speciesById` resuelve la especie y utiliza «Otra planta» cuando no reconoce el identificador. |
+| `DeviceView` | Amplía los campos de `Device` con `hasIrrigationDevice`. | `toDeviceView` establece este indicador según la existencia de `lastTelemetry`. |
 
-**Value Objects:**
+**Tipos de valor:**
 
-- `GeoLocation`: agrupa la etiqueta de ubicación y las coordenadas utilizadas para consultar el pronóstico.
-- `DeviceStatus`: define los estados admitidos para representar la conectividad del kit.
-- `SoilMoistureLevel`: objeto conceptual para interpretar un porcentaje de humedad según la calibración y los límites configurados.
-- `FirmwareVersion`: identifica la versión del firmware reportada por el ESP32. Registrar una versión no implica disponer de actualización remota OTA.
+- `GeoLocation`: contiene una etiqueta y coordenadas opcionales. `createGeoLocation` valida la longitud de la etiqueta, la presencia conjunta de latitud y longitud y sus rangos.
+- `DeviceStatus`: admite `online`, `offline`, `connecting` y `error`.
+- `ValveState`: admite `open` y `closed`; se utiliza en `Device.valveState`.
+- `PlantCategory`: clasifica el catálogo en hierbas, vegetales, frutas, suculentas, interior, flores y terraza.
 
 **Aggregates:**
 
-- `DeviceAggregate`: delimita la consistencia entre la identidad del kit, su cuenta, configuración, última lectura y estado del actuador. En el código base, esta responsabilidad se organiza alrededor del tipo `Device` y sus servicios, sin una clase adicional con ese nombre.
-- Una cuenta puede registrar varias plantas. Cada nueva ficha corresponde a una planta y conserva su propia identidad y especie. La presencia de lecturas depende de la telemetría del dispositivo asociado; los consejos del catálogo pueden consultarse sin una lectura del sustrato.
+El tipo `Device` concentra la identidad del registro, su cuenta, ubicación, especie, estado y última lectura. La asociación con la cuenta se verifica en los servicios de aplicación. Cada alta nueva representa una planta y utiliza `plantCount: 1`; una cuenta puede conservar varios registros.
 
-**Domain Services:**
+**Funciones de dominio:**
 
-- La interpretación de conexión debe conservar la fecha del último contacto y distinguir un equipo sin conexión de una planta en condiciones normales.
-- La calibración y la clasificación de humedad se plantean como reglas explícitas, sin convertir valores desconocidos en mediciones válidas.
-- El cambio de nombre, ubicación o experiencia del usuario no transfiere la propiedad del dispositivo.
+- `normalizeReading`: limita los porcentajes de humedad del sustrato, humedad ambiental y batería al rango de 0 a 100 cuando corresponda. Esta normalización no equivale a calibrar físicamente el sensor.
+- `withEffectiveStatus`: transforma un estado `online` en `offline` cuando no existe telemetría o han transcurrido más de 90 segundos desde la última lectura. Los demás estados se conservan.
+- `touchDevice`: actualiza la fecha de modificación del dispositivo.
+- `toDeviceView`: construye la representación que devuelve la API e identifica si el registro ha recibido telemetría.
+- `speciesById`, `genericSpecies` y `soilTargetPct`: consultan el catálogo, proporcionan la especie genérica y calculan el punto medio de su rango de humedad.
 
 **Repositories (Interfaces):**
 
-- `DeviceRepository`: define operaciones como `findById`, `findByAccountId`, `save`, `update`, `deleteById`, `updateStatus`, `recordTelemetry`, `updateValveState`, `getSettings` y `putSettings`.
-- El contrato evita que el dominio dependa de SQL, archivos JSON, HTTP o MQTT.
+`DeviceRepository` define `findById`, `findByAccountId`, `save`, `update`, `deleteById`, `updateStatus`, `recordTelemetry`, `updateValveState`, `updateIsActive`, `getSettings`, `putSettings` y `getAllSettings`. Sus implementaciones conservan los dispositivos y sus ajustes sin trasladar SQL o acceso a archivos a los consumidores del contrato.
 
 #### 5.1.2. Interface Layer
 
@@ -1984,7 +1985,7 @@ Esta capa coordina los casos de uso y verifica la asociación del recurso con la
 
 **Command Services:**
 
-- `PairDeviceService`: registra el dispositivo y lo asocia con la cuenta del usuario.
+- `PairDeviceService`: crea el registro de la planta/dispositivo con un UUID y lo asocia con la cuenta autenticada. Inicializa el estado como `offline`, la válvula como `closed` y `plantCount` en 1. El alta no comprueba un código físico de emparejamiento.
 - `UpdateDeviceService`: modifica nombre, ubicación y datos de la unidad autorizada.
 - `UnpairDeviceService`: desvincula el kit de la cuenta.
 - `RecordTelemetryService`: recibe y registra la lectura correspondiente al dispositivo.
@@ -1998,7 +1999,7 @@ Esta capa coordina los casos de uso y verifica la asociación del recurso con la
 **Event Handlers:**
 
 - En EdgeAPI, `TelemetryEventHandler` y `StatusEventHandler` procesan los mensajes MQTT y los comunican a la API.
-- La publicación persistente de eventos y la deduplicación por identificador se mantienen como contratos de evolución del diseño. No se asume la existencia de un bus adicional por representar eventos en el modelo.
+- Los mensajes recibidos se procesan mediante los servicios y repositorios de la API. La información de la bomba se coordina con `SyncPumpStateService` de Irrigation Intelligence.
 
 #### 5.1.4. Infrastructure Layer
 
@@ -2013,7 +2014,6 @@ Esta capa coordina los casos de uso y verifica la asociación del recurso con la
 - `MqttBrokerClient`, en EdgeAPI, encapsula la conexión MQTT con HiveMQ Cloud.
 - `AquaSaveHttpClient`, en EdgeAPI, transmite la información al backend mediante HTTP.
 - El firmware ESP32 obtiene las lecturas y publica los mensajes. La recuperación de red y el control físico pertenecen al dispositivo y su integración, no a la interfaz Flutter.
-- Los almacenes de series temporales y la actualización OTA mostrados como extensiones del modelo no forman parte de la infraestructura base documentada.
 
 #### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -2029,7 +2029,9 @@ La persistencia utiliza PostgreSQL mediante `PgDeviceRepository`; `FileDeviceRep
 
 ##### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-El modelo de clases relaciona el dispositivo con sus lecturas, estado del actuador y contratos. La cuenta identifica al propietario; la aplicación no mezcla lecturas o configuraciones entre kits.
+El diagrama representa los tipos, funciones y contratos de la capa de dominio de Device Management. `Device` contiene una ubicación, una última lectura opcional y el identificador de la especie. `DeviceStatus` y `ValveState` expresan los estados admitidos, mientras que `PlantSpecies` describe el catálogo de cuidado.
+
+`DeviceView` amplía el tipo `Device` con el indicador `hasIrrigationDevice`. Las funciones se agrupan por archivo mediante el estereotipo `module`; esos recuadros no representan clases adicionales. Las capas HTTP, aplicación y persistencia se describen en el diagrama de componentes de 5.1.5.
 
 <p align="center">
   <img src="image/DEVICE-MANAGEMENT.png" alt="Diagrama de clases de Device Management" width="1000">
@@ -2037,14 +2039,16 @@ El modelo de clases relaciona el dispositivo con sus lecturas, estado del actuad
 
 ##### 5.1.6.2. Bounded Context Database Design Diagram
 
-El diagrama representa el diseño lógico de dispositivos y datos asociados. Su implementación base se concentra en las siguientes estructuras de PostgreSQL:
+El diagrama representa las tablas de PostgreSQL utilizadas por Device Management y muestra todas sus columnas, incluidas las incorporadas mediante migraciones posteriores.
 
-| Tabla | Claves y campos relevantes | Relación y restricciones |
+| Tabla | Claves y campos | Relaciones y restricciones |
 | :--- | :--- | :--- |
-| `devices` | `id` como PK; `account_id`, `name`, `species_id`, ubicación, `status`, `valve_state`, `last_telemetry` y fechas. | La cuenta puede registrar varias plantas; cada registro nuevo representa una planta. La propiedad del recurso se verifica al atender las solicitudes. |
-| `device_settings` | `device_id` como PK y FK; `settings` JSONB; `updated_at`. | Un registro de configuración por kit. La FK referencia `devices.id` y utiliza eliminación en cascada. |
+| `devices` | `id`, `account_id`, `name`, `location_label`, `location_latitude`, `location_longitude`, `status`, `firmware_version`, `is_active`, `plant_count`, `crop_type`, `valve_state`, `last_telemetry`, `created_at`, `updated_at` y `species_id`. | `id` es PK. Existe un índice sobre `account_id`; la migración no declara FK sobre esa columna ni sobre `species_id`. La aplicación verifica la cuenta propietaria. |
+| `device_settings` | `device_id`, `settings` y `updated_at`. | `device_id` es PK y FK hacia `devices.id`, con `ON DELETE CASCADE`. Cada dispositivo puede tener como máximo una fila de configuración. |
 
-Las tablas separadas de lecturas, calibración, válvulas y actualizaciones representan una posible normalización del modelo; no se presentan como tablas ya creadas.
+La última lectura se almacena en `devices.last_telemetry` como JSONB y el estado del actuador en `devices.valve_state`. Los ajustes se conservan en `device_settings.settings`. El catálogo de especies se define en TypeScript y no utiliza una tabla SQL adicional.
+
+Estas dos tablas constituyen la vista de persistencia de Device Management. Los comandos y eventos de riego se documentan en 5.2.6.2 y las cuentas y sesiones en 5.3.6.2. La separación corresponde a las responsabilidades de cada contexto.
 
 <p align="center">
   <img src="image/b1.png" alt="Diseño lógico de base de datos de Device Management" width="1000">
@@ -2207,25 +2211,25 @@ Identity Access Management administra cuentas, autenticación, sesiones y datos 
 | Elemento | Propósito y atributos principales | Comportamientos y relaciones |
 | :--- | :--- | :--- |
 | `User` | Contiene `id`, `email`, `passwordHash`, `profile`, `avatarUrl`, `phone`, `isActive`, `createdAt` y `lastLoginAt`. | Mantiene la identidad de la cuenta. `toPublicUser` excluye el hash de contraseña de la información pública. |
-| `UserProfile` | Agrupa nombre, datos de ubicación y condiciones registradas para personalizar la experiencia. | En el código base forma parte de `User.profile`, sin un repositorio independiente. |
+| `UserProfile` | Contiene `fullName`, `profileType`, `spaceType`, `cropTypes` y `locationCity`. | Forma parte de `User.profile` y se persiste en las columnas de `users`. |
 | `AppSession` | Incluye `id`, `token`, `userId`, `createdAt`, `expiresAt` y `revokedAt`. | Se relaciona con una cuenta. `isSessionValid` comprueba vencimiento y revocación. |
 
 **Value Objects:**
 
 - El correo debe conservar un formato válido y una identidad única en la cuenta.
 - La contraseña se procesa mediante el contrato de hash; no se almacena en texto plano ni se devuelve en la respuesta.
-- `ExperienceLevel` representa conceptualmente la preferencia principiante o experto. Su incorporación a los campos del perfil es una evolución del diseño, no un permiso de administración.
+- `ProfileType` es el tipo de TypeScript que admite `principiante` y `experto`. Se asigna durante el registro mediante `User.profile.profileType` y se persiste en `users.profile_type`. `normalizeProfileType` normaliza los valores recibidos; el nivel personaliza la orientación y no concede propiedad sobre recursos.
 
 **Aggregates:**
 
-- `UserAggregate`: organiza identidad y perfil alrededor de la cuenta. Su representación base es el tipo `User`.
+- `User` reúne identidad y perfil alrededor de la cuenta; el código utiliza un tipo de TypeScript para esta representación.
 - Las sesiones se vinculan al usuario mediante su identificador, conservando vencimiento y revocación.
 
 **Domain Services:**
 
-- `PasswordHasher`: contrato para generar y verificar hashes.
-- `JwtService`: contrato para el manejo de los tokens utilizados por la autenticación.
-- El reconocimiento de una identidad externa de Google y los enlaces de recuperación pertenecen al diseño de las historias pendientes.
+- `PasswordHasher`: clase que genera y verifica hashes con scrypt, salt aleatorio y comparación de tiempo constante mediante `node:crypto`.
+- `JwtService`: clase que firma y verifica tokens mediante `jsonwebtoken`. La vigencia configurada es de 30 días; la autenticación también comprueba la sesión persistida y el usuario.
+- `toPublicUser` construye la representación pública sin `passwordHash`; `isSessionValid` verifica el vencimiento y la revocación de una sesión.
 
 **Repositories (Interfaces):**
 
@@ -2259,11 +2263,13 @@ La validación de entradas se realiza mediante los esquemas de la API y el middl
 - `AuthenticateSessionService`: valida la sesión utilizada para acceder a recursos protegidos.
 - `GetCurrentUserQuery`: obtiene los datos de la cuenta autenticada.
 
-**Event Handlers y extensiones propuestas:**
+**Coordinación de cuenta y sesión:**
 
-- El registro y el acceso permiten actualizar la información de cuenta y el último inicio de sesión.
-- La recuperación por correo y el acceso con Google se incorporarán mediante adaptadores específicos cuando se implementen sus historias.
-- Cambiar el nivel de experiencia no debe generar una suscripción, transferir dispositivos o alterar políticas de riego aprobadas.
+- El registro crea la cuenta y su sesión. El acceso verifica las credenciales y actualiza el último inicio de sesión.
+- `RegisterUserService` y `LoginUserService` solicitan la firma del JWT a `JwtService` y guardan la sesión mediante `SessionRepository`.
+- La edición de perfil admite `fullName`, `locationCity`, `avatarUrl` y `phone` en la API. El formulario de datos personales de Flutter modifica el nombre y muestra el correo y el nivel de experiencia como datos de consulta.
+- El nivel de experiencia se establece al registrar la cuenta. `PATCH /api/auth/me` no incluye `profileType` entre los campos editables.
+- El cambio de contraseña requiere una sesión autenticada y comprobar la contraseña actual.
 
 #### 5.3.4. Infrastructure Layer
 
@@ -2271,12 +2277,13 @@ La validación de entradas se realiza mediante los esquemas de la API y el middl
 
 - `PgUserRepository` y `PgSessionRepository`: implementan la persistencia en PostgreSQL.
 - `FileUserRepository` y `FileSessionRepository`: ofrecen los adaptadores basados en archivos.
-- La sesión se consulta y revoca mediante su repositorio. Redis no es una dependencia de la implementación base.
+- La sesión se consulta y revoca mediante su repositorio; `revoked_at` conserva la fecha de cierre.
 
-**External Services:**
+**Dependencias de autenticación:**
 
-- Los adaptadores de autenticación externa y envío de enlaces se mantienen como extensiones previstas.
-- La base actual no se presenta como una integración terminada con Google OAuth o un proveedor de correos.
+- `node:crypto` proporciona las funciones utilizadas por `PasswordHasher`.
+- `jsonwebtoken` permite firmar y verificar los JWT empleados por `JwtService`.
+- La configuración del backend suministra el secreto de firma. Las aplicaciones reciben el token y lo envían en las solicitudes autenticadas.
 
 #### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -2292,7 +2299,9 @@ El diagrama presenta la autenticación con correo y contraseña, la administraci
 
 ##### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-Las relaciones permiten identificar la cuenta, su perfil y sus sesiones. La personalización por experiencia se mantiene separada de la autorización de recursos.
+El diagrama muestra los tipos `User`, `UserProfile`, `PublicUser` y `AppSession`, el tipo de experiencia `ProfileType`, las interfaces de repositorio y los servicios `PasswordHasher` y `JwtService`. `PublicUser` omite el hash de contraseña; `UserProfile` forma parte del usuario y comparte su persistencia.
+
+Las funciones `toPublicUser`, `normalizeProfileType` e `isSessionValid` se agrupan por archivo mediante el estereotipo `module`. El nivel de experiencia personaliza la orientación; la propiedad de los dispositivos se verifica mediante el identificador de la cuenta en los servicios correspondientes.
 
 <p align="center">
   <img src="image/ACCESS.png" alt="Diagrama de clases de Identity Access Management" width="1000">
@@ -2300,14 +2309,14 @@ Las relaciones permiten identificar la cuenta, su perfil y sus sesiones. La pers
 
 ##### 5.3.6.2. Bounded Context Database Design Diagram
 
-El diseño lógico contempla usuarios, perfiles, sesiones y recuperación. La implementación física base utiliza:
+La persistencia de Identity Access Management utiliza las tablas `users` y `sessions`. El diagrama muestra todas sus columnas, incluidos `avatar_url` y `phone`, incorporados mediante migraciones.
 
-| Tabla | Claves y campos relevantes | Relación y restricciones |
+| Tabla | Claves y campos | Relaciones y restricciones |
 | :--- | :--- | :--- |
-| `users` | `id` como PK; `email` único; `password_hash`, nombre, campos de perfil, estado y fechas. | El perfil se almacena dentro de esta tabla; no hay una tabla adicional de perfiles en la migración base. |
-| `sessions` | `id` como PK; `token` único; `user_id` como FK; creación, vencimiento y revocación. | Una cuenta puede tener varias sesiones. `user_id` referencia `users.id`. |
+| `users` | `id`, `email`, `password_hash`, `full_name`, `profile_type`, `space_type`, `crop_types`, `location_city`, `is_active`, `created_at`, `last_login_at`, `avatar_url` y `phone`. | `id` es PK y `email` es único. `profile_type` tiene el valor predeterminado `principiante`. `crop_types` es un arreglo `text[]`. El perfil se almacena en esta misma tabla. |
+| `sessions` | `id`, `token`, `user_id`, `created_at`, `expires_at` y `revoked_at`. | `id` es PK, `token` es único y `user_id` es FK hacia `users.id`. Existe el índice `sessions_token_idx`. Una cuenta puede tener varias sesiones. |
 
-La tabla de enlaces de recuperación y la separación de perfiles quedan como extensiones. La preferencia principiante o experto deberá mantenerse independiente de la propiedad de los dispositivos.
+El nivel de experiencia se conserva en `users.profile_type`; la aplicación utiliza `principiante` y `experto`. La edición del perfil mantiene ese valor porque el contrato de actualización no lo incluye entre sus campos modificables. El cierre de sesión registra su revocación, mientras la cuenta y sus dispositivos permanecen asociados al mismo identificador.
 
 <p align="center">
   <img src="image/b3.png" alt="Diseño lógico de base de datos de Identity Access Management" width="1000">
