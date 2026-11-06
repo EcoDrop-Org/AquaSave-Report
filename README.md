@@ -1160,9 +1160,9 @@ Los To-Be Scenario Maps presentarán la experiencia que AquaSave ofrecerá a los
 
 ### 3.3. Impact Mapping
 
-El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores que pueden influir en su cumplimiento, los cambios de comportamiento esperados y las funcionalidades que permitirán generar dichos impactos. A partir de los hallazgos obtenidos con usuarios principiantes y expertos, se proponen los siguientes Business Goals bajo criterios SMART, incorporando una métrica verificable y un horizonte de evaluación.
+El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores que pueden influir en su cumplimiento, los cambios de comportamiento esperados y las funcionalidades que contribuyen a dichos impactos. A partir de las necesidades de los usuarios principiantes y expertos, se establecen los siguientes Business Goals bajo criterios SMART. Las métricas expresan metas de evaluación del proyecto.
 
-**Business Goal 1 :  Mejorar la comprensión del estado de las plantas**
+**Business Goal 1 : Mejorar la comprensión del estado de las plantas**
 
 **Objetivo SMART:** Lograr que al menos el 80% de los usuarios principiantes evaluados identifique correctamente, sin asistencia, si una planta requiere atención a partir de la información mostrada por AquaSave, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
 
@@ -1170,34 +1170,38 @@ El Impact Mapping de AquaSave relaciona los objetivos de negocio con los actores
 
 **Impactos esperados:** comprender la lectura de humedad, reconocer cuándo una planta necesita atención, reducir decisiones de riego basadas únicamente en intuición y consultar orientación antes de realizar una acción de riego.
 
-**Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial de riego, activación y detención del riego, configuración de parámetros, recomendaciones explicadas y asistente para consultar el cuidado de las plantas registradas.
+**Deliverables relacionados:** consulta de humedad y temperatura, resumen del estado de las plantas, alertas de humedad, configuración del perfil principiante, recomendaciones explicadas y asistente para consultar el cuidado de las plantas registradas.
 
 <div align="center">
   <img src="image/IM1.png" alt="Diagrama" width="600">
 </div>
 
 
-**Business Goal 2 :  Favorecer un uso más eficiente del agua de riego**  
-**Objetivo SMART:** Lograr una reducción mínima del 15% en el consumo estimado de agua destinado al riego en las unidades evaluadas, comparando un periodo inicial con un periodo posterior de uso de AquaSave durante las pruebas del proyecto.
+**Business Goal 2 : Favorecer un uso más eficiente del agua de riego**
+
+**Objetivo SMART:** Lograr una reducción mínima del 15% en el consumo estimado de agua destinado al riego en las unidades evaluadas, comparando 14 días de registro inicial sin AquaSave con 14 días de uso de AquaSave, durante una evaluación piloto realizada antes de la entrega final del proyecto.
 
 **Actores principales:** usuarios principiantes y usuarios expertos.
 
-**Impactos esperados:** revisar las condiciones de la planta antes de regar, evitar riegos innecesarios, ajustar parámetros según las condiciones observadas y comparar el consumo de agua entre distintos periodos.
+**Impactos esperados:** revisar las condiciones de la planta antes de regar, evitar riegos innecesarios, ajustar parámetros según las condiciones observadas y comparar el consumo entre periodos.
 
-**Deliverables relacionados:** consulta de humedad, configuración de riego automático, programación de evaluaciones de riego, consideración de lluvia para plantas expuestas, historial de riego, consulta de consumo por periodo y comparación del consumo con una línea base.
+**Deliverables relacionados:** consulta de humedad, configuración del riego, programación de horarios, consulta de pronóstico, historial de riego y visualización del consumo estimado.
+
+La comparación requiere una línea base documentada y un método de estimación consistente entre los dos periodos. La meta del 15% no representa un ahorro ya obtenido ni una medición mediante sensor de caudal.
 
 <div align="center">
   <img src="image/IM22.png" alt="Diagrama" width="600">
 </div>
 
-**Business Goal 3 :  Mejorar el seguimiento y control del cuidado de las plantas**  
+**Business Goal 3 : Mejorar el seguimiento y control del cuidado de las plantas**
+
 **Objetivo SMART:** Conseguir que al menos el 80% de los usuarios evaluados pueda consultar el estado de sus plantas, revisar alertas e historial y ejecutar una acción básica de control sin asistencia, durante las pruebas de usabilidad realizadas antes de la entrega final del proyecto.
 
 **Actores principales:** usuarios principiantes y usuarios expertos.
 
-**Impactos esperados:** supervisar las plantas desde una única interfaz, identificar cuáles requieren atención, revisar eventos anteriores, mantener el control sobre la automatización y tomar decisiones a partir de información comprensible y verificable.
+**Impactos esperados:** supervisar las plantas desde una única interfaz, identificar cuáles requieren atención, revisar eventos anteriores, mantener el control del riego y resolver dudas sobre el cuidado con información de sus plantas.
 
-**Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial de riego, activación y detención del riego, configuración de parámetros y recomendaciones explicadas con opción de aceptación o descarte.
+**Deliverables relacionados:** dashboard por unidad, estado de conexión del dispositivo, alertas recientes, historial y consumo estimado, activación y detención del riego, configuración de parámetros, recomendaciones explicadas y asistente para consultar el cuidado de las plantas registradas.
 
 <div align="center">
   <img src="image/IM33.png" alt="Diagrama" width="600">
@@ -1275,7 +1279,7 @@ URL del Product Backlog: https://trello.com/b/tQbBo5rs
 | 54 | US41 | Gestionar la suscripción del servicio | Como usuario, quiero conocer y modificar el estado de mi suscripción, para controlar prestaciones opcionales. | 5 |
 
 
-## Capítulo IV: Solution Software Design
+## Capítulo IV: Strategic-Level Software Design
 
 ### 4.1. Strategic-Level Attribute-Driven Design
 
@@ -1903,10 +1907,11 @@ La distribución de la solución considera:
 - **Broker MQTT:** uso de HiveMQ Cloud para el intercambio de telemetría, estados, comandos y reconocimientos entre la EdgeAPI y el ESP32.
 - **Entorno físico:** instalación del ESP32 con sus sensores, alimentación, relé y bomba. El firmware obtiene las lecturas y ejecuta el control local del riego.
 - **Servicio climático:** consulta de Open-Meteo desde el backend mediante el adaptador de Irrigation Intelligence.
+- **Servicio de IA:** consumo de Google Gemini API desde AquaSave API en Render mediante HTTPS. `GeminiAdviceService` utiliza `GEMINI_API_KEY` y `GEMINI_MODEL`, configurados en el backend, para generar explicaciones, consejos y respuestas del asistente.
 
 La configuración permite administrar las direcciones de los servicios y los parámetros de conexión por entorno. La compilación y publicación de las aplicaciones web y Android se automatizan mediante los flujos de GitHub Actions definidos para cada producto.
 
-La comunicación entre el dispositivo y la plataforma depende de la conexión con el broker y la EdgeAPI. Los límites locales de operación y las condiciones de recuperación se evaluarán mediante los escenarios de calidad definidos. Las integraciones posteriores de IA y servicios comerciales se incorporarán sin cambiar las tecnologías base de los clientes y la API.
+La comunicación entre el dispositivo y la plataforma utiliza HiveMQ Cloud y la EdgeAPI para transportar lecturas, estados, comandos y reconocimientos. El backend consulta Gemini para complementar la orientación y responder preguntas sobre las plantas de la cuenta. Las reglas del dominio conservan el nivel y el motivo de la recomendación; ante un fallo del proveedor, se mantiene una respuesta local. Las consultas de recomendación y del asistente no generan órdenes de riego. El inicio y la detención utilizan sus servicios y el gateway de comandos.
 
 ---
 
@@ -2012,7 +2017,9 @@ Esta capa coordina los casos de uso y verifica la asociación del recurso con la
 
 #### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-El diagrama organiza la recepción de solicitudes, los servicios de dispositivos y los adaptadores de persistencia e integración. En la solución base, la comunicación con el broker se encapsula en EdgeAPI y la persistencia se realiza en PostgreSQL.
+El diagrama presenta los routers, casos de uso y repositorios de Device Management dentro de AquaSave API. Las aplicaciones Flutter acceden mediante HTTP con autenticación. La EdgeAPI comunica telemetría y estados a las rutas internas, que también permiten consultar comandos pendientes y registrar sus confirmaciones.
+
+La persistencia utiliza PostgreSQL mediante `PgDeviceRepository`; `FileDeviceRepository` ofrece una alternativa local basada en JSON. La conexión MQTT con HiveMQ Cloud pertenece a la EdgeAPI. La recepción de telemetría de la bomba se coordina con `SyncPumpStateService`, mientras que las órdenes utilizan el contrato `EdgeDeviceGateway` de Irrigation Intelligence.
 
 <p align="center">
   <img src="image/dc1.png" alt="Diagrama de componentes de Device Management" width="1000">
@@ -2144,7 +2151,11 @@ Las rutas del asistente y de la recomendación requieren autenticación. Flutter
 
 #### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-El diagrama conserva la estructura del control de riego. La implementación añade un camino de consulta: el router delega en `GetRecommendationQuery`, que utiliza las reglas del dominio y `GeminiAdviceService` para la explicación; `PlantChatService` utiliza ese mismo adaptador para conversar. El camino de inicio y detención sigue pasando por los servicios de riego y su gateway. El adaptador de Gemini no publica órdenes en MQTT.
+Irrigation Intelligence reúne el control del riego, el seguimiento de ciclos, las consultas climáticas y la orientación sobre las plantas. Los routers de Express delegan en los servicios y consultas de aplicación. Los repositorios de dispositivos y usuarios permiten obtener los datos de la cuenta; la persistencia de ciclos y comandos utiliza adaptadores PostgreSQL.
+
+`GetRecommendationQuery` calcula el diagnóstico mediante las funciones del dominio y solicita a `GeminiAdviceService` una explicación y consejos. `PlantChatService` utiliza el mismo adaptador para responder preguntas con el contexto de las plantas y de la conversación. `OpenMeteoWeatherService` obtiene el pronóstico, mientras `PlantInfoService` y `PlantSuggestionsService` complementan la información y búsqueda de especies.
+
+Las consultas de recomendación y del asistente conservan una respuesta local cuando el proveedor no está disponible. El inicio, la detención, la programación y la sincronización del riego utilizan sus propios servicios y el gateway de comandos. Las consultas de IA no invocan ese gateway.
 
 <p align="center">
   <img src="image/dc2.png" alt="Diagrama de componentes de Irrigation Intelligence" width="1000">
@@ -2154,7 +2165,11 @@ El diagrama conserva la estructura del control de riego. La implementación aña
 
 ##### 5.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-El modelo relaciona ciclos, programación, umbrales y pronóstico. La recomendación añade nivel, motivo, texto y vigencia. Sus datos describen orientación; la orden al equipo sigue representada por un contrato diferente. Las dependencias del servicio de Gemini pertenecen a infraestructura y no al modelo de clases del dominio.
+El modelo representa los tipos y servicios de dominio utilizados por Irrigation Intelligence. `Recommendation` agrupa la orientación de riego, los consejos de cuidado, la información complementaria y sus fechas de generación y vencimiento. `IrrigationAdvice` conserva el nivel, el motivo y el origen del texto. Las funciones `buildIrrigationAdvice` y `buildCareTips` construyen la orientación a partir de la especie, la humedad, el estado de activación y el pronóstico disponible.
+
+`IrrigationEvent` describe el ciclo registrado y su relación opcional con un `EdgeCommand`. `MoistureThreshold`, `WeatherForecast` e `IrrigationDecisionService` representan los parámetros y criterios de decisión definidos en el dominio. Las referencias a `Device`, `SensorReading` y `PlantSpecies` pertenecen a Device Management y se muestran con sus atributos relevantes para esta vista.
+
+Los elementos identificados como `type` corresponden a tipos de TypeScript. El asistente se coordina en la capa de aplicación y el acceso a Gemini y Open-Meteo se realiza mediante infraestructura. La recomendación no contiene un método para activar el actuador.
 
 <p align="center">
   <img src="image/IRRIGATION-INTELLIGENCE.png" alt="Diagrama de clases de Irrigation Intelligence" width="1000">
@@ -2162,15 +2177,18 @@ El modelo relaciona ciclos, programación, umbrales y pronóstico. La recomendac
 
 ##### 5.2.6.2. Bounded Context Database Design Diagram
 
-La persistencia del contexto organiza eventos, comandos y parámetros del dispositivo. En PostgreSQL se utilizan las siguientes tablas:
+La persistencia de Irrigation Intelligence utiliza PostgreSQL para conservar los eventos de riego, las órdenes del dispositivo y los parámetros de configuración. El diagrama representa las tablas definidas en las migraciones del backend y muestra `devices` como referencia al contexto Device Management.
 
-| Tabla | Claves y campos relevantes | Relación y restricciones |
+| Tabla | Claves y campos relevantes | Relaciones y restricciones |
 | :--- | :--- | :--- |
-| `irrigation_events` | `id` como PK; `device_id`, inicio, fin, litros, origen, estado, motivo y `command_id`. | Un dispositivo puede tener varios eventos. El vínculo se valida en la aplicación; la migración base no declara una FK sobre `device_id`. |
-| `edge_commands` | `id` como PK; `device_id`, tipo, estado, emisión y confirmación. | Conserva el seguimiento de las solicitudes y un índice por dispositivo y estado. |
-| `device_settings` | `device_id` como PK y FK; `settings` JSONB. | Mantiene los ajustes de umbrales y programación asociados al kit. |
+| `irrigation_events` | `id` como PK; `device_id`, `started_at`, `ended_at`, `liters_consumed`, `trigger_type`, `status`, `was_skipped`, `skip_reason`, `command_id`, `soil_moisture_pct` y `temperature_c`. | Índice sobre `device_id`. Las referencias a dispositivo y comando no tienen una FK declarada en la migración. Los campos de humedad y temperatura conservan las condiciones del inicio cuando están disponibles. |
+| `edge_commands` | `id` como PK; `device_id`, `type`, `status`, `issued_at` y `acknowledged_at`. | Índice compuesto sobre `device_id` y `status`. La migración no declara FK sobre `device_id`. |
+| `device_settings` | `device_id` como PK y FK; `settings` JSONB y `updated_at`. | `device_id` referencia `devices.id` con `ON DELETE CASCADE`. El objeto JSONB conserva los parámetros y horarios configurados. |
+| `devices` | Se muestran `id`, `account_id`, `species_id`, `is_active` y `last_telemetry`. | Tabla de Device Management incluida como referencia; el dibujo presenta únicamente las columnas necesarias para entender esta vista. |
 
-El pronóstico se obtiene mediante el adaptador externo. Los parámetros de programación y pausa se incluyen en la configuración del dispositivo. La recomendación se conserva en memoria durante un máximo de 10 minutos y los mensajes recientes del chat se envían en la petición de consulta. El diagrama ilustra las relaciones lógicas del contexto; la tabla anterior identifica su almacenamiento en PostgreSQL.
+Las líneas continuas identifican claves foráneas declaradas y las discontinuas representan referencias lógicas por identificador. El estado de pausa se refleja en `devices.is_active`; la programación se conserva dentro de `device_settings.settings`.
+
+El pronóstico se obtiene mediante el adaptador externo. Las recomendaciones se conservan en una caché de aplicación en memoria con una vigencia de hasta 10 minutos. El contexto reciente del asistente se recibe en la petición de consulta. Estas funciones no incorporan tablas de pronóstico, recomendaciones ni conversaciones en las migraciones del backend.
 
 <p align="center">
   <img src="image/b2.png" alt="Diseño lógico de base de datos de Irrigation Intelligence" width="1000">
@@ -2262,7 +2280,9 @@ La validación de entradas se realiza mediante los esquemas de la API y el middl
 
 #### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-El diagrama organiza el ingreso de credenciales, la gestión de usuarios y sesiones, y los servicios externos previstos. Los routers de Express y PostgreSQL constituyen la base actual; los servicios externos del modelo no son obligatorios para el acceso con correo y contraseña.
+El diagrama presenta la autenticación con correo y contraseña, la administración del perfil y el cierre de sesión. Los routers de Express delegan el registro, ingreso y revocación en los servicios de aplicación. `authMiddleware` utiliza `AuthenticateSessionService` para validar la identidad de las solicitudes protegidas.
+
+`JwtService` firma y verifica tokens, mientras `PasswordHasher` utiliza scrypt para generar y comprobar los hashes de contraseñas. `PgUserRepository` y `PgSessionRepository` conservan las cuentas y sesiones en PostgreSQL. Las implementaciones basadas en archivos ofrecen una alternativa de persistencia local.
 
 <p align="center">
   <img src="image/dc3.png" alt="Diagrama de componentes de Identity Access Management" width="1000">
