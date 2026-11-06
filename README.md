@@ -2978,7 +2978,7 @@ Los campos del diseño se presentan únicamente cuando exista información que l
 
 #### 6.4.2. Applications Wireflow Diagrams
 
-Los wireflows relacionan pantallas con los pasos de cuatro objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
+Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
 
 **User Goal 1: Registrarse o iniciar sesión en AquaSave**
 
@@ -3016,13 +3016,6 @@ Los wireflows relacionan pantallas con los pasos de cuatro objetivos del usuario
   <img src="image/userflow (2).png" alt="Wireflow de registro y consulta de una planta" width="90%">
 </p>
 
-**User Goal 4: Consultar al asistente sobre una planta**
-
-- **Perfil:** principiante que necesita orientación o experto que consulta las condiciones de sus plantas.
-- **Objetivo:** obtener una respuesta contextualizada sobre el cuidado de una planta registrada.
-- **Recorrido principal:** abrir **Asistente** desde la navegación o el botón flotante, seleccionar una planta, escribir una pregunta y consultar la respuesta. Los mensajes recientes permiten continuar la conversación.
-- **Recorrido alternativo:** si Gemini no responde, mostrar el resumen local de la planta seleccionada. Si la cuenta no tiene plantas, indicar que se agregue una desde **Mis plantas**.
-- **Resultado:** orientación sobre el cuidado de la planta. La consulta no inicia ni detiene el riego.
 
 ---
 
