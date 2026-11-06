@@ -3076,7 +3076,56 @@ Perfil presenta los datos de la cuenta y la edición del nombre. El nivel princi
 | Historial y Análisis | Eventos e indicadores disponibles. | Unidades y periodos identificados; ausencia de datos diferenciada de un valor cero. |
 | Perfil | Datos de cuenta y actualización del nombre. | Separación entre datos editables y datos de consulta. |
 
-<!-- EVIDENCIA: insertar mock-ups actualizados de las vistas descritas, incluyendo web y Android. -->
+**Recursos visuales de referencia**
+
+Las siguientes maquetas conservan la identidad visual y la organización del diseño base. Se incluyen como referencia de composición; las descripciones anteriores definen el comportamiento de la aplicación documentada. Las pantallas que muestran campos o recorridos diferentes deben actualizarse en el archivo de diseño antes de considerarlas mock-ups finales.
+
+**Acceso y registro — base visual**
+
+<p align="center">
+  <img src="image/2-InicioSesion.png" alt="Base visual del acceso" width="45%">
+  <img src="image/3-InicioSesion.png" alt="Base visual del formulario de registro" width="45%">
+</p>
+
+La adaptación de estos formularios utiliza correo y contraseña para el acceso, e incorpora nombre y nivel principiante/experto durante el registro.
+
+**Inicio — base visual**
+
+<p align="center">
+  <img src="image/dashboard.png" alt="Composición de referencia del panel de inicio" width="1000">
+</p>
+
+La composición del panel sirve como base para ubicar la planta seleccionada, las lecturas, la recomendación y el acceso al asistente. Esta imagen no representa todavía esas incorporaciones de IA.
+
+**Listado y detalle — base visual**
+
+<p align="center">
+  <img src="image/1dash.png" alt="Listado de referencia" width="45%">
+  <img src="image/1dis.png" alt="Detalle de planta de referencia" width="45%">
+</p>
+
+El listado y el detalle aportan una referencia de tarjetas y jerarquía de información. El alta de la aplicación documentada sigue los cuatro pasos descritos en esta sección; las imágenes no sustituyen esa secuencia.
+
+**Perfil — base visual**
+
+<p align="center">
+  <img src="image/perfilll.png" alt="Composición de referencia del perfil" width="1000">
+</p>
+
+La adaptación conserva la edición del nombre y presenta el nivel de experiencia como dato de consulta. Los campos adicionales de esta maqueta no se consideran automáticamente editables en la aplicación.
+
+**Historial y Análisis — base visual**
+
+<p align="center">
+  <img src="image/historial.png" alt="Tabla de historial de referencia" width="45%">
+  <img src="image/Analisis.png" alt="Panel de análisis de referencia" width="45%">
+</p>
+
+Los valores de estas maquetas son ilustrativos. La versión documentada utiliza los eventos e indicadores disponibles en la API; la gráfica de ahorro de esta referencia no constituye un resultado medido ni acredita una comparación con línea base.
+
+**Archivo editable:** [Diseño de AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1).
+
+Las capturas de referencia anteriores corresponden al diseño web. La vista específica del asistente y la adaptación final a Android se incorporan desde el diseño que represente la interfaz implementada.
 
 #### 6.4.4. Applications User Flow Diagrams
 
