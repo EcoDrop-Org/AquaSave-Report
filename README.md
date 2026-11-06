@@ -2978,7 +2978,7 @@ Los campos del diseño se presentan únicamente cuando exista información que l
 
 #### 6.4.2. Applications Wireflow Diagrams
 
-Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
+Los wireflows relacionan pantallas con los pasos de cuatro objetivos del usuario. Las imágenes muestran los recorridos principales; los escenarios alternativos se describen para completar el comportamiento esperado sin modificar los diagramas.
 
 **User Goal 1: Registrarse o iniciar sesión en AquaSave**
 
