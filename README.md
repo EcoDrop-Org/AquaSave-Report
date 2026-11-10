@@ -3027,105 +3027,73 @@ Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. 
 
 #### 6.4.3. Applications Mock-ups
 
-Los mock-ups presentan la apariencia de las aplicaciones web y Android de AquaSave. Mantienen la identidad visual y los criterios de organización definidos en las secciones de Style Guidelines e Information Architecture. La experiencia se orienta a usuarios principiantes y expertos en el cuidado de plantas domésticas, con una estructura común para consultar información y acceder al control de sus unidades.
+Las siguientes capturas muestran la interfaz web de AquaSave y sirven como referencia visual de los mock-ups. El recorrido abarca el acceso a la cuenta, la consulta de una planta, el asistente, los indicadores de riego y el perfil. En las pantallas autenticadas, el menú lateral mantiene las opciones en la misma posición y destaca la sección activa. Los iconos acompañan a los textos y las tarjetas agrupan los datos y las acciones relacionadas.
 
-La composición prioriza la planta seleccionada, sus condiciones disponibles y las acciones relacionadas con su cuidado. El contenido se distribuye en tarjetas, formularios y listados que se adaptan al ancho de la pantalla. Los estados se explican mediante texto e indicadores visuales, de modo que el significado de una lectura o recomendación no dependa exclusivamente del color.
+**Inicio de sesión**
 
-**Inicio de sesión y registro**
+La pantalla de acceso presenta los campos **Nombre de usuario** y **Contraseña**, un control para mostrar u ocultar la clave y el botón **Iniciar sesión**. El enlace **Regístrate** lleva al formulario de creación de cuenta.
 
-El acceso utiliza correo y contraseña. El registro permite ingresar el nombre y seleccionar el nivel de experiencia. Los mensajes de validación orientan la corrección de los campos; inicio de sesión y registro constituyen alternativas de acceso. El diseño de estas pantallas representa el formulario implementado para cada caso.
+<p align="center">
+  <img src="image/08_Iniciar_sesion.png" alt="Formulario de inicio de sesión de AquaSave" width="1000">
+</p>
 
-**Inicio y recomendación por planta**
+**Registro**
 
-Inicio reúne las lecturas disponibles, el estado del dispositivo, el pronóstico y la recomendación de la planta seleccionada. La tarjeta de recomendación distingue el diagnóstico calculado por reglas de la explicación que puede redactar Gemini. La insignia IA identifica el origen del texto cuando corresponde; el perfil experto también puede consultar el motivo con los datos utilizados.
+El formulario solicita nombre completo, correo electrónico, contraseña y confirmación. La elección entre **Principiante** y **Experto** incluye una breve explicación de cada opción para orientar al usuario antes de registrarse.
 
-La fecha de generación y el vencimiento pertenecen a la recomendación. Su vigencia de diez minutos no acredita que la lectura de humedad tenga esa misma antigüedad. Cuando no existe telemetría, la orientación identifica esa condición y permite consultar los cuidados generales de la especie.
+<p align="center">
+  <img src="image/07_Registro.png" alt="Formulario de registro con elección entre Principiante y Experto" width="1000">
+</p>
 
-**Mis plantas y registro de una unidad**
+**Inicio**
 
-Mis plantas organiza los registros de la cuenta mediante tarjetas con nombre, especie e información disponible. Agregar planta utiliza cuatro pasos: selección de especie, datos de la planta, indicaciones de conexión y resumen de confirmación. Las imágenes de especies apoyan la selección; la identificación se realiza mediante el catálogo o el nombre indicado por el usuario.
+La vista **Inicio** reúne el estado de la planta activa, su ubicación, el rango de humedad ideal y los controles de riego automático y manual. En la captura, **Albahaca de prueba** está sin conexión: la aplicación indica que todavía no recibe lecturas y señala que los datos del clima son estimados.
 
-La ficha puede existir antes de que el kit envíe lecturas. Por ello, completar el registro y comprobar la conexión del dispositivo son resultados diferentes. La conexión se contrasta con el estado y la telemetría recibidos por la plataforma.
+<p align="center">
+  <img src="image/06_Inicio.png" alt="Inicio de AquaSave con Albahaca de prueba y dispositivo sin conexión" width="1000">
+</p>
 
-**Asistente**
+**Mis plantas**
 
-El asistente ofrece una conversación sobre las plantas registradas y permite seleccionar una de ellas para enfocar la consulta. La respuesta utiliza el contexto de la cuenta, la especie, la humedad disponible y los mensajes recientes. Si Gemini no entrega una respuesta utilizable, el servicio conserva una orientación local basada en los datos disponibles.
+La vista **Mis plantas** organiza las plantas registradas en tarjetas. La tarjeta muestra nombre, especie, ubicación y estado del dispositivo. Desde aquí se puede acceder al detalle de la planta o iniciar un nuevo registro con **Agregar planta**.
 
-El acceso al asistente se encuentra en su pantalla y en un botón flotante de las vistas autenticadas. Consultar la tarjeta o conversar con el asistente no inicia ni detiene el riego; esas acciones conservan sus controles propios.
+<p align="center">
+  <img src="image/05_Mis_plantas.png" alt="Listado Mis plantas con la tarjeta de Albahaca de prueba" width="1000">
+</p>
 
-**Control y configuración del riego**
+**Detalles de la planta**
 
-Los controles se relacionan con la unidad seleccionada y permiten solicitar el inicio y la detención del riego. La configuración reúne ajustes y horarios guardados para el dispositivo. La pantalla debe interpretarse junto con la información de conexión y las respuestas de la API: registrar una solicitud en el backend no prueba por sí solo que la bomba física haya ejecutado la acción.
+El detalle se abre sobre el listado y reúne la ficha de la especie, su rango de humedad ideal, la exposición a la luz y el tipo de planta. También muestra la opción de vincular el dispositivo de riego, de modo que el usuario puede consultar la información de la especie antes de recibir lecturas del kit.
 
-**Historial y análisis**
+<p align="center">
+  <img src="image/04_Detalles_de_la_planta.png" alt="Ventana de detalles de Albahaca de prueba" width="1000">
+</p>
 
-Historial presenta los registros recuperados para la unidad seleccionada. Análisis organiza los indicadores disponibles de consumo y riegos, con agregaciones de los últimos treinta días y series derivadas de los eventos. Las cifras de una maqueta son ilustrativas; los resultados del producto se sustentan en los datos que devuelve la API. Una comparación de ahorro frente a una línea base requiere una evaluación independiente y no se deduce únicamente del consumo mostrado.
+**Asistente AquaSave**
+
+El asistente presenta un saludo y una tarjeta para seleccionar **Albahaca de prueba** como contexto. El campo inferior permite escribir una consulta sobre su cuidado. La captura muestra el punto de partida de la conversación.
+
+<p align="center">
+  <img src="image/01_Asistente_AquaSave.png" alt="Pantalla inicial del asistente con Albahaca de prueba disponible para seleccionar" width="1000">
+</p>
+
+**Análisis**
+
+El panel resume el agua usada y los riegos de los últimos 30 días, además del promedio diario de consumo y la duración promedio por riego. En la cuenta de prueba se muestra **Recolectando historial**: todavía no hay suficientes registros para presentar una tendencia de humedad o un diagnóstico de retención del sustrato.
+
+<p align="center">
+  <img src="image/02_Analisis.png" alt="Panel de análisis en estado Recolectando historial" width="1000">
+</p>
 
 **Perfil**
 
-Perfil presenta los datos de la cuenta y la edición del nombre. El nivel principiante o experto se utiliza para adaptar la orientación y no concede acceso a plantas de otras cuentas.
-
-| Vista | Contenido principal | Criterio de presentación |
-| :--- | :--- | :--- |
-| Inicio de sesión y registro | Credenciales, nombre y nivel de experiencia durante el registro. | Formularios legibles, errores asociados a los campos y acciones diferenciadas. |
-| Inicio | Planta seleccionada, lecturas, clima y recomendación. | Jerarquía clara entre datos, orientación y acciones. |
-| Mis plantas | Tarjetas y acceso al registro o detalle. | Identificación consistente de cada planta. |
-| Agregar planta | Especie, datos, conexión y resumen. | Secuencia de cuatro pasos con posibilidad de corregir los datos. |
-| Asistente | Selección de planta, mensajes y respuestas. | Contexto reconocible y separación respecto del control físico. |
-| Control y configuración | Solicitudes de riego y ajustes del dispositivo. | Acciones asociadas a la unidad consultada. |
-| Historial y Análisis | Eventos e indicadores disponibles. | Unidades y periodos identificados; ausencia de datos diferenciada de un valor cero. |
-| Perfil | Datos de cuenta y actualización del nombre. | Separación entre datos editables y datos de consulta. |
-
-**Recursos visuales de referencia**
-
-Las siguientes maquetas conservan la identidad visual y la organización del diseño base. Se incluyen como referencia de composición; las descripciones anteriores definen el comportamiento de la aplicación documentada. Las pantallas que muestran campos o recorridos diferentes deben actualizarse en el archivo de diseño antes de considerarlas mock-ups finales.
-
-**Acceso y registro — base visual**
+La vista separa los datos personales del cambio de contraseña. El usuario puede actualizar su nombre; el correo y el nivel de experiencia se muestran como datos de solo lectura. El formulario de contraseña solicita la clave actual, la nueva clave y su confirmación.
 
 <p align="center">
-  <img src="image/2-InicioSesion.png" alt="Base visual del acceso" width="45%">
-  <img src="image/3-InicioSesion.png" alt="Base visual del formulario de registro" width="45%">
+  <img src="image/03_Perfil.png" alt="Perfil de AquaSave con datos personales y formulario de cambio de contraseña" width="1000">
 </p>
-
-La adaptación de estos formularios utiliza correo y contraseña para el acceso, e incorpora nombre y nivel principiante/experto durante el registro.
-
-**Inicio — base visual**
-
-<p align="center">
-  <img src="image/dashboard.png" alt="Composición de referencia del panel de inicio" width="1000">
-</p>
-
-La composición del panel sirve como base para ubicar la planta seleccionada, las lecturas, la recomendación y el acceso al asistente. Esta imagen no representa todavía esas incorporaciones de IA.
-
-**Listado y detalle — base visual**
-
-<p align="center">
-  <img src="image/1dash.png" alt="Listado de referencia" width="45%">
-  <img src="image/1dis.png" alt="Detalle de planta de referencia" width="45%">
-</p>
-
-El listado y el detalle aportan una referencia de tarjetas y jerarquía de información. El alta de la aplicación documentada sigue los cuatro pasos descritos en esta sección; las imágenes no sustituyen esa secuencia.
-
-**Perfil — base visual**
-
-<p align="center">
-  <img src="image/perfilll.png" alt="Composición de referencia del perfil" width="1000">
-</p>
-
-La adaptación conserva la edición del nombre y presenta el nivel de experiencia como dato de consulta. Los campos adicionales de esta maqueta no se consideran automáticamente editables en la aplicación.
-
-**Historial y Análisis — base visual**
-
-<p align="center">
-  <img src="image/historial.png" alt="Tabla de historial de referencia" width="45%">
-  <img src="image/Analisis.png" alt="Panel de análisis de referencia" width="45%">
-</p>
-
-Los valores de estas maquetas son ilustrativos. La versión documentada utiliza los eventos e indicadores disponibles en la API; la gráfica de ahorro de esta referencia no constituye un resultado medido ni acredita una comparación con línea base.
 
 **Archivo editable:** [Diseño de AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1).
-
-Las capturas de referencia anteriores corresponden al diseño web. La vista específica del asistente y la adaptación final a Android se incorporan desde el diseño que represente la interfaz implementada.
 
 #### 6.4.4. Applications User Flow Diagrams
 
