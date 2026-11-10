@@ -3491,7 +3491,7 @@ Las siguientes capturas documentan la presentación pública disponible como bas
 **Portada**
 
 <p align="center">
-  <img src="https://i.postimg.cc/PrpJ05ym/image.png" alt="Portada de la landing de AquaSave" width="1000">
+  <img src="image/Portadalanding.png" alt="EM1" width="1000">
 </p>
 
 **Beneficios**
@@ -3825,7 +3825,6 @@ La prueba del asistente complementa las tareas de comprensión y seguimiento. Lo
 
 #### 7.3.2. Registro de Entrevistas
 
-#### 7.3.2. Registro de Entrevistas
 
 > **REFERENCIA TEMPORAL — SUSTITUIR ANTES DE LA ENTREGA FINAL.** Este bloque conserva las seis entrevistas del registro anterior con sus nombres, fotografías, resúmenes, grupos y minutos originales. Sirve como modelo para completar las fichas de TB2; no acredita una nueva validación de la recomendación ni del asistente.
 
