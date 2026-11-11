@@ -3303,79 +3303,99 @@ La documentación del Sprint 1 concentra la evidencia de la versión integrada p
 
 ##### 7.2.1.1. Sprint Planning 1
 
-La planificación del Sprint 1 organiza el incremento de AquaSave alrededor del cuidado de plantas domésticas por usuarios principiantes y expertos. El alcance relaciona la presentación del producto en la landing page, el acceso a la aplicación, la gestión de plantas y la consulta de información para orientar el riego. La recomendación por planta y el asistente incorporan el apoyo de Gemini, conservando las acciones de control en servicios independientes.
+El Sprint Planning organiza el objetivo del sprint, las historias seleccionadas y la distribución de tareas. Para AquaSave, el alcance comprende la landing page, el acceso a la aplicación, la gestión de plantas domésticas, la consulta de información, las recomendaciones y el asistente, junto con los servicios de control de riego.
 
-El trabajo toma como entrada los requisitos y el diseño documentados en el informe, las observaciones sobre la priorización del backlog y la coherencia de los diagramas, y la implementación disponible en los repositorios de EcoDrop. El desglose de historias y tareas se presenta en 7.2.1.2, manteniendo los identificadores del Product Backlog.
+**Simulación académica de planificación:** el equipo no realizó una reunión formal de Sprint Planning. Los datos de la reunión y de capacidad que se presentan a continuación constituyen un escenario hipotético para representar la organización del sprint. El alcance funcional y los identificadores se toman del desglose del proyecto.
 
-**Resumen del objetivo y alcance documentado**
-
-| Aspecto | Descripción |
+| Sprint # | Sprint 1 |
 | :--- | :--- |
-| Sprint | Sprint 1. |
-| Producto | AquaSave, desarrollado por EcoDrop. |
-| Usuarios objetivo | Usuarios principiantes y expertos en el cuidado de plantas domésticas. |
-| Insumos de planificación | Product Backlog, criterios de aceptación, diseño de arquitectura, observaciones de la revisión del proyecto y versiones de los productos disponibles. |
-| Sprint 1 Goal | Ofrecer una experiencia integrada que permita acceder a AquaSave, registrar y consultar plantas, interpretar la información disponible y obtener orientación mediante recomendaciones y asistente, con acceso a los controles de riego de la unidad seleccionada. |
-| Alcance funcional | Landing page, registro e inicio de sesión, perfil, gestión de plantas y dispositivos, estado y lecturas, clima, recomendaciones, asistente, solicitudes de riego, historial y análisis. |
-| Alcance técnico | Integración de las aplicaciones con AquaSave API, persistencia en PostgreSQL, comunicación mediante EdgeAPI y HiveMQ Cloud, autorización por cuenta y separación de la IA respecto del control físico. |
-| Historias relacionadas | 26 historias en el desglose de 7.2.1.2: 21 User Stories y 5 Technical Stories. |
-| Sum of Story Points | 120 Story Points para el conjunto de historias relacionado en 7.2.1.2. |
-| Seguimiento | Tablero de AquaSave en Trello, historiales de GitHub y evidencias de desarrollo, pruebas, ejecución y despliegue del Sprint Review. |
+| **Sprint Planning Background** | **Datos del escenario simulado** |
+| Date | 26/10/2026. |
+| Time | 06:30 p. m. a 07:30 p. m., hora de Lima. |
+| Location | Videollamada mediante Microsoft Teams, prevista como modalidad de la reunión simulada. |
+| Prepared By | Rodríguez Rodríguez, Luis Piero / Román Pajuelo, Luis Gustavo; asignación del ejercicio. |
+| Attendees (to planning meeting) | Gutiérrez Condo, Maylhy Olinda<br>Roca Tineo, Steven Mathew<br>Rodríguez Rodríguez, Luis Piero<br>Román Pajuelo, Luis Gustavo<br>Luyo Correa, Sandra Paula<br>Participantes considerados en la simulación; no constituye un registro de asistencia. |
+| Sprint n - 1 Review Summary | No se modela un Sprint Review anterior, por tratarse del primer sprint documentado en este capítulo. Como entrada se consideran los requisitos, el diseño y las observaciones de TP1. |
+| Sprint n - 1 Retrospective Summary | No se modela una retrospectiva de un sprint anterior. Para el ejercicio se establecen como prácticas de coordinación la asignación explícita de tareas, la revisión de contratos entre productos y la actualización conjunta de texto e imágenes del informe. |
+| Sprint period | Del 26/10/2026 al 10/11/2026, periodo supuesto para el ejercicio. |
+| **Sprint Goal & User Stories** | **Objetivo y alcance** |
+| Sprint 1 Goal | Integrar la experiencia de AquaSave para que usuarios principiantes y expertos puedan acceder desde la landing, registrar su cuenta y sus plantas, consultar el estado disponible y recibir orientación mediante recomendaciones y asistente. El incremento incluye las solicitudes de inicio y detención del riego de la unidad seleccionada, conservando la separación entre IA y control físico. |
+| Goal measurement | Evaluar siete recorridos: landing hacia la aplicación; registro e inicio de sesión; alta y consulta de planta; estado y lecturas; recomendación; asistente; inicio y detención. Meta del ejercicio: 7 de 7 recorridos conformes con sus criterios. La meta no constituye un resultado de pruebas ni acredita la actuación física de la bomba. |
+| Sprint 1 Velocity | 120 Story Points como capacidad objetivo supuesta. No corresponde a una velocidad histórica medida. |
+| Sum of Story Points | 120 Story Points, distribuidos en 21 User Stories y 5 Technical Stories. |
+| Team capacity | 200 horas-persona: 5 integrantes con 40 horas disponibles cada uno durante el periodo simulado. |
+| Task estimation | 174 horas-persona de tareas; 26 horas de margen para coordinación, ajustes y revisión. |
 
-**Criterio de evaluación del Sprint Goal**
+**Distribución de capacidad del ejercicio**
 
-El objetivo se evalúa mediante siete recorridos: acceso desde la landing; registro e inicio de sesión; alta y consulta de una planta; interpretación del estado y las lecturas; consulta de una recomendación; interacción con el asistente; y solicitud de inicio y detención del riego. La meta de evaluación es comprobar los siete recorridos en los productos aplicables. El resultado de la evaluación se sustenta en la ejecución observada y, para el control físico, en la respuesta del kit.
+| Integrante | Capacidad supuesta | Horas asignadas | Margen |
+| :--- | :---: | :---: | :---: |
+| Gutiérrez Condo, Maylhy Olinda | 40 h | 34 h | 6 h |
+| Roca Tineo, Steven Mathew | 40 h | 34 h | 6 h |
+| Rodríguez Rodríguez, Luis Piero | 40 h | 32 h | 8 h |
+| Román Pajuelo, Luis Gustavo | 40 h | 34 h | 6 h |
+| Luyo Correa, Sandra Paula | 40 h | 40 h | 0 h |
+| **Total** | **200 h** | **174 h** | **26 h** |
 
-La suma de 120 Story Points describe el tamaño de las historias relacionadas; no representa una velocidad medida ni acredita su aceptación completa. Las historias US36, US37, US38 y US39 de la landing se incluyen desde el Sprint 1, de acuerdo con el tablero mostrado en la sección siguiente.
-
-**Tablero de trabajo:** [AquaSave en Trello](https://trello.com/b/tQbBo5rs).
+Los Story Points expresan la estimación relativa de las historias; las horas estiman el esfuerzo de las tareas. Se manejan por separado, sin establecer una equivalencia fija entre ambas unidades. La distribución permite que ningún integrante supere la capacidad supuesta para el ejercicio.
 
 ##### 7.2.1.2. Sprint Backlog 1
 
-El Sprint 1 reúne el trabajo relacionado con el acceso a AquaSave, la consulta de plantas domésticas y la integración de sus servicios. El desglose mantiene los identificadores y los Story Points del Product Backlog, y relaciona cada historia con una tarea y con el resultado documentado en la solución.
+El Sprint Backlog conserva las historias seleccionadas y sus estimaciones, e incorpora las columnas de esfuerzo en horas, responsable y estado. Cada tarea mantiene su identificador para facilitar la relación con el desglose del incremento.
+
+**Simulación académica del seguimiento:** las horas y asignaciones de la tabla son hipotéticas. La columna Status representa un cierre supuesto del ejercicio, con las tareas en Done; no acredita quién ejecutó realmente cada tarea, su aceptación por el equipo ni el funcionamiento físico del kit. Las evidencias reales se presentan separadamente en las secciones de desarrollo, pruebas y ejecución.
 
 **Tablero de trabajo:** [AquaSave en Trello](https://trello.com/b/tQbBo5rs).
 
 <p align="center">
-  <img src="image/trellocaptura.png" alt="Tablero de trabajo de AquaSave" width="1000">
+  <img src="image/trellocaptura.png" alt="Tablero registrado de AquaSave" width="1000">
 </p>
 
-*Tablero registrado de AquaSave. Las historias US36, US37, US38 y US39 aparecen en «Sprint 1 Done».*
+*Captura existente del tablero. US36, US37, US38 y US39 aparecen en «Sprint 1 Done». La captura conserva su estado registrado y no representa las asignaciones u horas hipotéticas de esta tabla.*
 
-Las historias de la landing page se incluyeron desde el primer sprint. La captura conserva el estado del tablero en el momento de su registro; la prioridad del producto se presenta en la tabla de 3.4.
+Las historias de la landing se incluyen desde el Sprint 1. Se mantiene la prioridad relativa del desglose anterior y sus identificadores; el orden general del producto se presenta en 3.4.
 
-**Historias y tareas relacionadas con el incremento**
+**User Stories y Work Items / Tasks**
 
-| User Story ID | Título de la historia | Story Points | Task ID | Tarea | Descripción del resultado documentado | Evidencia disponible |
-| :--- | :--- | :---: | :--- | :--- | :--- | :--- |
-| US36 | Conocer AquaSave desde la landing page | 3 | T01 | Presentación de AquaSave | Contenido de la landing con propuesta de valor, beneficios y presentación del producto. | Landing publicada. |
-| US37 | Acceder a orientación según mi experiencia | 3 | T02 | Orientación de acceso | Contenido de orientación de la landing y presentación de las opciones de experiencia en el registro de la aplicación. | Landing y formulario de registro. |
-| US38 | Acceder a las aplicaciones | 2 | T03 | Acceso a la aplicación | Enlace desde la landing hacia la aplicación web publicada. | GitHub Pages y Firebase Hosting. |
-| US39 | Consultar requisitos y soporte del kit | 3 | T04 | Información de ayuda | Páginas de ayuda y preguntas frecuentes, requisitos y accesos de soporte del sitio. | Páginas de soporte de la landing. |
-| US09 | Consultar humedad del sustrato | 5 | T05 | Visualización de humedad | Tarjetas que presentan la humedad disponible para la unidad seleccionada y el estado asociado a la recepción de lecturas. | Vista Inicio y ficha de la planta. |
-| US10 | Consultar temperatura ambiente | 3 | T06 | Visualización de temperatura | Presentación de la temperatura ambiental disponible; el estado sin lectura se representa mediante un guion. | Vista Inicio y ficha de la planta. |
-| US12 | Consultar conexión del dispositivo | 3 | T07 | Estado de conexión | Consulta del estado efectivo del dispositivo y presentación del indicador de conexión. | Servicio de dispositivos y capturas de Inicio y Mis plantas. |
-| US13 | Activar el riego de una unidad doméstica | 8 | T08 | Solicitud de inicio de riego | Control de inicio en la interfaz y operación HTTP para registrar el evento y el comando de apertura. | Control manual y endpoint de inicio. |
-| US14 | Detener el riego de una unidad doméstica | 5 | T09 | Solicitud de detención de riego | Control de detención y operación HTTP para registrar la solicitud de cierre. | Control manual y endpoint de detención. |
-| US01 | Registrar cuenta nueva | 3 | T10 | Registro de la cuenta | Formulario y servicio de registro con nombre, correo, contraseña y nivel de experiencia. | Formulario de registro y servicio de autenticación. |
-| US02 | Iniciar sesión con correo y contraseña | 3 | T11 | Inicio de sesión | Formulario de acceso con correo y contraseña, validación en la API y sesión autenticada. | Pantalla de acceso y prueba HTTP de autenticación. |
-| TS08 | Separar experiencia y autorización | 5 | T12 | Autorización por cuenta | Comprobación de propiedad de los dispositivos a partir de la cuenta autenticada. | Caso de aislamiento entre cuentas en auth-flow.test.ts. |
-| US31 | Vincular un dispositivo doméstico | 8 | T13 | Registro de planta y código de vinculación | Flujo de alta por especie, datos de la planta, instrucciones de conexión y resumen; consulta del código de vinculación. | Flujo de alta y Detalles de la planta. |
-| US33 | Gestionar múltiples dispositivos domésticos | 5 | T14 | Gestión de plantas de la cuenta | Listado de registros propios y selección de la planta activa para las consultas de la aplicación. | Mis plantas y servicio de dispositivos. |
-| US27 | Consultar el estado de mis plantas | 5 | T15 | Resumen de la planta activa | Presentación del nombre, ubicación, estado, lecturas disponibles y orientación en Inicio. | Captura de Inicio. |
-| US28 | Acceder al control de la unidad consultada | 3 | T16 | Acceso al control de la unidad | Asociación de los controles de riego con la planta activa consultada en la aplicación. | Vista Inicio y operaciones de riego por deviceId. |
-| US17 | Consultar pronóstico climático | 3 | T17 | Consulta climática | Consulta del pronóstico por ubicación y distinción del respaldo estimado cuando el proveedor no entrega datos. | Adaptador climático y aviso visible en Inicio. |
-| US24 | Consultar historial de riego | 5 | T18 | Consulta del historial | Obtención y presentación de los eventos de riego de la unidad seleccionada. | Endpoint de eventos y vista Historial. |
-| US25 | Consultar consumo por periodo | 5 | T19 | Indicadores de consumo | Agregación de eventos completados de los últimos treinta días para consumo, cantidad de riegos y duración media. | Endpoint de análisis y captura de Análisis. |
-| TS03 | Validar el contrato de recomendaciones | 8 | T20 | Contrato de recomendaciones | Validación de la estructura y del texto de la recomendación, conservando el diagnóstico calculado por reglas. | Servicio de recomendación y pruebas de contrato del cliente. |
-| TS12 | Aislar IA del control físico | 5 | T21 | Separación entre IA y control | Servicios de recomendación y conversación separados de las operaciones que generan comandos para el kit. | Routers y servicios de Irrigation Intelligence. |
-| US34 | Consultar una recomendación de riego | 8 | T22 | Recomendación por planta | Diagnóstico basado en reglas y explicación que puede enriquecerse con Gemini, con origen del texto y vigencia de diez minutos. | Endpoint de recomendación y doce pruebas del dominio. |
-| US35 | Consultar al asistente sobre mis plantas | 5 | T23 | Asistente contextual | Selección de una planta de la cuenta y consulta al asistente con contexto de la planta y conversación reciente. | Pantalla Asistente y endpoints de chat. |
-| US08 | Actualizar mis datos personales | 3 | T24 | Datos personales | Edición del nombre y consulta del correo y del nivel de experiencia de la cuenta. | Captura de Perfil y operación de actualización. |
-| TS05 | Integrar los productos digitales del curso | 8 | T25 | Integración de productos | Contratos HTTP entre clientes y API, y puente MQTT-HTTP entre la EdgeAPI y los servicios de la plataforma. | Repositorios, contratos y configuración de despliegue. |
-| TS11 | Mantener documentación y versiones trazables | 3 | T26 | Trazabilidad de la documentación | Actualización del informe, referencias a versiones y documentación de las operaciones de la API. | Historial del informe y contrato OpenAPI. |
+| User Story ID y título | Story Points | Task ID | Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
+| **US36 — Conocer AquaSave desde la landing page** | 3 | T01 | Presentación de AquaSave | Contenido de la landing con propuesta de valor, beneficios y presentación del producto. | 4 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US37 — Acceder a orientación según mi experiencia** | 3 | T02 | Orientación de acceso | Contenido de orientación de la landing y presentación de las opciones de experiencia en el registro de la aplicación. | 4 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US38 — Acceder a las aplicaciones** | 2 | T03 | Acceso a la aplicación | Enlace desde la landing hacia la aplicación web publicada. | 2 | Román Pajuelo, Luis Gustavo | Done |
+| **US39 — Consultar requisitos y soporte del kit** | 3 | T04 | Información de ayuda | Páginas de ayuda y preguntas frecuentes, requisitos y accesos de soporte del sitio. | 4 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US09 — Consultar humedad del sustrato** | 5 | T05 | Visualización de humedad | Tarjetas que presentan la humedad disponible para la unidad seleccionada y el estado asociado a la recepción de lecturas. | 6 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US10 — Consultar temperatura ambiente** | 3 | T06 | Visualización de temperatura | Presentación de la temperatura ambiental disponible; el estado sin lectura se representa mediante un guion. | 4 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US12 — Consultar conexión del dispositivo** | 3 | T07 | Estado de conexión | Consulta del estado efectivo del dispositivo y presentación del indicador de conexión. | 4 | Luyo Correa, Sandra Paula | Done |
+| **US13 — Activar el riego de una unidad doméstica** | 8 | T08 | Solicitud de inicio de riego | Control de inicio en la interfaz y operación HTTP para registrar el evento y el comando de apertura. | 10 | Román Pajuelo, Luis Gustavo | Done |
+| **US14 — Detener el riego de una unidad doméstica** | 5 | T09 | Solicitud de detención de riego | Control de detención y operación HTTP para registrar la solicitud de cierre. | 6 | Román Pajuelo, Luis Gustavo | Done |
+| **US01 — Registrar cuenta nueva** | 3 | T10 | Registro de la cuenta | Formulario y servicio de registro con nombre, correo, contraseña y nivel de experiencia. | 6 | Rodríguez Rodríguez, Luis Piero | Done |
+| **US02 — Iniciar sesión con correo y contraseña** | 3 | T11 | Inicio de sesión | Formulario de acceso con correo y contraseña, validación en la API y sesión autenticada. | 6 | Rodríguez Rodríguez, Luis Piero | Done |
+| **TS08 — Separar experiencia y autorización** | 5 | T12 | Autorización por cuenta | Comprobación de propiedad de los dispositivos a partir de la cuenta autenticada. | 8 | Rodríguez Rodríguez, Luis Piero | Done |
+| **US31 — Vincular un dispositivo doméstico** | 8 | T13 | Registro de planta y código de vinculación | Flujo de alta por especie, datos de la planta, instrucciones de conexión y resumen; consulta del código de vinculación. | 10 | Luyo Correa, Sandra Paula | Done |
+| **US33 — Gestionar múltiples dispositivos domésticos** | 5 | T14 | Gestión de plantas de la cuenta | Listado de registros propios y selección de la planta activa para las consultas de la aplicación. | 6 | Luyo Correa, Sandra Paula | Done |
+| **US27 — Consultar el estado de mis plantas** | 5 | T15 | Resumen de la planta activa | Presentación del nombre, ubicación, estado, lecturas disponibles y orientación en Inicio. | 6 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US28 — Acceder al control de la unidad consultada** | 3 | T16 | Acceso al control de la unidad | Asociación de los controles de riego con la planta activa consultada en la aplicación. | 4 | Román Pajuelo, Luis Gustavo | Done |
+| **US17 — Consultar pronóstico climático** | 3 | T17 | Consulta climática | Consulta del pronóstico por ubicación y distinción del respaldo estimado cuando el proveedor no entrega datos. | 6 | Roca Tineo, Steven Mathew | Done |
+| **US24 — Consultar historial de riego** | 5 | T18 | Consulta del historial | Obtención y presentación de los eventos de riego de la unidad seleccionada. | 6 | Gutiérrez Condo, Maylhy Olinda | Done |
+| **US25 — Consultar consumo por periodo** | 5 | T19 | Indicadores de consumo | Agregación de eventos completados de los últimos treinta días para consumo, cantidad de riegos y duración media. | 8 | Luyo Correa, Sandra Paula | Done |
+| **TS03 — Validar el contrato de recomendaciones** | 8 | T20 | Contrato de recomendaciones | Validación de la estructura y del texto de la recomendación, conservando el diagnóstico calculado por reglas. | 10 | Roca Tineo, Steven Mathew | Done |
+| **TS12 — Aislar IA del control físico** | 5 | T21 | Separación entre IA y control | Servicios de recomendación y conversación separados de las operaciones que generan comandos para el kit. | 6 | Roca Tineo, Steven Mathew | Done |
+| **US34 — Consultar una recomendación de riego** | 8 | T22 | Recomendación por planta | Diagnóstico basado en reglas y explicación que puede enriquecerse con Gemini, con origen del texto y vigencia de diez minutos. | 12 | Roca Tineo, Steven Mathew | Done |
+| **US35 — Consultar al asistente sobre mis plantas** | 5 | T23 | Asistente contextual | Selección de una planta de la cuenta y consulta al asistente con contexto de la planta y conversación reciente. | 12 | Rodríguez Rodríguez, Luis Piero | Done |
+| **US08 — Actualizar mis datos personales** | 3 | T24 | Datos personales | Edición del nombre y consulta del correo y del nivel de experiencia de la cuenta. | 4 | Luyo Correa, Sandra Paula | Done |
+| **TS05 — Integrar los productos digitales del curso** | 8 | T25 | Integración de productos | Contratos HTTP entre clientes y API, y puente MQTT-HTTP entre la EdgeAPI y los servicios de la plataforma. | 12 | Román Pajuelo, Luis Gustavo | Done |
+| **TS11 — Mantener documentación y versiones trazables** | 3 | T26 | Trazabilidad de la documentación | Actualización del informe, referencias a versiones y documentación de las operaciones de la API. | 8 | Luyo Correa, Sandra Paula | Done |
+| **Total: 26 historias** | **120** | **26 tareas** | — | — | **174** | **5 integrantes** | **Cierre simulado** |
 
-Las 26 historias relacionadas suman **120 Story Points**. Esta suma expresa el tamaño del conjunto documentado; la velocidad y la aceptación del sprint se determinan mediante los acuerdos del equipo. La tabla relaciona el trabajo con su evidencia técnica y visual. La recepción de una solicitud de riego en la API y la actuación física de la bomba son resultados distintos.
+**Criterios usados para representar el cierre del ejercicio**
+
+- La tarea cubre el comportamiento descrito y mantiene la asociación con la cuenta y la planta correspondientes.
+- Las solicitudes entre cliente y API respetan sus contratos y presentan los estados de éxito, error o ausencia de datos.
+- Las recomendaciones y el asistente proporcionan orientación sin generar por sí mismos órdenes de riego.
+- Las solicitudes de control se distinguen de su ejecución física; recibir una respuesta HTTP no demuestra la actuación de la bomba.
+- El resultado puede relacionarse con el código, las pruebas o las capturas descritas en los apartados siguientes.
+
+Estos criterios describen el cierre supuesto de la simulación. Los estados de la tabla no se utilizan como evidencia de que todos los criterios de aceptación de las historias hayan sido comprobados.
 
 ##### 7.2.1.3. Development Evidence for Sprint Review
 
