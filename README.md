@@ -3942,76 +3942,59 @@ La validación evalúa cómo los usuarios principiantes y expertos comprenden y 
 
 #### 7.3.1. Diseño de Entrevistas
 
-Las sesiones combinan caracterización breve, tareas de interacción y preguntas sobre la experiencia. Se solicita al participante que explique qué está buscando, qué interpreta y por qué elige una acción. El moderador evita indicar la ruta correcta antes de observar el primer intento y registra cualquier ayuda proporcionada.
+En esta sección se presenta el diseño de las entrevistas de validación de AquaSave. El objetivo es evaluar la claridad de la interfaz, la facilidad de navegación y la utilidad percibida de la aplicación para usuarios principiantes y expertos en el cuidado de plantas domésticas. Se consideran el acceso a la cuenta, el registro de plantas, la consulta de su información, la orientación disponible y la interacción con el asistente.
 
-Se consideran entre tres y cinco participantes por segmento. Los participantes autorizan la grabación y conocen su uso académico. Se utilizan cuentas de prueba y no se exponen contraseñas, tokens ni datos ajenos durante la sesión.
+Durante las entrevistas, los participantes interactuarán con la aplicación sin utilizar un dispositivo IoT conectado. La sesión permite evaluar cómo comprenden los mensajes y los estados de la interfaz cuando no existen lecturas del equipo. No se solicitará conectar sensores, activar una bomba ni comprobar el funcionamiento físico del riego.
 
-**Preparación de la sesión**
+Se consideran entre tres y cinco participantes por segmento. Antes de comenzar, se solicita autorización para grabar la sesión y utilizarla como evidencia académica. Se registra el nombre, la edad, el distrito, el segmento, la fecha y la plataforma utilizada. El participante utiliza una cuenta de prueba y explica en voz alta lo que está buscando y lo que entiende. El moderador observa el primer intento antes de ofrecer ayuda.
 
-- Identificar la versión de la aplicación, la plataforma y la fecha.
-- Comprobar los accesos a la landing, la web o el APK y los servicios necesarios.
-- Preparar una planta de prueba con datos identificables y, cuando se evalúe control físico, un kit disponible bajo supervisión.
-- Distinguir una tarea no completada por una dificultad de interfaz de una interrupción por falta de conectividad o infraestructura.
-- Registrar éxito con o sin ayuda, errores, tiempo aproximado y comentarios. El tiempo de la recomendación no se interpreta como tiempo de la última lectura.
+**Presentación al participante**
 
-**Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas**
+“Estamos evaluando la experiencia de uso de AquaSave. Queremos conocer qué entiendes de sus pantallas y qué partes te resultan fáciles o confusas. Hoy utilizarás la aplicación sin un dispositivo de riego conectado. Puedes explorarla y comentarnos lo que piensas; estamos evaluando la aplicación y no tus conocimientos.”
 
-**Características demográficas y experiencia:**
+**Preguntas iniciales para ambos segmentos**
 
-1. ¿Cuál es tu nombre y edad?
-2. ¿En qué distrito vives y desde cuándo cuidas plantas?
-3. ¿Qué plantas tienes y qué dificultades encuentras al decidir cuándo regarlas?
-4. ¿Qué dispositivos o aplicaciones utilizas habitualmente?
+1. ¿Cuál es tu nombre, edad y distrito de residencia?
+2. ¿Qué plantas cuidas y desde hace cuánto tiempo lo haces?
+3. ¿Cómo decides normalmente cuándo regar tus plantas?
+4. Después de revisar la página de presentación de AquaSave, ¿qué entendiste que ofrece y cómo ingresarías a la aplicación?
 
-**Tareas y preguntas de validación:**
+**Entrevistas usuario segmento Principiantes en el cuidado de plantas**
 
-| Tarea | Indicación al participante | Pregunta posterior |
-| :--- | :--- | :--- |
-| Conocer AquaSave | Revisa la landing y explica qué servicio ofrece y cómo ingresarías a la aplicación. | ¿Qué información fue clara y cuál te faltó para decidir si la usarías? |
-| Acceder a la aplicación | Registra una cuenta de prueba o inicia sesión con la cuenta asignada. | ¿Entendiste para qué se solicita tu nivel de experiencia? |
-| Registrar una planta | Añade una planta indicando su especie y sus datos. | ¿En qué momento entendiste que la planta estaba registrada y qué faltaba para recibir lecturas? |
-| Interpretar información | Revisa el estado y la humedad disponibles de la planta seleccionada. | ¿Cómo explicarías esos datos y qué harías a continuación? |
-| Consultar recomendación | Abre la recomendación y explica su mensaje. | ¿Qué entendiste del texto y cómo reconocerías que no hay una lectura disponible? |
-| Usar el asistente | Selecciona tu planta y formula una duda sobre su cuidado. | ¿La respuesta te ayudó? ¿Crees que consultar al asistente activó el riego? |
-| Identificar controles | Localiza dónde solicitarías iniciar o detener el riego de esa planta. | ¿Cómo comprobarías que la acción ocurrió realmente? |
+El participante realiza el registro o inicia sesión, agrega una planta, revisa Inicio y consulta al asistente. Las preguntas se realizan después de explorar la pantalla correspondiente.
 
-**Segmento objetivo #2: Usuarios expertos en el cuidado de plantas**
+1. ¿Cómo te resultó el proceso de registro e inicio de sesión? ¿Qué entendiste de la opción de elegir tu experiencia en el cuidado de plantas?
 
-**Características demográficas y experiencia:**
+2. ¿Cómo te resultó agregar una planta? ¿Hubo algún paso o dato solicitado que no supieras cómo completar?
 
-1. ¿Cuál es tu nombre y edad?
-2. ¿En qué distrito vives y cuántos años llevas cuidando plantas?
-3. ¿Cuántas plantas supervisas y qué especies requieren mayor atención?
-4. ¿Cómo registras y evalúas los cambios en sus rutinas de riego?
+3. Al revisar Inicio y Mis plantas, ¿qué entiendes del estado de tu planta? ¿Qué interpretas cuando aparece “Sin conexión” o faltan lecturas de humedad y temperatura?
 
-**Tareas y preguntas de validación:**
+4. Al leer el mensaje de orientación que aparece en Inicio, ¿qué entiendes que te está indicando? ¿Qué harías después de leerlo?
 
-| Tarea | Indicación al participante | Pregunta posterior |
-| Evaluar la propuesta | Revisa la landing e identifica cómo se integra la información de las plantas con el control del kit. | ¿La información permite comprender su utilidad y sus límites? |
-| Seleccionar una planta | Accede con perfil experto y consulta una planta entre varios registros. | ¿Pudiste identificar con claridad qué planta estabas revisando? |
-| Revisar diagnóstico | Consulta recomendación, motivo y datos disponibles. | ¿Qué información usarías para aceptar la orientación como apoyo a tu decisión? |
-| Consultar al asistente | Formula una pregunta vinculada con esa especie o con la humedad registrada. | ¿La respuesta conserva el contexto de la planta y permite entender su alcance? |
-| Revisar registros | Consulta el historial y los indicadores de análisis disponibles. | ¿Qué puedes concluir con estos datos y qué información adicional necesitarías? |
-| Revisar ajustes | Localiza los parámetros y horarios del dispositivo. | ¿Comprendes la función de cada ajuste y cómo evaluarías su efecto? |
-| Controlar una unidad | Identifica inicio, detención y pausa, verificando siempre la planta seleccionada. | ¿Cómo distinguirías una solicitud enviada de una acción confirmada en el equipo? |
+5. Después de seleccionar tu planta y hacer una pregunta al asistente, ¿qué entendiste de su respuesta? ¿Hubo alguna parte que te resultara confusa?
 
-**Preguntas de cierre para ambos segmentos**
+6. Si quisieras volver a consultar tu planta o revisar los datos de tu cuenta, ¿cómo lo harías? ¿Qué parte de la navegación te resultó más difícil?
 
-1. ¿Qué tarea te resultó más sencilla y cuál te generó dudas?
-2. ¿Qué información te ayudó a comprender el estado de la planta?
-3. ¿Distingues una recomendación de una orden de riego? Explícalo con tus palabras.
-4. ¿Qué harías si faltan lecturas o el asistente no puede dar una respuesta detallada?
-5. ¿Qué cambiarías para incorporar AquaSave a tu rutina?
+7. Después de probar la aplicación, ¿en qué situaciones la usarías para cuidar tus plantas? ¿Qué cambiarías para que te resulte más útil?
 
-**Relación con los Business Goals**
+**Entrevistas usuario segmento Expertos en el cuidado de plantas**
 
-| Objetivo | Evidencia que debe recogerse | Interpretación |
-| :--- | :--- | :--- |
-| BG1: comprensión del estado de las plantas | Respuesta del principiante al interpretar el estado sin ayuda del moderador. | Comparar el resultado de la muestra con la meta del 80% definida en 3.3. |
-| BG2: evaluación del uso del agua | Registros comparables de 14 días de referencia y 14 días de uso, con método y condiciones documentados. | Una entrevista breve no prueba reducción de consumo. No convertir opiniones en ahorro medido. |
-| BG3: seguimiento y control del cuidado | Consulta de estado, información disponible e intervención de control en una unidad identificada. | Comparar tareas realizadas sin ayuda con el objetivo de 3.3; no contabilizar una respuesta del asistente como activación de la bomba. |
+El participante accede con un perfil experto, registra o selecciona una planta, consulta su información y orientación, utiliza el asistente y revisa Historial y Análisis. La experiencia del participante se refiere al cuidado de plantas y no exige conocimientos técnicos de software.
 
-La prueba del asistente complementa las tareas de comprensión y seguimiento. Los tres Business Goals conservan sus metas y se evalúan con evidencias acordes con su naturaleza.
+1. ¿Cómo te resultó el proceso de acceso a la aplicación? ¿Qué esperas encontrar al seleccionar el perfil experto?
+
+2. Al registrar o consultar una planta, ¿qué tan claros te resultan su especie, nombre y ubicación? ¿Qué información adicional necesitarías para identificarla y organizar su cuidado?
+
+3. Al revisar Inicio, ¿qué información sobre la planta puedes interpretar y cuál no está disponible? ¿Cómo influye el estado de conexión en lo que puedes concluir?
+
+4. ¿Qué entiendes del mensaje de orientación mostrado para la planta? ¿Qué información adicional necesitarías para utilizarlo como apoyo al decidir su cuidado?
+
+5. Después de consultar al asistente sobre una planta seleccionada, ¿qué partes de la respuesta te resultaron útiles y cuáles necesitarías aclarar o contrastar?
+
+6. Al revisar Historial y Análisis, ¿qué interpretas de los registros, indicadores o mensajes que aparecen? ¿Qué información esperarías encontrar cuando existan datos de uso?
+
+7. ¿Cómo incorporarías AquaSave a tu rutina de cuidado de plantas, si decidieras utilizarla? ¿Qué cambio consideras más importante para que te resulte útil?
+   
 
 #### 7.3.2. Registro de Entrevistas
 
