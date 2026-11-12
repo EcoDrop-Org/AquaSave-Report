@@ -3810,7 +3810,29 @@ La entrada admite mensajes de hasta 500 caracteres y hasta 20 turnos en `history
   <img src="image/swagger-production.png" alt="Swagger UI: consulta de salud en el registro disponible" width="1000">
 </p>
 
-La captura registra una consulta a `GET /health` con respuesta HTTP `200` y los campos `status`, `service` y `environment`. Las tablas anteriores detallan los contratos de las demás operaciones; los ejemplos de recomendación y chat son ilustrativos.
+La consulta `GET /health` respondió con HTTP `200` y mostró los campos `status`, `service` y `environment`. Los ejemplos JSON anteriores ilustran el contrato; las siguientes capturas muestran las respuestas obtenidas al ejecutar las consultas.
+
+**Consulta de recomendación desde Swagger UI**
+
+Se ejecutó `GET /api/irrigation/devices/{deviceId}/recommendation` para la albahaca registrada en la cuenta de prueba. El servicio respondió con HTTP `200` e indicó que el dispositivo aún no había enviado telemetría. El campo `irrigation.source: "ai"` identifica el uso de IA en la redacción del mensaje; el diagnóstico se obtiene mediante reglas.
+
+<p align="center">
+  <img src="image/swagger-recomendacion-tb2.png" alt="Consulta de recomendación en Swagger con respuesta HTTP 200" width="1000">
+</p>
+
+**Consulta al asistente desde la aplicación web**
+
+En la aplicación web se seleccionó «Albahaca de prueba» y se envió una pregunta sobre su estado. La pestaña **Red** del navegador registró la solicitud `POST /api/irrigation/chat` y el código `200 OK`.
+
+<p align="center">
+  <img src="image/chat-solicitud-tb2.png" alt="Solicitud POST al asistente de AquaSave con respuesta 200 OK" width="1000">
+</p>
+
+El cuerpo de la respuesta contiene el texto mostrado en la conversación. El campo `reply.source: "ai"` identifica que la respuesta se generó con IA. La consulta proporciona orientación de cuidado y no envía una orden de riego.
+
+<p align="center">
+  <img src="image/chat-respuesta-tb2.png" alt="Respuesta JSON del asistente de AquaSave con origen IA" width="1000">
+</p>
 
 ##### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
