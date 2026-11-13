@@ -3213,25 +3213,43 @@ La figura aporta la base de registro y detalle. Su actualización incorpora la c
 
 ### 6.5. Applications Prototyping
 
-El prototipado permite revisar la navegación y organización visual de AquaSave. Los recorridos que se documentan son el acceso a la cuenta, el alta de una unidad y la consulta de una planta, incluyendo recomendación y asistente dentro del tercer objetivo. Se mantiene una experiencia orientada a usuarios principiantes y expertos.
+Los prototipos interactivos de AquaSave, elaborados en Figma, permiten representar la experiencia de las aplicaciones web y móvil mediante la simulación de sus pantallas, interacciones y recorridos. Su propósito es revisar cómo los usuarios principiantes y expertos acceden a su cuenta, organizan sus plantas y consultan información para su cuidado, manteniendo la relación con los User Flows definidos en la sección 6.4.4.
 
-**Recursos editables y navegables disponibles**
+**Criterios de interacción y navegación**
+
+La propuesta conserva las etiquetas y la jerarquía de información definidas en la sección 6.2. Las opciones Inicio, Mis plantas, Asistente, Análisis, Historial y Perfil permiten reconocer el destino de cada acción. Los botones conducen a la tarea principal de cada pantalla, los formularios agrupan los datos necesarios para completar el registro y los accesos al detalle mantienen el contexto de la planta seleccionada.
+
+En la experiencia web, la navegación lateral facilita cambiar de sección y consultar la información en un espacio amplio. En la experiencia móvil, la navegación inferior y la distribución vertical del contenido permiten recorrer las mismas funciones en una pantalla reducida mediante toques y desplazamiento. Se conservan los nombres de las secciones y la identidad visual para facilitar el reconocimiento entre ambas versiones.
+
+**Principales flujos de interacción**
+
+Los recorridos se organizan según los objetivos de usuario documentados para las aplicaciones:
+
+| User Goal | Recorrido de navegación | Propósito |
+| :--- | :--- | :--- |
+| Registrarse o iniciar sesión en AquaSave | Acceso al formulario de registro o inicio de sesión, ingreso de datos y llegada a Inicio. | Facilitar el ingreso a la cuenta y reconocer el punto de partida del cuidado de las plantas. |
+| Agregar un nuevo dispositivo IoT | Acceso desde Mis plantas al registro de una unidad, ingreso de sus datos y consulta de la unidad agregada. | Representar la organización del kit dentro de la cuenta y su relación con la información de cuidado. |
+| Registrar y consultar una planta | Registro o selección de una planta, consulta de su detalle y acceso a la orientación y al asistente. | Reunir la identificación de la planta y las consultas sobre su cuidado en un recorrido continuo. |
+
+**Video de navegación de los prototipos web y móvil**
+
+La grabación proporcionada reúne la presentación de los prototipos web y móvil de AquaSave. Este recurso complementa los diagramas de navegación y permite revisar las transiciones entre las pantallas de ambas experiencias.
+
+**Enlace al video:** [Ver la navegación de los prototipos web y móvil de AquaSave](https://bit.ly/48cM7Hr).
+
+<p align="center">
+  <a href="https://bit.ly/48cM7Hr">
+    <img src="image/aquasave-prototype-web-mobile-video.png" alt="Captura del video de prototipos de AquaSave: pantalla de inicio de sesión de la versión web en Figma" width="1000">
+  </a>
+</p>
+
+
+**Recursos de diseño y navegación**
 
 | Recurso | Enlace | Uso |
 | :--- | :--- | :--- |
-| Archivo de diseño | [AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1) | Edición de las pantallas y adaptación de las vistas web y Android. |
-| Prototipo web de referencia | [AquaSave Web Application Prototype](https://www.figma.com/proto/a6zhtNKsD231UViUfGgsS2/AquaSave-PROTOTYPE?node-id=23-259&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A259) | Recorrido disponible del diseño base; comprobar permisos y actualizar sus pantallas antes de usarlo como versión final. |
-| Flujos de navegación | [User Flows en Miro](https://miro.com/app/board/uXjVJHRMhjA=/?share_link_id=284169649022) | Organización y edición de los tres recorridos de usuario. |
-
-**Vista del prototipo de referencia**
-
-<p align="center">
-  <img src="image/aquasave-application-prototype.png" alt="Vista del prototipo web de referencia" width="1000">
-</p>
-
-El archivo de diseño y el prototipo enlazado tienen identificadores diferentes en Figma. El enlace de prototipo se conserva como recurso de referencia y su captura muestra el acceso del diseño base. Estos recursos no acreditan todavía un recorrido actualizado del asistente ni un prototipo móvil completo.
-
-La grabación del prototipo final debe identificar los tramos web y Android y permitir relacionar cada recorrido con su resultado. La navegación de una maqueta se distingue de la ejecución de la aplicación conectada a la API.
+| Archivo de diseño | [AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1) | Consulta y edición de las pantallas de las aplicaciones web y móvil. |
+| Flujos de navegación | [User Flows de AquaSave en Miro](https://miro.com/app/board/uXjVJHRMhjA=/?share_link_id=284169649022) | Consulta de los objetivos de usuario, las rutas principales y las rutas alternativas que orientan el prototipado. |
 
 ## Capítulo VII: Product Implementation, Validation & Deployment
 
