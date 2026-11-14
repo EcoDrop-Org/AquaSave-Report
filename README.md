@@ -4062,6 +4062,48 @@ En el recorrido propuesto, considera sencillos el registro y el inicio de sesió
 Gabriela valora poder consultar al asistente sobre sus dudas de riego y volver a preguntar en el mismo chat. Dice que usaría AquaSave especialmente durante exámenes y viajes familiares para organizar sus plantas y consultar recomendaciones. Propone una guía de instalación con imágenes y pasos que pueda seguir sin herramientas, además de una confirmación clara de la cantidad de agua suministrada cuando esa información esté disponible.
 
 
+**Entrevista #3:**
+
+**Nombre:** Gabriel Borja  
+**Edad:** 23 años  
+**Ocupación:** Arquitecto  
+**Distrito:** Santiago de Surco, Lima  
+**Inicio:** Pendiente de registrar  
+**Fin:** Pendiente de registrar
+
+<p align="center">
+  <img src="image/EntrevistaB.png" alt="EntrevistaB" width="1000">
+</p>
+
+**Resumen:** Gabriel es un arquitecto de 23 años que lleva aproximadamente cuatro años cuidando plantas de interior, entre ellas suculentas, una monstera, potus y sansevierias. Habitualmente decide cuándo regarlas observando la humedad de la tierra, el estado de las hojas y las condiciones climáticas. Su experiencia le permite reconocer las necesidades de distintas especies, aunque considera útil contar con información que complemente sus observaciones.
+
+Durante el recorrido, encuentra sencillo el acceso a AquaSave y valora la posibilidad de seleccionar el perfil experto para consultar información más detallada. Considera claro el registro de plantas mediante especie, nombre y ubicación, aunque propone incorporar fotografías propias y notas de cuidado. En Inicio, identifica la humedad y la temperatura como datos importantes, y señala que las mediciones deben mostrar su fecha para evitar interpretaciones incorrectas cuando el dispositivo está desconectado.
+
+Gabriel considera útiles las recomendaciones de riego y el asistente, especialmente cuando las respuestas explican los datos utilizados. También destaca las secciones Historial y Análisis para comparar registros y consumo de agua entre diferentes periodos. Utilizaría AquaSave para supervisar sus plantas mientras trabaja o se encuentra fuera de casa. Como mejora principal, propone incorporar alertas personalizadas que informen oportunamente cuándo una planta necesita atención.
+
+
+**<u>Segmento 2: Usuarios expertos en el cuidado de plantas</u>**
+
+**Entrevista #1:**
+
+**Nombre:** Raúl Bellido  
+**Edad:** 20 años  
+**Ocupación:** Estudiante  
+**Distrito:** Lince, Lima  
+**Inicio:** Pendiente de registrar  
+**Fin:** Pendiente de registrar
+
+<p align="center">
+  <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
+</p>
+
+**Resumen:** Raúl es un estudiante de 20 años que comenzó a cuidar un cactus y una suculenta hace algunos meses. Debido a su poca experiencia, suele decidir cuándo regarlos observando si la tierra está seca, aunque reconoce que todavía tiene dudas sobre la frecuencia y cantidad de agua adecuadas. Por ello, busca una herramienta que le proporcione orientación sencilla para evitar errores en el cuidado de sus plantas.
+
+Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
+
+Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
+
+
 #### 7.3.3. Evaluaciones según heurísticas
 
 La evaluación organiza los problemas observados durante las tareas de validación según usabilidad, diseño inclusivo y arquitectura de información. Cada hallazgo incluye la situación que lo produjo, la evidencia, el principio afectado y su severidad. La valoración se aplica a problemas observados, no a ejemplos supuestos.
