@@ -3574,6 +3574,8 @@ Test Files  4 passed (4)
 
 La evidencia de ejecución presenta las principales vistas de AquaSave y su organización durante el uso de la aplicación web. El recorrido comprende el acceso a la cuenta, el registro y la consulta de plantas, el asistente, los indicadores de riego y el perfil. Las capturas de la cuenta de prueba muestran una planta registrada que todavía no recibe telemetría, por lo que también permiten observar los mensajes de conexión y los estados sin historial.
 
+**Link del vídeo:** [Video de ejecución del producto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311361_upc_edu_pe/IQDxCoGb_BgBSLgsL9kRwdXIAV1q5WAOqdF9whp9LY6mUUM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dj7DCd)
+
 **Landing Page**
 
 La landing presenta la propuesta de AquaSave, sus beneficios y la información de EcoDrop. Incluye los accesos para continuar hacia la aplicación y consultar información de ayuda.
@@ -4015,7 +4017,7 @@ El participante accede con un perfil experto, registra o selecciona una planta, 
 
 Las fichas reúnen los datos de las participantes, las capturas de las entrevistas y resúmenes de las entrevistas de validación.
 
-**Video de las entrevistas:** Pendiente de incorporar.
+**Video de las entrevistas:** [Video entrevistas de Validación.](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxNb2RlIjoidmlldyJ9fQ%3D%3D&e=j6W6Hf)
 
 **<u>Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas</u>**
 
@@ -4276,7 +4278,8 @@ El material audiovisual disponible se incluye como presentación general del pro
 
 [![Vista del video de presentación de AquaSave](https://i.postimg.cc/qRMvNNPX/image.png)](https://goo.su/V19mNf)
 
-**Video de presentación de AquaSave:** [Ver video About-the-Product](https://goo.su/V19mNf).
+**Enlace del vídeo:**  [Video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxNb2RlIjoidmlldyJ9fQ%3D%3D)
+
 
 ---
 
@@ -4356,3 +4359,9 @@ La relación con el Student Outcome 3 se centra en comunicar ideas y resultados 
 - Exposicion entrega AV1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA)
 
 - Exposición entrega TP1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAPEMNyQ-bsRb0Ge7hWii_yAR_CZFx8NdaXeOppdhDjLg0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=H0beWg](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAPEMNyQ-bsRb0Ge7hWii_yAR_CZFx8NdaXeOppdhDjLg0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=H0beWg)
+
+- Video de ejecución del producto TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311361_upc_edu_pe/IQDxCoGb_BgBSLgsL9kRwdXIAV1q5WAOqdF9whp9LY6mUUM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dj7DCd>
+  
+- Video About-the-Product TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D>
+  
+- Video de entrevistas de validación TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf>
