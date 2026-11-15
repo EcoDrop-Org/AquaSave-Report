@@ -350,7 +350,7 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 **Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-El siguiente cuadro presenta las acciones de comunicación oral y escrita correspondientes a AV1 y TP1, junto con las conclusiones del equipo sobre su contribución al logro del Student Outcome 3.
+El siguiente cuadro presenta las acciones de comunicación oral y escrita correspondientes a AV1, TP1 y TB2, junto con las conclusiones del equipo sobre su contribución al logro del Student Outcome 3.
 
 | Criterio específico | Acciones y responsabilidades de AV1, TP1 y TB2 | Conclusiones |
 | :--- | :--- | :--- |
