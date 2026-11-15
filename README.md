@@ -3985,15 +3985,12 @@ La primera captura muestra el resumen de actividad de GitHub Pulse: se registrar
   <img src="image/colaboracion_tb2_pulse.png" alt="Resumen de actividad de AquaSave-Report en GitHub Pulse" width="1000">
 </p>
 
-*Figura. Resumen de actividad del repositorio AquaSave-Report en GitHub Pulse.*
-
 La segunda captura muestra las cinco cuentas del equipo en la vista Contributors. Se incluye como referencia histórica de la participación de cada integrante en el repositorio.
 
 <p align="center">
   <img src="image/colaboracion_tb2_contributors.png" alt="Actividad de las cinco cuentas del equipo EcoDrop en GitHub Contributors" width="1000">
 </p>
 
-*Figura. Actividad histórica de los colaboradores del informe del 24 de agosto al 8 de septiembre.*
 
 Los cambios del informe durante el Sprint 1 quedaron registrados en la rama develop del repositorio AquaSave-Report.
 
