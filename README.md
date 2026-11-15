@@ -4177,6 +4177,8 @@ Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percib
 
 La evaluación se basa en las entrevistas registradas en la sección 7.3.2. Los recorridos se realizaron sin un dispositivo IoT conectado. En las sesiones guiadas mediante pantalla compartida se evaluó cómo los participantes interpretaban lo mostrado, sin medir si podían completar las tareas por su cuenta.
 
+Las capturas ilustran las pantallas y los mensajes relacionados con los comentarios de los participantes. La severidad se asigna según el efecto de las dificultades descritas sobre la comprensión de cada tarea.
+
 ##### Escala de Severidad Utilizada
 
 1. **Problema superficial:** Se supera con facilidad y tiene un efecto reducido sobre la tarea. Prioridad baja.
@@ -4197,20 +4199,79 @@ La evaluación se basa en las entrevistas registradas en la sección 7.3.2. Los 
 ###### Problema #1: El 0 % de humedad se puede confundir con una medición real
 
 - **Severidad:** 2.
-- **Descripción:** Al revisar Inicio para «Albahaca de prueba», Santiago Cárdenas identificó el aviso «Sin conexión», pero dudó si el 0 % de humedad era una lectura real o si todavía no había datos. Aunque pudo continuar el recorrido, necesitó interpretar juntos el valor y el aviso para entender el estado de la planta.
-- **Recomendación de Ingeniería:** Mostrar «Sin lecturas» cuando todavía no exista una medición y reservar los porcentajes para valores registrados. Si el dispositivo está desconectado pero hay una lectura previa, mostrarla como «Última lectura» junto con su fecha y hora. Así el usuario puede distinguir el estado de conexión de la disponibilidad y antigüedad de la información.
+- **Heurística / Principio Afectado:** Usabilidad: visibilidad del estado del sistema.
+- **Pantalla evaluada:** Inicio.
+- **Participante que identificó la dificultad:** Santiago Cárdenas.
+
+**Descripción:**
+
+Al revisar Inicio para «Albahaca de prueba», Santiago Cárdenas identificó el aviso «Sin conexión», pero dudó si el 0 % de humedad era una lectura real o si todavía no había datos. La presentación simultánea de un porcentaje y un aviso de ausencia de lecturas obliga al usuario a interpretar ambos elementos para conocer qué información está disponible.
+
+La dificultad no impidió continuar el recorrido, pero generó incertidumbre sobre el significado del valor mostrado y su utilidad para decidir el cuidado de la planta.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/heuristicas/H1_Inicio_sin_lecturas.png" alt="Inicio de AquaSave con humedad de 0 %, estado Sin conexión y aviso de ausencia de lecturas" width="1000">
+</p>
+
+*Figura 1. Presentación del valor de humedad junto al estado de conexión y al aviso de ausencia de lecturas.*
+
+**Recomendación de Ingeniería:**
+
+Mostrar «Sin lecturas» cuando todavía no exista una medición y reservar los porcentajes para valores registrados. Si el dispositivo está desconectado pero hay una lectura previa, mostrarla como «Última lectura» junto con su fecha y hora. De esta manera, el usuario puede distinguir el estado de conexión de la disponibilidad y antigüedad de la información.
 
 ###### Problema #2: Dificultad para identificar la especie durante el registro
 
 - **Severidad:** 2.
-- **Descripción:** Raúl Bellido consideró fácil el proceso general de agregar una planta, pero señaló que le costó identificar la especie exacta. La dificultad aparece en ese paso: una persona que reconoce su planta por su aspecto puede no saber con qué nombre buscarla en el catálogo.
-- **Recomendación de Ingeniería:** Facilitar la búsqueda por nombres comunes y acompañar las opciones del catálogo con fotografías y descripciones breves. Mantener diferenciados el nombre que el usuario asigna a su planta y la especie seleccionada, y facilitar la corrección de la especie si se eligió por error.
+- **Heurística / Principio Afectado:** Usabilidad: reconocimiento antes que recuerdo. Diseño inclusivo: apoyo a distintos niveles de conocimiento.
+- **Pantalla evaluada:** Agregar planta, selección de especie.
+- **Participante que identificó la dificultad:** Raúl Bellido.
+
+**Descripción:**
+
+Raúl Bellido consideró fácil el proceso general de agregar una planta, pero señaló que le costó identificar la especie exacta. Una persona puede reconocer su planta por su apariencia sin conocer el nombre con el que figura en el catálogo.
+
+La captura muestra el paso en el que se presentó esta dificultad. El hallazgo se sustenta en el comentario del participante y se refiere al apoyo necesario para reconocer la especie, aunque el formulario y las opciones de selección sean comprensibles.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/heuristicas/H2_Seleccion_de_especie.png" alt="Catálogo de especies disponible durante el registro de una planta en AquaSave" width="1000">
+</p>
+
+*Figura 2. Selección de especie durante el registro de una planta, paso en el que Raúl manifestó dudas.*
+
+**Recomendación de Ingeniería:**
+
+Reforzar las ayudas del catálogo mediante nombres comunes y alternativos, fotografías claras y descripciones breves que permitan diferenciar especies similares. Mantener diferenciados el nombre personalizado de la planta y su especie, y facilitar la corrección de la selección si el usuario identifica posteriormente un error.
 
 ###### Problema #3: Las indicaciones de cuidado requieren mayor precisión
 
 - **Severidad:** 2.
-- **Descripción:** Ernesto Rodas valoró que el asistente le indicara revisar la tierra, pero comentó que le faltaba saber a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda. Raúl Bellido también consideró útil el asistente y sugirió incluir explicaciones más sencillas y ejemplos prácticos. En ambos casos, la orientación se entendió en términos generales, aunque faltó detalle para aplicarla con confianza.
-- **Recomendación de Ingeniería:** Presentar la orientación con una indicación breve, el motivo y un ejemplo de cómo aplicarla. Cuando no haya lecturas del dispositivo, explicar que la respuesta es una guía general de cuidado y señalar qué puede comprobar el usuario por su cuenta antes de decidir si regar.
+- **Heurística / Principio Afectado:** Usabilidad: correspondencia entre el sistema y el mundo real. Arquitectura de información: claridad de las instrucciones.
+- **Pantalla evaluada:** Asistente.
+- **Participantes que identificaron la dificultad:** Ernesto Rodas y Raúl Bellido.
+
+**Descripción:**
+
+Ernesto Rodas valoró que el asistente le indicara revisar la tierra, pero comentó que le faltaba saber a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda. Raúl Bellido también consideró útil el asistente y sugirió incluir explicaciones más sencillas y ejemplos prácticos.
+
+En ambos casos, la orientación se entendió en términos generales, aunque los participantes solicitaron mayor detalle para aplicarla. La dificultad se relaciona con la precisión de las instrucciones y no con la posibilidad de acceder al asistente o enviar una consulta.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/heuristicas/H3_Respuesta_del_asistente.png" alt="Pregunta y respuesta del asistente de AquaSave sobre la revisión de la tierra antes de regar" width="1000">
+</p>
+
+*Figura 3. Conversación del asistente relacionada con la necesidad de precisar cómo comprobar la humedad de la tierra.*
+
+**Recomendación de Ingeniería:**
+
+Presentar la orientación con una indicación breve, el motivo y un ejemplo de cómo aplicarla. Cuando no haya lecturas del dispositivo, explicar que la respuesta ofrece una guía general de cuidado y señalar qué puede comprobar el usuario por su cuenta antes de decidir si regar.
+
+Facilitar preguntas de seguimiento para aclarar una instrucción y adaptar el lenguaje al nivel de experiencia del usuario, conservando la precisión de la información.
 
 ### 7.4. Video About-the-Product
 
