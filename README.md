@@ -350,7 +350,7 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 **Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-El siguiente cuadro presenta las acciones de comunicación oral y escrita correspondientes a AV1 y TP1, junto con las conclusiones del equipo sobre su contribución al logro del Student Outcome 3.
+El siguiente cuadro presenta las acciones de comunicación oral y escrita correspondientes a AV1, TP1 y TB2, junto con las conclusiones del equipo sobre su contribución al logro del Student Outcome 3.
 
 | Criterio específico | Acciones y responsabilidades de AV1, TP1 y TB2 | Conclusiones |
 | :--- | :--- | :--- |
@@ -4370,6 +4370,10 @@ La presentación se organiza en torno a la coordinación del grupo, las decision
 5. **Cierre:** reflexión sobre la comunicación dentro del equipo y la explicación del proyecto a usuarios y audiencias técnicas.
 
 La relación con el Student Outcome 3 se centra en comunicar ideas y resultados de ingeniería de manera efectiva. La comunicación oral permite explicar las necesidades de los usuarios y sustentar decisiones de diseño; la comunicación escrita se refleja en las historias, los diagramas, la documentación de los servicios y el informe del proyecto.
+
+<p align="center">
+  <img src="image/about-the-team-tb2.png" alt="Portada del video About-the-Team de EcoDrop — AquaSave" width="1000">
+</p>
 
 **Enlace del video About-the-Team**
 
