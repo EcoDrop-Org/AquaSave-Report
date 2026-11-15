@@ -3956,7 +3956,9 @@ Estos ejemplos muestran aportes verificables y no constituyen una distribución 
 
 ### 7.3. Validation Interviews
 
-La validación evalúa cómo los usuarios principiantes y expertos comprenden y utilizan la experiencia de AquaSave. Se centra en tareas observables de la landing y las aplicaciones: conocer la propuesta, acceder a una cuenta, registrar una planta, interpretar su información y consultar orientación. La evaluación permite distinguir la disponibilidad técnica de una función de su comprensión por parte del usuario.
+La validación de AquaSave reúne seis entrevistas con usuarios principiantes y expertos en el cuidado de plantas domésticas. Su propósito es conocer cómo interpretan la interfaz, qué utilidad encuentran en la orientación disponible y qué dificultades identifican durante el recorrido por la aplicación web.
+
+Se revisaron el acceso a la cuenta, el registro o selección de una planta, los mensajes de Inicio y la consulta al asistente. En el segmento experto también se exploraron Historial y Análisis. Los resultados se presentan como apreciaciones cualitativas sobre la experiencia mostrada y sirven para identificar mejoras de claridad y organización del contenido.
 
 #### 7.3.1. Diseño de Entrevistas
 
@@ -4016,7 +4018,7 @@ El participante accede con un perfil experto, registra o selecciona una planta, 
 
 #### 7.3.2. Registro de Entrevistas
 
-Las fichas reúnen los datos de las participantes, las capturas de las entrevistas y resúmenes basados en los guiones de validación preparados para ensayo.
+Las fichas reúnen los datos de las participantes, las capturas de las entrevistas y resúmenes de las entrevistas de validación.
 
 **Video de las entrevistas:** Pendiente de incorporar.
 
@@ -4102,6 +4104,60 @@ Gabriel considera útiles las recomendaciones de riego y el asistente, especialm
 Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
 
 Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
+
+**Entrevista #5: Ernesto Rodas**
+
+**Nombre:** Ernesto Rodas  
+**Edad:** 22 años  
+**Ocupación:** Diseñador gráfico  
+**Distrito:** San Miguel, Lima  
+**Entrevistador:** Luis Gustavo Román Pajuelo  
+**Segmento:** Experto
+
+<p align="center">
+  <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+
+Ernesto comentó que cuida romero y hierbabuena en el balcón. Para decidir cuándo regar, comprueba el peso de la maceta y revisa si la tierra está seca. Consideró claro el proceso de registro y señaló que, en el perfil experto, le gustaría ver cómo cambia la humedad durante la semana, ya que una sola lectura le dice poco sobre la evolución de la planta.
+
+En la ficha de «Menta de prueba» distinguió la especie, el nombre y la ubicación. Sugirió añadir fotos propias o notas para diferenciar plantas similares. En Inicio comprendió que, con el equipo desconectado, tendría que revisar la tierra directamente para conocer su estado.
+
+El aviso le ayudó a entender por qué no había lecturas, aunque le habría resultado útil recibir una indicación sobre qué revisar mientras tanto. Valoró el consejo del asistente de comprobar la tierra y comentó que le preguntaría a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda.
+
+En Historial y Análisis, le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y poder registrar manualmente cuándo regó una planta, incluso sin tener el equipo conectado.
+
+**Entrevista #6: Santiago Cárdenas**
+
+**Nombre:** Santiago Cárdenas  
+**Edad:** 20 años  
+**Ocupación:** Profesor  
+**Distrito:** Jesús María, Lima  
+**Entrevistador:** Luis Gustavo Román Pajuelo  
+**Segmento:** Experto
+
+<p align="center">
+  <img src="image/entrevistas/Santiago_Cardenas_EV.png" alt="Entrevista de validación de Santiago Cárdenas" width="1000">
+</p>
+
+**Resumen de la entrevista:**
+
+Santiago comentó que cuida una albahaca, una sábila y un potus. Para decidir cuándo regar, revisa la tierra y tiene en cuenta las necesidades de cada especie. Durante el recorrido identificó las opciones de inicio de sesión y registro. Del perfil experto, esperaba que le indicara cuándo se tomó la última lectura de humedad y cuánto tiempo había pasado desde el último riego.
+
+En la ficha de «Albahaca de prueba» reconoció el nombre y la ubicación. Comentó que saber cuánto sol recibe la planta le ayudaría a entender por qué la tierra se seca más rápido. En Inicio identificó el rango ideal de humedad y el estado «Sin conexión», pero dudó si el 0 % mostrado era una medición o si todavía no había datos.
+
+Entendió que el aviso indicaba que el equipo aún no enviaba lecturas. Señaló que una medición reciente le ayudaría a decidir si debe regar y que, mientras tanto, revisaría directamente la tierra. Del asistente, le resultó útil el consejo de comprobar la humedad un poco por debajo de la superficie.
+
+En Historial y Análisis, entendió que la planta aún no tenía riegos registrados. Cuando existan registros, le gustaría consultar la fecha y la duración de cada riego, además de la cantidad de agua utilizada si se dispone de ese dato. Su principal sugerencia fue mostrar «Sin lecturas» en lugar de 0 % cuando no exista una medición.
+
+**Síntesis de las entrevistas**
+
+Los participantes valoraron tener sus plantas organizadas y poder consultar orientación en la aplicación. Entre los principiantes destacaron la necesidad de reconocer las especies y recibir instrucciones sencillas. Entre los expertos surgió el interés por saber cuándo se tomó la última lectura, entender en qué se basa una recomendación y comparar registros a lo largo del tiempo.
+
+Una mejora prioritaria es distinguir con claridad una medición de la ausencia de datos. También se identificaron oportunidades para hacer más concretas las respuestas del asistente y facilitar el primer uso de la aplicación.
+
+Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percibida de la interfaz. Como se realizaron sin un dispositivo conectado, no permiten comprobar la ejecución física del riego ni medir el ahorro de agua.
 
 
 #### 7.3.3. Evaluaciones según heurísticas
