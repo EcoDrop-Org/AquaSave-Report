@@ -4209,7 +4209,7 @@ La dificultad no impidió continuar el recorrido, pero generó incertidumbre sob
 **Captura de la pantalla:**
 
 <p align="center">
-  <img src="image/heuristicas/H1_Inicio_sin_lecturas.png" alt="Inicio de AquaSave con humedad de 0 %, estado Sin conexión y aviso de ausencia de lecturas" width="1000">
+  <img src="image/H1_Inicio_sin_lecturas.png" alt="Inicio de AquaSave con humedad de 0 %, estado Sin conexión y aviso de ausencia de lecturas" width="1000">
 </p>
 
 *Figura 1. Presentación del valor de humedad junto al estado de conexión y al aviso de ausencia de lecturas.*
@@ -4234,7 +4234,7 @@ La captura muestra el paso en el que se presentó esta dificultad. El hallazgo s
 **Captura de la pantalla:**
 
 <p align="center">
-  <img src="image/heuristicas/H2_Seleccion_de_especie.png" alt="Catálogo de especies disponible durante el registro de una planta en AquaSave" width="1000">
+  <img src="image/H2_Seleccion_de_especie.png" alt="Catálogo de especies disponible durante el registro de una planta en AquaSave" width="1000">
 </p>
 
 *Figura 2. Selección de especie durante el registro de una planta, paso en el que Raúl manifestó dudas.*
@@ -4259,7 +4259,7 @@ En ambos casos, la orientación se entendió en términos generales, aunque los 
 **Captura de la pantalla:**
 
 <p align="center">
-  <img src="image/heuristicas/H3_Respuesta_del_asistente.png" alt="Pregunta y respuesta del asistente de AquaSave sobre la revisión de la tierra antes de regar" width="1000">
+  <img src="image/H3_Respuesta_del_asistente.png" alt="Pregunta y respuesta del asistente de AquaSave sobre la revisión de la tierra antes de regar" width="1000">
 </p>
 
 *Figura 3. Conversación del asistente relacionada con la necesidad de precisar cómo comprobar la humedad de la tierra.*
