@@ -4108,7 +4108,7 @@ Gabriel considera útiles las recomendaciones de riego y el asistente, especialm
 **Edad:** 22 años  
 **Ocupación:** Diseñador gráfico  
 **Distrito:** San Miguel, Lima  
-**Inicio:** 51:41 
+**Inicio:** 52:41 
 **Fin:** 1:00:12
 
 <p align="center">
