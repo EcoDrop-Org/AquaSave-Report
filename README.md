@@ -4371,6 +4371,10 @@ La presentación se organiza en torno a la coordinación del grupo, las decision
 
 La relación con el Student Outcome 3 se centra en comunicar ideas y resultados de ingeniería de manera efectiva. La comunicación oral permite explicar las necesidades de los usuarios y sustentar decisiones de diseño; la comunicación escrita se refleja en las historias, los diagramas, la documentación de los servicios y el informe del proyecto.
 
+<p align="center">
+  <img src="image/about-the-team-tb2.png" alt="Portada del video About-the-Team de EcoDrop — AquaSave" width="1000">
+</p>
+
 **Enlace del video About-the-Team**
 
 [Ver video About-the-Team en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA)
