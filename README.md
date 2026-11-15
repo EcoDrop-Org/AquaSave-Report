@@ -3929,30 +3929,25 @@ Los workflows enlazados acreditan los procesos de compilación y publicación re
 
 ##### 7.2.1.8. Team Collaboration Insights during Sprint
 
-La colaboración del equipo se registra en los repositorios de EcoDrop mediante commits, integraciones y actualizaciones del informe. Los historiales permiten relacionar cada cambio con su autor, fecha y contenido, mientras que el tablero organiza las historias de usuario y las tareas del producto.
+El equipo EcoDrop utilizó GitHub para registrar e integrar los cambios del informe de AquaSave. El historial del repositorio permite consultar qué cambios se realizaron, quién los registró y en qué fecha.
 
-**Repositorios e historiales del equipo**
+La primera captura muestra el resumen de actividad de GitHub Pulse: se registraron contribuciones de cinco autores y se integraron dos solicitudes de cambio.
 
-| Producto | Historial de cambios | Trabajo documentado |
-| :--- | :--- | :--- |
-| Informe | [AquaSave-Report — develop](https://github.com/EcoDrop-Org/AquaSave-Report/commits/develop/) | Ajustes de requisitos y arquitectura, incorporación de TB2 y actualización de capturas de la aplicación. |
-| Landing Page | [AquaSave-LandingPage — main](https://github.com/EcoDrop-Org/AquaSave-LandingPage/commits/main/) | Presentación pública, recursos visuales, navegación y accesos al producto. |
-| Aplicaciones | [AquaSave-Frontend — main](https://github.com/EcoDrop-Org/AquaSave-Frontend/commits/main/) | Interfaces web y Android, consulta de servicios, recomendaciones y asistente. |
-| Backend | [AquaSave-Backend — main](https://github.com/EcoDrop-Org/AquaSave-Backend/commits/main/) | Autenticación, dispositivos, riego, persistencia, recomendaciones, chat y pruebas. |
-| EdgeAPI | [AquaSave-EdgeAPI — main](https://github.com/EcoDrop-Org/AquaSave-EdgeAPI/commits/main/) | Integración MQTT-HTTP y configuración del servicio en Fly.io. |
-| Dispositivo | [AquaSave-Device — main](https://github.com/EcoDrop-Org/AquaSave-Device/commits/main/) | Firmware, lectura de sensores y control local del riego. |
+<p align="center">
+  <img src="image/colaboracion_tb2_pulse.png" alt="Resumen de actividad de AquaSave-Report en GitHub Pulse" width="1000">
+</p>
 
-**Ejemplos de aportes trazables**
+*Figura. Resumen de actividad del repositorio AquaSave-Report en GitHub Pulse.*
 
-| Autor registrado en GitHub | Aporte | Evidencia |
-| :--- | :--- | :--- |
-| `matthewsrt29` | Incorporación de los endpoints de conversación contextual sobre las plantas del usuario. | [Commit afd46c07 del backend](https://github.com/EcoDrop-Org/AquaSave-Backend/commit/afd46c07884faad1180947a79f5ef4bccb48737b). |
-| Luis Gustavo Román Pajuelo | Actualización del informe con las capturas y descripciones de las interfaces de AquaSave. | [Commit f91617da del informe](https://github.com/EcoDrop-Org/AquaSave-Report/commit/f91617dab7dd2ed4b76bf31a81cae14d3e8119e3). |
-| Luis Gustavo Román Pajuelo | Ajuste de referencias de imágenes y organización de encabezados del reporte. | [Commit ce0676d2 del informe](https://github.com/EcoDrop-Org/AquaSave-Report/commit/ce0676d22d0df4e9ac1abd18a44c4210e220fa24). |
+La segunda captura muestra las cinco cuentas del equipo en la vista Contributors. Se incluye como referencia histórica de la participación de cada integrante en el repositorio.
 
-Estos ejemplos muestran aportes verificables y no constituyen una distribución exhaustiva de responsabilidades. El contenido de cada cambio permite interpretar su contribución al producto y a la documentación, además del número de commits.
+<p align="center">
+  <img src="image/colaboracion_tb2_contributors.png" alt="Actividad de las cinco cuentas del equipo EcoDrop en GitHub Contributors" width="1000">
+</p>
 
-**Consulta de contribuciones:** [Insights del informe](https://github.com/EcoDrop-Org/AquaSave-Report/graphs/contributors), [Insights del frontend](https://github.com/EcoDrop-Org/AquaSave-Frontend/graphs/contributors) e [Insights del backend](https://github.com/EcoDrop-Org/AquaSave-Backend/graphs/contributors).
+*Figura. Actividad histórica de los colaboradores del informe del 24 de agosto al 8 de septiembre.*
+
+Los cambios del informe durante el Sprint 1 quedaron registrados en la rama develop del repositorio AquaSave-Report.
 
 ### 7.3. Validation Interviews
 
