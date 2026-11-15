@@ -3087,6 +3087,8 @@ Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. 
 
 Las siguientes capturas muestran la interfaz web de AquaSave y sirven como referencia visual de los mock-ups. El recorrido abarca el acceso a la cuenta, la consulta de una planta, el asistente, los indicadores de riego y el perfil. En las pantallas autenticadas, el menú lateral mantiene las opciones en la misma posición y destaca la sección activa. Los iconos acompañan a los textos y las tarjetas agrupan los datos y las acciones relacionadas.
 
+**Mock-ups de la aplicación web**
+
 **Inicio de sesión**
 
 La pantalla de acceso presenta los campos **Nombre de usuario** y **Contraseña**, un control para mostrar u ocultar la clave y el botón **Iniciar sesión**. El enlace **Regístrate** lleva al formulario de creación de cuenta.
@@ -3149,6 +3151,50 @@ La vista separa los datos personales del cambio de contraseña. El usuario puede
 
 <p align="center">
   <img src="image/03_Perfil.png" alt="Perfil de AquaSave con datos personales y formulario de cambio de contraseña" width="1000">
+</p>
+
+**Mock-ups de la aplicación móvil**
+
+La versión móvil de AquaSave organiza el contenido en una sola columna y, en las pantallas autenticadas, utiliza una barra inferior para acceder a las secciones principales. Las tarjetas, los iconos y la paleta de colores mantienen la identidad visual de la versión web.
+
+**Inicio de sesión**
+
+El formulario reúne los campos de usuario y contraseña, un control para mostrar u ocultar la clave y el botón **Iniciar sesión**. El enlace **Regístrate** permite ir a la creación de cuenta.
+
+<p align="center">
+  <img src="image/movil-inicio-sesion.png" alt="Mock-up móvil del inicio de sesión de AquaSave en tema oscuro" width="200">
+</p>
+
+**Asistente AquaSave**
+
+La pantalla permite elegir una planta y hacer una consulta desde el campo inferior. En el ejemplo, el usuario selecciona su albahaca y el asistente explica cómo se compara la humedad mostrada con el rango recomendado.
+
+<p align="center">
+  <img src="image/movil-asistente.png" alt="Mock-up móvil del asistente con una consulta sobre la humedad de una albahaca" width="200">
+</p>
+
+**Historial de riegos**
+
+La vista reúne los ciclos de riego y presenta cada registro con su fecha, hora y planta asociada. El historial está diseñado para consultar la duración de los ciclos y el volumen de agua utilizado.
+
+<p align="center">
+  <img src="image/movil-historial.png" alt="Mock-up móvil del historial de riegos con fechas, horas y plantas asociadas" width="200">
+</p>
+
+**Perfil**
+
+La pantalla separa los datos personales del cambio de contraseña. El nombre se puede editar, mientras que el correo y el tipo de usuario se muestran como datos de solo lectura.
+
+<p align="center">
+  <img src="image/movil-perfil.png" alt="Mock-up móvil del perfil con datos personales y formulario de cambio de contraseña" width="200">
+</p>
+
+**Configuración**
+
+La vista reúne las preferencias de notificaciones y la programación del riego automático. El ejemplo muestra un horario a las **06:30** y un interruptor para activar o pausar esa programación antes de guardar los cambios.
+
+<p align="center">
+  <img src="image/movil-configuracion.png" alt="Mock-up móvil de configuración de notificaciones y programación del riego" width="200">
 </p>
 
 **Archivo editable:** [Diseño de AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1).
