@@ -3087,6 +3087,8 @@ Los wireflows relacionan pantallas con los pasos de tres objetivos del usuario. 
 
 Las siguientes capturas muestran la interfaz web de AquaSave y sirven como referencia visual de los mock-ups. El recorrido abarca el acceso a la cuenta, la consulta de una planta, el asistente, los indicadores de riego y el perfil. En las pantallas autenticadas, el menú lateral mantiene las opciones en la misma posición y destaca la sección activa. Los iconos acompañan a los textos y las tarjetas agrupan los datos y las acciones relacionadas.
 
+**Mock-ups de la aplicación web**
+
 **Inicio de sesión**
 
 La pantalla de acceso presenta los campos **Nombre de usuario** y **Contraseña**, un control para mostrar u ocultar la clave y el botón **Iniciar sesión**. El enlace **Regístrate** lleva al formulario de creación de cuenta.
@@ -3149,6 +3151,50 @@ La vista separa los datos personales del cambio de contraseña. El usuario puede
 
 <p align="center">
   <img src="image/03_Perfil.png" alt="Perfil de AquaSave con datos personales y formulario de cambio de contraseña" width="1000">
+</p>
+
+**Mock-ups de la aplicación móvil**
+
+La versión móvil de AquaSave organiza el contenido en una sola columna y, en las pantallas autenticadas, utiliza una barra inferior para acceder a las secciones principales. Las tarjetas, los iconos y la paleta de colores mantienen la identidad visual de la versión web.
+
+**Inicio de sesión**
+
+El formulario reúne los campos de usuario y contraseña, un control para mostrar u ocultar la clave y el botón **Iniciar sesión**. El enlace **Regístrate** permite ir a la creación de cuenta.
+
+<p align="center">
+  <img src="image/movil-inicio-sesion.png" alt="Mock-up móvil del inicio de sesión de AquaSave en tema oscuro" width="200">
+</p>
+
+**Asistente AquaSave**
+
+La pantalla permite elegir una planta y hacer una consulta desde el campo inferior. En el ejemplo, el usuario selecciona su albahaca y el asistente explica cómo se compara la humedad mostrada con el rango recomendado.
+
+<p align="center">
+  <img src="image/movil-asistente.png" alt="Mock-up móvil del asistente con una consulta sobre la humedad de una albahaca" width="200">
+</p>
+
+**Historial de riegos**
+
+La vista reúne los ciclos de riego y presenta cada registro con su fecha, hora y planta asociada. El historial está diseñado para consultar la duración de los ciclos y el volumen de agua utilizado.
+
+<p align="center">
+  <img src="image/movil-historial.png" alt="Mock-up móvil del historial de riegos con fechas, horas y plantas asociadas" width="200">
+</p>
+
+**Perfil**
+
+La pantalla separa los datos personales del cambio de contraseña. El nombre se puede editar, mientras que el correo y el tipo de usuario se muestran como datos de solo lectura.
+
+<p align="center">
+  <img src="image/movil-perfil.png" alt="Mock-up móvil del perfil con datos personales y formulario de cambio de contraseña" width="200">
+</p>
+
+**Configuración**
+
+La vista reúne las preferencias de notificaciones y la programación del riego automático. El ejemplo muestra un horario a las **06:30** y un interruptor para activar o pausar esa programación antes de guardar los cambios.
+
+<p align="center">
+  <img src="image/movil-configuracion.png" alt="Mock-up móvil de configuración de notificaciones y programación del riego" width="200">
 </p>
 
 **Archivo editable:** [Diseño de AquaSave en Figma](https://www.figma.com/design/pZztbeAUfk1x363ScNolMg/AquaSave?node-id=0-1).
@@ -3574,6 +3620,8 @@ Test Files  4 passed (4)
 
 La evidencia de ejecución presenta las principales vistas de AquaSave y su organización durante el uso de la aplicación web. El recorrido comprende el acceso a la cuenta, el registro y la consulta de plantas, el asistente, los indicadores de riego y el perfil. Las capturas de la cuenta de prueba muestran una planta registrada que todavía no recibe telemetría, por lo que también permiten observar los mensajes de conexión y los estados sin historial.
 
+**Link del vídeo:** [Video de ejecución del producto](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311361_upc_edu_pe/IQDxCoGb_BgBSLgsL9kRwdXIAV1q5WAOqdF9whp9LY6mUUM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dj7DCd)
+
 **Landing Page**
 
 La landing presenta la propuesta de AquaSave, sus beneficios y la información de EcoDrop. Incluye los accesos para continuar hacia la aplicación y consultar información de ayuda.
@@ -3929,30 +3977,25 @@ Los workflows enlazados acreditan los procesos de compilación y publicación re
 
 ##### 7.2.1.8. Team Collaboration Insights during Sprint
 
-La colaboración del equipo se registra en los repositorios de EcoDrop mediante commits, integraciones y actualizaciones del informe. Los historiales permiten relacionar cada cambio con su autor, fecha y contenido, mientras que el tablero organiza las historias de usuario y las tareas del producto.
+El equipo EcoDrop utilizó GitHub para registrar e integrar los cambios del informe de AquaSave. El historial del repositorio permite consultar qué cambios se realizaron, quién los registró y en qué fecha.
 
-**Repositorios e historiales del equipo**
+La primera captura muestra el resumen de actividad de GitHub Pulse: se registraron contribuciones de cinco autores y se integraron dos solicitudes de cambio.
 
-| Producto | Historial de cambios | Trabajo documentado |
-| :--- | :--- | :--- |
-| Informe | [AquaSave-Report — develop](https://github.com/EcoDrop-Org/AquaSave-Report/commits/develop/) | Ajustes de requisitos y arquitectura, incorporación de TB2 y actualización de capturas de la aplicación. |
-| Landing Page | [AquaSave-LandingPage — main](https://github.com/EcoDrop-Org/AquaSave-LandingPage/commits/main/) | Presentación pública, recursos visuales, navegación y accesos al producto. |
-| Aplicaciones | [AquaSave-Frontend — main](https://github.com/EcoDrop-Org/AquaSave-Frontend/commits/main/) | Interfaces web y Android, consulta de servicios, recomendaciones y asistente. |
-| Backend | [AquaSave-Backend — main](https://github.com/EcoDrop-Org/AquaSave-Backend/commits/main/) | Autenticación, dispositivos, riego, persistencia, recomendaciones, chat y pruebas. |
-| EdgeAPI | [AquaSave-EdgeAPI — main](https://github.com/EcoDrop-Org/AquaSave-EdgeAPI/commits/main/) | Integración MQTT-HTTP y configuración del servicio en Fly.io. |
-| Dispositivo | [AquaSave-Device — main](https://github.com/EcoDrop-Org/AquaSave-Device/commits/main/) | Firmware, lectura de sensores y control local del riego. |
+<p align="center">
+  <img src="image/colaboracion_tb2_pulse.png" alt="Resumen de actividad de AquaSave-Report en GitHub Pulse" width="1000">
+</p>
 
-**Ejemplos de aportes trazables**
+*Figura. Resumen de actividad del repositorio AquaSave-Report en GitHub Pulse.*
 
-| Autor registrado en GitHub | Aporte | Evidencia |
-| :--- | :--- | :--- |
-| `matthewsrt29` | Incorporación de los endpoints de conversación contextual sobre las plantas del usuario. | [Commit afd46c07 del backend](https://github.com/EcoDrop-Org/AquaSave-Backend/commit/afd46c07884faad1180947a79f5ef4bccb48737b). |
-| Luis Gustavo Román Pajuelo | Actualización del informe con las capturas y descripciones de las interfaces de AquaSave. | [Commit f91617da del informe](https://github.com/EcoDrop-Org/AquaSave-Report/commit/f91617dab7dd2ed4b76bf31a81cae14d3e8119e3). |
-| Luis Gustavo Román Pajuelo | Ajuste de referencias de imágenes y organización de encabezados del reporte. | [Commit ce0676d2 del informe](https://github.com/EcoDrop-Org/AquaSave-Report/commit/ce0676d22d0df4e9ac1abd18a44c4210e220fa24). |
+La segunda captura muestra las cinco cuentas del equipo en la vista Contributors. Se incluye como referencia histórica de la participación de cada integrante en el repositorio.
 
-Estos ejemplos muestran aportes verificables y no constituyen una distribución exhaustiva de responsabilidades. El contenido de cada cambio permite interpretar su contribución al producto y a la documentación, además del número de commits.
+<p align="center">
+  <img src="image/colaboracion_tb2_contributors.png" alt="Actividad de las cinco cuentas del equipo EcoDrop en GitHub Contributors" width="1000">
+</p>
 
-**Consulta de contribuciones:** [Insights del informe](https://github.com/EcoDrop-Org/AquaSave-Report/graphs/contributors), [Insights del frontend](https://github.com/EcoDrop-Org/AquaSave-Frontend/graphs/contributors) e [Insights del backend](https://github.com/EcoDrop-Org/AquaSave-Backend/graphs/contributors).
+*Figura. Actividad histórica de los colaboradores del informe del 24 de agosto al 8 de septiembre.*
+
+Los cambios del informe durante el Sprint 1 quedaron registrados en la rama develop del repositorio AquaSave-Report.
 
 ### 7.3. Validation Interviews
 
@@ -4018,147 +4061,139 @@ El participante accede con un perfil experto, registra o selecciona una planta, 
 
 #### 7.3.2. Registro de Entrevistas
 
-Las fichas reúnen los datos de las participantes, las capturas de las entrevistas y resúmenes de las entrevistas de validación.
+Cada ficha reúne los datos del participante, el tramo que ocupa en el video, una captura y un resumen de sus observaciones.
 
-**Video de las entrevistas:** Pendiente de incorporar.
+**Video de las entrevistas:** [Ver el video de validación en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf)
 
 **<u>Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas</u>**
 
-**Entrevista #1:**
+**Entrevista #1: Lucía Jiménez**
 
 **Nombre:** Lucía Jiménez  
 **Edad:** 21 años  
 **Ocupación:** Estudiante de Diseño Gráfico  
 **Distrito:** Lince, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 00:00  
+**Fin:** 17:12  
+**Duración:** 17 min 12 s
 
 <p align="center">
   <img src="image/entrevistas/Lucia_Jimenez_EV.png" alt="Entrevista de validación de Lucía Jiménez" width="1000">
 </p>
 
-**Resumen:** Lucía es una estudiante de 21 años que cuida un potus en la sala y una albahaca en el balcón desde hace aproximadamente seis meses. Sus clases y entregas universitarias hacen que en ocasiones olvide regar o intente compensarlo agregando más agua. Por ello, busca indicaciones sencillas que la ayuden a aprender y decidir cuándo corresponde el riego.
+**Resumen:** Lucía cuida un potus en la sala y una albahaca en el balcón desde hace aproximadamente seis meses. Sus clases y entregas hacen que a veces olvide regar o intente compensarlo agregando más agua. Por ello, busca indicaciones sencillas para decidir cuándo regar.
 
-En el recorrido propuesto, considera claros el registro, el inicio de sesión y la selección del perfil principiante. También encuentra sencillo agregar una planta mediante su especie, nombre y ubicación, y reconoce las opciones Mis plantas y Perfil para volver a consultar la información. Interpreta el estado «Sin conexión» como la ausencia de datos enviados por el equipo y entiende que la falta de lecturas de humedad y temperatura requiere revisar directamente la planta antes de decidir si necesita agua.
+Durante el recorrido, consideró claros el registro, el inicio de sesión y la selección del perfil principiante. Encontró sencillo agregar una planta e identificó las opciones Mis plantas y Perfil. Interpretó «Sin conexión» como una señal de que el equipo no enviaba datos y señaló que, sin lecturas, revisaría la planta directamente.
 
-Lucía valora la orientación breve de Inicio y la posibilidad de consultar al asistente con preguntas cotidianas sobre el exceso de riego. Señala que utilizaría AquaSave durante las semanas de clases y entregas para organizar sus plantas y resolver dudas. Como mejora, propone una guía inicial con dibujos que explique cómo conectar el dispositivo e interpretar la humedad.
+Valoró la orientación de Inicio y la posibilidad de consultar al asistente sobre el exceso de riego. Usaría AquaSave durante las semanas de clases y entregas. Como mejora, propuso una guía inicial con dibujos para conectar el dispositivo e interpretar la humedad.
 
-
-**Entrevista #2:**
+**Entrevista #2: Gabriela Aliaga**
 
 **Nombre:** Gabriela Aliaga  
 **Edad:** 20 años  
 **Ocupación:** Universitaria  
 **Distrito:** Pueblo Libre, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 17:14  
+**Fin:** 31:30  
+**Duración:** 14 min 16 s
 
 <p align="center">
   <img src="image/entrevistas/Gabriela_Aliaga_EV.png" alt="Entrevista de validación de Gabriela Aliaga" width="1000">
 </p>
 
-**Resumen:** Gabriela es una universitaria de 20 años residente en Pueblo Libre cuyos horarios académicos dificultan mantener una rutina de cuidado. Su experiencia previa con la pérdida de un cactus por exceso de agua motiva su interés en aprender a reconocer cuándo regar y recibir explicaciones sencillas que le den mayor tranquilidad durante sus ausencias.
+**Resumen:** Los horarios académicos de Gabriela dificultan mantener una rutina de cuidado. Haber perdido un cactus por exceso de agua despertó su interés en aprender a reconocer cuándo regar y recibir explicaciones sencillas.
 
-En el recorrido propuesto, considera sencillos el registro y el inicio de sesión, comprende la selección del perfil principiante y encuentra claros los datos necesarios para agregar una planta. Distingue entre una planta registrada y un dispositivo que todavía no envía lecturas: interpreta «Sin conexión» como falta de información, sin asumir que la humedad sea cero o que la planta necesite agua. Asimismo, entiende la orientación de Inicio como un apoyo que debe relacionar con la revisión del sustrato y de la conexión.
+Consideró sencillos el acceso y el registro de una planta. Distinguió entre tener una planta registrada y recibir lecturas del dispositivo: interpretó «Sin conexión» como falta de información y señaló que revisaría el sustrato y la conexión antes de decidir si debe regar.
 
-Gabriela valora poder consultar al asistente sobre sus dudas de riego y volver a preguntar en el mismo chat. Dice que usaría AquaSave especialmente durante exámenes y viajes familiares para organizar sus plantas y consultar recomendaciones. Propone una guía de instalación con imágenes y pasos que pueda seguir sin herramientas, además de una confirmación clara de la cantidad de agua suministrada cuando esa información esté disponible.
+Valoró poder consultar al asistente y hacer preguntas de seguimiento. Usaría AquaSave durante exámenes y viajes familiares. Propuso una guía de instalación con imágenes y una indicación clara de la cantidad de agua suministrada cuando ese dato esté disponible.
 
-
-**Entrevista #3:**
+**Entrevista #3: Raúl Bellido**
 
 **Nombre:** Raúl Bellido  
 **Edad:** 20 años  
 **Ocupación:** Estudiante  
 **Distrito:** Lince, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 31:32  
+**Fin:** 38:47  
+**Duración:** 7 min 15 s
 
 <p align="center">
   <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
 </p>
 
-**Resumen:** Raúl es un estudiante de 20 años que comenzó a cuidar un cactus y una suculenta hace algunos meses. Debido a su poca experiencia, suele decidir cuándo regarlos observando si la tierra está seca, aunque reconoce que todavía tiene dudas sobre la frecuencia y cantidad de agua adecuadas. Por ello, busca una herramienta que le proporcione orientación sencilla para evitar errores en el cuidado de sus plantas.
+**Resumen:** Raúl comenzó a cuidar un cactus y una suculenta hace algunos meses. Suele revisar si la tierra está seca, pero todavía tiene dudas sobre la frecuencia y la cantidad de agua adecuadas.
 
-Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
+Consideró sencillo el registro y entendió el propósito del perfil principiante. Pudo seguir el flujo para agregar una planta, aunque le costó identificar la especie exacta. En Inicio y Mis plantas, reconoció la utilidad de las lecturas e interpretó «Sin conexión» como falta de información actualizada.
 
-Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
+Valoró la posibilidad de consultar al asistente, aunque sugirió explicaciones más sencillas y ejemplos prácticos. Usaría AquaSave para saber cuándo regar y supervisar sus plantas cuando está fuera de casa. También propuso incorporar recordatorios y notificaciones.
 
-**<u>Segmento 2: Usuarios expertos en el cuidado de plantas</u>**
+**<u>Segmento objetivo #2: Usuarios expertos en el cuidado de plantas</u>**
 
-**Entrevista #1:**
+**Entrevista #1: Gabriel Borja**
 
 **Nombre:** Gabriel Borja  
 **Edad:** 23 años  
 **Ocupación:** Arquitecto  
 **Distrito:** Santiago de Surco, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 38:50  
+**Fin:** 46:26  
+**Duración:** 7 min 36 s
 
 <p align="center">
-  <img src="image/EntrevistaB.png" alt="EntrevistaB" width="1000">
+  <img src="image/EntrevistaB.png" alt="Entrevista de validación de Gabriel Borja" width="1000">
 </p>
 
-**Resumen:** Gabriel es un arquitecto de 23 años que lleva aproximadamente cuatro años cuidando plantas de interior, entre ellas suculentas, una monstera, potus y sansevierias. Habitualmente decide cuándo regarlas observando la humedad de la tierra, el estado de las hojas y las condiciones climáticas. Su experiencia le permite reconocer las necesidades de distintas especies, aunque considera útil contar con información que complemente sus observaciones.
+**Resumen:** Gabriel lleva aproximadamente cuatro años cuidando plantas de interior. Para decidir cuándo regar, revisa la humedad de la tierra, el estado de las hojas y las condiciones climáticas.
 
-Durante el recorrido, encuentra sencillo el acceso a AquaSave y valora la posibilidad de seleccionar el perfil experto para consultar información más detallada. Considera claro el registro de plantas mediante especie, nombre y ubicación, aunque propone incorporar fotografías propias y notas de cuidado. En Inicio, identifica la humedad y la temperatura como datos importantes, y señala que las mediciones deben mostrar su fecha para evitar interpretaciones incorrectas cuando el dispositivo está desconectado.
+Consideró claro el acceso y el registro de plantas mediante especie, nombre y ubicación. Del perfil experto, esperaba información más detallada. Propuso añadir fotos propias y notas, y mostrar la fecha de la última medición para interpretar mejor los datos cuando el dispositivo esté desconectado.
 
-Gabriel considera útiles las recomendaciones de riego y el asistente, especialmente cuando las respuestas explican los datos utilizados. También destaca las secciones Historial y Análisis para comparar registros y consumo de agua entre diferentes periodos. Utilizaría AquaSave para supervisar sus plantas mientras trabaja o se encuentra fuera de casa. Como mejora principal, propone incorporar alertas personalizadas que informen oportunamente cuándo una planta necesita atención.
+Valoró las recomendaciones y el asistente, especialmente cuando las respuestas explican en qué datos se basan. También mostró interés en comparar registros y consumo entre periodos. Su principal sugerencia fue incorporar alertas personalizadas.
 
-
-**Entrevista #2: Ernesto Rodas**
-
-**Nombre:** Ernesto Rodas  
-**Edad:** 22 años  
-**Ocupación:** Diseñador gráfico  
-**Distrito:** San Miguel, Lima  
-**Entrevistador:** Luis Gustavo Román Pajuelo  
-**Segmento:** Experto
-
-<p align="center">
-  <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
-</p>
-
-**Resumen de la entrevista:**
-
-Ernesto comentó que cuida romero y hierbabuena en el balcón. Para decidir cuándo regar, comprueba el peso de la maceta y revisa si la tierra está seca. Consideró claro el proceso de registro y señaló que, en el perfil experto, le gustaría ver cómo cambia la humedad durante la semana, ya que una sola lectura le dice poco sobre la evolución de la planta.
-
-En la ficha de «Menta de prueba» distinguió la especie, el nombre y la ubicación. Sugirió añadir fotos propias o notas para diferenciar plantas similares. En Inicio comprendió que, con el equipo desconectado, tendría que revisar la tierra directamente para conocer su estado.
-
-El aviso le ayudó a entender por qué no había lecturas, aunque le habría resultado útil recibir una indicación sobre qué revisar mientras tanto. Valoró el consejo del asistente de comprobar la tierra y comentó que le preguntaría a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda.
-
-En Historial y Análisis, le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y poder registrar manualmente cuándo regó una planta, incluso sin tener el equipo conectado.
-
-**Entrevista #3: Santiago Cárdenas**
+**Entrevista #2: Santiago Cárdenas**
 
 **Nombre:** Santiago Cárdenas  
 **Edad:** 20 años  
 **Ocupación:** Profesor  
 **Distrito:** Jesús María, Lima  
-**Entrevistador:** Luis Gustavo Román Pajuelo  
-**Segmento:** Experto
+**Inicio:** 46:28  
+**Fin:** 52:39  
+**Duración:** 6 min 11 s
 
 <p align="center">
   <img src="image/entrevistas/Santiago_Cardenas_EV.png" alt="Entrevista de validación de Santiago Cárdenas" width="1000">
 </p>
 
-**Resumen de la entrevista:**
+**Resumen:** Santiago cuida una albahaca, una sábila y un potus. Decide cuándo regar según el estado de la tierra y las necesidades de cada especie. Identificó las opciones de acceso y señaló que esperaba ver, en el perfil experto, la fecha de la última lectura y el tiempo transcurrido desde el último riego.
 
-Santiago comentó que cuida una albahaca, una sábila y un potus. Para decidir cuándo regar, revisa la tierra y tiene en cuenta las necesidades de cada especie. Durante el recorrido identificó las opciones de inicio de sesión y registro. Del perfil experto, esperaba que le indicara cuándo se tomó la última lectura de humedad y cuánto tiempo había pasado desde el último riego.
+En la ficha reconoció el nombre, la ubicación y el rango ideal de humedad. Comentó que saber cuánto sol recibe la planta le ayudaría a entender qué tan rápido se seca la tierra. En Inicio dudó si el 0 % correspondía a una medición real o a la ausencia de datos. Valoró el consejo del asistente de revisar la humedad debajo de la superficie.
 
-En la ficha de «Albahaca de prueba» reconoció el nombre y la ubicación. Comentó que saber cuánto sol recibe la planta le ayudaría a entender por qué la tierra se seca más rápido. En Inicio identificó el rango ideal de humedad y el estado «Sin conexión», pero dudó si el 0 % mostrado era una medición o si todavía no había datos.
+Entendió que aún no había riegos registrados y señaló que le gustaría consultar después la fecha, la duración y la cantidad de agua utilizada, si se dispone de ese dato. Su principal sugerencia fue mostrar «Sin lecturas» cuando no exista una medición.
 
-Entendió que el aviso indicaba que el equipo aún no enviaba lecturas. Señaló que una medición reciente le ayudaría a decidir si debe regar y que, mientras tanto, revisaría directamente la tierra. Del asistente, le resultó útil el consejo de comprobar la humedad un poco por debajo de la superficie.
+**Entrevista #3: Ernesto Rodas**
 
-En Historial y Análisis, entendió que la planta aún no tenía riegos registrados. Cuando existan registros, le gustaría consultar la fecha y la duración de cada riego, además de la cantidad de agua utilizada si se dispone de ese dato. Su principal sugerencia fue mostrar «Sin lecturas» en lugar de 0 % cuando no exista una medición.
+**Nombre:** Ernesto Rodas  
+**Edad:** 22 años  
+**Ocupación:** Diseñador gráfico  
+**Distrito:** San Miguel, Lima  
+**Inicio:** 52:41  
+**Fin:** 1:00:12  
+**Duración:** 7 min 31 s
+
+<p align="center">
+  <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
+</p>
+
+**Resumen:** Ernesto cuida romero y hierbabuena. Para decidir cuándo regar, comprueba el peso de la maceta y revisa si la tierra está seca. Consideró claro el registro y señaló que le gustaría ver cómo cambia la humedad durante la semana.
+
+En la ficha distinguió la especie, el nombre y la ubicación. Propuso añadir fotos o notas para diferenciar plantas similares. Comprendió que, sin conexión, tendría que revisar la tierra directamente. Encontró útil el consejo del asistente y sugirió precisar a qué profundidad comprobar la humedad.
+
+Le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y registrar manualmente cuándo regó una planta, incluso sin conectar el equipo.
 
 **Síntesis de las entrevistas**
 
-Los participantes valoraron tener sus plantas organizadas y poder consultar orientación en la aplicación. Entre los principiantes destacaron la necesidad de reconocer las especies y recibir instrucciones sencillas. Entre los expertos surgió el interés por saber cuándo se tomó la última lectura, entender en qué se basa una recomendación y comparar registros a lo largo del tiempo.
+Los participantes valoraron poder organizar sus plantas y consultar orientación en un mismo lugar. Los principiantes pidieron más ayuda para reconocer especies e instrucciones más sencillas. Los expertos mostraron interés en conocer la fecha de las lecturas, entender en qué se basa una recomendación y comparar registros a lo largo del tiempo.
 
-Una mejora prioritaria es distinguir con claridad una medición de la ausencia de datos. También se identificaron oportunidades para hacer más concretas las respuestas del asistente y facilitar el primer uso de la aplicación.
-
-Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percibida de la interfaz. Como se realizaron sin un dispositivo conectado, no permiten comprobar la ejecución física del riego ni medir el ahorro de agua.
-
+Las mejoras prioritarias son distinguir una medición real de la ausencia de datos, hacer más concretas las respuestas del asistente y facilitar el primer uso de la aplicación. Como las sesiones se realizaron sin un dispositivo conectado, los hallazgos describen la experiencia de uso y no permiten comprobar la ejecución física del riego ni medir el ahorro de agua.
 
 #### 7.3.3. Evaluaciones según heurísticas
 
@@ -4176,6 +4211,8 @@ Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percib
 - **Exclusiones del Alcance:** Instalación y vinculación del kit físico, verificación de lecturas de sensores, activación de la bomba, medición del ahorro de agua y evaluación de la aplicación Android.
 
 La evaluación se basa en las entrevistas registradas en la sección 7.3.2. Los recorridos se realizaron sin un dispositivo IoT conectado. En las sesiones guiadas mediante pantalla compartida se evaluó cómo los participantes interpretaban lo mostrado, sin medir si podían completar las tareas por su cuenta.
+
+Las capturas ilustran las pantallas y los mensajes relacionados con los comentarios de los participantes. La severidad se asigna según el efecto de las dificultades descritas sobre la comprensión de cada tarea.
 
 ##### Escala de Severidad Utilizada
 
@@ -4197,20 +4234,79 @@ La evaluación se basa en las entrevistas registradas en la sección 7.3.2. Los 
 ###### Problema #1: El 0 % de humedad se puede confundir con una medición real
 
 - **Severidad:** 2.
-- **Descripción:** Al revisar Inicio para «Albahaca de prueba», Santiago Cárdenas identificó el aviso «Sin conexión», pero dudó si el 0 % de humedad era una lectura real o si todavía no había datos. Aunque pudo continuar el recorrido, necesitó interpretar juntos el valor y el aviso para entender el estado de la planta.
-- **Recomendación de Ingeniería:** Mostrar «Sin lecturas» cuando todavía no exista una medición y reservar los porcentajes para valores registrados. Si el dispositivo está desconectado pero hay una lectura previa, mostrarla como «Última lectura» junto con su fecha y hora. Así el usuario puede distinguir el estado de conexión de la disponibilidad y antigüedad de la información.
+- **Heurística / Principio Afectado:** Usabilidad: visibilidad del estado del sistema.
+- **Pantalla evaluada:** Inicio.
+- **Participante que identificó la dificultad:** Santiago Cárdenas.
+
+**Descripción:**
+
+Al revisar Inicio para «Albahaca de prueba», Santiago Cárdenas identificó el aviso «Sin conexión», pero dudó si el 0 % de humedad era una lectura real o si todavía no había datos. La presentación simultánea de un porcentaje y un aviso de ausencia de lecturas obliga al usuario a interpretar ambos elementos para conocer qué información está disponible.
+
+La dificultad no impidió continuar el recorrido, pero generó incertidumbre sobre el significado del valor mostrado y su utilidad para decidir el cuidado de la planta.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/H1_Inicio_sin_lecturas.png" alt="Inicio de AquaSave con humedad de 0 %, estado Sin conexión y aviso de ausencia de lecturas" width="1000">
+</p>
+
+*Figura 1. Presentación del valor de humedad junto al estado de conexión y al aviso de ausencia de lecturas.*
+
+**Recomendación de Ingeniería:**
+
+Mostrar «Sin lecturas» cuando todavía no exista una medición y reservar los porcentajes para valores registrados. Si el dispositivo está desconectado pero hay una lectura previa, mostrarla como «Última lectura» junto con su fecha y hora. De esta manera, el usuario puede distinguir el estado de conexión de la disponibilidad y antigüedad de la información.
 
 ###### Problema #2: Dificultad para identificar la especie durante el registro
 
 - **Severidad:** 2.
-- **Descripción:** Raúl Bellido consideró fácil el proceso general de agregar una planta, pero señaló que le costó identificar la especie exacta. La dificultad aparece en ese paso: una persona que reconoce su planta por su aspecto puede no saber con qué nombre buscarla en el catálogo.
-- **Recomendación de Ingeniería:** Facilitar la búsqueda por nombres comunes y acompañar las opciones del catálogo con fotografías y descripciones breves. Mantener diferenciados el nombre que el usuario asigna a su planta y la especie seleccionada, y facilitar la corrección de la especie si se eligió por error.
+- **Heurística / Principio Afectado:** Usabilidad: reconocimiento antes que recuerdo. Diseño inclusivo: apoyo a distintos niveles de conocimiento.
+- **Pantalla evaluada:** Agregar planta, selección de especie.
+- **Participante que identificó la dificultad:** Raúl Bellido.
+
+**Descripción:**
+
+Raúl Bellido consideró fácil el proceso general de agregar una planta, pero señaló que le costó identificar la especie exacta. Una persona puede reconocer su planta por su apariencia sin conocer el nombre con el que figura en el catálogo.
+
+La captura muestra el paso en el que se presentó esta dificultad. El hallazgo se sustenta en el comentario del participante y se refiere al apoyo necesario para reconocer la especie, aunque el formulario y las opciones de selección sean comprensibles.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/H2_Seleccion_de_especie.png" alt="Catálogo de especies disponible durante el registro de una planta en AquaSave" width="1000">
+</p>
+
+*Figura 2. Selección de especie durante el registro de una planta, paso en el que Raúl manifestó dudas.*
+
+**Recomendación de Ingeniería:**
+
+Reforzar las ayudas del catálogo mediante nombres comunes y alternativos, fotografías claras y descripciones breves que permitan diferenciar especies similares. Mantener diferenciados el nombre personalizado de la planta y su especie, y facilitar la corrección de la selección si el usuario identifica posteriormente un error.
 
 ###### Problema #3: Las indicaciones de cuidado requieren mayor precisión
 
 - **Severidad:** 2.
-- **Descripción:** Ernesto Rodas valoró que el asistente le indicara revisar la tierra, pero comentó que le faltaba saber a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda. Raúl Bellido también consideró útil el asistente y sugirió incluir explicaciones más sencillas y ejemplos prácticos. En ambos casos, la orientación se entendió en términos generales, aunque faltó detalle para aplicarla con confianza.
-- **Recomendación de Ingeniería:** Presentar la orientación con una indicación breve, el motivo y un ejemplo de cómo aplicarla. Cuando no haya lecturas del dispositivo, explicar que la respuesta es una guía general de cuidado y señalar qué puede comprobar el usuario por su cuenta antes de decidir si regar.
+- **Heurística / Principio Afectado:** Usabilidad: correspondencia entre el sistema y el mundo real. Arquitectura de información: claridad de las instrucciones.
+- **Pantalla evaluada:** Asistente.
+- **Participantes que identificaron la dificultad:** Ernesto Rodas y Raúl Bellido.
+
+**Descripción:**
+
+Ernesto Rodas valoró que el asistente le indicara revisar la tierra, pero comentó que le faltaba saber a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda. Raúl Bellido también consideró útil el asistente y sugirió incluir explicaciones más sencillas y ejemplos prácticos.
+
+En ambos casos, la orientación se entendió en términos generales, aunque los participantes solicitaron mayor detalle para aplicarla. La dificultad se relaciona con la precisión de las instrucciones y no con la posibilidad de acceder al asistente o enviar una consulta.
+
+**Captura de la pantalla:**
+
+<p align="center">
+  <img src="image/H3_Respuesta_del_asistente.png" alt="Pregunta y respuesta del asistente de AquaSave sobre la revisión de la tierra antes de regar" width="1000">
+</p>
+
+*Figura 3. Conversación del asistente relacionada con la necesidad de precisar cómo comprobar la humedad de la tierra.*
+
+**Recomendación de Ingeniería:**
+
+Presentar la orientación con una indicación breve, el motivo y un ejemplo de cómo aplicarla. Cuando no haya lecturas del dispositivo, explicar que la respuesta ofrece una guía general de cuidado y señalar qué puede comprobar el usuario por su cuenta antes de decidir si regar.
+
+Facilitar preguntas de seguimiento para aclarar una instrucción y adaptar el lenguaje al nivel de experiencia del usuario, conservando la precisión de la información.
 
 ### 7.4. Video About-the-Product
 
@@ -4218,9 +4314,14 @@ El video About-the-Product es un recurso de presentación de AquaSave dirigido a
 
 El material audiovisual disponible se incluye como presentación general del producto. La documentación de las pantallas de la aplicación, la recomendación por planta y el asistente se desarrolla en las secciones 7.2.1.5 y 7.2.1.6.
 
-[![Vista del video de presentación de AquaSave](https://i.postimg.cc/qRMvNNPX/image.png)](https://goo.su/V19mNf)
+<p align="center">
+    <img src="image/about-the-product-tb2.png" alt="Captura del video About-the-Product de AquaSave" width="1000">
+</p>
 
-**Video de presentación de AquaSave:** [Ver video About-the-Product](https://goo.su/V19mNf).
+**Duración del video:** 01:41
+
+**Enlace del vídeo:**  [Video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxNb2RlIjoidmlldyJ9fQ%3D%3D)
+
 
 ---
 
@@ -4228,26 +4329,24 @@ El material audiovisual disponible se incluye como presentación general del pro
 
 ### Conclusiones y recomendaciones
 
-1. La investigación con usuarios principiantes y expertos identificó dificultades para decidir cuándo regar, interpretar las condiciones de distintas especies y mantener el seguimiento durante las ausencias. Estos hallazgos sustentan una experiencia que combina información de la planta, orientación comprensible y acceso al control de sus unidades. Los resultados corresponden a la muestra estudiada y requieren contrastarse con el uso de la aplicación.
+1. La investigación inicial identificó que los usuarios principiantes y expertos tenían dificultades para decidir cuándo regar y hacer seguimiento a sus plantas. En las seis entrevistas de validación de la TB2, los participantes valoraron poder organizar sus plantas y consultar orientación. También se identificaron dificultades para reconocer especies, interpretar el 0 % de humedad cuando no hay lecturas y aplicar algunas indicaciones del asistente. Como las sesiones se realizaron sin un dispositivo conectado, estos hallazgos corresponden al uso de la aplicación y no a la operación física del riego.
 
-2. La implementación vincula aplicaciones Flutter para web y Android con una API en Node.js, Express y TypeScript y persistencia PostgreSQL. La EdgeAPI y HiveMQ Cloud conectan los servicios con el ESP32. Esta organización asigna responsabilidades diferenciadas a la presentación, las reglas del dominio, la persistencia y la comunicación física del riego.
+2. AquaSave integra aplicaciones Flutter para web y Android con una API en Node.js, Express y TypeScript y una base de datos PostgreSQL. La EdgeAPI y HiveMQ Cloud permiten intercambiar lecturas y comandos con el ESP32. Esta arquitectura separa la interfaz, la lógica de negocio, el almacenamiento y la comunicación con el dispositivo.
 
-3. El aporte de IoT consiste en incorporar lecturas del entorno de la planta y habilitar el intercambio de información y comandos con el kit. La inteligencia artificial generativa complementa esa información mediante explicaciones y respuestas contextualizadas. Gemini no sustituye el diagnóstico por reglas ni recibe la responsabilidad de accionar directamente la bomba: la orientación y el control utilizan flujos separados.
+3. El IoT permite incorporar lecturas de los sensores y enviar comandos al kit de riego. La inteligencia artificial generativa cumple otra función: Gemini ayuda a redactar explicaciones y respuestas relacionadas con las plantas del usuario. La decisión de riego se mantiene en el motor de reglas, mientras que el control de la bomba sigue un flujo independiente.
 
-4. La experiencia principiante o experta se conserva en el perfil de la cuenta y adapta el contenido de orientación. La recomendación considera la especie, la humedad registrada, el estado de pausa y el pronóstico disponible. El asistente utiliza las plantas de la cuenta y el contexto reciente de conversación. Las respuestas locales permiten conservar orientación cuando Gemini no entrega contenido utilizable.
+4. El perfil principiante o experto adapta el nivel de detalle de la orientación. Las recomendaciones consideran la especie, la humedad registrada y el pronóstico disponible. El asistente aprovecha el contexto de las plantas de la cuenta y, cuando Gemini no devuelve una respuesta utilizable, el sistema puede ofrecer orientación local.
 
-5. La revisión de configuración y código permitió identificar endpoints, pruebas y flujos de publicación verificables. En la comprobación local del backend se aprobaron 19 pruebas y finalizaron la verificación de tipos y la compilación. Estas comprobaciones aportan evidencia sobre los comportamientos evaluados; la validación con usuarios, las pruebas BDD y la demostración física de extremo a extremo requieren sus propios registros.
+5. En la comprobación local del backend se aprobaron 19 pruebas y se completaron la verificación de tipos y la compilación. Estas comprobaciones respaldan los comportamientos cubiertos por las pruebas. Las entrevistas aportan evidencia complementaria sobre la experiencia de uso, y la ejecución física del riego debe comprobarse por separado con el kit conectado.
 
-6. Las metas de comprensión, seguimiento y uso del agua se mantienen como criterios de evaluación. Los indicadores del producto permiten consultar eventos y consumo registrado, pero no demuestran por sí solos una reducción frente a una línea base. La comparación de catorce días de referencia y catorce días de uso necesita conservar condiciones y métodos consistentes antes de comunicar un resultado de ahorro.
+6. Los registros de eventos y consumo permiten hacer seguimiento al uso del agua, pero todavía no demuestran un ahorro frente a una línea base. Para estimarlo, se requiere comparar catorce días de referencia con catorce días de uso bajo condiciones y métodos de medición comparables.
 
 **Recomendaciones:**
 
-- Completar las sesiones de validación con ambos segmentos y registrar tareas realizadas con y sin ayuda, dificultades y observaciones sobre recomendaciones y asistente.
-- Conservar la fecha, versión y condiciones de cada prueba. Distinguir una solicitud de riego registrada por la API de una ejecución comprobada en el kit.
-- Verificar la disponibilidad de la EdgeAPI, el broker y el dispositivo antes de grabar la demostración de control físico. Adjuntar la evidencia de comunicación y actuación correspondiente.
-- Documentar los resultados de las pruebas automatizadas y la relación entre escenarios Gherkin, Steps e historias incluidas en el Sprint 1.
-- Revisar que la documentación OpenAPI incluya los servicios del alcance que se presentan en la exposición, especialmente las consultas del asistente, sin atribuir a Swagger operaciones que todavía no muestra.
-- Evaluar las explicaciones de cuidado con usuarios de ambos segmentos y distinguir lecturas disponibles, información estimada y orientación general. Presentar beneficios medidos únicamente cuando existan registros que los sustenten.
+- Mejorar la selección de especies, mostrar «Sin lecturas» cuando no haya datos del sensor y hacer más concretas las indicaciones del asistente. En la siguiente ronda, probar estos cambios con ambos segmentos y registrar qué tareas completan sin ayuda.
+- Verificar el recorrido de una orden de riego desde la aplicación hasta el kit y registrar si la bomba la ejecutó. Guardar la fecha, la versión y las condiciones de la prueba.
+- Mantener la relación entre los escenarios Gherkin, sus resultados y las historias del sprint. Actualizar la documentación OpenAPI con las operaciones del asistente que aún no aparecen.
+- Medir el consumo con el kit conectado y aplicar el mismo método en el periodo de referencia y en el periodo de uso antes de comunicar un resultado de ahorro.
 
 
 
@@ -4275,9 +4374,9 @@ La presentación se organiza en torno a la coordinación del grupo, las decision
 
 La relación con el Student Outcome 3 se centra en comunicar ideas y resultados de ingeniería de manera efectiva. La comunicación oral permite explicar las necesidades de los usuarios y sustentar decisiones de diseño; la comunicación escrita se refleja en las historias, los diagramas, la documentación de los servicios y el informe del proyecto.
 
-**Enlaces del video About-the-Team**
+**Enlace del video About-the-Team**
 
-- **YouTube:** [Ver video About-the-Team](ENLACE_YOUTUBE).
+[Ver video About-the-Team en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA)
 
 ---
 
@@ -4300,3 +4399,13 @@ La relación con el Student Outcome 3 se centra en comunicar ideas y resultados 
 - Exposicion entrega AV1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAcV8WmA-uGRqMsdI12P0Tos?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=jf09kA)
 
 - Exposición entrega TP1: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAPEMNyQ-bsRb0Ge7hWii_yAR_CZFx8NdaXeOppdhDjLg0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=H0beWg](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAPEMNyQ-bsRb0Ge7hWii_yAR_CZFx8NdaXeOppdhDjLg0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=H0beWg)
+
+- Video de ejecución del producto TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311361_upc_edu_pe/IQDxCoGb_BgBSLgsL9kRwdXIAV1q5WAOqdF9whp9LY6mUUM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dj7DCd>
+  
+- Video About-the-Product TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D>
+  
+- Video de entrevistas de validación TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf>
+
+- Video About-the-Team TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA>
+
+- Exposición entrega TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAV2TLI21M_jC3iwffNOyzx0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FCGniI>
