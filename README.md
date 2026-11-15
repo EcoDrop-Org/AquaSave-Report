@@ -4027,8 +4027,8 @@ Las fichas reúnen los datos de las participantes, las capturas de las entrevist
 **Edad:** 21 años  
 **Ocupación:** Estudiante de Diseño Gráfico  
 **Distrito:** Lince, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 00:00
+**Fin:** 17:12
 
 <p align="center">
   <img src="image/entrevistas/Lucia_Jimenez_EV.png" alt="Entrevista de validación de Lucía Jiménez" width="1000">
@@ -4047,8 +4047,8 @@ Lucía valora la orientación breve de Inicio y la posibilidad de consultar al a
 **Edad:** 20 años  
 **Ocupación:** Universitaria  
 **Distrito:** Pueblo Libre, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 17:14
+**Fin:** 31:30
 
 <p align="center">
   <img src="image/entrevistas/Gabriela_Aliaga_EV.png" alt="Entrevista de validación de Gabriela Aliaga" width="1000">
@@ -4067,8 +4067,8 @@ Gabriela valora poder consultar al asistente sobre sus dudas de riego y volver a
 **Edad:** 20 años  
 **Ocupación:** Estudiante  
 **Distrito:** Lince, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 31:32 
+**Fin:** 38:47
 
 <p align="center">
   <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
@@ -4088,8 +4088,8 @@ Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al
 **Edad:** 23 años  
 **Ocupación:** Arquitecto  
 **Distrito:** Santiago de Surco, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
+**Inicio:** 38:50  
+**Fin:** 46:26
 
 <p align="center">
   <img src="image/EntrevistaB.png" alt="EntrevistaB" width="1000">
@@ -4108,8 +4108,8 @@ Gabriel considera útiles las recomendaciones de riego y el asistente, especialm
 **Edad:** 22 años  
 **Ocupación:** Diseñador gráfico  
 **Distrito:** San Miguel, Lima  
-**Entrevistador:** Luis Gustavo Román Pajuelo  
-**Segmento:** Experto
+**Inicio:** 51:41 
+**Fin:** 1:00:12
 
 <p align="center">
   <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
@@ -4131,8 +4131,8 @@ En Historial y Análisis, le pareció normal que una planta recién registrada t
 **Edad:** 20 años  
 **Ocupación:** Profesor  
 **Distrito:** Jesús María, Lima  
-**Entrevistador:** Luis Gustavo Román Pajuelo  
-**Segmento:** Experto
+**Inicio:** 46:28 
+**Fin:** 52:39
 
 <p align="center">
   <img src="image/entrevistas/Santiago_Cardenas_EV.png" alt="Entrevista de validación de Santiago Cárdenas" width="1000">
