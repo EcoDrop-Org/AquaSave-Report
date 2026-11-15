@@ -4162,53 +4162,55 @@ Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percib
 
 #### 7.3.3. Evaluaciones según heurísticas
 
-La evaluación organiza los problemas observados durante las tareas de validación según usabilidad, diseño inclusivo y arquitectura de información. Cada hallazgo incluye la situación que lo produjo, la evidencia, el principio afectado y su severidad. La valoración se aplica a problemas observados, no a ejemplos supuestos.
+##### Metadatos de la Auditoría UX
 
-**UX Heuristics & Principles Evaluation**  
-**Usability – Inclusive Design – Information Architecture**
+- **Carrera:** Ingeniería de Software.
+- **Curso:** Arquitecturas de Software Emergentes (1ASI0728).
+- **NRC:** 16365.
+- **Docente:** Enrique Alejandro Valdivia Verde.
+- **Auditor / Evaluador:** Equipo EcoDrop.
+- **Producto Evaluado:** AquaSave, aplicación web.
+- **Clientes de Control:** Lucía Jiménez, Gabriela Aliaga, Raúl Bellido, Gabriel Borja, Ernesto Rodas y Santiago Cárdenas.
+- **Segmentos Evaluados:** Usuarios principiantes y expertos en el cuidado de plantas domésticas.
+- **Tareas Auditadas:** Acceso a la cuenta, selección del perfil de experiencia, registro y consulta de plantas, interpretación del estado de conexión y de las lecturas en Inicio, y consulta al asistente. Los recorridos del segmento experto también incluyeron la revisión de Historial y Análisis.
+- **Exclusiones del Alcance:** Instalación y vinculación del kit físico, verificación de lecturas de sensores, activación de la bomba, medición del ahorro de agua y evaluación de la aplicación Android.
 
-| Campo | Información |
-| :--- | :--- |
-| Carrera | Ingeniería de Software |
-| Curso | Arquitecturas de Software Emergentes |
-| Sección / NRC | 16365 |
-| Profesor | Enrique Alejandro Valdivia Verde |
-| Auditor | POR COMPLETAR: grupo o personas que ejecutaron la evaluación. |
-| Cliente(s) | POR COMPLETAR: participantes de las sesiones. |
-| Site o app a evaluar | AquaSave: landing, aplicación web y aplicación Android. |
-| Versión y fecha | POR COMPLETAR. |
+La evaluación se basa en las entrevistas registradas en la sección 7.3.2. Los recorridos se realizaron sin un dispositivo IoT conectado. En las sesiones guiadas mediante pantalla compartida se evaluó cómo los participantes interpretaban lo mostrado, sin medir si podían completar las tareas por su cuenta.
 
-**Tareas a evaluar:** conocer la propuesta y acceder al producto; registrarse o iniciar sesión; registrar y seleccionar una planta; interpretar lecturas y recomendación; consultar al asistente; localizar el control de riego; revisar historial y ajustes disponibles.
+##### Escala de Severidad Utilizada
 
-**Fuera de esta evaluación:** compra de planes, pagos, recuperación de contraseña por correo, acceso con Google y demostración de ahorro frente a línea base. Esta delimitación describe las sesiones de validación y no elimina las historias del Product Backlog.
+1. **Problema superficial:** Se supera con facilidad y tiene un efecto reducido sobre la tarea. Prioridad baja.
+2. **Problema menor:** Genera dudas o esfuerzo adicional, pero permite continuar el recorrido. Prioridad baja o media.
+3. **Problema mayor:** Dificulta de manera importante una tarea o la interpretación de información necesaria para completarla. Prioridad alta.
+4. **Problema muy grave:** Impide completar una tarea crítica o continuar usando la aplicación. Requiere corrección antes del lanzamiento.
 
-**Escala de severidad**
+##### Tabla Resumen de Hallazgos Heurísticos
 
-| Nivel | Descripción |
-| :---: | :--- |
-| 1 | Problema superficial o poco frecuente que puede superarse con facilidad. |
-| 2 | Problema menor que dificulta parcialmente la tarea. |
-| 3 | Problema mayor, frecuente o difícil de superar, que afecta de forma importante el recorrido. |
-| 4 | Problema muy grave que impide continuar con la tarea o el uso del producto. |
+| **#** | **Problema Detectado** | **Severidad** | **Heurística / Principio Afectado** |
+| :---: | :--- | :---: | :--- |
+| 1 | El 0 % de humedad puede confundirse con una medición real cuando no hay lecturas. | 2 | Usabilidad: visibilidad del estado del sistema. |
+| 2 | La selección de especie resulta difícil cuando el usuario no conoce el nombre exacto de su planta. | 2 | Usabilidad: reconocimiento antes que recuerdo. Diseño inclusivo: apoyo a distintos niveles de conocimiento. |
+| 3 | Algunas indicaciones de cuidado necesitan más detalle para que el usuario sepa qué hacer. | 2 | Usabilidad: correspondencia entre el sistema y el mundo real. Arquitectura de información: claridad de las instrucciones. |
 
-**Tabla resumen de hallazgos**
+##### Diagnóstico Técnico Detallado y Plan de Mitigación
 
-| # | Problema observado | Severidad | Heurística o principio afectado | Evidencia |
-| :---: | :--- | :---: | :--- | :--- |
-| POR COMPLETAR | Describir un problema real de la sesión. | 1–4 | Usabilidad, diseño inclusivo o arquitectura de información; indicar el principio concreto. | Captura y tramo del video. |
+###### Problema #1: El 0 % de humedad se puede confundir con una medición real
 
-**Descripción del problema — repetir por hallazgo**
+- **Severidad:** 2.
+- **Descripción:** Al revisar Inicio para «Albahaca de prueba», Santiago Cárdenas identificó el aviso «Sin conexión», pero dudó si el 0 % de humedad era una lectura real o si todavía no había datos. Aunque pudo continuar el recorrido, necesitó interpretar juntos el valor y el aviso para entender el estado de la planta.
+- **Recomendación de Ingeniería:** Mostrar «Sin lecturas» cuando todavía no exista una medición y reservar los porcentajes para valores registrados. Si el dispositivo está desconectado pero hay una lectura previa, mostrarla como «Última lectura» junto con su fecha y hora. Así el usuario puede distinguir el estado de conexión de la disponibilidad y antigüedad de la información.
 
-**Problema #POR COMPLETAR:** nombre breve.  
-**Severidad:** POR COMPLETAR.  
-**Heurística o principio:** POR COMPLETAR.  
-**Tarea y pantalla:** POR COMPLETAR.
+###### Problema #2: Dificultad para identificar la especie durante el registro
 
-**Descripción:** POR COMPLETAR: explicar qué intentó realizar el participante, qué ocurrió y cómo afectó su tarea.
+- **Severidad:** 2.
+- **Descripción:** Raúl Bellido consideró fácil el proceso general de agregar una planta, pero señaló que le costó identificar la especie exacta. La dificultad aparece en ese paso: una persona que reconoce su planta por su aspecto puede no saber con qué nombre buscarla en el catálogo.
+- **Recomendación de Ingeniería:** Facilitar la búsqueda por nombres comunes y acompañar las opciones del catálogo con fotografías y descripciones breves. Mantener diferenciados el nombre que el usuario asigna a su planta y la especie seleccionada, y facilitar la corrección de la especie si se eligió por error.
 
-**Evidencia:** POR COMPLETAR: captura y minuto de la grabación.
+###### Problema #3: Las indicaciones de cuidado requieren mayor precisión
 
-**Recomendación:** POR COMPLETAR: indicar una mejora relacionada con el problema observado. Una recomendación de evaluación no se presenta como una funcionalidad ya implementada ni como un compromiso de desarrollo acordado.
+- **Severidad:** 2.
+- **Descripción:** Ernesto Rodas valoró que el asistente le indicara revisar la tierra, pero comentó que le faltaba saber a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda. Raúl Bellido también consideró útil el asistente y sugirió incluir explicaciones más sencillas y ejemplos prácticos. En ambos casos, la orientación se entendió en términos generales, aunque faltó detalle para aplicarla con confianza.
+- **Recomendación de Ingeniería:** Presentar la orientación con una indicación breve, el motivo y un ejemplo de cómo aplicarla. Cuando no haya lecturas del dispositivo, explicar que la respuesta es una guía general de cuidado y señalar qué puede comprobar el usuario por su cuenta antes de decidir si regar.
 
 ### 7.4. Video About-the-Product
 
