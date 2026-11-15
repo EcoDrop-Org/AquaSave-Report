@@ -4015,147 +4015,139 @@ El participante accede con un perfil experto, registra o selecciona una planta, 
 
 #### 7.3.2. Registro de Entrevistas
 
-Las fichas reúnen los datos de las participantes, las capturas de las entrevistas y resúmenes de las entrevistas de validación.
+Cada ficha reúne los datos del participante, el tramo que ocupa en el video, una captura y un resumen de sus observaciones.
 
-**Video de las entrevistas:** [Video entrevistas de Validación.](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxNb2RlIjoidmlldyJ9fQ%3D%3D&e=j6W6Hf)
+**Video de las entrevistas:** [Ver el video de validación en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf)
 
 **<u>Segmento objetivo #1: Usuarios principiantes en el cuidado de plantas</u>**
 
-**Entrevista #1:**
+**Entrevista #1: Lucía Jiménez**
 
 **Nombre:** Lucía Jiménez  
 **Edad:** 21 años  
 **Ocupación:** Estudiante de Diseño Gráfico  
 **Distrito:** Lince, Lima  
-**Inicio:** 00:00
-**Fin:** 17:12
+**Inicio:** 00:00  
+**Fin:** 17:12  
+**Duración:** 17 min 12 s
 
 <p align="center">
   <img src="image/entrevistas/Lucia_Jimenez_EV.png" alt="Entrevista de validación de Lucía Jiménez" width="1000">
 </p>
 
-**Resumen:** Lucía es una estudiante de 21 años que cuida un potus en la sala y una albahaca en el balcón desde hace aproximadamente seis meses. Sus clases y entregas universitarias hacen que en ocasiones olvide regar o intente compensarlo agregando más agua. Por ello, busca indicaciones sencillas que la ayuden a aprender y decidir cuándo corresponde el riego.
+**Resumen:** Lucía cuida un potus en la sala y una albahaca en el balcón desde hace aproximadamente seis meses. Sus clases y entregas hacen que a veces olvide regar o intente compensarlo agregando más agua. Por ello, busca indicaciones sencillas para decidir cuándo regar.
 
-En el recorrido propuesto, considera claros el registro, el inicio de sesión y la selección del perfil principiante. También encuentra sencillo agregar una planta mediante su especie, nombre y ubicación, y reconoce las opciones Mis plantas y Perfil para volver a consultar la información. Interpreta el estado «Sin conexión» como la ausencia de datos enviados por el equipo y entiende que la falta de lecturas de humedad y temperatura requiere revisar directamente la planta antes de decidir si necesita agua.
+Durante el recorrido, consideró claros el registro, el inicio de sesión y la selección del perfil principiante. Encontró sencillo agregar una planta e identificó las opciones Mis plantas y Perfil. Interpretó «Sin conexión» como una señal de que el equipo no enviaba datos y señaló que, sin lecturas, revisaría la planta directamente.
 
-Lucía valora la orientación breve de Inicio y la posibilidad de consultar al asistente con preguntas cotidianas sobre el exceso de riego. Señala que utilizaría AquaSave durante las semanas de clases y entregas para organizar sus plantas y resolver dudas. Como mejora, propone una guía inicial con dibujos que explique cómo conectar el dispositivo e interpretar la humedad.
+Valoró la orientación de Inicio y la posibilidad de consultar al asistente sobre el exceso de riego. Usaría AquaSave durante las semanas de clases y entregas. Como mejora, propuso una guía inicial con dibujos para conectar el dispositivo e interpretar la humedad.
 
-
-**Entrevista #2:**
+**Entrevista #2: Gabriela Aliaga**
 
 **Nombre:** Gabriela Aliaga  
 **Edad:** 20 años  
 **Ocupación:** Universitaria  
 **Distrito:** Pueblo Libre, Lima  
-**Inicio:** 17:14
-**Fin:** 31:30
+**Inicio:** 17:14  
+**Fin:** 31:30  
+**Duración:** 14 min 16 s
 
 <p align="center">
   <img src="image/entrevistas/Gabriela_Aliaga_EV.png" alt="Entrevista de validación de Gabriela Aliaga" width="1000">
 </p>
 
-**Resumen:** Gabriela es una universitaria de 20 años residente en Pueblo Libre cuyos horarios académicos dificultan mantener una rutina de cuidado. Su experiencia previa con la pérdida de un cactus por exceso de agua motiva su interés en aprender a reconocer cuándo regar y recibir explicaciones sencillas que le den mayor tranquilidad durante sus ausencias.
+**Resumen:** Los horarios académicos de Gabriela dificultan mantener una rutina de cuidado. Haber perdido un cactus por exceso de agua despertó su interés en aprender a reconocer cuándo regar y recibir explicaciones sencillas.
 
-En el recorrido propuesto, considera sencillos el registro y el inicio de sesión, comprende la selección del perfil principiante y encuentra claros los datos necesarios para agregar una planta. Distingue entre una planta registrada y un dispositivo que todavía no envía lecturas: interpreta «Sin conexión» como falta de información, sin asumir que la humedad sea cero o que la planta necesite agua. Asimismo, entiende la orientación de Inicio como un apoyo que debe relacionar con la revisión del sustrato y de la conexión.
+Consideró sencillos el acceso y el registro de una planta. Distinguió entre tener una planta registrada y recibir lecturas del dispositivo: interpretó «Sin conexión» como falta de información y señaló que revisaría el sustrato y la conexión antes de decidir si debe regar.
 
-Gabriela valora poder consultar al asistente sobre sus dudas de riego y volver a preguntar en el mismo chat. Dice que usaría AquaSave especialmente durante exámenes y viajes familiares para organizar sus plantas y consultar recomendaciones. Propone una guía de instalación con imágenes y pasos que pueda seguir sin herramientas, además de una confirmación clara de la cantidad de agua suministrada cuando esa información esté disponible.
+Valoró poder consultar al asistente y hacer preguntas de seguimiento. Usaría AquaSave durante exámenes y viajes familiares. Propuso una guía de instalación con imágenes y una indicación clara de la cantidad de agua suministrada cuando ese dato esté disponible.
 
-
-**Entrevista #3:**
+**Entrevista #3: Raúl Bellido**
 
 **Nombre:** Raúl Bellido  
 **Edad:** 20 años  
 **Ocupación:** Estudiante  
 **Distrito:** Lince, Lima  
-**Inicio:** 31:32 
-**Fin:** 38:47
+**Inicio:** 31:32  
+**Fin:** 38:47  
+**Duración:** 7 min 15 s
 
 <p align="center">
   <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
 </p>
 
-**Resumen:** Raúl es un estudiante de 20 años que comenzó a cuidar un cactus y una suculenta hace algunos meses. Debido a su poca experiencia, suele decidir cuándo regarlos observando si la tierra está seca, aunque reconoce que todavía tiene dudas sobre la frecuencia y cantidad de agua adecuadas. Por ello, busca una herramienta que le proporcione orientación sencilla para evitar errores en el cuidado de sus plantas.
+**Resumen:** Raúl comenzó a cuidar un cactus y una suculenta hace algunos meses. Suele revisar si la tierra está seca, pero todavía tiene dudas sobre la frecuencia y la cantidad de agua adecuadas.
 
-Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
+Consideró sencillo el registro y entendió el propósito del perfil principiante. Pudo seguir el flujo para agregar una planta, aunque le costó identificar la especie exacta. En Inicio y Mis plantas, reconoció la utilidad de las lecturas e interpretó «Sin conexión» como falta de información actualizada.
 
-Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
+Valoró la posibilidad de consultar al asistente, aunque sugirió explicaciones más sencillas y ejemplos prácticos. Usaría AquaSave para saber cuándo regar y supervisar sus plantas cuando está fuera de casa. También propuso incorporar recordatorios y notificaciones.
 
-**<u>Segmento 2: Usuarios expertos en el cuidado de plantas</u>**
+**<u>Segmento objetivo #2: Usuarios expertos en el cuidado de plantas</u>**
 
-**Entrevista #1:**
+**Entrevista #1: Gabriel Borja**
 
 **Nombre:** Gabriel Borja  
 **Edad:** 23 años  
 **Ocupación:** Arquitecto  
 **Distrito:** Santiago de Surco, Lima  
 **Inicio:** 38:50  
-**Fin:** 46:26
+**Fin:** 46:26  
+**Duración:** 7 min 36 s
 
 <p align="center">
-  <img src="image/EntrevistaB.png" alt="EntrevistaB" width="1000">
+  <img src="image/EntrevistaB.png" alt="Entrevista de validación de Gabriel Borja" width="1000">
 </p>
 
-**Resumen:** Gabriel es un arquitecto de 23 años que lleva aproximadamente cuatro años cuidando plantas de interior, entre ellas suculentas, una monstera, potus y sansevierias. Habitualmente decide cuándo regarlas observando la humedad de la tierra, el estado de las hojas y las condiciones climáticas. Su experiencia le permite reconocer las necesidades de distintas especies, aunque considera útil contar con información que complemente sus observaciones.
+**Resumen:** Gabriel lleva aproximadamente cuatro años cuidando plantas de interior. Para decidir cuándo regar, revisa la humedad de la tierra, el estado de las hojas y las condiciones climáticas.
 
-Durante el recorrido, encuentra sencillo el acceso a AquaSave y valora la posibilidad de seleccionar el perfil experto para consultar información más detallada. Considera claro el registro de plantas mediante especie, nombre y ubicación, aunque propone incorporar fotografías propias y notas de cuidado. En Inicio, identifica la humedad y la temperatura como datos importantes, y señala que las mediciones deben mostrar su fecha para evitar interpretaciones incorrectas cuando el dispositivo está desconectado.
+Consideró claro el acceso y el registro de plantas mediante especie, nombre y ubicación. Del perfil experto, esperaba información más detallada. Propuso añadir fotos propias y notas, y mostrar la fecha de la última medición para interpretar mejor los datos cuando el dispositivo esté desconectado.
 
-Gabriel considera útiles las recomendaciones de riego y el asistente, especialmente cuando las respuestas explican los datos utilizados. También destaca las secciones Historial y Análisis para comparar registros y consumo de agua entre diferentes periodos. Utilizaría AquaSave para supervisar sus plantas mientras trabaja o se encuentra fuera de casa. Como mejora principal, propone incorporar alertas personalizadas que informen oportunamente cuándo una planta necesita atención.
+Valoró las recomendaciones y el asistente, especialmente cuando las respuestas explican en qué datos se basan. También mostró interés en comparar registros y consumo entre periodos. Su principal sugerencia fue incorporar alertas personalizadas.
 
-
-**Entrevista #2: Ernesto Rodas**
-
-**Nombre:** Ernesto Rodas  
-**Edad:** 22 años  
-**Ocupación:** Diseñador gráfico  
-**Distrito:** San Miguel, Lima  
-**Inicio:** 52:41 
-**Fin:** 1:00:12
-
-<p align="center">
-  <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
-</p>
-
-**Resumen de la entrevista:**
-
-Ernesto comentó que cuida romero y hierbabuena en el balcón. Para decidir cuándo regar, comprueba el peso de la maceta y revisa si la tierra está seca. Consideró claro el proceso de registro y señaló que, en el perfil experto, le gustaría ver cómo cambia la humedad durante la semana, ya que una sola lectura le dice poco sobre la evolución de la planta.
-
-En la ficha de «Menta de prueba» distinguió la especie, el nombre y la ubicación. Sugirió añadir fotos propias o notas para diferenciar plantas similares. En Inicio comprendió que, con el equipo desconectado, tendría que revisar la tierra directamente para conocer su estado.
-
-El aviso le ayudó a entender por qué no había lecturas, aunque le habría resultado útil recibir una indicación sobre qué revisar mientras tanto. Valoró el consejo del asistente de comprobar la tierra y comentó que le preguntaría a qué profundidad hacerlo, porque la superficie puede estar seca mientras que por debajo sigue húmeda.
-
-En Historial y Análisis, le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y poder registrar manualmente cuándo regó una planta, incluso sin tener el equipo conectado.
-
-**Entrevista #3: Santiago Cárdenas**
+**Entrevista #2: Santiago Cárdenas**
 
 **Nombre:** Santiago Cárdenas  
 **Edad:** 20 años  
 **Ocupación:** Profesor  
 **Distrito:** Jesús María, Lima  
-**Inicio:** 46:28 
-**Fin:** 52:39
+**Inicio:** 46:28  
+**Fin:** 52:39  
+**Duración:** 6 min 11 s
 
 <p align="center">
   <img src="image/entrevistas/Santiago_Cardenas_EV.png" alt="Entrevista de validación de Santiago Cárdenas" width="1000">
 </p>
 
-**Resumen de la entrevista:**
+**Resumen:** Santiago cuida una albahaca, una sábila y un potus. Decide cuándo regar según el estado de la tierra y las necesidades de cada especie. Identificó las opciones de acceso y señaló que esperaba ver, en el perfil experto, la fecha de la última lectura y el tiempo transcurrido desde el último riego.
 
-Santiago comentó que cuida una albahaca, una sábila y un potus. Para decidir cuándo regar, revisa la tierra y tiene en cuenta las necesidades de cada especie. Durante el recorrido identificó las opciones de inicio de sesión y registro. Del perfil experto, esperaba que le indicara cuándo se tomó la última lectura de humedad y cuánto tiempo había pasado desde el último riego.
+En la ficha reconoció el nombre, la ubicación y el rango ideal de humedad. Comentó que saber cuánto sol recibe la planta le ayudaría a entender qué tan rápido se seca la tierra. En Inicio dudó si el 0 % correspondía a una medición real o a la ausencia de datos. Valoró el consejo del asistente de revisar la humedad debajo de la superficie.
 
-En la ficha de «Albahaca de prueba» reconoció el nombre y la ubicación. Comentó que saber cuánto sol recibe la planta le ayudaría a entender por qué la tierra se seca más rápido. En Inicio identificó el rango ideal de humedad y el estado «Sin conexión», pero dudó si el 0 % mostrado era una medición o si todavía no había datos.
+Entendió que aún no había riegos registrados y señaló que le gustaría consultar después la fecha, la duración y la cantidad de agua utilizada, si se dispone de ese dato. Su principal sugerencia fue mostrar «Sin lecturas» cuando no exista una medición.
 
-Entendió que el aviso indicaba que el equipo aún no enviaba lecturas. Señaló que una medición reciente le ayudaría a decidir si debe regar y que, mientras tanto, revisaría directamente la tierra. Del asistente, le resultó útil el consejo de comprobar la humedad un poco por debajo de la superficie.
+**Entrevista #3: Ernesto Rodas**
 
-En Historial y Análisis, entendió que la planta aún no tenía riegos registrados. Cuando existan registros, le gustaría consultar la fecha y la duración de cada riego, además de la cantidad de agua utilizada si se dispone de ese dato. Su principal sugerencia fue mostrar «Sin lecturas» en lugar de 0 % cuando no exista una medición.
+**Nombre:** Ernesto Rodas  
+**Edad:** 22 años  
+**Ocupación:** Diseñador gráfico  
+**Distrito:** San Miguel, Lima  
+**Inicio:** 52:41  
+**Fin:** 1:00:12  
+**Duración:** 7 min 31 s
+
+<p align="center">
+  <img src="image/entrevistas/Ernesto_Rodas_EV.png" alt="Entrevista de validación de Ernesto Rodas" width="1000">
+</p>
+
+**Resumen:** Ernesto cuida romero y hierbabuena. Para decidir cuándo regar, comprueba el peso de la maceta y revisa si la tierra está seca. Consideró claro el registro y señaló que le gustaría ver cómo cambia la humedad durante la semana.
+
+En la ficha distinguió la especie, el nombre y la ubicación. Propuso añadir fotos o notas para diferenciar plantas similares. Comprendió que, sin conexión, tendría que revisar la tierra directamente. Encontró útil el consejo del asistente y sugirió precisar a qué profundidad comprobar la humedad.
+
+Le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y registrar manualmente cuándo regó una planta, incluso sin conectar el equipo.
 
 **Síntesis de las entrevistas**
 
-Los participantes valoraron tener sus plantas organizadas y poder consultar orientación en la aplicación. Entre los principiantes destacaron la necesidad de reconocer las especies y recibir instrucciones sencillas. Entre los expertos surgió el interés por saber cuándo se tomó la última lectura, entender en qué se basa una recomendación y comparar registros a lo largo del tiempo.
+Los participantes valoraron poder organizar sus plantas y consultar orientación en un mismo lugar. Los principiantes pidieron más ayuda para reconocer especies e instrucciones más sencillas. Los expertos mostraron interés en conocer la fecha de las lecturas, entender en qué se basa una recomendación y comparar registros a lo largo del tiempo.
 
-Una mejora prioritaria es distinguir con claridad una medición de la ausencia de datos. También se identificaron oportunidades para hacer más concretas las respuestas del asistente y facilitar el primer uso de la aplicación.
-
-Las entrevistas aportaron comentarios sobre la comprensión y la utilidad percibida de la interfaz. Como se realizaron sin un dispositivo conectado, no permiten comprobar la ejecución física del riego ni medir el ahorro de agua.
-
+Las mejoras prioritarias son distinguir una medición real de la ausencia de datos, hacer más concretas las respuestas del asistente y facilitar el primer uso de la aplicación. Como las sesiones se realizaron sin un dispositivo conectado, los hallazgos describen la experiencia de uso y no permiten comprobar la ejecución física del riego ni medir el ahorro de agua.
 
 #### 7.3.3. Evaluaciones según heurísticas
 
@@ -4276,7 +4268,11 @@ El video About-the-Product es un recurso de presentación de AquaSave dirigido a
 
 El material audiovisual disponible se incluye como presentación general del producto. La documentación de las pantallas de la aplicación, la recomendación por planta y el asistente se desarrolla en las secciones 7.2.1.5 y 7.2.1.6.
 
-[![Vista del video de presentación de AquaSave](https://i.postimg.cc/qRMvNNPX/image.png)](https://goo.su/V19mNf)
+<p align="center">
+    <img src="image/about-the-product-tb2.png" alt="Captura del video About-the-Product de AquaSave" width="1000">
+</p>
+
+**Duración del video:** 01:41
 
 **Enlace del vídeo:**  [Video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxNb2RlIjoidmlldyJ9fQ%3D%3D)
 
