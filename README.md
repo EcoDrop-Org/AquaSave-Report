@@ -4361,3 +4361,5 @@ La relación con el Student Outcome 3 se centra en comunicar ideas y resultados 
 - Video de entrevistas de validación TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf>
 
 - Video About-the-Team TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA>
+
+- Exposición entrega TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAh6MOagf2MTp1f8fSqHbLHAV2TLI21M_jC3iwffNOyzx0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FCGniI>
