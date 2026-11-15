@@ -4066,6 +4066,27 @@ Gabriela valora poder consultar al asistente sobre sus dudas de riego y volver a
 
 **Entrevista #3:**
 
+**Nombre:** Raúl Bellido  
+**Edad:** 20 años  
+**Ocupación:** Estudiante  
+**Distrito:** Lince, Lima  
+**Inicio:** Pendiente de registrar  
+**Fin:** Pendiente de registrar
+
+<p align="center">
+  <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
+</p>
+
+**Resumen:** Raúl es un estudiante de 20 años que comenzó a cuidar un cactus y una suculenta hace algunos meses. Debido a su poca experiencia, suele decidir cuándo regarlos observando si la tierra está seca, aunque reconoce que todavía tiene dudas sobre la frecuencia y cantidad de agua adecuadas. Por ello, busca una herramienta que le proporcione orientación sencilla para evitar errores en el cuidado de sus plantas.
+
+Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
+
+Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
+
+**<u>Segmento 2: Usuarios expertos en el cuidado de plantas</u>**
+
+**Entrevista #1:**
+
 **Nombre:** Gabriel Borja  
 **Edad:** 23 años  
 **Ocupación:** Arquitecto  
@@ -4084,28 +4105,7 @@ Durante el recorrido, encuentra sencillo el acceso a AquaSave y valora la posibi
 Gabriel considera útiles las recomendaciones de riego y el asistente, especialmente cuando las respuestas explican los datos utilizados. También destaca las secciones Historial y Análisis para comparar registros y consumo de agua entre diferentes periodos. Utilizaría AquaSave para supervisar sus plantas mientras trabaja o se encuentra fuera de casa. Como mejora principal, propone incorporar alertas personalizadas que informen oportunamente cuándo una planta necesita atención.
 
 
-**<u>Segmento 2: Usuarios expertos en el cuidado de plantas</u>**
-
-**Entrevista #1:**
-
-**Nombre:** Raúl Bellido  
-**Edad:** 20 años  
-**Ocupación:** Estudiante  
-**Distrito:** Lince, Lima  
-**Inicio:** Pendiente de registrar  
-**Fin:** Pendiente de registrar
-
-<p align="center">
-  <img src="image/entrevistas/Raul_Bellido_EV.png" alt="Entrevista de validación de Raúl Bellido" width="1000">
-</p>
-
-**Resumen:** Raúl es un estudiante de 20 años que comenzó a cuidar un cactus y una suculenta hace algunos meses. Debido a su poca experiencia, suele decidir cuándo regarlos observando si la tierra está seca, aunque reconoce que todavía tiene dudas sobre la frecuencia y cantidad de agua adecuadas. Por ello, busca una herramienta que le proporcione orientación sencilla para evitar errores en el cuidado de sus plantas.
-
-Durante el recorrido, considera sencillo el registro y comprende que el perfil principiante está dirigido a personas que necesitan mayor orientación. Encuentra fácil agregar una planta, aunque señala dificultades para identificar su especie exacta. En Inicio y Mis plantas, reconoce la utilidad de consultar la humedad y la temperatura, e interpreta el estado «Sin conexión» como una señal de que el dispositivo no está enviando información actualizada. También identifica las secciones necesarias para consultar sus plantas y los datos de su cuenta.
-
-Raúl valora los mensajes de orientación y la posibilidad de hacer preguntas al asistente para resolver dudas cotidianas. Sin embargo, considera que algunas recomendaciones podrían explicarse con palabras más sencillas y ejemplos prácticos. Utilizaría AquaSave principalmente para saber cuándo regar sus plantas y supervisarlas mientras está fuera de casa. Como mejora, propone incorporar recordatorios y notificaciones que le indiquen cuándo necesitan atención.
-
-**Entrevista #5: Ernesto Rodas**
+**Entrevista #2: Ernesto Rodas**
 
 **Nombre:** Ernesto Rodas  
 **Edad:** 22 años  
@@ -4128,7 +4128,7 @@ El aviso le ayudó a entender por qué no había lecturas, aunque le habría res
 
 En Historial y Análisis, le pareció normal que una planta recién registrada todavía no mostrara riegos. Le gustaría comparar la frecuencia de riego entre semanas y poder registrar manualmente cuándo regó una planta, incluso sin tener el equipo conectado.
 
-**Entrevista #6: Santiago Cárdenas**
+**Entrevista #3: Santiago Cárdenas**
 
 **Nombre:** Santiago Cárdenas  
 **Edad:** 20 años  
