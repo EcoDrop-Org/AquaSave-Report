@@ -4287,26 +4287,24 @@ El material audiovisual disponible se incluye como presentación general del pro
 
 ### Conclusiones y recomendaciones
 
-1. La investigación con usuarios principiantes y expertos identificó dificultades para decidir cuándo regar, interpretar las condiciones de distintas especies y mantener el seguimiento durante las ausencias. Estos hallazgos sustentan una experiencia que combina información de la planta, orientación comprensible y acceso al control de sus unidades. Los resultados corresponden a la muestra estudiada y requieren contrastarse con el uso de la aplicación.
+1. La investigación inicial identificó que los usuarios principiantes y expertos tenían dificultades para decidir cuándo regar y hacer seguimiento a sus plantas. En las seis entrevistas de validación de la TB2, los participantes valoraron poder organizar sus plantas y consultar orientación. También se identificaron dificultades para reconocer especies, interpretar el 0 % de humedad cuando no hay lecturas y aplicar algunas indicaciones del asistente. Como las sesiones se realizaron sin un dispositivo conectado, estos hallazgos corresponden al uso de la aplicación y no a la operación física del riego.
 
-2. La implementación vincula aplicaciones Flutter para web y Android con una API en Node.js, Express y TypeScript y persistencia PostgreSQL. La EdgeAPI y HiveMQ Cloud conectan los servicios con el ESP32. Esta organización asigna responsabilidades diferenciadas a la presentación, las reglas del dominio, la persistencia y la comunicación física del riego.
+2. AquaSave integra aplicaciones Flutter para web y Android con una API en Node.js, Express y TypeScript y una base de datos PostgreSQL. La EdgeAPI y HiveMQ Cloud permiten intercambiar lecturas y comandos con el ESP32. Esta arquitectura separa la interfaz, la lógica de negocio, el almacenamiento y la comunicación con el dispositivo.
 
-3. El aporte de IoT consiste en incorporar lecturas del entorno de la planta y habilitar el intercambio de información y comandos con el kit. La inteligencia artificial generativa complementa esa información mediante explicaciones y respuestas contextualizadas. Gemini no sustituye el diagnóstico por reglas ni recibe la responsabilidad de accionar directamente la bomba: la orientación y el control utilizan flujos separados.
+3. El IoT permite incorporar lecturas de los sensores y enviar comandos al kit de riego. La inteligencia artificial generativa cumple otra función: Gemini ayuda a redactar explicaciones y respuestas relacionadas con las plantas del usuario. La decisión de riego se mantiene en el motor de reglas, mientras que el control de la bomba sigue un flujo independiente.
 
-4. La experiencia principiante o experta se conserva en el perfil de la cuenta y adapta el contenido de orientación. La recomendación considera la especie, la humedad registrada, el estado de pausa y el pronóstico disponible. El asistente utiliza las plantas de la cuenta y el contexto reciente de conversación. Las respuestas locales permiten conservar orientación cuando Gemini no entrega contenido utilizable.
+4. El perfil principiante o experto adapta el nivel de detalle de la orientación. Las recomendaciones consideran la especie, la humedad registrada y el pronóstico disponible. El asistente aprovecha el contexto de las plantas de la cuenta y, cuando Gemini no devuelve una respuesta utilizable, el sistema puede ofrecer orientación local.
 
-5. La revisión de configuración y código permitió identificar endpoints, pruebas y flujos de publicación verificables. En la comprobación local del backend se aprobaron 19 pruebas y finalizaron la verificación de tipos y la compilación. Estas comprobaciones aportan evidencia sobre los comportamientos evaluados; la validación con usuarios, las pruebas BDD y la demostración física de extremo a extremo requieren sus propios registros.
+5. En la comprobación local del backend se aprobaron 19 pruebas y se completaron la verificación de tipos y la compilación. Estas comprobaciones respaldan los comportamientos cubiertos por las pruebas. Las entrevistas aportan evidencia complementaria sobre la experiencia de uso, y la ejecución física del riego debe comprobarse por separado con el kit conectado.
 
-6. Las metas de comprensión, seguimiento y uso del agua se mantienen como criterios de evaluación. Los indicadores del producto permiten consultar eventos y consumo registrado, pero no demuestran por sí solos una reducción frente a una línea base. La comparación de catorce días de referencia y catorce días de uso necesita conservar condiciones y métodos consistentes antes de comunicar un resultado de ahorro.
+6. Los registros de eventos y consumo permiten hacer seguimiento al uso del agua, pero todavía no demuestran un ahorro frente a una línea base. Para estimarlo, se requiere comparar catorce días de referencia con catorce días de uso bajo condiciones y métodos de medición comparables.
 
 **Recomendaciones:**
 
-- Completar las sesiones de validación con ambos segmentos y registrar tareas realizadas con y sin ayuda, dificultades y observaciones sobre recomendaciones y asistente.
-- Conservar la fecha, versión y condiciones de cada prueba. Distinguir una solicitud de riego registrada por la API de una ejecución comprobada en el kit.
-- Verificar la disponibilidad de la EdgeAPI, el broker y el dispositivo antes de grabar la demostración de control físico. Adjuntar la evidencia de comunicación y actuación correspondiente.
-- Documentar los resultados de las pruebas automatizadas y la relación entre escenarios Gherkin, Steps e historias incluidas en el Sprint 1.
-- Revisar que la documentación OpenAPI incluya los servicios del alcance que se presentan en la exposición, especialmente las consultas del asistente, sin atribuir a Swagger operaciones que todavía no muestra.
-- Evaluar las explicaciones de cuidado con usuarios de ambos segmentos y distinguir lecturas disponibles, información estimada y orientación general. Presentar beneficios medidos únicamente cuando existan registros que los sustenten.
+- Mejorar la selección de especies, mostrar «Sin lecturas» cuando no haya datos del sensor y hacer más concretas las indicaciones del asistente. En la siguiente ronda, probar estos cambios con ambos segmentos y registrar qué tareas completan sin ayuda.
+- Verificar el recorrido de una orden de riego desde la aplicación hasta el kit y registrar si la bomba la ejecutó. Guardar la fecha, la versión y las condiciones de la prueba.
+- Mantener la relación entre los escenarios Gherkin, sus resultados y las historias del sprint. Actualizar la documentación OpenAPI con las operaciones del asistente que aún no aparecen.
+- Medir el consumo con el kit conectado y aplicar el mismo método en el periodo de referencia y en el periodo de uso antes de comunicar un resultado de ahorro.
 
 
 
@@ -4334,9 +4332,9 @@ La presentación se organiza en torno a la coordinación del grupo, las decision
 
 La relación con el Student Outcome 3 se centra en comunicar ideas y resultados de ingeniería de manera efectiva. La comunicación oral permite explicar las necesidades de los usuarios y sustentar decisiones de diseño; la comunicación escrita se refleja en las historias, los diagramas, la documentación de los servicios y el informe del proyecto.
 
-**Enlaces del video About-the-Team**
+**Enlace del video About-the-Team**
 
-- **YouTube:** [Ver video About-the-Team](ENLACE_YOUTUBE).
+[Ver video About-the-Team en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA)
 
 ---
 
@@ -4365,3 +4363,5 @@ La relación con el Student Outcome 3 se centra en comunicar ideas y resultados 
 - Video About-the-Product TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQBv_9ocj_cPQYD4ktQd9cX7Ac5liYsoI7iJ9C_7PVhuVac?e=5l1CnO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D>
   
 - Video de entrevistas de validación TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAc_HNf1b-cRbiGt3NcuJ0xAX9T1zcatxu4SPwFZQUoY28?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=j6W6Hf>
+
+- Video About-the-Team TB2: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311220_upc_edu_pe/IQAWNU7sgsPYSY9IyeG-Fp57AVA4YmoSj426cWuqCUSlfrc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VO71CA>
